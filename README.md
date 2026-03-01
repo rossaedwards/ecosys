@@ -1,16 +1,14 @@
 <div align="center">
 
-  <!-- Aurphyx Primary Logo -->
-  <a href="https://github.com/rossaedwards/main/docs/assets/">
-    <img src="https://github.com/rossaedwards/main/docs/assets/Aurphyx_Aura_Logo.jpg"
+  <a href="https://github.com/rossaedwards/main">
+    <img src="docs/assets/Aurphyx_Aura_Logo.jpg"
          alt="Aurphyx Logo"
          width="300" />
   </a>
 
   <br/><br/>
 
-  <!-- rÆ Icon -->
-  <img src="https://github.com/rossaedwards/main/docs/assets/docs/assets/rae_icon.png"
+  <img src="docs/assets/rae_icon.png"
        alt="rÆ Icon"
        width="68" />
 
@@ -22,6 +20,20 @@
   <br/>
 
   **Ross A. Edwards** — Founder, Independent Researcher & Physicist
+
+  <br/>
+
+  <a href="https://orcid.org/0009-0008-0539-1289">
+    <img src="docs/assets/orcid_logo.svg"
+         alt="ORCiD iD"
+         width="18"
+         style="vertical-align:middle;" />
+    &nbsp;<strong>0009-0008-0539-1289</strong>
+  </a>
+  &nbsp;&nbsp;
+  [![ORCiD](https://img.shields.io/badge/ORCiD-0009--0008--0539--1289-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-0539-1289)
+  [![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/)
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
 
   <br/>
 
