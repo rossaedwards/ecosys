@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Martín-López, Enrique
+AU  - Laing, Anthony
+AU  - Lawson, Thomas
+AU  - Alvarez, Roberto
+AU  - Zhou, Xiao-Qi
+AU  - O'Brien, Jeremy L.
+PY  - 2012
+DA  - 2012/11/01
+TI  - Experimental realization of Shor's quantum factoring algorithm using qubit recycling
+JO  - Nature Photonics
+SP  - 773
+EP  - 776
+VL  - 6
+IS  - 11
+AB  - Quantum computational algorithms exploit quantum mechanics to solve problems exponentially faster than the best classical algorithms1,2,3. Shor's quantum algorithm4 for fast number factoring is a key example and the prime motivator in the international effort to realize a quantum computer5. However, due to the substantial resource requirement, to date there have been only four small-scale demonstrations6,7,8,9. Here, we address this resource demand and demonstrate a scalable version of Shor's algorithm in which the n-qubit control register is replaced by a single qubit that is recycled n times: the total number of qubits is one-third of that required in the standard protocol10,11. Encoding the work register in higher-dimensional states, we implement a two-photon compiled algorithm to factor N = 21. The algorithmic output is distinguishable from noise, in contrast to previous demonstrations. These results point to larger-scale implementations of Shor's algorithm by harnessing scalable resource reductions applicable to all physical architectures.
+SN  - 1749-4893
+UR  - https://doi.org/10.1038/nphoton.2012.259
+DO  - 10.1038/nphoton.2012.259
+ID  - Martín-López2012
+ER  - 

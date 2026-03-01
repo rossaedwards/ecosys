@@ -1,0 +1,20 @@
+TY  - JOUR
+AU  - Hafezi, M.
+AU  - Mittal, S.
+AU  - Fan, J.
+AU  - Migdall, A.
+AU  - Taylor, J. M.
+PY  - 2013
+DA  - 2013/12/01
+TI  - Imaging topological edge states in silicon photonics
+JO  - Nature Photonics
+SP  - 1001
+EP  - 1005
+VL  - 7
+IS  - 12
+AB  - Topological features—global properties not discernible locally—emerge in systems ranging from liquid crystals to magnets to fractional quantum Hall systems. A deeper understanding of the role of topology in physics has led to a new class of matter—topologically ordered systems. The best known examples are quantum Hall effects, where insensitivity to local properties manifests itself as conductance through edge states that is insensitive to defects and disorder. Current research into engineering topological order primarily focuses on analogies to quantum Hall systems, where the required magnetic field is synthesized in non-magnetic systems. Here, we realize synthetic magnetic fields for photons at room temperature, using linear silicon photonics. We observe, for the first time, topological edge states of light in a two-dimensional system and show their robustness against intrinsic and introduced disorder. Our experiment demonstrates the feasibility of using photonics to realize topological order in both non-interacting and many-body regimes.
+SN  - 1749-4893
+UR  - https://doi.org/10.1038/nphoton.2013.274
+DO  - 10.1038/nphoton.2013.274
+ID  - Hafezi2013
+ER  - 

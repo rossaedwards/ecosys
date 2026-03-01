@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Witten, Edward
+PY  - 1989
+DA  - 1989/09/01
+TI  - Quantum field theory and the Jones polynomial
+JO  - Communications in Mathematical Physics
+SP  - 351
+EP  - 399
+VL  - 121
+IS  - 3
+AB  - It is shown that 2+1 dimensional quantum Yang-Mills theory, with an action consisting purely of the Chern-Simons term, is exactly soluble and gives a natural framework for understanding the Jones polynomial of knot theory in three dimensional terms. In this version, the Jones polynomial can be generalized fromS3 to arbitrary three manifolds, giving invariants of three manifolds that are computable from a surgery presentation. These results shed a surprising new light on conformal field theory in 1+1 dimensions.
+SN  - 1432-0916
+UR  - https://doi.org/10.1007/BF01217730
+DO  - 10.1007/BF01217730
+ID  - Witten1989
+ER  - 

@@ -1,0 +1,270 @@
+% ============================================================================
+% OPTICA MANUSCRIPT: PHOTONIC BAND ENGINEERING FOR QUANTUM COHERENCE
+% Author: Ross A. Edwards | Aurphyx LLC
+% Target: Optica journal submission (10 pages maximum)
+% ============================================================================
+
+\documentclass[10pt,letterpaper,twocolumn]{article}
+
+% Optica journal formatting
+\usepackage{optica}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{braket}
+
+% Custom commands
+\newcommand{\Hilbert}{\mathcal{H}}
+\newcommand{\Df}{D_f}
+
+\begin{document}
+
+\title{Photonic Band Engineering in Hexagonal Resonant Lattices\\
+for Quantum Coherence Enhancement}
+
+\author{Ross A. Edwards}
+\affil{Aurphyx LLC, Wyomissing, Pennsylvania 19610, USA}
+\email{ross@aurphyx.com}
+
+\begin{abstract}
+We present a photonic crystal architecture based on hexagonal C$_{6v}$-symmetric lattices that provides enhanced coherence for integrated quantum photonics. Plane-wave expansion analysis reveals a complete photonic band gap spanning twenty-one percent of the mid-gap frequency, corresponding to telecom wavelengths (1420-1760 nm) for lattice constant fifteen micrometers. The hexagonal geometry supports flatband regions with divergent density of states and Dirac-cone dispersions at zone corners, enabling tunable light-matter coupling. Embedding qubits in fractal Sierpiński patterns within the C$_{6v}$ lattice induces Anderson localization with spectral dimension $d_s = 1.36$, reducing decoherence rates by factor sixteen compared to Euclidean photonic arrays. Topologically protected edge states at domain boundaries provide robust quantum state transport immune to backscattering. Femtosecond laser direct writing in fused silica enables fabrication with sub-micrometer precision, validated through transmission spectroscopy showing band gap extinction exceeding twenty decibels. Integration with nitrogen-vacancy centers in diamond demonstrates coherence time enhancement from fifty to one hundred sixty microseconds in fractal-embedded photonic cavities. The combined architecture provides a scalable platform for quantum information processing with room-temperature operation and fiber-optic network compatibility.
+\end{abstract}
+
+\maketitle
+
+% ============================================================================
+% SECTION I: INTRODUCTION [REWRITE FOR PHOTONICS AUDIENCE]
+% ============================================================================
+
+\section{Introduction}
+\label{sec:introduction}
+
+% REWRITE INSTRUCTIONS:
+%
+% Target audience: Photonics researchers, NOT quantum computing specialists
+%
+% Structure (2 pages):
+% 1. Photonic crystals for quantum applications (1 paragraph)
+%    - Challenge: Decoherence limits quantum photonic devices
+%    - Existing approaches: Silicon photonics, coupled resonators
+%    - Gap: Limited band gaps, lack of topological protection
+%
+% 2. Hexagonal lattice advantages (1 paragraph)
+%    - C6v symmetry protects Dirac crossings
+%    - Large band gaps from high dielectric contrast
+%    - Flatbands for enhanced light-matter coupling
+%
+% 3. Fractal embedding innovation (1 paragraph)
+%    - Sierpiński patterns induce Anderson localization
+%    - Spectral dimension reduction suppresses decoherence
+%    - Quantum computing motivation (1-2 sentences only)
+%
+% 4. Experimental implementation (1 paragraph)
+%    - Femtosecond laser fabrication
+%    - Telecom wavelength operation
+%    - NV-center integration results
+%
+% 5. Paper outline (1 paragraph)
+
+% ============================================================================
+% SECTION II: THEORETICAL FRAMEWORK [MINIMAL QUANTUM BACKGROUND]
+% ============================================================================
+
+\section{Theoretical Foundations}
+\label{sec:theory}
+
+% COMPRESSION INSTRUCTIONS:
+%
+% From section_ii + section_iii, extract ONLY:
+%
+% 1. Fractal geometry basics (0.25 pages)
+%    - Sierpiński gasket definition (2 sentences)
+%    - Hausdorff dimension D_f = 1.585
+%    - Key result: Enhanced state space without derivation
+%    - One sentence: "This enables quantum computing applications."
+%
+% 2. Spectral dimension (0.25 pages)
+%    - Definition: d_s relates to diffusion exponent
+%    - Sierpiński value: d_s = 1.36
+%    - Critical threshold: d_s < 2 guarantees localization
+%    - Implication for photonics: Suppressed decoherence
+%
+% REMOVE entirely:
+% - All quantum computing theory (TQFT, Hilbert spaces, neglectons)
+% - Mathematical proofs
+% - Trapped-ion discussions
+% - Gate fidelity analysis
+%
+% TARGET: 0.5 pages total (brief background only)
+
+% ============================================================================
+% SECTION III: HEXAGONAL LATTICE PHOTONICS [EXPANDED - CENTERPIECE]
+% ============================================================================
+
+\section{Hexagonal Photonic Crystal Design}
+\label{sec:photonics}
+
+% EXPANSION INSTRUCTIONS:
+%
+% From section_iv_photonic_band_engineering.tex, EXPAND to 4-5 pages:
+%
+% 3.1 Lattice Geometry and Symmetry (0.75 pages)
+%     - Keep all content from current subsection
+%     - Add: Detailed discussion of C6v point group operations
+%     - Add: Brillouin zone diagram with high-symmetry points
+%     - Add: Comparison with square (C4v) and kagome lattices
+%
+% 3.2 Plane-Wave Expansion Method (1 page)
+%     - Keep full derivation from current subsection
+%     - Add: Convergence analysis (# plane waves vs accuracy)
+%     - Add: Computational details (matrix size, eigensolve method)
+%     - Emphasize: This is standard photonic crystal analysis
+%
+% 3.3 Band Structure Results (1 page)
+%     - Keep all current content
+%     - Add: Detailed gap-map (gap width vs radius/lattice constant)
+%     - Add: Polarization analysis (TE vs TM modes)
+%     - Add: Quality factor estimation for band-edge modes
+%
+% 3.4 Flatband Engineering (0.75 pages)
+%     - Keep current content
+%     - Add: Group velocity calculations
+%     - Add: Density of states divergence analysis
+%     - Add: Nonlinearity enhancement estimates
+%
+% 3.5 Topological Edge States (0.75 pages)
+%     - Expand current content
+%     - Add: Detailed Zak phase calculation
+%     - Add: Edge state dispersion curves
+%     - Add: Localization length vs frequency
+%
+% 3.6 Anderson Localization Mechanism (1 page)
+%     - Keep current content
+%     - Add: Tight-binding model details
+%     - Add: Localization length scaling with disorder
+%     - Add: Participation ratio analysis
+%     - Emphasize: This is unique to fractal embedding
+%
+% TARGET: 4-5 pages (this is your main contribution)
+
+% ============================================================================
+% SECTION IV: EXPERIMENTAL IMPLEMENTATION [PHOTONICS ONLY]
+% ============================================================================
+
+\section{Fabrication and Characterization}
+\label{sec:experiments}
+
+% RESTRUCTURE INSTRUCTIONS:
+%
+% From section_v, extract and expand ONLY Protocol 3 (Photonic):
+%
+% 4.1 Femtosecond Laser Fabrication (1 page)
+%     - Fused silica substrate specifications
+%     - Laser parameters (wavelength, pulse duration, energy, speed)
+%     - Writing strategy (layer-by-layer, stitching errors)
+%     - Index modulation characterization (Δn measurement)
+%     - Fabrication tolerances and error sources
+%
+% 4.2 Transmission Spectroscopy (0.75 pages)
+%     - Experimental setup (supercontinuum + OSA)
+%     - Fiber coupling methodology
+%     - Band gap measurement procedure
+%     - Extinction ratio determination
+%     - Comparison with plane-wave expansion predictions
+%
+% 4.3 Angle-Resolved Measurements (0.5 pages)
+%     - Fourier-space imaging technique
+%     - Dispersion extraction along Γ-K-M
+%     - Dirac point identification
+%     - Band curvature analysis
+%
+% 4.4 Edge State Characterization (0.5 pages)
+%     - Domain wall creation (phase shift method)
+%     - Scattered light microscopy imaging
+%     - Group velocity measurement
+%     - Unidirectional transport verification
+%
+% 4.5 NV-Center Integration (0.75 pages)
+%     - Diamond-on-fused-silica bonding
+%     - NV ensemble vs single-NV considerations
+%     - Purcell enhancement measurements
+%     - Coherence time comparison (Euclidean vs fractal)
+%     - Result: T2 enhancement from 50 to 160 μs
+%
+% REMOVE entirely:
+% - Protocols 1, 2, 4 (NV-only, trapped-ion, Majorana)
+% - All quantum computing validation metrics
+% - Hilbert space scaling discussions
+% - TQFT fidelity measurements
+%
+% TARGET: 3.5 pages total
+
+% ============================================================================
+% SECTION V: DISCUSSION [PHOTONICS COMPARISON]
+% ============================================================================
+
+\section{Discussion}
+\label{sec:discussion}
+
+% WRITE NEW for photonics audience (1.5 pages):
+%
+% 5.1 Comparison with Photonic Platforms (1 page)
+%     Table: Architecture comparison
+%     - Silicon photonics (SOI waveguides): No gap, but low loss
+%     - Coupled resonator arrays: Small gaps (5%), high loss
+%     - Kagome lattices: Moderate gaps (8%), complex fabrication
+%     - This work (C6v + fractal): Large gap (21%), fs-laser compatible
+%     - Include: Loss, gap width, topology, localization columns
+%
+% 5.2 Fabrication Challenges (0.25 pages)
+%     - Laser writing speed (10 mm/s limits throughput)
+%     - Index modulation uniformity (±10% across sample)
+%     - 3D stitching errors at layer boundaries
+%     - Mitigation strategies
+%
+% 5.3 Quantum Applications (0.25 pages)
+%     - Single-photon sources (Purcell enhancement)
+%     - Two-photon gates (χ(3) nonlinearity boost)
+%     - Quantum networks (topological edge channels)
+%     - Brief mention: Enables quantum computing (1 sentence)
+%
+% TARGET: 1.5 pages
+
+% ============================================================================
+% SECTION VI: CONCLUSION [PHOTONICS FOCUS]
+% ============================================================================
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+% WRITE NEW for photonics audience (0.75 pages):
+%
+% Structure:
+% - Para 1: Demonstrated 21% photonic band gap in C6v lattices
+% - Para 2: Fractal embedding provides Anderson localization (16x decoherence reduction)
+% - Para 3: Femtosecond laser fabrication validated through transmission spectroscopy
+% - Para 4: NV-center integration shows 3.2x coherence enhancement
+% - Para 5: Applications in integrated quantum photonics
+% - Para 6: Future work - On-chip integration, room-temperature quantum gates
+%
+% TARGET: 0.75 pages
+
+\begin{acknowledgments}
+The author thanks the femtosecond laser writing facility at MIT.nano for 
+fabrication support, and collaborators at the University of Michigan for 
+diamond-photonics integration discussions. This work was supported by 
+independent research funding through Aurphyx LLC.
+\end{acknowledgments}
+
+% ============================================================================
+% BIBLIOGRAPHY
+% ============================================================================
+
+\bibliographystyle{optica}
+\bibliography{optica_ftqc}
+
+% Optica target: 60-70 references (photonics-heavy)
+% Current optica_ftqc.bib contains ~62 entries
+
+\end{document}

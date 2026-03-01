@@ -1,0 +1,33 @@
+TY  - JOUR
+AU  - Somaschi, N.
+AU  - Giesz, V.
+AU  - De Santis, L.
+AU  - Loredo, J. C.
+AU  - Almeida, M. P.
+AU  - Hornecker, G.
+AU  - Portalupi, S. L.
+AU  - Grange, T.
+AU  - Antón, C.
+AU  - Demory, J.
+AU  - Gómez, C.
+AU  - Sagnes, I.
+AU  - Lanzillotti-Kimura, N. D.
+AU  - Lemaítre, A.
+AU  - Auffeves, A.
+AU  - White, A. G.
+AU  - Lanco, L.
+AU  - Senellart, P.
+PY  - 2016
+DA  - 2016/05/01
+TI  - Near-optimal single-photon sources in the solid state
+JO  - Nature Photonics
+SP  - 340
+EP  - 345
+VL  - 10
+IS  - 5
+AB  - The scaling of optical quantum technologies requires efficient, on-demand sources of highly indistinguishable single photons. Semiconductor quantum dots inserted into photonic structures are ultrabright single-photon sources, yet the indistinguishability is limited by charge noise. Parametric downconversion sources provide highly indistinguishable photons but are operated at very low brightness to maintain high single-photon purity. To date, no technology has provided a bright source generating near-unity indistinguishability and pure single photons. Here, we report such devices made of quantum dots in electrically controlled cavities. Application of an electrical bias on the deterministically fabricated structures is shown to strongly reduce charge noise. Under resonant excitation, an indistinguishability of 0.9956 ± 0.0045 is demonstrated with g(2)(0) = 0.0028 ± 0.0012. The photon extraction of 65% and measured brightness of 0.154 ± 0.015 make this source 20 times brighter than any source of equal quality. This new generation of sources opens the way to new levels of complexity and scalability in optical quantum technologies.
+SN  - 1749-4893
+UR  - https://doi.org/10.1038/nphoton.2016.23
+DO  - 10.1038/nphoton.2016.23
+ID  - Somaschi2016
+ER  - 

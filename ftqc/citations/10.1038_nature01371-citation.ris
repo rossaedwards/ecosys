@@ -1,0 +1,19 @@
+TY  - JOUR
+AU  - Armani, D. K.
+AU  - Kippenberg, T. J.
+AU  - Spillane, S. M.
+AU  - Vahala, K. J.
+PY  - 2003
+DA  - 2003/02/01
+TI  - Ultra-high-Q toroid microcavity on a chip
+JO  - Nature
+SP  - 925
+EP  - 928
+VL  - 421
+IS  - 6926
+AB  - The circulation of light within dielectric volumes enables storage of optical power near specific resonant frequencies and is important in a wide range of fields including cavity quantum electrodynamics1,2, photonics3,4, biosensing5,6 and nonlinear optics7,8,9. Optical trajectories occur near the interface of the volume with its surroundings, making their performance strongly dependent upon interface quality. With a nearly atomic-scale surface finish, surface-tension-induced microcavities such as liquid droplets or spheres10,11,12,13 are superior to all other dielectric microresonant structures when comparing photon lifetime or, equivalently, cavity Q factor. Despite these advantageous properties, the physical characteristics of such systems are not easily controlled during fabrication. It is known that wafer-based processing14 of resonators can achieve parallel processing and control, as well as integration with other functions. However, such resonators-on-a-chip suffer from Q factors that are many orders of magnitude lower than for surface-tension-induced microcavities, making them unsuitable for ultra-high-Q experiments. Here we demonstrate a process for producing silica toroid-shaped microresonators-on-a-chip with Q factors in excess of 100 million using a combination of lithography, dry etching and a selective reflow process. Such a high Q value was previously attainable only by droplets or microspheres and represents an improvement of nearly four orders of magnitude over previous chip-based resonators.
+SN  - 1476-4687
+UR  - https://doi.org/10.1038/nature01371
+DO  - 10.1038/nature01371
+ID  - Armani2003
+ER  - 

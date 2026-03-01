@@ -1,0 +1,44 @@
+TY  - JOUR
+AU  - King, Andrew D.
+AU  - Carrasquilla, Juan
+AU  - Raymond, Jack
+AU  - Ozfidan, Isil
+AU  - Andriyash, Evgeny
+AU  - Berkley, Andrew
+AU  - Reis, Mauricio
+AU  - Lanting, Trevor
+AU  - Harris, Richard
+AU  - Altomare, Fabio
+AU  - Boothby, Kelly
+AU  - Bunyk, Paul I.
+AU  - Enderud, Colin
+AU  - Fréchette, Alexandre
+AU  - Hoskinson, Emile
+AU  - Ladizinsky, Nicolas
+AU  - Oh, Travis
+AU  - Poulin-Lamarre, Gabriel
+AU  - Rich, Christopher
+AU  - Sato, Yuki
+AU  - Smirnov, Anatoly Yu.
+AU  - Swenson, Loren J.
+AU  - Volkmann, Mark H.
+AU  - Whittaker, Jed
+AU  - Yao, Jason
+AU  - Ladizinsky, Eric
+AU  - Johnson, Mark W.
+AU  - Hilton, Jeremy
+AU  - Amin, Mohammad H.
+PY  - 2018
+DA  - 2018/08/01
+TI  - Observation of topological phenomena in a programmable lattice of 1,800 qubits
+JO  - Nature
+SP  - 456
+EP  - 460
+VL  - 560
+IS  - 7719
+AB  - The work of Berezinskii, Kosterlitz and Thouless in the 1970s1,2 revealed exotic phases of matter governed by the topological properties of low-dimensional materials such as thin films of superfluids and superconductors. A hallmark of this phenomenon is the appearance and interaction of vortices and antivortices in an angular degree of freedom—typified by the classical XY model—owing to thermal fluctuations. In the two-dimensional Ising model this angular degree of freedom is absent in the classical case, but with the addition of a transverse field it can emerge from the interplay between frustration and quantum fluctuations. Consequently, a Kosterlitz–Thouless phase transition has been predicted in the quantum system—the two-dimensional transverse-field Ising model—by theory and simulation3–5. Here we demonstrate a large-scale quantum simulation of this phenomenon in a network of 1,800 in situ programmable superconducting niobium flux qubits whose pairwise couplings are arranged in a fully frustrated square-octagonal lattice. Essential to the critical behaviour, we observe the emergence of a complex order parameter with continuous rotational symmetry, and the onset of quasi-long-range order as the system approaches a critical temperature. We describe and use a simple approach to statistical estimation with an annealing-based quantum processor that performs Monte Carlo sampling in a chain of reverse quantum annealing protocols. Observations are consistent with classical simulations across a range of Hamiltonian parameters. We anticipate that our approach of using a quantum processor as a programmable magnetic lattice will find widespread use in the simulation and development of exotic materials.
+SN  - 1476-4687
+UR  - https://doi.org/10.1038/s41586-018-0410-x
+DO  - 10.1038/s41586-018-0410-x
+ID  - King2018
+ER  - 

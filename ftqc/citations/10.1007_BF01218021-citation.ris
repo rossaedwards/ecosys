@@ -1,0 +1,19 @@
+TY  - JOUR
+AU  - Affleck, Ian
+AU  - Kennedy, Tom
+AU  - Lieb, Elliott H.
+AU  - Tasaki, Hal
+PY  - 1988
+DA  - 1988/09/01
+TI  - Valence bond ground states in isotropic quantum antiferromagnets
+JO  - Communications in Mathematical Physics
+SP  - 477
+EP  - 528
+VL  - 115
+IS  - 3
+AB  - Haldane predicted that the isotropic quantum Heisenberg spin chain is in a “massive” phase if the spin is integral. The first rigorous example of an isotropic model in such a phase is presented. The Hamiltonian has an exactSO(3) symmetry and is translationally invariant, but we prove the model has a unique ground state, a gap in the spectrum of the Hamiltonian immediately above the ground state and exponential decay of the correlation functions in the ground state. Models in two and higher dimension which are expected to have the same properties are also presented. For these models we construct an exact ground state, and for some of them we prove that the two-point function decays exponentially in this ground state. In all these models exact ground states are constructed by using valence bonds.
+SN  - 1432-0916
+UR  - https://doi.org/10.1007/BF01218021
+DO  - 10.1007/BF01218021
+ID  - Affleck1988
+ER  - 

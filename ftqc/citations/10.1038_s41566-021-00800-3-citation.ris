@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Yu, Su-Peng
+AU  - Cole, Daniel C.
+AU  - Jung, Hojoong
+AU  - Moille, Gregory T.
+AU  - Srinivasan, Kartik
+AU  - Papp, Scott B.
+PY  - 2021
+DA  - 2021/06/01
+TI  - Spontaneous pulse formation in edgeless photonic crystal resonators
+JO  - Nature Photonics
+SP  - 461
+EP  - 467
+VL  - 15
+IS  - 6
+AB  - Nonlinearity in complex systems leads to pattern formation through fundamental interactions between components. With integrated photonics, precision control of nonlinearity explores novel patterns and propels applications. In particular, Kerr-nonlinear resonators support stationary states—including Turing patterns—composed of a few interfering waves, and localized solitons composed of waves across a broad spectrum. Although Turing patterns emerge from an unstable Kerr resonator with sufficiently intense excitation, Kerr solitons do not form spontaneously under constant excitation, making this useful state challenging to access. Here we explore an edgeless photonic crystal resonator (PhCR) that enables spontaneous soliton formation in place of Turing patterns. We design the PhCR nanopattern for single-azimuthal-mode engineering of a group-velocity-dispersion defect that balances Kerr-nonlinear frequency shifts in favour of the soliton state. Our experiments establish PhCR solitons as modelocked pulses through ultraprecise optical-frequency measurements. We show that nanophotonics expand the palette for nonlinear engineering, enabling new phenomena and light sources.
+SN  - 1749-4893
+UR  - https://doi.org/10.1038/s41566-021-00800-3
+DO  - 10.1038/s41566-021-00800-3
+ID  - Yu2021
+ER  - 

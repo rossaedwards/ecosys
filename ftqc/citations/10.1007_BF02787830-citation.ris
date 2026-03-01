@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Strichartz, Robert S.
+PY  - 2005
+DA  - 2005/12/01
+TI  - Solvability for differential equations on fractals
+JO  - Journal d’Analyse Mathématique
+SP  - 247
+EP  - 267
+VL  - 96
+IS  - 1
+AB  - We show that nonlinear differential equations based on the Laplacian have local solutions on pcf self-similar fractals. However, even linear equations may fail to have global solutions. The equation Δu =f may be solved on an arbitrary proper open set for any functionf continuous there.
+SN  - 1565-8538
+UR  - https://doi.org/10.1007/BF02787830
+DO  - 10.1007/BF02787830
+ID  - Strichartz2005
+ER  - 
