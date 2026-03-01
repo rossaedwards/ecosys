@@ -1,8 +1,8 @@
 <div align="center">
 
   <!-- Aurphyx Primary Logo -->
-  <a href="https://aurphyx.com">
-    <img src="docs/assets/Aurphyx_Aura_Logo.jpg"
+  <a href="https://github.com/rossaedwards/main/docs/assets/">
+    <img src="https://github.com/rossaedwards/main/docs/assets/Aurphyx_Aura_Logo.jpg"
          alt="Aurphyx Logo"
          width="300" />
   </a>
@@ -10,7 +10,7 @@
   <br/><br/>
 
   <!-- rÆ Icon -->
-  <img src="docs/assets/rae_icon.png"
+  <img src="https://github.com/rossaedwards/main/docs/assets/docs/assets/rae_icon.png"
        alt="rÆ Icon"
        width="68" />
 
