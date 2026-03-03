@@ -1,0 +1,142 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{10}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Alexander}\ and\ \citenamefont
+  {Orbach}(1982)}]{Alexander1982}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Alexander}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Orbach}},\ }\href {https://doi.org/10.1051/jphyslet:019820043017062500}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. Lett.}\ }\textbf
+  {\bibinfo {volume} {43}},\ \bibinfo {pages} {625} (\bibinfo {year}
+  {1982})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Havlin}\ and\ \citenamefont
+  {Ben-Avraham}(1987)}]{Havlin1987}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Havlin}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Ben-Avraham}},\ }\href {https://doi.org/10.1088/0305-4470/20/16/007}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Phys. A}\ }\textbf {\bibinfo
+  {volume} {20}},\ \bibinfo {pages} {L1113} (\bibinfo {year}
+  {1987})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kitaev}(2006)}]{Kitaev2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kitaev}},\ }\href {https://doi.org/10.1016/j.aop.2005.10.005} {\bibfield
+  {journal} {\bibinfo  {journal} {Annals of Physics}\ }\textbf {\bibinfo
+  {volume} {321}},\ \bibinfo {pages} {2} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Nayak}\ \emph {et~al.}(2008)\citenamefont {Nayak},
+  \citenamefont {Simon}, \citenamefont {Stern}, \citenamefont {Freedman},\ and\
+  \citenamefont {Das~Sarma}}]{Nayak2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Nayak}}, \bibinfo {author} {\bibfnamefont {S.~H.}\ \bibnamefont {Simon}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Stern}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Freedman}},\ and\ \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Das~Sarma}},\ }\href
+  {https://doi.org/10.1103/RevModPhys.80.1083} {\bibfield  {journal} {\bibinfo
+  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume} {80}},\ \bibinfo
+  {pages} {1083} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Freedman}\ \emph {et~al.}(2002)\citenamefont
+  {Freedman}, \citenamefont {Kitaev}, \citenamefont {Larsen},\ and\
+  \citenamefont {Wang}}]{Freedman2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont
+  {Freedman}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kitaev}},
+  \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont {Larsen}},\ and\
+  \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Wang}},\ }\href@noop {}
+  {\bibinfo {title} {Topological quantum computation}} (\bibinfo {year}
+  {2002}),\ \Eprint {https://arxiv.org/abs/quant-ph/0101025}
+  {arXiv:quant-ph/0101025 [quant-ph]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kitaev}(2003)}]{Kitaev2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~Y.}\ \bibnamefont
+  {Kitaev}},\ }\href {https://doi.org/10.1016/S0003-4916(02)00018-0} {\bibfield
+   {journal} {\bibinfo  {journal} {Annals of Physics}\ }\textbf {\bibinfo
+  {volume} {303}},\ \bibinfo {pages} {2} (\bibinfo {year} {2003})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Haldane}\ and\ \citenamefont
+  {Raghu}(2008)}]{Haldane2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~D.~M.}\
+  \bibnamefont {Haldane}}\ and\ \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Raghu}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.100.013904} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {100}},\
+  \bibinfo {pages} {013904} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Raghu}\ and\ \citenamefont
+  {Haldane}(2008)}]{Raghu2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Raghu}}\ and\ \bibinfo {author} {\bibfnamefont {F.~D.~M.}\ \bibnamefont
+  {Haldane}},\ }\href {https://doi.org/10.1103/PhysRevA.78.033834} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {78}},\ \bibinfo {pages} {033834} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Rechtsman}\ \emph {et~al.}(2013)\citenamefont
+  {Rechtsman} \emph {et~al.}}]{Rechtsman2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont
+  {Rechtsman}} \emph {et~al.},\ }\href {https://doi.org/10.1038/nature12066}
+  {\bibfield  {journal} {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo
+  {volume} {496}},\ \bibinfo {pages} {196} (\bibinfo {year}
+  {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Childress}\ \emph {et~al.}(2006)\citenamefont
+  {Childress} \emph {et~al.}}]{Childress2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Childress}} \emph {et~al.},\ }\href
+  {https://doi.org/10.1126/science.1131871} {\bibfield  {journal} {\bibinfo
+  {journal} {Science}\ }\textbf {\bibinfo {volume} {314}},\ \bibinfo {pages}
+  {281} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\end{thebibliography}%
