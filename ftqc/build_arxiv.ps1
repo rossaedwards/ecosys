@@ -5,40 +5,67 @@
 ## Platform: Windows 11 + TeX Live 2025
 ##################################################################
 
+param(
+    [ValidateSet("arxiv", "prx")]
+    [string]$Style = "arxiv",
+
+    [ValidateSet("FINAL", "UPDATED")]
+    [string]$Variant = "FINAL"
+)
+
 # Set error handling
 $ErrorActionPreference = "Continue"
 
 # Configuration
 $ProjectRoot = "C:\rossaedwards\main\ftqc"
-$MainTex = "rae-ftqc_arxiv_complete"
-$BibFile = "arxiv_ftqc"
 $FiguresDir = "figures"
-$OutputDir = "arxiv_submission"
+
+switch ($Style) {
+    "arxiv" {
+        $MainTexBase = "rae-ftqc_arxiv_complete"
+        $BibFile = "arxiv_ftqc"
+        $SubmissionLabel = "arXiv"
+        $UploadUrl = "https://arxiv.org/submit"
+    }
+    "prx" {
+        $MainTexBase = "rae-ftqc_prx_submission"
+        $BibFile = "prx_ftqc"
+        $SubmissionLabel = "PRX"
+        $UploadUrl = "https://journals.aps.org/authors/revtex"
+    }
+}
+
+$MainTex = "${MainTexBase}_${Variant}"
+$OutputDir = "${Style}_submission_ready_${Variant}".ToLower()
 
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "arXiv FTQC Thesis Compilation Starting" -ForegroundColor Cyan
+Write-Host "$SubmissionLabel FTQC Thesis Compilation Starting" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
 # Change to project directory
 Set-Location $ProjectRoot
 Write-Host "[INFO] Working directory: $ProjectRoot" -ForegroundColor Green
+Write-Host "[INFO] Build style: $SubmissionLabel ($Style)" -ForegroundColor Green
+Write-Host "[INFO] Variant: $Variant" -ForegroundColor Green
+Write-Host "[INFO] Main source: $MainTex.tex" -ForegroundColor Green
+Write-Host "[INFO] Bibliography base: $BibFile.bib" -ForegroundColor Green
 
 # Verify essential files exist
 Write-Host "`n[STEP 1] Verifying required files..." -ForegroundColor Yellow
 
 $RequiredFiles = @(
     "$MainTex.tex",
-    "$BibFile.bib"
+    "compile_citations.py"
 )
 
 $MissingFiles = @()
 foreach ($file in $RequiredFiles) {
     if (-not (Test-Path $file)) {
         $MissingFiles += $file
-        Write-Host "  ✗ MISSING: $file" -ForegroundColor Red
+        Write-Host "  [ERROR] MISSING: $file" -ForegroundColor Red
     } else {
-        Write-Host "  ✓ Found: $file" -ForegroundColor Green
+        Write-Host "  [OK] Found: $file" -ForegroundColor Green
     }
 }
 
@@ -47,13 +74,20 @@ if ($MissingFiles.Count -gt 0) {
     exit 1
 }
 
+if (-not (Test-Path "citations")) {
+    Write-Host "  [ERROR] MISSING: citations directory" -ForegroundColor Red
+    exit 1
+} else {
+    Write-Host "  [OK] Found: citations directory" -ForegroundColor Green
+}
+
 # Verify figures directory
 if (-not (Test-Path $FiguresDir)) {
-    Write-Host "  ✗ MISSING: $FiguresDir directory" -ForegroundColor Red
+    Write-Host "  [ERROR] MISSING: $FiguresDir directory" -ForegroundColor Red
     exit 1
 } else {
     $FigCount = (Get-ChildItem "$FiguresDir\*.png" -File).Count
-    Write-Host "  ✓ Found: $FiguresDir directory with $FigCount PNG files" -ForegroundColor Green
+    Write-Host "  [OK] Found: $FiguresDir directory with $FigCount PNG files" -ForegroundColor Green
 }
 
 # Clean previous build artifacts
@@ -64,11 +98,38 @@ foreach ($pattern in $CleanExtensions) {
     $files = Get-ChildItem $pattern -File -ErrorAction SilentlyContinue
     if ($files) {
         Remove-Item $files -Force
-        Write-Host "  ✓ Removed: $pattern files" -ForegroundColor Gray
+        Write-Host "  [OK] Removed: $pattern files" -ForegroundColor Gray
     }
 }
 
-Write-Host "  ✓ Build environment cleaned" -ForegroundColor Green
+Write-Host "  [OK] Build environment cleaned" -ForegroundColor Green
+
+# Citation pre-build: regenerate merged bibliography from citations sources.
+Write-Host "`n[CITATIONS] Compiling merged bibliography from citations/..." -ForegroundColor Yellow
+$CitationCmd = Get-Command py -ErrorAction SilentlyContinue
+if ($CitationCmd) {
+    & py "compile_citations.py"
+} else {
+    & python "compile_citations.py"
+}
+$CitationExitCode = $LASTEXITCODE
+
+if ($CitationExitCode -ne 0) {
+    Write-Host "  [ERROR] Citation compile failed with exit code $CitationExitCode" -ForegroundColor Red
+    exit 1
+}
+
+if (-not (Test-Path "$BibFile.bib")) {
+    if ($Style -eq "prx" -and (Test-Path "arxiv_ftqc.bib")) {
+        Copy-Item "arxiv_ftqc.bib" -Destination "$BibFile.bib" -Force
+        Write-Host "  [OK] Created $BibFile.bib from merged arXiv bibliography output" -ForegroundColor Green
+    } else {
+        Write-Host "  [ERROR] Citation compile did not generate $BibFile.bib" -ForegroundColor Red
+        exit 1
+    }
+}
+
+Write-Host "  [OK] Citation merge complete: $BibFile.bib refreshed from citations/" -ForegroundColor Green
 
 # PASS 1: Initial LaTeX compilation
 Write-Host "`n[STEP 3] Pass 1/4 - Initial pdflatex compilation..." -ForegroundColor Yellow
@@ -78,7 +139,7 @@ $Pass1 = pdflatex -interaction=nonstopmode "$MainTex.tex" 2>&1
 $Pass1ExitCode = $LASTEXITCODE
 
 if ($Pass1ExitCode -ne 0) {
-    Write-Host "  ✗ Pass 1 failed with exit code $Pass1ExitCode" -ForegroundColor Red
+    Write-Host "  [ERROR] Pass 1 failed with exit code $Pass1ExitCode" -ForegroundColor Red
     Write-Host "`n[ERROR LOG EXCERPT]" -ForegroundColor Red
     $Pass1 | Select-String -Pattern "^!" | Select-Object -First 10 | ForEach-Object { Write-Host $_ -ForegroundColor Red }
     exit 1
@@ -87,10 +148,10 @@ if ($Pass1ExitCode -ne 0) {
 # Check for critical errors in log
 $LogContent = Get-Content "$MainTex.log" -Raw
 if ($LogContent -match "^!") {
-    Write-Host "  ⚠ Critical errors detected in log file" -ForegroundColor Yellow
+    Write-Host "  [WARN] Critical errors detected in log file" -ForegroundColor Yellow
     $LogContent | Select-String -Pattern "^!" | Select-Object -First 5 | ForEach-Object { Write-Host "    $_" -ForegroundColor Red }
 } else {
-    Write-Host "  ✓ Pass 1 completed successfully" -ForegroundColor Green
+    Write-Host "  [OK] Pass 1 completed successfully" -ForegroundColor Green
 }
 
 # PASS 2: BibTeX processing
@@ -101,7 +162,7 @@ $Pass2 = bibtex "$MainTex" 2>&1
 $Pass2ExitCode = $LASTEXITCODE
 
 if ($Pass2ExitCode -ne 0) {
-    Write-Host "  ✗ BibTeX failed with exit code $Pass2ExitCode" -ForegroundColor Red
+    Write-Host "  [ERROR] BibTeX failed with exit code $Pass2ExitCode" -ForegroundColor Red
     Write-Host "`n[BIBTEX ERROR LOG]" -ForegroundColor Red
     Get-Content "$MainTex.blg" | Select-String -Pattern "(error|warning)" -Context 1,1 | ForEach-Object { Write-Host $_ -ForegroundColor Red }
     exit 1
@@ -109,23 +170,23 @@ if ($Pass2ExitCode -ne 0) {
 
 # Verify .bbl file was created
 if (-not (Test-Path "$MainTex.bbl")) {
-    Write-Host "  ✗ BibTeX did not generate .bbl file" -ForegroundColor Red
+    Write-Host "  [ERROR] BibTeX did not generate .bbl file" -ForegroundColor Red
     exit 1
 }
 
 # Check for BibTeX warnings
 $BlgContent = Get-Content "$MainTex.blg" -Raw
 if ($BlgContent -match "Warning") {
-    Write-Host "  ⚠ BibTeX warnings detected:" -ForegroundColor Yellow
+    Write-Host "  [WARN] BibTeX warnings detected:" -ForegroundColor Yellow
     $BlgContent | Select-String -Pattern "Warning--" | Select-Object -First 5 | ForEach-Object { Write-Host "    $_" -ForegroundColor Yellow }
 } else {
-    Write-Host "  ✓ BibTeX completed without warnings" -ForegroundColor Green
+    Write-Host "  [OK] BibTeX completed without warnings" -ForegroundColor Green
 }
 
 # Count bibliography entries
 $BblContent = Get-Content "$MainTex.bbl" -Raw
 $BibItemCount = ([regex]::Matches($BblContent, "\\bibitem")).Count
-Write-Host "  ✓ Bibliography contains $BibItemCount entries" -ForegroundColor Green
+Write-Host "  [OK] Bibliography contains $BibItemCount entries" -ForegroundColor Green
 
 # PASS 3: Second LaTeX compilation
 Write-Host "`n[STEP 5] Pass 3/4 - Second pdflatex (integrate bibliography)..." -ForegroundColor Yellow
@@ -135,11 +196,11 @@ $Pass3 = pdflatex -interaction=nonstopmode "$MainTex.tex" 2>&1
 $Pass3ExitCode = $LASTEXITCODE
 
 if ($Pass3ExitCode -ne 0) {
-    Write-Host "  ✗ Pass 3 failed with exit code $Pass3ExitCode" -ForegroundColor Red
+    Write-Host "  [ERROR] Pass 3 failed with exit code $Pass3ExitCode" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "  ✓ Pass 3 completed" -ForegroundColor Green
+Write-Host "  [OK] Pass 3 completed" -ForegroundColor Green
 
 # PASS 4: Final LaTeX compilation
 Write-Host "`n[STEP 6] Pass 4/4 - Final pdflatex (resolve cross-references)..." -ForegroundColor Yellow
@@ -149,11 +210,11 @@ $Pass4 = pdflatex -interaction=nonstopmode "$MainTex.tex" 2>&1
 $Pass4ExitCode = $LASTEXITCODE
 
 if ($Pass4ExitCode -ne 0) {
-    Write-Host "  ✗ Pass 4 failed with exit code $Pass4ExitCode" -ForegroundColor Red
+    Write-Host "  [ERROR] Pass 4 failed with exit code $Pass4ExitCode" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "  ✓ Pass 4 completed" -ForegroundColor Green
+Write-Host "  [OK] Pass 4 completed" -ForegroundColor Green
 
 # Verify PDF was created
 if (-not (Test-Path "$MainTex.pdf")) {
@@ -165,42 +226,42 @@ if (-not (Test-Path "$MainTex.pdf")) {
 Write-Host "`n[STEP 7] Validating output PDF..." -ForegroundColor Yellow
 
 $PdfSize = (Get-Item "$MainTex.pdf").Length / 1MB
-Write-Host "  ✓ PDF generated: $MainTex.pdf ($([math]::Round($PdfSize, 2)) MB)" -ForegroundColor Green
+Write-Host "  [OK] PDF generated: $MainTex.pdf ($([math]::Round($PdfSize, 2)) MB)" -ForegroundColor Green
 
 # Check for undefined references in log
 $UndefRefs = $LogContent | Select-String -Pattern "Reference.*undefined" | Measure-Object
 if ($UndefRefs.Count -gt 0) {
-    Write-Host "  ⚠ WARNING: $($UndefRefs.Count) undefined references detected" -ForegroundColor Yellow
+    Write-Host "  [WARN] $($UndefRefs.Count) undefined references detected" -ForegroundColor Yellow
     Write-Host "    Check the .log file for details: $MainTex.log" -ForegroundColor Yellow
 } else {
-    Write-Host "  ✓ All references resolved" -ForegroundColor Green
+    Write-Host "  [OK] All references resolved" -ForegroundColor Green
 }
 
 # Check for undefined citations
 $UndefCites = $LogContent | Select-String -Pattern "Citation.*undefined" | Measure-Object
 if ($UndefCites.Count -gt 0) {
-    Write-Host "  ⚠ WARNING: $($UndefCites.Count) undefined citations detected" -ForegroundColor Yellow
+    Write-Host "  [WARN] $($UndefCites.Count) undefined citations detected" -ForegroundColor Yellow
 } else {
-    Write-Host "  ✓ All citations resolved" -ForegroundColor Green
+    Write-Host "  [OK] All citations resolved" -ForegroundColor Green
 }
 
 # Check page count
 $PageMatches = $LogContent | Select-String -Pattern "Output written.*\((\d+) pages" | Select-Object -First 1
 if ($PageMatches) {
     $PageCount = $PageMatches.Matches.Groups[1].Value
-    Write-Host "  ✓ Document is $PageCount pages" -ForegroundColor Green
+    Write-Host "  [OK] Document is $PageCount pages" -ForegroundColor Green
     
     if ([int]$PageCount -lt 35 -or [int]$PageCount -gt 45) {
-        Write-Host "    ⚠ Expected ~40 pages, got $PageCount - verify content completeness" -ForegroundColor Yellow
+        Write-Host "    [WARN] Expected ~40 pages, got $PageCount - verify content completeness" -ForegroundColor Yellow
     }
 }
 
 # Create submission package
-Write-Host "`n[STEP 8] Creating arXiv submission package..." -ForegroundColor Yellow
+Write-Host "`n[STEP 8] Creating $SubmissionLabel submission-ready package..." -ForegroundColor Yellow
 
 if (Test-Path $OutputDir) {
     Remove-Item $OutputDir -Recurse -Force
-    Write-Host "  ✓ Cleaned existing submission directory" -ForegroundColor Gray
+    Write-Host "  [OK] Cleaned existing submission directory" -ForegroundColor Gray
 }
 
 New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
@@ -209,29 +270,29 @@ New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
 Copy-Item "$MainTex.tex" -Destination $OutputDir
 Copy-Item "$MainTex.bbl" -Destination $OutputDir
 Copy-Item "$BibFile.bib" -Destination $OutputDir
-Write-Host "  ✓ Copied LaTeX and bibliography files" -ForegroundColor Green
+Write-Host "  [OK] Copied LaTeX and bibliography files" -ForegroundColor Green
 
 # Copy all figures
 Copy-Item "$FiguresDir\*.png" -Destination $OutputDir
 $CopiedFigs = (Get-ChildItem "$OutputDir\*.png").Count
-Write-Host "  ✓ Copied $CopiedFigs figure files" -ForegroundColor Green
+Write-Host "  [OK] Copied $CopiedFigs figure files" -ForegroundColor Green
 
 # Copy section files if they exist
 $SectionFiles = Get-ChildItem "section_*.tex" -File -ErrorAction SilentlyContinue
 if ($SectionFiles) {
     Copy-Item $SectionFiles -Destination $OutputDir
-    Write-Host "  ✓ Copied section files" -ForegroundColor Green
+    Write-Host "  [OK] Copied section files" -ForegroundColor Green
 }
 
 # Create tarball (requires tar.exe on Windows 10/11)
 Set-Location $OutputDir
-$TarballName = "ftqc_arxiv_submission_$(Get-Date -Format 'yyyyMMdd').tar.gz"
+$TarballName = "rae_ftqc_${Style}_${Variant}_submission_$(Get-Date -Format 'yyyyMMdd').tar.gz".ToLower()
 
 if (Get-Command tar -ErrorAction SilentlyContinue) {
     tar -czf "..\$TarballName" *
-    Write-Host "  ✓ Created submission tarball: $TarballName" -ForegroundColor Green
+    Write-Host "  [OK] Created submission tarball: $TarballName" -ForegroundColor Green
 } else {
-    Write-Host "  ⚠ tar.exe not found - tarball not created" -ForegroundColor Yellow
+    Write-Host "  [WARN] tar.exe not found - tarball not created" -ForegroundColor Yellow
     Write-Host "    You can manually create a .tar.gz archive from the $OutputDir directory" -ForegroundColor Yellow
 }
 
@@ -242,6 +303,8 @@ Write-Host "`n========================================" -ForegroundColor Cyan
 Write-Host "COMPILATION SUMMARY" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "Status:           SUCCESS" -ForegroundColor Green
+Write-Host "Submission style: $SubmissionLabel ($Style)" -ForegroundColor White
+Write-Host "Variant:          $Variant" -ForegroundColor White
 Write-Host "Output PDF:       $MainTex.pdf" -ForegroundColor White
 Write-Host "Bibliography:     $BibItemCount entries from $BibFile.bib" -ForegroundColor White
 Write-Host "Page count:       $PageCount pages" -ForegroundColor White
@@ -253,5 +316,5 @@ Write-Host "`nNext steps:" -ForegroundColor Yellow
 Write-Host "  1. Review the generated PDF: $MainTex.pdf" -ForegroundColor White
 Write-Host "  2. Verify all figures render correctly" -ForegroundColor White
 Write-Host "  3. Check that all citations appear (no [?] marks)" -ForegroundColor White
-Write-Host "  4. Upload to arXiv: https://arxiv.org/submit" -ForegroundColor White
+Write-Host "  4. Upload/package guide: $UploadUrl" -ForegroundColor White
 Write-Host "========================================`n" -ForegroundColor Cyan
