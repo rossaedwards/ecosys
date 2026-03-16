@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://github.com/rossaedwards/main">
-    <img src="docs/assets/Aurphyx_Aura_Logo.jpg"
+    <img src="docs/assets/Aurphyx_Aura_Logo.png"
          alt="Aurphyx Logo"
          width="300" />
   </a>
