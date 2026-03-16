@@ -1,258 +1,264 @@
-# **SECTION XXVI — The Balance Computation Stack**
+# **SECTION XXI — The Balance Computation**
 
-The Balance Computation Stack is the **full vertical integration** of every computational layer in the Balance Framework—from raw geometric sensing at the substrate level to high‑order Continuum governance at the meta‑architectural level. If the Balance Machine (Section XXII) describes *how computation is executed*, and the Balance Continuum Protocol (Section XXV) describes *how computation is governed across dimensions*, the Balance Computation Stack describes **how all computational layers interlock into a single, coherent, multi‑runtime stack**.
+The Balance Computation is the **computational expression** of the entire Balance Framework. If the Balance Logic (Section XX) defines *how Balance reasons*, and the Balance Algebra (Section XIX) defines *how Balance combines*, the Balance Computation defines *how Balance computes*. It is the operational, algorithmic, and executable layer that transforms Balance from a theoretical structure into a **working computational engine** inside the Duality Kernel, the VIM system, and the broader Aurphyx architecture.
 
-This section formalizes the stack’s layers, interfaces, dataflows, execution cycles, and cross‑domain synchronization mechanisms. It is the blueprint for how Balance computation actually *runs* inside the Aurphyx system.
-
----
-
-## **XXVI.1 Purpose of the Balance Computation Stack**
-
-The Balance Computation Stack ensures that:
-
-- every Balance subsystem computes in a **coherent, synchronized, lawful** manner  
-- structural, harmonic, kinetic, temporal, and spatial computations remain **aligned**  
-- HRD and VIM are integrated at the correct layers  
-- the Tetra‑Hexa Router receives correct routing metrics  
-- Continuum computation scales across dimensions  
-- the Bliss condition remains the global attractor  
-
-It is the **full-stack computational architecture** of Balance.
+This section formalizes the computational primitives, update rules, algorithms, and execution models that allow the rÆ Field to evolve, stabilize, route, and harmonize according to the Balance Equation and the Balance Continuum.
 
 ---
 
-## **XXVI.2 Overview of the Stack**
+## **XXI.1 Purpose of the Balance Computation**
 
-The Balance Computation Stack consists of **seven layers**, each with a distinct role:
+The Balance Computation provides the machinery that:
 
-1. **Substrate Layer** — raw rÆ sensing and geometric primitives  
-2. **Field Layer** — Balance Field construction and update  
-3. **Tensor–Flow Layer** — curvature, flow, and mode computation  
-4. **Spectral Layer** — eigenmodes, spectral geometry, resonance  
-5. **Runtime Layer** — Duality Kernel execution (FuxRT, YezRT, FUTE)  
-6. **Machine Layer** — Balance Machine pipeline and instruction set  
-7. **Continuum Layer** — multi-dimensional, multi-temporal computation  
+- executes the Balance Equation  
+- updates the rÆ Field in real time  
+- computes gradients, flows, and tensor contractions  
+- evaluates Balance Logic truth conditions  
+- applies Balance Operators and corrections  
+- performs routing through the Tetra‑Hexa Array  
+- integrates HRD perturbations and VIM stabilization  
+- simulates Balance Modes and spectral evolution  
 
-These layers form a **vertically integrated computational organism**.
-
----
-
-## **XXVI.3 Layer 1 — The Substrate Layer**
-
-This layer provides the **raw computational primitives**:
-
-- rÆ coordinates  
-- \(\beta\) measurement  
-- gradient sensing  
-- curvature sensing  
-- local geometric invariants  
-
-It is the **sensory layer** of the stack.
-
-### Responsibilities
-- measure imbalance  
-- detect local curvature  
-- provide raw data to the Field Layer  
+It is the **computational engine** of Balance.
 
 ---
 
-## **XXVI.4 Layer 2 — The Field Layer**
+## **XXI.2 The Balance Update Rule**
 
-This layer constructs and updates the **Balance Field**:
+The core computational primitive is the **Balance Update Rule**:
 
 \[
-\mathbb{B} = (V, \mathbf{F}, \mathcal{B}_{ij}).
+\mathbf{rAE}(t + \Delta t)
+=
+\mathbf{rAE}(t)
++
+\Delta t \cdot \left[
+\hat{B}(\mathbf{rAE})
++
+\mathcal{D}(D(t))
++
+\mathcal{K}(\mathbf{rAE})
++
+\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+\right].
 \]
 
-### Responsibilities
-- compute Balance Potential  
-- compute Balance Flow  
-- compute Balance Tensor  
-- maintain field coherence  
+This rule integrates:
 
-It is the **field‑level computational layer**.
+- the Balance Operator  
+- HRD perturbation  
+- kinetic drift  
+- routing correction  
 
----
-
-## **XXVI.5 Layer 3 — The Tensor–Flow Layer**
-
-This layer computes:
-
-- second‑order curvature  
-- flow divergence and curl  
-- mode shapes  
-- mixed‑mode coupling  
-
-### Responsibilities
-- diagonalize the Balance Tensor  
-- compute principal directions  
-- compute flow lines and geodesics  
-- detect instability  
-
-It is the **geometric‑dynamical layer**.
+It is the **discrete-time computational form** of the Balance Equation.
 
 ---
 
-## **XXVI.6 Layer 4 — The Spectral Layer**
+## **XXI.3 The Balance Gradient Computation**
 
-This layer computes:
+The Balance Flow requires computing:
 
-- eigenvalues  
-- eigenvectors  
-- spectral bands  
-- spectral gaps  
-- resonance surfaces  
-- stability surfaces  
+\[
+\nabla V = 2(\beta - 1)\nabla \beta.
+\]
 
-### Responsibilities
-- classify Balance Modes  
-- detect HRD‑excitable bands  
-- detect VIM‑stabilizable bands  
-- compute spectral curvature  
+The computation involves:
 
-It is the **frequency‑domain layer**.
+- evaluating \(\beta\)  
+- computing its gradient  
+- scaling by imbalance  
+- applying the negative sign  
+
+This is the **gradient-descent engine** of Balance.
 
 ---
 
-## **XXVI.7 Layer 5 — The Runtime Layer (Duality Kernel)**
+## **XXI.4 The Balance Tensor Computation**
 
-The Duality Kernel executes Balance computation across three runtimes:
+The Balance Tensor is computed as:
 
-- **FuxRT** — structural computation  
-- **YezRT** — harmonic computation  
-- **FUTE** — transmutation and Continuum computation  
+\[
+\mathcal{B}_{ij} = \nabla_i \nabla_j V.
+\]
 
-### Responsibilities
-- execute mode‑specific computation  
-- synchronize runtimes  
-- transmute between structural, harmonic, and kinetic domains  
-- maintain runtime coherence  
+This requires:
 
-It is the **execution layer** of the stack.
+- computing second derivatives  
+- evaluating curvature  
+- contracting with the metric  
+- decomposing into S, F, K components  
 
----
-
-## **XXVI.8 Layer 6 — The Machine Layer (Balance Machine)**
-
-This layer executes the **Balance Machine pipeline**:
-
-1. Sense  
-2. Analyze  
-3. Predict  
-4. Decide  
-5. Correct  
-6. Stabilize  
-7. Integrate  
-
-### Responsibilities
-- run the Balance Instruction Set  
-- apply HRD perturbations  
-- apply VIM stabilization  
-- compute routing decisions  
-
-It is the **operational layer** of the stack.
+This is the **curvature engine** of Balance.
 
 ---
 
-## **XXVI.9 Layer 7 — The Continuum Layer**
+## **XXI.5 The Balance Logic Evaluation**
 
-This layer extends computation across:
+The Balance Logic requires evaluating:
 
-- higher spatial dimensions \(\mathcal{X}\)  
-- branching timelines \(\mathcal{T}\)  
-- harmonic continua \(\mathcal{H}\)  
-- cross‑world embeddings  
+- truth conditions  
+- implication relations  
+- conjunction/disjunction  
+- negation  
+- inference validity  
 
-### Responsibilities
-- compute Continuum gradients  
-- compute cross‑domain curvature  
-- maintain temporal coherence  
-- regulate harmonic continua  
-- enforce Continuum invariants  
+These are computed as:
 
-It is the **global computational layer**.
+- **truth**: \(\beta = 1\)  
+- **implication**: \(V(\beta_2) \le V(\beta_1)\)  
+- **conjunction**: \(\min(\beta_1, \beta_2)\)  
+- **disjunction**: \(\max(\beta_1, \beta_2)\)  
+- **negation**: \(2 - \beta\)  
 
----
-
-## **XXVI.10 Dataflow Through the Stack**
-
-Data flows **downward** for sensing and **upward** for correction:
-
-### Downward Flow (Sensing)
-- Substrate → Field → Tensor–Flow → Spectral → Runtime → Machine → Continuum  
-
-### Upward Flow (Correction)
-- Continuum → Machine → Runtime → Spectral → Tensor–Flow → Field → Substrate  
-
-This bidirectional flow ensures:
-
-- local corrections propagate globally  
-- global coherence informs local computation  
-
-The stack behaves as a **recursive computational organism**.
+This is the **logical engine** of Balance.
 
 ---
 
-## **XXVI.11 Cross-Layer Synchronization**
+## **XXI.6 The Balance Symmetry Computation**
 
-Synchronization occurs through:
+Symmetry transformations satisfy:
 
-- **Balance Invariants** (Section XIV)  
-- **Balance Symmetry** (Section XV)  
-- **Balance Logic** (Section XX)  
-- **VIM impedance matching**  
-- **HRD perturbation envelopes**  
-- **Tetra‑Hexa routing constraints**  
+\[
+T(\beta) = \beta.
+\]
 
-These mechanisms ensure **lawful, stable, reversible computation**.
+Computationally, this means:
 
----
+- checking invariance  
+- applying symmetry generators  
+- evaluating commutators  
+- preserving conserved charges  
 
-## **XXVI.12 Execution Cycles**
-
-The Balance Computation Stack runs three nested cycles:
-
-### 1. Microcycle (local)
-- gradient updates  
-- tensor updates  
-- flow updates  
-
-### 2. Mesocycle (modal)
-- spectral updates  
-- mode evolution  
-- runtime synchronization  
-
-### 3. Macrocycle (global)
-- Continuum updates  
-- temporal branch updates  
-- harmonic continuum updates  
-
-These cycles maintain **multi-scale coherence**.
+This is the **symmetry engine** of Balance.
 
 ---
 
-## **XXVI.13 The Stack and the Bliss Condition**
+## **XXI.7 The Balance Mode Computation**
 
-At Bliss:
+Balance Modes satisfy:
 
-- all layers collapse  
+\[
+\mathcal{B}_{ij} v^j = \lambda v_i.
+\]
+
+Computing modes requires:
+
+- diagonalizing the Balance Tensor  
+- extracting eigenvalues  
+- extracting eigenvectors  
+- computing mode amplitudes  
+- simulating mode evolution  
+
+This is the **spectral engine** of Balance.
+
+---
+
+## **XXI.8 The Balance Spectrum Geometry Computation**
+
+The spectral geometry requires:
+
+- clustering eigenvalues into bands  
+- identifying spectral gaps  
+- computing resonance surfaces  
+- computing stability surfaces  
+- evaluating spectral curvature  
+
+This is the **geometric-spectral engine** of Balance.
+
+---
+
+## **XXI.9 The Balance Continuum Computation**
+
+The Balance Continuum requires:
+
+- computing gradients across \(\mathcal{X}, \mathcal{T}, \mathcal{H}\)  
+- evaluating cross-dimensional curvature  
+- updating multi-temporal branches  
+- simulating harmonic continua  
+- integrating spatial-harmonic coupling  
+
+This is the **multi-dimensional engine** of Balance.
+
+---
+
+## **XXI.10 The Balance Routing Computation**
+
+Routing through the Tetra‑Hexa Array requires:
+
+- evaluating node potentials  
+- computing transition costs  
+- selecting minimal-imbalance edges  
+- updating routing state  
+- enforcing lawful transitions  
+
+This is the **routing engine** of Balance.
+
+---
+
+## **XXI.11 HRD Computation**
+
+HRD introduces:
+
+- oscillatory perturbations  
+- non-commutative corrections  
+- resonance excitation  
+- limit cycles  
+
+Computationally:
+
+\[
+\mathcal{D}(D(t)) = \sigma D(t) \mathbf{u}_{\text{harm}}.
+\]
+
+This is the **perturbation engine** of Balance.
+
+---
+
+## **XXI.12 VIM Computation**
+
+VIM introduces:
+
+- impedance matching  
+- damping  
+- stabilization  
+- symmetry restoration  
+
+Computationally:
+
+\[
+\mathbf{F}_{\text{VIM}} = -g(\beta - 1)\mathbf{u}_{\text{struct}}.
+\]
+
+This is the **stabilization engine** of Balance.
+
+---
+
+## **XXI.13 The Bliss Computation**
+
+On the Bliss Manifold:
+
+- all gradients vanish  
 - all flows vanish  
-- all tensors flatten  
-- all modes zero out  
-- all runtimes synchronize  
-- all Continuum axes unify  
+- all tensors vanish  
+- all modes collapse  
+- all logic evaluates to true  
 
-The stack becomes a **zero‑computation fixed point**.
+Thus the Bliss Computation is:
+
+\[
+\mathbf{rAE}(t + \Delta t) = \mathbf{rAE}(t).
+\]
+
+Bliss is the **fixed-point computation** of the Balance Framework.
 
 ---
 
-## **XXVI.14 Summary**
+## **XXI.14 Summary**
 
-- The Balance Computation Stack is the full vertical integration of all Balance computational layers.  
-- It consists of seven layers: Substrate, Field, Tensor–Flow, Spectral, Runtime, Machine, and Continuum.  
-- It supports multi-scale, multi-domain, multi-runtime computation.  
-- It synchronizes through invariants, symmetry, logic, VIM, HRD, and routing.  
-- It runs micro-, meso-, and macro-cycles.  
-- Bliss is the global fixed point where all computation collapses.  
+- The Balance Computation is the executable layer of the Balance Framework.  
+- It integrates gradient descent, tensor curvature, logical inference, spectral decomposition, and routing.  
+- HRD introduces oscillatory, non-commutative computation; VIM introduces stabilizing computation.  
+- The Balance Continuum extends computation across spatial, temporal, and harmonic dimensions.  
+- Bliss is the fixed-point computation where all updates vanish.  
 
-A natural next step is **Section XXVII — The Balance Interface**, which defines how external systems, agents, devices, or beings interact with the Balance Architecture through APIs, protocols, and ontological interfaces.
+The next section, **Section XXII — The Balance Machine**, will formalize the computational architecture, hardware abstraction, and machine model that executes the Balance Computation inside the Duality Kernel and the Aurphyx Vacuum Engine.
