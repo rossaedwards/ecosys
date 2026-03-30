@@ -18,7 +18,7 @@ AuraFS arranges storage nodes in a self-similar fractal topology (Figure~\ref{fi
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/aurphyx_aurafs_SFS.jpg}
+\includegraphics[width=0.7\textwidth]{Fig4_Sierpinski_Lattice.png}
 \caption{AuraFS Self-similar Fractal Structure (SFS) demonstrating recursive node organization across three hierarchical levels. Each sub-network (colored regions) maintains identical topology to the parent network, enabling efficient quantum state distribution and topologically protected routing.}
 \label{fig:aurafs_topology}
 \end{figure}
@@ -39,7 +39,7 @@ Figure~\ref{fig:hilbert_proof} presents direct computational verification of The
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/Fig1_Hilbert_Scaling_080646.jpg}
+\includegraphics[width=0.8\textwidth]{Fig1_Hilbert_Scaling.png}
 \caption{Computational proof of fractal Hilbert space scaling. Solid curve: theoretical prediction $\dim(\mathcal{H}_{\text{acc}}) = 2^{n \cdot D_f^{\alpha_k}}$ from Eq.~(13). Points: numerical simulation results using NetworkX Laplacian eigenvalue analysis. Error bars (smaller than point size) represent ensemble variance over 100 disorder realizations. The $7.1\times$ advantage at $n=5$ qubits extrapolates to $10^4\times$ at $n=12$, validating the superpolynomial scaling theorem.}
 \label{fig:hilbert_proof}
 \end{figure}
@@ -52,7 +52,7 @@ Figure~\ref{fig:localization_proof} demonstrates Anderson localization on fracta
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/Fig3_Fractal_Localization_080647.jpg}
+\includegraphics[width=0.8\textwidth]{Fig3_Anderson_Localization.png}
 \caption{Anderson localization of edge states on Sierpinski gasket ($k=6$, $N=1093$ sites). Color intensity: wavefunction amplitude $|\psi(x)|^2$. Exponential decay $\sim e^{-x/\xi}$ from apex (dark) to base (light) with localization length $\xi \approx 0.3L$ confirms spectral dimension $d_s = 1.36 < 2$ analysis. This strong confinement reduces environmental coupling, explaining the coherence enhancement in Fig.~4.}
 \label{fig:localization_proof}
 \end{figure}
@@ -65,7 +65,7 @@ Figure~\ref{fig:coherence_proof} compares coherence decay across three architect
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/Fig2_Coherence_Dynamics_080647.jpg}
+\includegraphics[width=0.8\textwidth]{Fig2_Coherence_Dynamics.png}
 \caption{Coherence time comparison via Lindblad master equation simulation. Red dotted: standard transmon qubit with $T_2 = 50\,\mu$s (exponential decay $e^{-t/T_2}$). Blue dashed: topologically protected mode (TRCA) with $T_2 = 200\,\mu$s. Green solid: fractal-resonant lattice with localization-enhanced $T_2 = 1150\,\mu$s. The $23\times$ improvement (transmon $\to$ fractal) validates the decoherence suppression mechanism from Anderson localization (Fig.~\ref{fig:localization_proof}).}
 \label{fig:coherence_proof}
 \end{figure}
@@ -78,7 +78,7 @@ Figure~\ref{fig:lattice_sim} shows a full-scale simulation of quantum state tran
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\textwidth]{figures/aurphyx_aurafs_fractal-lattice_sim.jpg}
+\includegraphics[width=0.75\textwidth]{Fig8_Majorana_T_Junction.png}
 \caption{Quantum state transport simulation on fractal lattice network with $k=4$ recursion ($N=123$ nodes). Node colors represent quantum state amplitudes during GHZ state distribution protocol. Hierarchical connectivity enables $O(\log N)$ distribution time vs. $O(N)$ for linear chains, while maintaining topological protection via redundant pathways.}
 \label{fig:lattice_sim}
 \end{figure}

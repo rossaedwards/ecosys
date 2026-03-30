@@ -35,7 +35,20 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{remark}[theorem]{Remark}
 
-\graphicspath{{figures/}{./}}
+\graphicspath{{}{./}}
+
+% === HECATE HIGH-CONTRAST DARK THEME ===
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\pagecolor{black}
+\color{white}
+\definecolor{hecateMagenta}{HTML}{FF00FF}
+\definecolor{hecateCyan}{HTML}{00FFFF}
+\definecolor{hecateGold}{HTML}{FFD700}
+\newcommand{\hecMag}[1]{\textcolor{hecateMagenta}{#1}}
+\newcommand{\hecCyan}[1]{\textcolor{hecateCyan}{#1}}
+\newcommand{\hecGold}[1]{\textcolor{hecateGold}{#1}}
+% =======================================
 \begin{document}
 
 \title{Fractal-Enhanced Topological Quantum Computing:\\
@@ -174,6 +187,6 @@ was supported by independent research funding through Aurphyx LLC.
 
 
 \bibliographystyle{apsrev4-2}
-\bibliography{main}
+\bibliography{arxiv_ftqc_complete}
 
 \end{document}

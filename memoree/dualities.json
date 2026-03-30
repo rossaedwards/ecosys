@@ -1,0 +1,8 @@
+{
+  "dualities": [
+    {"pair": ["coherence", "decoherence"], "domain": "quantum"},
+    {"pair": ["discrete", "continuous"], "domain": "computational"},
+    {"pair": ["local", "global"], "domain": "geometric"},
+    {"pair": ["past", "future"], "domain": "temporal"}
+  ]
+}

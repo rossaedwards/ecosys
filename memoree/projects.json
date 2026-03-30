@@ -1,0 +1,8 @@
+{
+  "Aurphyx_Memoree": {
+    "active_volumes": ["Volume_I", "Volume_II"],
+    "active_axioms": ["A22_Invariant", "A12_Local_Global"],
+    "active_dualities": ["coherence/decoherence", "discrete/continuous"],
+    "description": "Sovereign memory daemon"
+  }
+}

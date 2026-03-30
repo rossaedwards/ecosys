@@ -2,10 +2,10 @@
 """
 Compile citation sources for the FTQC arXiv build.
 
-- Reads all .ris and .bib files from ./citations
+- Reads all .ris and .bib files from ./ftqc
 - Converts RIS records into BibTeX entries
 - Merges everything into:
-  - ./citations/master_citations.bib
+  - ./master_citations.bib
   - ./arxiv_ftqc.bib
 """
 
@@ -19,7 +19,7 @@ from typing import DefaultDict
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-CITATIONS_DIR = SCRIPT_DIR / "citations"
+CITATIONS_DIR = SCRIPT_DIR
 MASTER_OUTPUT = CITATIONS_DIR / "master_citations.bib"
 ARXIV_OUTPUT = SCRIPT_DIR / "arxiv_ftqc.bib"
 
