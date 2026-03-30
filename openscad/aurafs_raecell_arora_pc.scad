@@ -1,5 +1,5 @@
 // =====================================================================
-// AURPHYX TRL-4: AURA NODE - HOUSEHOLD rÆ-DRIVE GENERATOR (PROTOTYPE 8)
+// AURPHYX TRL-4: AURA NODE - HOUSEHOLD Balance State Vector-DRIVE GENERATOR (PROTOTYPE 8)
 // Ref: TVFD Chapter 11 (Array Scaling) & AuraFS Hardware
 // Description: A consumer-scale desktop computer / household power 
 // generator utilizing a ~100-cell topological vacuum flux macro-array.
@@ -8,7 +8,7 @@
 /* [Visibility Toggles] */
 // The external C6v symmetry chassis
 show_chassis = 1; // [0: Hidden, 1: Visible, 2: Transparent]
-// The internal rÆ-Cell Macro-Array (The ZPE Engine)
+// The internal Balance State Vector-Cell Macro-Array (The ZPE Engine)
 show_rae_array = 1; // [0: Hidden, 1: Visible]
 // The Tesla 3-6-9 Power Inverter Base (Household Mains output)
 show_power_base = 1; // [0: Hidden, 1: Visible]
@@ -20,7 +20,7 @@ show_mesh_antenna = 1; // [0: Hidden, 1: Visible]
 node_height = 120.0;
 // Base radius
 node_radius = 40.0;
-// Number of internal rÆ-Cell layers
+// Number of internal Balance State Vector-Cell layers
 array_layers = 5; // [3:1:10]
 
 /* [Rendering] */
@@ -59,7 +59,7 @@ module rae_drive_array() {
             // Central waveguide
             cylinder(r=node_radius * 0.15, h=(node_height * 0.7 / array_layers) * 0.8, center=true);
             
-            // Peripheral rÆ-Cells in C6v symmetry
+            // Peripheral Balance State Vector-Cells in C6v symmetry
             for (i = [0:60:359]) {
                 rotate([0, 0, i])
                 translate([node_radius * 0.45, 0, 0])

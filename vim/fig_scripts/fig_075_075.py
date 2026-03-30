@@ -1,4 +1,4 @@
-"""Figure E: Alignment invariants. Appendix E — rÆ-Cell Physical Implementation."""
+"""Figure E: Alignment invariants. Appendix E — Balance State Vector-Cell Physical Implementation."""
 
 from pathlib import Path
 
@@ -7,7 +7,7 @@ import numpy as np
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """Alignment invariants on Bliss manifold."""
+    """Alignment invariants on Equilibrium Manifold."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -21,7 +21,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     A = 1 - 0.3 * np.exp(-0.5 * t)
     plt.figure(figsize=(8, 5))
     plt.plot(t, A, "b-", lw=2)
-    plt.axhline(1, color="green", ls="--", label="Bliss")
+    plt.axhline(1, color="green", ls="--", label="Equilibrium Manifold")
     plt.xlabel("t")
     plt.ylabel("Alignment invariant")
     plt.title("Appendix E: Alignment Invariants")

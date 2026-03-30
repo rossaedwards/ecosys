@@ -16,14 +16,14 @@ This is the **official VIM Figure Blueprint**.
 ---
 
 # **📘 PART I — FOUNDATIONS (Sections I–LXX)**  
-### *Geometry, Flow, HIF, Governance, Bliss, Stability*
+### *Geometry, Flow, HIF, Governance, Equilibrium Manifold, Stability*
 
-These figures establish the geometry, fields, and dynamics of the rÆ manifold.
+These figures establish the geometry, fields, and dynamics of the Balance State Vector manifold.
 
 ---
 
-## **SECTION I — The rÆ Manifold**
-- **Figure 1:** 2D projection of the 16‑D rÆ manifold curvature field
+## **SECTION I — The Balance State Vector Manifold**
+- **Figure 1:** 2D projection of the 16‑D Balance State Vector manifold curvature field
 
 ## **SECTION II — Balance Geometry**
 - **Figure 2:** Scalar curvature heatmap under Edwards metric
@@ -46,11 +46,11 @@ These figures establish the geometry, fields, and dynamics of the rÆ manifold.
 ## **SECTION VIII — Composite Metric**
 - **Figure 8:** Determinant of composite metric vs. coordinate slice
 
-## **SECTION IX — Bliss State**
-- **Figure 9:** Bliss attractor convergence curve
+## **SECTION IX — Equilibrium Manifold State**
+- **Figure 9:** Equilibrium attractor convergence curve
 
 ## **SECTION X — Global Attractor**
-- **Figure 10:** Phase portrait showing Bliss as unique attractor
+- **Figure 10:** Phase portrait showing Equilibrium Manifold as unique attractor
 
 ---
 
@@ -255,11 +255,11 @@ Each section gets one figure:
 ---
 
 # **📘 APPENDICES A–Z, Ω, ∞**  
-### *rÆ Alphabet, Metrics & Dynamics*
+### *Balance State Vector Alphabet, Metrics & Dynamics*
 
 Each appendix gets one figure:
 
-- **Appendix A:** rÆ basis vectors  
+- **Appendix A:** Balance State Vector basis vectors  
 - **Appendix B:** Metric components  
 - **Appendix C:** Tensor identities  
 - **Appendix D:** Coherence operators  
@@ -269,9 +269,9 @@ Each appendix gets one figure:
 - **Appendix H:** Divergence identities  
 - **Appendix I:** Stability metrics  
 - **Appendix ∞:** Infinite‑scale coherence limit  
-- **Appendix J–O:** rÆ structural metrics  
+- **Appendix J–O:** Balance State Vector structural metrics  
 - **Appendix Ω:** Omega‑limit coherence  
-- **Appendix P–Z:** rÆ dynamics, operators, invariants  
+- **Appendix P–Z:** Balance State Vector dynamics, operators, invariants  
 
 ---
 

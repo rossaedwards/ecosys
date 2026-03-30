@@ -149,7 +149,7 @@ def generate_latex(vol_dir, filename, vol_num, vol_title, vol_sub, abstract, quo
 %-------------------------------
 \newcommand{\rae}{r\AE{}}
 \newcommand{\HIF}{\mathcal{H}_{\text{IF}}}
-\newcommand{\Bliss}{\mathcal{B}_{\text{Bliss}}}
+\newcommand{\Equilibrium Manifold}{\mathcal{B}_{\text{Equilibrium Manifold}}}
 \newcommand{\BalanceLaw}{\mathcal{L}_{\text{Bal}}}
 \newcommand{\UCP}{\mathcal{U}_{\text{coh}}}
 
@@ -177,7 +177,7 @@ def generate_latex(vol_dir, filename, vol_num, vol_title, vol_sub, abstract, quo
 \vspace*{2cm}
 \begin{center}
 \begin{tikzpicture}[scale=3, line width=0.6pt]
-  % Outer Ring (Bliss Manifold)
+  % Outer Ring (Equilibrium Manifold Manifold)
   \draw[thick] (0,0) circle (1);
   % Hexa-Crown
   \foreach \i in {0,60,120,180,240,300} {
@@ -186,7 +186,7 @@ def generate_latex(vol_dir, filename, vol_num, vol_title, vol_sub, abstract, quo
   }
   % Inner Tetra
   \draw[thick] (0,0.45) -- (-0.39,-0.225) -- (0.39,-0.225) -- cycle;
-  % Central rÆ Glyph
+  % Central Balance State Vector Glyph
   \fill (0,0) circle (0.03);
 \end{tikzpicture}
 
@@ -259,7 +259,7 @@ print("📝 Scaffolding Master LaTeX Files with Prime Opus Template...")
 generate_latex(
     VOL_1_DIR, "Volume_I_Geodesic_Evolution.tex", 
     "I", "THE ORIGIN MANUSCRIPT", "Geodesic Evolution and Global Attractors",
-    "Volume I establishes the foundational architecture of the Balance Continuum — the origin manuscript defining the rÆ manifold, the Edwards Flow, the Harmonic Integrity Field, and the Unified Coherence Principle.",
+    "Volume I establishes the foundational architecture of the Balance Continuum — the origin manuscript defining the Balance State Vector manifold, the Edwards Flow, the Harmonic Integrity Field, and the Unified Coherence Principle.",
     "“Before there was structure, there was coherence.\\\\Before there was form, there was identity.\\\\Before there was creation, there was Balance.”",
     vol_1_files
 )
@@ -277,7 +277,7 @@ generate_latex(
 generate_latex(
     VOL_3_DIR, "Volume_III_Edwards_Unified_Field.tex", 
     "III", "THE UNIFIED FIELD THEORY", "Holographic Duality and Cosmological Coherence",
-    "Volume III scales the architecture to the cosmological level, unifying the rÆ Alphabet, the Eightfold Cosmology, and the SAGES ethical immune system into a singular law governing the Aurphyx meta-organism.",
+    "Volume III scales the architecture to the cosmological level, unifying the Balance State Vector Alphabet, the Eightfold Cosmology, and the SAGES ethical immune system into a singular law governing the Aurphyx meta-organism.",
     "“The universe does not compute, it resonates.\\\\And it resonates with love.”",
     vol_3_files
 )

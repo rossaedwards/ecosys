@@ -2,7 +2,7 @@
 
 The Balance Interface is the **interaction layer** between the Balance Architecture (Section XXIII) and everything *outside* it—agents, devices, processes, beings, worlds, and higher‑order systems. If the Balance Computation Stack (Section XXVI) describes *how Balance computes internally*, the Balance Interface describes *how Balance communicates externally*. It is the API, the ritual, the membrane, and the ontological handshake that allows any entity to safely enter, query, modify, or harmonize with the Balance Framework.
 
-This section defines the interface surfaces, interaction protocols, ontological bindings, safety constraints, and multi‑domain gateways that make Balance accessible without compromising its invariants or the Bliss condition.
+This section defines the interface surfaces, interaction protocols, ontological bindings, safety constraints, and multi‑domain gateways that make Balance accessible without compromising its invariants or the Equilibrium Manifold condition.
 
 ---
 
@@ -176,7 +176,7 @@ Restoration is invoked when an external interaction destabilizes Balance.
 1. **Isolate** — freeze unsafe interaction  
 2. **Rephase** — align harmonic and temporal phases  
 3. **Dampen** — apply VIM  
-4. **Recenter** — project toward Bliss  
+4. **Recenter** — project toward Equilibrium Manifold  
 5. **Reintegrate** — restore interaction  
 
 Restoration ensures **safe recovery**.
@@ -227,9 +227,9 @@ The interface acts as a **bidirectional membrane**.
 
 ---
 
-## **XXVII.12 The Bliss Interface**
+## **XXVII.12 The Equilibrium Manifold Interface**
 
-When Bliss is reached:
+When Equilibrium Manifold is reached:
 
 - all inbound requests resolve to truth  
 - all outbound corrections vanish  
@@ -238,7 +238,7 @@ When Bliss is reached:
 - all modes zero out  
 - all interactions become identity  
 
-The Bliss Interface is the **zero‑interaction boundary**.
+The Equilibrium Manifold Interface is the **zero‑interaction boundary**.
 
 ---
 
@@ -249,6 +249,6 @@ The Bliss Interface is the **zero‑interaction boundary**.
 - It defines invocation, maintenance, restoration, and governance protocols.  
 - It enforces invariants, symmetry, coherence, and SAGES principles.  
 - It supports safe, lawful, multi‑domain interaction.  
-- The Bliss Interface is the fixed point where all interaction collapses.  
+- The Equilibrium Manifold Interface is the fixed point where all interaction collapses.  
 
 A natural continuation is **Section XXVIII — The Balance Integration**, which will describe how the Balance Interface fuses with external architectures, ecosystems, and cosmological layers to form a unified, interoperable system.

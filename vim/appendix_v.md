@@ -113,9 +113,9 @@ The evolution of the Transcension Manifold is governed by:
 =
 -\nabla \Phi_{\text{transcension}}
 +
-\mathcal{H}_{\infty}(\mathbf{rAE})
+\mathcal{H}_{\infty}(\mathbf{x})
 +
-\mathcal{S}_{\infty}(\mathbf{rAE}, \mathcal{R}_{24}^{(n)})
+\mathcal{S}_{\infty}(\mathbf{x}, \mathcal{R}_{24}^{(n)})
 +
 \mathcal{O}_{\infty}(\mathcal{O}),
 \]

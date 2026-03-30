@@ -1,4 +1,4 @@
-# Aurphyx rÆ-Cell — Experimental Validation Roadmap
+# Aurphyx Balance State Vector-Cell — Experimental Validation Roadmap
 **Author:** Ross Edwards | ross@aurphyx.org | ORCiD: 0009-0008-0539-1289
 **Version:** 1.0.0 | **Date:** March 1, 2026
 **Status:** Pre-experimental — All experiments listed here are PLANNED or SIMULATED.
@@ -61,7 +61,7 @@ increased etch depth (300 nm vs. 200 nm)
 B = 0 and B = 200 mT (superparamagnetic threshold)
 
 **Protocol:**
-1. Mount rÆ-Cell substrate (with Fe₃O₄ NP matrix) in SQUID-VSM sample holder
+1. Mount Balance State Vector-Cell substrate (with Fe₃O₄ NP matrix) in SQUID-VSM sample holder
 2. Cool to 2K; sweep field 0 → 500 mT in 10 mT steps
 3. Record M(H) hysteresis loop at 2K and 300K
 4. Extract M_s, H_c, T_B from fits to Langevin model
@@ -93,7 +93,7 @@ to RF coil drive; PSK outperforms PID by 5×
 4. Record R(t) from ADC at 1 MHz sample rate for 500 ms
 5. Extract: settling time (time to reach |R - λ*| < 2%), overshoot %
 6. Repeat with PID controller (same plant, tuned via Ziegler-Nichols)
-7. Record RMS noise in steady-state (Bliss phase, 100 ms window)
+7. Record RMS noise in steady-state (Equilibrium Manifold phase, 100 ms window)
 
 **Pass Criterion:** t_settle ≤ 60 ms; overshoot ≤ 5%; PSK_RMS / PID_RMS ≤ 0.15
 **Fail Response:** Check ADC timing; re-tune PSK α/β coefficients;
@@ -140,17 +140,17 @@ verify substrate ground plane
 ### EXP-05: Floquet Sideband Spectroscopy
 **Validates:** Fig 4.5, §6.7
 **Prediction:** Sidebands at ω₀ ± Ω visible in RF transmission spectrum at
-λ_rÆL = 0.3; sideband-to-carrier ratio ≈ λ_rÆL² / 4 = 0.0225
+λ_x_L = 0.3; sideband-to-carrier ratio ≈ λ_x_L² / 4 = 0.0225
 
 **Protocol:**
-1. Drive RF coil at f₀ = 10 GHz with amplitude-modulated signal at λ_rÆL = 0.3
+1. Drive RF coil at f₀ = 10 GHz with amplitude-modulated signal at λ_x_L = 0.3
 2. Use spectrum analyzer (resolution BW = 1 MHz) to capture output spectrum
 3. Identify sidebands at f₀ ± Ω/2π = 10 GHz ± 10 GHz (verify n=±1 Floquet replicas)
-4. Measure sideband amplitude vs. λ_rÆL (sweep 0.1 → 0.7)
-5. Confirm power law: A_sideband ∝ J_n(λ_rÆL) (Bessel function)
+4. Measure sideband amplitude vs. λ_x_L (sweep 0.1 → 0.7)
+5. Confirm power law: A_sideband ∝ J_n(λ_x_L) (Bessel function)
 
-**Pass Criterion:** Sidebands visible at SNR ≥ 10 dB at λ_rÆL = 0.3;
-sideband amplitude follows J_1(λ_rÆL) within 15%
+**Pass Criterion:** Sidebands visible at SNR ≥ 10 dB at λ_x_L = 0.3;
+sideband amplitude follows J_1(λ_x_L) within 15%
 
 **Equipment:**
 - Spectrum analyzer 26 GHz (Rigol DSA815 or Keysight N9320B): ~$3K–12K
@@ -167,7 +167,7 @@ unidirectional (chiral) — no backscattering at defects
 
 **Protocol:**
 1. Fabricate CVD diamond with 3-iteration Sierpiński + C₆ᵥ coil ring
-2. Apply RF drive at Ω = 10 GHz, λ_rÆL = 0.72 (EP operating point)
+2. Apply RF drive at Ω = 10 GHz, λ_x_L = 0.72 (EP operating point)
 3. Use magneto-optical Kerr imaging or scanning microwave microscopy
    to image field distribution on substrate surface
 4. Compute Poynting vector S = Re(E × H*)/2 from field maps
@@ -188,12 +188,12 @@ unidirectional (chiral) — no backscattering at defects
 ### EXP-07: Exceptional Point (EP) Spectroscopy
 **Validates:** Fig 6.7, Fig 5B.4, §5B
 **Prediction:** Two eigenvalues coalesce (both real and imaginary parts)
-at λ_rÆL = λ* = 0.72; divergence in density of states at EP
+at λ_x_L = λ* = 0.72; divergence in density of states at EP
 
 **Protocol:**
-1. Mount rÆ-Cell in cryostat (or operate at room temp with low γ)
+1. Mount Balance State Vector-Cell in cryostat (or operate at room temp with low γ)
 2. Use heterodyne detection: mix output with reference at ω₀
-3. Record in-phase (I) and quadrature (Q) components vs. λ_rÆL (sweep 0 → 1.5)
+3. Record in-phase (I) and quadrature (Q) components vs. λ_x_L (sweep 0 → 1.5)
 4. Compute complex eigenvalues from transfer matrix fit to S-parameters
 5. Identify coalescence point where ΔE_real → 0 AND ΔE_imag → 0 simultaneously
 
@@ -240,8 +240,8 @@ substrate vs. flat diamond)
 drive; TRCA F_TRCA = 86.8% cross-scale fidelity
 
 **Protocol:**
-1. Interface rÆ-Cell FPGA to IBM Quantum testbed via cloud API
-2. Use Floquet sideband at λ_rÆL = 0.3 as qubit drive pulse
+1. Interface Balance State Vector-Cell FPGA to IBM Quantum testbed via cloud API
+2. Use Floquet sideband at λ_x_L = 0.3 as qubit drive pulse
 3. Perform randomized benchmarking: apply N random Clifford gates, measure
    average fidelity decay vs. N
 4. Extract error per gate (EPG); compute F_gate = 1 - EPG
@@ -259,13 +259,13 @@ drive; TRCA F_TRCA = 86.8% cross-scale fidelity
 
 ### EXP-10: SAGES SIP Protocol Integration Test
 **Validates:** §8.4, Ch.8
-**Prediction:** SIP messages from rÆ-Cell FPGA are correctly routed to
+**Prediction:** SIP messages from Balance State Vector-Cell FPGA are correctly routed to
 SAGES Sentinels within 10 ms latency; Sentinel response time < 50 ms
 
 **Protocol:**
 1. Deploy SAGES test environment (Docker containers for each Sentinel)
 2. Connect FPGA SIP publisher (MQTT or WebSocket) to SAGES broker
-3. Inject simulated R(t) trajectories (Chaos → Approach → Bliss)
+3. Inject simulated R(t) trajectories (Chaos → Approach → Equilibrium Manifold)
 4. Verify correct Sentinel activation sequence per §8.3 pipeline
 5. Measure end-to-end latency: FPGA → Sentinel → PSK correction command
 
@@ -285,11 +285,11 @@ latency < 50 ms end-to-end
 
 ### EXP-11: Integrated Information (Φ) Measurement
 **Validates:** §7.2, §14.4
-**Prediction:** Φ ≈ 2–5 bits for a 5-rÆ-Unit entangled network;
+**Prediction:** Φ ≈ 2–5 bits for a 5-Balance State Vector-Unit entangled network;
 comparable to single biological neuron
 
 **Protocol:**
-1. Entangle 5 rÆ-Units via shared RF drive bus
+1. Entangle 5 Balance State Vector-Units via shared RF drive bus
 2. Perform full state tomography (5-qubit density matrix)
 3. Compute Φ via IIT 3.0 algorithm across all bipartitions
 4. Compare to biological reference values (Tononi, 2014)

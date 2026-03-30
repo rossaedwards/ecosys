@@ -1,4 +1,4 @@
-"""Figure A: rÆ basis vectors. Appendix A — Bliss Manifold, HRD Control."""
+"""Figure A: Balance State Vector basis vectors. Appendix A — Equilibrium Manifold Manifold, HRD Control."""
 
 from pathlib import Path
 
@@ -7,7 +7,7 @@ import numpy as np
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """rÆ basis vectors (S,K,G,F) and Bliss manifold."""
+    """Balance State Vector basis vectors (S,K,G,F) and Equilibrium Manifold."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -17,16 +17,16 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / "fig_071_071.png"
 
-    # 2D projection of 16-D rÆ: Bliss manifold rAE_f = rAE_i * rAE_t / rAE_c
-    rAE_i = np.linspace(0.5, 2.5, 100)
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f_bliss = rAE_i * rAE_t / rAE_c
+    # 2D projection of 16-D Balance State Vector: Equilibrium Manifold x_f = x_i * x_t / x_c
+    x_i = np.linspace(0.5, 2.5, 100)
+    x_c, x_t = 1.0, 1.5
+    x_f_bliss = x_i * x_t / x_c
 
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.plot(rAE_f_bliss, rAE_i, "g-", lw=2.5, label=r"Bliss $\beta=1$")
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
-    ax.set_title("Appendix A: rÆ Basis Vectors & Bliss Manifold")
+    ax.plot(x_f_bliss, x_i, "g-", lw=2.5, label=r"Equilibrium Manifold $\beta=1$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
+    ax.set_title("Appendix A: Balance State Vector Basis Vectors & Equilibrium Manifold Manifold")
     ax.legend()
     ax.set_xlim(0.3, 2.5)
     ax.set_ylim(0.4, 2.5)

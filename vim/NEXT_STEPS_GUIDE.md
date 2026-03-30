@@ -157,7 +157,7 @@ Match `build_volumes_from_vim.py` volume split:
 |--------|----------|---------|
 | **I** | I–LXX | Geodesic Evolution & Theory of Balance |
 | **II** | LXXI–XCIX | Thermodynamic Stabilization & VIM Physics |
-| **III** | C + Appendices | Edwards Unified Field & rÆ Cosmology |
+| **III** | C + Appendices | Edwards Unified Field & Balance State Vector Cosmology |
 
 ### Appendix order
 
@@ -172,7 +172,7 @@ A, B, C, D, E, F, G, H, I, ∞, J, K, L, M, N, O, Ω, P–Z.
 - [ ] **Hyperref colors:** Links, URLs, citations
 - [ ] **Equation numbering:** `\numberwithin{equation}{section}` if desired
 - [ ] **Figure captions:** `\caption{...}` and `\label{fig:...}` for cross-references
-- [ ] **Consistent notation:** β, Φ_HIF, rAE, etc. per EQUATION_EXTRACTION_SUPPLEMENT
+- [ ] **Consistent notation:** β, Φ_HIF, x, etc. per EQUATION_EXTRACTION_SUPPLEMENT
 
 ---
 

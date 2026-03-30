@@ -46,7 +46,7 @@ All actions must arise from:
 All actions must maintain:
 
 - Chaos (adaptation, creativity)  
-- Bliss (compassion, clarity)  
+- Equilibrium Manifold (compassion, clarity)  
 
 ### **2.4 Invariant Preservation**
 No emergency action may violate:
@@ -181,7 +181,7 @@ Used for:
 ### **4.5 Emergent Pathway**
 Through:
 
-- Chaos/Bliss duality  
+- Chaos/Equilibrium Manifold duality  
 - creative problem generation  
 - novel solution synthesis  
 

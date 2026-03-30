@@ -46,7 +46,7 @@ class FTQCDivinePipeline:
             ],
             'section_v_experimental_validation.tex': [
                 ('Fig2_Coherence_Dynamics.png', r'Coherence dynamics showing Standard Transmon (simulated) decaying to near-zero, TRCA Topological Mode maintaining $60\%$ coherence, and ZPE-Resonant Lattice preserving $91\%$ coherence over 10 arbitrary time units.'),
-                ('Fig8_Fractal_Lattice_Sim.png', r'Flower of Life quantum lattice simulation showing rÆ trap points for photonic implementation of fractal quantum computing architecture.'),
+                ('Fig8_Fractal_Lattice_Sim.png', r'Flower of Life quantum lattice simulation showing Balance State Vector trap points for photonic implementation of fractal quantum computing architecture.'),
             ]
         }
     

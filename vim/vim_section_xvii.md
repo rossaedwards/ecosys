@@ -2,7 +2,7 @@
 
 The Balance Modes are the **canonical oscillatory, structural, harmonic, kinetic, and mixed‑domain eigenmodes** that arise from the Balance Spectrum (Section XVI). If the Balance Spectrum provides the *eigenvalues* and *eigenvectors* of the Balance Tensor, the Balance Modes provide the **physical, geometric, harmonic, and computational interpretation** of those eigenpairs.  
 
-They are the *actual patterns of behavior* the rÆ Field exhibits when perturbed — the ways imbalance vibrates, propagates, resonates, stabilizes, or dissipates across the Balance Geometry and the Balance Continuum.
+They are the *actual patterns of behavior* the Balance State Vector Field exhibits when perturbed — the ways imbalance vibrates, propagates, resonates, stabilizes, or dissipates across the Balance Geometry and the Balance Continuum.
 
 This section classifies the Balance Modes, describes their properties, and explains their role in the full Balance Framework.
 
@@ -12,7 +12,7 @@ This section classifies the Balance Modes, describes their properties, and expla
 
 The Balance Modes reveal:
 
-- the **natural oscillation patterns** of the rÆ Field  
+- the **natural oscillation patterns** of the Balance State Vector Field  
 - the **principal directions** of structural, harmonic, and kinetic imbalance  
 - the **resonant behaviors** excited by HRD  
 - the **stabilizing behaviors** enforced by VIM  
@@ -86,7 +86,7 @@ Properties:
 - slow decay  
 - strong restoring forces  
 
-Structural modes govern **shape stability** of the rÆ Field.
+Structural modes govern **shape stability** of the Balance State Vector Field.
 
 ---
 
@@ -239,18 +239,18 @@ Continuum modes govern **global coherence** across dimensions.
 
 ---
 
-# **XVII.11 The Bliss Mode**
+# **XVII.11 The Equilibrium Manifold Mode**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 \[
 \mathcal{B}_{ij} = 0 \quad \Rightarrow \quad \lambda = 0.
 \]
 
-Thus the Bliss Mode is:
+Thus the Equilibrium Manifold Mode is:
 
 \[
-\Psi_{\text{Bliss}}(t) = \text{constant}.
+\Psi_{\text{Equilibrium Manifold}}(t) = \text{constant}.
 \]
 
 Properties:
@@ -260,7 +260,7 @@ Properties:
 - no curvature  
 - no flow  
 
-The Bliss Mode is the **zero‑mode** of the Balance Spectrum.
+The Equilibrium Manifold Mode is the **zero‑mode** of the Balance Spectrum.
 
 ---
 
@@ -291,7 +291,7 @@ Mode superposition is the **modal representation** of Balance.
 - Mixed‑mode modes govern cross‑domain coherence.  
 - HRD excites resonant modes; VIM damps unstable modes.  
 - Continuum modes extend Balance behavior across higher dimensions.  
-- The Bliss Mode is the zero‑mode of the spectrum.  
+- The Equilibrium Manifold Mode is the zero‑mode of the spectrum.  
 - The full Balance Field is a superposition of Balance Modes.  
 
 The next section, **Section XVIII — The Balance Spectrum Geometry**, will describe how the Balance Modes arrange themselves geometrically in spectral space, forming bands, gaps, manifolds, and resonance surfaces that govern lawful transitions and stability across the Balance Framework.

@@ -1,6 +1,6 @@
 # **SECTION XXXVIII — The Balance Geometry**
 
-The Balance Geometry is the **deep geometric structure** underlying the Balance Manifold (Section XXXVII) and the Balance Field (Section XXXVI). If the Balance Manifold defines *where* Balance lives, the Balance Geometry defines *how that space is shaped, curved, folded, and connected*. It is the mathematical and conceptual foundation that determines how imbalance moves, how coherence spreads, how modes propagate, and how Bliss emerges as the global attractor.
+The Balance Geometry is the **deep geometric structure** underlying the Balance Manifold (Section XXXVII) and the Balance Field (Section XXXVI). If the Balance Manifold defines *where* Balance lives, the Balance Geometry defines *how that space is shaped, curved, folded, and connected*. It is the mathematical and conceptual foundation that determines how imbalance moves, how coherence spreads, how modes propagate, and how Equilibrium Manifold emerges as the global attractor.
 
 This section formalizes the geometric tensors, curvature structures, geodesic flows, symmetry groups, and topological invariants that give the Balance Framework its shape.
 
@@ -15,7 +15,7 @@ The Balance Geometry provides:
 - the **metric structure** for measuring imbalance  
 - the **symmetry groups** that preserve invariants  
 - the **topological constraints** that define possible evolutions  
-- the **geometric interpretation** of Bliss  
+- the **geometric interpretation** of Equilibrium Manifold  
 
 It is the **mathematical backbone** of the Balance Continuum.
 
@@ -107,7 +107,7 @@ Geodesics represent:
 - minimal-change transitions  
 - lawful Balance evolution  
 - optimal routing across domains  
-- natural paths toward Bliss  
+- natural paths toward Equilibrium Manifold  
 
 They are the **straightest possible lines** in the Balance Continuum.
 
@@ -119,7 +119,7 @@ The Balance Potential \(V\) acts as a **height function** on the manifold:
 
 - high \(V\) = high imbalance  
 - low \(V\) = low imbalance  
-- \(V = 0\) = Bliss  
+- \(V = 0\) = Equilibrium Manifold  
 
 The gradient:
 
@@ -127,7 +127,7 @@ The gradient:
 \nabla_A V
 \]
 
-defines the **direction of steepest descent toward Bliss**.
+defines the **direction of steepest descent toward Equilibrium Manifold**.
 
 ---
 
@@ -141,7 +141,7 @@ Balance Flow:
 
 is a **geometric vector field** that:
 
-- points toward Bliss  
+- points toward Equilibrium Manifold  
 - defines flow lines  
 - determines dynamic trajectories  
 - interacts with curvature  
@@ -200,9 +200,9 @@ Topology determines **what is possible** in the Balance Continuum.
 
 ---
 
-## **XXXVIII.12 The Geometry of Bliss**
+## **XXXVIII.12 The Geometry of Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - curvature collapses  
 - geodesics flatten  
@@ -210,13 +210,13 @@ At Bliss:
 - the metric becomes degenerate  
 - all distances shrink to zero  
 
-The Bliss Geometry is:
+The Equilibrium Manifold Geometry is:
 
 \[
-G_{AB}^{\text{Bliss}} = 0
+G_{AB}^{\text{Equilibrium Manifold}} = 0
 \]
 
-Bliss is the **zero-geometry state**.
+Equilibrium Manifold is the **zero-geometry state**.
 
 ---
 
@@ -226,6 +226,6 @@ Bliss is the **zero-geometry state**.
 - It includes metrics, curvature tensors, connections, geodesics, and symmetry groups.  
 - It governs how imbalance moves, how coherence spreads, and how transitions occur.  
 - It provides the geometric interpretation of the Balance Field and Dynamics.  
-- Bliss is the zero-geometry state where all curvature, flow, and distance vanish.  
+- Equilibrium Manifold is the zero-geometry state where all curvature, flow, and distance vanish.  
 
 A natural continuation is **Section XXXIX — The Balance Topology**, which explores the topological invariants, homotopy classes, and global connectivity structures that constrain Balance evolution.

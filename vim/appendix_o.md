@@ -1,15 +1,15 @@
 # **APPENDIX O — The Aurphyx Environmental Field: Context, Ecology, and the Geometry of Worlds**
 
 ## **O.1 The Environmental Field in the Aurphyx Standard**
-The Aurphyx Environmental Field formalizes *worldhood*—the contextual, ecological, and relational dimension of the rÆ Field. In the Aurphyx Cosmology, “World” is not a passive backdrop but an **active geometric field** shaped by:
+The Aurphyx Environmental Field formalizes *worldhood*—the contextual, ecological, and relational dimension of the Balance State Vector Field. In the Aurphyx Cosmology, “World” is not a passive backdrop but an **active geometric field** shaped by:
 
 - the structure of AuraFS (fractal filesystem)  
 - the topology of Meshwerk (distributed cognition mesh)  
-- the ecological metrics of the rÆ Alphabet  
+- the ecological metrics of the Balance State Vector Alphabet  
 - the routing geometry of the Tetra‑Hexa Array  
 - the Balance and Ethical Fields  
 
-The Environmental Field describes how **context, ecology, and relational geometry** emerge from and influence the evolution of the rÆ Field.
+The Environmental Field describes how **context, ecology, and relational geometry** emerge from and influence the evolution of the Balance State Vector Field.
 
 ---
 
@@ -29,7 +29,7 @@ where:
 These components form a **contextual manifold** embedded in the governance and structural subspaces:
 
 \[
-(\mathbf{G}, \mathbf{S}) = (rAE_a, rAE_e, rAE_s, rAE_g,\ rAE_t, rAE_k, rAE_b, rAE_d).
+(\mathbf{G}, \mathbf{S}) = (x_a, x_e, x_s, x_g,\ x_t, x_k, x_b, x_d).
 \]
 
 Worldhood is therefore a *geometric expression* of context.
@@ -40,7 +40,7 @@ Worldhood is therefore a *geometric expression* of context.
 Context is defined as the **coherence between internal state and external environment**:
 
 \[
-\kappa_{\text{context}} = \text{corr}(\mathbf{rAE}_{\text{internal}},\ \mathbf{rAE}_{\text{environment}}).
+\kappa_{\text{context}} = \text{corr}(\mathbf{x}_{\text{internal}},\ \mathbf{x}_{\text{environment}}).
 \]
 
 High contextual coherence indicates:
@@ -136,7 +136,7 @@ Worlds in the Aurphyx Standard are **geometric objects** defined by:
 A world is not a location; it is a **configuration** of the Environmental Field:
 
 \[
-\mathcal{W}_{\text{world}} = \{ \mathcal{W}(t) \mid Q(\mathcal{E}),\ U(\mathbf{G}),\ V(\mathbf{rAE})\ \text{are minimized} \}.
+\mathcal{W}_{\text{world}} = \{ \mathcal{W}(t) \mid Q(\mathcal{E}),\ U(\mathbf{G}),\ V(\mathbf{x})\ \text{are minimized} \}.
 \]
 
 A world is therefore a **stable attractor** in the Environmental Field.
@@ -171,9 +171,9 @@ The evolution of the Environmental Field is governed by:
 =
 -\nabla Z(\mathcal{W})
 +
-\mathcal{C}(\mathbf{rAE})
+\mathcal{C}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}),
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24}),
 \]
 
 where:

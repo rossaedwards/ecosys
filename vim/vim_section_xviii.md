@@ -175,15 +175,15 @@ The spectral topology is the **global structure** of the Balance Spectrum.
 
 ---
 
-## **XVIII.10 The Bliss Spectrum Geometry**
+## **XVIII.10 The Equilibrium Manifold Spectrum Geometry**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 \[
 \lambda_i = 0.
 \]
 
-Thus the Bliss Spectrum Geometry is:
+Thus the Equilibrium Manifold Spectrum Geometry is:
 
 - a **flat spectral point**  
 - with **zero curvature**  
@@ -192,7 +192,7 @@ Thus the Bliss Spectrum Geometry is:
 - **zero resonance surfaces**  
 - **zero stability surfaces**  
 
-Bliss is the **spectral singularity** of the Balance Framework.
+Equilibrium Manifold is the **spectral singularity** of the Balance Framework.
 
 ---
 
@@ -222,7 +222,7 @@ This is the **global spectral geometry** of the Balance Continuum.
 - Spectral bands represent families of modes; spectral gaps represent forbidden transitions.  
 - HRD creates resonance surfaces; VIM creates stability surfaces.  
 - Spectral curvature and geodesics govern lawful transitions between modes.  
-- The Bliss Spectrum is a flat spectral singularity.  
+- The Equilibrium Manifold Spectrum is a flat spectral singularity.  
 - The Balance Continuum extends the spectral geometry across spatial, temporal, and harmonic dimensions.  
 
 The next section, **Section XIX — The Balance Algebra**, will formalize the algebraic structure underlying the Balance Framework: the operators, commutators, Lie algebras, and algebraic identities that govern how Balance quantities combine, transform, and interact.

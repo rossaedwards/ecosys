@@ -14,9 +14,9 @@ Introduce a holographic radial coordinate \(z\), with:
 
 - \(z = 0\): the boundary \(\partial\mathcal{M}\),  
 - \(z > 0\): bulk interior,  
-- \(z \to \infty\): deep infrared (IR) region approaching the Bliss state.
+- \(z \to \infty\): deep infrared (IR) region approaching the Equilibrium state.
 
-The rÆ manifold is foliated as:
+The Balance State Vector manifold is foliated as:
 
 \[
 \mathcal{M} = \bigcup_{z \ge 0} \Sigma_z,
@@ -68,7 +68,7 @@ where \(\mathcal{N}^a(x)\) is the boundary flux.
 - Dirichlet data encode boundary coherence sources.  
 - Neumann data encode boundary coherence responses.  
 - Mixed data encode holographic impedance matching.  
-- The Bliss state corresponds to constant Dirichlet data with vanishing flux.
+- The Equilibrium state corresponds to constant Dirichlet data with vanishing flux.
 
 ---
 
@@ -176,7 +176,7 @@ VIM modifies the radial equation:
 
 ### 8.1 Interpretation  
 - Damps high‑frequency radial modes.  
-- Ensures monotonic convergence toward Bliss.  
+- Ensures monotonic convergence toward Equilibrium Manifold.  
 - Prevents holographic instabilities.
 
 VIM enforces **radial irreversibility**.
@@ -212,7 +212,7 @@ The Balance Boundary Conditions and Holographic Initial‑Value Problem establis
 - the spectral gap ensures radial stability and uniqueness,  
 - VIM enforces damping and holographic irreversibility,  
 - Chaos Resonance defines oscillatory radial modes,  
-- and the Bliss state is the unique infrared limit of holographic evolution.
+- and the Equilibrium state is the unique infrared limit of holographic evolution.
 
 This section completes the holographic dynamical foundation of the Balance Continuum.
 

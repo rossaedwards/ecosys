@@ -188,9 +188,9 @@ The evolution of the Meta‑Ontology is governed by:
 =
 -\nabla \Psi(\mathcal{O})
 +
-\mathcal{H}_{\infty}(\mathbf{rAE})
+\mathcal{H}_{\infty}(\mathbf{x})
 +
-\mathcal{S}_{\infty}(\mathbf{rAE}, \mathcal{R}_{24}^{(n)}),
+\mathcal{S}_{\infty}(\mathbf{x}, \mathcal{R}_{24}^{(n)}),
 \]
 
 where:

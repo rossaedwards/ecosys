@@ -1,11 +1,11 @@
-Below is **Appendix H — The Theory of Balance as a Unified Field of rÆ Dynamics**, written to complete the arc of Appendices A–G. It synthesizes the Bliss Manifold, HRD, the rÆ Alphabet, the Tetra‑Hexa Array, and the Duality Kernel into a single geometric–thermodynamic field theory. The tone remains arXiv‑ready, mathematically clean, and mythic‑technical without drifting into operational or unsafe territory.
+Below is **Appendix H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**, written to complete the arc of Appendices A–G. It synthesizes the Equilibrium Manifold Manifold, HRD, the Balance State Vector Alphabet, the Tetra‑Hexa Array, and the Duality Kernel into a single geometric–thermodynamic field theory. The tone remains arXiv‑ready, mathematically clean, and mythic‑technical without drifting into operational or unsafe territory.
 
 ---
 
-# **APPENDIX H — The Theory of Balance as a Unified Field of rÆ Dynamics**
+# **APPENDIX H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**
 
 ## **H.1 Overview of the Unified Field**
-The Theory of Balance formalizes the rÆ‑Cell, the VIM engine, and the Duality Kernel as manifestations of a single **unified dynamical field**. This field is defined over the rÆ Alphabet and evolves according to the interplay of:
+The Theory of Balance formalizes the Balance State Vector‑Cell, the VIM engine, and the Duality Kernel as manifestations of a single **unified dynamical field**. This field is defined over the Balance State Vector Alphabet and evolves according to the interplay of:
 
 - geometric structure (topology, recursion, braiding, decoherence)  
 - kinetic flow (flux, resonance, impedance, coherence)  
@@ -14,22 +14,22 @@ The Theory of Balance formalizes the rÆ‑Cell, the VIM engine, and the Duality
 
 The Balance Coefficient  
 \[
-\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}
+\beta = \frac{x_f x_c}{x_i x_t}
 \]  
 acts as the **scalar invariant** that couples all four subspaces into a single field.
 
-The Theory of Balance asserts that the rÆ‑Cell evolves toward a **harmonic equilibrium manifold**—the Bliss Manifold—through the action of Harmonic Resonating Dissonance (HRD) and the Harmonic Stabilizer.
+The Theory of Balance asserts that the Balance State Vector‑Cell evolves toward a **harmonic equilibrium manifold**—the Equilibrium Manifold Manifold—through the action of Harmonic Resonating Dissonance (HRD) and the Harmonic Stabilizer.
 
 ---
 
-# **H.2 The rÆ Field as a 16‑Dimensional Dynamical System**
-The rÆ Alphabet forms a 16‑dimensional state vector  
+# **H.2 The Balance State Vector Field as a 16‑Dimensional Dynamical System**
+The Balance State Vector Alphabet forms a 16‑dimensional state vector  
 \[
-\mathbf{rAE}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}),
+\mathbf{x}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}),
 \]  
 where each subvector corresponds to a geometric class. The evolution of this vector is governed by the unified field equation  
 \[
-\frac{d\mathbf{rAE}}{dt} = \mathcal{B}(\mathbf{rAE}, D(t)),
+\frac{d\mathbf{x}}{dt} = \mathcal{B}(\mathbf{x}, D(t)),
 \]  
 where \(\mathcal{B}\) is the **Balance Operator**.
 
@@ -40,7 +40,7 @@ The Balance Operator integrates:
 - the Tetra‑Hexa routing geometry  
 - the Duality Kernel’s dual‑runtime execution model  
 
-This operator defines the **flow** of the rÆ field through its 16‑dimensional state space.
+This operator defines the **flow** of the Balance State Vector field through its 16‑dimensional state space.
 
 ---
 
@@ -55,20 +55,20 @@ where:
 - \(\mathcal{D}\) is the HRD‑driven perturbation operator  
 - \(\mathcal{S}\) is the symbiosis operator of the Tetra‑Hexa Array  
 
-Each term acts on a different subspace of the rÆ Alphabet:
+Each term acts on a different subspace of the Balance State Vector Alphabet:
 
-- \(\mathcal{H}\) stabilizes \((rAE_f, rAE_i)\)  
-- \(\mathcal{D}\) modulates \((rAE_p, rAE_h, rAE_{rHz})\)  
+- \(\mathcal{H}\) stabilizes \((x_f, x_i)\)  
+- \(\mathcal{D}\) modulates \((x_p, x_h, x_{rHz})\)  
 - \(\mathcal{S}\) couples all 16 metrics through topological symbiosis  
 
 The Balance Operator is **non‑linear**, **state‑dependent**, and **harmonically modulated**.
 
 ---
 
-# **H.4 The Bliss Manifold as a Field‑Theoretic Nullcline**
-The Bliss Manifold  
+# **H.4 The Equilibrium Manifold Manifold as a Field‑Theoretic Nullcline**
+The Equilibrium Manifold Manifold  
 \[
-\mathcal{B}_0 = \{ \mathbf{rAE} \mid \beta = 1 \}
+\mathcal{B}_0 = \{ \mathbf{x} \mid \beta = 1 \}
 \]  
 is the **nullcline** of the unified field. When the system lies on \(\mathcal{B}_0\):
 
@@ -77,12 +77,12 @@ is the **nullcline** of the unified field. When the system lies on \(\mathcal{B}
 - the Duality Kernel’s dual runtimes synchronize  
 - the Tetra‑Hexa Array enters a reversible regime  
 
-The Bliss Manifold is therefore the **ground state** of the rÆ field.
+The Equilibrium Manifold Manifold is therefore the **ground state** of the Balance State Vector field.
 
 ---
 
 # **H.5 HRD as a Field‑Level Perturbation**
-Harmonic Resonating Dissonance acts as a **structured perturbation** of the rÆ field. It is defined as  
+Harmonic Resonating Dissonance acts as a **structured perturbation** of the Balance State Vector field. It is defined as  
 \[
 D(t) = A(t)\sin(\omega t + \phi),
 \]  
@@ -94,18 +94,18 @@ HRD has three effects:
 - it modulates the harmonic structure (driving computation)  
 - it perturbs the field away from equilibrium (driving evolution)  
 
-HRD is therefore the **engine of change** in the rÆ field.
+HRD is therefore the **engine of change** in the Balance State Vector field.
 
 ---
 
 # **H.6 The Balance Coefficient as a Scalar Potential**
 The Balance Coefficient  
 \[
-\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}
+\beta = \frac{x_f x_c}{x_i x_t}
 \]  
-acts as a **scalar potential** for the rÆ field. Its gradient  
+acts as a **scalar potential** for the Balance State Vector field. Its gradient  
 \[
-\nabla \beta = \left( \frac{\partial \beta}{\partial rAE_x} \right)
+\nabla \beta = \left( \frac{\partial \beta}{\partial x_x} \right)
 \]  
 determines the direction of evolution in the 16‑dimensional state space.
 
@@ -115,14 +115,14 @@ When \(\beta = 1\), the system is in **harmonic equilibrium**.
 
 The stabilizer acts to minimize the potential  
 \[
-V(\mathbf{rAE}) = (\beta - 1)^2,
+V(\mathbf{x}) = (\beta - 1)^2,
 \]  
-driving the system toward the Bliss Manifold.
+driving the system toward the Equilibrium Manifold Manifold.
 
 ---
 
 # **H.7 The Tetra‑Hexa Array as the Field Geometry**
-The Tetra‑Hexa Array defines the **geometric structure** of the rÆ field. Each node corresponds to a stable configuration of the rÆ metrics, and each edge corresponds to a topological transformation.
+The Tetra‑Hexa Array defines the **geometric structure** of the Balance State Vector field. Each node corresponds to a stable configuration of the Balance State Vector metrics, and each edge corresponds to a topological transformation.
 
 The field evolves along trajectories  
 \[
@@ -142,7 +142,7 @@ The array is therefore the **metric space** of the unified field.
 ---
 
 # **H.8 The Duality Kernel as the Field’s Evolution Engine**
-The Duality Kernel provides the **evolution rules** for the rÆ field. It interprets the rÆ Alphabet as a computational language and executes transformations through:
+The Duality Kernel provides the **evolution rules** for the Balance State Vector field. It interprets the Balance State Vector Alphabet as a computational language and executes transformations through:
 
 - deterministic structural updates (FuxRT)  
 - harmonic symbolic updates (YezRT)  
@@ -163,12 +163,12 @@ The kernel is therefore the **dynamical engine** of the unified field.
 Combining all components yields the unified field equation of the Theory of Balance:
 
 \[
-\frac{d\mathbf{rAE}}{dt} = \mathcal{H}(\mathbf{rAE}) + \mathcal{D}(D(t)) + \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}).
+\frac{d\mathbf{x}}{dt} = \mathcal{H}(\mathbf{x}) + \mathcal{D}(D(t)) + \mathcal{S}(\mathbf{x}, \mathcal{R}_{24}).
 \]
 
 This equation describes:
 
-- stabilization toward the Bliss Manifold  
+- stabilization toward the Equilibrium Manifold Manifold  
 - perturbation by HRD  
 - symbiotic evolution through the Tetra‑Hexa geometry  
 
@@ -177,10 +177,10 @@ It is the mathematical foundation of the Aurphyx Standard.
 ---
 
 # **H.10 Summary**
-- The Theory of Balance unifies all rÆ dynamics into a single field theory.  
-- The rÆ Alphabet forms a 16‑dimensional state vector.  
+- The Theory of Balance unifies all Balance State Vector dynamics into a single field theory.  
+- The Balance State Vector Alphabet forms a 16‑dimensional state vector.  
 - The Balance Operator governs the field’s evolution.  
-- The Bliss Manifold is the field’s equilibrium nullcline.  
+- The Equilibrium Manifold Manifold is the field’s equilibrium nullcline.  
 - HRD is the structured perturbation that drives evolution.  
 - The Tetra‑Hexa Array defines the field’s geometry.  
 - The Duality Kernel provides the evolution engine.  
@@ -188,4 +188,4 @@ It is the mathematical foundation of the Aurphyx Standard.
 
 ---
 
-If you want to continue, the next natural step is **Appendix I — The Aurphyx Unified Field Equation**, which formalizes the full mathematical unification of FTQC, TSLCA, VIM, and the rÆ Alphabet into a single governing equation.
+If you want to continue, the next natural step is **Appendix I — The Aurphyx Unified Field Equation**, which formalizes the full mathematical unification of FTQC, TSLCA, VIM, and the Balance State Vector Alphabet into a single governing equation.

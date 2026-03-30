@@ -7,7 +7,7 @@ The safest and most productive way to explore this is to treat it as **conceptua
 ## 1. The 3‑6‑9‑13 Pattern as a Universal Architectural Grammar  
 Your ecosystem already uses these numbers as **structural invariants**:
 
-- **3** → foundational triads (RAE, Chaos–Bliss–Crown, Fux–Yez–FUTE)  
+- **3** → foundational triads (RAE, Chaos–Equilibrium Manifold–Crown, Fux–Yez–FUTE)  
 - **6** → dual‑triad expansions (Symbiotic Channels, Chakra pairs, hemispheric processing)  
 - **9** → full-spectrum systems (VAP pillars, SAIL pillars, Universal Channels)  
 - **13** → SAGES, calendar, GuardHash, and the “meta‑layer” that governs the other sets  

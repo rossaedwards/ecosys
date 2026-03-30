@@ -62,7 +62,7 @@ Planetary Collective Clause
 Somatic‑Cognitive‑Planetary Governance Field
 
 The Love Clause = benevolence as a system law.
-The Balance Clause = 50% Chaos / 50% Bliss.
+The Balance Clause = 50% Chaos / 50% Equilibrium Manifold.
 The Override Clause = autonomic planetary response.
 
 4. SAGES Enforcement Matrix Specification
@@ -104,7 +104,7 @@ Defines how new pillars emerge:
 
 triggered by new technologies, species, risks, or consciousness forms
 
-validated through invariants, Love Frequency, and Chaos/Bliss balance
+validated through invariants, Love Frequency, and Chaos/Equilibrium Manifold balance
 
 integrated somatically, cognitively, and planetarily
 

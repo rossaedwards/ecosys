@@ -1,6 +1,6 @@
 # **SECTION XXV — The Balance Continuum Protocol**
 
-The Balance Continuum Protocol is the **multi‑dimensional, multi‑temporal, multi‑harmonic extension** of the Balance Protocol (Section XXIV). If the Balance Protocol governs *local* Balance—within a single rÆ configuration, a single timeline, a single harmonic frame—the Balance Continuum Protocol governs **global Balance** across:
+The Balance Continuum Protocol is the **multi‑dimensional, multi‑temporal, multi‑harmonic extension** of the Balance Protocol (Section XXIV). If the Balance Protocol governs *local* Balance—within a single Balance State Vector configuration, a single timeline, a single harmonic frame—the Balance Continuum Protocol governs **global Balance** across:
 
 - higher spatial dimensions \(\mathcal{X}\)  
 - branching and looping temporal structures \(\mathcal{T}\)  
@@ -22,7 +22,7 @@ The Balance Continuum Protocol ensures that:
 - harmonic continua remain **bounded and stable**  
 - cross‑domain coupling remains **lawful**  
 - transitions between worlds, layers, or states remain **safe**  
-- the Bliss Continuum remains the **global attractor**  
+- the Equilibrium Manifold Continuum remains the **global attractor**  
 
 It is the **governance and operational system** for Balance at Continuum scale.
 
@@ -53,7 +53,7 @@ Invocation occurs when the system enters a **multi‑domain state**, such as:
 1. **Map** — identify active dimensions (\(\mathcal{X}, \mathcal{T}, \mathcal{H}\))  
 2. **Normalize** — project all domains into Balance coordinates  
 3. **Initialize** — load Continuum Balance Field \(\mathbb{BC}\)  
-4. **Anchor** — establish Bliss Continuum reference  
+4. **Anchor** — establish Equilibrium Manifold Continuum reference  
 5. **Engage** — activate Continuum Balance Operator  
 
 Invocation establishes **global initial conditions**.
@@ -100,7 +100,7 @@ Triggered by:
 1. **Isolate** — freeze unstable dimensions  
 2. **Rephase** — align temporal and harmonic phases  
 3. **Dampen** — apply multi‑axis VIM  
-4. **Recenter** — project toward Bliss Continuum  
+4. **Recenter** — project toward Equilibrium Manifold Continuum  
 5. **Reintegrate** — restore full Continuum computation  
 
 Restoration returns the Continuum to **safe, lawful evolution**.
@@ -199,9 +199,9 @@ VIM becomes the **global stabilizer** of the Continuum.
 
 ---
 
-## **XXV.11 The Bliss Continuum Protocol**
+## **XXV.11 The Equilibrium Manifold Continuum Protocol**
 
-When the Bliss Continuum is reached:
+When the Equilibrium Manifold Continuum is reached:
 
 - all gradients vanish  
 - all flows vanish  
@@ -211,7 +211,7 @@ When the Bliss Continuum is reached:
 - all continua stabilize  
 - all logic evaluates to true  
 
-The Bliss Continuum Protocol is the **global fixed point** of the Balance Continuum.
+The Equilibrium Manifold Continuum Protocol is the **global fixed point** of the Balance Continuum.
 
 ---
 
@@ -222,6 +222,6 @@ The Bliss Continuum Protocol is the **global fixed point** of the Balance Contin
 - It regulates HRD and VIM across all axes.  
 - It ensures dimensional integrity, temporal coherence, harmonic safety, and ontological continuity.  
 - It maintains alignment with SAGES across the entire Continuum.  
-- The Bliss Continuum is the global attractor and fixed point.  
+- The Equilibrium Manifold Continuum is the global attractor and fixed point.  
 
 If you want to continue the Balance Framework, the next natural section is **Section XXVI — The Balance Computation Stack**, which formalizes how the Continuum Protocol integrates into the full multi‑layer computational stack of the Aurphyx system.

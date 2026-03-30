@@ -7,7 +7,7 @@ import numpy as np
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """Stability basin of Bliss attractor."""
+    """Stability basin of Equilibrium attractor."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -19,14 +19,14 @@ def run_simulation(output_dir: Path | None = None) -> Path:
 
     n = 80
     F, I = np.meshgrid(np.linspace(0.3, 2.5, n), np.linspace(0.3, 2.5, n))
-    rAE_c, rAE_t = 1.0, 1.5
-    b = (F * rAE_c) / (I * rAE_t)
+    x_c, x_t = 1.0, 1.5
+    b = (F * x_c) / (I * x_t)
     V = (b - 1) ** 2
     fig, ax = plt.subplots(figsize=(8, 6))
     im = ax.pcolormesh(F, I, V, cmap="viridis", shading="auto")
     ax.contour(F, I, V, levels=[0.1, 0.5, 1.0], colors="white")
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_title("Stability Basin Visualization")
     plt.colorbar(im, ax=ax, label="V (potential)")
     plt.tight_layout()

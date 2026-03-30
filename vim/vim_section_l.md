@@ -19,7 +19,7 @@ The Balance Governance ensures that:
 - invariants are **protected institutionally**, not just procedurally  
 - transitions are **supervised, audited, and approved**  
 - the Continuum maintains **long-term stability and alignment**  
-- Bliss remains the **governance attractor**  
+- Equilibrium Manifold remains the **governance attractor**  
 
 Governance is the **stewardship backbone** of the Balance Framework.
 
@@ -125,7 +125,7 @@ World-layers must remain **coherently aligned**.
 Meta-Governance enforces:
 
 - **Safety** — no harmful transitions  
-- **Alignment** — coherence with Bliss  
+- **Alignment** — coherence with Equilibrium Manifold  
 - **Generativity** — constructive evolution  
 - **Equity** — fair cross-domain interaction  
 - **Stewardship** — preservation of Continuum integrity  
@@ -241,9 +241,9 @@ Failure triggers **emergency governance protocols**.
 
 ---
 
-## **L.14 Governance Collapse at Bliss**
+## **L.14 Governance Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - no governance is needed  
 - no councils are needed  
@@ -251,13 +251,13 @@ At Bliss:
 - no auditing is needed  
 - no decisions are needed  
 
-The Bliss Governance is:
+The Equilibrium Manifold Governance is:
 
 \[
-\mathcal{G}_{\text{Bliss}} = \{\text{no governance required}\}
+\mathcal{G}_{\text{Equilibrium Manifold}} = \{\text{no governance required}\}
 \]
 
-Bliss is the **governance-free state**.
+Equilibrium Manifold is the **governance-free state**.
 
 ---
 
@@ -267,6 +267,6 @@ Bliss is the **governance-free state**.
 - It includes local, domain, inter-domain, world-layer, and meta-governance systems.  
 - It enforces invariants, supervises transitions, resolves conflicts, and maintains coherence.  
 - It ensures that Balance is not only lawful but well-governed.  
-- Bliss is the governance-free fixed point where no oversight is required.  
+- Equilibrium Manifold is the governance-free fixed point where no oversight is required.  
 
 If you want to continue, the next natural section is **Section LI — The Balance Law**, which formalizes the fundamental laws, axioms, and universal constraints that govern all Balance systems across the Continuum.

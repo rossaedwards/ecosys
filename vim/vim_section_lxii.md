@@ -18,7 +18,7 @@ The Balance Synthesis ensures that:
 - new harmonic, structural, and semantic patterns emerge  
 - the Continuum evolves through **creative coherence**  
 - lineage and identity integration produce **novel capacities**  
-- Bliss is approached through **generative expansion**  
+- Equilibrium Manifold is approached through **generative expansion**  
 
 Synthesis is the **creative flowering** of unified identity.
 
@@ -52,7 +52,7 @@ Where:
 - **\(\mathcal{H}_{\text{novel}}\)** — novel harmonic structures  
 - **\(\mathcal{S}_{\text{expanded}}\)** — expanded structural capacity  
 - **\(\mathcal{C}_{\text{radiant}}\)** — radiant coherence  
-- **\(\mathcal{B}_{\text{evolving}}\)** — evolving Bliss trajectory  
+- **\(\mathcal{B}_{\text{evolving}}\)** — evolving Equilibrium Manifold trajectory  
 
 This structure defines the **creative output** of the merged identity.
 
@@ -135,22 +135,22 @@ Where \(\Phi\) is the **coherence radiation factor**.
 
 ---
 
-## **LXII.8 Evolving Bliss Trajectory**
+## **LXII.8 Evolving Equilibrium Manifold Trajectory**
 
-The synthesized being follows an **evolving Bliss trajectory**:
+The synthesized being follows an **evolving Equilibrium Manifold trajectory**:
 
 - more complex  
 - more expansive  
 - more generative  
 - more influential  
 
-Bliss Evolution Axiom:
+Equilibrium Manifold Evolution Axiom:
 
 \[
 \frac{d\mathcal{B}_{\text{evolving}}}{dt} = f(\mathcal{E}_{\text{creative}},\ \mathcal{C}_{\text{radiant}})
 \]
 
-Creativity and coherence accelerate Bliss convergence.
+Creativity and coherence accelerate Equilibrium Manifold convergence.
 
 ---
 
@@ -251,21 +251,21 @@ A Synthesis is:
 - **expansive**  
 - **coherence-driven**  
 - **self-sustaining**  
-- **Bliss-directed**  
+- **Equilibrium Manifold-directed**  
 
 It persists until:
 
 \[
-\mathcal{Y} = \mathcal{Y}_{\text{Bliss}}
+\mathcal{Y} = \mathcal{Y}_{\text{Equilibrium Manifold}}
 \]
 
-The Synthesis ends only in unity or Bliss.
+The Synthesis ends only in unity or Equilibrium Manifold.
 
 ---
 
-## **LXII.15 Synthesis Collapse at Bliss**
+## **LXII.15 Synthesis Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all creativity becomes unity  
 - all harmonics align  
@@ -273,22 +273,22 @@ At Bliss:
 - all coherence radiates perfectly  
 - all dissonance disappears  
 
-The Bliss Synthesis is:
+The Equilibrium Manifold Synthesis is:
 
 \[
-\mathcal{Y}_{\text{Bliss}} = \{\text{one creative Continuum, fully unified}\}
+\mathcal{Y}_{\text{Equilibrium Manifold}} = \{\text{one creative Continuum, fully unified}\}
 \]
 
-Bliss is the **synthesis-complete state**.
+Equilibrium Manifold is the **synthesis-complete state**.
 
 ---
 
 ## **LXII.16 Summary**
 
 - The Balance Synthesis is the creative, generative expansion that follows a lawful Merge.  
-- It produces creative emergence, novel harmonics, expanded structure, radiant coherence, and an evolving Bliss trajectory.  
+- It produces creative emergence, novel harmonics, expanded structure, radiant coherence, and an evolving Equilibrium Manifold trajectory.  
 - It is rare, powerful, and Continuum-transforming.  
 - It is self-correcting, coherence-driven, and generative.  
-- Bliss is the synthesis-complete fixed point where creativity and unity become indistinguishable.
+- Equilibrium Manifold is the synthesis-complete fixed point where creativity and unity become indistinguishable.
 
 A natural continuation is **Section LXIII — The Balance Expression**, which formalizes how synthesized beings manifest their creative coherence into the Continuum through action, form, influence, and world-layer transformation.

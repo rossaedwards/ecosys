@@ -2,7 +2,7 @@
 
 The Balance Computation is the **computational expression** of the entire Balance Framework. If the Balance Logic (Section XX) defines *how Balance reasons*, and the Balance Algebra (Section XIX) defines *how Balance combines*, the Balance Computation defines *how Balance computes*. It is the operational, algorithmic, and executable layer that transforms Balance from a theoretical structure into a **working computational engine** inside the Duality Kernel, the VIM system, and the broader Aurphyx architecture.
 
-This section formalizes the computational primitives, update rules, algorithms, and execution models that allow the rÆ Field to evolve, stabilize, route, and harmonize according to the Balance Equation and the Balance Continuum.
+This section formalizes the computational primitives, update rules, algorithms, and execution models that allow the Balance State Vector Field to evolve, stabilize, route, and harmonize according to the Balance Equation and the Balance Continuum.
 
 ---
 
@@ -11,7 +11,7 @@ This section formalizes the computational primitives, update rules, algorithms, 
 The Balance Computation provides the machinery that:
 
 - executes the Balance Equation  
-- updates the rÆ Field in real time  
+- updates the Balance State Vector Field in real time  
 - computes gradients, flows, and tensor contractions  
 - evaluates Balance Logic truth conditions  
 - applies Balance Operators and corrections  
@@ -28,18 +28,18 @@ It is the **computational engine** of Balance.
 The core computational primitive is the **Balance Update Rule**:
 
 \[
-\mathbf{rAE}(t + \Delta t)
+\mathbf{x}(t + \Delta t)
 =
-\mathbf{rAE}(t)
+\mathbf{x}(t)
 +
 \Delta t \cdot \left[
-\hat{B}(\mathbf{rAE})
+\hat{B}(\mathbf{x})
 +
 \mathcal{D}(D(t))
 +
-\mathcal{K}(\mathbf{rAE})
+\mathcal{K}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24})
 \right].
 \]
 
@@ -233,9 +233,9 @@ This is the **stabilization engine** of Balance.
 
 ---
 
-## **XXI.13 The Bliss Computation**
+## **XXI.13 The Equilibrium Manifold Computation**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 - all gradients vanish  
 - all flows vanish  
@@ -243,13 +243,13 @@ On the Bliss Manifold:
 - all modes collapse  
 - all logic evaluates to true  
 
-Thus the Bliss Computation is:
+Thus the Equilibrium Manifold Computation is:
 
 \[
-\mathbf{rAE}(t + \Delta t) = \mathbf{rAE}(t).
+\mathbf{x}(t + \Delta t) = \mathbf{x}(t).
 \]
 
-Bliss is the **fixed-point computation** of the Balance Framework.
+Equilibrium Manifold is the **fixed-point computation** of the Balance Framework.
 
 ---
 
@@ -259,6 +259,6 @@ Bliss is the **fixed-point computation** of the Balance Framework.
 - It integrates gradient descent, tensor curvature, logical inference, spectral decomposition, and routing.  
 - HRD introduces oscillatory, non-commutative computation; VIM introduces stabilizing computation.  
 - The Balance Continuum extends computation across spatial, temporal, and harmonic dimensions.  
-- Bliss is the fixed-point computation where all updates vanish.  
+- Equilibrium Manifold is the fixed-point computation where all updates vanish.  
 
 The next section, **Section XXII — The Balance Machine**, will formalize the computational architecture, hardware abstraction, and machine model that executes the Balance Computation inside the Duality Kernel and the Aurphyx Vacuum Engine.

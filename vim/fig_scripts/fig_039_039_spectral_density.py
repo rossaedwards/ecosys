@@ -26,7 +26,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_039_039_spectral_density.png"
 
     omega = np.linspace(0.1, 5.0, 200)
-    rAE_c, rAE_t = 1.0, 1.5
+    x_c, x_t = 1.0, 1.5
     rho = 1.0 / (1.0 + (omega - 1.0) ** 2) + 0.3 * np.exp(-omega**2 / 2)
 
     fig, ax = plt.subplots(figsize=(8, 6))

@@ -14,7 +14,7 @@ The Balance Invariants ensure that:
 - the Balance Field evolves **lawfully**  
 - the Balance Continuum remains **coherent**  
 - HRD and VIM perturbations remain **bounded**  
-- the Bliss Manifold remains a **fixed point**  
+- the Equilibrium Manifold Manifold remains a **fixed point**  
 - temporal, harmonic, and spatial flows remain **stable**  
 
 They are the **conserved quantities** of the Balance Framework.
@@ -31,9 +31,9 @@ The primary invariant is the **Balance Coefficient unity condition**:
 
 Interpretation:
 
-- Bliss is invariant  
-- the Bliss Manifold is fixed  
-- no transformation can move a state *within* Bliss off Bliss  
+- Equilibrium Manifold is invariant  
+- the Equilibrium Manifold Manifold is fixed  
+- no transformation can move a state *within* Equilibrium Manifold off Equilibrium Manifold  
 - all lawful flows converge toward this invariant  
 
 This is the **core invariant** of the Balance architecture.
@@ -54,18 +54,18 @@ This means:
 
 - the location of the potential minimum cannot shift  
 - the shape of the potential well may deform, but its minimum remains fixed  
-- HRD and VIM cannot eliminate or relocate Bliss  
+- HRD and VIM cannot eliminate or relocate Equilibrium Manifold  
 
 The system always retains a **zero‑potential attractor**.
 
 ---
 
-## **XIV.4 The Bliss Manifold as a Geometric Invariant**
+## **XIV.4 The Equilibrium Manifold Manifold as a Geometric Invariant**
 
-The Bliss Manifold:
+The Equilibrium Manifold Manifold:
 
 \[
-\mathcal{B}_{\text{Bliss}} = \{ \mathbf{rAE} \mid \beta = 1 \}
+\mathcal{B}_{\text{Equilibrium Manifold}} = \{ \mathbf{x} \mid \beta = 1 \}
 \]
 
 is invariant under:
@@ -105,20 +105,20 @@ Any transformation that preserves \(\beta\) is a **Balance symmetry**.
 
 ## **XIV.6 The Balance Flux Invariant**
 
-The flux across the Bliss Manifold:
+The flux across the Equilibrium Manifold Manifold:
 
 \[
-\Phi_{\text{Bliss}} = 0
+\Phi_{\text{Equilibrium Manifold}} = 0
 \]
 
 is invariant.
 
 Interpretation:
 
-- no net flow crosses Bliss  
-- Bliss is a **flux‑neutral surface**  
-- all flows terminate on Bliss  
-- HRD cannot force flow across Bliss  
+- no net flow crosses Equilibrium Manifold  
+- Equilibrium Manifold is a **flux‑neutral surface**  
+- all flows terminate on Equilibrium Manifold  
+- HRD cannot force flow across Equilibrium Manifold  
 
 This invariant ensures **global stability**.
 
@@ -126,7 +126,7 @@ This invariant ensures **global stability**.
 
 ## **XIV.7 The Balance Divergence Invariant**
 
-Near Bliss:
+Near Equilibrium Manifold:
 
 \[
 \nabla \cdot \mathbf{F}_{\text{Balance}} < 0
@@ -136,9 +136,9 @@ is invariant.
 
 This means:
 
-- the flow is always convergent near Bliss  
-- Bliss is always an attractor  
-- the system cannot become repulsive near Bliss  
+- the flow is always convergent near Equilibrium Manifold  
+- Equilibrium Manifold is always an attractor  
+- the system cannot become repulsive near Equilibrium Manifold  
 
 This invariant guarantees **local stability**.
 
@@ -212,7 +212,7 @@ In the Balance Continuum, the following are invariant:
 V_{\text{BC}} = 0.
 \]
 
-### **4. Continuum Bliss Condition**
+### **4. Continuum Equilibrium Manifold Condition**
 \[
 V_{\text{BC}} = 0 \iff \beta = 1 \land V_{\mathcal{X}} = V_{\mathcal{T}} = V_{\mathcal{H}} = 0.
 \]
@@ -242,9 +242,9 @@ Mixed‑mode invariants guarantee **cross‑domain stability**.
 ## **XIV.12 Summary**
 
 - The Balance Invariants are the conserved quantities and symmetries of the Balance Framework.  
-- They include β‑unity, the Bliss Manifold, the potential minimum, and the Balance symmetry group.  
+- They include β‑unity, the Equilibrium Manifold Manifold, the potential minimum, and the Balance symmetry group.  
 - Flux, divergence, curl, and tensor rank have invariant properties.  
-- The Balance Continuum preserves dimensionality, metric signature, and global Bliss.  
+- The Balance Continuum preserves dimensionality, metric signature, and global Equilibrium Manifold.  
 - Mixed‑mode invariants ensure cross‑domain coherence.  
 - These invariants guarantee stability, consistency, and lawful evolution across all Balance dynamics.  
 

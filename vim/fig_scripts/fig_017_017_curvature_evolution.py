@@ -26,11 +26,11 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / "fig_017_017_curvature_evolution.png"
 
-    rAE_c, rAE_t = 1.0, 1.5
+    x_c, x_t = 1.0, 1.5
     t = np.linspace(0, 20, 200)
-    rAE_f = 0.5 + 1.5 * (1 - np.exp(-0.2 * t))
-    rAE_i = 1.5 - 0.5 * (1 - np.exp(-0.15 * t))
-    beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    x_f = 0.5 + 1.5 * (1 - np.exp(-0.2 * t))
+    x_i = 1.5 - 0.5 * (1 - np.exp(-0.15 * t))
+    beta_val = beta(x_f, x_c, x_i, x_t)
     V = balance_potential(beta_val)
     curvature = V + 0.1 * np.exp(-0.1 * t)
 

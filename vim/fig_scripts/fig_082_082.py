@@ -21,7 +21,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     omega = 1 - 0.2 * np.exp(-0.3 * t)
     plt.figure(figsize=(8, 5))
     plt.plot(t, omega, "b-", lw=2)
-    plt.axhline(1, color="green", ls="--", label="Bliss")
+    plt.axhline(1, color="green", ls="--", label="Equilibrium Manifold")
     plt.xlabel("t")
     plt.ylabel(r"$\omega$")
     plt.title("Appendix Ω: Omega-Limit Coherence")

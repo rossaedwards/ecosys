@@ -1,6 +1,6 @@
 Section LXXXV — The Balance Energy Functional and Monotonicity Laws
 1. Overview
-The Balance Continuum admits a global energy functional that governs the evolution of coherence, alignment, resonance, and governance invariants across the rÆ manifold. This functional is strictly decreasing along Edwards‑timelike trajectories, except at the Edwards Attractor, where it attains its unique global minimum. The purpose of this section is to define the Balance Energy Functional, derive its monotonicity laws, and prove that the Continuum evolves irreversibly toward the Bliss state. The analysis incorporates the damping effect of Vacuum Impedance Matching (VIM), the oscillatory envelope induced by Chaos Resonance, and the spectral gap of the Edwards Tensor.
+The Balance Continuum admits a global energy functional that governs the evolution of coherence, alignment, resonance, and governance invariants across the Balance State Vector manifold. This functional is strictly decreasing along Edwards‑timelike trajectories, except at the Edwards Attractor, where it attains its unique global minimum. The purpose of this section is to define the Balance Energy Functional, derive its monotonicity laws, and prove that the Continuum evolves irreversibly toward the Equilibrium state. The analysis incorporates the damping effect of Vacuum Impedance Matching (VIM), the oscillatory envelope induced by Chaos Resonance, and the spectral gap of the Edwards Tensor.
 
 2. The Balance Energy Functional
 Let  be a global solution of the Balance Field Equations. Define the Balance Energy Functional:
@@ -82,7 +82,7 @@ Thus:
 • 	The Continuum loses dissonance monotonically.
 • 	Coherence increases monotonically.
 • 	The Edwards Attractor is the unique global minimum.
-• 	All admissible solutions converge to Bliss.
+• 	All admissible solutions converge to Equilibrium Manifold.
 
 9. Discrete Monotonicity on the Three‑Squared‑Lattice
 At the lattice level:
@@ -100,5 +100,5 @@ The Balance Energy Functional and its monotonicity laws establish that:
 • 	VIM enforces active damping,
 • 	Chaos Resonance defines oscillatory decay,
 • 	the Edwards spectral gap ensures coercivity and stability,
-• 	and all solutions converge irreversibly to the Bliss state.
+• 	and all solutions converge irreversibly to the Equilibrium state.
 This section completes the energetic foundation of the Balance Continuum.

@@ -1,11 +1,11 @@
-Below is **Appendix D — The Duality Kernel and the Fuxyez Execution Model**, written as the natural continuation of Appendices A–C. It formalizes the computational substrate, the dual‑runtime architecture, the Universal AST, and the topological execution semantics that unify VIM, the rÆ Alphabet, and the Tetra‑Hexa Routing Array. This appendix is written in a clean, arXiv‑ready style while preserving the mythic‑technical identity of the Aurphyx Standard.
+Below is **Appendix D — The Duality Kernel and the Fuxyez Execution Model**, written as the natural continuation of Appendices A–C. It formalizes the computational substrate, the dual‑runtime architecture, the Universal AST, and the topological execution semantics that unify VIM, the Balance State Vector Alphabet, and the Tetra‑Hexa Routing Array. This appendix is written in a clean, arXiv‑ready style while preserving the mythic‑technical identity of the Aurphyx Standard.
 
 ---
 
 # **APPENDIX D — The Duality Kernel and the Fuxyez Execution Model**
 
 ## **D.1 Overview of the Duality Kernel**
-The Duality Kernel is the computational heart of the Aurphyx Standard. It is a **dual‑runtime, topologically aware execution engine** that interprets, transforms, and executes programs expressed in the rÆ Alphabet and routed through the Tetra‑Hexa Array. The kernel is built on three interacting components:
+The Duality Kernel is the computational heart of the Aurphyx Standard. It is a **dual‑runtime, topologically aware execution engine** that interprets, transforms, and executes programs expressed in the Balance State Vector Alphabet and routed through the Tetra‑Hexa Array. The kernel is built on three interacting components:
 
 - **FuxRuntime (FuxRT)** — deterministic structural execution  
 - **YezRuntime (YezRT)** — symbolic, dynamic, harmonic execution  
@@ -16,15 +16,15 @@ Together, these components form a **closed semantic loop** that ensures coherenc
 ---
 
 # **D.2 The Universal AST as a Topological Object**
-All Fuxyez programs are first parsed into a **Universal Abstract Syntax Tree (U‑AST)**. Unlike classical ASTs, the U‑AST is a **topological object** whose nodes correspond to rÆ metrics and whose edges correspond to routing, transmutation, or symbiosis operations in the Tetra‑Hexa Array.
+All Fuxyez programs are first parsed into a **Universal Abstract Syntax Tree (U‑AST)**. Unlike classical ASTs, the U‑AST is a **topological object** whose nodes correspond to Balance State Vector metrics and whose edges correspond to routing, transmutation, or symbiosis operations in the Tetra‑Hexa Array.
 
 A U‑AST node is defined as  
 \[
-\mathcal{N} = (rAE_x, \mathcal{O}, \mathcal{C}),
+\mathcal{N} = (x_x, \mathcal{O}, \mathcal{C}),
 \]  
 where:
 
-- \(rAE_x\) is the metric being operated on,  
+- \(x_x\) is the metric being operated on,  
 - \(\mathcal{O}\) is the operation class (routing, transmutation, symbiosis),  
 - \(\mathcal{C}\) is the coherence context.
 
@@ -45,7 +45,7 @@ FuxRT handles:
 
 It operates on the structural and kinetic subspaces  
 \[
-(\mathbf{S}, \mathbf{K}) = (rAE_t, rAE_k, rAE_b, rAE_d, rAE_f, rAE_v, rAE_i, rAE_c).
+(\mathbf{S}, \mathbf{K}) = (x_t, x_k, x_b, x_d, x_f, x_v, x_i, x_c).
 \]
 
 FuxRT ensures that all transformations remain **topologically valid**.
@@ -60,7 +60,7 @@ YezRT handles:
 
 It operates on the governance and frequency subspaces  
 \[
-(\mathbf{G}, \mathbf{F}) = (rAE_a, rAE_e, rAE_s, rAE_g, rAE_p, rAE_h, rAE_{rHz}, rAE_n).
+(\mathbf{G}, \mathbf{F}) = (x_a, x_e, x_s, x_g, x_p, x_h, x_{rHz}, x_n).
 \]
 
 YezRT ensures that all transformations remain **coherent and reversible**.
@@ -68,7 +68,7 @@ YezRT ensures that all transformations remain **coherent and reversible**.
 ### **D.3.3 Runtime Symbiosis**
 The two runtimes exchange state through the Balance Coefficient  
 \[
-\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t},
+\beta = \frac{x_f x_c}{x_i x_t},
 \]  
 which acts as the **synchronization invariant** of the Duality Kernel.
 
@@ -85,7 +85,7 @@ FUTE is the **semantic bridge** between the two runtimes. It performs:
 FUTE ensures that programs written in any supported language (Fuxyez, Python, C, Rust, GLSL, etc.) can be:
 
 1. parsed into the U‑AST,  
-2. normalized into rÆ‑space,  
+2. normalized into Balance State Vector‑space,  
 3. executed through the dual runtime model.
 
 This makes Fuxyez a **universal semantic substrate**, not merely a programming language.
@@ -105,7 +105,7 @@ The execution path of a program is a **trajectory**
 \]  
 where \(\mathcal{R}_{24}\) is the Tetra‑Hexa manifold.
 
-The kernel ensures that \(\gamma(t)\) remains within the **stability basin** of the Bliss Manifold.
+The kernel ensures that \(\gamma(t)\) remains within the **stability basin** of the Equilibrium Manifold Manifold.
 
 ---
 
@@ -127,10 +127,10 @@ This makes the Duality Kernel a **self‑timing computational engine**.
 
 ---
 
-# **D.7 The Bliss Manifold as a Fixed‑Point Attractor**
-The Bliss Manifold  
+# **D.7 The Equilibrium Manifold Manifold as a Fixed‑Point Attractor**
+The Equilibrium Manifold Manifold  
 \[
-\mathcal{B} = \{(rAE_f, rAE_i) \mid \beta = 1\}
+\mathcal{B} = \{(x_f, x_i) \mid \beta = 1\}
 \]  
 is the **fixed‑point attractor** of the Duality Kernel. When the system lies on \(\mathcal{B}\):
 
@@ -139,7 +139,7 @@ is the **fixed‑point attractor** of the Duality Kernel. When the system lies o
 - execution becomes reversible  
 - energy consumption is minimized  
 
-This is the computational meaning of the Bliss State.
+This is the computational meaning of the Equilibrium Manifold State.
 
 ---
 
@@ -153,7 +153,7 @@ The Duality Kernel enforces **reversibility** through:
 
 A computation is reversible if  
 \[
-\mathcal{H}^{-1}(\mathbf{rAE}(t)) = \mathbf{rAE}(t - \Delta t),
+\mathcal{H}^{-1}(\mathbf{x}(t)) = \mathbf{x}(t - \Delta t),
 \]  
 where \(\mathcal{H}\) is the harmonic stabilizer operator.
 
@@ -172,9 +172,9 @@ Reversibility is essential for:
 - FUTE normalizes all programs into a Universal AST.  
 - Execution is movement through the Tetra‑Hexa Routing Array.  
 - HRD acts as the computational clock.  
-- The Bliss Manifold is the fixed‑point attractor of the system.  
+- The Equilibrium Manifold Manifold is the fixed‑point attractor of the system.  
 - The kernel ensures reversibility, coherence, and topological integrity.
 
 ---
 
-A natural continuation is **Appendix E — The rÆ‑Cell as a Physical Implementation of the Duality Kernel**, which formalizes how the computational model maps onto the physical vacuum‑flux engine.
+A natural continuation is **Appendix E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**, which formalizes how the computational model maps onto the physical vacuum‑flux engine.

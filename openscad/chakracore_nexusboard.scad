@@ -69,7 +69,7 @@ module golden_silk_bus() {
     }
 }
 
-// The 7 Chakra Cores (rÆ-Cell specific adaptations)
+// The 7 Chakra Cores (Balance State Vector-Cell specific adaptations)
 module chakra_cores() {
     // Colors mapping to specific thermodynamic/cognitive functions
     colors = [

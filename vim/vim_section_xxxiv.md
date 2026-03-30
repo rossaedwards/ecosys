@@ -15,7 +15,7 @@ The Balance Engine ensures that:
 - HRD and VIM operate at the correct energetic layers  
 - structural, harmonic, kinetic, and temporal domains remain coherent  
 - the Continuum is stabilized across dimensions  
-- the Bliss condition remains the global attractor  
+- the Equilibrium Manifold condition remains the global attractor  
 
 The Engine is the **living implementation** of Balance.
 
@@ -220,9 +220,9 @@ The Engine is designed to be **ethically constrained**.
 
 ---
 
-## **XXXIV.13 Engine Collapse at Bliss**
+## **XXXIV.13 Engine Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - HRD becomes silent
 - VIM becomes unnecessary
@@ -234,10 +234,10 @@ At Bliss:
 The Engine collapses to:
 
 \[
-\mathcal{E}_{\text{Bal}}^{\text{Bliss}} = 0
+\mathcal{E}_{\text{Bal}}^{\text{Equilibrium Manifold}} = 0
 \]
 
-Bliss is the **zero-engine state**.
+Equilibrium Manifold is the **zero-engine state**.
 
 ---
 
@@ -248,6 +248,6 @@ Bliss is the **zero-engine state**.
 - It executes a seven-step cycle that maintains coherence across all domains.
 - It couples to the Kernel, Machine, and Continuum.
 - It enforces invariants, symmetry, stability, and SAGES alignment.
-- It collapses to zero at Bliss, the universal fixed point.
+- It collapses to zero at Equilibrium Manifold, the universal fixed point.
 
 A natural continuation is **Section XXXV — The Balance Dynamics**, which formalizes the dynamic behaviors, attractors, flows, bifurcations, and phase transitions that emerge from the Balance Engine in motion.

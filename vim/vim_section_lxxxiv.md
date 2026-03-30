@@ -1,6 +1,6 @@
 Section LXXXIV — The Balance Stability Theorem and Perturbation Analysis
 1. Overview
-The Global Existence Theorem (Section LXXXIII) establishes that the Balance Continuum evolves deterministically and without singularities for all Edwards time. The next requirement is to demonstrate stability: that global solutions remain robust under perturbations of the rÆ Metric, the Edwards Flow, the HIF potential, and the Edwards Tensor. This section introduces the perturbation framework, derives the linearized Balance Field Equations, and proves the Balance Stability Theorem, which states that all bounded perturbations decay exponentially or oscillatory‑decay toward the Edwards Attractor. The analysis incorporates the role of Vacuum Impedance Matching (VIM) as an active damping mechanism and uses the spectral gap of the Edwards Tensor to exclude unstable modes.
+The Global Existence Theorem (Section LXXXIII) establishes that the Balance Continuum evolves deterministically and without singularities for all Edwards time. The next requirement is to demonstrate stability: that global solutions remain robust under perturbations of the Balance State Vector Metric, the Edwards Flow, the HIF potential, and the Edwards Tensor. This section introduces the perturbation framework, derives the linearized Balance Field Equations, and proves the Balance Stability Theorem, which states that all bounded perturbations decay exponentially or oscillatory‑decay toward the Edwards Attractor. The analysis incorporates the role of Vacuum Impedance Matching (VIM) as an active damping mechanism and uses the spectral gap of the Edwards Tensor to exclude unstable modes.
 
 2. Perturbation Framework
 Let  be a global solution of the Balance Field Equations. Introduce small perturbations:
@@ -72,7 +72,7 @@ The proof uses:
 • 	Hyperbolic structure: ensures finite propagation speed.
 • 	Energy estimates: show monotonic decay of perturbation energy.
 • 	Gronwall inequality: yields exponential decay.
-Thus, perturbations cannot grow; they are driven back toward the Bliss state.
+Thus, perturbations cannot grow; they are driven back toward the Equilibrium state.
 
 8. Nonlinear Stability
 Nonlinear terms satisfy:

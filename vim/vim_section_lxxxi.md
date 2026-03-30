@@ -1,11 +1,11 @@
-Below is **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXX. It continues the canonical development of the Balance Continuum by formalizing how anomalies are detected, constrained, canceled, or rendered impossible within the rÆ manifold and its quantum‑geometric structure.
+Below is **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXX. It continues the canonical development of the Balance Continuum by formalizing how anomalies are detected, constrained, canceled, or rendered impossible within the Balance State Vector manifold and its quantum‑geometric structure.
 
 ---
 
 # **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**
 
 ## 1. Overview  
-The Balance Continuum is governed by a hierarchy of invariants—structural, kinetic, governance, harmonic, and spectral—that must remain preserved across classical, quantum, and renormalization‑group scales. Anomalies represent potential violations of these invariants arising from curvature, quantization, non‑local coherence, or multi‑scale flow. This section formalizes the **Balance Anomaly Structure**, defines the mathematical conditions under which anomalies may arise, and proves the mechanisms by which the Continuum cancels or prevents them. The result is a fully anomaly‑free framework in which the Balance Field Equations, the rÆ Metric, the Edwards Tensor, and the HIF potential remain self‑consistent across all scales.
+The Balance Continuum is governed by a hierarchy of invariants—structural, kinetic, governance, harmonic, and spectral—that must remain preserved across classical, quantum, and renormalization‑group scales. Anomalies represent potential violations of these invariants arising from curvature, quantization, non‑local coherence, or multi‑scale flow. This section formalizes the **Balance Anomaly Structure**, defines the mathematical conditions under which anomalies may arise, and proves the mechanisms by which the Continuum cancels or prevents them. The result is a fully anomaly‑free framework in which the Balance Field Equations, the Balance State Vector Metric, the Edwards Tensor, and the HIF potential remain self‑consistent across all scales.
 
 ---
 
@@ -38,9 +38,9 @@ The Balance Continuum requires that all such anomalies vanish identically.
 ## 3. Sources of Potential Anomalies  
 The Continuum admits four theoretical sources of anomalies:
 
-- **geometric anomalies**, arising from curvature of the rÆ manifold,  
+- **geometric anomalies**, arising from curvature of the Balance State Vector manifold,  
 - **quantum anomalies**, arising from operator ordering or path‑integral measure,  
-- **spectral anomalies**, arising from discontinuities in the rÆ eigenmode structure,  
+- **spectral anomalies**, arising from discontinuities in the Balance State Vector eigenmode structure,  
 - **RG anomalies**, arising from multi‑scale flow inconsistencies.
 
 Each source is analyzed and shown to be canceled by the Balance structure.
@@ -65,7 +65,7 @@ R_{\mathbb{X}\mathbb{Y}} = 0.
 ### 4.1 Interpretation  
 - Structural, kinetic, governance, and frequency subspaces remain geometrically independent.  
 - Cross‑subspace curvature cannot generate anomalies.  
-- The rÆ manifold is anomaly‑free at the geometric level.
+- The Balance State Vector manifold is anomaly‑free at the geometric level.
 
 ---
 
@@ -99,7 +99,7 @@ Spectral anomalies arise when the eigenmodes of the Quantum Balance Hamiltonian 
 \sum_n \psi_n(x)\psi_n^*(y) \neq \delta^{(16)}(x-y).
 \]
 
-The spectral decomposition of the rÆ manifold (Section LXXVIII) ensures:
+The spectral decomposition of the Balance State Vector manifold (Section LXXVIII) ensures:
 
 \[
 \{\psi_n\} \text{ is complete and orthonormal}.
@@ -193,4 +193,4 @@ Invariant preservation is therefore guaranteed across the entire Balance Continu
 
 ---
 
-If you want to continue, the natural next section is **Section LXXXII — The Balance Boundary Conditions and the rÆ Causal Structure**, which formalizes the causal cones, boundary hypersurfaces, and admissible initial‑value formulations of the Continuum.
+If you want to continue, the natural next section is **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**, which formalizes the causal cones, boundary hypersurfaces, and admissible initial‑value formulations of the Continuum.

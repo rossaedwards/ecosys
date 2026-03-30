@@ -19,8 +19,8 @@ def run_simulation(output_dir: Path | None = None) -> Path:
 
     n = 40
     F, I = np.meshgrid(np.linspace(0.5, 2.5, n), np.linspace(0.5, 2.5, n))
-    rAE_c, rAE_t = 1.0, 1.5
-    b = (F * rAE_c) / (I * rAE_t)
+    x_c, x_t = 1.0, 1.5
+    b = (F * x_c) / (I * x_t)
     V = (b - 1) ** 2
     gy, gx = np.gradient(V, 0.05, 0.05)
     B_ij = np.gradient(gx, 0.05, axis=1) + np.gradient(gy, 0.05, axis=0)

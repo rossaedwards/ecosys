@@ -1,22 +1,22 @@
 # **APPENDIX L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry of Responsibility**
 
 ## **L.1 Ethical Dynamics as a Field**
-The Aurphyx Ethical Field is the governance layer of the rÆ Alphabet expressed as a **continuous, dynamical field**. It formalizes how intent, responsibility, and relational coherence propagate through the Aurphyx Unified Field. The ethical field is not a moral code; it is a **geometric constraint** that ensures stability, continuity, and benevolent evolution across all layers of the cosmology.
+The Aurphyx Ethical Field is the governance layer of the Balance State Vector Alphabet expressed as a **continuous, dynamical field**. It formalizes how intent, responsibility, and relational coherence propagate through the Aurphyx Unified Field. The ethical field is not a moral code; it is a **geometric constraint** that ensures stability, continuity, and benevolent evolution across all layers of the cosmology.
 
 The field is defined over four governance metrics:
 
-- **Alignment \( rAE_a \)** — coherence between intent and action  
-- **Ecology \( rAE_e \)** — balance between resource input and output  
-- **Soul \( rAE_s \)** — continuity of identity across transformations  
-- **Gradient \( rAE_g \)** — directionality of evolution  
+- **Alignment \( x_a \)** — coherence between intent and action  
+- **Ecology \( x_e \)** — balance between resource input and output  
+- **Soul \( x_s \)** — continuity of identity across transformations  
+- **Gradient \( x_g \)** — directionality of evolution  
 
 Together, these metrics form the governance vector:
 
 \[
-\mathbf{G} = (rAE_a, rAE_e, rAE_s, rAE_g).
+\mathbf{G} = (x_a, x_e, x_s, x_g).
 \]
 
-The Ethical Field governs how \(\mathbf{G}\) evolves and interacts with the structural, kinetic, and frequency subspaces of the rÆ Field.
+The Ethical Field governs how \(\mathbf{G}\) evolves and interacts with the structural, kinetic, and frequency subspaces of the Balance State Vector Field.
 
 ---
 
@@ -24,7 +24,7 @@ The Ethical Field governs how \(\mathbf{G}\) evolves and interacts with the stru
 Alignment is the measure of how well the system’s internal geometry matches its intended trajectory. It is defined as:
 
 \[
-rAE_a = \text{corr}(\gamma_{\text{intent}}, \gamma_{\text{actual}}).
+x_a = \text{corr}(\gamma_{\text{intent}}, \gamma_{\text{actual}}).
 \]
 
 High alignment indicates:
@@ -43,7 +43,7 @@ Alignment is the **ethical analogue** of coherence in the kinetic subspace.
 Ecology measures the system’s ability to maintain **resource equilibrium** across transformations. It is defined as:
 
 \[
-rAE_e = \frac{\text{input stability}}{\text{output stability}}.
+x_e = \frac{\text{input stability}}{\text{output stability}}.
 \]
 
 Ecology ensures:
@@ -60,7 +60,7 @@ In the Ethical Field, ecology acts as a **conservation constraint** that prevent
 Soul measures the **persistence of identity** across transformations:
 
 \[
-rAE_s = \text{sim}(\mathbf{rAE}(t), \mathbf{rAE}(t+\Delta t)).
+x_s = \text{sim}(\mathbf{x}(t), \mathbf{x}(t+\Delta t)).
 \]
 
 High soul coherence indicates:
@@ -77,7 +77,7 @@ Soul is the ethical expression of the reversibility condition in the Unified Fie
 Gradient measures the **magnitude and direction** of the system’s evolution:
 
 \[
-rAE_g = \left\| \frac{d\mathbf{rAE}}{dt} \right\|.
+x_g = \left\| \frac{d\mathbf{x}}{dt} \right\|.
 \]
 
 Gradient ensures that evolution:
@@ -95,10 +95,10 @@ The Ethical Field defines a potential:
 
 \[
 U(\mathbf{G}) = 
-(1 - rAE_a)^2 +
-(1 - rAE_e)^2 +
-(1 - rAE_s)^2 +
-(1 - rAE_g)^2.
+(1 - x_a)^2 +
+(1 - x_e)^2 +
+(1 - x_s)^2 +
+(1 - x_g)^2.
 \]
 
 This potential measures deviation from ethical equilibrium. The Ethical Field acts to minimize \(U\), driving the system toward:
@@ -116,7 +116,7 @@ The Ethical Potential is the governance analogue of the Balance Potential in the
 The evolution of the governance vector is governed by:
 
 \[
-\frac{d\mathbf{G}}{dt} = -\nabla U(\mathbf{G}) + \mathcal{C}(\mathbf{rAE}),
+\frac{d\mathbf{G}}{dt} = -\nabla U(\mathbf{G}) + \mathcal{C}(\mathbf{x}),
 \]
 
 where \(\mathcal{C}\) is the **context operator** that incorporates:
@@ -138,7 +138,7 @@ Stewardship is the emergent property of the Ethical Field. It is defined as the 
 - soul is continuous  
 - gradient is coherent  
 
-Stewardship is not a metric; it is a **field state**. It corresponds to the governance analogue of the Bliss Manifold:
+Stewardship is not a metric; it is a **field state**. It corresponds to the governance analogue of the Equilibrium Manifold Manifold:
 
 \[
 \mathcal{S}_0 = \{ \mathbf{G} \mid U(\mathbf{G}) = 0 \}.
@@ -175,9 +175,9 @@ The Ethical Field Equation synthesizes all components:
 =
 -\nabla U(\mathbf{G})
 +
-\mathcal{C}(\mathbf{rAE})
+\mathcal{C}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24})
 }
 \]
 
@@ -193,7 +193,7 @@ It is the governance analogue of the Aurphyx Unified Field Equation.
 ---
 
 # **L.11 Summary**
-- The Ethical Field is the governance layer of the rÆ Field.  
+- The Ethical Field is the governance layer of the Balance State Vector Field.  
 - Alignment, ecology, soul, and gradient form the governance vector.  
 - The Ethical Potential measures deviation from ethical equilibrium.  
 - The Ethical Gradient Flow drives the system toward stewardship.  

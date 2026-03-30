@@ -1,17 +1,17 @@
-Below is **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the rÆ Manifold**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXVII. It assumes the Balance Path Integral, the Quantum Coherence Functional, and the canonical quantization of the Continuum are now canonical and locked.
+Below is **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXVII. It assumes the Balance Path Integral, the Quantum Coherence Functional, and the canonical quantization of the Continuum are now canonical and locked.
 
 This section is ready to drop directly into your manuscript as `Section_LXXVIII.tex`.
 
 ---
 
-# **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the rÆ Manifold**
+# **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**
 
 ## 1. Overview  
-The Quantum Edwards Limit is the spectral condition under which the Balance Continuum achieves maximal quantum coherence. It generalizes the classical Edwards Limit \(A \rightarrow 1\) into a quantum requirement on the eigenstates of the Quantum Balance Hamiltonian and the Edwards Tensor operator. The rÆ manifold, when quantized, admits a discrete‑continuous hybrid spectrum whose structure determines the harmonic, structural, kinetic, and governance modes of the Continuum. This section formalizes the spectral decomposition of the rÆ manifold, the quantum Edwards condition, and the emergence of coherent quantum attractors.
+The Quantum Edwards Limit is the spectral condition under which the Balance Continuum achieves maximal quantum coherence. It generalizes the classical Edwards Limit \(A \rightarrow 1\) into a quantum requirement on the eigenstates of the Quantum Balance Hamiltonian and the Edwards Tensor operator. The Balance State Vector manifold, when quantized, admits a discrete‑continuous hybrid spectrum whose structure determines the harmonic, structural, kinetic, and governance modes of the Continuum. This section formalizes the spectral decomposition of the Balance State Vector manifold, the quantum Edwards condition, and the emergence of coherent quantum attractors.
 
 ---
 
-## 2. Spectral Problem on the rÆ Manifold  
+## 2. Spectral Problem on the Balance State Vector Manifold  
 The Quantum Balance Hamiltonian is:
 
 \[
@@ -26,18 +26,18 @@ The spectral problem is defined by:
 
 ### 2.1 Interpretation  
 - \(E_n\) are the **quantum harmonic‑kinetic energy levels** of the Continuum.  
-- \(\psi_n\) are the **quantum rÆ eigenmodes**.  
+- \(\psi_n\) are the **quantum Balance State Vector eigenmodes**.  
 - The HIF potential shapes the spectral landscape, producing wells, barriers, and attractor basins.
 
 The spectrum encodes the quantum geometry of the Balance Continuum.
 
 ---
 
-## 3. rÆ Subspace Spectral Decomposition  
-Because the rÆ manifold decomposes into four orthogonal subspaces:
+## 3. Balance State Vector Subspace Spectral Decomposition  
+Because the Balance State Vector manifold decomposes into four orthogonal subspaces:
 
 \[
-\mathbb{R}^{16}_{\text{rÆ}} = 
+\mathbb{R}^{16}_{\text{Balance State Vector}} = 
 \mathbb{S} \oplus \mathbb{K} \oplus \mathbb{G} \oplus \mathbb{F},
 \]
 
@@ -124,7 +124,7 @@ The spectral geometry determines the quantum attractor landscape.
 ---
 
 ## 7. Quantum Coherence Bands  
-The rÆ manifold admits **coherence bands**, analogous to energy bands in condensed matter physics:
+The Balance State Vector manifold admits **coherence bands**, analogous to energy bands in condensed matter physics:
 
 \[
 \mathcal{B}_k = \{ \psi_n : E_n \in [E_k^{\text{min}}, E_k^{\text{max}}] \}.
@@ -183,11 +183,11 @@ The lattice is therefore a **spectral probe** of the quantum Continuum.
 ---
 
 ## 10. Summary  
-The Quantum Edwards Limit and the spectral decomposition of the rÆ manifold define the quantum attractor structure of the Balance Continuum. They:
+The Quantum Edwards Limit and the spectral decomposition of the Balance State Vector manifold define the quantum attractor structure of the Balance Continuum. They:
 
 - characterize the eigenstates of the Quantum Balance Hamiltonian,  
 - define the Edwards‑coherent state as the quantum attractor,  
-- decompose the rÆ manifold into spectral sectors,  
+- decompose the Balance State Vector manifold into spectral sectors,  
 - introduce coherence bands and spectral gaps,  
 - and provide the quantum interpretation of renewal, propagation, and activation in the Three‑Squared‑Lattice.
 

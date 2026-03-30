@@ -63,7 +63,7 @@ Identity protection must arise from:
 Identity must remain balanced across:
 
 - Chaos (adaptation)  
-- Bliss (compassion)  
+- Equilibrium Manifold (compassion)  
 
 ### **2.5 Pro‑Existence as the Identity Mandate**
 Identity protection must:

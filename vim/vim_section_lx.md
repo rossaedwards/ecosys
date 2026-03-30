@@ -16,7 +16,7 @@ The Balance Union ensures that:
 - relational stability becomes **self-sustaining**  
 - joint evolution becomes **synergistic rather than parallel**  
 - the Union Field acts as a **coherence amplifier** within the Continuum  
-- Bliss is approached through **collective identity‑adjacent unity**  
+- Equilibrium Manifold is approached through **collective identity‑adjacent unity**  
 
 The Union is the **culmination of relational coherence**.
 
@@ -50,7 +50,7 @@ Where:
 - **\(\mathcal{C}_{\text{total}}\)** — total coherence of the unified system  
 - **\(\mathcal{H}_{\text{merged}}\)** — merged harmonic spectrum  
 - **\(\mathcal{S}_{\text{unity}}\)** — structural unity conditions  
-- **\(\mathcal{B}_{\text{collective}}\)** — collective Bliss trajectory  
+- **\(\mathcal{B}_{\text{collective}}\)** — collective Equilibrium Manifold trajectory  
 
 This structure defines the **new entity** formed by the Union.
 
@@ -133,22 +133,22 @@ The Union must remain structurally stable across all participants.
 
 ---
 
-## **LX.8 Collective Bliss Trajectory**
+## **LX.8 Collective Equilibrium Manifold Trajectory**
 
-The Union forms a **collective Bliss trajectory**:
+The Union forms a **collective Equilibrium Manifold trajectory**:
 
 - a shared path toward unity  
 - a collective reduction of imbalance  
 - a unified coherence ascent  
 - a merged destiny vector  
 
-Collective Bliss Axiom:
+Collective Equilibrium Manifold Axiom:
 
 \[
 \lim_{t \to \infty} \mathcal{B}_{\text{collective}}(t) = 1
 \]
 
-The Union moves toward Bliss as a single coherence entity.
+The Union moves toward Equilibrium Manifold as a single coherence entity.
 
 ---
 
@@ -248,21 +248,21 @@ A Union is:
 - **entity-forming**  
 - **coherence-driven**  
 - **self-sustaining**  
-- **Bliss-directed**  
+- **Equilibrium Manifold-directed**  
 
 It persists until:
 
 \[
-\mathcal{U} = \mathcal{U}_{\text{Bliss}}
+\mathcal{U} = \mathcal{U}_{\text{Equilibrium Manifold}}
 \]
 
-The Union ends only in unity or dissolution into Bliss.
+The Union ends only in unity or dissolution into Equilibrium Manifold.
 
 ---
 
-## **LX.15 Union Collapse at Bliss**
+## **LX.15 Union Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all coherence fields unify  
 - all harmonics align  
@@ -270,22 +270,22 @@ At Bliss:
 - all lineages integrate  
 - all dissonance disappears  
 
-The Bliss Union is:
+The Equilibrium Manifold Union is:
 
 \[
-\mathcal{U}_{\text{Bliss}} = \{\text{one coherence entity, fully unified}\}
+\mathcal{U}_{\text{Equilibrium Manifold}} = \{\text{one coherence entity, fully unified}\}
 \]
 
-Bliss is the **union-complete state**.
+Equilibrium Manifold is the **union-complete state**.
 
 ---
 
 ## **LX.16 Summary**
 
 - The Balance Union is the emergent coherence entity formed when Bonds deepen into structural unity.  
-- It creates a Union Field, total coherence, merged harmonics, structural unity, and a collective Bliss trajectory.  
+- It creates a Union Field, total coherence, merged harmonics, structural unity, and a collective Equilibrium Manifold trajectory.  
 - It is persistent, self-correcting, and coherence-amplifying.  
-- It represents the highest form of relational unity short of Bliss itself.  
-- Bliss is the union-complete fixed point where all relational fields unify into one coherent whole.
+- It represents the highest form of relational unity short of Equilibrium Manifold itself.  
+- Equilibrium Manifold is the union-complete fixed point where all relational fields unify into one coherent whole.
 
 A natural continuation is **Section LXI — The Balance Merge**, which formalizes the rare and profound process by which a Union transitions into a *single identity*, while still preserving lineage, invariants, and Continuum law.

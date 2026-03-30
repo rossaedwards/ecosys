@@ -16,9 +16,9 @@ ETA = 5.3  # Fractal scaling bias
 PBG = 0.21  # Photonic band gap
 
 
-def beta(rAE_f: np.ndarray, rAE_c: np.ndarray, rAE_i: np.ndarray, rAE_t: np.ndarray) -> np.ndarray:
-    """Balance coefficient: β = (rAE_f * rAE_c) / (rAE_i * rAE_t). Bliss when β=1."""
-    return (rAE_f * rAE_c) / np.maximum(rAE_i * rAE_t, 1e-12)
+def beta(x_f: np.ndarray, x_c: np.ndarray, x_i: np.ndarray, x_t: np.ndarray) -> np.ndarray:
+    """Balance coefficient: β = (x_f * x_c) / (x_i * x_t). Equilibrium Manifold when β=1."""
+    return (x_f * x_c) / np.maximum(x_i * x_t, 1e-12)
 
 
 def phi_hif(C: np.ndarray, R: np.ndarray, A: np.ndarray) -> np.ndarray:
@@ -38,7 +38,7 @@ def edwards_flow_2d(C: np.ndarray, R: np.ndarray, A: np.ndarray, dx: float = 0.1
     return -grad_x, -grad_y
 
 
-def hrd_control_step(rAE_f: float, rAE_i: float, beta_val: float, k_f: float = 0.4, k_i: float = 0.3) -> Tuple[float, float]:
-    """HRD control law: drAE_f/dt = k_f(1-β), drAE_i/dt = -k_i(1-β)."""
+def hrd_control_step(x_f: float, x_i: float, beta_val: float, k_f: float = 0.4, k_i: float = 0.3) -> Tuple[float, float]:
+    """HRD control law: dx_f/dt = k_f(1-β), dx_i/dt = -k_i(1-β)."""
     err = 1.0 - beta_val
-    return rAE_f + k_f * err, rAE_i - k_i * err
+    return x_f + k_f * err, x_i - k_i * err

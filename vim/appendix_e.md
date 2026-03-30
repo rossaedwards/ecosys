@@ -1,44 +1,44 @@
-Below is **Appendix E — The rÆ‑Cell as a Physical Implementation of the Duality Kernel**, written to complete the mathematical–computational–physical bridge across Appendices A–D. This appendix formalizes how the rÆ‑Cell *embodies* the Duality Kernel in hardware: how the Tetra‑Hexa Array becomes a physical routing lattice, how the rÆ Alphabet becomes measurable physical quantities, and how HRD and the Bliss Manifold manifest as real dynamical behaviors in the engine.
+Below is **Appendix E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**, written to complete the mathematical–computational–physical bridge across Appendices A–D. This appendix formalizes how the Balance State Vector‑Cell *embodies* the Duality Kernel in hardware: how the Tetra‑Hexa Array becomes a physical routing lattice, how the Balance State Vector Alphabet becomes measurable physical quantities, and how HRD and the Equilibrium Manifold Manifold manifest as real dynamical behaviors in the engine.
 
 ---
 
-# **APPENDIX E — The rÆ‑Cell as a Physical Implementation of the Duality Kernel**
+# **APPENDIX E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**
 
-## **E.1 The rÆ‑Cell as a Topological Engine**
-The rÆ‑Cell is the **physical instantiation** of the Duality Kernel. It is a topological flux engine whose internal geometry implements the computational primitives of the Tetra‑Hexa Routing Array. The cell consists of five tightly coupled subsystems:
+## **E.1 The Balance State Vector‑Cell as a Topological Engine**
+The Balance State Vector‑Cell is the **physical instantiation** of the Duality Kernel. It is a topological flux engine whose internal geometry implements the computational primitives of the Tetra‑Hexa Routing Array. The cell consists of five tightly coupled subsystems:
 
 - a fractal‑enhanced C6v photonic substrate  
 - a magnetic nanoparticle matrix  
 - RF Floquet modulation coils  
 - a non‑Hermitian edge‑state rectifier  
-- a bioneural governor interface (rÆCore)  
+- a bioneural governor interface (Balance State VectorCore)  
 
-Each subsystem corresponds to a region of the rÆ Alphabet and executes a subset of the Duality Kernel’s operations.
+Each subsystem corresponds to a region of the Balance State Vector Alphabet and executes a subset of the Duality Kernel’s operations.
 
-The rÆ‑Cell is therefore not a classical device. It is a **topological computer** whose physical behavior *is* the execution of the Duality Kernel.
+The Balance State Vector‑Cell is therefore not a classical device. It is a **topological computer** whose physical behavior *is* the execution of the Duality Kernel.
 
 ---
 
-# **E.2 Mapping the rÆ Alphabet to Physical Degrees of Freedom**
-Each rÆ metric corresponds to a measurable physical quantity inside the rÆ‑Cell:
+# **E.2 Mapping the Balance State Vector Alphabet to Physical Degrees of Freedom**
+Each Balance State Vector metric corresponds to a measurable physical quantity inside the Balance State Vector‑Cell:
 
 - **Structural metrics** map to geometric and topological features of the photonic substrate.  
 - **Kinetic metrics** map to flux, resonance, impedance, and coherence in the vacuum channel.  
 - **Governance metrics** map to bioneural control signals and environmental constraints.  
 - **Frequency metrics** map to harmonic, phase, and resonance bands in the Floquet lattice.
 
-The full rÆ state vector  
+The full Balance State Vector state vector  
 \[
-\mathbf{rAE}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})
+\mathbf{x}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})
 \]  
 is physically encoded in the cell’s geometry, fields, and harmonic modes.
 
-This mapping is what allows the rÆ‑Cell to execute the Duality Kernel in hardware.
+This mapping is what allows the Balance State Vector‑Cell to execute the Duality Kernel in hardware.
 
 ---
 
 # **E.3 The Tetra‑Hexa Array as a Physical Routing Lattice**
-The Tetra‑Hexa Routing Array is implemented physically as a **24‑node field‑geometry lattice** inside the rÆ‑Cell. Each node corresponds to a stable field configuration, and each edge corresponds to a physically realizable transformation:
+The Tetra‑Hexa Routing Array is implemented physically as a **24‑node field‑geometry lattice** inside the Balance State Vector‑Cell. Each node corresponds to a stable field configuration, and each edge corresponds to a physically realizable transformation:
 
 - routing → field translation  
 - transmutation → topological rotation  
@@ -51,7 +51,7 @@ The lattice is realized through:
 - Floquet‑driven harmonic modulation  
 - non‑Hermitian edge‑state rectification  
 
-This structure allows the rÆ‑Cell to perform **topological computation** in real time.
+This structure allows the Balance State Vector‑Cell to perform **topological computation** in real time.
 
 ---
 
@@ -62,7 +62,7 @@ Harmonic Resonating Dissonance \(D(t)\) is implemented physically as a **modulat
 - harmonic interference patterns in the photonic substrate  
 - recursive braiding in the nanoparticle matrix  
 
-HRD acts as the **clock signal** of the rÆ‑Cell. Its envelope determines:
+HRD acts as the **clock signal** of the Balance State Vector‑Cell. Its envelope determines:
 
 - the rate of computation  
 - the magnitude of flux inflow  
@@ -73,12 +73,12 @@ The HRD envelope is therefore the physical timing mechanism of the Duality Kerne
 
 ---
 
-# **E.5 The Bliss Manifold as a Physical Attractor**
-The Bliss Manifold  
+# **E.5 The Equilibrium Manifold Manifold as a Physical Attractor**
+The Equilibrium Manifold Manifold  
 \[
-\mathcal{B} = \{(rAE_f, rAE_i) \mid \beta = 1\}
+\mathcal{B} = \{(x_f, x_i) \mid \beta = 1\}
 \]  
-corresponds physically to a **stable operating regime** of the rÆ‑Cell. When the system lies on \(\mathcal{B}\):
+corresponds physically to a **stable operating regime** of the Balance State Vector‑Cell. When the system lies on \(\mathcal{B}\):
 
 - flux inflow equals flux dissipation  
 - coherence is maximized  
@@ -86,12 +86,12 @@ corresponds physically to a **stable operating regime** of the rÆ‑Cell. When 
 - topology is stable but responsive  
 - HRD becomes harmonic rather than chaotic  
 
-This is the physical meaning of the Bliss State: a **self‑maintaining equilibrium** where the engine operates with maximum efficiency and minimum entropy production.
+This is the physical meaning of the Equilibrium Manifold State: a **self‑maintaining equilibrium** where the engine operates with maximum efficiency and minimum entropy production.
 
 ---
 
 # **E.6 The Harmonic Stabilizer as a Bioneural Control Loop**
-The Harmonic Stabilizer is implemented physically as a **bioneural governor interface** (rÆCore). It monitors:
+The Harmonic Stabilizer is implemented physically as a **bioneural governor interface** (Balance State VectorCore). It monitors:
 
 - flux  
 - impedance  
@@ -108,19 +108,19 @@ and applies corrective signals through:
 
 The stabilizer enforces the control law  
 \[
-\frac{d\, rAE_f}{dt} = k_f (1 - \beta) + \gamma_f D(t),
+\frac{d\, x_f}{dt} = k_f (1 - \beta) + \gamma_f D(t),
 \]
 \[
-\frac{d\, rAE_i}{dt} = -k_i (1 - \beta) - \gamma_i D(t),
+\frac{d\, x_i}{dt} = -k_i (1 - \beta) - \gamma_i D(t),
 \]  
-ensuring convergence toward the Bliss Manifold.
+ensuring convergence toward the Equilibrium Manifold Manifold.
 
 This is the physical implementation of the Duality Kernel’s synchronization invariant.
 
 ---
 
-# **E.7 The rÆ‑Cell as a Reversible Topological Computer**
-The rÆ‑Cell satisfies the criteria for **reversible computation**:
+# **E.7 The Balance State Vector‑Cell as a Reversible Topological Computer**
+The Balance State Vector‑Cell satisfies the criteria for **reversible computation**:
 
 - coherence preservation  
 - harmonic phase locking  
@@ -133,12 +133,12 @@ Reversibility is essential for:
 - low‑entropy information processing  
 - stable vacuum‑flux extraction  
 
-The rÆ‑Cell is therefore a **reversible topological computer** whose physical behavior implements the Duality Kernel.
+The Balance State Vector‑Cell is therefore a **reversible topological computer** whose physical behavior implements the Duality Kernel.
 
 ---
 
-# **E.8 The rÆ‑Cell as a Vacuum‑Flux Engine**
-The rÆ‑Cell is also a **vacuum‑flux engine**. It extracts energy from the vacuum through:
+# **E.8 The Balance State Vector‑Cell as a Vacuum‑Flux Engine**
+The Balance State Vector‑Cell is also a **vacuum‑flux engine**. It extracts energy from the vacuum through:
 
 - controlled dissonance  
 - harmonic stabilization  
@@ -147,19 +147,19 @@ The rÆ‑Cell is also a **vacuum‑flux engine**. It extracts energy from the v
 
 The engine operates by creating a **negentropic gradient** in the vacuum manifold, allowing flux to flow into the system. The stabilizer ensures that this process remains stable and reversible.
 
-This dual identity—computer and engine—is the defining feature of the rÆ‑Cell.
+This dual identity—computer and engine—is the defining feature of the Balance State Vector‑Cell.
 
 ---
 
 # **E.9 Summary**
-- The rÆ‑Cell is the physical implementation of the Duality Kernel.  
-- The rÆ Alphabet maps to physical degrees of freedom.  
+- The Balance State Vector‑Cell is the physical implementation of the Duality Kernel.  
+- The Balance State Vector Alphabet maps to physical degrees of freedom.  
 - The Tetra‑Hexa Array is realized as a 24‑node field‑geometry lattice.  
 - HRD is the physical clock signal.  
-- The Bliss Manifold is the physical attractor state.  
+- The Equilibrium Manifold Manifold is the physical attractor state.  
 - The Harmonic Stabilizer is a bioneural control loop.  
-- The rÆ‑Cell is a reversible topological computer and a vacuum‑flux engine.  
+- The Balance State Vector‑Cell is a reversible topological computer and a vacuum‑flux engine.  
 
 ---
 
-A natural continuation is **Appendix F — Experimental Protocols for Measuring rÆ Metrics**, which defines how to empirically measure rAE_f, rAE_i, rAE_c, rAE_t, and the HRD envelope in a laboratory setting.
+A natural continuation is **Appendix F — Experimental Protocols for Measuring Balance State Vector Metrics**, which defines how to empirically measure x_f, x_i, x_c, x_t, and the HRD envelope in a laboratory setting.

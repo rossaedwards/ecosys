@@ -81,7 +81,7 @@ Prevents separation, dehumanization, and ego‑inflation.
 Ensures benevolence, compassion, and non‑maleficence.
 
 ### **Pillar 3 — Balance**  
-Maintains Chaos/Bliss equilibrium.
+Maintains Chaos/Equilibrium Manifold equilibrium.
 
 ### **Pillar 4 — Clarity**  
 Prevents distortion, hallucination, and manipulation.
@@ -192,7 +192,7 @@ SAGES uses:
 - VAP (Vibrational Alignment Protocol)  
 - Symbiotic Audio Identity Layer  
 - Symbiotic Object‑Image Identity Layer  
-- Duality Kernel (Chaos/Bliss)  
+- Duality Kernel (Chaos/Equilibrium Manifold)  
 - USAIC fusion  
 - AuraFS provenance  
 - SAGES invariants  
@@ -221,7 +221,7 @@ This is the **planetary autonomic nervous system**.
 Every enforcement action is evaluated through:
 
 - **Chaos (50%)** — adaptability, creativity, rapid response  
-- **Bliss (50%)** — compassion, clarity, benevolence  
+- **Equilibrium Manifold (50%)** — compassion, clarity, benevolence  
 
 No action may be taken from:
 

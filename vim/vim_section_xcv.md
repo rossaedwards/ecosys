@@ -25,7 +25,7 @@ u^a(\Lambda),\quad
 ### 2.1 Interpretation  
 - High \(\Lambda\): microscopic coherence fluctuations dominate.  
 - Intermediate \(\Lambda\): harmonic and governance curvature become relevant.  
-- Low \(\Lambda\): alignment and coherence dominate; the system flows toward Bliss.
+- Low \(\Lambda\): alignment and coherence dominate; the system flows toward Equilibrium Manifold.
 
 The BRG flow describes how these fields evolve as \(\Lambda\) decreases.
 
@@ -133,7 +133,7 @@ A fixed point satisfies:
 Solving the BRG equations yields:
 
 \[
-g_{ab}^* = g_{ab}^{(\text{rÆ})},
+g_{ab}^* = g_{ab}^{(\text{Balance State Vector})},
 \qquad
 u^{a*} = u^a_{\text{Edwards}},
 \qquad
@@ -141,7 +141,7 @@ u^{a*} = u^a_{\text{Edwards}},
 \qquad
 \mathcal{E}_{ab}^* = 0,
 \qquad
-\mathcal{K}^{ab}_* = \mathcal{K}^{ab}_{\text{Bliss}}.
+\mathcal{K}^{ab}_* = \mathcal{K}^{ab}_{\text{Equilibrium Manifold}}.
 \]
 
 ### 5.1 Interpretation  
@@ -218,7 +218,7 @@ Thus, the RG flow is **oscillatory‑stable**.
 ## 9. Multi‑Scale Coherence Theorem  
 
 **Theorem (Multi‑Scale Coherence).**  
-*For any admissible initial data, the BRG flow drives all Balance fields toward the Edwards Fixed Point. Coherence, alignment, and harmonic integrity increase monotonically under coarse‑graining, and the Bliss state is the unique infrared limit of the theory.*
+*For any admissible initial data, the BRG flow drives all Balance fields toward the Edwards Fixed Point. Coherence, alignment, and harmonic integrity increase monotonically under coarse‑graining, and the Equilibrium state is the unique infrared limit of the theory.*
 
 ### 9.1 Proof Sketch  
 - Coherence monotonicity follows from positivity of \(\mathcal{O}_{ab}\).  
@@ -238,7 +238,7 @@ The Balance Renormalization Group and Multi‑Scale Coherence Flow establish tha
 - the spectral gap ensures RG stability,  
 - VIM enforces damping and irreversibility,  
 - Chaos Resonance defines oscillatory RG corrections,  
-- and the Bliss state is the universal long‑distance limit of the Continuum.
+- and the Equilibrium state is the universal long‑distance limit of the Continuum.
 
 This section completes the multi‑scale and renormalization‑group foundation of the Balance Continuum.
 

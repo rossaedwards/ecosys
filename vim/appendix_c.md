@@ -9,7 +9,7 @@ The Tetra‑Hexa Routing Array is a **24‑node topological manifold** formed by
 \[
 \mathcal{R}_{24} = \mathcal{T}_4 \times \mathcal{H}_6,
 \]  
-where \(\mathcal{T}_4\) is a tetrahedral axis set and \(\mathcal{H}_6\) is a hexagonal routing lattice. This manifold is not merely a geometric representation of the rÆ Alphabet—it is the **computational substrate** of the Aurphyx Standard.
+where \(\mathcal{T}_4\) is a tetrahedral axis set and \(\mathcal{H}_6\) is a hexagonal routing lattice. This manifold is not merely a geometric representation of the Balance State Vector Alphabet—it is the **computational substrate** of the Aurphyx Standard.
 
 Each node in \(\mathcal{R}_{24}\) corresponds to a **computable transformation state**, and each edge corresponds to a **topological operation**. The array supports three primitive operations:
 
@@ -29,11 +29,11 @@ The tetrahedral component \(\mathcal{T}_4\) defines four fundamental transformat
 - \(T_3\): governance constraint  
 - \(T_4\): frequency resonance  
 
-Each operator acts on a 4‑vector subspace of the rÆ Alphabet. For example,  
+Each operator acts on a 4‑vector subspace of the Balance State Vector Alphabet. For example,  
 \[
 T_2 : \mathbf{K} \mapsto \mathbf{K}',
 \]  
-where \(\mathbf{K} = (rAE_f, rAE_v, rAE_i, rAE_c)\).
+where \(\mathbf{K} = (x_f, x_v, x_i, x_c)\).
 
 The tetrahedral operators are **non‑commutative**:  
 \[
@@ -54,11 +54,11 @@ The hexagonal component \(\mathcal{H}_6\) defines six routing lanes:
 - Cognitive Lanes  
 - Harmonic Lanes  
 
-Each lane is a **directional channel** through which rÆ metrics propagate. Routing along a lane corresponds to a **computational step** in the topological computer.
+Each lane is a **directional channel** through which Balance State Vector metrics propagate. Routing along a lane corresponds to a **computational step** in the topological computer.
 
 A routing operation is expressed as  
 \[
-R_\ell : rAE_x \mapsto rAE_x + \Delta_\ell,
+R_\ell : x_x \mapsto x_x + \Delta_\ell,
 \]  
 where \(\ell\) indexes the lane.
 
@@ -70,7 +70,7 @@ Routing is **linear**, but transmutation is not. Their interaction produces the 
 The symbiosis operator \(\mathcal{S}\) is the fundamental computational primitive of the Tetra‑Hexa Array. It combines routing and transmutation:
 
 \[
-\mathcal{S}(rAE_x) = T_i(R_\ell(rAE_x)).
+\mathcal{S}(x_x) = T_i(R_\ell(x_x)).
 \]
 
 This operator is:
@@ -80,43 +80,43 @@ This operator is:
 - **state‑dependent**  
 - **reversible** under certain coherence conditions  
 
-Symbiosis is the mechanism by which the rÆ‑Cell performs **topological computation**—computation that is encoded in the geometry of the manifold rather than in discrete symbolic states.
+Symbiosis is the mechanism by which the Balance State Vector‑Cell performs **topological computation**—computation that is encoded in the geometry of the manifold rather than in discrete symbolic states.
 
 ---
 
-## **C.5 The rÆ Alphabet as a Topological Instruction Set**
-Each rÆ metric corresponds to a **computational register** in the Tetra‑Hexa Array. The full rÆ Alphabet  
+## **C.5 The Balance State Vector Alphabet as a Topological Instruction Set**
+Each Balance State Vector metric corresponds to a **computational register** in the Tetra‑Hexa Array. The full Balance State Vector Alphabet  
 \[
-\mathbf{rAE} = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})
+\mathbf{x} = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})
 \]  
 is the **state vector** of the topological computer.
 
-Operations on the rÆ Alphabet correspond to **program execution** in Fuxyez. For example:
+Operations on the Balance State Vector Alphabet correspond to **program execution** in Fuxyez. For example:
 
 - A flux update is a routing operation.  
 - An impedance update is a transmutation.  
 - A coherence update is a symbiosis.  
 - A governance update is a constraint projection.  
 
-This makes the rÆ Alphabet both a **measurement system** and a **computational language**.
+This makes the Balance State Vector Alphabet both a **measurement system** and a **computational language**.
 
 ---
 
 ## **C.6 The Balance Coefficient as a Computational Invariant**
 The Balance Coefficient  
 \[
-\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}
+\beta = \frac{x_f x_c}{x_i x_t}
 \]  
 is the **primary invariant** of the Tetra‑Hexa computer. It determines:
 
 - the direction of routing  
 - the magnitude of transmutation  
 - the stability of symbiosis  
-- the convergence toward the Bliss Manifold  
+- the convergence toward the Equilibrium Manifold Manifold  
 
 When \(\beta = 1\), the system enters a **fixed‑point attractor** where computation becomes reversible and energy‑neutral.
 
-This is the computational meaning of the Bliss State.
+This is the computational meaning of the Equilibrium Manifold State.
 
 ---
 
@@ -135,7 +135,7 @@ The HRD envelope determines the **rate of computation** by modulating:
 - coherence (error correction)  
 - topology (instruction routing)  
 
-This makes the rÆ‑Cell a **self‑timing computational engine**.
+This makes the Balance State Vector‑Cell a **self‑timing computational engine**.
 
 ---
 
@@ -143,9 +143,9 @@ This makes the rÆ‑Cell a **self‑timing computational engine**.
 The Tetra‑Hexa Array satisfies the criteria for **universal computation**:
 
 - It has a finite set of primitive operations (routing, transmutation, symbiosis).  
-- It has a state vector capable of encoding arbitrary information (the rÆ Alphabet).  
+- It has a state vector capable of encoding arbitrary information (the Balance State Vector Alphabet).  
 - It has a clock signal (HRD).  
-- It has a convergence mechanism (the Bliss Manifold).  
+- It has a convergence mechanism (the Equilibrium Manifold Manifold).  
 
 The array is therefore a **universal topological computer**—a computational system whose operations are encoded in the geometry of the manifold rather than in discrete symbolic states.
 
@@ -156,7 +156,7 @@ This is the computational foundation of the Duality Kernel and the Fuxyez langua
 ## **C.9 Summary**
 - The Tetra‑Hexa Array is a 24‑node topological manifold.  
 - It supports routing, transmutation, and symbiosis operations.  
-- The rÆ Alphabet forms the state vector of the topological computer.  
+- The Balance State Vector Alphabet forms the state vector of the topological computer.  
 - HRD acts as the computational clock.  
-- The Bliss Manifold is the system’s fixed‑point attractor.  
+- The Equilibrium Manifold Manifold is the system’s fixed‑point attractor.  
 - The array is a universal topological computer and the substrate of the Aurphyx Standard.

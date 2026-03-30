@@ -27,10 +27,10 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_056_056_coherence_decay.png"
 
     t = np.linspace(0, 15, 200)
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = 1.0 + 0.5 * np.exp(-0.2 * t)
-    rAE_i = 1.2 - 0.4 * np.exp(-0.18 * t)
-    beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_f = 1.0 + 0.5 * np.exp(-0.2 * t)
+    x_i = 1.2 - 0.4 * np.exp(-0.18 * t)
+    beta_val = beta(x_f, x_c, x_i, x_t)
     coherence = 1.0 / (1.0 + np.abs(beta_val - 1.0))
 
     fig, ax = plt.subplots(figsize=(8, 6))

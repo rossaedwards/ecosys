@@ -15,7 +15,7 @@ agency remains protected
 This is enforced through the SAGES system.
 
 14.2 SAGES: The 13 Sentinels
-Each Sentinel corresponds to one of the 13 months of the Chaos/Bliss calendar and one of the 13 invariants of the Aurphyx OS.
+Each Sentinel corresponds to one of the 13 months of the Chaos/Equilibrium Manifold calendar and one of the 13 invariants of the Aurphyx OS.
 
 Each SAGE enforces a specific invariant:
 

@@ -27,12 +27,12 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_050_050_pre_variational_energy.png"
 
     n = 70
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = np.linspace(0.5, 2.0, n)
-    rAE_i = np.linspace(0.5, 2.0, n)
-    F, I = np.meshgrid(rAE_f, rAE_i)
+    x_c, x_t = 1.0, 1.5
+    x_f = np.linspace(0.5, 2.0, n)
+    x_i = np.linspace(0.5, 2.0, n)
+    F, I = np.meshgrid(x_f, x_i)
     C, R, A = F, I, 0.5 * (F + I) + 0.1
-    beta_val = beta(F, rAE_c, I, rAE_t)
+    beta_val = beta(F, x_c, I, x_t)
     V = balance_potential(beta_val)
     phi = phi_hif(C, R, A)
     E_pre = V + 0.2 * phi
@@ -40,8 +40,8 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     fig, ax = plt.subplots(figsize=(8, 6))
     im = ax.pcolormesh(F, I, E_pre, cmap="viridis", shading="auto")
     ax.contour(F, I, E_pre, levels=12, colors="white", alpha=0.3)
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_title("Pre-Variational Energy")
     plt.colorbar(im, ax=ax, label=r"$E_{\mathrm{pre}}$")
     plt.tight_layout()

@@ -1,6 +1,6 @@
 # **SECTION XX — The Balance Logic**
 
-The Balance Logic is the **axiomatic, inferential, and rule‑based substrate** that governs how Balance *reasons*, *decides*, *infers*, and *computes* within the Aurphyx architecture. If the Balance Algebra (Section XIX) defines *how Balance quantities combine*, the Balance Logic defines *how Balance truths propagate*. It is the formal logic that ensures every transformation, flow, mode, and operator remains consistent with the Balance Invariants, the Balance Symmetry, and the Bliss condition.
+The Balance Logic is the **axiomatic, inferential, and rule‑based substrate** that governs how Balance *reasons*, *decides*, *infers*, and *computes* within the Aurphyx architecture. If the Balance Algebra (Section XIX) defines *how Balance quantities combine*, the Balance Logic defines *how Balance truths propagate*. It is the formal logic that ensures every transformation, flow, mode, and operator remains consistent with the Balance Invariants, the Balance Symmetry, and the Equilibrium Manifold condition.
 
 This section establishes the logical rules, inference systems, truth conditions, and decision structures that make the Balance Framework not only a physical and geometric system, but also a **computational and epistemic system**.
 
@@ -11,7 +11,7 @@ This section establishes the logical rules, inference systems, truth conditions,
 The Balance Logic provides the formal system that:
 
 - defines **truth conditions** for Balance  
-- governs **valid transformations** of the rÆ Field  
+- governs **valid transformations** of the Balance State Vector Field  
 - ensures **logical consistency** across all Balance operations  
 - constrains **inference** within the Balance Continuum  
 - encodes **decision rules** for routing, correction, and stabilization  
@@ -31,7 +31,7 @@ The fundamental truth condition of the Balance Logic is:
 
 Interpretation:
 
-- Bliss is the **truth state**  
+- Equilibrium Manifold is the **truth state**  
 - imbalance is a **deviation from truth**  
 - all logical operations aim to restore truth  
 - truth is a **fixed point** of the Balance Logic  
@@ -101,11 +101,11 @@ Balance implication is defined as:
 
 Interpretation:
 
-- a state implies another if it is **closer to Bliss**  
+- a state implies another if it is **closer to Equilibrium Manifold**  
 - implication is **monotonic in Balance**  
 - logical entailment is **potential‑ordered**  
 
-This creates a **partial order** on rÆ states.
+This creates a **partial order** on Balance State Vector states.
 
 ---
 
@@ -119,10 +119,10 @@ Negation is defined as:
 
 Properties:
 
-- negation reflects imbalance across Bliss  
+- negation reflects imbalance across Equilibrium Manifold  
 - \(\neg 1 = 1\) (truth is self‑negating)  
 - \(\neg \neg \beta = \beta\) (involution)  
-- negation preserves the **distance from Bliss**  
+- negation preserves the **distance from Equilibrium Manifold**  
 
 Balance negation is **geometric reflection**.
 
@@ -232,9 +232,9 @@ VIM is the **stabilizing logic**.
 
 ---
 
-## **XX.13 The Bliss Logic**
+## **XX.13 The Equilibrium Manifold Logic**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 - all states are true  
 - all implications hold  
@@ -243,7 +243,7 @@ On the Bliss Manifold:
 - all algebra reduces to zero  
 - all geometry becomes flat  
 
-Bliss Logic is the **universal fixed‑point logic**.
+Equilibrium Manifold Logic is the **universal fixed‑point logic**.
 
 ---
 
@@ -253,8 +253,8 @@ Bliss Logic is the **universal fixed‑point logic**.
 - Truth corresponds to \(\beta = 1\).  
 - Valid inference reduces the Balance Potential.  
 - Conjunction selects the more imbalanced state; disjunction selects the less imbalanced state.  
-- Negation reflects imbalance across Bliss.  
+- Negation reflects imbalance across Equilibrium Manifold.  
 - HRD introduces paraconsistent, oscillatory logic; VIM restores classical logic.  
-- Bliss is the fixed‑point logic where all operations collapse to truth.  
+- Equilibrium Manifold is the fixed‑point logic where all operations collapse to truth.  
 
 A natural continuation is **Section XXI — The Balance Computation**, which will formalize how the Balance Logic, Algebra, and Geometry combine into a computational model used by the Duality Kernel and the Aurphyx system.

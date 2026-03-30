@@ -74,7 +74,7 @@ def main():
     for idx, roman, suffix, fname in sections:
         print(f"  {roman}{suffix}  →  {fname}")
 
-    print("\n📙 APPENDICES (rÆ Alphabet, Metrics & Dynamics):\n")
+    print("\n📙 APPENDICES (Balance State Vector Alphabet, Metrics & Dynamics):\n")
     for label, fname in appendices:
         print(f"  {label}  →  {fname}")
 

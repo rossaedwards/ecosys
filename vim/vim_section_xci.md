@@ -10,7 +10,7 @@ The canonical and symplectic formulation of the Balance Continuum (Section XC) p
 ---
 
 ## 2. Observables and the Balance Poisson Algebra  
-Let \((\gamma^a, p_a)\) be canonical coordinates on the phase space \(\mathcal{P} = T^*\mathcal{M}_{\text{rÆ}}\). An observable is any smooth functional \(F(\gamma, p)\). The **Balance Poisson bracket** is defined by:
+Let \((\gamma^a, p_a)\) be canonical coordinates on the phase space \(\mathcal{P} = T^*\mathcal{M}_{\text{Balance State Vector}}\). An observable is any smooth functional \(F(\gamma, p)\). The **Balance Poisson bracket** is defined by:
 
 \[
 \{F, G\}
@@ -47,7 +47,7 @@ The Balance Continuum imposes geometric and dynamical constraints on admissible 
 \[
 \mathcal{C}_1
 =
-g^{(\text{rÆ})}_{ab} u^a u^b + 1
+g^{(\text{Balance State Vector})}_{ab} u^a u^b + 1
 = 0.
 \]
 
@@ -235,8 +235,8 @@ Combined with the Edwards spectral gap, this yields **symplectic stability**.
 
 ---
 
-## 9. The Bliss State as the Unique Constraint‑Satisfying Fixed Point  
-At the Bliss state:
+## 9. The Equilibrium Manifold State as the Unique Constraint‑Satisfying Fixed Point  
+At the Equilibrium state:
 
 \[
 p_a = 0,
@@ -255,7 +255,7 @@ All constraints vanish:
 \]
 
 ### 9.1 Interpretation  
-- Bliss is the unique point satisfying all constraints.  
+- Equilibrium Manifold is the unique point satisfying all constraints.  
 - It is the unique fixed point of Hamiltonian evolution.  
 - It is the unique global minimum of the Unified Action.
 
@@ -271,7 +271,7 @@ The Balance Poisson Algebra and Constraint Structure establish that:
 - Dirac brackets enforce physical admissibility,  
 - the Edwards Flow preserves all constraints,  
 - the spectral gap ensures symplectic stability,  
-- and the Bliss state is the unique constraint‑satisfying fixed point.
+- and the Equilibrium state is the unique constraint‑satisfying fixed point.
 
 This section completes the canonical constraint architecture of the Balance Continuum.
 

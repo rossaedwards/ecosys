@@ -5,12 +5,12 @@ Below is **Section XCIII — The Balance Path Integral and Quantum Coherence Mea
 # **Section XCIII — The Balance Path Integral and Quantum Coherence Measure**
 
 ## 1. Overview  
-The canonical quantization of the Balance Continuum (Section XCII) provides the operator‑level foundation of the theory. To complete the quantum formulation, it is necessary to construct the **Balance Path Integral**, define the **Quantum Coherence Measure**, and demonstrate that the functional‑integral representation is fully consistent with the Balance constraints, the Edwards spectral gap, and the anomaly‑free structure of the rÆ manifold. This section formalizes the path‑integral measure, derives the Balance propagator, and proves that the quantum theory is well‑defined, gauge‑invariant, and convergent toward the Bliss state.
+The canonical quantization of the Balance Continuum (Section XCII) provides the operator‑level foundation of the theory. To complete the quantum formulation, it is necessary to construct the **Balance Path Integral**, define the **Quantum Coherence Measure**, and demonstrate that the functional‑integral representation is fully consistent with the Balance constraints, the Edwards spectral gap, and the anomaly‑free structure of the Balance State Vector manifold. This section formalizes the path‑integral measure, derives the Balance propagator, and proves that the quantum theory is well‑defined, gauge‑invariant, and convergent toward the Equilibrium state.
 
 ---
 
 ## 2. The Balance Path Integral  
-Let \(\gamma^a(\tau)\) be an Edwards‑timelike path on the rÆ manifold. The **Balance Path Integral** is defined as:
+Let \(\gamma^a(\tau)\) be an Edwards‑timelike path on the Balance State Vector manifold. The **Balance Path Integral** is defined as:
 
 \[
 \mathcal{Z}
@@ -30,7 +30,7 @@ p_a \dot{\gamma}^a
 ### 2.1 Interpretation  
 - Integrates over all admissible histories of the Continuum.  
 - The Hamiltonian \(\mathcal{H}\) encodes geometric, informational, harmonic, and governance energies.  
-- The Bliss state corresponds to the unique global minimum of the action.  
+- The Equilibrium state corresponds to the unique global minimum of the action.  
 - The path integral is anomaly‑free due to the constraint structure of Section XCI.
 
 ---
@@ -38,7 +38,7 @@ p_a \dot{\gamma}^a
 ## 3. The Quantum Coherence Measure  
 The Balance Continuum requires a measure that respects:
 
-- the rÆ geometry,  
+- the Balance State Vector geometry,  
 - the Balance Fisher geometry,  
 - the HIF potential,  
 - the governance curvature,  
@@ -52,7 +52,7 @@ Define the **Quantum Coherence Measure**:
 \prod_{\tau}
 \sqrt{
 \det\left(
-g^{(\text{rÆ})}_{ab}
+g^{(\text{Balance State Vector})}_{ab}
 + \lambda_{\mathcal{I}} \mathcal{I}_{ab}
 + \lambda_{\Phi}\, \nabla_a \Phi_{\text{HIF}} \nabla_b \Phi_{\text{HIF}}
 \right)
@@ -64,7 +64,7 @@ d^{16}\gamma(\tau).
 - The measure weights paths by their coherence geometry.  
 - High‑dissonance paths are exponentially suppressed.  
 - The measure is invariant under Balance gauge transformations.  
-- The Bliss state is the unique fixed point of the measure.
+- The Equilibrium state is the unique fixed point of the measure.
 
 ---
 
@@ -107,9 +107,9 @@ S_{\text{Unified}}[\gamma]
 \]
 
 ### 5.1 Interpretation  
-- Encodes quantum coherence transport across the rÆ manifold.  
+- Encodes quantum coherence transport across the Balance State Vector manifold.  
 - Reduces to the classical propagator in the semiclassical limit.  
-- Contracts toward the Bliss state due to the spectral gap of the Edwards Tensor.
+- Contracts toward the Equilibrium state due to the spectral gap of the Edwards Tensor.
 
 ---
 
@@ -174,9 +174,9 @@ e^{\frac{i}{\hbar} S_{\text{Unified}}[\gamma]}
 \]
 
 ### 7.1 Interpretation  
-- Measures quantum coherence between points on the rÆ manifold.  
+- Measures quantum coherence between points on the Balance State Vector manifold.  
 - Is positive‑semidefinite due to the spectral gap.  
-- Contracts toward the Bliss kernel under Edwards evolution.
+- Contracts toward the Equilibrium Manifold kernel under Edwards evolution.
 
 ---
 
@@ -201,7 +201,7 @@ VIM is the quantum analogue of dissipative damping.
 ---
 
 ## 9. Chaos Resonance and Oscillatory Quantum Modes  
-Near the Bliss state, the quadratic expansion yields:
+Near the Equilibrium state, the quadratic expansion yields:
 
 \[
 \mathcal{O}_{ab}
@@ -217,7 +217,7 @@ Near the Bliss state, the quadratic expansion yields:
 - \(\gamma_{\text{VIM}}\) damps them.  
 - \(\lambda_1\) (spectral gap) ensures positivity.
 
-Thus, the quantum theory is a **damped, spectrally gapped oscillator** near Bliss.
+Thus, the quantum theory is a **damped, spectrally gapped oscillator** near Equilibrium Manifold.
 
 ---
 
@@ -226,12 +226,12 @@ The Balance Path Integral and Quantum Coherence Measure establish that:
 
 - the quantum theory admits a fully gauge‑invariant functional‑integral formulation,  
 - the measure incorporates geometric, informational, and harmonic curvature,  
-- the propagator is well‑defined and contracts toward Bliss,  
+- the propagator is well‑defined and contracts toward Equilibrium Manifold,  
 - the semiclassical limit reproduces the Edwards Flow,  
 - the coherence kernel is positive‑semidefinite and spectrally gapped,  
 - VIM ensures convergence and suppresses dissonant paths,  
 - Chaos Resonance defines oscillatory quantum modes,  
-- and the Bliss state is the unique ground state of the quantum path integral.
+- and the Equilibrium state is the unique ground state of the quantum path integral.
 
 This section completes the functional‑integral foundation of the Balance Continuum.
 

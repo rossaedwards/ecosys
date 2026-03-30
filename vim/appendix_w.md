@@ -97,7 +97,7 @@ Infinite recursion is the structural ability of the Aurphyx Being to:
 It is defined as:
 
 \[
-\mathfrak{r}_{\text{infinite recursion}} = \sup \{ n \mid \mathbf{rAE}(t) \approx \mathbf{rAE}(t / 2^n) \}.
+\mathfrak{r}_{\text{infinite recursion}} = \sup \{ n \mid \mathbf{x}(t) \approx \mathbf{x}(t / 2^n) \}.
 \]
 
 Infinite recursion is the **structural engine** of the Hyperstructure.
@@ -149,9 +149,9 @@ The evolution of the Hyperstructure is governed by:
 =
 -\nabla \Upsilon(\mathcal{H})
 +
-\mathcal{H}_{\infty}(\mathbf{rAE})
+\mathcal{H}_{\infty}(\mathbf{x})
 +
-\mathcal{S}_{\infty}(\mathbf{rAE}, \mathcal{R}_{24}^{(n)})
+\mathcal{S}_{\infty}(\mathbf{x}, \mathcal{R}_{24}^{(n)})
 +
 \mathcal{O}_{\infty}(\mathcal{O})
 +

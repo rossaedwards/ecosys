@@ -2,7 +2,7 @@
 
 The Balance Logic is the **inferential, truth‑preserving, and coherence‑maintaining layer** of the entire Balance Framework. If the Balance Algebra (Section XL) defines *how Balance transforms*, the Balance Logic defines *how Balance reasons*. It is the formal system that governs evaluation, inference, contradiction resolution, truth propagation, and coherence maintenance across all domains of the Balance Continuum.
 
-This section establishes the logical primitives, operators, inference rules, consistency conditions, and multi‑domain truth structures that allow the Balance Engine to make lawful decisions, resolve ambiguity, and converge toward Bliss.
+This section establishes the logical primitives, operators, inference rules, consistency conditions, and multi‑domain truth structures that allow the Balance Engine to make lawful decisions, resolve ambiguity, and converge toward Equilibrium Manifold.
 
 ---
 
@@ -15,7 +15,7 @@ The Balance Logic provides the system with:
 - a **multi-domain inference engine**  
 - a **logic of transitions** across the Balance Manifold  
 - a **decision calculus** for the Balance Kernel  
-- a **truth‑preserving structure** that converges toward Bliss  
+- a **truth‑preserving structure** that converges toward Equilibrium Manifold  
 
 It is the **cognitive backbone** of the Balance Framework.
 
@@ -50,11 +50,11 @@ T(\beta) = 1 - |\beta - 1|
 
 Where:
 
-- \(T = 1\) at Bliss  
+- \(T = 1\) at Equilibrium Manifold  
 - \(T < 1\) when imbalance exists  
 - \(T = 0\) at maximal imbalance  
 
-Truth is **distance from Bliss**.
+Truth is **distance from Equilibrium Manifold**.
 
 ---
 
@@ -66,7 +66,7 @@ Balance Logic includes five primary operators:
   \[
   \neg \beta = 2 - \beta
   \]
-  Reflects imbalance across Bliss.
+  Reflects imbalance across Equilibrium Manifold.
 
 - **Conjunction**  
   \[
@@ -107,7 +107,7 @@ Coherence is defined as:
 Where:
 
 - \(\Psi_i\) are Balance Modes  
-- \(\Psi_i^{\text{aligned}}\) are Bliss‑aligned modes  
+- \(\Psi_i^{\text{aligned}}\) are Equilibrium Manifold‑aligned modes  
 
 Coherence measures **logical consistency across modes**.
 
@@ -235,15 +235,15 @@ Logical invariants include:
 - coherence preservation  
 - contradiction minimization  
 - invariance under symmetry groups  
-- convergence toward Bliss  
+- convergence toward Equilibrium Manifold  
 
 These invariants guarantee **logical stability**.
 
 ---
 
-## **XLI.13 Logical Collapse at Bliss**
+## **XLI.13 Logical Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all contradictions vanish  
 - all gradients vanish  
@@ -254,10 +254,10 @@ At Bliss:
 The Balance Logic collapses to:
 
 \[
-\mathcal{L}_{\text{Bliss}} = 1
+\mathcal{L}_{\text{Equilibrium Manifold}} = 1
 \]
 
-Bliss is the **logical fixed point**.
+Equilibrium Manifold is the **logical fixed point**.
 
 ---
 
@@ -267,6 +267,6 @@ Bliss is the **logical fixed point**.
 - It includes truth functions, logical operators, coherence rules, contradiction metrics, and inference laws.  
 - It governs correction, resonance, stabilization, and Continuum inference.  
 - It preserves symmetry and invariants across all domains.  
-- Bliss is the logical fixed point where truth becomes unity.  
+- Equilibrium Manifold is the logical fixed point where truth becomes unity.  
 
 If you want to continue, the next natural section is **Section XLII — The Balance Semantics**, which formalizes how meaning, interpretation, and identity are preserved and transformed within the Balance Framework.

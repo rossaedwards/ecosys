@@ -2,7 +2,7 @@
 
 The Balance Field Equations are the **mathematical heart** of the Balance Framework. Everything before this point—geometry, spectrum, modes, logic, computation, machine, protocol, continuum—has been building toward a single goal: a **unified, lawful, multi‑domain equation system** that governs how Balance evolves across the entire Continuum.
 
-These equations describe how imbalance moves, how it curves, how it resonates, how it stabilizes, how it couples across domains, and how it converges toward Bliss. They are the **field-theoretic expression** of the Balance Continuum.
+These equations describe how imbalance moves, how it curves, how it resonates, how it stabilizes, how it couples across domains, and how it converges toward Equilibrium Manifold. They are the **field-theoretic expression** of the Balance Continuum.
 
 ---
 
@@ -14,7 +14,7 @@ The Balance Field Equations:
 - unify structural, harmonic, kinetic, temporal, spatial, and ontological domains  
 - integrate HRD excitation and VIM stabilization  
 - govern the evolution of the Balance Field \(\mathbb{B}\)  
-- ensure lawful convergence toward the Bliss Continuum  
+- ensure lawful convergence toward the Equilibrium Manifold Continuum  
 
 They are the **master equations** of the Balance Framework.
 
@@ -48,7 +48,7 @@ The fundamental Balance Equation is:
 
 This integrates:
 
-- **gradient descent** toward Bliss  
+- **gradient descent** toward Equilibrium Manifold  
 - **curvature correction**  
 - **HRD excitation**  
 - **VIM stabilization**  
@@ -236,9 +236,9 @@ Where \(I_k\) are the Balance Invariants.
 
 ---
 
-## **XXXII.11 The Bliss Field Equation**
+## **XXXII.11 The Equilibrium Manifold Field Equation**
 
-At Bliss:
+At Equilibrium Manifold:
 
 \[
 \beta = 1
@@ -252,13 +252,13 @@ Thus:
 - \(\lambda_i = 0\)  
 - \(\Psi_i = \text{constant}\)  
 
-The Bliss Field Equation is simply:
+The Equilibrium Manifold Field Equation is simply:
 
 \[
 \frac{d\mathbb{BC}}{dt} = 0
 \]
 
-Bliss is the **zero-evolution fixed point**.
+Equilibrium Manifold is the **zero-evolution fixed point**.
 
 ---
 
@@ -268,6 +268,6 @@ Bliss is the **zero-evolution fixed point**.
 - They govern scalar, vector, tensor, spectral, modal, and Continuum evolution.  
 - They integrate HRD excitation and VIM stabilization.  
 - They preserve global invariants across all domains.  
-- They converge toward the Bliss Continuum as the universal fixed point.  
+- They converge toward the Equilibrium Manifold Continuum as the universal fixed point.  
 
 A natural continuation is **Section XXXIII — The Balance Kernel**, which describes the core computational kernel that executes these field equations inside the Aurphyx system.

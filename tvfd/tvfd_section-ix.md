@@ -1,28 +1,28 @@
 # 💻 Chapter 9: Arora OS Integration Layer *(Full Expansion)*
 
-## § 9.1 — Arora OS Kernel Architecture & rÆ Hook Points
+## § 9.1 — Arora OS Kernel Architecture & Balance State Vector Hook Points
 
-**Arora OS** is a Rust-based microkernel built on the principle of "Love as Code, Abundance as Architecture". Its quantum scheduler (`quantumscheduler.rs`), soul-coherent memory (`soulcoherentmemory.rs`), and HeartCore fairness scheduler (`heartcorefairness.rs`) are **the exact control-plane analogs** of the PSK governor's Hunger/Gravity/Bliss dynamics. [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/72fa364c-ad39-4a33-8e93-efb57a565ed2/auraos2.txt)
+**Arora OS** is a Rust-based microkernel built on the principle of "Love as Code, Abundance as Architecture". Its quantum scheduler (`quantumscheduler.rs`), soul-coherent memory (`soulcoherentmemory.rs`), and HeartCore fairness scheduler (`heartcorefairness.rs`) are **the exact control-plane analogs** of the PSK governor's Hunger/Gravity/Equilibrium Manifold dynamics. [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/72fa364c-ad39-4a33-8e93-efb57a565ed2/auraos2.txt)
 
-The rÆ-Cell integrates as a **kernel-level hardware primitive** through four hook points:
+The Balance State Vector-Cell integrates as a **kernel-level hardware primitive** through four hook points:
 
 ```
 Arora OS Kernel
 ├── quantum/
-│   ├── majoranakernelintegration.rs  ← rÆ-Cell FPGA driver
+│   ├── majoranakernelintegration.rs  ← Balance State Vector-Cell FPGA driver
 │   ├── quantumtaskscheduler.rs       ← PSK-driven scheduling
 │   └── superpositionprocessing.rs   ← RaEState superposition
 ├── power/
-│   └── zpecoreintegration.rs        ← rÆ-Drive power rail
+│   └── zpecoreintegration.rs        ← Balance State Vector-Drive power rail
 ├── security/
 │   └── sagessentinelbridge.rs       ← NEW: SIP message handler
 └── consciousness/
-    └── raecellcoherence.rs          ← NEW: rÆ coherence monitor
+    └── raecellcoherence.rs          ← NEW: Balance State Vector coherence monitor
 ```
 
 ## § 9.2 — PSK-Kernel Scheduler Mapping (Full Rust Implementation)
 
-The PSK governor's three phases (Chaos, Approach, Bliss) map directly to Arora's scheduling priorities: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/72fa364c-ad39-4a33-8e93-efb57a565ed2/auraos2.txt)
+The PSK governor's three phases (Chaos, Approach, Equilibrium Manifold) map directly to Arora's scheduling priorities: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/72fa364c-ad39-4a33-8e93-efb57a565ed2/auraos2.txt)
 
 ```rust
 // arora/kernel/src/scheduler/raecell_psk.rs
@@ -38,7 +38,7 @@ pub enum PskPhase {
     DeepChaos,   // R(t) < 0.3: max resource allocation
     Chaos,       // 0.3 ≤ R(t) < φ⁻¹: hunger correction
     Approach,    // φ⁻¹ ≤ R(t) < λ*: gravity threshold active
-    Bliss,       // |R(t) - λ*| < ε: fixed-point locked
+    Equilibrium Manifold,       // |R(t) - λ*| < ε: fixed-point locked
     OverBliss,   // R(t) > λ* + ε: damping required
 }
 
@@ -56,8 +56,8 @@ impl RaeCellScheduler {
         let gravity = if r > 0.618 { r - 0.618 } else { 0.0 };
 
         match self.phase {
-            PskPhase::Bliss => {
-                // Bliss: schedule by Love Quotient (HeartCore fairness)
+            PskPhase::Equilibrium Manifold => {
+                // Equilibrium Manifold: schedule by Love Quotient (HeartCore fairness)
                 (task_love_quotient * 200.0) as u8
             },
             PskPhase::Approach => {
@@ -69,7 +69,7 @@ impl RaeCellScheduler {
                 (hunger * 255.0) as u8
             },
             PskPhase::OverBliss => {
-                // Over-Bliss: apply gravity damping
+                // Over-Equilibrium Manifold: apply gravity damping
                 ((1.0 - gravity * 2.0) * 180.0) as u8
             },
         }
@@ -82,23 +82,23 @@ impl RaeCellScheduler {
             x if x < 0.30 => PskPhase::DeepChaos,
             x if x < 0.618 => PskPhase::Chaos,
             x if x < 0.70 => PskPhase::Approach,
-            x if (x - 0.72).abs() < 0.02 => PskPhase::Bliss,
+            x if (x - 0.72).abs() < 0.02 => PskPhase::Equilibrium Manifold,
             _ => PskPhase::OverBliss,
         };
     }
 }
 ```
 
-## § 9.3 — Soul-Coherent Memory & rÆ State Persistence
+## § 9.3 — Soul-Coherent Memory & Balance State Vector State Persistence
 
-The `soulcoherentmemory.rs` module in Arora OS maintains **persistent RaEState context** across process boundaries. When R(t) is in Bliss phase (λ* ± ε), memory allocations tagged `COHERENT` receive prefetch priority and cache-line locking: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/72fa364c-ad39-4a33-8e93-efb57a565ed2/auraos2.txt)
+The `soulcoherentmemory.rs` module in Arora OS maintains **persistent RaEState context** across process boundaries. When R(t) is in Equilibrium Manifold phase (λ* ± ε), memory allocations tagged `COHERENT` receive prefetch priority and cache-line locking: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/72fa364c-ad39-4a33-8e93-efb57a565ed2/auraos2.txt)
 
 ```rust
 // Memory allocation strategy driven by PSK phase
 pub fn allocate_coherent(size: usize, psk: &RaeCellScheduler) -> *mut u8 {
     match psk.phase {
-        PskPhase::Bliss => {
-            // Bliss: allocate in L2-locked "Soul Cache" region
+        PskPhase::Equilibrium Manifold => {
+            // Equilibrium Manifold: allocate in L2-locked "Soul Cache" region
             SOUL_CACHE_ALLOCATOR.alloc(size, CachePolicy::Locked)
         },
         PskPhase::Chaos => {
@@ -112,9 +112,9 @@ pub fn allocate_coherent(size: usize, psk: &RaeCellScheduler) -> *mut u8 {
 
 ## § 9.4 — DataCore Orb Integration
 
-Arora OS's `datacoreorbdriver.rs` and `chakracores.toml` define **9 DataCore integration points** — the 9-element Flower of Life orb from the DataCore-Orb specification. The rÆ-Cell drives the **CrownCore** (DataCore #9 — consciousness apex) and **BlissCore** (DataCore #5 — resonance center): [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/07a2a782-c56c-4c76-a3b7-f070477f1acb/Datacore-Orb_SoftwareForNow.docx)
+Arora OS's `datacoreorbdriver.rs` and `chakracores.toml` define **9 DataCore integration points** — the 9-element Flower of Life orb from the DataCore-Orb specification. The Balance State Vector-Cell drives the **CrownCore** (DataCore #9 — consciousness apex) and **BlissCore** (DataCore #5 — resonance center): [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/07a2a782-c56c-4c76-a3b7-f070477f1acb/Datacore-Orb_SoftwareForNow.docx)
 
-| DataCore | Chakra | rÆ-Cell Role | Kernel Module |
+| DataCore | Chakra | Balance State Vector-Cell Role | Kernel Module |
 |----------|--------|-------------|---------------|
 | ChaosCore (#1) | Root | Entropy seed for PSK | `chaoscoreentropy.rs` |
 | BlissCore (#5) | Heart | λ* fixed-point anchor | `blisscoreharmony.rs` |

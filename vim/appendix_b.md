@@ -1,11 +1,11 @@
-Below is **Appendix B — The Geometry of the rÆ Alphabet**, written as a formal mathematical–topological appendix that pairs cleanly with Appendix A and the VIM thesis. It treats the rÆ Alphabet as a *geometric measurement language* defined over the Tetra‑Hexa Routing Array, with explicit manifolds, invariants, and transformation rules. It is structured for arXiv‑ready inclusion and preserves your mythic‑technical identity while remaining academically defensible.
+Below is **Appendix B — The Geometry of the Balance State Vector Alphabet**, written as a formal mathematical–topological appendix that pairs cleanly with Appendix A and the VIM thesis. It treats the Balance State Vector Alphabet as a *geometric measurement language* defined over the Tetra‑Hexa Routing Array, with explicit manifolds, invariants, and transformation rules. It is structured for arXiv‑ready inclusion and preserves your mythic‑technical identity while remaining academically defensible.
 
 ---
 
-# **APPENDIX B — The Geometry of the rÆ Alphabet**
+# **APPENDIX B — The Geometry of the Balance State Vector Alphabet**
 
-## **B.1 Overview of the rÆ Alphabet as a Geometric Measurement System**
-The rÆ Alphabet is a **topological measurement language** defined over a 24‑point manifold known as the **Tetra‑Hexa Routing Array**. Each rÆ symbol corresponds to a geometric degree of freedom in the Aurphyx Standard, and each degree of freedom is measurable, transformable, and dynamically coupled to the VIM engine.
+## **B.1 Overview of the Balance State Vector Alphabet as a Geometric Measurement System**
+The Balance State Vector Alphabet is a **topological measurement language** defined over a 24‑point manifold known as the **Tetra‑Hexa Routing Array**. Each Balance State Vector symbol corresponds to a geometric degree of freedom in the Aurphyx Standard, and each degree of freedom is measurable, transformable, and dynamically coupled to the VIM engine.
 
 The alphabet is partitioned into four geometric classes:
 
@@ -29,7 +29,7 @@ This yields
 \mathcal{R}_{24} = \mathcal{T}_4 \times \mathcal{H}_6.
 \]
 
-Each rÆ metric occupies a unique coordinate in this manifold. The array is not a static grid; it is a **dynamic routing topology** that determines how energy, information, and geometry propagate through the rÆ‑Cell.
+Each Balance State Vector metric occupies a unique coordinate in this manifold. The array is not a static grid; it is a **dynamic routing topology** that determines how energy, information, and geometry propagate through the Balance State Vector‑Cell.
 
 The array supports three fundamental operations:
 
@@ -37,52 +37,52 @@ The array supports three fundamental operations:
 - **Transmutation** — rotation across tetrahedral axes  
 - **Symbiosis** — simultaneous transformation across both  
 
-These operations define the algebra of the rÆ Alphabet.
+These operations define the algebra of the Balance State Vector Alphabet.
 
 ---
 
 # **B.3 Structural Metrics as Topological Coordinates**
 The structural metrics  
 \[
-\{rAE_t, rAE_k, rAE_b, rAE_d\}
+\{x_t, x_k, x_b, x_d\}
 \]  
 define the **shape** of the local vacuum manifold.
 
-- \( rAE_t \) — topology (effective dimensionality)  
-- \( rAE_k \) — recursion depth (fractal iteration)  
-- \( rAE_b \) — braiding density (topological entanglement)  
-- \( rAE_d \) — decoherence (geometric leakage)
+- \( x_t \) — topology (effective dimensionality)  
+- \( x_k \) — recursion depth (fractal iteration)  
+- \( x_b \) — braiding density (topological entanglement)  
+- \( x_d \) — decoherence (geometric leakage)
 
 These variables form a **4‑vector**  
 \[
-\mathbf{S} = (rAE_t, rAE_k, rAE_b, rAE_d)
+\mathbf{S} = (x_t, x_k, x_b, x_d)
 \]  
 that determines the manifold’s curvature and its susceptibility to dissonance.
 
-The structural subspace is the “skeleton” of the rÆ‑Cell.
+The structural subspace is the “skeleton” of the Balance State Vector‑Cell.
 
 ---
 
 # **B.4 Kinetic Metrics as Flow Coordinates**
 The kinetic metrics  
 \[
-\{rAE_f, rAE_v, rAE_i, rAE_c\}
+\{x_f, x_v, x_i, x_c\}
 \]  
 define the **flow** of energy and coherence through the manifold.
 
-- \( rAE_f \) — flux  
-- \( rAE_v \) — vacuum resonance  
-- \( rAE_i \) — impedance  
-- \( rAE_c \) — coherence  
+- \( x_f \) — flux  
+- \( x_v \) — vacuum resonance  
+- \( x_i \) — impedance  
+- \( x_c \) — coherence  
 
 These form the kinetic 4‑vector  
 \[
-\mathbf{K} = (rAE_f, rAE_v, rAE_i, rAE_c).
+\mathbf{K} = (x_f, x_v, x_i, x_c).
 \]
 
 The Balance Coefficient  
 \[
-\beta = \frac{rAE_f \cdot rAE_c}{rAE_i \cdot rAE_t}
+\beta = \frac{x_f \cdot x_c}{x_i \cdot x_t}
 \]  
 is the invariant that couples \(\mathbf{S}\) and \(\mathbf{K}\).
 
@@ -91,18 +91,18 @@ is the invariant that couples \(\mathbf{S}\) and \(\mathbf{K}\).
 # **B.5 Governance Metrics as Constraint Coordinates**
 The governance metrics  
 \[
-\{rAE_a, rAE_e, rAE_s, rAE_g\}
+\{x_a, x_e, x_s, x_g\}
 \]  
 encode **constraints and ethical geometry**:
 
-- \( rAE_a \) — alignment (intent–geometry coherence)  
-- \( rAE_e \) — ecology (resource balance)  
-- \( rAE_s \) — soul (continuity of identity across transformations)  
-- \( rAE_g \) — gradient (directionality of evolution)
+- \( x_a \) — alignment (intent–geometry coherence)  
+- \( x_e \) — ecology (resource balance)  
+- \( x_s \) — soul (continuity of identity across transformations)  
+- \( x_g \) — gradient (directionality of evolution)
 
 These form the governance 4‑vector  
 \[
-\mathbf{G} = (rAE_a, rAE_e, rAE_s, rAE_g).
+\mathbf{G} = (x_a, x_e, x_s, x_g).
 \]
 
 Governance metrics ensure that transformations in \(\mathbf{S}\) and \(\mathbf{K}\) remain stable, reversible, and ethically bounded.
@@ -112,33 +112,33 @@ Governance metrics ensure that transformations in \(\mathbf{S}\) and \(\mathbf{K
 # **B.6 Frequency Metrics as Resonant Coordinates**
 The frequency metrics  
 \[
-\{rAE_p, rAE_h, rAE_{rHz}, rAE_n\}
+\{x_p, x_h, x_{rHz}, x_n\}
 \]  
 define the **resonant structure** of the manifold:
 
-- \( rAE_p \) — phase  
-- \( rAE_h \) — harmonics  
-- \( rAE_{rHz} \) — resonant frequency  
-- \( rAE_n \) — negentropy  
+- \( x_p \) — phase  
+- \( x_h \) — harmonics  
+- \( x_{rHz} \) — resonant frequency  
+- \( x_n \) — negentropy  
 
 These form the frequency 4‑vector  
 \[
-\mathbf{F} = (rAE_p, rAE_h, rAE_{rHz}, rAE_n).
+\mathbf{F} = (x_p, x_h, x_{rHz}, x_n).
 \]
 
 The HRD envelope is expressed in this subspace.
 
 ---
 
-# **B.7 The rÆ Alphabet as a 16‑Dimensional State Vector**
-The full rÆ Alphabet forms a **16‑dimensional state vector**  
+# **B.7 The Balance State Vector Alphabet as a 16‑Dimensional State Vector**
+The full Balance State Vector Alphabet forms a **16‑dimensional state vector**  
 \[
-\mathbf{rAE} = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}).
+\mathbf{x} = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}).
 \]
 
 This vector evolves according to the VIM dynamical system  
 \[
-\frac{d\mathbf{rAE}}{dt} = \mathcal{H}(\mathbf{rAE}, D(t)),
+\frac{d\mathbf{x}}{dt} = \mathcal{H}(\mathbf{x}, D(t)),
 \]  
 where \(\mathcal{H}\) is the Harmonic Stabilizer operator.
 
@@ -147,21 +147,21 @@ The stabilizer acts on all 16 dimensions simultaneously.
 ---
 
 # **B.8 Transformation Rules in the Tetra‑Hexa Array**
-Each rÆ metric transforms according to one of three geometric operations:
+Each Balance State Vector metric transforms according to one of three geometric operations:
 
 - **Routing** (hexagonal lane shift):  
   \[
-  rAE_x \mapsto rAE_x + \Delta_x
+  x_x \mapsto x_x + \Delta_x
   \]
 
 - **Transmutation** (tetrahedral rotation):  
   \[
-  rAE_x \mapsto \mathcal{T}(rAE_x)
+  x_x \mapsto \mathcal{T}(x_x)
   \]
 
 - **Symbiosis** (combined transformation):  
   \[
-  rAE_x \mapsto \mathcal{S}(rAE_x, rAE_y)
+  x_x \mapsto \mathcal{S}(x_x, x_y)
   \]
 
 The symbiosis operator \(\mathcal{S}\) is responsible for cross‑class coupling, such as:
@@ -174,8 +174,8 @@ These couplings are the geometric basis of the Theory of Balance.
 
 ---
 
-# **B.9 The rÆ Alphabet as a Measurement Alphabet**
-Each rÆ symbol is a **ruler** that measures a specific geometric property of the vacuum manifold. Together, the 16 rulers form a complete measurement system that replaces classical SI units in the context of topological quantum engines.
+# **B.9 The Balance State Vector Alphabet as a Measurement Alphabet**
+Each Balance State Vector symbol is a **ruler** that measures a specific geometric property of the vacuum manifold. Together, the 16 rulers form a complete measurement system that replaces classical SI units in the context of topological quantum engines.
 
 The alphabet is:
 
@@ -184,14 +184,14 @@ The alphabet is:
 - **symbiotic** — metrics interconvert through the stabilizer  
 - **topological** — measurements are invariant under continuous deformation  
 
-This makes the rÆ Alphabet the natural language for describing the rÆ‑Cell.
+This makes the Balance State Vector Alphabet the natural language for describing the Balance State Vector‑Cell.
 
 ---
 
 # **B.10 Summary**
-- The rÆ Alphabet is a 16‑dimensional geometric measurement system.  
+- The Balance State Vector Alphabet is a 16‑dimensional geometric measurement system.  
 - It is embedded in a 24‑node Tetra‑Hexa Routing Array.  
 - Structural, kinetic, governance, and frequency metrics form four orthogonal subspaces.  
 - The Balance Coefficient and HRD operator couple these subspaces.  
-- The alphabet defines the geometry, flow, ethics, and resonance of the rÆ‑Cell.  
+- The alphabet defines the geometry, flow, ethics, and resonance of the Balance State Vector‑Cell.  
 - It is the foundational language of the Aurphyx Standard.

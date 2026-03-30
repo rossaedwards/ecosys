@@ -141,7 +141,7 @@ Bicameral Decomposition
 Chaos
 ⊕
 𝑅
-Bliss
+Equilibrium Manifold
 .
 9. Mathematical & Physical Terms
 Geodesic (

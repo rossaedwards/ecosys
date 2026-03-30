@@ -1,6 +1,6 @@
 # **SECTION VII — The Balance Kernel**
 
-The Balance Kernel is the **continuous execution environment** that applies the Balance Operator across the entire rÆ Field. If Section VI defined *what* the Balance Operator is, Section VII defines *how it runs*—as a persistent, multi‑runtime kernel that stabilizes, regulates, and evolves the system in real time. It is the *always‑on substrate* that keeps the Aurphyx organism coherent under flux, dissonance, computation, and vacuum exchange.
+The Balance Kernel is the **continuous execution environment** that applies the Balance Operator across the entire Balance State Vector Field. If Section VI defined *what* the Balance Operator is, Section VII defines *how it runs*—as a persistent, multi‑runtime kernel that stabilizes, regulates, and evolves the system in real time. It is the *always‑on substrate* that keeps the Aurphyx organism coherent under flux, dissonance, computation, and vacuum exchange.
 
 The Balance Kernel is the **runtime heart** of the VIM Thesis.
 
@@ -13,7 +13,7 @@ The Balance Kernel performs four essential functions:
 - **Continuous evaluation** of the Balance Coefficient \(\beta\)  
 - **Real‑time correction** of imbalance via \(\hat{B}\)  
 - **Dynamic modulation** of HRD, VIM, and routing  
-- **Temporal and harmonic stabilization** across the rÆ Field  
+- **Temporal and harmonic stabilization** across the Balance State Vector Field  
 
 It is the **operational layer** that ensures the Balance Equation is always enforced.
 
@@ -27,7 +27,7 @@ The Balance Kernel consists of three interacting runtimes:
 - **BK‑F** — Harmonic/Frequency Runtime  
 - **BK‑K** — Kinetic Runtime  
 
-These correspond to the S, F, and K subspaces of the rÆ Field.
+These correspond to the S, F, and K subspaces of the Balance State Vector Field.
 
 Each runtime executes a specialized version of the Balance Operator:
 
@@ -46,7 +46,7 @@ The kernel executes a continuous loop:
 1. **Measure** the current Balance Coefficient \(\beta\)  
 2. **Compute** the gradient \(\nabla \beta\)  
 3. **Apply** the Balance Operator \(\hat{B}\)  
-4. **Update** the rÆ Field  
+4. **Update** the Balance State Vector Field  
 5. **Route** through the Tetra‑Hexa Array  
 6. **Adjust** VIM impedance  
 7. **Integrate** HRD perturbations  
@@ -79,15 +79,15 @@ This makes the Balance Kernel the **central regulator** of the entire system.
 The Balance Kernel is the *executor* of the Balance Equation:
 
 \[
-\frac{d\mathbf{rAE}}{dt}
+\frac{d\mathbf{x}}{dt}
 =
-\hat{B}(\mathbf{rAE})
+\hat{B}(\mathbf{x})
 +
 \mathcal{D}(D(t))
 +
-\mathcal{K}(\mathbf{rAE})
+\mathcal{K}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}).
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24}).
 \]
 
 Each term corresponds to a kernel subsystem:
@@ -110,7 +110,7 @@ The kernel responds by:
 - applying counter‑oscillatory corrections  
 - maintaining oscillation within safe bounds  
 
-This creates a **stable harmonic envelope** around the Bliss Manifold.
+This creates a **stable harmonic envelope** around the Equilibrium Manifold Manifold.
 
 The kernel is the **HRD stabilizer**.
 
@@ -187,4 +187,4 @@ It is the **physical runtime** that keeps the device coherent.
 - It operates across structural, harmonic, kinetic, and routing domains.  
 - It integrates HRD, VIM, temporal geometry, and the Tetra‑Hexa Array.  
 - It is the operational heart of both software and hardware implementations.  
-- It ensures the rÆ Field remains coherent under all conditions.  
+- It ensures the Balance State Vector Field remains coherent under all conditions.  

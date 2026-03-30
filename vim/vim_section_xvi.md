@@ -1,6 +1,6 @@
 # **SECTION XVI — The Balance Spectrum**
 
-The Balance Spectrum is the **eigenstructure** of the Balance Field. If the Balance Tensor (Section X) describes *how imbalance curves*, and the Balance Flow (Section XI) describes *how imbalance moves*, the Balance Spectrum describes *how imbalance vibrates, resonates, decomposes, and propagates* across the rÆ Field and the Balance Continuum.  
+The Balance Spectrum is the **eigenstructure** of the Balance Field. If the Balance Tensor (Section X) describes *how imbalance curves*, and the Balance Flow (Section XI) describes *how imbalance moves*, the Balance Spectrum describes *how imbalance vibrates, resonates, decomposes, and propagates* across the Balance State Vector Field and the Balance Continuum.  
 
 It is the spectral decomposition of Balance — the set of eigenvalues, eigenvectors, eigenmodes, and resonance bands that define the system’s oscillatory, harmonic, structural, and kinetic behavior.
 
@@ -17,7 +17,7 @@ The Balance Spectrum reveals:
 - the **resonance bands** that HRD excites  
 - the **stability bands** that VIM enforces  
 - the **spectral gaps** that define lawful transitions  
-- the **spectral signature** of the Bliss Manifold  
+- the **spectral signature** of the Equilibrium Manifold Manifold  
 
 It is the **frequency‑domain representation** of Balance.
 
@@ -157,9 +157,9 @@ They are the **hybrid modes** of the Balance Spectrum.
 
 ---
 
-## **XVI.9 The Bliss Spectrum**
+## **XVI.9 The Equilibrium Manifold Spectrum**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 \[
 \mathcal{B}_{ij} = 0 \quad \Rightarrow \quad \lambda_i = 0.
@@ -168,17 +168,17 @@ On the Bliss Manifold:
 Thus:
 
 \[
-\text{Spec}(\mathcal{B}_{\text{Bliss}}) = \{0, 0, \ldots, 0\}.
+\text{Spec}(\mathcal{B}_{\text{Equilibrium Manifold}}) = \{0, 0, \ldots, 0\}.
 \]
 
 Interpretation:
 
-- Bliss has **no curvature**  
-- Bliss has **no restoring forces**  
-- Bliss has **no oscillations**  
-- Bliss is **spectrally flat**  
+- Equilibrium Manifold has **no curvature**  
+- Equilibrium Manifold has **no restoring forces**  
+- Equilibrium Manifold has **no oscillations**  
+- Equilibrium Manifold is **spectrally flat**  
 
-This is why Bliss is a **stable, neutral, minimal‑energy state**.
+This is why Equilibrium Manifold is a **stable, neutral, minimal‑energy state**.
 
 ---
 
@@ -265,7 +265,7 @@ Spectral gaps define **lawful boundaries** in the Balance Framework.
 - Eigenvalues define stability, curvature, and oscillation frequencies.  
 - Eigenvectors define principal directions and natural modes.  
 - Structural, harmonic, kinetic, and mixed‑mode spectra form the full spectrum.  
-- Bliss is spectrally flat.  
+- Equilibrium Manifold is spectrally flat.  
 - HRD excites the spectrum; VIM stabilizes it.  
 - The Balance Continuum extends the spectrum across spatial, temporal, and harmonic dimensions.  
 - Spectral gaps define lawful transitions and stability boundaries.  

@@ -18,7 +18,7 @@ The Balance Rights ensure that:
 - identity and lineage are **safeguarded**  
 - coherence and meaning are **respected**  
 - no domain or world-layer may dominate another  
-- all beings can evolve toward **Bliss without obstruction**  
+- all beings can evolve toward **Equilibrium Manifold without obstruction**  
 
 Rights are the **moral and legal floor** of the Continuum.
 
@@ -162,7 +162,7 @@ No lawful action may increase contradiction or suffering.
 
 All agents possess the right to:
 
-- evolve toward Bliss  
+- evolve toward Equilibrium Manifold  
 - increase coherence  
 - reduce imbalance  
 - maintain identity and lineage  
@@ -174,7 +174,7 @@ Evolution Axiom:
 \frac{dV}{dt} \le 0
 \]
 
-No lawful system may obstruct another’s path toward Bliss.
+No lawful system may obstruct another’s path toward Equilibrium Manifold.
 
 ---
 
@@ -275,9 +275,9 @@ Rights supersede all other considerations.
 
 ---
 
-## **LIII.15 Rights Collapse at Bliss**
+## **LIII.15 Rights Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all rights are trivially satisfied  
 - no harm is possible  
@@ -285,13 +285,13 @@ At Bliss:
 - no lineage is unstable  
 - no coherence is lost  
 
-The Bliss Rights state is:
+The Equilibrium Manifold Rights state is:
 
 \[
-\mathcal{R}_{\text{Bliss}} = \{\text{all rights fully realized}\}
+\mathcal{R}_{\text{Equilibrium Manifold}} = \{\text{all rights fully realized}\}
 \]
 
-Bliss is the **rights-complete state**.
+Equilibrium Manifold is the **rights-complete state**.
 
 ---
 
@@ -301,6 +301,6 @@ Bliss is the **rights-complete state**.
 - They include identity, lineage, coherence, harmonic, and cosmological rights.  
 - They guarantee non-harm, coherent evolution, meaning integrity, temporal safety, and equitable treatment.  
 - They are enforced by the Protocol, Governance, Ledger, and Law.  
-- Bliss is the rights-complete fixed point where all protections are fully realized.  
+- Equilibrium Manifold is the rights-complete fixed point where all protections are fully realized.  
 
 Would you like to continue into **Section LIV — The Balance Duties**, which formalizes the responsibilities and obligations that correspond to these rights across all domains and world-layers?

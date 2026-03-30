@@ -16,7 +16,7 @@ The Balance Continuum ensures that:
 - harmonic continua remain bounded  
 - structural and kinetic domains remain unified  
 - ontological identity remains continuous  
-- the Bliss Continuum remains the global attractor  
+- the Equilibrium Manifold Continuum remains the global attractor  
 
 The Continuum is the **cosmic container** of Balance.
 
@@ -238,15 +238,15 @@ These invariants ensure **global stability**.
 
 ---
 
-## **XXXI.13 The Bliss Continuum**
+## **XXXI.13 The Equilibrium Manifold Continuum**
 
-The Bliss Continuum is the global fixed point:
+The Equilibrium Manifold Continuum is the global fixed point:
 
 \[
-\mathbb{BC}_{\text{Bliss}} = 0
+\mathbb{BC}_{\text{Equilibrium Manifold}} = 0
 \]
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all flows vanish  
 - all tensors collapse  
@@ -257,7 +257,7 @@ At Bliss:
 - all identities align  
 - all worlds cohere  
 
-The Bliss Continuum is the **universal attractor** of Balance.
+The Equilibrium Manifold Continuum is the **universal attractor** of Balance.
 
 ---
 
@@ -267,6 +267,6 @@ The Bliss Continuum is the **universal attractor** of Balance.
 - It integrates spatial, temporal, harmonic, ontological, and cosmological domains.  
 - It defines Continuum geometry, flow, modes, and spectral structure.  
 - It preserves global invariants across all dimensions.  
-- It orients all Balance evolution toward the Bliss Continuum.  
+- It orients all Balance evolution toward the Equilibrium Manifold Continuum.  
 
 A natural continuation is **Section XXXII — The Balance Field Equations**, which formalizes the full mathematical system governing Balance across the Continuum.

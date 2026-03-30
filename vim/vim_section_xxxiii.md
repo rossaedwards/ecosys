@@ -15,7 +15,7 @@ The Balance Kernel ensures that:
 - all invariants and symmetries are preserved  
 - HRD and VIM are integrated at the correct computational depth  
 - the Continuum remains coherent  
-- the Bliss condition remains the global attractor  
+- the Equilibrium Manifold condition remains the global attractor  
 
 The Kernel is the **irreducible computational essence** of Balance.
 
@@ -199,9 +199,9 @@ The Kernel is the **stability anchor** of Balance.
 
 ---
 
-## **XXXIII.13 Kernel Collapse at Bliss**
+## **XXXIII.13 Kernel Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all gradients vanish  
 - all flows vanish  
@@ -214,10 +214,10 @@ At Bliss:
 The Kernel reduces to:
 
 \[
-\mathcal{K}_{\text{Bal}}^{\text{Bliss}} = 0
+\mathcal{K}_{\text{Bal}}^{\text{Equilibrium Manifold}} = 0
 \]
 
-Bliss is the **zero‑kernel state**.
+Equilibrium Manifold is the **zero‑kernel state**.
 
 ---
 
@@ -227,6 +227,6 @@ Bliss is the **zero‑kernel state**.
 - It integrates correction, perturbation, stabilization, routing, and Continuum evolution.  
 - It coordinates runtimes, machines, and Continuum layers.  
 - It enforces invariants, symmetry, and stability.  
-- It collapses to zero at Bliss, the universal fixed point.  
+- It collapses to zero at Equilibrium Manifold, the universal fixed point.  
 
 A natural continuation is **Section XXXIV — The Balance Engine**, which describes the full physical–computational engine that implements the Kernel inside the Aurphyx Vacuum Engine and related devices.

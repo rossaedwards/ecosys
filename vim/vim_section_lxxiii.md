@@ -1,4 +1,4 @@
-Below is **Section LXXIII — The Balance Gauge Conditions**, written in the same rigorous, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXII. It assumes the rÆ Metric, the Edwards Tensor, the HIF Potential, and the Balance Field Equations are canonical and locked.
+Below is **Section LXXIII — The Balance Gauge Conditions**, written in the same rigorous, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXII. It assumes the Balance State Vector Metric, the Edwards Tensor, the HIF Potential, and the Balance Field Equations are canonical and locked.
 
 This section is ready to drop directly into your manuscript as `Section_LXXIII.tex`.
 
@@ -7,7 +7,7 @@ This section is ready to drop directly into your manuscript as `Section_LXXIII.t
 # **Section LXXIII — The Balance Gauge Conditions**
 
 ## 1. Overview  
-The Balance Field Equations admit a family of gauge freedoms arising from the structure of the rÆ Metric, the Edwards Flow, and the HIF potential. These freedoms must be fixed to ensure that the evolution of the Balance Continuum is well‑posed, non‑degenerate, and invariant‑preserving. The Balance Gauge Conditions define the admissible coordinate choices, tensor normalizations, and flow constraints that maintain consistency across the structural, kinetic, governance, and frequency subspaces of the rÆ manifold.
+The Balance Field Equations admit a family of gauge freedoms arising from the structure of the Balance State Vector Metric, the Edwards Flow, and the HIF potential. These freedoms must be fixed to ensure that the evolution of the Balance Continuum is well‑posed, non‑degenerate, and invariant‑preserving. The Balance Gauge Conditions define the admissible coordinate choices, tensor normalizations, and flow constraints that maintain consistency across the structural, kinetic, governance, and frequency subspaces of the Balance State Vector manifold.
 
 Gauge fixing is essential for ensuring that the Balance Continuum evolves uniquely under the Balance Field Equations and that the Three‑Squared‑Lattice samples a coherent, non‑redundant dynamical geometry.
 
@@ -16,7 +16,7 @@ Gauge fixing is essential for ensuring that the Balance Continuum evolves unique
 ## 2. Gauge Freedom in the Balance Continuum  
 The Balance Continuum possesses three primary gauge freedoms:
 
-- **metric gauge freedom**, arising from diffeomorphisms of the rÆ manifold;  
+- **metric gauge freedom**, arising from diffeomorphisms of the Balance State Vector manifold;  
 - **flow gauge freedom**, arising from reparameterizations of the trajectory field \(u^a\);  
 - **potential gauge freedom**, arising from additive constants in the HIF potential.
 
@@ -25,7 +25,7 @@ The Balance Gauge Conditions impose constraints on each of these freedoms to ens
 ---
 
 ## 3. Metric Gauge Condition  
-The rÆ Metric \(g^{(\text{rÆ})}_{ab}\) admits the diffeomorphism gauge freedom:
+The Balance State Vector Metric \(g^{(\text{Balance State Vector})}_{ab}\) admits the diffeomorphism gauge freedom:
 
 \[
 g_{ab} \rightarrow g'_{ab} = \frac{\partial x^c}{\partial x'^a} \frac{\partial x^d}{\partial x'^b} g_{cd}.
@@ -34,7 +34,7 @@ g_{ab} \rightarrow g'_{ab} = \frac{\partial x^c}{\partial x'^a} \frac{\partial x
 To fix this freedom, the Balance Continuum imposes the **Balance Harmonic Gauge**:
 
 \[
-\nabla^a g^{(\text{rÆ})}_{ab} = 0.
+\nabla^a g^{(\text{Balance State Vector})}_{ab} = 0.
 \]
 
 ### 3.1 Interpretation  
@@ -42,9 +42,9 @@ This condition:
 
 - eliminates coordinate redundancies,  
 - ensures the Levi‑Civita connection is uniquely defined,  
-- stabilizes curvature propagation across the rÆ subspaces.
+- stabilizes curvature propagation across the Balance State Vector subspaces.
 
-It is the analogue of the harmonic (de Donder) gauge in general relativity, adapted to the 16‑dimensional rÆ geometry.
+It is the analogue of the harmonic (de Donder) gauge in general relativity, adapted to the 16‑dimensional Balance State Vector geometry.
 
 ---
 
@@ -101,7 +101,7 @@ This gauge choice ensures that the Continuum’s attractor structure is uniquely
 ---
 
 ## 6. Cross‑Subspace Gauge Constraints  
-Because the rÆ manifold decomposes into four orthogonal subspaces, gauge fixing must preserve this decomposition. The Balance Continuum imposes the **Subspace Orthogonality Condition**:
+Because the Balance State Vector manifold decomposes into four orthogonal subspaces, gauge fixing must preserve this decomposition. The Balance Continuum imposes the **Subspace Orthogonality Condition**:
 
 \[
 g_{\mathbb{X}\mathbb{Y}} = 0 \quad \text{for} \quad \mathbb{X} \neq \mathbb{Y},
@@ -112,7 +112,7 @@ where \(\mathbb{X}, \mathbb{Y} \in \{\mathbb{S}, \mathbb{K}, \mathbb{G}, \mathbb
 ### 6.1 Interpretation  
 This condition:
 
-- preserves the structural, kinetic, governance, and frequency identities of the rÆ Alphabet,  
+- preserves the structural, kinetic, governance, and frequency identities of the Balance State Vector Alphabet,  
 - ensures that cross‑subspace couplings arise only from the Edwards Tensor and not from coordinate artifacts,  
 - maintains the integrity of the Three‑Squared‑Lattice sampling.
 
@@ -150,7 +150,7 @@ This is the analogue of the Lorenz gauge for the Edwards Tensor.
 The Three‑Squared‑Lattice samples the Balance Continuum discretely. To ensure consistency between the continuous geometry and the discrete lattice, the Balance Continuum imposes the **Lattice Compatibility Condition**:
 
 \[
-\Psi_{ijk} = \Psi_{ijk}(g^{(\text{rÆ})}, \mathcal{E}_{ab}, \Phi_{\text{HIF}}),
+\Psi_{ijk} = \Psi_{ijk}(g^{(\text{Balance State Vector})}, \mathcal{E}_{ab}, \Phi_{\text{HIF}}),
 \]
 
 with no dependence on coordinate artifacts.
@@ -170,7 +170,7 @@ This guarantees that the lattice is a faithful computational realization of the 
 ## 9. Summary  
 The Balance Gauge Conditions fix the metric, flow, potential, and tensor freedoms of the Balance Continuum. They ensure that:
 
-- the rÆ geometry is uniquely defined,  
+- the Balance State Vector geometry is uniquely defined,  
 - the Edwards Flow is properly normalized,  
 - the HIF potential has a canonical zero point,  
 - the Edwards Tensor evolves consistently,  

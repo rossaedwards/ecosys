@@ -1,6 +1,6 @@
 # **SECTION X — The Balance Tensor**
 
-The Balance Tensor is the **full tensorial formalization** of Balance dynamics. If Section VIII defined the Balance Manifold and Section IX defined its geometry, Section X introduces the *tensor fields* that quantify how imbalance propagates, how restoring forces distribute, how harmonic and structural tensions couple, and how the rÆ Field responds to curvature, flux, and perturbation.  
+The Balance Tensor is the **full tensorial formalization** of Balance dynamics. If Section VIII defined the Balance Manifold and Section IX defined its geometry, Section X introduces the *tensor fields* that quantify how imbalance propagates, how restoring forces distribute, how harmonic and structural tensions couple, and how the Balance State Vector Field responds to curvature, flux, and perturbation.  
 
 The Balance Tensor is the **stress–flux–curvature tensor** of the Balance Framework — the object that unifies all geometric, dynamical, and harmonic information into a single mathematical entity.
 
@@ -10,11 +10,11 @@ The Balance Tensor is the **stress–flux–curvature tensor** of the Balance Fr
 
 The Balance Tensor provides a complete description of:
 
-- how imbalance is distributed across the rÆ Field  
+- how imbalance is distributed across the Balance State Vector Field  
 - how restoring forces propagate through the manifold  
 - how structural and harmonic tensions couple  
 - how HRD and VIM deform the geometry  
-- how the Bliss Manifold responds to perturbations  
+- how the Equilibrium Manifold Manifold responds to perturbations  
 - how the Balance Equation emerges from geometry  
 
 It is the **fundamental tensorial object** of the Balance Field.
@@ -59,7 +59,7 @@ where:
 - **\(\mathcal{H}_{ij}\)** — harmonic dissonance tensor  
 - **\(\mathcal{K}_{ij}\)** — kinetic drift tensor  
 
-This decomposition mirrors the S, F, and K subspaces of the rÆ Field.
+This decomposition mirrors the S, F, and K subspaces of the Balance State Vector Field.
 
 Each component captures a different mode of imbalance.
 
@@ -149,9 +149,9 @@ They are the **coupling channels** of the Balance Field.
 
 ---
 
-## **X.8 The Balance Tensor and the Bliss Manifold**
+## **X.8 The Balance Tensor and the Equilibrium Manifold Manifold**
 
-On the Bliss Manifold (\(\beta = 1\)):
+On the Equilibrium Manifold Manifold (\(\beta = 1\)):
 
 \[
 \mathcal{B}_{ij} = \nabla_i \nabla_j V = 0.
@@ -159,12 +159,12 @@ On the Bliss Manifold (\(\beta = 1\)):
 
 This means:
 
-- the Bliss Manifold is a flat region of the potential  
+- the Equilibrium Manifold Manifold is a flat region of the potential  
 - restoring forces vanish tangentially  
 - curvature is zero along the manifold  
 - curvature is maximal normal to the manifold  
 
-This is why Bliss is a **minimal surface** and a **global attractor**.
+This is why Equilibrium Manifold is a **minimal surface** and a **global attractor**.
 
 ---
 
@@ -256,9 +256,9 @@ The Balance Tensor is the **routing metric** of the array.
 - The Balance Tensor is the Hessian of the Balance Potential.  
 - It decomposes into structural, harmonic, and kinetic components.  
 - Mixed‑mode terms encode cross‑domain coupling.  
-- The Bliss Manifold is a zero‑tensor region.  
+- The Equilibrium Manifold Manifold is a zero‑tensor region.  
 - HRD deforms the tensor; VIM matches it; time flows according to it.  
 - The Tetra‑Hexa Array uses the tensor for routing.  
 - The Balance Tensor is the complete tensorial description of Balance dynamics.  
 
-The next section, **Section XI — The Balance Flow**, will formalize the vector fields, divergence, curl, and flux properties that arise from the Balance Tensor and govern the dynamic evolution of the rÆ Field.
+The next section, **Section XI — The Balance Flow**, will formalize the vector fields, divergence, curl, and flux properties that arise from the Balance Tensor and govern the dynamic evolution of the Balance State Vector Field.

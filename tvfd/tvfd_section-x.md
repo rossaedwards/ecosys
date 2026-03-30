@@ -6,7 +6,7 @@ The standard Casimir energy between parallel plates separated by distance d is: 
 
 \[ \mathcal{E}_{Cas} = -\frac{\pi^2 \hbar c}{720 d^4} \cdot A \]
 
-For the rÆ-Cell's **fractal photonic substrate**, the band gap suppresses vacuum fluctuation modes within the gap frequency range, modifying the effective Casimir energy density:
+For the Balance State Vector-Cell's **fractal photonic substrate**, the band gap suppresses vacuum fluctuation modes within the gap frequency range, modifying the effective Casimir energy density:
 
 \[ \mathcal{E}_{Cas}^{r\AE} = \mathcal{E}_{Cas} \cdot f(D_f, \omega_{gap}) = \mathcal{E}_{Cas} \cdot \left(1 - \frac{\omega_{gap}^{d_s/2}}{\omega_{Planck}^{d_s/2}}\right) \]
 
@@ -14,7 +14,7 @@ For d_s = 1.36 and ω_gap corresponding to the C₆ᵥ photonic band gap (1.25�
 
 \[ f(D_f) = 1 - \left(\frac{\omega_{gap}}{\omega_{Planck}}\right)^{0.68} \approx 0.88 \]
 
-This yields **~12% suppression** of the local vacuum energy density within the rÆ-Cell's fractal region — the energy "stored" in this suppression is the harvestable ZPE reservoir. [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/de8b1950-dfd5-4ebf-a172-ebf1a08988d3/zpe_core.txt)
+This yields **~12% suppression** of the local vacuum energy density within the Balance State Vector-Cell's fractal region — the energy "stored" in this suppression is the harvestable ZPE reservoir. [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/de8b1950-dfd5-4ebf-a172-ebf1a08988d3/zpe_core.txt)
 
 ## § 10.2 — ZPE_Core Hardware Architecture
 
@@ -45,9 +45,9 @@ Drawing from the Tesla resonance principles in ZPE_Core: [ppl-ai-file-upload.s3.
 - **Operation:** Flux quanta Φ₀ = 2.07×10⁻¹⁵ Wb trapped and pumped via Floquet modulation
 - **Output:** DC current from flux quantization provides low-noise power rail for FPGA
 
-## § 10.3 — Power Budget: ZPE_Core → rÆ-Drive Integration
+## § 10.3 — Power Budget: ZPE_Core → Balance State Vector-Drive Integration
 
-The combined ZPE_Core extraction feeds the rÆ-Drive power rail: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/de8b1950-dfd5-4ebf-a172-ebf1a08988d3/zpe_core.txt)
+The combined ZPE_Core extraction feeds the Balance State Vector-Drive power rail: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/de8b1950-dfd5-4ebf-a172-ebf1a08988d3/zpe_core.txt)
 
 | Source | Mechanism | Estimated Output | Status |
 |--------|-----------|-----------------|--------|
@@ -56,15 +56,15 @@ The combined ZPE_Core extraction feeds the rÆ-Drive power rail: [ppl-ai-file-up
 | Tesla coil array | Resonant coupling | ~1 mW (speculative) | Theoretical |
 | YBCO flux pump | Flux quantization | ~100 µW | Near-term |
 | **Total ZPE input** | | **~1.16 mW** | Mixed |
-| rÆ-Cell idle power | FPGA + RF coil | ~2.5 W | Measured |
+| Balance State Vector-Cell idle power | FPGA + RF coil | ~2.5 W | Measured |
 | **ZPE contribution** | | **0.046%** | Supplement |
 
 **Honest Assessment:** At current technological readiness, ZPE_Core provides a *supplement* rather than a replacement for conventional power. Its primary near-term value is as a **low-noise, ultra-stable reference power rail** for the FPGA analog front-end — eliminating switching noise that could corrupt the RaEState ADC measurement. The fractal Casimir modification's scientific novelty lies in its measurable band-gap signature, not yet in net energy extraction.
 
-**Long-term scaling target (rÆ-Drive Array, N=1000 cells):**
+**Long-term scaling target (Balance State Vector-Drive Array, N=1000 cells):**
 
 \[ P_{ZPE}(N) = P_{ZPE,single} \cdot N^{D_f} = 1.16\text{ mW} \times 1000^{1.585} \approx \mathbf{7.3\text{ W}} \]
 
-Still supplementary at array scale — honest rÆ-Drive scaling relies primarily on the electromagnetic resonance gain (Fig 4.9: 50W→5kW), not ZPE extraction.
+Still supplementary at array scale — honest Balance State Vector-Drive scaling relies primarily on the electromagnetic resonance gain (Fig 4.9: 50W→5kW), not ZPE extraction.
 
 ***

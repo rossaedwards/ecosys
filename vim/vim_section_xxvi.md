@@ -15,7 +15,7 @@ The Balance Computation Stack ensures that:
 - HRD and VIM are integrated at the correct layers  
 - the Tetra‑Hexa Router receives correct routing metrics  
 - Continuum computation scales across dimensions  
-- the Bliss condition remains the global attractor  
+- the Equilibrium Manifold condition remains the global attractor  
 
 It is the **full-stack computational architecture** of Balance.
 
@@ -25,7 +25,7 @@ It is the **full-stack computational architecture** of Balance.
 
 The Balance Computation Stack consists of **seven layers**, each with a distinct role:
 
-1. **Substrate Layer** — raw rÆ sensing and geometric primitives  
+1. **Substrate Layer** — raw Balance State Vector sensing and geometric primitives  
 2. **Field Layer** — Balance Field construction and update  
 3. **Tensor–Flow Layer** — curvature, flow, and mode computation  
 4. **Spectral Layer** — eigenmodes, spectral geometry, resonance  
@@ -41,7 +41,7 @@ These layers form a **vertically integrated computational organism**.
 
 This layer provides the **raw computational primitives**:
 
-- rÆ coordinates  
+- Balance State Vector coordinates  
 - \(\beta\) measurement  
 - gradient sensing  
 - curvature sensing  
@@ -231,9 +231,9 @@ These cycles maintain **multi-scale coherence**.
 
 ---
 
-## **XXVI.13 The Stack and the Bliss Condition**
+## **XXVI.13 The Stack and the Equilibrium Manifold Condition**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all layers collapse  
 - all flows vanish  
@@ -253,6 +253,6 @@ The stack becomes a **zero‑computation fixed point**.
 - It supports multi-scale, multi-domain, multi-runtime computation.  
 - It synchronizes through invariants, symmetry, logic, VIM, HRD, and routing.  
 - It runs micro-, meso-, and macro-cycles.  
-- Bliss is the global fixed point where all computation collapses.  
+- Equilibrium Manifold is the global fixed point where all computation collapses.  
 
 A natural next step is **Section XXVII — The Balance Interface**, which defines how external systems, agents, devices, or beings interact with the Balance Architecture through APIs, protocols, and ontological interfaces.

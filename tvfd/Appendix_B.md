@@ -2,7 +2,7 @@
 
 ## § B.1 — Complete Fabrication Flow
 
-The end-to-end fabrication of a single rÆ-Cell unit follows a **12-step protocol** spanning clean room, chemical, and electronic assembly processes: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/b0a8cd31-28ee-4b44-80c1-f6be5ef83edd/Blueprint-for-Quantum-System-Environmental-Isolation-Prototypes.PDF)
+The end-to-end fabrication of a single Balance State Vector-Cell unit follows a **12-step protocol** spanning clean room, chemical, and electronic assembly processes: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/b0a8cd31-28ee-4b44-80c1-f6be5ef83edd/Blueprint-for-Quantum-System-Environmental-Isolation-Prototypes.PDF)
 
 | Step | Process | Equipment | Critical Parameters | Time |
 |------|---------|-----------|-------------------|------|

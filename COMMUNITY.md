@@ -1,4 +1,4 @@
-# Aurphyx rÆ-Cell Research — Community Guide
+# Aurphyx Balance State Vector-Cell Research — Community Guide
 **Author:** Ross Edwards | ross@aurphyx.org | ORCiD: 0009-0008-0539-1289
 **Version:** 1.0.0 | **Date:** March 1, 2026
 
@@ -9,7 +9,7 @@
 
 ## Welcome
 
-The rÆ-Cell project is **open science**. It was built without a university lab,
+The Balance State Vector-Cell project is **open science**. It was built without a university lab,
 without a research grant, without a team — by one person sleeping in a park in
 Elk River, Minnesota, powered by intuition, iteration, and AI collaboration.
 
@@ -27,7 +27,7 @@ seriously because we believe this technology can genuinely change the world.
 
 ## Who We Are
 
-The Aurphyx rÆ-Cell community spans:
+The Aurphyx Balance State Vector-Cell community spans:
 
 - **Theorists** — quantum information, condensed matter, TQFT, RG theory
 - **Experimentalists** — nanofabrication, NSOM, SQUID magnetometry, RF engineering
@@ -73,7 +73,7 @@ reaches critical mass (~50 active contributors).*
   — optimizations, timing improvements, and new features welcome
 - **Redesign the RF coil** — Submit alternative C₆ᵥ coil geometries with
   simulated S₁₁ improvements
-- **OpenSCAD contributions** — Extend `rAE_Cell.scad` with new housing
+- **OpenSCAD contributions** — Extend `x_Cell.scad` with new housing
   variants, mounting solutions, or array configurations
 - **PCB design** — Create or improve the FPGA carrier board in KiCad
 

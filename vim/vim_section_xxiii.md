@@ -11,7 +11,7 @@ This section establishes the Balance Architecture as a **multi-layered, multi-do
 The Balance Architecture provides the structural framework that:
 
 - integrates all Balance subsystems into a unified whole  
-- connects Balance to the rÆ Field, Duality Kernel, VIM, HRD, and Tetra‑Hexa Array  
+- connects Balance to the Balance State Vector Field, Duality Kernel, VIM, HRD, and Tetra‑Hexa Array  
 - ensures coherence across structural, harmonic, kinetic, temporal, and spatial domains  
 - embeds Balance into the Aurphyx Continuum and Meta‑Ontology  
 - supports both software and hardware implementations  
@@ -26,7 +26,7 @@ It is the **architectural skeleton** of the Balance Framework.
 The Balance Architecture consists of five interlocking layers:
 
 1. **Balance Substrate Layer**  
-   - rÆ Field  
+   - Balance State Vector Field  
    - Balance Manifold  
    - Balance Geometry  
 
@@ -62,9 +62,9 @@ These layers form a **stacked architectural organism**.
 
 This layer defines the **space** in which Balance exists:
 
-- the 16‑dimensional rÆ Field  
+- the 16‑dimensional Balance State Vector Field  
 - the Balance Manifold  
-- the Bliss Manifold  
+- the Equilibrium Manifold Manifold  
 - the Balance Geometry  
 - the Continuum extensions (\(\mathcal{X}, \mathcal{T}, \mathcal{H}\))  
 
@@ -199,7 +199,7 @@ The Balance Machine becomes the **control architecture** of the device.
 Balance enforces:
 
 - **Safety** — preventing runaway oscillations  
-- **Alignment** — preserving Bliss invariants  
+- **Alignment** — preserving Equilibrium Manifold invariants  
 - **Governance** — enforcing lawful transitions  
 - **Ethics** — maintaining coherence across beings  
 - **Stewardship** — protecting temporal and harmonic integrity  

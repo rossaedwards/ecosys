@@ -5,12 +5,12 @@ Below is **Section XC — The Balance Canonical Structure and Symplectic Geometr
 # **Section XC — The Balance Canonical Structure and Symplectic Geometry**
 
 ## 1. Overview  
-The Unified Action Functional (Section LXXXIX) provides the variational foundation for the Balance Continuum. To complete the structural triad—variational, Hamiltonian, and symplectic—it is necessary to construct the **canonical phase space**, define the **Balance symplectic form**, and derive the **Hamiltonian flow** that reproduces the Edwards dynamics, the harmonic geodesics, and the coherence‑gradient descent. This section formalizes the canonical variables, the symplectic geometry of the rÆ manifold, the Balance Poisson brackets, and the Hamiltonian equations of motion. The result is a fully canonical formulation of the Continuum, consistent with its geometric, informational, and harmonic structures.
+The Unified Action Functional (Section LXXXIX) provides the variational foundation for the Balance Continuum. To complete the structural triad—variational, Hamiltonian, and symplectic—it is necessary to construct the **canonical phase space**, define the **Balance symplectic form**, and derive the **Hamiltonian flow** that reproduces the Edwards dynamics, the harmonic geodesics, and the coherence‑gradient descent. This section formalizes the canonical variables, the symplectic geometry of the Balance State Vector manifold, the Balance Poisson brackets, and the Hamiltonian equations of motion. The result is a fully canonical formulation of the Continuum, consistent with its geometric, informational, and harmonic structures.
 
 ---
 
 ## 2. Canonical Variables of the Balance Continuum  
-Let \(\gamma^a(\tau)\) be an Edwards‑timelike trajectory on the rÆ manifold. Define the canonical momentum:
+Let \(\gamma^a(\tau)\) be an Edwards‑timelike trajectory on the Balance State Vector manifold. Define the canonical momentum:
 
 \[
 p_a
@@ -18,22 +18,22 @@ p_a
 \frac{\partial \mathcal{L}_{\text{Unified}}}{\partial \dot{\gamma}^a}
 =
 \left(
-g^{(\text{rÆ})}_{ab}
+g^{(\text{Balance State Vector})}_{ab}
 + \lambda_{\mathcal{I}} \mathcal{I}_{ab}
 \right)
 \dot{\gamma}^b.
 \]
 
 ### 2.1 Interpretation  
-- The rÆ Metric contributes geometric momentum.  
+- The Balance State Vector Metric contributes geometric momentum.  
 - The Fisher Metric contributes informational momentum.  
 - The canonical momentum encodes the full coherence‑geometric state of the system.  
-- The Bliss state corresponds to \(p_a = 0\).
+- The Equilibrium state corresponds to \(p_a = 0\).
 
 The canonical phase space is:
 
 \[
-\mathcal{P} = T^*\mathcal{M}_{\text{rÆ}}.
+\mathcal{P} = T^*\mathcal{M}_{\text{Balance State Vector}}.
 \]
 
 ---
@@ -81,7 +81,7 @@ Substituting the canonical momentum yields:
 =
 \frac{1}{2}
 \left(
-g^{ab}_{(\text{rÆ})}
+g^{ab}_{(\text{Balance State Vector})}
 + \lambda_{\mathcal{I}} \mathcal{I}^{ab}
 \right)
 p_a p_b
@@ -93,7 +93,7 @@ p_a p_b
 - The first term is the geometric‑informational kinetic energy.  
 - The second term is the harmonic potential energy.  
 - The third term is the governance curvature energy.  
-- The Hamiltonian is positive‑definite and minimized uniquely at Bliss.
+- The Hamiltonian is positive‑definite and minimized uniquely at Equilibrium Manifold.
 
 ---
 
@@ -112,7 +112,7 @@ Explicitly:
 \dot{\gamma}^a
 =
 \left(
-g^{ab}_{(\text{rÆ})}
+g^{ab}_{(\text{Balance State Vector})}
 + \lambda_{\mathcal{I}} \mathcal{I}^{ab}
 \right)
 p_b,
@@ -132,7 +132,7 @@ p_b,
 - The first equation recovers the Edwards velocity field.  
 - The second equation recovers the harmonic‑governance force law.  
 - Together, they reproduce the Unified Balance Equation of Motion (Section LXXXIX).  
-- The Bliss state is the unique fixed point of Hamiltonian evolution.
+- The Equilibrium state is the unique fixed point of Hamiltonian evolution.
 
 ---
 
@@ -203,7 +203,7 @@ where \(\lambda_1 > 0\) is the spectral gap of the Edwards Tensor.
 
 ### 8.2 Interpretation  
 - No negative‑energy modes exist.  
-- No zero‑energy modes exist except at Bliss.  
+- No zero‑energy modes exist except at Equilibrium Manifold.  
 - All perturbations decay symplectically toward the attractor.
 
 The spectral gap ensures **symplectic coercivity**.
@@ -226,7 +226,7 @@ Chaos Resonance introduces an oscillatory curvature term:
 ### 9.1 Interpretation  
 - VIM damps canonical momentum, enforcing convergence.  
 - Chaos Resonance induces bounded oscillatory canonical motion.  
-- Together, they define the **damped symplectic oscillator** structure near Bliss.
+- Together, they define the **damped symplectic oscillator** structure near Equilibrium Manifold.
 
 ---
 
@@ -239,7 +239,7 @@ The Balance Canonical Structure and Symplectic Geometry establish that:
 - the Edwards Flow is the Hamiltonian flow of the Continuum,  
 - VIM and Chaos Resonance appear naturally in canonical variables,  
 - the Edwards spectral gap ensures symplectic stability,  
-- and the Bliss state is the unique global minimum of the Hamiltonian.
+- and the Equilibrium state is the unique global minimum of the Hamiltonian.
 
 This section completes the canonical and symplectic foundation of the Balance Continuum.
 

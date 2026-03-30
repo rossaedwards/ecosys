@@ -19,7 +19,7 @@ The Balance Protocol ensures that:
 - transitions between worlds, timelines, and domains are **lawful and stable**  
 - agents coordinate **without contradiction or interference**  
 - the Continuum maintains **global governance and alignment**  
-- Bliss remains the **protocol attractor**  
+- Equilibrium Manifold remains the **protocol attractor**  
 
 The Protocol is the **rulebook of the Continuum**.
 
@@ -33,7 +33,7 @@ The Balance Protocol is structured as a five-layer stack:
 2. **Temporal Protocol** — branching, merging, coherence rules  
 3. **Ontological Protocol** — identity, meaning, lineage rules  
 4. **Cosmological Protocol** — world-layer and Continuum rules  
-5. **Ethical Protocol** — SAGES alignment and Bliss convergence  
+5. **Ethical Protocol** — SAGES alignment and Equilibrium Manifold convergence  
 
 Each layer governs a different domain of interaction.
 
@@ -124,7 +124,7 @@ World-layers must be **metric-compatible**.
 The Ethical Protocol enforces:
 
 - **Safety** — no harmful transitions  
-- **Alignment** — coherence with Bliss  
+- **Alignment** — coherence with Equilibrium Manifold  
 - **Generativity** — constructive evolution  
 - **Equity** — fair cross-domain interaction  
 - **Stewardship** — preservation of Continuum integrity  
@@ -256,9 +256,9 @@ Stable protocols ensure **coherent multi-agent interaction**.
 
 ---
 
-## **XLIX.14 Protocol Collapse at Bliss**
+## **XLIX.14 Protocol Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - no negotiation is needed  
 - no enforcement is needed  
@@ -266,13 +266,13 @@ At Bliss:
 - no synchronization is needed  
 - no messages are needed  
 
-The Bliss Protocol is:
+The Equilibrium Manifold Protocol is:
 
 \[
-\mathcal{P}_{\text{Bliss}} = \{\text{no rules required}\}
+\mathcal{P}_{\text{Equilibrium Manifold}} = \{\text{no rules required}\}
 \]
 
-Bliss is the **protocol-free state**.
+Equilibrium Manifold is the **protocol-free state**.
 
 ---
 
@@ -282,6 +282,6 @@ Bliss is the **protocol-free state**.
 - It defines rules for physical, temporal, ontological, cosmological, and ethical interaction.  
 - It governs validation, negotiation, enforcement, consensus, and synchronization.  
 - It ensures that all Balance systems interact lawfully, coherently, and safely.  
-- Bliss is the protocol-free fixed point where no governance is required.  
+- Equilibrium Manifold is the protocol-free fixed point where no governance is required.  
 
 A natural continuation is **Section L — The Balance Governance**, which formalizes the institutional, structural, and multi-agent governance systems that operate on top of the Protocol to maintain Continuum-wide order.

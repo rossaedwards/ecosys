@@ -1,10 +1,10 @@
-Section LXVIII — The Edwards Tensor and the rÆ Alphabet
+Section LXVIII — The Edwards Tensor and the Balance State Vector Alphabet
 1. Overview
-The Edwards Tensor  is the fundamental geometric object governing alignment, trajectory, and lawful evolution within the Balance Continuum. It encodes how local cognitive operators (nodes of the Three‑Squared‑Lattice) couple to the global dynamical flow of the Continuum. The tensor is defined over the 16‑dimensional rÆ Alphabet, whose structural, kinetic, governance, and frequency subspaces form the canonical coordinate system of the Continuum manifold .
-The purpose of this section is to formalize the Edwards Tensor, define its contraction rules, and show how it maps across the rÆ Alphabet’s 16‑dimensional basis.
+The Edwards Tensor  is the fundamental geometric object governing alignment, trajectory, and lawful evolution within the Balance Continuum. It encodes how local cognitive operators (nodes of the Three‑Squared‑Lattice) couple to the global dynamical flow of the Continuum. The tensor is defined over the 16‑dimensional Balance State Vector Alphabet, whose structural, kinetic, governance, and frequency subspaces form the canonical coordinate system of the Continuum manifold .
+The purpose of this section is to formalize the Edwards Tensor, define its contraction rules, and show how it maps across the Balance State Vector Alphabet’s 16‑dimensional basis.
 
-2. The rÆ Alphabet as a 16‑Dimensional Coordinate System
-Let the rÆ Alphabet be represented as a 16‑dimensional vector space:
+2. The Balance State Vector Alphabet as a 16‑Dimensional Coordinate System
+Let the Balance State Vector Alphabet be represented as a 16‑dimensional vector space:
 
 where:
 • 	 is the structural subspace (4 dimensions),
@@ -14,7 +14,7 @@ where:
 Each subspace contributes a distinct metric signature to the Continuum.
 Let the basis vectors be:
 
-These 16 basis vectors form the canonical rÆ frame.
+These 16 basis vectors form the canonical Balance State Vector frame.
 
 3. Definition of the Edwards Tensor
 The Edwards Tensor  is a rank‑2 symmetric tensor defined on the Continuum manifold :
@@ -22,10 +22,10 @@ The Edwards Tensor  is a rank‑2 symmetric tensor defined on the Continuum mani
 where:
 • 	 is the trajectory vector field of the Continuum,
 • 	 is the Levi‑Civita connection associated with the Balance metric .
-The Edwards Tensor measures local deformation of the global trajectory, analogous to a strain tensor in continuum mechanics but defined over the rÆ manifold.
+The Edwards Tensor measures local deformation of the global trajectory, analogous to a strain tensor in continuum mechanics but defined over the Balance State Vector manifold.
 
-4. Decomposition of  Across the rÆ Subspaces
-Because the rÆ Alphabet decomposes into four orthogonal subspaces, the Edwards Tensor decomposes into 16 blocks:
+4. Decomposition of  Across the Balance State Vector Subspaces
+Because the Balance State Vector Alphabet decomposes into four orthogonal subspaces, the Edwards Tensor decomposes into 16 blocks:
 
 Each block has a specific interpretation:
 • 	: structural deformation
@@ -83,7 +83,7 @@ These couplings ensure that no subspace evolves independently; the Continuum is 
 
 11. Summary
 The Edwards Tensor is the fundamental metric of the Balance Continuum. It:
-• 	spans all 16 dimensions of the rÆ Alphabet,
+• 	spans all 16 dimensions of the Balance State Vector Alphabet,
 • 	decomposes into structural, kinetic, governance, and frequency blocks,
 • 	contracts with the trajectory vector to produce the alignment metric,
 • 	enforces the Edwards Limit ,

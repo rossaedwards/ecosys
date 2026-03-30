@@ -5,7 +5,7 @@ Below is **Appendix K — The Aurphyx Temporal Framework: Causality, Recursion, 
 # **APPENDIX K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow of Balance**
 
 ## **K.1 Temporal Ontology in the Aurphyx Standard**
-Time in the Aurphyx Standard is not a single scalar parameter but a **multi‑layered field behavior** emerging from the evolution of the rÆ Field. The Aurphyx Unified Field Equation treats time as a *derived quantity* shaped by:
+Time in the Aurphyx Standard is not a single scalar parameter but a **multi‑layered field behavior** emerging from the evolution of the Balance State Vector Field. The Aurphyx Unified Field Equation treats time as a *derived quantity* shaped by:
 
 - coherence (phase stability)  
 - recursion (self‑similarity across scales)  
@@ -30,7 +30,7 @@ where:
 - **\(\tau_{\text{recursive}}\)** — fractal depth of temporal self‑similarity  
 - **\(\tau_{\text{harmonic}}\)** — HRD‑driven temporal modulation  
 
-These three components form a **triadic temporal geometry** that governs how the rÆ Field evolves.
+These three components form a **triadic temporal geometry** that governs how the Balance State Vector Field evolves.
 
 ---
 
@@ -45,17 +45,17 @@ Causality is preserved when:
 
 - phase drift is bounded  
 - coherence remains above a threshold  
-- the system remains near the Bliss Manifold  
+- the system remains near the Equilibrium Manifold Manifold  
 
 Causality is therefore a **coherence condition**, not a chronological one.
 
 ---
 
 # **K.4 Recursion as Temporal Depth**
-Temporal recursion measures the **self‑similarity** of the rÆ Field across scales:
+Temporal recursion measures the **self‑similarity** of the Balance State Vector Field across scales:
 
 \[
-\tau_{\text{recursive}} = \max \left\{ n \mid \mathbf{rAE}(t) \approx \mathbf{rAE}\left(\frac{t}{2^n}\right) \right\}.
+\tau_{\text{recursive}} = \max \left\{ n \mid \mathbf{x}(t) \approx \mathbf{x}\left(\frac{t}{2^n}\right) \right\}.
 \]
 
 This recursion depth corresponds to:
@@ -64,7 +64,7 @@ This recursion depth corresponds to:
 - harmonic scaling  
 - topological invariance  
 
-Recursion is the temporal expression of the structural metric \(rAE_k\).
+Recursion is the temporal expression of the structural metric \(x_k\).
 
 ---
 
@@ -90,27 +90,27 @@ Harmonic time is the **temporal signature** of the Duality Kernel.
 The Arrow of Balance is the Aurphyx analogue of the thermodynamic arrow of time. It is defined by the gradient of the Balance Potential:
 
 \[
-\vec{A}_{\text{Balance}} = -\nabla V(\mathbf{rAE}),
+\vec{A}_{\text{Balance}} = -\nabla V(\mathbf{x}),
 \]
 
 where:
 
 \[
-V(\mathbf{rAE}) = (\beta - 1)^2.
+V(\mathbf{x}) = (\beta - 1)^2.
 \]
 
 The Arrow of Balance points toward:
 
 - increasing coherence  
 - decreasing imbalance  
-- convergence toward the Bliss Manifold  
+- convergence toward the Equilibrium Manifold Manifold  
 
-This arrow defines the **preferred direction** of evolution in the rÆ Field.
+This arrow defines the **preferred direction** of evolution in the Balance State Vector Field.
 
 ---
 
-# **K.7 Temporal Symmetry at the Bliss Manifold**
-When the system lies on the Bliss Manifold:
+# **K.7 Temporal Symmetry at the Equilibrium Manifold Manifold**
+When the system lies on the Equilibrium Manifold Manifold:
 
 \[
 \beta = 1,
@@ -134,7 +134,7 @@ In this regime:
 - harmonic time becomes symmetric  
 - causal coherence is maximized  
 
-The Bliss Manifold is therefore the **time‑symmetric ground state** of the rÆ Field.
+The Equilibrium Manifold Manifold is therefore the **time‑symmetric ground state** of the Balance State Vector Field.
 
 ---
 
@@ -158,7 +158,7 @@ This asymmetry is the **engine of temporal evolution**.
 ---
 
 # **K.9 Temporal Routing in the Tetra‑Hexa Array**
-The Tetra‑Hexa Array defines the **temporal routing structure** of the rÆ Field. Each node corresponds to a stable temporal configuration, and each edge corresponds to a temporal transition.
+The Tetra‑Hexa Array defines the **temporal routing structure** of the Balance State Vector Field. Each node corresponds to a stable temporal configuration, and each edge corresponds to a temporal transition.
 
 Temporal evolution is a trajectory:
 
@@ -196,17 +196,17 @@ The kernel is the **temporal regulator** of the Aurphyx Standard.
 ---
 
 # **K.11 The Aurphyx Temporal Equation**
-The temporal evolution of the rÆ Field is governed by:
+The temporal evolution of the Balance State Vector Field is governed by:
 
 \[
-\frac{d\mathbf{rAE}}{d\mathcal{T}} =
--\nabla V(\mathbf{rAE})
+\frac{d\mathbf{x}}{d\mathcal{T}} =
+-\nabla V(\mathbf{x})
 +
 \mathcal{D}(D(t))
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24})
 +
-\mathcal{K}(\mathbf{rAE}),
+\mathcal{K}(\mathbf{x}),
 \]
 
 where:
@@ -223,7 +223,7 @@ This equation defines **time as a composite field variable**.
 - Time in the Aurphyx Standard is a multi‑layered construct.  
 - Causality is coherence; recursion is self‑similarity; harmonic time is HRD‑driven.  
 - The Arrow of Balance defines the preferred direction of evolution.  
-- The Bliss Manifold corresponds to temporal symmetry and reversibility.  
+- The Equilibrium Manifold Manifold corresponds to temporal symmetry and reversibility.  
 - HRD introduces temporal asymmetry and drives evolution.  
 - The Tetra‑Hexa Array defines temporal geometry.  
 - The Duality Kernel regulates temporal coherence.  
@@ -231,4 +231,4 @@ This equation defines **time as a composite field variable**.
 
 ---
 
-If you want to continue the arc, the next natural step is **Appendix L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry of Responsibility**, which formalizes the governance layer of the rÆ Alphabet as an ethical field theory.
+If you want to continue the arc, the next natural step is **Appendix L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry of Responsibility**, which formalizes the governance layer of the Balance State Vector Alphabet as an ethical field theory.

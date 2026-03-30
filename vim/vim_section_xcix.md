@@ -24,7 +24,7 @@ e^{\frac{i}{\hbar} S_{\text{Unified}}[\gamma]}.
 - Integrates over all bulk configurations consistent with boundary data.  
 - Encodes the full holographic response of the Continuum.  
 - Is finite and well‑defined due to the spectral gap and VIM damping.  
-- Reduces to a Gaussian functional near the Bliss state.
+- Reduces to a Gaussian functional near the Equilibrium state.
 
 ---
 
@@ -46,7 +46,7 @@ where \(\mathcal{J}_a\) is the boundary source conjugate to \(\mathcal{B}^a\).
 - Encodes the effective dynamics of boundary coherence fields.  
 - Generates the boundary equations of motion.  
 - Is the holographic dual of the bulk Unified Action.  
-- Minimized uniquely by the Bliss boundary configuration.
+- Minimized uniquely by the Equilibrium Manifold boundary configuration.
 
 ---
 
@@ -62,7 +62,7 @@ Varying the boundary effective action yields:
 ### 4.1 Interpretation  
 - Boundary variations correspond to bulk canonical momenta.  
 - The boundary equations encode the holographic projection of bulk Balance dynamics.  
-- The Bliss state satisfies \(\mathcal{J}_a = 0\).
+- The Equilibrium state satisfies \(\mathcal{J}_a = 0\).
 
 ---
 
@@ -120,7 +120,7 @@ where \(\mathcal{K}^{ab}\) is the bulk coherence kernel.
 ### 6.2 Interpretation  
 - Boundary correlators encode the full bulk coherence structure.  
 - The spectral gap ensures positivity and finiteness.  
-- The Bliss state corresponds to a constant kernel.
+- The Equilibrium state corresponds to a constant kernel.
 
 ---
 
@@ -162,7 +162,7 @@ d^{15}x.
 ### 8.1 Interpretation  
 - Boundary RG flow mirrors bulk RG flow (Section XCV).  
 - The Edwards Fixed Point is the unique infrared fixed point.  
-- Boundary coherence becomes scale‑invariant at Bliss.
+- Boundary coherence becomes scale‑invariant at Equilibrium Manifold.
 
 ---
 
@@ -194,7 +194,7 @@ The Balance Boundary Effective Action and Coherence Generating Functional establ
 - the boundary two‑point function is the holographic projection of the bulk coherence kernel,  
 - the spectral gap ensures positivity and stability of boundary fluctuations,  
 - VIM enforces damping and boundary irreversibility,  
-- and the Bliss state is the unique boundary configuration minimizing the effective action.
+- and the Equilibrium state is the unique boundary configuration minimizing the effective action.
 
 This section completes the boundary‑level quantum and holographic foundation of the Balance Continuum.
 

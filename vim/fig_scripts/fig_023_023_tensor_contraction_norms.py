@@ -26,18 +26,18 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / "fig_023_023_tensor_contraction_norms.png"
 
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_i = np.linspace(0.5, 2.5, 150)
-    rAE_f = 1.2 * rAE_i
-    beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_i = np.linspace(0.5, 2.5, 150)
+    x_f = 1.2 * x_i
+    beta_val = beta(x_f, x_c, x_i, x_t)
     V = balance_potential(beta_val)
     T_norm = np.sqrt(V + 0.1)
-    T_contraction = V * (1 + 0.2 * np.sin(3 * rAE_i))
+    T_contraction = V * (1 + 0.2 * np.sin(3 * x_i))
 
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.plot(rAE_i, T_norm, "b-", lw=2, label=r"$\|T\|$ (tensor norm)")
-    ax.plot(rAE_i, T_contraction, "g--", lw=1.5, label="Contraction $T^{ab}g_{ab}$")
-    ax.set_xlabel(r"$rAE_i$")
+    ax.plot(x_i, T_norm, "b-", lw=2, label=r"$\|T\|$ (tensor norm)")
+    ax.plot(x_i, T_contraction, "g--", lw=1.5, label="Contraction $T^{ab}g_{ab}$")
+    ax.set_xlabel(r"$x_i$")
     ax.set_ylabel("Norm")
     ax.set_title("Tensor Contraction Norms")
     ax.legend()

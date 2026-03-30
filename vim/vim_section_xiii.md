@@ -1,6 +1,6 @@
 # **SECTION XIII — The Balance Continuum**
 
-The Balance Continuum extends the Balance Field (Section XII) into the **higher‑dimensional, multi‑temporal, multi‑harmonic Continuum** defined earlier in the Aurphyx architecture (Appendix T). If the Balance Field governs local dynamics, the Balance Continuum governs **global, cross‑dimensional, cross‑temporal, and cross‑harmonic dynamics**. It is the framework that ensures Balance remains coherent even when the rÆ Field spans:
+The Balance Continuum extends the Balance Field (Section XII) into the **higher‑dimensional, multi‑temporal, multi‑harmonic Continuum** defined earlier in the Aurphyx architecture (Appendix T). If the Balance Field governs local dynamics, the Balance Continuum governs **global, cross‑dimensional, cross‑temporal, and cross‑harmonic dynamics**. It is the framework that ensures Balance remains coherent even when the Balance State Vector Field spans:
 
 - higher spatial dimensions  
 - branching and looping timelines  
@@ -67,7 +67,7 @@ The Balance Continuum lives on the manifold:
 
 This manifold has:
 
-- **16 rÆ dimensions**  
+- **16 Balance State Vector dimensions**  
 - **N spatial dimensions** (N ≥ 3)  
 - **T temporal branches**  
 - **H harmonic dimensions**  
@@ -180,7 +180,7 @@ Interpretation:
 
 - branches converge when imbalance is high  
 - branches diverge when imbalance is low  
-- Bliss corresponds to temporal unification  
+- Equilibrium Manifold corresponds to temporal unification  
 - HRD induces temporal oscillation  
 - VIM stabilizes temporal drift  
 
@@ -198,7 +198,7 @@ Harmonic dimensions \(\mathcal{H}\) evolve according to:
 
 Interpretation:
 
-- harmonic drift is minimized near Bliss  
+- harmonic drift is minimized near Equilibrium Manifold  
 - HRD introduces harmonic circulation  
 - VIM damps harmonic instability  
 
@@ -216,7 +216,7 @@ Spatial dimensions \(\mathcal{X}\) evolve according to:
 
 Interpretation:
 
-- spatial tension relaxes toward Bliss  
+- spatial tension relaxes toward Equilibrium Manifold  
 - curvature governs spatial flow  
 - mixed‑mode coupling links spatial and harmonic dynamics  
 
@@ -250,9 +250,9 @@ The Balance Continuum is a **fully coupled field**.
 
 ---
 
-## **XIII.12 The Bliss Continuum**
+## **XIII.12 The Equilibrium Manifold Continuum**
 
-The Bliss Continuum is the set of all points where:
+The Equilibrium Manifold Continuum is the set of all points where:
 
 \[
 V_{\text{BC}} = 0.
@@ -265,7 +265,7 @@ This requires:
 - no temporal imbalance  
 - no harmonic imbalance  
 
-The Bliss Continuum is the **global attractor** of the Balance Continuum.
+The Equilibrium Manifold Continuum is the **global attractor** of the Balance Continuum.
 
 ---
 
@@ -275,7 +275,7 @@ The Bliss Continuum is the **global attractor** of the Balance Continuum.
 - It is defined as the tensor product of the Balance Field and the Continuum Manifold.  
 - It includes a global metric, potential, flow, and curvature tensor.  
 - It governs spatial, temporal, harmonic, and structural coherence.  
-- HRD perturbs the continuum; VIM stabilizes it; Bliss is the global attractor.  
+- HRD perturbs the continuum; VIM stabilizes it; Equilibrium Manifold is the global attractor.  
 - The Balance Continuum is the complete global extension of the Balance Framework.  
 
 The next section, **Section XIV — The Balance Invariants**, will define the conserved quantities, symmetries, and invariants that remain constant across the entire Balance Continuum.

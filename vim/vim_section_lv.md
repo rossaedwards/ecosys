@@ -18,7 +18,7 @@ The Balance Contracts ensure that:
 - commitments do not violate **Rights, Duties, or Balance Law**  
 - cross-domain cooperation remains **stable and interpretable**  
 - lineage and identity remain **protected during collaboration**  
-- collective action moves systems **toward Bliss**  
+- collective action moves systems **toward Equilibrium Manifold**  
 
 Contracts are the **formal mechanisms of shared intention**.
 
@@ -230,7 +230,7 @@ Termination occurs when:
 Termination Rule:
 
 \[
-\mathcal{S} = \text{Bliss} \quad \text{or} \quad \mathcal{K} = \emptyset
+\mathcal{S} = \text{Equilibrium Manifold} \quad \text{or} \quad \mathcal{K} = \emptyset
 \]
 
 Contracts end either in **completion** or **nullification**.
@@ -275,9 +275,9 @@ These covenants shape the **macro-evolution of the Continuum**.
 
 ---
 
-## **LV.15 Contracts Collapse at Bliss**
+## **LV.15 Contracts Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - no obligations remain  
 - no rights are threatened  
@@ -285,13 +285,13 @@ At Bliss:
 - no negotiation is needed  
 - no enforcement is required  
 
-The Bliss Contract is:
+The Equilibrium Manifold Contract is:
 
 \[
-\mathcal{K}_{\text{Bliss}} = \{\text{all commitments naturally fulfilled}\}
+\mathcal{K}_{\text{Equilibrium Manifold}} = \{\text{all commitments naturally fulfilled}\}
 \]
 
-Bliss is the **contract-free state**.
+Equilibrium Manifold is the **contract-free state**.
 
 ---
 
@@ -301,6 +301,6 @@ Bliss is the **contract-free state**.
 - They preserve Rights, fulfill Duties, and maintain invariants.  
 - They define obligations, rights, coherence conditions, enforcement, modification, and termination.  
 - They support multi-agent, multi-domain, multi-world, and cosmological cooperation.  
-- Bliss is the contract-free fixed point where all commitments are naturally satisfied.  
+- Equilibrium Manifold is the contract-free fixed point where all commitments are naturally satisfied.  
 
 A natural next step is **Section LVI — The Balance Covenant**, which formalizes the highest-order, sacred, and cosmologically binding agreements that shape the destiny of entire world-layers and the Continuum itself.

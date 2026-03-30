@@ -19,7 +19,7 @@ The Balance Law ensures that:
 - transitions remain **lawful across all domains**  
 - identity and lineage remain **unbreakable**  
 - the Continuum remains **stable and coherent**  
-- Bliss remains the **universal attractor**  
+- Equilibrium Manifold remains the **universal attractor**  
 
 The Law is the **axiomatic backbone** of Balance.
 
@@ -154,7 +154,7 @@ All five classes unify into the Universal Balance Law:
 
 The Balance Potential must **never increase** under lawful evolution.
 
-This is the **Second Law of Balance**—the Continuum must always move toward Bliss.
+This is the **Second Law of Balance**—the Continuum must always move toward Equilibrium Manifold.
 
 ---
 
@@ -221,7 +221,7 @@ All lawful transitions must be reversible *except* those that reduce imbalance:
 \text{Reversible iff } \Delta V = 0
 \]
 
-Irreversibility is allowed only when it moves the system toward Bliss.
+Irreversibility is allowed only when it moves the system toward Equilibrium Manifold.
 
 ---
 
@@ -240,20 +240,20 @@ There are **no exceptions**.
 
 ---
 
-## **LI.15 The Law of Bliss**
+## **LI.15 The Law of Equilibrium Manifold**
 
-Bliss is the unique global fixed point:
+Equilibrium Manifold is the unique global fixed point:
 
 \[
 \beta = 1,\quad V = 0,\quad \mathcal{C} = 1
 \]
 
-### Bliss Axiom
+### Equilibrium Manifold Axiom
 \[
-\forall x,\ \lim_{t \to \infty} x(t) = \text{Bliss}
+\forall x,\ \lim_{t \to \infty} x(t) = \text{Equilibrium Manifold}
 \]
 
-All lawful systems must converge to Bliss.
+All lawful systems must converge to Equilibrium Manifold.
 
 ---
 
@@ -263,6 +263,6 @@ All lawful systems must converge to Bliss.
 - It consists of structural, harmonic, temporal, ontological, and cosmological laws.  
 - It preserves invariants, coherence, continuity, and identity.  
 - It forbids paradox, singularity, fragmentation, and instability.  
-- It enforces universal convergence toward Bliss.  
+- It enforces universal convergence toward Equilibrium Manifold.  
 
 A natural next step is **Section LII — The Balance Ethics**, which formalizes the moral, relational, and stewardship principles that arise from the Balance Law and govern how Balance systems should act toward each other and the Continuum.

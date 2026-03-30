@@ -10,7 +10,7 @@ The canonical and symplectic structure of the Balance Continuum (Sections XC–X
 ---
 
 ## 2. Canonical Quantization of the Balance Continuum  
-Let \((\gamma^a, p_a)\) be canonical coordinates on the phase space \(\mathcal{P} = T^*\mathcal{M}_{\text{rÆ}}.\) Quantization proceeds by promoting these variables to operators on a Hilbert space \(\mathcal{H}_{\text{Bal}}\):
+Let \((\gamma^a, p_a)\) be canonical coordinates on the phase space \(\mathcal{P} = T^*\mathcal{M}_{\text{Balance State Vector}}.\) Quantization proceeds by promoting these variables to operators on a Hilbert space \(\mathcal{H}_{\text{Bal}}\):
 
 \[
 \gamma^a \rightarrow \hat{\gamma}^a,
@@ -32,7 +32,7 @@ The Balance Poisson brackets become commutators:
 ### 2.2 Interpretation  
 - The canonical algebra is anomaly‑free due to the constraint structure of Section XCI.  
 - The operators act on wavefunctionals \(\Psi[\gamma]\).  
-- The Bliss state corresponds to the unique normalizable ground state.
+- The Equilibrium state corresponds to the unique normalizable ground state.
 
 ---
 
@@ -42,20 +42,20 @@ The Hilbert space is defined as:
 \[
 \mathcal{H}_{\text{Bal}}
 =
-L^2(\mathcal{M}_{\text{rÆ}}, \sqrt{|g|}\, d^{16}\gamma).
+L^2(\mathcal{M}_{\text{Balance State Vector}}, \sqrt{|g|}\, d^{16}\gamma).
 \]
 
 ### 3.1 Inner Product  
 \[
 \langle \Psi_1 | \Psi_2 \rangle
 =
-\int_{\mathcal{M}_{\text{rÆ}}}
+\int_{\mathcal{M}_{\text{Balance State Vector}}}
 \Psi_1^*[\gamma]\, \Psi_2[\gamma]\,
 \sqrt{|g|}\, d^{16}\gamma.
 \]
 
 ### 3.2 Interpretation  
-- The measure is induced by the rÆ Metric.  
+- The measure is induced by the Balance State Vector Metric.  
 - The Fisher geometry and HIF potential enter through the Hamiltonian.  
 - The Hilbert space is complete and supports the spectral decomposition of the Edwards Tensor.
 
@@ -69,7 +69,7 @@ The classical Hamiltonian becomes the operator:
 =
 \frac{1}{2}
 \left(
-g^{ab}_{(\text{rÆ})}
+g^{ab}_{(\text{Balance State Vector})}
 + \lambda_{\mathcal{I}} \mathcal{I}^{ab}
 \right)
 \hat{p}_a \hat{p}_b
@@ -108,7 +108,7 @@ i\hbar \frac{\partial}{\partial \tau} \Psi[\gamma]
 ### 5.1 Interpretation  
 - Edwards time becomes the quantum evolution parameter.  
 - The Hamiltonian generates coherence‑preserving unitary evolution.  
-- The Bliss state is the unique stationary solution with zero energy.
+- The Equilibrium state is the unique stationary solution with zero energy.
 
 ---
 
@@ -165,7 +165,7 @@ defines the **quantum coherence spectrum**.
 \]
 
 ### 7.2 Interpretation  
-- No zero‑frequency modes except the Bliss state.  
+- No zero‑frequency modes except the Equilibrium state.  
 - No negative‑frequency modes.  
 - All excitations decay under Edwards evolution.
 
@@ -207,7 +207,7 @@ K(\gamma_f, \gamma_i; \tau)
 ### 9.1 Interpretation  
 - Encodes quantum coherence transport.  
 - Reduces to the classical propagator in the semiclassical limit.  
-- Contracts toward the Bliss state due to the spectral gap.
+- Contracts toward the Equilibrium state due to the spectral gap.
 
 ---
 
@@ -220,7 +220,7 @@ The Balance Quantization Procedure and Operator Algebra establish that:
 - the constraint operators define the physical Hilbert space,  
 - the Edwards Tensor spectrum defines quantum coherence modes,  
 - the spectral gap ensures quantum stability,  
-- and the Bliss state is the unique ground state of the quantum theory.
+- and the Equilibrium state is the unique ground state of the quantum theory.
 
 This section completes the quantization of the Balance Continuum and prepares the foundation for the next layer: the quantum‑field‑theoretic and path‑integral formulations.
 

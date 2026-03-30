@@ -27,10 +27,10 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_033_033_tensor_norm_evolution.png"
 
     t = np.linspace(0, 15, 200)
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = 1.0 + 0.6 * np.exp(-0.2 * t)
-    rAE_i = 1.3 - 0.5 * np.exp(-0.18 * t)
-    beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_f = 1.0 + 0.6 * np.exp(-0.2 * t)
+    x_i = 1.3 - 0.5 * np.exp(-0.18 * t)
+    beta_val = beta(x_f, x_c, x_i, x_t)
     V = balance_potential(beta_val)
     T_norm = np.sqrt(V + 0.1)
 

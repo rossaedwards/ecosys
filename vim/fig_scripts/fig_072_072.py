@@ -1,4 +1,4 @@
-"""Figure B: Metric components. Appendix B — Geometry of rÆ Alphabet."""
+"""Figure B: Metric components. Appendix B — Geometry of Balance State Vector Alphabet."""
 
 from pathlib import Path
 

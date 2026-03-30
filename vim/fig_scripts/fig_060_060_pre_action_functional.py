@@ -27,12 +27,12 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_060_060_pre_action_functional.png"
 
     n = 60
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = np.linspace(0.5, 2.0, n)
-    rAE_i = np.linspace(0.5, 2.0, n)
-    F, I = np.meshgrid(rAE_f, rAE_i)
+    x_c, x_t = 1.0, 1.5
+    x_f = np.linspace(0.5, 2.0, n)
+    x_i = np.linspace(0.5, 2.0, n)
+    F, I = np.meshgrid(x_f, x_i)
     C, R, A = F, I, 0.5 * (F + I) + 0.1
-    beta_val = beta(F, rAE_c, I, rAE_t)
+    beta_val = beta(F, x_c, I, x_t)
     V = balance_potential(beta_val)
     ux, uy = edwards_flow_2d(C, R, A)
     u_sq = ux**2 + uy**2
@@ -41,8 +41,8 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     fig, ax = plt.subplots(figsize=(8, 6))
     im = ax.pcolormesh(F, I, S_pre, cmap="viridis", shading="auto")
     ax.contour(F, I, S_pre, levels=10, colors="white", alpha=0.3)
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_title("Pre-Action Functional")
     plt.colorbar(im, ax=ax, label=r"$S_{\mathrm{pre}}$")
     plt.tight_layout()

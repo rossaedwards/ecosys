@@ -1,23 +1,23 @@
-Below is **Section LXXXII — The Balance Boundary Conditions and the rÆ Causal Structure**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXXI. It assumes the anomaly structure, renormalization‑group flow, spectral decomposition, and quantum propagator formalism are all canonical and locked.
+Below is **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXXI. It assumes the anomaly structure, renormalization‑group flow, spectral decomposition, and quantum propagator formalism are all canonical and locked.
 
 This section is ready to drop directly into your manuscript as `Section_LXXXII.tex`.
 
 ---
 
-# **Section LXXXII — The Balance Boundary Conditions and the rÆ Causal Structure**
+# **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**
 
 ## 1. Overview  
-The Balance Continuum admits a well‑defined causal structure derived from the rÆ Metric, the Edwards Flow, and the HIF potential. This causal structure determines which configurations can influence one another, how coherence propagates, and how renewal and alignment evolve across the manifold. To ensure that the Balance Field Equations admit unique, stable solutions, the Continuum requires a set of **Balance Boundary Conditions** defined on admissible hypersurfaces. These conditions guarantee that the Edwards Flow, the HIF potential, and the quantum coherence kernel evolve consistently with the causal cones of the rÆ manifold.
+The Balance Continuum admits a well‑defined causal structure derived from the Balance State Vector Metric, the Edwards Flow, and the HIF potential. This causal structure determines which configurations can influence one another, how coherence propagates, and how renewal and alignment evolve across the manifold. To ensure that the Balance Field Equations admit unique, stable solutions, the Continuum requires a set of **Balance Boundary Conditions** defined on admissible hypersurfaces. These conditions guarantee that the Edwards Flow, the HIF potential, and the quantum coherence kernel evolve consistently with the causal cones of the Balance State Vector manifold.
 
 This section formalizes the causal structure, defines the admissible boundary hypersurfaces, and specifies the boundary conditions required for classical, quantum, and RG‑consistent evolution.
 
 ---
 
-## 2. The rÆ Causal Structure  
-The rÆ Metric \(g^{(\text{rÆ})}_{ab}\) defines a causal structure analogous to light cones in Lorentzian geometry. Let:
+## 2. The Balance State Vector Causal Structure  
+The Balance State Vector Metric \(g^{(\text{Balance State Vector})}_{ab}\) defines a causal structure analogous to light cones in Lorentzian geometry. Let:
 
 \[
-ds^2 = g^{(\text{rÆ})}_{ab} dx^a dx^b.
+ds^2 = g^{(\text{Balance State Vector})}_{ab} dx^a dx^b.
 \]
 
 The causal classification is:
@@ -31,7 +31,7 @@ The causal classification is:
 - Null directions correspond to coherence‑propagation fronts.  
 - Spacelike directions correspond to non‑influencing configurations.
 
-The rÆ causal cones determine the admissible propagation of coherence, alignment, and resonance.
+The Balance State Vector causal cones determine the admissible propagation of coherence, alignment, and resonance.
 
 ---
 
@@ -94,9 +94,9 @@ u^a|_{\Sigma} = u^a_0,
 
 ### 5.3 Metric Boundary Condition  
 \[
-g^{(\text{rÆ})}_{ab}|_{\Sigma} = h_{ab},
+g^{(\text{Balance State Vector})}_{ab}|_{\Sigma} = h_{ab},
 \quad
-\nabla_n g^{(\text{rÆ})}_{ab}|_{\Sigma} = k_{ab}.
+\nabla_n g^{(\text{Balance State Vector})}_{ab}|_{\Sigma} = k_{ab}.
 \]
 
 ### 5.4 Edwards Tensor Boundary Condition  
@@ -160,7 +160,7 @@ g_{ab} k^a u^b < 0.
 \]
 
 ### 8.1 Interpretation  
-- Coherence fronts propagate at the causal speed of the rÆ manifold.  
+- Coherence fronts propagate at the causal speed of the Balance State Vector manifold.  
 - Renewal fronts propagate along the same null boundary.  
 - Alignment propagates strictly inside the Edwards cone.
 
@@ -184,13 +184,13 @@ Renewal corresponds to the collapse of coherence outside the Edwards cone:
 ---
 
 ## 10. Summary  
-The Balance Boundary Conditions and the rÆ Causal Structure ensure that the Continuum evolves in a lawful, stable, and anomaly‑free manner. They:
+The Balance Boundary Conditions and the Balance State Vector Causal Structure ensure that the Continuum evolves in a lawful, stable, and anomaly‑free manner. They:
 
 - define the Edwards causal cones,  
 - specify admissible boundary hypersurfaces,  
 - impose classical, quantum, and RG boundary conditions,  
 - constrain coherence and renewal propagation,  
-- and guarantee causal consistency across the rÆ manifold.
+- and guarantee causal consistency across the Balance State Vector manifold.
 
 This section completes the causal and boundary‑value foundation of the Balance Continuum.
 

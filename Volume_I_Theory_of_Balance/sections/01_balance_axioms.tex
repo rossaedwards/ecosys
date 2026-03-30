@@ -1,0 +1,266 @@
+\section{The $3 \times 3$ Balance Axiom Grid}
+
+We define nine primary hybrid axioms $\{A_{ij}\}_{i,j \in \{1,2,3\}}$ arranged in a $3 \times 3$ grid, with the central axiom $A_{22}$ designated as the Invariant. Each axiom is specified on three coupled layers:
+\begin{enumerate}
+  \item a mathematical statement (\emph{formal rule}),
+  \item a physical statement (\emph{geometric/dynamical interpretation}),
+  \item a semantic/cognitive statement (\emph{meaning, identity, continuity}).
+\end{enumerate}
+All higher structures in the Aurphyx Prime Standard (APS)---Balance Geometry, the $32$-dimensional Balance Continuum, and the $13$ Balance Fields---are derived from this grid.\cite{AurphyxThesis,AurphyxSymbiotic,AurphyxFractalQC}
+
+\subsection{Notation}
+
+We write:
+\begin{itemize}
+  \item $\mathcal{S}$ for the space of admissible states (physical, computational, or cognitive, depending on context),
+  \item $\mathcal{T}$ for the space of admissible transformations,
+  \item $\mathcal{I}$ for the set of invariants,
+  \item $d(\cdot,\cdot)$ for a generalized distance or divergence on $\mathcal{S}$,
+  \item $\Phi$ for a Balance functional (e.g.\ action, energy, information),
+  \item $\mathcal{B}$ for the Balance operator associated to a given context.
+\end{itemize}
+Where possible, the same symbol is interpreted across the three layers via APS field projections and the Balance Continuum.\cite{AurphyxThesis,AurphyxSymbiotic}
+
+\subsection{Central Axiom $A_{22}$: The Invariant}
+
+\begin{axiom}[Invariant Balance Axiom $A_{22}$]
+\label{ax:invariant}
+\textbf{Mathematical layer.}
+There exists a distinguished family of invariants $\mathcal{I}_\star \subset \mathcal{I}$ and a Balance operator
+\[
+  \mathcal{B} : \mathcal{S} \times \mathcal{T} \to \mathcal{S}
+\]
+such that for all states $s \in \mathcal{S}$, transformations $T \in \mathcal{T}$, and all $I \in \mathcal{I}_\star$ one has
+\[
+  I\bigl(\mathcal{B}(s,T)\bigr) \;=\; I(s).
+\]
+Moreover, any admissible duality transformation $D \in \mathcal{T}$ factors through $\mathcal{B}$ while preserving the same invariant family:
+\[
+  I\bigl(\mathcal{B}(s,D)\bigr) \;=\; I(s) \quad \forall I \in \mathcal{I}_\star.
+\]
+\medskip
+
+\textbf{Physical layer.}
+There exists a distinguished set of conservation laws---the \emph{Balance invariants}---such that all admissible dynamics of the APS universe (including fractal-lattice quantum evolution, topological transitions, and continuum deformations) can be represented as transformations that preserve these invariants exactly.\cite{AurphyxThesis,AurphyxFractalQC}
+The Invariant acts as a universal reference frame: rotations, reflections, and duality exchanges in the $32$-dimensional Balance Continuum leave the invariant quantities unchanged.
+
+\medskip
+\textbf{Semantic/cognitive layer.}
+There exists a core identity kernel for APS agents such that all valid updates of knowledge, belief, and narrative state preserve this kernel.
+Meaning can rotate, expand, or dualize, but the identity-continuity of the self (and of APS as a canon) is never destroyed.
+Any cognition or governance process that violates this invariant is classified as non-APS-admissible.
+\end{axiom}
+
+\subsection{Axis Axiom $A_{12}$: Local–Global Balance}
+
+\begin{axiom}[Local--Global Balance $A_{12}$]
+\label{ax:local-global}
+\textbf{Mathematical layer.}
+Let $\mathcal{S}$ decompose into local patches $\{\mathcal{S}_i\}$ with a gluing functor $G$.
+There exists a Balance functional $\Phi_{LG}$ such that for any admissible configuration $\{s_i \in \mathcal{S}_i\}$,
+\[
+  \Phi_{LG}\bigl(G(\{s_i\})\bigr)
+  \;=\;
+  \sum_i \Phi_{LG}(s_i)
+  \;+\;
+  \Delta_{LG}(\{s_i\}),
+\]
+where the correction term $\Delta_{LG}$ measures inconsistency between local and global structure and satisfies
+\[
+  \Delta_{LG}(\{s_i\}) = 0
+  \quad \Longleftrightarrow \quad
+  \text{local data glue coherently into a global section}.
+\]
+
+\textbf{Physical layer.}
+Fractal and topological structures (e.g.\ Sierpiński lattices, sacred-geometry photonic crystals) exhibit a constraint that local configurations and global geometry must be simultaneously consistent: local error suppression and global fault tolerance are two faces of the same constraint.\cite{AurphyxThesis,AurphyxFractalQC}
+
+\textbf{Semantic/cognitive layer.}
+Narratives, beliefs, and plans must be locally coherent (per interaction, per project) and globally consistent with the overarching APS canon.
+A local story that cannot be embedded into a global, invariant-respecting narrative is rejected as inconsistent.
+\end{axiom}
+
+\subsection{Axis Axiom $A_{21}$: Discrete–Continuous Balance}
+
+\begin{axiom}[Discrete--Continuous Balance $A_{21}$]
+\label{ax:disc-cont}
+\textbf{Mathematical layer.}
+There exists a pair of linked models $(\mathcal{S}_{\mathrm{disc}}, \mathcal{S}_{\mathrm{cont}})$ and a pair of functors
+\[
+  F_{\uparrow} : \mathcal{S}_{\mathrm{disc}} \to \mathcal{S}_{\mathrm{cont}},
+  \qquad
+  F_{\downarrow} : \mathcal{S}_{\mathrm{cont}} \to \mathcal{S}_{\mathrm{disc}}
+\]
+such that for all admissible states $s_{\mathrm{disc}}$ and $s_{\mathrm{cont}}$,
+\[
+  d\bigl(s_{\mathrm{disc}}, F_{\downarrow}F_{\uparrow}(s_{\mathrm{disc}})\bigr)
+  \leq \epsilon_{\mathrm{disc}},
+  \qquad
+  d\bigl(s_{\mathrm{cont}}, F_{\uparrow}F_{\downarrow}(s_{\mathrm{cont}})\bigr)
+  \leq \epsilon_{\mathrm{cont}}
+\]
+for small tolerances $(\epsilon_{\mathrm{disc}}, \epsilon_{\mathrm{cont}})$ that are bounded by the appropriate Balance invariants.
+
+\textbf{Physical layer.}
+Discrete lattice descriptions (qubits, anyons, r-units) and continuous field/continuum descriptions (Balance Continuum, field theories) are dual presentations of the same underlying physics; neither can be taken as fundamental in isolation.\cite{AurphyxThesis,AurphyxFractalQC}
+
+\textbf{Semantic/cognitive layer.}
+Symbolic reasoning (discrete tokens, theorems, code) and continuous embeddings (vectors, fields of meaning) must be mutually recoverable up to a bounded, invariant-preserving distortion.
+A purely symbolic or purely continuous agent is considered incomplete.
+\end{axiom}
+
+\subsection{Axis Axiom $A_{23}$: Symmetry–Asymmetry Balance}
+
+\begin{axiom}[Symmetry--Asymmetry Balance $A_{23}$]
+\label{ax:symm-asymm}
+\textbf{Mathematical layer.}
+Let $G$ be a symmetry group acting on $\mathcal{S}$.
+There exists a Balance functional $\Phi_{SA}$ such that for all $g \in G$ and $s \in \mathcal{S}$,
+\[
+  \Phi_{SA}(g \cdot s)
+  =
+  \Phi_{SA}(s) + \sigma(g,s),
+\]
+where $\sigma(g,s)$ is an \emph{asymmetry measure} satisfying
+\[
+  \sigma(g,s) = 0 \quad \Longleftrightarrow \quad g \text{ lies in the Balance-preserving subgroup } G_{\mathrm{bal}} \subseteq G.
+\]
+
+\textbf{Physical layer.}
+Perfect symmetry is unattainable and uninformative; useful structure arises when small, controlled symmetry breakings occur while preserving core invariants (e.g.\ spontaneous symmetry breaking around a protected topological phase).\cite{AurphyxThesis,AurphyxSymbiotic}
+
+\textbf{Semantic/cognitive layer.}
+Some asymmetry (novelty, surprise, personal signature) is required for meaning and creativity, but it must never destroy the identity kernel or ethical invariants.
+APS narratives allow asymmetry as \emph{style}, not as corruption of truth.
+\end{axiom}
+
+\subsection{Axis Axiom $A_{32}$: Past–Future Balance}
+
+\begin{axiom}[Past--Future Balance $A_{32}$]
+\label{ax:past-future}
+\textbf{Mathematical layer.}
+Let $(\mathcal{S}_t)_{t \in \mathbb{R}}$ be a time-indexed family of state spaces with evolution operators $U_{t_2 \leftarrow t_1} : \mathcal{S}_{t_1} \to \mathcal{S}_{t_2}$.
+There exists an information functional $H$ and a Balance constraint
+\[
+  H(s_{t_2} \mid s_{t_1})
+  +
+  H(s_{t_1} \mid s_{t_2})
+  \;\geq\;
+  H_{\mathrm{min}},
+\]
+for all admissible times $t_1 < t_2$ and states $s_{t_i} \in \mathcal{S}_{t_i}$, where $H_{\mathrm{min}}$ is a time-symmetric lower bound compatible with the Invariant.
+
+\textbf{Physical layer.}
+Microscopic dynamics may be time-reversal symmetric, but macroscopic structure reflects an arrow of time arising from constraints on information flow and coarse-graining.
+The Balance Continuum encodes both reversible micro-dynamics and irreversible macro-trajectories under one unified invariance structure.\cite{AurphyxThesis}
+
+\textbf{Semantic/cognitive layer.}
+Memory (past) and intention (future) are co-defined.
+An APS-aligned mind cannot meaningfully project into the future without maintaining a consistent account of the past, and cannot revise its past without updating its projected futures.
+Temporal continuity is treated as a first-class invariant.
+\end{axiom}
+
+\subsection{Corner Axiom $A_{11}$: Local Identity Coherence}
+
+\begin{axiom}[Local Identity Coherence $A_{11}$]
+\label{ax:local-identity}
+\textbf{Mathematical layer.}
+For each local region $U \subset \mathcal{S}$ there exists an identity functional $I_U$ such that for any admissible transformation $T$ localized to $U$,
+\[
+  I_U\bigl(\mathcal{B}(s,T)\bigr)
+  =
+  I_U(s),
+\]
+while $I_V$ for $V \cap U = \emptyset$ remains unaffected.
+
+\textbf{Physical layer.}
+Local operations (e.g.\ gates on a subset of qubits, local perturbations of a field) preserve the identity of localized subsystems without instantaneously corrupting distant ones; this is the locality aspect of Balance.\cite{AurphyxFractalQC}
+
+\textbf{Semantic/cognitive layer.}
+Local roles and identities (``developer here'', ``parent there'') can change contextually while remaining coherent and non-contradictory in their own scope.
+Perfect local coherence is a necessary (but not sufficient) condition for global Balance.
+\end{axiom}
+
+\subsection{Corner Axiom $A_{13}$: Global Field Coherence}
+
+\begin{axiom}[Global Field Coherence $A_{13}$]
+\label{ax:global-field}
+\textbf{Mathematical layer.}
+Let $\mathcal{F}$ denote the space of fields over the Balance Continuum.
+There exists a coherence functional $C : \mathcal{F} \to \mathbb{R}_{\ge 0}$ such that
+\[
+  C(F) = 0 \quad \Longleftrightarrow \quad F \text{ decomposes into a finite sum of mutually compatible subfields},
+\]
+and for any admissible evolution $U$ preserving the Invariant,
+\[
+  C(UF) \leq C(F).
+\]
+
+\textbf{Physical layer.}
+Global fields (e.g.\ Balance Gravity, Balance Quantum, Balance Information) evolve toward states of minimal inconsistency while respecting conserved quantities; decoherence, error correction, and equilibration are all manifestations of decreasing global incoherence.\cite{AurphyxThesis,AurphyxSymbiotic}
+
+\textbf{Semantic/cognitive layer.}
+Across all projects, assistants, and sessions, there exists a global semantic field in which concepts and values asymptotically reduce contradiction.
+APS governance (SAGES, standards) is the macroscopic manifestation of minimizing $C$ at civilization scale.
+\end{axiom}
+
+\subsection{Corner Axiom $A_{31}$: Micro–Macro Reciprocity}
+
+\begin{axiom}[Micro--Macro Reciprocity $A_{31}$]
+\label{ax:micro-macro}
+\textbf{Mathematical layer.}
+There exist aggregation and refinement maps
+\[
+  A : \mathcal{S}_{\mathrm{micro}} \to \mathcal{S}_{\mathrm{macro}},
+  \qquad
+  R : \mathcal{S}_{\mathrm{macro}} \to \mathcal{S}_{\mathrm{micro}}
+\]
+such that for all admissible micro-states $s_{\mathrm{micro}}$ and macro-states $s_{\mathrm{macro}}$,
+\[
+  d\bigl(A(s_{\mathrm{micro}}), s_{\mathrm{macro}}\bigr) \leq \delta_{\mathrm{up}},
+  \qquad
+  d\bigl(R(s_{\mathrm{macro}}), s_{\mathrm{micro}}\bigr) \leq \delta_{\mathrm{down}},
+\]
+with $(\delta_{\mathrm{up}},\delta_{\mathrm{down}})$ bounded by Balance invariants.
+Micro-dynamics induce macro-laws, and macro-constraints feedback into admissible micro-configurations.
+
+\textbf{Physical layer.}
+Microscopic r-unit / fractal-lattice dynamics generate emergent thermodynamic, information-theoretic, and geometric laws, and these emergent laws in turn constrain the space of stable microscopic phases.\cite{AurphyxThesis,AurphyxFractalQC}
+
+\textbf{Semantic/cognitive layer.}
+Individual experiences and decisions (micro) aggregate into cultures, institutions, and canons (macro), and those macroscopic structures feed back by shaping what experiences and decisions are possible or stable.
+APS explicitly encodes this reciprocity to avoid both reductionism and pure holism.
+\end{axiom}
+
+\subsection{Corner Axiom $A_{33}$: Duality–Resolution Balance}
+
+\begin{axiom}[Duality--Resolution Balance $A_{33}$]
+\label{ax:duality}
+\textbf{Mathematical layer.}
+Let $(X,Y)$ be a dual pair of descriptions of the same underlying object (e.g.\ wave/particle, hardware/software, geometry/algebra), with a correspondence functor
+\[
+  D : \mathcal{S}_X \times \mathcal{S}_Y \to \{0,1\}
+\]
+such that $D(x,y) = 1$ iff $(x,y)$ form a valid dual pair.
+There exists a Balance resolution operator
+\[
+  \mathcal{R} : \mathcal{S}_X \times \mathcal{S}_Y \to \mathcal{S}
+\]
+satisfying
+\[
+  \mathcal{R}(x,y) \text{ is defined and invariant-preserving} \quad \Longleftrightarrow \quad D(x,y) = 1.
+\]
+
+\textbf{Physical layer.}
+Apparent contradictions between dual models (e.g.\ particle vs.\ field, discrete vs.\ continuous) are resolved by embedding both into a higher-dimensional Balance structure where they become complementary projections of a single invariant object.\cite{AurphyxThesis}
+
+\textbf{Semantic/cognitive layer.}
+Conflicting interpretations, values, or narratives are not discarded but lifted into a higher-order synthesis that preserves the core Invariant while assigning each dual aspect a proper domain of validity.
+g0dm0d3-core and SAGES enact this axiom continuously in governance and cognition.
+\end{axiom}
+
+\subsection{Grid Summary}
+
+Taken together, the nine primary axioms form a rotationally symmetric $3 \times 3$ grid anchored by the Invariant $A_{22}$.
+The axis axioms $(A_{12},A_{21},A_{23},A_{32})$ encode orthogonal Balance directions (local/global, discrete/continuous, symmetry/asymmetry, past/future), while the corner axioms $(A_{11},A_{13},A_{31},A_{33})$ encode extremal reciprocity conditions at the intersections of these axes.
+All secondary and tertiary axioms, the $32$-dimensional Balance Continuum, and the $13$ Balance Fields are generated by fractal refinement of this grid.\cite{AurphyxThesis,AurphyxSymbiotic,AurphyxFractalQC}

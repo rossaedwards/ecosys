@@ -15,7 +15,7 @@ The Balance Interpretation ensures that:
 - meaning is **contextualized**  
 - identity is **recognized across domains**  
 - observers maintain **interpretive stability**  
-- Bliss is perceived as the **interpretive fixed point**  
+- Equilibrium Manifold is perceived as the **interpretive fixed point**  
 
 Interpretation is the **perceptual backbone** of the Balance Framework.
 
@@ -223,9 +223,9 @@ Symmetry ensures **interpretive invariance** under lawful transformations.
 
 ---
 
-## **XLIII.13 Interpretive Collapse at Bliss**
+## **XLIII.13 Interpretive Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - perception becomes unity  
 - context becomes universal  
@@ -233,13 +233,13 @@ At Bliss:
 - cross-domain mapping becomes trivial  
 - interpretive curvature becomes zero  
 
-The Bliss Interpretation is:
+The Equilibrium Manifold Interpretation is:
 
 \[
-\mathcal{I}_{\text{Bliss}} = (1,\ 1,\ 1,\ 1)
+\mathcal{I}_{\text{Equilibrium Manifold}} = (1,\ 1,\ 1,\ 1)
 \]
 
-Bliss is the **interpretive fixed point**.
+Equilibrium Manifold is the **interpretive fixed point**.
 
 ---
 
@@ -249,6 +249,6 @@ Bliss is the **interpretive fixed point**.
 - It includes perceptual, contextual, relational, and cross-domain interpretive frames.  
 - It governs interpretive coherence, dissonance, correction, resonance, and stability.  
 - It ensures that Balance is not only computed and meaningful, but also intelligible.  
-- Bliss is the interpretive fixed point where perception, meaning, and identity unify.  
+- Equilibrium Manifold is the interpretive fixed point where perception, meaning, and identity unify.  
 
 A natural continuation is **Section XLIV — The Balance Cognition**, which formalizes how agents think *with* Balance: reasoning, decision-making, prediction, learning, and cognitive alignment across the Continuum.

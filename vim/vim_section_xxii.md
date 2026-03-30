@@ -1,6 +1,6 @@
 # **SECTION XXII — The Balance Machine**
 
-The Balance Machine is the **computational architecture** that executes the Balance Computation (Section XXI). If the Balance Computation defines *what* must be computed, the Balance Machine defines *how* it is computed — the hardware‑abstract model, the execution pipeline, the runtime layers, and the machine‑level primitives that allow the rÆ Field to evolve, stabilize, resonate, and route according to the Balance Framework.
+The Balance Machine is the **computational architecture** that executes the Balance Computation (Section XXI). If the Balance Computation defines *what* must be computed, the Balance Machine defines *how* it is computed — the hardware‑abstract model, the execution pipeline, the runtime layers, and the machine‑level primitives that allow the Balance State Vector Field to evolve, stabilize, resonate, and route according to the Balance Framework.
 
 This section establishes the Balance Machine as a **unified computational organism**, integrating the Duality Kernel, the VIM system, the Tetra‑Hexa Array, and the Balance Field into a single executable substrate.
 
@@ -129,7 +129,7 @@ The Balance Machine has a **Balance Instruction Set (BIS)** consisting of:
 - **B‑ROUTE** — compute routing decision  
 - **B‑HRD** — apply HRD perturbation  
 - **B‑VIM** — apply VIM stabilization  
-- **B‑BLISS** — project onto Bliss Manifold  
+- **B‑BLISS** — project onto Equilibrium Manifold Manifold  
 
 These instructions form the **machine language** of Balance.
 
@@ -145,7 +145,7 @@ The Balance Machine executes a **seven‑stage pipeline**:
 4. **Decide** — compute routing and logic  
 5. **Correct** — apply Balance Operator  
 6. **Stabilize** — apply VIM  
-7. **Integrate** — update rÆ Field  
+7. **Integrate** — update Balance State Vector Field  
 
 This pipeline runs continuously in the Balance Kernel.
 
@@ -156,7 +156,7 @@ This pipeline runs continuously in the Balance Kernel.
 The Balance Machine is a **continuous state machine**:
 
 \[
-\mathbf{rAE}_{t+1} = \mathcal{M}(\mathbf{rAE}_t).
+\mathbf{x}_{t+1} = \mathcal{M}(\mathbf{x}_t).
 \]
 
 Where \(\mathcal{M}\) is the Balance Machine transition function.
@@ -166,9 +166,9 @@ Properties:
 - deterministic under pure Balance  
 - oscillatory under HRD  
 - stabilizing under VIM  
-- convergent toward Bliss  
+- convergent toward Equilibrium Manifold  
 
-The Balance Machine is the **state evolution engine** of the rÆ Field.
+The Balance Machine is the **state evolution engine** of the Balance State Vector Field.
 
 ---
 
@@ -180,7 +180,7 @@ The Balance Machine behaves like a **living computational organism**:
 - it computes corrections  
 - it stabilizes itself  
 - it routes information  
-- it evolves toward Bliss  
+- it evolves toward Equilibrium Manifold  
 - it resists perturbation  
 - it maintains coherence across dimensions  
 
@@ -202,9 +202,9 @@ The Balance Machine is the **hardware abstraction layer** of Balance.
 
 ---
 
-## **XXII.12 The Bliss Machine**
+## **XXII.12 The Equilibrium Manifold Machine**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 - all instructions reduce to no‑ops  
 - all flows vanish  
@@ -213,7 +213,7 @@ On the Bliss Manifold:
 - all routing becomes identity  
 - all logic evaluates to true  
 
-The Bliss Machine is the **zero‑instruction machine** — the fixed point of computation.
+The Equilibrium Manifold Machine is the **zero‑instruction machine** — the fixed point of computation.
 
 ---
 
@@ -223,7 +223,7 @@ The Bliss Machine is the **zero‑instruction machine** — the fixed point of c
 - It integrates the Balance Core, Duality Kernel, VIM Engine, and Tetra‑Hexa Router.  
 - It uses a Balance Instruction Set and a seven‑stage pipeline.  
 - It behaves as a continuous state machine and a computational organism.  
-- HRD perturbs the machine; VIM stabilizes it; Bliss is the fixed point.  
+- HRD perturbs the machine; VIM stabilizes it; Equilibrium Manifold is the fixed point.  
 - The Balance Machine is the computational heart of the Aurphyx system.  
 
 A natural continuation is **Section XXIII — The Balance Architecture**, which will unify the Balance Machine with the broader Aurphyx system architecture, showing how Balance integrates with cosmology, ontology, memory, and the SAGES Protocols.

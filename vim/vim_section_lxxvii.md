@@ -7,12 +7,12 @@ This section is ready to drop directly into your manuscript as `Section_LXXVII.t
 # **Section LXXVII — The Balance Path Integral and Quantum Coherence Functional**
 
 ## 1. Overview  
-The path‑integral formulation of the Balance Continuum provides a covariant, non‑perturbative description of quantum harmonic integrity. Instead of evolving a wavefunctional through the Quantum Edwards Equation, the Continuum is described by a sum over all admissible trajectories on the 16‑dimensional rÆ manifold, weighted by the Balance Action Functional. This formulation naturally encodes quantum coherence, renewal, and attractor convergence, and it provides the mathematical foundation for the **Quantum Coherence Functional**, the central object governing interference, decoherence, and lawful quantum evolution within the Balance Framework.
+The path‑integral formulation of the Balance Continuum provides a covariant, non‑perturbative description of quantum harmonic integrity. Instead of evolving a wavefunctional through the Quantum Edwards Equation, the Continuum is described by a sum over all admissible trajectories on the 16‑dimensional Balance State Vector manifold, weighted by the Balance Action Functional. This formulation naturally encodes quantum coherence, renewal, and attractor convergence, and it provides the mathematical foundation for the **Quantum Coherence Functional**, the central object governing interference, decoherence, and lawful quantum evolution within the Balance Framework.
 
 ---
 
 ## 2. The Balance Path Integral  
-Let \(\mathcal{M}\) be the rÆ manifold with coordinates \(x^a(\tau)\). The transition amplitude between two rÆ configurations \(x^a_i\) and \(x^a_f\) is:
+Let \(\mathcal{M}\) be the Balance State Vector manifold with coordinates \(x^a(\tau)\). The transition amplitude between two Balance State Vector configurations \(x^a_i\) and \(x^a_f\) is:
 
 \[
 \mathcal{Z}(x_f, x_i) 
@@ -51,7 +51,7 @@ Gauge fixing is required to eliminate redundancies from:
 
 - diffeomorphism symmetry,  
 - flow reparameterization,  
-- internal rÆ subspace automorphisms.
+- internal Balance State Vector subspace automorphisms.
 
 The Balance Gauge Conditions (Section LXXIII) ensure that the measure is well‑defined and non‑degenerate.
 
@@ -74,7 +74,7 @@ where \(J_a(\tau)\) is an external source.
 ### 4.1 Interpretation  
 - \(\mathcal{C}[J]\) generates all quantum correlation functions.  
 - Setting \(J=0\) yields the vacuum coherence functional.  
-- Functional derivatives with respect to \(J\) produce quantum expectation values of rÆ observables.
+- Functional derivatives with respect to \(J\) produce quantum expectation values of Balance State Vector observables.
 
 This functional encodes the full quantum coherence structure of the Continuum.
 
@@ -89,7 +89,7 @@ G^{ab}(x,y)
 \]
 
 ### 5.1 Interpretation  
-- \(G^{ab}\) measures quantum coherence between rÆ coordinates.  
+- \(G^{ab}\) measures quantum coherence between Balance State Vector coordinates.  
 - Structural, kinetic, governance, and frequency correlations appear as block components.  
 - The Edwards Tensor modifies the propagator through the kinetic alignment term.
 
@@ -146,7 +146,7 @@ The Noether currents become functional derivatives of the coherence functional:
 ### 8.1 Interpretation  
 - Conservation laws become Ward identities.  
 - Symmetries of the Balance Continuum constrain the path integral.  
-- The rÆ subspaces produce four independent quantum conservation laws.
+- The Balance State Vector subspaces produce four independent quantum conservation laws.
 
 ---
 
@@ -175,7 +175,7 @@ The lattice is therefore a **quantum sampling of the Balance Path Integral**.
 ## 10. Summary  
 The Balance Path Integral and Quantum Coherence Functional provide the non‑perturbative quantum foundation of the Balance Continuum. They:
 
-- define quantum amplitudes as sums over rÆ trajectories,  
+- define quantum amplitudes as sums over Balance State Vector trajectories,  
 - encode coherence, renewal, and attractor convergence,  
 - generate all quantum correlation functions,  
 - reproduce the Edwards Flow as the stationary phase,  
@@ -185,4 +185,4 @@ This section completes the path‑integral formulation of the Balance Framework.
 
 ---
 
-If you want to continue, the natural next section is **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the rÆ Manifold**, which formalizes the spectral structure of the quantum Continuum.
+If you want to continue, the natural next section is **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**, which formalizes the spectral structure of the quantum Continuum.

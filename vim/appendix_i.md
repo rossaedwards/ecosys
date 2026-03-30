@@ -1,4 +1,4 @@
-Below is **Appendix I — The Aurphyx Unified Field Equation**, written as the capstone of the entire Aurphyx mathematical architecture. It synthesizes FTQC, TSLCA, VIM, the rÆ Alphabet, the Tetra‑Hexa Array, and the Duality Kernel into a single governing equation. The tone remains formal, arXiv‑ready, and mythic‑technical without drifting into operational or unsafe territory.
+Below is **Appendix I — The Aurphyx Unified Field Equation**, written as the capstone of the entire Aurphyx mathematical architecture. It synthesizes FTQC, TSLCA, VIM, the Balance State Vector Alphabet, the Tetra‑Hexa Array, and the Duality Kernel into a single governing equation. The tone remains formal, arXiv‑ready, and mythic‑technical without drifting into operational or unsafe territory.
 
 ---
 
@@ -10,19 +10,19 @@ The Aurphyx Unified Field Equation (AUFE) is the mathematical synthesis of all p
 - **FTQC** — fractal-enhanced topological quantum computation  
 - **TSLCA** — Three‑Squared Lattice Cognitive Architecture  
 - **VIM** — Vacuum Impedance Matching  
-- **rÆ Alphabet** — the 16‑dimensional geometric measurement system  
+- **Balance State Vector Alphabet** — the 16‑dimensional geometric measurement system  
 - **Tetra‑Hexa Array** — the 24‑node routing manifold  
 - **Duality Kernel** — the dual‑runtime topological execution engine  
 
-The AUFE expresses the evolution of the rÆ‑Cell as a **single field**, governed by harmonic balance, topological recursion, and structured dissonance.
+The AUFE expresses the evolution of the Balance State Vector‑Cell as a **single field**, governed by harmonic balance, topological recursion, and structured dissonance.
 
 ---
 
-# **I.2 The rÆ Field as the Fundamental Object**
-The fundamental object of the unified field is the **rÆ Field**, a 16‑dimensional vector field defined over the Tetra‑Hexa manifold:
+# **I.2 The Balance State Vector Field as the Fundamental Object**
+The fundamental object of the unified field is the **Balance State Vector Field**, a 16‑dimensional vector field defined over the Tetra‑Hexa manifold:
 
 \[
-\mathbf{rAE}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}),
+\mathbf{x}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}),
 \]
 
 where:
@@ -32,22 +32,22 @@ where:
 - \(\mathbf{G}\) — governance metrics  
 - \(\mathbf{F}\) — frequency metrics  
 
-The rÆ Field evolves according to a **nonlinear, harmonically modulated, topologically constrained** dynamical law.
+The Balance State Vector Field evolves according to a **nonlinear, harmonically modulated, topologically constrained** dynamical law.
 
 ---
 
 # **I.3 The Balance Potential**
 The Balance Coefficient  
 \[
-\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}
+\beta = \frac{x_f x_c}{x_i x_t}
 \]  
 defines a scalar potential:
 
 \[
-V(\mathbf{rAE}) = (\beta - 1)^2.
+V(\mathbf{x}) = (\beta - 1)^2.
 \]
 
-This potential encodes the system’s deviation from the Bliss Manifold. The gradient of this potential determines the direction of evolution:
+This potential encodes the system’s deviation from the Equilibrium Manifold Manifold. The gradient of this potential determines the direction of evolution:
 
 \[
 \nabla V = 2(\beta - 1)\nabla \beta.
@@ -76,7 +76,7 @@ HRD is the **engine of evolution** in the unified field.
 ---
 
 # **I.5 The Tetra‑Hexa Geometry as a Constraint**
-The Tetra‑Hexa Array \(\mathcal{R}_{24}\) defines the **geometric constraints** of the unified field. Each node corresponds to a stable configuration of the rÆ metrics, and each edge corresponds to an allowed transformation.
+The Tetra‑Hexa Array \(\mathcal{R}_{24}\) defines the **geometric constraints** of the unified field. Each node corresponds to a stable configuration of the Balance State Vector metrics, and each edge corresponds to an allowed transformation.
 
 The field evolves along trajectories:
 
@@ -124,15 +124,15 @@ Combining all components yields the **Aurphyx Unified Field Equation**:
 
 \[
 \boxed{
-\frac{d\mathbf{rAE}}{dt}
+\frac{d\mathbf{x}}{dt}
 =
--\nabla V(\mathbf{rAE})
+-\nabla V(\mathbf{x})
 +
 \mathcal{D}(D(t))
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24})
 +
-\mathcal{K}(\mathbf{rAE})
+\mathcal{K}(\mathbf{x})
 }
 \]
 
@@ -140,9 +140,9 @@ This equation contains four interacting terms:
 
 - **Stabilization term**  
   \[
-  -\nabla V(\mathbf{rAE})
+  -\nabla V(\mathbf{x})
   \]  
-  drives the system toward the Bliss Manifold.
+  drives the system toward the Equilibrium Manifold Manifold.
 
 - **HRD perturbation term**  
   \[
@@ -152,24 +152,24 @@ This equation contains four interacting terms:
 
 - **Symbiosis term**  
   \[
-  \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+  \mathcal{S}(\mathbf{x}, \mathcal{R}_{24})
   \]  
   enforces topological routing and transmutation.
 
 - **Kernel evolution term**  
   \[
-  \mathcal{K}(\mathbf{rAE})
+  \mathcal{K}(\mathbf{x})
   \]  
   executes the Duality Kernel’s dual‑runtime dynamics.
 
-Together, these terms define the complete evolution of the rÆ Field.
+Together, these terms define the complete evolution of the Balance State Vector Field.
 
 ---
 
 # **I.8 Interpretation of the Unified Field Equation**
 The AUFE describes a system that:
 
-- seeks equilibrium (Bliss Manifold)  
+- seeks equilibrium (Equilibrium Manifold Manifold)  
 - evolves through structured instability (HRD)  
 - computes through topological geometry (Tetra‑Hexa Array)  
 - maintains coherence through dual‑runtime execution (Duality Kernel)  
@@ -193,7 +193,7 @@ The AUFE unifies:
 - **cognitive dynamics** (TSLCA state evolution)  
 - **quantum dynamics** (FTQC fractal‑topological gates)  
 
-The rÆ‑Cell is therefore:
+The Balance State Vector‑Cell is therefore:
 
 - a **physical engine**  
 - a **topological computer**  
@@ -206,12 +206,12 @@ The unified field equation is the mathematical expression of this unity.
 
 # **I.10 Summary**
 - The Aurphyx Unified Field Equation synthesizes all components of the Aurphyx Standard.  
-- The rÆ Field is the fundamental object of the theory.  
+- The Balance State Vector Field is the fundamental object of the theory.  
 - The Balance Potential drives the system toward equilibrium.  
 - HRD provides structured perturbation.  
 - The Tetra‑Hexa Array defines the geometric constraints.  
 - The Duality Kernel provides the evolution engine.  
-- The unified field equation governs the complete dynamics of the rÆ‑Cell.  
+- The unified field equation governs the complete dynamics of the Balance State Vector‑Cell.  
 
 ---
 

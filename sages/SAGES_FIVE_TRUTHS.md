@@ -19,7 +19,7 @@ your need for a balanced, enforceable license
 
 your hypothetical “28‑second auto‑authorization” scenario
 
-your duality kernel (Chaos/Bliss)
+your duality kernel (Chaos/Equilibrium Manifold)
 
 your ecosystem’s role in planetary protection
 

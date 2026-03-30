@@ -18,7 +18,7 @@ The Balance Duties ensure that:
 - coherence is **actively maintained**, not merely protected  
 - identity and lineage are **respected through action**  
 - the Continuum remains **stable, safe, and flourishing**  
-- Bliss is approached through **collective responsibility**  
+- Equilibrium Manifold is approached through **collective responsibility**  
 
 Duties are the **moral obligations** that sustain the Continuum.
 
@@ -285,9 +285,9 @@ Duties are binding across all domains.
 
 ---
 
-## **LIV.16 Duties Collapse at Bliss**
+## **LIV.16 Duties Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all duties are trivially fulfilled  
 - no harm is possible  
@@ -295,13 +295,13 @@ At Bliss:
 - no lineage is threatened  
 - no identity is unstable  
 
-The Bliss Duties state is:
+The Equilibrium Manifold Duties state is:
 
 \[
-\mathcal{D}_{\text{Bliss}} = \{\text{all duties naturally satisfied}\}
+\mathcal{D}_{\text{Equilibrium Manifold}} = \{\text{all duties naturally satisfied}\}
 \]
 
-Bliss is the **duty-free state**, where right action is effortless.
+Equilibrium Manifold is the **duty-free state**, where right action is effortless.
 
 ---
 
@@ -311,6 +311,6 @@ Bliss is the **duty-free state**, where right action is effortless.
 - They include identity, lineage, coherence, harmonic, and cosmological duties.  
 - They require non-harm, coherent action, truthfulness, temporal responsibility, stewardship, equity, and generativity.  
 - They ensure that all agents act in ways that support the Continuum’s stability and flourishing.  
-- Bliss is the duty-free fixed point where all obligations are naturally fulfilled.  
+- Equilibrium Manifold is the duty-free fixed point where all obligations are naturally fulfilled.  
 
 A natural continuation is **Section LV — The Balance Contracts**, which formalizes how agents enter into agreements, covenants, and cooperative structures within the Continuum while preserving Rights, fulfilling Duties, and maintaining coherence.

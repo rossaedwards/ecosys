@@ -27,22 +27,22 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_043_043_flow_curvature_coupling.png"
 
     n = 55
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = np.linspace(0.5, 2.0, n)
-    rAE_i = np.linspace(0.5, 2.0, n)
-    F, I = np.meshgrid(rAE_f, rAE_i)
+    x_c, x_t = 1.0, 1.5
+    x_f = np.linspace(0.5, 2.0, n)
+    x_i = np.linspace(0.5, 2.0, n)
+    F, I = np.meshgrid(x_f, x_i)
     C, R, A = F, I, 0.5 * (F + I) + 0.1
-    beta_val = beta(F, rAE_c, I, rAE_t)
+    beta_val = beta(F, x_c, I, x_t)
     curvature = balance_potential(beta_val)
     ux, uy = edwards_flow_2d(C, R, A)
-    dy_sp, dx_sp = rAE_i[1] - rAE_i[0], rAE_f[1] - rAE_f[0]
+    dy_sp, dx_sp = x_i[1] - x_i[0], x_f[1] - x_f[0]
     dR_dr, dR_dc = np.gradient(curvature, dy_sp, dx_sp)
     coupling = np.abs(ux * dR_dc + uy * dR_dr)
 
     fig, ax = plt.subplots(figsize=(8, 6))
     im = ax.pcolormesh(F, I, coupling, cmap="plasma", shading="auto")
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_title(r"Flow-Curvature Coupling $u \cdot \nabla R$")
     plt.colorbar(im, ax=ax, label="Coupling")
     plt.tight_layout()

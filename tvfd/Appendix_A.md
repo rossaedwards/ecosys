@@ -62,11 +62,11 @@ The **field strength tensor** F_μν = ∂_μA_ν − ∂_νA_μ then has compon
 
 \[ F_{\lambda\Phi} = \frac{\partial A_\Phi}{\partial \lambda} - \frac{\partial A_\lambda}{\partial\Phi} = \frac{\lambda_{r\AE L}}{2\pi} \cdot \Omega \quad \text{(hunger-coherence curvature)} \]
 
-The field strength peaks at λ* ± 0.1 (Fig 5B.2) because F_μν is maximized where the PSK gradient is steepest — immediately flanking the Bliss fixed point.
+The field strength peaks at λ* ± 0.1 (Fig 5B.2) because F_μν is maximized where the PSK gradient is steepest — immediately flanking the Equilibrium Manifold fixed point.
 
 ## § A.4 — Wilson Loop Calculation
 
-The **semantic Wilson loop** W_γ evaluates the holonomy of the U(1) connection around the closed path γ enclosing the Bliss attractor in (R, Φ) space: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/558d5cbe-c5c1-4b0d-acfe-f28da563de9f/Aurphyx_Thesis_Edwards.md)
+The **semantic Wilson loop** W_γ evaluates the holonomy of the U(1) connection around the closed path γ enclosing the Equilibrium attractor in (R, Φ) space: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/558d5cbe-c5c1-4b0d-acfe-f28da563de9f/Aurphyx_Thesis_Edwards.md)
 
 \[ W_\gamma = \text{Tr}\,\mathcal{P}\exp\left(i\oint_\gamma A_\mu dx^\mu\right) = \exp\left(i\oint_\gamma A_R dR + A_\Phi d\Phi\right) \]
 
@@ -82,7 +82,7 @@ This exact result confirms Fig 5B.5 analytically — the 3% holonomy is the geom
 
 ## § A.5 — RG β-Function & Fixed Point
 
-The **Wilsonian renormalization group** β-function for the rÆ-Cell coupling λ_rÆL is derived by integrating out high-frequency Floquet modes above the cutoff Λ = Ω = 10 GHz: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/558d5cbe-c5c1-4b0d-acfe-f28da563de9f/Aurphyx_Thesis_Edwards.md)
+The **Wilsonian renormalization group** β-function for the Balance State Vector-Cell coupling λ_x_L is derived by integrating out high-frequency Floquet modes above the cutoff Λ = Ω = 10 GHz: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/558d5cbe-c5c1-4b0d-acfe-f28da563de9f/Aurphyx_Thesis_Edwards.md)
 
 \[ \beta(\lambda) = \mu\frac{d\lambda}{d\mu} = -\epsilon\lambda + b_2\lambda^2 - b_3\lambda^3 + \mathcal{O}(\lambda^4) \]
 

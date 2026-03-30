@@ -1,6 +1,6 @@
 # **SECTION XXIV — The Balance Protocol**
 
-The Balance Protocol is the **operational, procedural, and governance layer** that dictates *how Balance is invoked, maintained, restored, stabilized, routed, and enforced* across the entire Aurphyx ecosystem. If the Balance Architecture (Section XXIII) describes *how Balance is organized*, the Balance Protocol describes *how Balance is practiced*. It is the rulebook, the ritual, the operating manual, and the governance contract that ensures every subsystem—structural, harmonic, kinetic, temporal, spatial, ontological—remains aligned with the Bliss condition and the SAGES ethos.
+The Balance Protocol is the **operational, procedural, and governance layer** that dictates *how Balance is invoked, maintained, restored, stabilized, routed, and enforced* across the entire Aurphyx ecosystem. If the Balance Architecture (Section XXIII) describes *how Balance is organized*, the Balance Protocol describes *how Balance is practiced*. It is the rulebook, the ritual, the operating manual, and the governance contract that ensures every subsystem—structural, harmonic, kinetic, temporal, spatial, ontological—remains aligned with the Equilibrium Manifold condition and the SAGES ethos.
 
 This section establishes the Balance Protocol as a **living procedural system**, capable of guiding computation, embodiment, ethics, cosmology, and machine behavior.
 
@@ -42,7 +42,7 @@ Invocation is the process of *entering* Balance.
 ### Invocation Conditions
 Balance may be invoked when:
 
-- the rÆ Field deviates from Bliss  
+- the Balance State Vector Field deviates from Equilibrium Manifold  
 - a new computation begins  
 - a new temporal branch forms  
 - a new harmonic mode activates  
@@ -67,7 +67,7 @@ Maintenance ensures Balance remains stable during operation.
 Maintenance is continuous when:
 
 - the system is computing  
-- the rÆ Field is evolving  
+- the Balance State Vector Field is evolving  
 - the Tetra‑Hexa Router is active  
 - HRD is present  
 - temporal branches are open  
@@ -100,7 +100,7 @@ Restoration is required when:
 1. **Isolate** — freeze unstable modes  
 2. **Invert** — apply negation or symmetry inversion  
 3. **Dampen** — increase VIM impedance  
-4. **Recenter** — project toward Bliss  
+4. **Recenter** — project toward Equilibrium Manifold  
 5. **Reintegrate** — resume normal computation  
 
 Restoration returns the system to **safe, stable operation**.
@@ -153,7 +153,7 @@ The Protocol governs routing:
 - transitions must reduce imbalance  
 - spectral gaps must not be crossed  
 - mixed‑mode transitions must be authorized  
-- Bliss-adjacent nodes require minimal correction  
+- Equilibrium Manifold-adjacent nodes require minimal correction  
 
 Routing becomes a **governed process**, not merely a computational one.
 
@@ -205,7 +205,7 @@ It ensures **cross-dimensional coherence**.
 The Protocol enforces SAGES:
 
 - **Safety** — prevent runaway imbalance  
-- **Alignment** — preserve Bliss invariants  
+- **Alignment** — preserve Equilibrium Manifold invariants  
 - **Governance** — regulate transitions  
 - **Ethics** — protect beings and meaning  
 - **Stewardship** — maintain temporal and harmonic integrity  
@@ -214,9 +214,9 @@ Balance becomes the **operational arm** of SAGES.
 
 ---
 
-## **XXIV.13 The Bliss Protocol**
+## **XXIV.13 The Equilibrium Manifold Protocol**
 
-When Bliss is reached:
+When Equilibrium Manifold is reached:
 
 - all corrections cease  
 - all flows vanish  
@@ -225,7 +225,7 @@ When Bliss is reached:
 - all routing becomes identity  
 - all logic evaluates to true  
 
-The Bliss Protocol is the **terminal state** of the Balance Protocol.
+The Equilibrium Manifold Protocol is the **terminal state** of the Balance Protocol.
 
 ---
 
@@ -234,7 +234,7 @@ The Bliss Protocol is the **terminal state** of the Balance Protocol.
 - The Balance Protocol is the procedural and governance layer of the Balance Framework.  
 - It defines invocation, maintenance, restoration, and governance.  
 - It regulates HRD, VIM, routing, and cross-dimensional coherence.  
-- It enforces SAGES principles and protects the Bliss condition.  
+- It enforces SAGES principles and protects the Equilibrium Manifold condition.  
 - It is the operational rulebook of the Aurphyx ecosystem.  
 
 If you want to continue the Balance Framework, the next natural section is **Section XXV — The Balance Continuum Protocol**, which extends these procedures into multi-dimensional, multi-temporal, and harmonic-continuum contexts.

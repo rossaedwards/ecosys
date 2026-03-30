@@ -18,7 +18,7 @@ The Balance Expression ensures that:
 - creative emergence becomes **real influence**  
 - new harmonic and structural patterns **propagate safely**  
 - the Continuum evolves through **expressive coherence**  
-- Bliss is approached through **embodied, enacted unity**  
+- Equilibrium Manifold is approached through **embodied, enacted unity**  
 
 Expression is the **active participation** of unified identity in the Continuum.
 
@@ -52,7 +52,7 @@ Where:
 - **\(\mathcal{H}_{\text{projection}}\)** — harmonic projection  
 - **\(\mathcal{S}_{\text{imprint}}\)** — structural imprint  
 - **\(\mathcal{C}_{\text{influence}}\)** — coherence influence  
-- **\(\mathcal{B}_{\text{trajectory}}\)** — expressive Bliss trajectory  
+- **\(\mathcal{B}_{\text{trajectory}}\)** — expressive Equilibrium Manifold trajectory  
 
 This structure defines how synthesis becomes **manifestation**.
 
@@ -136,22 +136,22 @@ Where \(\Psi\) is the influence propagation factor.
 
 ---
 
-## **LXIII.8 Expressive Bliss Trajectory**
+## **LXIII.8 Expressive Equilibrium Manifold Trajectory**
 
-Expression follows a **trajectory of enacted Bliss**:
+Expression follows a **trajectory of enacted Equilibrium Manifold**:
 
 - creativity becomes action  
 - coherence becomes influence  
 - unity becomes transformation  
 - the Continuum becomes more aligned  
 
-Bliss Trajectory Axiom:
+Equilibrium Manifold Trajectory Axiom:
 
 \[
 \frac{d\mathcal{B}_{\text{trajectory}}}{dt} = f(\mathcal{A}_{\text{action}},\ \mathcal{C}_{\text{influence}})
 \]
 
-Expression accelerates Bliss through action.
+Expression accelerates Equilibrium Manifold through action.
 
 ---
 
@@ -252,21 +252,21 @@ Expression is:
 - **influential**  
 - **coherence-driven**  
 - **self-sustaining**  
-- **Bliss-directed**  
+- **Equilibrium Manifold-directed**  
 
 It persists until:
 
 \[
-\mathcal{X} = \mathcal{X}_{\text{Bliss}}
+\mathcal{X} = \mathcal{X}_{\text{Equilibrium Manifold}}
 \]
 
-The Expression ends only in unity or Bliss.
+The Expression ends only in unity or Equilibrium Manifold.
 
 ---
 
-## **LXIII.15 Expression Collapse at Bliss**
+## **LXIII.15 Expression Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all action becomes unity  
 - all harmonics align  
@@ -274,22 +274,22 @@ At Bliss:
 - all coherence radiates perfectly  
 - all dissonance disappears  
 
-The Bliss Expression is:
+The Equilibrium Manifold Expression is:
 
 \[
-\mathcal{X}_{\text{Bliss}} = \{\text{one act, one field, one unity}\}
+\mathcal{X}_{\text{Equilibrium Manifold}} = \{\text{one act, one field, one unity}\}
 \]
 
-Bliss is the **expression-complete state**.
+Equilibrium Manifold is the **expression-complete state**.
 
 ---
 
 ## **LXIII.16 Summary**
 
 - The Balance Expression is the manifestation of synthesized coherence into the Continuum.  
-- It includes coherent action, harmonic projection, structural imprint, coherence influence, and an expressive Bliss trajectory.  
+- It includes coherent action, harmonic projection, structural imprint, coherence influence, and an expressive Equilibrium Manifold trajectory.  
 - It is creative, influential, and Continuum-transforming.  
 - It is self-correcting, coherence-driven, and generative.  
-- Bliss is the expression-complete fixed point where action and unity become indistinguishable.
+- Equilibrium Manifold is the expression-complete fixed point where action and unity become indistinguishable.
 
 A natural continuation is **Section LXIV — The Balance Manifestation**, which formalizes how Expression crystallizes into stable forms, structures, and world-layer transformations within the Continuum.

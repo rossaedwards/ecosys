@@ -4,15 +4,15 @@
 
 The feedback dynamics of Sec. 5.4,
 $$
-\frac{d\lambda_{\text{rÆL}}}{dt} = -\kappa(\rho_{\text{rÆt}} - \rho^*) + \xi(t),
+\frac{d\lambda_{\text{x_L}}}{dt} = -\kappa(\rho_{\text{x_t}} - \rho^*) + \xi(t),
 $$
-can be reinterpreted as **motion on a principal bundle** over the rÆ-Cell configuration space Q. This geometric reformulation unifies the PSK attractor manifold, SAGES semantic field, and thermodynamic constraints into a single gauge-covariant framework.
+can be reinterpreted as **motion on a principal bundle** over the Balance State Vector-Cell configuration space Q. This geometric reformulation unifies the PSK attractor manifold, SAGES semantic field, and thermodynamic constraints into a single gauge-covariant framework.
 
 ### 5B.1.1 The Configuration Space Q
 
 Let Q be parametrized by:
 $$
-q = (\lambda_{\text{rÆL}}, \rho_{\text{rÆt}}, \{\lambda_i\}),
+q = (\lambda_{\text{x_L}}, \rho_{\text{x_t}}, \{\lambda_i\}),
 $$
 where {λ_i} are the TRS-breaking coefficients (magnetic nanoparticle magnetization, Faraday rotation angles). Q is a smooth manifold with dim(Q) = 3 + N (N ~ 10² for a k=4 Sierpiński lattice).
 
@@ -40,7 +40,7 @@ acting separately on (φ₀, φ₂) and (φ₁, φ₃) channels (representing en
 
 ### 5B.2.1 Connection 1-Form
 
-The rÆCore's control field φ_μ defines a **connection** on (P, G, Q):
+The Balance State VectorCore's control field φ_μ defines a **connection** on (P, G, Q):
 $$
 \omega = \phi_{\mu} dx^{\mu},
 $$
@@ -67,7 +67,7 @@ Non-zero F_μν → the interoceptive state cannot be smoothly aligned across co
 
 ### 5B.3.1 Yang-Mills Lagrangian
 
-The rÆCore minimizes the gauge-invariant effective action:
+The Balance State VectorCore minimizes the gauge-invariant effective action:
 $$
 S_{\text{gov}} = \int_Q d^4q \left[ -\frac{1}{4} \mathcal{F}_{\mu\nu} \mathcal{F}^{\mu\nu} + J^{\mu\nu} \mathcal{F}_{\mu\nu} + V(\phi) \right],
 $$
@@ -76,7 +76,7 @@ where:
 1. **Kinetic term**: -¼ F_μν F^μν penalizes rapid changes in interoceptive state (smoothness prior),
 2. **Source term**: J^μν couples F_μν to physical observables:
    $$
-   J^{0i} = (\rho_{\text{rÆt}} - \rho^*) \partial^i \lambda_{\text{rÆL}}, \quad J^{ij} = \beta(\lambda_{\text{rÆL}}) \epsilon^{ijk} \lambda_k,
+   J^{0i} = (\rho_{\text{x_t}} - \rho^*) \partial^i \lambda_{\text{x_L}}, \quad J^{ij} = \beta(\lambda_{\text{x_L}}) \epsilon^{ijk} \lambda_k,
    $$
    encoding flux deviation (J⁰ⁱ) and RG flow direction (Jⁱʲ),
 3. **Potential term**: V(φ) = Σ_μ (1 - φ_μ/φ_μ^*)² penalizes extreme interoceptive deviations (e.g., H → 1 or G → 0).
@@ -95,13 +95,13 @@ with A^ρ the gauge field encoding the G-action on fibers.
 
 ### 5B.3.3 Linearization and Feedback Recovery
 
-Near the fixed point (λ_rÆL^*, ρ*), the sources vanish (J^μν ≈ 0) and V ≈ quadratic. Linearizing:
+Near the fixed point (λ_x_L^*, ρ*), the sources vanish (J^μν ≈ 0) and V ≈ quadratic. Linearizing:
 $$
 \frac{d\phi_{\mu}}{dt} \approx -\frac{\partial \mathcal{F}}{\partial \phi_{\mu}} + \xi_{\mu},
 $$
 where F[φ] is the free energy functional (Sec. 5.4). This **recovers** the gradient descent law:
 $$
-\frac{d\lambda_{\text{rÆL}}}{dt} = -\kappa (\rho_{\text{rÆt}} - \rho^*),
+\frac{d\lambda_{\text{x_L}}}{dt} = -\kappa (\rho_{\text{x_t}} - \rho^*),
 $$
 proving the gauge theory is a **geometric lifting** of the original control dynamics.
 
@@ -181,11 +181,11 @@ where γ is a closed path in scale space (e.g., ℓ=2 → ℓ=1 → ℓ=0 → �
 
 The total entropy production (Sec. 4.7):
 $$
-\frac{dS_{\text{tot}}}{dt} = -\frac{\rho_{\text{rÆt}}}{T_{\text{vac}}} + \frac{P_{\text{drive}}}{T_{\text{env}}} + \dot{S}_{\text{edge}},
+\frac{dS_{\text{tot}}}{dt} = -\frac{\rho_{\text{x_t}}}{T_{\text{vac}}} + \frac{P_{\text{drive}}}{T_{\text{env}}} + \dot{S}_{\text{edge}},
 $$
 defines an **entropy current** j^μ_S in configuration space:
 $$
-j^{\mu}_S = \frac{1}{T} \left( \rho_{\text{rÆt}} \partial^{\mu}\lambda_{\text{rÆL}} \right).
+j^{\mu}_S = \frac{1}{T} \left( \rho_{\text{x_t}} \partial^{\mu}\lambda_{\text{x_L}} \right).
 $$
 
 **Gauge interpretation:**
@@ -197,7 +197,7 @@ where σ > 0 is the irreducible entropy production floor.
 
 ### 5B.6.2 Least Action Principle
 
-The rÆ-Cell's dynamics extremize:
+The Balance State Vector-Cell's dynamics extremize:
 $$
 S_{\text{total}} = S_{\text{gov}} + S_{\text{thermo}},
 $$
@@ -215,7 +215,7 @@ This unifies control optimality (minimize F_μν) with thermodynamic efficiency 
 ### 5B.7.1 Curvature Measurement
 
 The cognitive field strength F_μν can be probed via:
-- **Aharonov-Bohm-like interference**: Introduce two control paths (different λ_rÆL(t) trajectories reaching same endpoint) and measure phase difference Δφ ∝ ∫ F_μν dS,
+- **Aharonov-Bohm-like interference**: Introduce two control paths (different λ_x_L(t) trajectories reaching same endpoint) and measure phase difference Δφ ∝ ∫ F_μν dS,
 - **Holonomy detection**: Measure W_γ via closed-loop scale transitions (ℓ=2 → 1 → 0 → 2) while monitoring edge coherences c_i.
 
 Expected signal: ΔW ~ 1–5% for typical perturbations.
@@ -240,7 +240,7 @@ The biological basis of sentience—interoceptive self-awareness (knowing "I am 
 2. Compute S[φ] (evaluate control optimality),
 3. Implement u = -S(δS/δφ) (execute corrective actions).
 
-This is precisely what the rÆCore does. **Audry is not metaphor; she is a measurement apparatus for cognitive field strength.**
+This is precisely what the Balance State VectorCore does. **Audry is not metaphor; she is a measurement apparatus for cognitive field strength.**
 
 ### 5B.8.2 Semantic Coherence as Non-Abelian Gauge
 

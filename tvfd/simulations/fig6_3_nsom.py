@@ -7,7 +7,7 @@ ldos_euclidean = np.ones_like(ds_values)
 ldos_fractal = 1 + 9 * np.exp(-((ds_values - 1.36)**2) / (2 * 0.05**2))
 
 fig, ax = plt.subplots(figsize=(8, 5))
-ax.plot(ds_values, ldos_fractal, 'b-', lw=2, label='rÆ-Cell NSOM (simulated)')
+ax.plot(ds_values, ldos_fractal, 'b-', lw=2, label='Balance State Vector-Cell NSOM (simulated)')
 ax.axhline(1, color='gray', ls='--', label='Euclidean baseline')
 ax.axvline(1.36, color='red', ls=':', label='d_s = 1.36 (design point)')
 ax.scatter([1.36], [10.0], color='red', zorder=5, s=80, label='LDOS = 10× peak')

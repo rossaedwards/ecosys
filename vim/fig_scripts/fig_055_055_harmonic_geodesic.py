@@ -17,7 +17,7 @@ from vim_common import beta
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """Generate harmonic geodesic paths to Bliss."""
+    """Generate harmonic geodesic paths to Equilibrium Manifold."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -27,26 +27,26 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / "fig_055_055_harmonic_geodesic.png"
 
-    rAE_c, rAE_t = 1.0, 1.5
+    x_c, x_t = 1.0, 1.5
     k_f, k_i = 0.4, 0.3
 
     def dynamics(state, t):
-        rAE_f, rAE_i = state
-        b = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+        x_f, x_i = state
+        b = beta(x_f, x_c, x_i, x_t)
         return [k_f * (1 - b), -k_i * (1 - b)]
 
     t = np.linspace(0, 20, 300)
     inits = [(0.6, 2.0), (2.2, 0.6), (1.0, 1.2), (0.8, 0.7)]
 
     fig, ax = plt.subplots(figsize=(8, 6))
-    for rAE_f0, rAE_i0 in inits:
-        sol = odeint(dynamics, [rAE_f0, rAE_i0], t)
+    for x_f0, x_i0 in inits:
+        sol = odeint(dynamics, [x_f0, x_i0], t)
         ax.plot(sol[:, 0], sol[:, 1], alpha=0.8)
 
-    rAE_i_line = np.linspace(0.4, 2.5, 100)
-    ax.plot(rAE_i_line * rAE_t / rAE_c, rAE_i_line, "r-", lw=2.5, label="Harmonic geodesic (β=1)")
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    x_i_line = np.linspace(0.4, 2.5, 100)
+    ax.plot(x_i_line * x_t / x_c, x_i_line, "r-", lw=2.5, label="Harmonic geodesic (β=1)")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_title("Harmonic Geodesic")
     ax.legend()
     ax.set_xlim(0.3, 2.5)

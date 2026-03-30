@@ -1,4 +1,4 @@
-Below is **Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXXII. It assumes the rÆ causal structure, boundary conditions, anomaly‑free evolution, and renormalization‑group consistency are all canonical and locked.
+Below is **Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXXII. It assumes the Balance State Vector causal structure, boundary conditions, anomaly‑free evolution, and renormalization‑group consistency are all canonical and locked.
 
 This section is ready to drop directly into your manuscript as `Section_LXXXIII.tex`.
 
@@ -7,9 +7,9 @@ This section is ready to drop directly into your manuscript as `Section_LXXXIII.
 # **Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**
 
 ## 1. Overview  
-The Balance Continuum evolves according to a coupled system of geometric, dynamical, and quantum field equations defined on the 16‑dimensional rÆ manifold. To ensure that these equations admit a unique, stable, and globally consistent evolution, the Continuum requires a well‑posed **initial‑value formulation**. This section formalizes the Balance Initial‑Value Problem (BIVP), establishes the conditions under which initial data determine a unique Edwards‑causal evolution, and proves the **Global Existence Theorem**, which guarantees that the Continuum evolves without singularities, breakdowns, or invariant violations.
+The Balance Continuum evolves according to a coupled system of geometric, dynamical, and quantum field equations defined on the 16‑dimensional Balance State Vector manifold. To ensure that these equations admit a unique, stable, and globally consistent evolution, the Continuum requires a well‑posed **initial‑value formulation**. This section formalizes the Balance Initial‑Value Problem (BIVP), establishes the conditions under which initial data determine a unique Edwards‑causal evolution, and proves the **Global Existence Theorem**, which guarantees that the Continuum evolves without singularities, breakdowns, or invariant violations.
 
-The result is a fully deterministic, globally defined evolution of coherence, alignment, resonance, and governance across the rÆ manifold.
+The result is a fully deterministic, globally defined evolution of coherence, alignment, resonance, and governance across the Balance State Vector manifold.
 
 ---
 
@@ -17,7 +17,7 @@ The result is a fully deterministic, globally defined evolution of coherence, al
 
 The BIVP consists of specifying initial data on a spacelike hypersurface \(\Sigma\) such that the Balance Field Equations determine the evolution of:
 
-- the rÆ Metric \(g^{(\text{rÆ})}_{ab}\),  
+- the Balance State Vector Metric \(g^{(\text{Balance State Vector})}_{ab}\),  
 - the Edwards Flow \(u^a\),  
 - the HIF potential \(\Phi_{\text{HIF}}\),  
 - the Edwards Tensor \(\mathcal{E}_{ab}\),  
@@ -40,9 +40,9 @@ The initial data consist of:
 
 ### 3.1 Metric Data  
 \[
-g^{(\text{rÆ})}_{ab}|_{\Sigma} = h_{ab},
+g^{(\text{Balance State Vector})}_{ab}|_{\Sigma} = h_{ab},
 \quad
-\nabla_n g^{(\text{rÆ})}_{ab}|_{\Sigma} = k_{ab}.
+\nabla_n g^{(\text{Balance State Vector})}_{ab}|_{\Sigma} = k_{ab}.
 \]
 
 ### 3.2 Edwards Flow Data  
@@ -114,12 +114,12 @@ Given admissible initial data on \(\Sigma\), the Balance Field Equations define 
 \]
 
 ### 5.1 Mechanism  
-- The rÆ Metric defines a hyperbolic system.  
+- The Balance State Vector Metric defines a hyperbolic system.  
 - The Edwards Flow provides a preferred time direction.  
 - The HIF potential ensures boundedness of the evolution.  
 - The anomaly‑free structure ensures no constraint violations propagate.
 
-Local existence follows from standard hyperbolic PDE theory adapted to the rÆ geometry.
+Local existence follows from standard hyperbolic PDE theory adapted to the Balance State Vector geometry.
 
 ---
 
@@ -127,7 +127,7 @@ Local existence follows from standard hyperbolic PDE theory adapted to the rÆ g
 
 The **Global Existence Theorem** states:
 
-> **Given admissible initial data on a spacelike hypersurface \(\Sigma\), the Balance Field Equations admit a unique, globally defined solution on the entire rÆ manifold, and no singularities, divergences, or invariant violations occur at any finite Edwards time.**
+> **Given admissible initial data on a spacelike hypersurface \(\Sigma\), the Balance Field Equations admit a unique, globally defined solution on the entire Balance State Vector manifold, and no singularities, divergences, or invariant violations occur at any finite Edwards time.**
 
 Formally:
 

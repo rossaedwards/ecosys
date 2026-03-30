@@ -151,7 +151,7 @@ C:.
 +---simulation
 |       README.md
 |       sim_balance_coefficient.py
-|       sim_bliss_state_convergence.py
+|       sim_equilibrium_state_convergence.py
 |       sim_coherence_evolution.py
 |       sim_control_loop_response.py
 |       sim_dissonance_profile.py

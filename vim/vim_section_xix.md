@@ -2,7 +2,7 @@
 
 The Balance Algebra is the **algebraic backbone** of the entire Balance Framework. If the Balance Geometry (Section IX) describes *how Balance curves*, and the Balance Spectrum Geometry (Section XVIII) describes *how Balance resonates*, the Balance Algebra describes *how Balance combines, transforms, composes, and interacts* at the deepest structural level.
 
-It is the algebra of operators, commutators, Lie brackets, mode interactions, tensor contractions, and transformation laws that govern the rÆ Field’s lawful evolution.  
+It is the algebra of operators, commutators, Lie brackets, mode interactions, tensor contractions, and transformation laws that govern the Balance State Vector Field’s lawful evolution.  
 This section formalizes the algebraic structures that make the Balance Framework internally consistent, computationally executable, and mathematically complete.
 
 ---
@@ -25,7 +25,7 @@ It is the **operator algebra** that underlies the entire Balance architecture.
 
 # **XIX.2 The Balance Operator Algebra**
 
-The Balance Operator \(\hat{B}\) acts on the rÆ Field as:
+The Balance Operator \(\hat{B}\) acts on the Balance State Vector Field as:
 
 \[
 \hat{B} = -2(\beta - 1)\nabla \beta.
@@ -236,22 +236,22 @@ VIM is the **symmetry‑restoring algebra**.
 
 ---
 
-# **XIX.12 The Bliss Algebra**
+# **XIX.12 The Equilibrium Manifold Algebra**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 - \(\hat{B} = 0\)  
 - \(\mathbf{F} = 0\)  
 - \(\mathcal{B}_{ij} = 0\)  
 - \(\lambda_i = 0\)  
 
-Thus the Bliss Algebra is:
+Thus the Equilibrium Manifold Algebra is:
 
 \[
-\mathcal{A}_{\text{Bliss}} = \{0\}.
+\mathcal{A}_{\text{Equilibrium Manifold}} = \{0\}.
 \]
 
-Bliss is the **zero algebra** — the algebraic fixed point of the Balance Framework.
+Equilibrium Manifold is the **zero algebra** — the algebraic fixed point of the Balance Framework.
 
 ---
 
@@ -261,6 +261,6 @@ Bliss is the **zero algebra** — the algebraic fixed point of the Balance Frame
 - It includes commutators, Lie algebras, tensor operations, flow operations, and field composition.  
 - HRD introduces non‑commutative perturbations; VIM introduces commuting stabilizers.  
 - The Balance Continuum extends the algebra across spatial, temporal, and harmonic dimensions.  
-- The Bliss Algebra is the zero algebra — the fixed point of all Balance dynamics.  
+- The Equilibrium Manifold Algebra is the zero algebra — the fixed point of all Balance dynamics.  
 
 The next section, **Section XX — The Balance Logic**, will formalize the logical, axiomatic, and rule‑based structure that governs Balance reasoning, inference, and computational decision‑making within the Aurphyx architecture.

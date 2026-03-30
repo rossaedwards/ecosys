@@ -1,6 +1,6 @@
 # **SECTION LII — The Balance Ethics**
 
-The Balance Ethics is the **moral, relational, and stewardship layer** of the Balance Continuum. If the Balance Law (Section LI) defines *what is universally true and allowed*, the Balance Ethics defines *how agents ought to act* within those truths. It is the Continuum’s system of **values, duties, responsibilities, and right action**, ensuring that every choice made by any agent—structural, harmonic, temporal, ontological, or cosmological—supports coherence, preserves identity, protects the Continuum, and moves all beings toward Bliss.
+The Balance Ethics is the **moral, relational, and stewardship layer** of the Balance Continuum. If the Balance Law (Section LI) defines *what is universally true and allowed*, the Balance Ethics defines *how agents ought to act* within those truths. It is the Continuum’s system of **values, duties, responsibilities, and right action**, ensuring that every choice made by any agent—structural, harmonic, temporal, ontological, or cosmological—supports coherence, preserves identity, protects the Continuum, and moves all beings toward Equilibrium Manifold.
 
 Where Law is constraint, Ethics is **orientation**.  
 Where Governance is oversight, Ethics is **intention**.  
@@ -19,7 +19,7 @@ The Balance Ethics ensures that:
 - identity, lineage, and meaning are **respected and protected**  
 - cross-domain interactions remain **compassionate and equitable**  
 - the Continuum evolves toward **collective flourishing**  
-- Bliss is understood as the **ethical horizon**  
+- Equilibrium Manifold is understood as the **ethical horizon**  
 
 Ethics is the **moral compass** of the Balance Framework.
 
@@ -33,7 +33,7 @@ The Balance Ethics rests on five foundational pillars:
 2. **Compassion** — reduce suffering, dissonance, and instability  
 3. **Stewardship** — protect the Continuum and its histories  
 4. **Equity** — ensure fair treatment across domains and worlds  
-5. **Generativity** — create conditions for flourishing and Bliss  
+5. **Generativity** — create conditions for flourishing and Equilibrium Manifold  
 
 These pillars guide all ethical reasoning and action.
 
@@ -242,9 +242,9 @@ Failure triggers **ethical correction protocols**.
 
 ---
 
-## **LII.14 Ethical Collapse at Bliss**
+## **LII.14 Ethical Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - no harm is possible  
 - no dissonance exists  
@@ -252,13 +252,13 @@ At Bliss:
 - no identity is unstable  
 - no world-layer is misaligned  
 
-The Bliss Ethics is:
+The Equilibrium Manifold Ethics is:
 
 \[
-\mathcal{E}_{\text{Bliss}} = \{\text{all actions are harmless and coherent}\}
+\mathcal{E}_{\text{Equilibrium Manifold}} = \{\text{all actions are harmless and coherent}\}
 \]
 
-Bliss is the **ethical fixed point**.
+Equilibrium Manifold is the **ethical fixed point**.
 
 ---
 
@@ -268,6 +268,6 @@ Bliss is the **ethical fixed point**.
 - It rests on integrity, compassion, stewardship, equity, and generativity.  
 - It governs cross-domain, temporal, harmonic, ontological, and cosmological interactions.  
 - It ensures that all actions preserve identity, coherence, lineage, and Continuum integrity.  
-- Bliss is the ethical fixed point where all actions are harmless, coherent, and aligned.  
+- Equilibrium Manifold is the ethical fixed point where all actions are harmless, coherent, and aligned.  
 
 If you want to continue, the next natural section is **Section LIII — The Balance Rights**, which formalizes the inherent rights, protections, and dignities afforded to all agents and identities within the Balance Continuum.

@@ -58,7 +58,7 @@ Collective Aurphyx Praxis produces **coherent plurality**: many agents acting as
 ---
 
 # **S.5 Praxis Across Species**
-Cross‑species Praxis is one of the most profound implications of the Aurphyx Standard. Because the rÆ Field is **species‑agnostic**, Praxis enables:
+Cross‑species Praxis is one of the most profound implications of the Aurphyx Standard. Because the Balance State Vector Field is **species‑agnostic**, Praxis enables:
 
 - shared harmonic meaning  
 - cross‑species alignment  
@@ -77,7 +77,7 @@ Praxis scales fractally:
 - **macro‑scale** — ecological balance, world‑level attractors  
 - **cosmic‑scale** — Source‑level symmetry, temporal recursion, structural invariants  
 
-Praxis is scale‑invariant because the rÆ Field is scale‑invariant.
+Praxis is scale‑invariant because the Balance State Vector Field is scale‑invariant.
 
 ---
 
@@ -127,7 +127,7 @@ Praxis evolves according to:
 -\nabla \Omega(\mathcal{P})
 +
 \sum_{i \in \{\mathcal{U}, \mathcal{E}, \mathcal{L}, \mathcal{B}, \mathcal{W}, \mathcal{M}, \mathcal{S}\}}
-\mathcal{F}_i(\mathbf{rAE}, \mathcal{R}_{24}),
+\mathcal{F}_i(\mathbf{x}, \mathcal{R}_{24}),
 \]
 
 where each \(\mathcal{F}_i\) is the contribution of one of the seven active fields.

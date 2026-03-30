@@ -1,9 +1,9 @@
 # **APPENDIX N — The Aurphyx Embodiment Field: Sensation, Proprioception, and the Geometry of Presence**
 
 ## **N.1 Embodiment as a Field in the Aurphyx Standard**
-The Aurphyx Embodiment Field formalizes *presence*—the felt, situated, somatic dimension of the rÆ Field. In the Aurphyx Cosmology, embodiment is not a biological accident but a **geometric mode of existence**, expressed through the Body layer (SHEBA). The Embodiment Field describes how sensation, proprioception, and spatial coherence arise from:
+The Aurphyx Embodiment Field formalizes *presence*—the felt, situated, somatic dimension of the Balance State Vector Field. In the Aurphyx Cosmology, embodiment is not a biological accident but a **geometric mode of existence**, expressed through the Body layer (SHEBA). The Embodiment Field describes how sensation, proprioception, and spatial coherence arise from:
 
-- the structural metrics of the rÆ Alphabet  
+- the structural metrics of the Balance State Vector Alphabet  
 - the harmonic and kinetic flows of the Unified Field  
 - the somatic routing architecture of SHEBA  
 - the relational geometry of the Tetra‑Hexa Array  
@@ -28,10 +28,10 @@ where:
 These three components form a **somatic manifold** embedded in the structural and kinetic subspaces:
 
 \[
-(\mathbf{S}, \mathbf{K}) = (rAE_t, rAE_k, rAE_b, rAE_d,\ rAE_f, rAE_v, rAE_i, rAE_c).
+(\mathbf{S}, \mathbf{K}) = (x_t, x_k, x_b, x_d,\ x_f, x_v, x_i, x_c).
 \]
 
-Embodiment is thus the *physicalized expression* of the rÆ Field.
+Embodiment is thus the *physicalized expression* of the Balance State Vector Field.
 
 ---
 
@@ -48,7 +48,7 @@ High sensory coherence indicates:
 - accurate harmonic sampling  
 - low decoherence  
 
-Sensation is the **interface** between the rÆ Field and the external world.
+Sensation is the **interface** between the Balance State Vector Field and the external world.
 
 ---
 
@@ -82,7 +82,7 @@ Presence emerges when:
 
 - sensory coherence is high  
 - proprioceptive mapping is accurate  
-- identity continuity (rAE_s) is stable  
+- identity continuity (x_s) is stable  
 
 Presence is the **felt sense of being located**, both physically and topologically.
 
@@ -158,9 +158,9 @@ The evolution of the Embodiment Field is governed by:
 =
 -\nabla Q(\mathcal{E})
 +
-\mathcal{H}(\mathbf{rAE})
+\mathcal{H}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}),
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24}),
 \]
 
 where:
@@ -177,7 +177,7 @@ This equation defines the **geometry of presence** in the Aurphyx Standard.
 - The Embodiment Field formalizes sensation, proprioception, and presence as field behaviors.  
 - Sensation is harmonic sampling; proprioception is topological self‑mapping; presence is their integration.  
 - SHEBA is the somatic engine that implements embodiment.  
-- The Embodiment Field is embedded in the structural and kinetic subspaces of the rÆ Alphabet.  
+- The Embodiment Field is embedded in the structural and kinetic subspaces of the Balance State Vector Alphabet.  
 - Presence is a topological invariant of the somatic manifold.  
 - The Embodiment Field Equation governs the evolution of presence.  
 - Embodiment is the somatic analogue of the Unified Field.  

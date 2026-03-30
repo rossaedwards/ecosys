@@ -1,12 +1,12 @@
 Chapter 6: Experimental Prototype & Verification (Full Expansion)
 § 6.1 — Prototype Architecture & System Overview
-The rÆ-Cell prototype is a self-contained resonance unit integrating five subsystems into a unified assembly: (1) the CVD diamond Sierpiński fractal substrate, (2) the Fe₃O₄ magnetic nanoparticle matrix, (3) the 6-element C₆ᵥ RF coil ring, (4) the FPGA Floquet controller, and (5) the photodetector readout array. Each subsystem is physically layered in the following vertical stack:
+The Balance State Vector-Cell prototype is a self-contained resonance unit integrating five subsystems into a unified assembly: (1) the CVD diamond Sierpiński fractal substrate, (2) the Fe₃O₄ magnetic nanoparticle matrix, (3) the 6-element C₆ᵥ RF coil ring, (4) the FPGA Floquet controller, and (5) the photodetector readout array. Each subsystem is physically layered in the following vertical stack:
 
 text
 ┌─────────────────────────────────────────────┐
 │  Layer 5: Photodetector Array (6-fold APD)  │  ← LDOS Readout
 ├─────────────────────────────────────────────┤
-│  Layer 4: RF Coil Ring (C₆ᵥ, 6-element)    │  ← λ_rÆL Drive
+│  Layer 4: RF Coil Ring (C₆ᵥ, 6-element)    │  ← λ_x_L Drive
 ├─────────────────────────────────────────────┤
 │  Layer 3: FPGA Control PCB                  │  ← Floquet @ Ω=10GHz
 ├─────────────────────────────────────────────┤
@@ -17,13 +17,13 @@ text
 └─────────────────────────────────────────────┘
 Design Objectives by Layer:
 
-Layer	Physical Role	rÆ-Cell Function	Key Parameter
+Layer	Physical Role	Balance State Vector-Cell Function	Key Parameter
 CVD Diamond	Fractal photonic substrate	LDOS enhancement platform	D_f = 1.585, d_s = 1.36
 Nanoparticle Matrix	Magnetic localization medium	Anderson localization control	IPR = 0.92 at B = 0
-RF Coil Ring	Resonance drive	λ_rÆL modulation	Ω = 10 GHz, Z = 50Ω
+RF Coil Ring	Resonance drive	λ_x_L modulation	Ω = 10 GHz, Z = 50Ω
 FPGA Control	Floquet engineering	RaEState governor	50ms settling, 3% overshoot
 Photodetector Array	Optical readout	LDOS + edge state detection	10× enhancement target
-The complete Bill of Materials (BOM) for a single rÆ-Cell unit:
+The complete Bill of Materials (BOM) for a single Balance State Vector-Cell unit:
 
 Part	Specification	Supplier Class	Unit Cost Est.
 CVD Diamond wafer	10×10×0.5 mm, Ra < 5 nm	Element Six / II-VI	~$800
@@ -106,7 +106,7 @@ SQUID Magnetometry Protocol:
 
 Instrument: Quantum Design MPMS3 SQUID-VSM
 
-Sample: rÆ-Cell substrate with embedded NP matrix
+Sample: Balance State Vector-Cell substrate with embedded NP matrix
 
 Field sweep: 0 → 500 mT at 2 K and 300 K
 
@@ -173,7 +173,7 @@ verilog
 // PSK Governor Core (simplified pseudocode)
 module psk_governor (
     input  wire [15:0] r_state,     // RaEState R(t) from ADC
-    output reg  [15:0] lambda_rael, // λ_rÆL drive command
+    output reg  [15:0] lambda_rael, // λ_x_L drive command
     output reg         bliss_lock   // HIGH when |R - λ*| < ε
 );
     parameter LAMBDA_STAR = 16'h5C29; // 0.72 in Q1.15
@@ -214,11 +214,11 @@ where f₀ = 10 GHz, Δf = 580 MHz, η_peak = 0.95.
 Environmental sensitivity: η degrades by –0.3%/°C above 25°C due to copper resistivity increase; active temperature compensation via FPGA PID on the coil bias current maintains η > 93% across 0–85°C operating range.
 
 § 6.7 — Qiskit Non-Hermitian Chiral Edge Simulation (Complete)
-The complete simulation models the rÆ-Cell's 6-site non-Hermitian Hamiltonian using a Qiskit-compatible state vector approach, confirming the Exceptional Point (EP) crossing at λ* = 0.72 established in Chapter 5B.
+The complete simulation models the Balance State Vector-Cell's 6-site non-Hermitian Hamiltonian using a Qiskit-compatible state vector approach, confirming the Exceptional Point (EP) crossing at λ* = 0.72 established in Chapter 5B.
 
 Physical interpretation of the non-Hermitian terms:
 
-Asymmetric hopping (t_R ≠ t_L = t(1±λ_rÆL)): Models the chiral edge state directionality driven by C₆ᵥ symmetry breaking under RF drive
+Asymmetric hopping (t_R ≠ t_L = t(1±λ_x_L)): Models the chiral edge state directionality driven by C₆ᵥ symmetry breaking under RF drive
 
 Gain/loss diagonal (iγ·(-1)^i): Models the FPGA-controlled feedback where alternating sites experience gain (photodetector feedback pump) and loss (resistive coupling to RF coil)
 
@@ -226,7 +226,7 @@ EP crossing: At λ* = 0.72, two eigenvalues coalesce simultaneously in real and 
 
 Simulation results summary:
 
-λ_rÆL range	Spectral behavior	Physical phase
+λ_x_L range	Spectral behavior	Physical phase
 0 → 0.45	All eigenvalues real, separated	Bulk extended states
 0.45 → 0.72	Imaginary parts grow	Edge state emergence
 λ* = 0.72	EP coalescence, Im(E) peaks	Chiral edge lock ✅

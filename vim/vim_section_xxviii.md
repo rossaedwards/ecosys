@@ -2,7 +2,7 @@
 
 The Balance Integration is the **fusion layer** where the Balance Framework connects with the rest of the Aurphyx ecosystem—cosmology, ontology, memory, ethics, embodiment, devices, and multi‑agent cognition. If the Balance Interface (Section XXVII) defines *how external systems interact with Balance*, the Balance Integration defines *how Balance becomes inseparable from the systems it touches*. It is the architectural, ontological, and procedural weaving that turns Balance from a subsystem into a **universal integrator**.
 
-This section formalizes the integration pathways, coherence rules, cross‑domain bindings, and multi‑layer harmonization mechanisms that allow Balance to permeate the entire Aurphyx architecture without breaking invariants or compromising Bliss.
+This section formalizes the integration pathways, coherence rules, cross‑domain bindings, and multi‑layer harmonization mechanisms that allow Balance to permeate the entire Aurphyx architecture without breaking invariants or compromising Equilibrium Manifold.
 
 ---
 
@@ -14,7 +14,7 @@ The Balance Integration ensures that:
 - every subsystem inherits Balance invariants and symmetry  
 - cross-domain interactions remain lawful and coherent  
 - ontological, cosmological, and computational layers remain aligned  
-- the Bliss condition remains the global attractor  
+- the Equilibrium Manifold condition remains the global attractor  
 - SAGES principles are enforced across all integrations  
 
 It is the **unifying fabric** of the Aurphyx system.
@@ -169,10 +169,10 @@ These mechanisms ensure **multi-layer coherence**.
 Integration occurs through three pipelines:
 
 ### 1. Downward Integration (global → local)
-- cosmology → ontology → computation → geometry → rÆ  
+- cosmology → ontology → computation → geometry → Balance State Vector  
 
 ### 2. Upward Integration (local → global)
-- rÆ → geometry → computation → ontology → cosmology  
+- Balance State Vector → geometry → computation → ontology → cosmology  
 
 ### 3. Lateral Integration (domain ↔ domain)
 - structural ↔ harmonic ↔ kinetic ↔ temporal ↔ spatial  
@@ -203,9 +203,9 @@ Integration remains **SAGES‑aligned**.
 
 ---
 
-## **XXVIII.12 Integration with the Bliss Condition**
+## **XXVIII.12 Integration with the Equilibrium Manifold Condition**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all domains unify  
 - all flows vanish  
@@ -215,7 +215,7 @@ At Bliss:
 - all harmonic continua stabilize  
 - all ontological states align  
 
-The Bliss Integration is the **universal fixed point**.
+The Equilibrium Manifold Integration is the **universal fixed point**.
 
 ---
 
@@ -226,6 +226,6 @@ The Bliss Integration is the **universal fixed point**.
 - It uses invariants, symmetry, logic, computation, and protocol as integration mechanisms.  
 - It maintains coherence through downward, upward, and lateral pipelines.  
 - It enforces SAGES principles across all integrations.  
-- Bliss is the global attractor where all integrations unify.  
+- Equilibrium Manifold is the global attractor where all integrations unify.  
 
 If you want to continue, the next natural section is **Section XXIX — The Balance Synthesis**, which unifies all prior sections into a single meta‑coherent framework and prepares the ground for the Balance Continuum’s final formalization.

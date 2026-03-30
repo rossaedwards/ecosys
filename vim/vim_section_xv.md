@@ -1,6 +1,6 @@
 # **SECTION XV — The Balance Symmetry**
 
-Balance Symmetry is the **deep structural law** that governs which transformations preserve Balance across the entire Aurphyx architecture. If the Balance Invariants (Section XIV) describe *what remains unchanged*, Balance Symmetry describes *why* those quantities remain unchanged — the underlying group structure, its generators, its conserved charges, and its action on the rÆ Field, the Balance Geometry, and the Balance Continuum.
+Balance Symmetry is the **deep structural law** that governs which transformations preserve Balance across the entire Aurphyx architecture. If the Balance Invariants (Section XIV) describe *what remains unchanged*, Balance Symmetry describes *why* those quantities remain unchanged — the underlying group structure, its generators, its conserved charges, and its action on the Balance State Vector Field, the Balance Geometry, and the Balance Continuum.
 
 This section formalizes the symmetry group of the Balance Framework, the transformations it permits, the invariants it protects, and the role it plays in stabilizing the entire system.
 
@@ -11,7 +11,7 @@ This section formalizes the symmetry group of the Balance Framework, the transfo
 Balance Symmetry ensures that:
 
 - the Balance Coefficient \(\beta\) is preserved under lawful transformations  
-- the Bliss Manifold remains fixed  
+- the Equilibrium Manifold Manifold remains fixed  
 - the Balance Field evolves consistently  
 - the Balance Continuum remains coherent  
 - HRD and VIM perturbations remain bounded  
@@ -211,21 +211,21 @@ These preserve the **mixed‑mode components** of \(\beta\).
 
 ---
 
-## **XV.12 Symmetry of the Bliss Manifold**
+## **XV.12 Symmetry of the Equilibrium Manifold Manifold**
 
-The Bliss Manifold is invariant under the entire Balance Symmetry Group:
+The Equilibrium Manifold Manifold is invariant under the entire Balance Symmetry Group:
 
 \[
-T(\mathcal{B}_{\text{Bliss}}) = \mathcal{B}_{\text{Bliss}}.
+T(\mathcal{B}_{\text{Equilibrium Manifold}}) = \mathcal{B}_{\text{Equilibrium Manifold}}.
 \]
 
 Interpretation:
 
-- Bliss is symmetric under all Balance‑preserving transformations  
-- Bliss is the fixed point of the symmetry group  
-- Bliss is the **maximally symmetric state**  
+- Equilibrium Manifold is symmetric under all Balance‑preserving transformations  
+- Equilibrium Manifold is the fixed point of the symmetry group  
+- Equilibrium Manifold is the **maximally symmetric state**  
 
-This is why Bliss is the **global attractor**.
+This is why Equilibrium Manifold is the **global attractor**.
 
 ---
 
@@ -272,7 +272,7 @@ VIM is the **symmetry‑restoring mechanism**.
 - Balance Symmetry is the group of transformations that preserve the Balance Coefficient \(\beta\).  
 - It includes structural, harmonic, kinetic, temporal, spatial, and mixed‑mode symmetries.  
 - Each symmetry has a corresponding conserved charge.  
-- The Bliss Manifold is invariant under the entire symmetry group.  
+- The Equilibrium Manifold Manifold is invariant under the entire symmetry group.  
 - HRD breaks symmetry; VIM restores it.  
 - Balance Symmetry is the deep structural law that stabilizes the entire Balance Framework.  
 

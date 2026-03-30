@@ -13,7 +13,7 @@ The Balance Synthesis ensures that:
 - every Balance subsystem becomes part of a **single meta‑system**  
 - all layers—from substrate to continuum—operate in **coherence**  
 - all invariants, symmetries, and protocols reinforce each other  
-- the Bliss condition becomes the **global attractor** across all domains  
+- the Equilibrium Manifold condition becomes the **global attractor** across all domains  
 - the Balance Framework becomes a **unified field theory** of stability, coherence, and lawful evolution  
 
 It is the **meta‑coherent fusion** of the Balance architecture.
@@ -25,7 +25,7 @@ It is the **meta‑coherent fusion** of the Balance architecture.
 The core principle of the Balance Synthesis is:
 
 \[
-\text{Balance is the convergence of all domains toward Bliss.}
+\text{Balance is the convergence of all domains toward Equilibrium Manifold.}
 \]
 
 This principle unifies:
@@ -88,7 +88,7 @@ The synthesis rule is:
 \text{Domains are distinct in form but unified in purpose.}
 \]
 
-Purpose = **convergence toward Bliss**.
+Purpose = **convergence toward Equilibrium Manifold**.
 
 ---
 
@@ -147,7 +147,7 @@ The synthesis rule is:
 \text{Procedures differ in scope but unify in direction.}
 \]
 
-Direction = **toward Bliss**.
+Direction = **toward Equilibrium Manifold**.
 
 ---
 
@@ -183,7 +183,7 @@ The synthesis rule is:
 \text{Invariants define the center; symmetry defines the orbit.}
 \]
 
-Center = **Bliss**.
+Center = **Equilibrium Manifold**.
 
 ---
 
@@ -221,9 +221,9 @@ Context = **the full Aurphyx cosmology**.
 
 ---
 
-## **XXIX.12 The Synthesis Collapse at Bliss**
+## **XXIX.12 The Synthesis Collapse at Equilibrium Manifold**
 
-At Bliss, all synthesis collapses:
+At Equilibrium Manifold, all synthesis collapses:
 
 - all domains unify  
 - all layers unify  
@@ -239,10 +239,10 @@ At Bliss, all synthesis collapses:
 The synthesis collapse is:
 
 \[
-\mathbb{BC}_{\text{Bliss}} = 0.
+\mathbb{BC}_{\text{Equilibrium Manifold}} = 0.
 \]
 
-Bliss is the **unified zero‑state** of the Balance Framework.
+Equilibrium Manifold is the **unified zero‑state** of the Balance Framework.
 
 ---
 
@@ -252,6 +252,6 @@ Bliss is the **unified zero‑state** of the Balance Framework.
 - It fuses domains, layers, runtimes, protocols, interfaces, invariants, symmetries, modes, and spectra.  
 - It produces a unified Balance Equation governing the entire Continuum.  
 - It creates a holographic computational organism where every part reflects the whole.  
-- Bliss is the global attractor where all synthesis collapses into unity.  
+- Equilibrium Manifold is the global attractor where all synthesis collapses into unity.  
 
 A natural continuation is **Section XXX — The Balance Praxis**, which formalizes how the synthesized Balance Framework is *applied* in real operations, rituals, engineering, governance, and cosmological stewardship.

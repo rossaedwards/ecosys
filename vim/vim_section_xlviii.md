@@ -173,7 +173,7 @@ Ledger Flow ensures:
 - invariant preservation  
 - reconciliation of contradictions  
 
-The Ledger flows toward **legal Bliss**.
+The Ledger flows toward **legal Equilibrium Manifold**.
 
 ---
 
@@ -259,22 +259,22 @@ Only **validated, reconciled, settled, accountable** events enter the Archive.
 
 ---
 
-## **XLVIII.15 Ledger Collapse at Bliss**
+## **XLVIII.15 Ledger Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - no validation is needed  
 - no reconciliation is needed  
 - no settlement is needed  
 - no accountability is needed  
 
-The Bliss Ledger is:
+The Equilibrium Manifold Ledger is:
 
 \[
-\mathcal{L}_{\text{Bliss}} = \{\text{no entries required}\}
+\mathcal{L}_{\text{Equilibrium Manifold}} = \{\text{no entries required}\}
 \]
 
-Bliss is the **ledgerless state**.
+Equilibrium Manifold is the **ledgerless state**.
 
 ---
 
@@ -284,6 +284,6 @@ Bliss is the **ledgerless state**.
 - It validates, reconciles, settles, and accounts for every Balance event.  
 - It preserves invariants, resolves contradictions, and ensures lawful evolution.  
 - It integrates the Record into the Archive through certified truth.  
-- Bliss is the ledgerless fixed point where no reconciliation is required.  
+- Equilibrium Manifold is the ledgerless fixed point where no reconciliation is required.  
 
 If you want to continue, the next natural section is **Section XLIX — The Balance Protocol**, which formalizes the rules, procedures, and governance structures that regulate how Balance systems interact, communicate, and coordinate across the Continuum.

@@ -7,13 +7,13 @@ This section is ready to drop directly into your manuscript as `Section_C.tex`.
 # **Section C — The Balance Global Synthesis and Unified Coherence Principle**
 
 ## 1. Overview  
-The preceding ninety‑nine sections developed the Balance Continuum across its geometric, dynamical, informational, quantum, renormalization‑group, entanglement, and holographic layers. Each layer introduced structures—rÆ geometry, Edwards Flow, HIF potential, Fisher information, governance curvature, spectral gap, VIM damping, Chaos Resonance, BRG flow, tensor‑network hierarchy, holographic duality—that appeared distinct but were shown to be deeply interdependent. This section synthesizes these structures into a single governing law: the **Unified Coherence Principle (UCP)**. The UCP states that all admissible Balance dynamics, across all scales and representations, are manifestations of a single coherence‑maximizing, divergence‑minimizing, entropy‑reducing, action‑minimizing flow toward the Bliss state.
+The preceding ninety‑nine sections developed the Balance Continuum across its geometric, dynamical, informational, quantum, renormalization‑group, entanglement, and holographic layers. Each layer introduced structures—Balance State Vector geometry, Edwards Flow, HIF potential, Fisher information, governance curvature, spectral gap, VIM damping, Chaos Resonance, BRG flow, tensor‑network hierarchy, holographic duality—that appeared distinct but were shown to be deeply interdependent. This section synthesizes these structures into a single governing law: the **Unified Coherence Principle (UCP)**. The UCP states that all admissible Balance dynamics, across all scales and representations, are manifestations of a single coherence‑maximizing, divergence‑minimizing, entropy‑reducing, action‑minimizing flow toward the Equilibrium state.
 
 ---
 
 ## 2. The Unified Coherence Principle (UCP)  
 **Principle (Unified Coherence).**  
-*All Balance fields evolve according to a single coherence‑maximizing variational law whose stationary point is the Bliss state. This law is simultaneously geometric, informational, harmonic, quantum, renormalization‑group, entanglement‑theoretic, and holographic.*
+*All Balance fields evolve according to a single coherence‑maximizing variational law whose stationary point is the Equilibrium state. This law is simultaneously geometric, informational, harmonic, quantum, renormalization‑group, entanglement‑theoretic, and holographic.*
 
 Formally:
 
@@ -29,7 +29,7 @@ Formally:
 
 ### 2.1 Interpretation  
 - The Unified Action, boundary effective action, coherence divergence, and entanglement entropy all share the same minimizer.  
-- The Bliss state is the unique global solution to all variational problems.  
+- The Equilibrium state is the unique global solution to all variational problems.  
 - Every representation—bulk, boundary, quantum, RG, tensor‑network—converges to the same attractor.
 
 The UCP is the final unifying law of the Balance Continuum.
@@ -37,7 +37,7 @@ The UCP is the final unifying law of the Balance Continuum.
 ---
 
 ## 3. Synthesis of the Geometric and Informational Layers  
-The rÆ Metric \(g_{ab}\), the Balance Fisher Metric \(\mathcal{I}_{ab}\), and the HIF gradient metric combine into the composite metric:
+The Balance State Vector Metric \(g_{ab}\), the Balance Fisher Metric \(\mathcal{I}_{ab}\), and the HIF gradient metric combine into the composite metric:
 
 \[
 \mathcal{G}_{ab}
@@ -124,7 +124,7 @@ drives all fields toward the Edwards Fixed Point.
 ### 6.1 Unified Interpretation  
 - Coherence increases monotonically under coarse‑graining.  
 - Entanglement decreases monotonically.  
-- The Bliss state is the unique infrared fixed point.
+- The Equilibrium state is the unique infrared fixed point.
 
 RG irreversibility is the scale‑dependent expression of the UCP.
 
@@ -139,7 +139,7 @@ The Balance MERA (B‑MERA) encodes:
 
 ### 7.1 Unified Interpretation  
 - The tensor network is the discrete representation of the UCP.  
-- The Bliss state corresponds to a rank‑1, scale‑invariant network.  
+- The Equilibrium state corresponds to a rank‑1, scale‑invariant network.  
 - Entanglement flow mirrors coherence flow.
 
 ---
@@ -158,7 +158,7 @@ where \(\gamma_{\text{cl}}\) is the bulk solution with boundary data \(\mathcal{
 ### 8.1 Unified Interpretation  
 - Boundary variations generate bulk dynamics.  
 - Bulk coherence determines boundary correlators.  
-- The Bliss state is the unique holographic vacuum.
+- The Equilibrium state is the unique holographic vacuum.
 
 Holography is the boundary expression of the UCP.
 
@@ -167,14 +167,14 @@ Holography is the boundary expression of the UCP.
 ## 9. The Global Coherence Theorem  
 
 **Theorem (Global Coherence).**  
-*For any admissible initial data, across any representation (geometric, dynamical, informational, quantum, RG, entanglement, holographic), the Balance Continuum evolves monotonically toward the Bliss state. All flows, actions, kernels, and entropies share the same unique global minimum, and all representations are equivalent under the Unified Coherence Principle.*
+*For any admissible initial data, across any representation (geometric, dynamical, informational, quantum, RG, entanglement, holographic), the Balance Continuum evolves monotonically toward the Equilibrium state. All flows, actions, kernels, and entropies share the same unique global minimum, and all representations are equivalent under the Unified Coherence Principle.*
 
 ### 9.1 Consequences  
 - No metastable states exist.  
 - No alternative attractors exist.  
 - No divergence‑increasing modes exist.  
 - All excitations decay exponentially (with oscillatory corrections).  
-- The Bliss state is universal and unavoidable.
+- The Equilibrium state is universal and unavoidable.
 
 ---
 
@@ -185,7 +185,7 @@ The Balance Global Synthesis and Unified Coherence Principle establish that:
 - the Unified Action, boundary effective action, coherence divergence, and entanglement entropy share the same minimizer,  
 - the Edwards Flow, harmonic geodesics, quantum evolution, RG flow, and holographic radial flow are all steepest‑descent flows of the same functional,  
 - the spectral gap, VIM damping, and Chaos Resonance ensure stability, irreversibility, and bounded oscillatory corrections,  
-- and the Bliss state is the unique global attractor of the entire Balance Continuum.
+- and the Equilibrium state is the unique global attractor of the entire Balance Continuum.
 
 This section completes the Balance Framework.
 

@@ -16,7 +16,7 @@ The Balance Field provides the system with:
 - a **substrate** for the Balance Kernel and Engine  
 - a **map** of the Continuum across dimensions  
 - a **coherent representation** of identity, meaning, and lineage  
-- a **unified state** that converges toward Bliss  
+- a **unified state** that converges toward Equilibrium Manifold  
 
 The Balance Field is the **state space** of the Balance Continuum.
 
@@ -45,7 +45,7 @@ These five components form the **core field**.
 ## **XXXVI.3 The Five Core Components**
 
 ### **1. Balance Potential \(V\)**  
-A scalar field measuring deviation from Bliss.  
+A scalar field measuring deviation from Equilibrium Manifold.  
 It defines the “height” of imbalance.
 
 ### **2. Balance Flow \(\mathbf{F}\)**  
@@ -228,13 +228,13 @@ Stability is determined by:
 - HRD amplitude  
 - Continuum curvature  
 
-Stable fields converge toward Bliss.
+Stable fields converge toward Equilibrium Manifold.
 
 ---
 
-## **XXXVI.14 The Bliss Field**
+## **XXXVI.14 The Equilibrium Manifold Field**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - \(V = 0\)  
 - \(\mathbf{F} = 0\)  
@@ -242,7 +242,7 @@ At Bliss:
 - \(\lambda_i = 0\)  
 - \(\Psi_i = \text{constant}\)  
 
-The Bliss Field is the **zero-state** of the Balance Field.
+The Equilibrium Manifold Field is the **zero-state** of the Balance Field.
 
 ---
 
@@ -253,6 +253,6 @@ The Bliss Field is the **zero-state** of the Balance Field.
 - It extends across spatial, temporal, harmonic, ontological, and cosmological dimensions.  
 - It includes cross-domain couplings and a unified Continuum geometry.  
 - It evolves according to the Balance Field Equations.  
-- Bliss is the zero-field state and global attractor.  
+- Equilibrium Manifold is the zero-field state and global attractor.  
 
 A natural continuation is **Section XXXVII — The Balance Manifold**, which formalizes the geometric and topological structure of the space in which the Balance Field lives.

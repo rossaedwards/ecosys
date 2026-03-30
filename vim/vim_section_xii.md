@@ -2,7 +2,7 @@
 
 The Balance Field is the **unified field‑theoretic object** that integrates everything developed in Sections IV–XI: the Balance Potential, the Balance Equation, the Balance Operator, the Balance Kernel, the Balance Manifold, the Balance Geometry, the Balance Tensor, and the Balance Flow.  
 
-If each previous section introduced one *facet* of Balance, the Balance Field is the **total field** that binds them into a single, coherent, dynamical, geometric, and computational entity. It is the field that the rÆ state actually *lives in*, *moves through*, and *evolves under*.
+If each previous section introduced one *facet* of Balance, the Balance Field is the **total field** that binds them into a single, coherent, dynamical, geometric, and computational entity. It is the field that the Balance State Vector state actually *lives in*, *moves through*, and *evolves under*.
 
 This section defines the Balance Field, its governing equations, its decomposition, its invariants, and its role in the full Aurphyx architecture.
 
@@ -13,7 +13,7 @@ This section defines the Balance Field, its governing equations, its decompositi
 The Balance Field provides a **complete, unified description** of Balance dynamics. It:
 
 - merges scalar, vector, and tensor quantities  
-- defines the full dynamical environment of the rÆ Field  
+- defines the full dynamical environment of the Balance State Vector Field  
 - governs how imbalance propagates, dissipates, and circulates  
 - encodes the geometry, curvature, and flow of Balance  
 - integrates HRD, VIM, and routing into a single field  
@@ -99,7 +99,7 @@ Each subfield contains:
 - a vector flow  
 - a tensor curvature  
 
-This decomposition mirrors the S, F, and K subspaces of the rÆ Field.
+This decomposition mirrors the S, F, and K subspaces of the Balance State Vector Field.
 
 ---
 
@@ -181,9 +181,9 @@ They are the **coupling channels** of the Balance Field.
 
 ---
 
-## **XII.9 The Balance Field and the Bliss Manifold**
+## **XII.9 The Balance Field and the Equilibrium Manifold Manifold**
 
-On the Bliss Manifold:
+On the Equilibrium Manifold Manifold:
 
 - \(V = 0\)  
 - \(\mathbf{F} = 0\)  
@@ -192,12 +192,12 @@ On the Bliss Manifold:
 Thus:
 
 \[
-\mathbb{B}_{\text{Bliss}} = (0, 0, 0).
+\mathbb{B}_{\text{Equilibrium Manifold}} = (0, 0, 0).
 \]
 
 Interpretation:
 
-- Bliss is a **zero‑field region**  
+- Equilibrium Manifold is a **zero‑field region**  
 - no potential  
 - no flow  
 - no curvature  
@@ -263,7 +263,7 @@ Thus:
 - time is shaped by the Balance Field  
 - time flows along field lines  
 - time accelerates in steep regions  
-- time reverses when the field crosses Bliss  
+- time reverses when the field crosses Equilibrium Manifold  
 
 Temporal geometry is **field‑driven**.
 
@@ -298,7 +298,7 @@ The Balance Field is the **routing substrate** of the array.
 - The Balance Field unifies the Balance Potential, Flow, and Tensor.  
 - It is the scalar–vector–tensor field that governs all Balance dynamics.  
 - It decomposes into structural, harmonic, kinetic, and mixed‑mode subfields.  
-- Bliss is a zero‑field region.  
+- Equilibrium Manifold is a zero‑field region.  
 - HRD perturbs the field; VIM matches it; time flows through it.  
 - The Tetra‑Hexa Array routes according to field gradients.  
 - The Balance Field is the complete field‑theoretic description of Balance.  

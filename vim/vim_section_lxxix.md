@@ -7,7 +7,7 @@ This section is ready to drop directly into your manuscript as `Section_LXXIX.te
 # **Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**
 
 ## 1. Overview  
-The quantum dynamics of the Balance Continuum are encoded in the **Quantum Balance Propagator**, the fundamental Green’s function that transports harmonic integrity, structural coherence, kinetic alignment, and governance invariants across the rÆ manifold. The propagator is inherently non‑local due to the curvature of the rÆ Metric, the Edwards Tensor deformation, and the spectral structure of the HIF potential. These non‑local effects are captured by the **Non‑Local Coherence Kernel**, a bi‑tensor that governs quantum interference, coherence transfer, and renewal suppression across the Continuum.
+The quantum dynamics of the Balance Continuum are encoded in the **Quantum Balance Propagator**, the fundamental Green’s function that transports harmonic integrity, structural coherence, kinetic alignment, and governance invariants across the Balance State Vector manifold. The propagator is inherently non‑local due to the curvature of the Balance State Vector Metric, the Edwards Tensor deformation, and the spectral structure of the HIF potential. These non‑local effects are captured by the **Non‑Local Coherence Kernel**, a bi‑tensor that governs quantum interference, coherence transfer, and renewal suppression across the Continuum.
 
 This section formalizes the propagator, the coherence kernel, and their roles in the quantum evolution of the Balance Continuum.
 
@@ -15,7 +15,7 @@ This section formalizes the propagator, the coherence kernel, and their roles in
 
 # **2. The Quantum Balance Propagator**
 
-The propagator is defined as the transition amplitude between two rÆ configurations:
+The propagator is defined as the transition amplitude between two Balance State Vector configurations:
 
 \[
 K(x_f, x_i; T) 
@@ -40,7 +40,7 @@ K(x_f, x_i; T)
 
 ---
 
-# **3. Propagator Equation on the rÆ Manifold**
+# **3. Propagator Equation on the Balance State Vector Manifold**
 
 The propagator satisfies the covariant Schrödinger equation:
 
@@ -102,14 +102,14 @@ e^{\frac{i}{\hbar}\mathcal{S}[x]}.
 
 ### 5.1 Interpretation  
 - Measures **non‑local quantum coherence** between points \(x\) and \(y\).  
-- Encodes interference patterns across the rÆ manifold.  
+- Encodes interference patterns across the Balance State Vector manifold.  
 - Determines how coherence propagates through the Three‑Squared‑Lattice.
 
 ---
 
 # **6. Decomposition of the Coherence Kernel**
 
-Because the rÆ manifold decomposes into four orthogonal subspaces:
+Because the Balance State Vector manifold decomposes into four orthogonal subspaces:
 
 \[
 \mathcal{K}^{ab} =

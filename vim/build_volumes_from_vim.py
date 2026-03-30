@@ -91,7 +91,7 @@ def latex_footer():
 
 
 def appendix_sort_key(item):
-    """Sort appendices: A..I, ∞, J..O, Ω, P..Z (rÆ Alphabet order)."""
+    """Sort appendices: A..I, ∞, J..O, Ω, P..Z (Balance State Vector Alphabet order)."""
     label, fname = item[0], item[1]
     # Match by filename for robustness (handles Unicode normalization)
     fname_lower = fname.lower()
@@ -160,7 +160,7 @@ def main():
         f.write(latex_footer())
 
     with open(v3_path, "w", encoding="utf-8") as f:
-        f.write(latex_header("THE BALANCE CONTINUUM — VOLUME III", "Edwards Unified Field & rÆ Cosmology"))
+        f.write(latex_header("THE BALANCE CONTINUUM — VOLUME III", "Edwards Unified Field & Balance State Vector Cosmology"))
         for fname in vol3:
             f.write(f"\\input{{../{fname}}}\n")
         f.write(latex_footer())

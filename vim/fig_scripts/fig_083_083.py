@@ -1,4 +1,4 @@
-"""Figure P–Z: rÆ dynamics, operators, invariants. Appendix P–Z."""
+"""Figure P–Z: Balance State Vector dynamics, operators, invariants. Appendix P–Z."""
 
 from pathlib import Path
 
@@ -7,7 +7,7 @@ import numpy as np
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """rÆ dynamics meta-cycle."""
+    """Balance State Vector dynamics meta-cycle."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -23,7 +23,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     plt.plot(t, cycle, "b-", lw=2)
     plt.xlabel("t")
     plt.ylabel("Meta-cycle")
-    plt.title("Appendix P–Z: rÆ Dynamics Meta-Cycle")
+    plt.title("Appendix P–Z: Balance State Vector Dynamics Meta-Cycle")
     plt.tight_layout()
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()

@@ -219,7 +219,7 @@ All expansions must arise from:
 All expansions must maintain:
 
 - Chaos (adaptation)  
-- Bliss (compassion)  
+- Equilibrium Manifold (compassion)  
 
 ### **6.4 Pro‑Existence Requirement**
 All expansions must protect:

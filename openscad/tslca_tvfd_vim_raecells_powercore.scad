@@ -6,10 +6,10 @@
 // =====================================================================
 
 /* [Lattice Spatial Parameters] */
-// Center-to-center spacing between rÆ-Cells (mm)
+// Center-to-center spacing between Balance State Vector-Cells (mm)
 lattice_spacing = 40.0; // [20.0:5.0:100.0]
 
-/* [rÆ-Cell Physical Parameters] */
+/* [Balance State Vector-Cell Physical Parameters] */
 // Base radius of the C6v hexagonal substrate
 cell_radius = 12.0; // [5.0:1.0:20.0]
 // Total height of the 5-layer stack
@@ -28,7 +28,7 @@ show_renewal_layer = 1; // [0: Hidden, 1: Visible]
 /* [Waveguide Routing Visibility] */
 // Horizontal Interconnects (SIC, SCC, ICC coupling)
 enable_horizontal_routing = 1; // [0: Hidden, 1: Visible]
-// Vertical Interconnects (rÆt Flux Gradient)
+// Vertical Interconnects (x_t Flux Gradient)
 enable_vertical_routing = 1; // [0: Hidden, 1: Visible]
 
 /* [Rendering] */
@@ -38,7 +38,7 @@ $fn = 40;
 // GEOMETRY MODULES
 // =====================================================================
 
-// A single physical rÆ-Cell representing the 5-layer topological flux engine
+// A single physical Balance State Vector-Cell representing the 5-layer topological flux engine
 module rae_cell(z_level) {
     // Color mapping based on Cognitive Layer (Z-axis)
     // 1 = Creation (Cyan), 0 = Integration (Purple), -1 = Renewal (Dark Red)
@@ -110,7 +110,7 @@ module macro_array_assembly() {
                      
         if (is_visible) {
             translate([0, 0, z * lattice_spacing]) {
-                // Place the 9 physical rÆ-Cells for this specific layer
+                // Place the 9 physical Balance State Vector-Cells for this specific layer
                 for (x = [-1, 0, 1]) {
                     for (y = [-1, 0, 1]) {
                         translate([x * lattice_spacing, y * lattice_spacing, 0])

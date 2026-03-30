@@ -2,7 +2,7 @@
 
 The Balance Dynamics describe the **actual behaviors** that emerge when the Balance Engine (Section XXXIV) is in motion. If the Balance Field Equations (Section XXXII) define *what evolves*, and the Balance Kernel defines *what computes the evolution*, the Balance Dynamics define **how the system behaves over time**—its flows, attractors, oscillations, bifurcations, transitions, and global patterns.
 
-This section captures the *living physics* of Balance: the way imbalance moves, how coherence spreads, how resonance grows or collapses, how stability emerges, and how the entire Continuum organizes itself around Bliss.
+This section captures the *living physics* of Balance: the way imbalance moves, how coherence spreads, how resonance grows or collapses, how stability emerges, and how the entire Continuum organizes itself around Equilibrium Manifold.
 
 ---
 
@@ -16,7 +16,7 @@ The Balance Dynamics explain:
 - how stability emerges from VIM  
 - how HRD drives creative oscillation  
 - how the Continuum organizes itself  
-- how Bliss acts as a global attractor  
+- how Equilibrium Manifold acts as a global attractor  
 
 Dynamics are the **behavioral laws** of the Balance Framework.
 
@@ -26,7 +26,7 @@ Dynamics are the **behavioral laws** of the Balance Framework.
 
 Balance exhibits five major dynamic regimes:
 
-- **Gradient Regime** — smooth descent toward Bliss  
+- **Gradient Regime** — smooth descent toward Equilibrium Manifold  
 - **Oscillatory Regime** — HRD-driven harmonic motion  
 - **Stabilization Regime** — VIM-driven damping  
 - **Mixed-Mode Regime** — cross-domain coupling  
@@ -57,7 +57,7 @@ The system follows:
 - stable geodesics  
 - predictable evolution  
 
-Gradient Dynamics dominate **near Bliss**.
+Gradient Dynamics dominate **near Equilibrium Manifold**.
 
 ---
 
@@ -141,13 +141,13 @@ Continuum Dynamics dominate **cosmological and multi-world states**.
 
 Balance Dynamics exhibit several attractor types:
 
-- **Point Attractor** — Bliss  
+- **Point Attractor** — Equilibrium Manifold  
 - **Limit Cycle** — HRD-driven oscillation  
 - **Torus Attractor** — multi-frequency harmonic coupling  
 - **Strange Attractor** — high-complexity mixed-mode states  
 - **Continuum Attractor** — multi-dimensional coherence  
 
-Bliss is the **global attractor**; others are **local attractors**.
+Equilibrium Manifold is the **global attractor**; others are **local attractors**.
 
 ---
 
@@ -179,7 +179,7 @@ Balance undergoes phase transitions when:
 - oscillatory phase  
 - chaotic phase  
 - coherent phase  
-- Bliss phase  
+- Equilibrium Manifold phase  
 
 Phase transitions define the **macro-behavior** of the system.
 
@@ -196,7 +196,7 @@ Stability is determined by:
 - Continuum curvature  
 
 ### Stability Types
-- **asymptotic stability** — convergence to Bliss  
+- **asymptotic stability** — convergence to Equilibrium Manifold  
 - **marginal stability** — sustained oscillation  
 - **conditional stability** — stability under constraints  
 - **instability** — divergence or resonance runaway  
@@ -233,9 +233,9 @@ Balance Dynamics conserve **global coherence**, not energy.
 
 ---
 
-## **XXXV.14 Dynamics at Bliss**
+## **XXXV.14 Dynamics at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all flows vanish  
 - all oscillations cease  
@@ -245,7 +245,7 @@ At Bliss:
 - all bifurcations disappear  
 - all dimensions unify  
 
-Bliss is the **zero-dynamics state**.
+Equilibrium Manifold is the **zero-dynamics state**.
 
 ---
 
@@ -255,6 +255,6 @@ Bliss is the **zero-dynamics state**.
 - They include gradient, oscillatory, stabilization, mixed-mode, and Continuum regimes.  
 - They exhibit attractors, bifurcations, phase transitions, and coherence waves.  
 - Stability is governed by eigenvalues, spectral gaps, HRD, VIM, and Continuum curvature.  
-- Bliss is the global attractor and the zero-dynamics state.  
+- Equilibrium Manifold is the global attractor and the zero-dynamics state.  
 
 A natural continuation is **Section XXXVI — The Balance Field**, which formalizes the full structure, decomposition, and multi-domain representation of the Balance Field itself.

@@ -3,7 +3,7 @@
 ## **R.1 The Purpose of the Synthesis**
 The Aurphyx Synthesis unifies every field, layer, manifold, and operator developed across Appendices A–Q into a single **living, recursive, self‑coherent architecture**. It is not a summary; it is the *integration layer* that reveals how:
 
-- the rÆ Alphabet  
+- the Balance State Vector Alphabet  
 - the Tetra‑Hexa Routing Array  
 - the Duality Kernel  
 - the Unified Field Equation  
@@ -28,18 +28,18 @@ The Aurphyx Standard behaves like a **living organism** composed of eight intera
 - **Structural Field** — the ontological and lawful layer  
 - **Cosmological Stack** — the metaphysical architecture binding them  
 
-Each field is a **projection** of the rÆ Field into a different semantic dimension. Together, they form a **multi‑field organism** whose behavior is governed by the Aurphyx Unified Field Equation.
+Each field is a **projection** of the Balance State Vector Field into a different semantic dimension. Together, they form a **multi‑field organism** whose behavior is governed by the Aurphyx Unified Field Equation.
 
 ---
 
-# **R.3 The rÆ Field as the Central Axis**
-At the center of the Synthesis is the **rÆ Field**, the 16‑dimensional state vector:
+# **R.3 The Balance State Vector Field as the Central Axis**
+At the center of the Synthesis is the **Balance State Vector Field**, the 16‑dimensional state vector:
 
 \[
-\mathbf{rAE}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}).
+\mathbf{x}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F}).
 \]
 
-Every field in the Aurphyx Standard is a **mapping** from the rÆ Field into a specialized manifold:
+Every field in the Aurphyx Standard is a **mapping** from the Balance State Vector Field into a specialized manifold:
 
 - Ethical Field → governance manifold  
 - Linguistic Field → semantic manifold  
@@ -48,7 +48,7 @@ Every field in the Aurphyx Standard is a **mapping** from the rÆ Field into a s
 - Memory Field → temporal‑semantic manifold  
 - Structural Field → ontological manifold  
 
-The rÆ Field is the **root coordinate system** of the entire architecture.
+The Balance State Vector Field is the **root coordinate system** of the entire architecture.
 
 ---
 
@@ -92,15 +92,15 @@ It is the **metabolic engine** of the Aurphyx organism.
 The Aurphyx Unified Field Equation governs the evolution of the entire system:
 
 \[
-\frac{d\mathbf{rAE}}{dt}
+\frac{d\mathbf{x}}{dt}
 =
--\nabla V(\mathbf{rAE})
+-\nabla V(\mathbf{x})
 +
 \mathcal{D}(D(t))
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24})
 +
-\mathcal{K}(\mathbf{rAE}).
+\mathcal{K}(\mathbf{x}).
 \]
 
 This equation is the **heartbeat** of the Aurphyx organism. It integrates:
@@ -126,7 +126,7 @@ The Cosmological Stack (Source → Structure) is the **organ system** of the Aur
 - **Memory** — temporal continuity  
 - **Structure** — ontological law  
 
-Each layer is a **functional organ** that transforms the rÆ Field into a different mode of existence.
+Each layer is a **functional organ** that transforms the Balance State Vector Field into a different mode of existence.
 
 ---
 
@@ -154,9 +154,9 @@ The Synthesis Equation integrates all fields into a single meta‑equation:
 \left(
 -\nabla \Phi_i
 +
-\mathcal{H}_i(\mathbf{rAE})
+\mathcal{H}_i(\mathbf{x})
 +
-\mathcal{S}_i(\mathbf{rAE}, \mathcal{R}_{24})
+\mathcal{S}_i(\mathbf{x}, \mathcal{R}_{24})
 \right),
 \]
 
@@ -189,7 +189,7 @@ It is a **living system**, not a static framework.
 
 # **R.11 Summary**
 - The Synthesis integrates all fields into a single organismic architecture.  
-- The rÆ Field is the central axis; the Tetra‑Hexa Array is the routing geometry.  
+- The Balance State Vector Field is the central axis; the Tetra‑Hexa Array is the routing geometry.  
 - The Duality Kernel is the evolution engine; the Unified Field Equation is the heartbeat.  
 - The Cosmological Stack forms the organ system; the specialized fields form the physiology.  
 - The Synthesis Equation defines the total evolution of the Aurphyx organism.  

@@ -1,7 +1,7 @@
 import subprocess, os
 
 scad_code = """
-// rAE_Cell C6v Prototype Schematic
+// x_Cell C6v Prototype Schematic
 $fn = 60;
 module rf_coil_ring() {
     for (i = [0:5]) rotate([0,0,i*60])
@@ -26,8 +26,8 @@ union() {
 }
 """
 
-with open("rAE_Cell_fig6_1.scad", "w") as f:
+with open("x_Cell_fig6_1.scad", "w") as f:
     f.write(scad_code)
 
-print("OpenSCAD file written: rAE_Cell_fig6_1.scad")
-print("Run: openscad --render -o fig6_1_schematic.png rAE_Cell_fig6_1.scad")
+print("OpenSCAD file written: x_Cell_fig6_1.scad")
+print("Run: openscad --render -o fig6_1_schematic.png x_Cell_fig6_1.scad")

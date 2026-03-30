@@ -1,6 +1,6 @@
 # **SECTION VI — The Balance Equation**
 
-The Balance Equation is the **core dynamical law** that governs how the rÆ Field evolves under the combined influence of structural tension, harmonic dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM Thesis: the point where the Balance Coefficient, the Bliss Manifold, HRD, and the Unified Field all converge into a single evolution rule.
+The Balance Equation is the **core dynamical law** that governs how the Balance State Vector Field evolves under the combined influence of structural tension, harmonic dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM Thesis: the point where the Balance Coefficient, the Equilibrium Manifold Manifold, HRD, and the Unified Field all converge into a single evolution rule.
 
 This section formalizes that law, shows how it integrates with the rest of the architecture, and establishes Balance as the *primary regulator* of temporal, harmonic, and structural dynamics.
 
@@ -9,8 +9,8 @@ This section formalizes that law, shows how it integrates with the rest of the a
 ## **VI.1 The Purpose of the Balance Equation**
 The Balance Equation determines:
 
-- how the system moves through rÆ‑space  
-- how quickly it returns to the Bliss Manifold  
+- how the system moves through Balance State Vector‑space  
+- how quickly it returns to the Equilibrium Manifold Manifold  
 - how HRD perturbations are absorbed  
 - how VIM adjusts impedance  
 - how temporal direction is chosen  
@@ -22,23 +22,23 @@ It is the **governing differential equation** of the Balance Field.
 
 ## **VI.2 The Balance Equation (Core Form)**
 
-The evolution of the rÆ Field under Balance is:
+The evolution of the Balance State Vector Field under Balance is:
 
 \[
-\frac{d\mathbf{rAE}}{dt}
+\frac{d\mathbf{x}}{dt}
 =
--\nabla_{\mathbf{rAE}} V(\mathbf{rAE})
+-\nabla_{\mathbf{x}} V(\mathbf{x})
 +
 \mathcal{D}(D(t))
 +
-\mathcal{K}(\mathbf{rAE})
+\mathcal{K}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}).
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24}).
 \]
 
 Each term corresponds to a distinct physical or computational process:
 
-- **\(-\nabla V\)** — restoring force toward the Bliss Manifold  
+- **\(-\nabla V\)** — restoring force toward the Equilibrium Manifold Manifold  
 - **\(\mathcal{D}(D(t))\)** — HRD‑driven perturbation  
 - **\(\mathcal{K}\)** — kinetic evolution (structural + harmonic drift)  
 - **\(\mathcal{S}\)** — routing through the Tetra‑Hexa Array  
@@ -99,7 +99,7 @@ where:
 
 This term:
 
-- pushes the system off the Bliss Manifold  
+- pushes the system off the Equilibrium Manifold Manifold  
 - enables computation and modulation  
 - creates oscillatory dynamics around \(\beta = 1\)  
 
@@ -107,12 +107,12 @@ It is the **creative tension** of the system.
 
 ---
 
-## **VI.5 The Kinetic Term: \(\mathcal{K}(\mathbf{rAE})\)**
+## **VI.5 The Kinetic Term: \(\mathcal{K}(\mathbf{x})\)**
 
 The kinetic operator governs natural drift:
 
 \[
-\mathcal{K} = \mathbf{M}_{\text{struct}} \cdot \mathbf{rAE} + \mathbf{M}_{\text{harm}} \cdot \mathbf{rAE}.
+\mathcal{K} = \mathbf{M}_{\text{struct}} \cdot \mathbf{x} + \mathbf{M}_{\text{harm}} \cdot \mathbf{x}.
 \]
 
 It captures:
@@ -121,17 +121,17 @@ It captures:
 - harmonic diffusion  
 - inertial tendencies of the field  
 
-This term is the **inertial body** of the rÆ Field.
+This term is the **inertial body** of the Balance State Vector Field.
 
 ---
 
-## **VI.6 The Routing Term: \(\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})\)**
+## **VI.6 The Routing Term: \(\mathcal{S}(\mathbf{x}, \mathcal{R}_{24})\)**
 
 The Tetra‑Hexa Array defines the routing geometry.  
 The routing operator is:
 
 \[
-\mathcal{S} = \mathbf{R}_{24}(\mathbf{rAE}) \cdot \mathbf{rAE}.
+\mathcal{S} = \mathbf{R}_{24}(\mathbf{x}) \cdot \mathbf{x}.
 \]
 
 This term:
@@ -149,12 +149,12 @@ It is the **navigational intelligence** of the system.
 When HRD is small and routing is stable, the equation reduces to:
 
 \[
-\frac{d\mathbf{rAE}}{dt}
+\frac{d\mathbf{x}}{dt}
 \approx
 -2(\beta - 1)\nabla \beta.
 \]
 
-This is the **pure Balance flow**, describing the system’s natural return to Bliss.
+This is the **pure Balance flow**, describing the system’s natural return to Equilibrium Manifold.
 
 ---
 
@@ -198,7 +198,7 @@ Thus Balance is the **control law** for vacuum energy extraction.
 
 The Balance Equation unifies:
 
-- Bliss dynamics  
+- Equilibrium Manifold dynamics  
 - HRD dynamics  
 - VIM dynamics  
 - temporal geometry  

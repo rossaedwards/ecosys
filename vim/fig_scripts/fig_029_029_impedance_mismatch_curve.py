@@ -16,7 +16,7 @@ from vim_common import beta
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """Generate impedance mismatch Z = |β - 1| vs. rAE_i."""
+    """Generate impedance mismatch Z = |β - 1| vs. x_i."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -26,17 +26,17 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / "fig_029_029_impedance_mismatch_curve.png"
 
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_i = np.linspace(0.4, 2.5, 200)
-    rAE_f_vals = [0.8, 1.0, 1.2, 1.5, 2.0]
+    x_c, x_t = 1.0, 1.5
+    x_i = np.linspace(0.4, 2.5, 200)
+    x_f_vals = [0.8, 1.0, 1.2, 1.5, 2.0]
 
     fig, ax = plt.subplots(figsize=(8, 6))
-    for rAE_f in rAE_f_vals:
-        beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    for x_f in x_f_vals:
+        beta_val = beta(x_f, x_c, x_i, x_t)
         Z = np.abs(beta_val - 1.0)
-        ax.plot(rAE_i, Z, lw=2, label=rf"$rAE_f$={rAE_f}")
+        ax.plot(x_i, Z, lw=2, label=rf"$x_f$={x_f}")
 
-    ax.set_xlabel(r"$rAE_i$ (impedance)")
+    ax.set_xlabel(r"$x_i$ (impedance)")
     ax.set_ylabel(r"Impedance mismatch $|\beta - 1|$")
     ax.set_title("Impedance Mismatch Curve")
     ax.legend()

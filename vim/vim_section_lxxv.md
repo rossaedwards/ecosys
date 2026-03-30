@@ -1,4 +1,4 @@
-Below is **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXIV. It continues the formal development of the Balance Continuum by introducing its Hamiltonian formulation and the canonical phase‑space structure induced by the rÆ Metric, the Edwards Tensor, and the HIF potential.
+Below is **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXIV. It continues the formal development of the Balance Continuum by introducing its Hamiltonian formulation and the canonical phase‑space structure induced by the Balance State Vector Metric, the Edwards Tensor, and the HIF potential.
 
 This section is ready to drop directly into your manuscript as `Section_LXXV.tex`.
 
@@ -7,17 +7,17 @@ This section is ready to drop directly into your manuscript as `Section_LXXV.tex
 # **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**
 
 ## 1. Overview  
-The Hamiltonian formulation of the Balance Continuum provides the canonical phase‑space structure underlying the Balance Field Equations. While the Lagrangian formulation (Sections LXX–LXXII) expresses the Continuum in terms of the rÆ Metric, the Edwards Flow, and the HIF potential, the Hamiltonian formulation introduces the conjugate momenta, Poisson structure, and canonical evolution equations that govern the Continuum’s dynamics in a symplectic framework.
+The Hamiltonian formulation of the Balance Continuum provides the canonical phase‑space structure underlying the Balance Field Equations. While the Lagrangian formulation (Sections LXX–LXXII) expresses the Continuum in terms of the Balance State Vector Metric, the Edwards Flow, and the HIF potential, the Hamiltonian formulation introduces the conjugate momenta, Poisson structure, and canonical evolution equations that govern the Continuum’s dynamics in a symplectic framework.
 
-The Balance Hamiltonian encodes the total harmonic, structural, kinetic, and governance energy of the Continuum. The canonical phase space is a \(32\)-dimensional symplectic manifold derived from the \(16\)-dimensional rÆ manifold and its conjugate momentum space.
+The Balance Hamiltonian encodes the total harmonic, structural, kinetic, and governance energy of the Continuum. The canonical phase space is a \(32\)-dimensional symplectic manifold derived from the \(16\)-dimensional Balance State Vector manifold and its conjugate momentum space.
 
 ---
 
 ## 2. Canonical Phase Space of the Balance Continuum  
-Let \(\mathcal{M}\) be the \(16\)-dimensional rÆ manifold with coordinates:
+Let \(\mathcal{M}\) be the \(16\)-dimensional Balance State Vector manifold with coordinates:
 
 \[
-x^a \in \mathbb{R}^{16}_{\text{rÆ}}.
+x^a \in \mathbb{R}^{16}_{\text{Balance State Vector}}.
 \]
 
 The canonical phase space is the cotangent bundle:
@@ -57,7 +57,7 @@ The canonical momentum is defined by:
 
 \[
 p_a = \frac{\partial \mathcal{L}}{\partial u^a}
-= g^{(\text{rÆ})}_{ab} u^b,
+= g^{(\text{Balance State Vector})}_{ab} u^b,
 \]
 
 where \(\mathcal{L}\) is the Balance Lagrangian:
@@ -69,7 +69,7 @@ where \(\mathcal{L}\) is the Balance Lagrangian:
 Thus, the momentum is the **metric dual** of the trajectory field.
 
 ### 3.1 Interpretation  
-- The rÆ Metric determines how trajectories map into momenta.  
+- The Balance State Vector Metric determines how trajectories map into momenta.  
 - The Edwards Flow determines how momenta evolve.  
 - The HIF potential determines how momenta are attracted toward harmonic integrity.
 
@@ -136,11 +136,11 @@ A = \frac{u^a u^b \mathcal{E}_{ab}}{\|u\|^2}
 
 ---
 
-## 7. The rÆ Subspace Decomposition of the Hamiltonian  
-Because the rÆ Metric decomposes into four orthogonal subspaces:
+## 7. The Balance State Vector Subspace Decomposition of the Hamiltonian  
+Because the Balance State Vector Metric decomposes into four orthogonal subspaces:
 
 \[
-g^{(\text{rÆ})}_{ab}
+g^{(\text{Balance State Vector})}_{ab}
 = g_{\mathbb{S}} \oplus g_{\mathbb{K}} \oplus g_{\mathbb{G}} \oplus g_{\mathbb{F}},
 \]
 
@@ -216,7 +216,7 @@ The Balance Hamiltonian and canonical phase space provide the symplectic foundat
 
 - define the canonical momenta,  
 - encode the Edwards Flow in Hamiltonian form,  
-- incorporate the rÆ Metric and HIF potential,  
+- incorporate the Balance State Vector Metric and HIF potential,  
 - determine stability through the Hamiltonian Hessian,  
 - and provide the canonical interpretation of the Three‑Squared‑Lattice.
 
@@ -224,4 +224,4 @@ This section completes the Hamiltonian formulation of the Balance Framework.
 
 ---
 
-A natural continuation is **Section LXXVI — Quantization of the Balance Continuum**, which introduces the operator algebra, commutation relations, and quantum extension of the rÆ manifold.
+A natural continuation is **Section LXXVI — Quantization of the Balance Continuum**, which introduces the operator algebra, commutation relations, and quantum extension of the Balance State Vector manifold.

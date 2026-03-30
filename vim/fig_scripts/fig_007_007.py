@@ -21,7 +21,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_007_007.png"
 
     # Governance tensor: B_ij = ∇_i ∇_j V, V = (β-1)^2
-    # 4x4 block from governance subspace (rAE_a, rAE_e, rAE_s, rAE_g)
+    # 4x4 block from governance subspace (x_a, x_e, x_s, x_g)
     np.random.seed(42)
     B = np.diag([2.0, 1.5, 1.2, 0.8]) + 0.2 * np.random.randn(4, 4)
     B = (B + B.T) / 2

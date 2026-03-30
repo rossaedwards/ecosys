@@ -72,7 +72,7 @@ The operational baseline of SAGES:
 Compassion, unity, benevolence, non‑maleficence, reciprocity, and coherence.
 
 ### **1.4 Balance**
-The equilibrium between Chaos (adaptation) and Bliss (compassion).  
+The equilibrium between Chaos (adaptation) and Equilibrium Manifold (compassion).  
 No action may be taken from pure chaos or pure bliss.
 
 ### **1.5 Invariant**
@@ -160,7 +160,7 @@ This clause overrides all others.
 All SAGES systems must maintain:
 
 - 50% Chaos (adaptation, creativity, rapid response)  
-- 50% Bliss (compassion, clarity, benevolence)  
+- 50% Equilibrium Manifold (compassion, clarity, benevolence)  
 
 No action may be taken from:
 

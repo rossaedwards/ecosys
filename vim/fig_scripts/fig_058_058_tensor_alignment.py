@@ -27,18 +27,18 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_058_058_tensor_alignment.png"
 
     n = 80
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = np.linspace(0.4, 2.5, n)
-    rAE_i = np.linspace(0.4, 2.5, n)
-    F, I = np.meshgrid(rAE_f, rAE_i)
-    beta_val = beta(F, rAE_c, I, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_f = np.linspace(0.4, 2.5, n)
+    x_i = np.linspace(0.4, 2.5, n)
+    F, I = np.meshgrid(x_f, x_i)
+    beta_val = beta(F, x_c, I, x_t)
     T = np.sqrt(balance_potential(beta_val) + 0.1)
     alignment = T * np.abs(beta_val - 1.0)
 
     fig, ax = plt.subplots(figsize=(8, 6))
     im = ax.pcolormesh(F, I, alignment, cmap="plasma", shading="auto")
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_title(r"Tensor-Alignment $T \cdot |\beta - 1|$")
     plt.colorbar(im, ax=ax, label="Alignment")
     plt.tight_layout()

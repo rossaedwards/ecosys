@@ -1,0 +1,47 @@
+# Aurphyx_Memoree Daemon Configuration
+# f0rg3d in l0v3 by Ross Edwards
+
+daemon:
+  host: "127.0.0.1"
+  port: 7042
+  heartbeat_interval_sec: 10
+  log_level: "INFO"
+
+backend:
+  primary: "aurafs_chroma"          # final: AuraFS + ChromaDB
+  transitional: "memori_sqlite"      # transitional: existing AurphyxMemori
+  mirror_to_primary: true            # double-write during migration
+
+aurafs:
+  root: "~/.aurphyx/memoree"
+  shard_dir: "shards"
+  index_dir: "index"
+
+chroma:
+  persist_dir: "~/.aurphyx/memoree/embeddings"
+  collections:
+    - "episodic"
+    - "semantic"
+    - "procedural"
+    - "meta"
+    - "aps_canon"
+  embedding_model: "all-MiniLM-L6-v2"   # sentence-transformers, local, no API key
+
+memori_sqlite:
+  db_path: "./aurphyx_memori.db"
+
+llm_sync:
+  base_dir: "~/.aurphyx/memoree/llm_sync"
+  assistants:
+    - perplexity
+    - claude
+    - copilot
+    - cursor
+    - gemini
+    - grok
+
+state:
+  projects_file: "~/.aurphyx/memoree/state/projects.json"
+  volumes_file: "~/.aurphyx/memoree/state/volumes.json"
+  invariants_file: "~/.aurphyx/memoree/state/invariants.json"
+  dualities_file: "~/.aurphyx/memoree/state/dualities.json"

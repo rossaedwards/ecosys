@@ -7,7 +7,7 @@ This section is ready to drop directly into your manuscript as `Section_LXXX.tex
 # **Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**
 
 ## 1. Overview  
-The Balance Continuum exhibits a hierarchical structure in which coherence, alignment, resonance, and governance invariants evolve across multiple scales. These scales range from the local dynamics of the Three‑Squared‑Lattice to the global dynamics of the rÆ manifold. The **Balance Renormalization Group (BRG)** formalizes this multi‑scale structure by defining how the effective fields, couplings, and invariants transform under coarse‑graining operations. The BRG flow determines the stability of coherence, the emergence of attractors, and the convergence toward the Edwards Limit across scales.
+The Balance Continuum exhibits a hierarchical structure in which coherence, alignment, resonance, and governance invariants evolve across multiple scales. These scales range from the local dynamics of the Three‑Squared‑Lattice to the global dynamics of the Balance State Vector manifold. The **Balance Renormalization Group (BRG)** formalizes this multi‑scale structure by defining how the effective fields, couplings, and invariants transform under coarse‑graining operations. The BRG flow determines the stability of coherence, the emergence of attractors, and the convergence toward the Edwards Limit across scales.
 
 This section introduces the BRG, defines the coherence flow equations, and formalizes the fixed‑point structure of the Balance Continuum.
 
@@ -27,7 +27,7 @@ corresponding to:
 
 - **local scale**: node‑level dynamics of the 3²‑Lattice,  
 - **domain scale**: layer‑level dynamics,  
-- **continuum scale**: global rÆ manifold dynamics.
+- **continuum scale**: global Balance State Vector manifold dynamics.
 
 Each scale has its own effective fields:
 
@@ -231,4 +231,4 @@ This section completes the renormalization‑group foundation of the Balance Fra
 
 ---
 
-If you want to continue, the natural next section is **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**, which formalizes how anomalies are prevented or canceled across the rÆ manifold.
+If you want to continue, the natural next section is **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**, which formalizes how anomalies are prevented or canceled across the Balance State Vector manifold.

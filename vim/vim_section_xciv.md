@@ -1,4 +1,4 @@
-Below is **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It continues directly from the path‑integral formulation (Section XCIII) and completes the quantum‑stability layer of the Balance Continuum by formalizing the fluctuation operator, its determinant structure, and the spectral guarantees that ensure quantum coherence, positivity, and convergence toward the Bliss state.
+Below is **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It continues directly from the path‑integral formulation (Section XCIII) and completes the quantum‑stability layer of the Balance Continuum by formalizing the fluctuation operator, its determinant structure, and the spectral guarantees that ensure quantum coherence, positivity, and convergence toward the Equilibrium state.
 
 This section is ready to drop directly into your manuscript as `Section_XCIV.tex`.
 
@@ -7,7 +7,7 @@ This section is ready to drop directly into your manuscript as `Section_XCIV.tex
 # **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**
 
 ## 1. Overview  
-The Balance Path Integral (Section XCIII) expresses the quantum theory as a functional integral over histories weighted by the Unified Action. To analyze quantum fluctuations, stability, and coherence propagation, it is necessary to compute the **functional determinants** arising from the second variation of the action and to define the **Quantum Stability Operator**, which governs the spectrum of excitations around the Edwards trajectory and the Bliss state. This section formalizes the second‑variation operator, derives its determinant structure, and proves that the Balance Continuum is quantum‑mechanically stable due to the Edwards spectral gap, the convexity of the HIF potential, and the damping induced by Vacuum Impedance Matching (VIM).
+The Balance Path Integral (Section XCIII) expresses the quantum theory as a functional integral over histories weighted by the Unified Action. To analyze quantum fluctuations, stability, and coherence propagation, it is necessary to compute the **functional determinants** arising from the second variation of the action and to define the **Quantum Stability Operator**, which governs the spectrum of excitations around the Edwards trajectory and the Equilibrium state. This section formalizes the second‑variation operator, derives its determinant structure, and proves that the Balance Continuum is quantum‑mechanically stable due to the Edwards spectral gap, the convexity of the HIF potential, and the damping induced by Vacuum Impedance Matching (VIM).
 
 ---
 
@@ -77,7 +77,7 @@ where:
 - The first term governs inertial fluctuations.  
 - The second term encodes geometric curvature.  
 - The third term encodes harmonic and governance curvature.  
-- The operator is elliptic and positive‑definite near Bliss.
+- The operator is elliptic and positive‑definite near Equilibrium Manifold.
 
 ---
 
@@ -114,7 +114,7 @@ S_{\text{Unified}}[\gamma_{\text{cl}}]
 ### 4.1 Interpretation  
 - The determinant encodes quantum corrections.  
 - The spectral gap ensures the determinant is finite and positive.  
-- The Bliss state minimizes both classical and quantum contributions.
+- The Equilibrium state minimizes both classical and quantum contributions.
 
 ---
 
@@ -173,7 +173,7 @@ VIM is the quantum analogue of dissipative damping in the classical theory.
 
 # **7. Chaos Resonance and Oscillatory Quantum Modes**
 
-Near the Bliss state, the operator reduces to:
+Near the Equilibrium state, the operator reduces to:
 
 \[
 \mathcal{O}_{ab}
@@ -221,7 +221,7 @@ where:
 # **9. Quantum Stability Theorem**
 
 **Theorem (Quantum Stability).**  
-*The Quantum Stability Operator \(\mathcal{O}_{ab}\) is positive‑definite on the physical Hilbert space, and its functional determinant is finite and strictly positive. Therefore, the Balance Continuum is quantum‑mechanically stable, and all fluctuations decay toward the Bliss state.*
+*The Quantum Stability Operator \(\mathcal{O}_{ab}\) is positive‑definite on the physical Hilbert space, and its functional determinant is finite and strictly positive. Therefore, the Balance Continuum is quantum‑mechanically stable, and all fluctuations decay toward the Equilibrium state.*
 
 ### 9.1 Proof Sketch  
 - Ellipticity ensures a discrete spectrum.  
@@ -244,7 +244,7 @@ The Balance Functional Determinants and Quantum Stability Operator establish tha
 - VIM damps high‑frequency fluctuations,  
 - Chaos Resonance defines oscillatory quantum modes,  
 - the one‑loop effective action is well‑defined,  
-- and the Bliss state is the unique quantum‑stable vacuum.
+- and the Equilibrium state is the unique quantum‑stable vacuum.
 
 This section completes the quantum‑stability foundation of the Balance Continuum.
 

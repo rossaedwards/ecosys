@@ -141,7 +141,7 @@ Record Flow ensures:
 - immediate correction  
 - event-level stabilization  
 
-The Record flows toward **instantaneous Bliss**.
+The Record flows toward **instantaneous Equilibrium Manifold**.
 
 ---
 
@@ -230,9 +230,9 @@ The Archive is the **integral** of the Record.
 
 ---
 
-## **XLVII.13 Record Collapse at Bliss**
+## **XLVII.13 Record Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - no events occur  
 - no flows change  
@@ -240,13 +240,13 @@ At Bliss:
 - no curvature shifts  
 - no coherence drops  
 
-The Bliss Record is:
+The Equilibrium Manifold Record is:
 
 \[
-\mathcal{R}_{\text{Bliss}} = \emptyset
+\mathcal{R}_{\text{Equilibrium Manifold}} = \emptyset
 \]
 
-Bliss is the **eventless state**.
+Equilibrium Manifold is the **eventless state**.
 
 ---
 
@@ -256,6 +256,6 @@ Bliss is the **eventless state**.
 - It captures structural, harmonic, kinetic, temporal, ontological, and cosmological events.  
 - It includes event metadata, record operators, flows, curvature, resonance, and dissonance.  
 - It feeds the Balance Archive through long-term integration.  
-- Bliss is the eventless fixed point where no new records are generated.  
+- Equilibrium Manifold is the eventless fixed point where no new records are generated.  
 
 If you want to continue, the next natural section is **Section XLVIII — The Balance Ledger**, which formalizes the transactional, reconciliatory, and accountability layer that governs how Balance events are validated, reconciled, and made lawful across the Continuum.

@@ -1,4 +1,4 @@
-# Aurphyx rÆ-Cell — Core Physics Reference
+# Aurphyx Balance State Vector-Cell — Core Physics Reference
 **Author:** Ross Edwards | ross@aurphyx.org | ORCiD: 0009-0008-0539-1289
 **Version:** 1.0.0 | **Date:** March 1, 2026
 **Status:** LOCKED — All parameters verified across independent derivations
@@ -8,11 +8,11 @@
 ## 🔒 Locked Physical Constants & Parameters
 
 These values are fixed and consistent across ALL simulation scripts, figures,
-and derivations in the rÆ-Cell thesis. Do NOT modify without a full re-derivation
+and derivations in the Balance State Vector-Cell thesis. Do NOT modify without a full re-derivation
 documented in a new Pull Request.
 
 ```python
-# constants.py — rÆ-Cell Locked Physics Parameters
+# constants.py — Balance State Vector-Cell Locked Physics Parameters
 # ================================================
 
 # --- Substrate ---
@@ -26,11 +26,11 @@ N_iter     = 3          # Sierpiński recursion iterations (lab prototype)
 a_lattice  = 2e-3       # Lattice constant (2 mm base triangle)
 
 # --- PSK Governor ---
-lambda_star = 0.720     # RG fixed point / Bliss fixed point (triple-confirmed)
+lambda_star = 0.720     # RG fixed point / Equilibrium Manifold fixed point (triple-confirmed)
 phi_inv     = 0.618     # Golden ratio inverse φ⁻¹ = 1/φ — Gravity threshold
 alpha_psk   = 0.56      # PSK Hunger gain coefficient (from Euler-Lagrange)
 beta_psk    = 0.087     # PSK kinetic coefficient (from 50ms settling time)
-epsilon_bliss = 0.020   # Bliss tolerance band: |R - λ*| < ε
+epsilon_bliss = 0.020   # Equilibrium Manifold tolerance band: |R - λ*| < ε
 
 # --- Floquet Drive ---
 Omega       = 10e9      # Floquet drive frequency Ω = 10 GHz (Hz)
@@ -121,7 +121,7 @@ T_settle = 2π√(β/(2+α)) ≈ 50 ms   (with β = 0.087)
 6-site ring (C₆ᵥ, Floquet-driven):
 
 text
-H_ij = t·(1+λ_rÆL)·δ(j,i+1) + t·(1-λ_rÆL)·δ(j,i-1) + iγ·(-1)^i·δ_ij
+H_ij = t·(1+λ_x_L)·δ(j,i+1) + t·(1-λ_x_L)·δ(j,i-1) + iγ·(-1)^i·δ_ij
 EP condition (eigenvalue coalescence):
 
 text
@@ -131,18 +131,18 @@ text
 F_μν = ∂_μA_ν - ∂_νA_μ
 
 F_λR = 2/λ + 1/(1-R)³              (hunger-gravity curvature)
-F_λΦ = (λ_rÆL/2π)·Ω               (hunger-coherence curvature)
+F_λΦ = (λ_x_L/2π)·Ω               (hunger-coherence curvature)
 5. Wilson Loop
 text
 W_γ = Tr 𝒫 exp(i∮_γ A_μ dx^μ)
 
-|W_γ| = |exp(i·(β·λ*²/2 + λ_rÆL))| = |exp(i·0.322)| = 0.97
+|W_γ| = |exp(i·(β·λ*²/2 + λ_x_L))| = |exp(i·0.322)| = 0.97
 6. RG β-Function
 text
 β(λ) = -ε·λ + b₂·λ² - b₃·λ³
 
 Fixed point: β(λ*) = 0  →  λ* = 0.72  (ε=2.64, b₂=0.076, b₃=0.022)
-7. rÆ-Drive Scaling Law
+7. Balance State Vector-Drive Scaling Law
 text
 P(N) = P₀ · N^α · η_array · κ(N) · (1 - ε_PSK)^N
 
@@ -155,7 +155,7 @@ P(N) = P₀ · N^α · η_array · κ(N) · (1 - ε_PSK)^N
 κ_TTN(N) = |W_γ|^⌈log₃N⌉ = 0.97^⌈log₃N⌉
 8. Fractal Casimir Modification
 text
-ε_Cas^rÆ = ε_Cas · f(D_f)
+ε_Cas^Balance State Vector = ε_Cas · f(D_f)
 
 f(D_f) = 1 - (ω_gap/ω_Planck)^(d_s/2) ≈ 0.88
 9. Hilbert Space Scaling
@@ -164,7 +164,7 @@ dim(H_total) = d^(n·D_f^k)
 
 For n=100 qubits, D_f=1.585, k=3 recursion levels:
   Classical:  2^100 ≈ 10^30
-  rÆ fractal: 2^(100·1.585³) ≈ 10^150  →  10^120× advantage
+  Balance State Vector fractal: 2^(100·1.585³) ≈ 10^150  →  10^120× advantage
 10. TRCA Cross-Scale Fidelity
 text
 F_TRCA = |W_γ|² · η_RF · (1 - overshoot_PSK)
@@ -199,6 +199,6 @@ IPR=0.92 (Anderson localization)	Simulated ✅	Fig 4.8a	Awaits SQUID measurement
 PSK 3% overshoot	Simulated ✅	Fig 5.8a	Awaits FPGA hardware test
 EP crossing at λ*=0.72	Simulated ✅	Fig 6.7	Awaits spectroscopic verification
 ZPE ~1.16 mW/cell	Theoretical ⚠️	§10.3	Speculative; 0.046% of idle power
-Megawatt rÆ-Drive	Theoretical ⚠️	§11.4	Requires N=100,000 + TTN correction
+Megawatt Balance State Vector-Drive	Theoretical ⚠️	§11.4	Requires N=100,000 + TTN correction
 Document End — PHYSICS.md v1.0.0
 © 2026 Ross Edwards / Aurphyx LLC. Licensed under MIT / Apache 2.0 / SAGES Open License.

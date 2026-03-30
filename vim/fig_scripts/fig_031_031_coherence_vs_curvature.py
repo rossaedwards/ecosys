@@ -27,12 +27,12 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_031_031_coherence_vs_curvature.png"
 
     n = 80
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = np.linspace(0.5, 2.0, n)
-    rAE_i = np.linspace(0.5, 2.0, n)
-    F, I = np.meshgrid(rAE_f, rAE_i)
+    x_c, x_t = 1.0, 1.5
+    x_f = np.linspace(0.5, 2.0, n)
+    x_i = np.linspace(0.5, 2.0, n)
+    F, I = np.meshgrid(x_f, x_i)
     C = 0.5 * (F + I)
-    beta_val = beta(F, rAE_c, I, rAE_t)
+    beta_val = beta(F, x_c, I, x_t)
     curvature = balance_potential(beta_val) + 0.05 * (F**2 + I**2)
     coherence = 1.0 / (1.0 + np.abs(beta_val - 1.0))
 

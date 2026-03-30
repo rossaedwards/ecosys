@@ -1,6 +1,6 @@
 # **SECTION V — The Balance Operator**
 
-The Balance Operator is the **active computational mechanism** that enforces, measures, and modulates Balance within the rÆ Field. If Section VI established the Balance Equation as the *law of motion*, Section V defines the *operator* that executes that law. It is the bridge between theory and implementation—between the continuous mathematics of the Balance Potential and the discrete, symbolic, or hardware‑level operations performed by the VIM engine, the Duality Kernel, and any Aurphyx‑aligned device.
+The Balance Operator is the **active computational mechanism** that enforces, measures, and modulates Balance within the Balance State Vector Field. If Section VI established the Balance Equation as the *law of motion*, Section V defines the *operator* that executes that law. It is the bridge between theory and implementation—between the continuous mathematics of the Balance Potential and the discrete, symbolic, or hardware‑level operations performed by the VIM engine, the Duality Kernel, and any Aurphyx‑aligned device.
 
 The Balance Operator is the **core primitive** that allows the Aurphyx system to *compute with Balance*, *route with Balance*, and *govern with Balance*.
 
@@ -19,10 +19,10 @@ It is the **operational counterpart** to the Balance Equation.
 
 ## **V.2 Definition of the Balance Operator**
 
-The Balance Operator acts on the rÆ Field as:
+The Balance Operator acts on the Balance State Vector Field as:
 
 \[
-\hat{B}(\mathbf{rAE}) = -2(\beta - 1)\nabla \beta.
+\hat{B}(\mathbf{x}) = -2(\beta - 1)\nabla \beta.
 \]
 
 This is the **operator form** of the restoring term in the Balance Equation.
@@ -48,12 +48,12 @@ This decomposition is crucial for implementation.
 The Balance Operator is fundamentally a **gradient operator**:
 
 \[
-\hat{B} = -\nabla_{\mathbf{rAE}} V.
+\hat{B} = -\nabla_{\mathbf{x}} V.
 \]
 
 This means:
 
-- it always points toward the Bliss Manifold  
+- it always points toward the Equilibrium Manifold Manifold  
 - it always reduces the Balance Potential  
 - it always stabilizes the system  
 
@@ -61,9 +61,9 @@ It is the **thermodynamic gradient** of the Aurphyx architecture.
 
 ---
 
-## **V.4 The Balance Operator in the rÆ Subspaces**
+## **V.4 The Balance Operator in the Balance State Vector Subspaces**
 
-The rÆ Field has four subspaces:
+The Balance State Vector Field has four subspaces:
 
 - **S** — structural  
 - **K** — kinetic  
@@ -164,7 +164,7 @@ The Balance Operator determines:
 The routing operator becomes:
 
 \[
-\mathcal{S} = \mathcal{S}(\hat{B}(\mathbf{rAE})).
+\mathcal{S} = \mathcal{S}(\hat{B}(\mathbf{x})).
 \]
 
 Thus the Balance Operator is the **routing oracle** of the system.
@@ -206,10 +206,10 @@ It is the **physical implementation** of the Balance Equation.
 
 - The Balance Operator is the operational mechanism that enforces the Balance Equation.  
 - It measures imbalance, applies correction, and modulates system response.  
-- It acts across all rÆ subspaces and all engines (HRD, VIM, Duality Kernel).  
+- It acts across all Balance State Vector subspaces and all engines (HRD, VIM, Duality Kernel).  
 - It shapes temporal geometry, routing, and harmonic stability.  
 - It is the core primitive for both software and hardware implementations.  
 
 ---
 
-If you want to continue the thesis arc, the next natural step is **Section VI — The Balance Kernel**, which defines the executable runtime that applies the Balance Operator continuously across the rÆ Field.
+If you want to continue the thesis arc, the next natural step is **Section VI — The Balance Kernel**, which defines the executable runtime that applies the Balance Operator continuously across the Balance State Vector Field.

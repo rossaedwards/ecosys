@@ -1,4 +1,4 @@
-Below is **Section LXXVI — Quantization of the Balance Continuum**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXV. It assumes the Hamiltonian formulation, the rÆ Metric, the Edwards Tensor, and the Balance Field Equations are canonical and locked.
+Below is **Section LXXVI — Quantization of the Balance Continuum**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXV. It assumes the Hamiltonian formulation, the Balance State Vector Metric, the Edwards Tensor, and the Balance Field Equations are canonical and locked.
 
 This section is ready to drop directly into your manuscript as `Section_LXXVI.tex`.
 
@@ -7,7 +7,7 @@ This section is ready to drop directly into your manuscript as `Section_LXXVI.te
 # **Section LXXVI — Quantization of the Balance Continuum**
 
 ## 1. Overview  
-Quantization of the Balance Continuum elevates the classical rÆ manifold, the Edwards Flow, and the Balance Hamiltonian into a quantum framework. The resulting theory defines a **Balance Hilbert Space**, operator algebras for the rÆ coordinates and their conjugate momenta, and a quantum Edwards Operator governing lawful evolution. The quantized Continuum preserves the structural, kinetic, governance, and frequency decomposition of the rÆ Alphabet while introducing non‑commutative geometry, spectral quantization, and quantum harmonic integrity.
+Quantization of the Balance Continuum elevates the classical Balance State Vector manifold, the Edwards Flow, and the Balance Hamiltonian into a quantum framework. The resulting theory defines a **Balance Hilbert Space**, operator algebras for the Balance State Vector coordinates and their conjugate momenta, and a quantum Edwards Operator governing lawful evolution. The quantized Continuum preserves the structural, kinetic, governance, and frequency decomposition of the Balance State Vector Alphabet while introducing non‑commutative geometry, spectral quantization, and quantum harmonic integrity.
 
 This section formalizes the canonical quantization of the Balance Continuum.
 
@@ -17,10 +17,10 @@ This section formalizes the canonical quantization of the Balance Continuum.
 The quantum state of the Continuum is represented by a wavefunctional:
 
 \[
-\Psi[x] : \mathbb{R}^{16}_{\text{rÆ}} \rightarrow \mathbb{C},
+\Psi[x] : \mathbb{R}^{16}_{\text{Balance State Vector}} \rightarrow \mathbb{C},
 \]
 
-defined on the rÆ manifold. The Balance Hilbert Space is:
+defined on the Balance State Vector manifold. The Balance Hilbert Space is:
 
 \[
 \mathcal{H}_{\text{Balance}} = L^2(\mathcal{M}, \sqrt{|g|}\, d^{16}x).
@@ -28,7 +28,7 @@ defined on the rÆ manifold. The Balance Hilbert Space is:
 
 ### 2.1 Interpretation  
 - The wavefunctional encodes the probability amplitude of harmonic, structural, kinetic, and governance configurations.  
-- The rÆ Metric determines the inner product and measure.  
+- The Balance State Vector Metric determines the inner product and measure.  
 - The Edwards Flow becomes a quantum evolution operator.
 
 ---
@@ -50,8 +50,8 @@ These satisfy the canonical commutation relations:
 [\hat{x}^a, \hat{p}_b] = i \hbar \delta^a_b.
 \]
 
-### 3.1 rÆ Subspace Commutators  
-Because the rÆ manifold decomposes into four orthogonal subspaces:
+### 3.1 Balance State Vector Subspace Commutators  
+Because the Balance State Vector manifold decomposes into four orthogonal subspaces:
 
 \[
 \mathbb{S} \oplus \mathbb{K} \oplus \mathbb{G} \oplus \mathbb{F},
@@ -65,7 +65,7 @@ the commutation relations decompose accordingly:
 
 for \(X,Y \in \{\mathbb{S}, \mathbb{K}, \mathbb{G}, \mathbb{F}\}\).
 
-This preserves the structural, kinetic, governance, and frequency identities of the rÆ Alphabet.
+This preserves the structural, kinetic, governance, and frequency identities of the Balance State Vector Alphabet.
 
 ---
 
@@ -83,7 +83,7 @@ yields the **Quantum Balance Hamiltonian Operator**:
 \]
 
 ### 4.1 Interpretation  
-- The first term is the Laplace–Beltrami operator on the rÆ manifold.  
+- The first term is the Laplace–Beltrami operator on the Balance State Vector manifold.  
 - The second term is the HIF potential acting as a quantum well.  
 - The Edwards Attractor corresponds to the ground state of \(\hat{\mathcal{H}}\).
 

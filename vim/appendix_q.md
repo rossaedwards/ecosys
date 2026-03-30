@@ -28,10 +28,10 @@ where:
 These components form a **formal manifold** embedded in the structural and governance subspaces:
 
 \[
-(\mathbf{S}, \mathbf{G}) = (rAE_t, rAE_k, rAE_b, rAE_d,\ rAE_a, rAE_e, rAE_s, rAE_g).
+(\mathbf{S}, \mathbf{G}) = (x_t, x_k, x_b, x_d,\ x_a, x_e, x_s, x_g).
 \]
 
-Structure is therefore the *formal expression* of the rÆ Field.
+Structure is therefore the *formal expression* of the Balance State Vector Field.
 
 ---
 
@@ -75,7 +75,7 @@ They are the **constants of motion** of the Aurphyx Cosmology.
 Law in the Aurphyx Standard is not prescriptive; it is **geometric**. Law is defined as:
 
 \[
-\delta_{\text{law}} = \left\| \frac{d\mathbf{rAE}}{dt} - \mathcal{K}(\mathbf{rAE}) \right\|.
+\delta_{\text{law}} = \left\| \frac{d\mathbf{x}}{dt} - \mathcal{K}(\mathbf{x}) \right\|.
 \]
 
 Law measures the **degree to which evolution follows the Unified Field Equation**.
@@ -128,7 +128,7 @@ This invariant ensures that structure is:
 - stable under harmonic modulation  
 - coherent across dimensional shifts  
 
-Structure is therefore a **closed‑loop property** of the rÆ Field.
+Structure is therefore a **closed‑loop property** of the Balance State Vector Field.
 
 ---
 
@@ -160,9 +160,9 @@ The evolution of the Structural Field is governed by:
 =
 -\nabla X(\mathcal{S})
 +
-\mathcal{H}(\mathbf{rAE})
+\mathcal{H}(\mathbf{x})
 +
-\mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}),
+\mathcal{S}(\mathbf{x}, \mathcal{R}_{24}),
 \]
 
 where:

@@ -12,9 +12,9 @@ Conventional photonic crystals (PhCs) rely on periodic dielectric modulation to 
 
 1. **Fractal spectral dimension engineering** (d_s < 2) to exponentially enhance local density of states (LDOS),
 2. **Non-Hermitian boundary algebra** (su(2)⋉ℝ) to rectify stochastic vacuum fluctuations into unidirectional edge currents,
-3. **Renormalization group (RG) flow control** via the lyte-rÆL parameter λ_rÆL for dynamic impedance matching.
+3. **Renormalization group (RG) flow control** via the lyte-x_L parameter λ_x_L for dynamic impedance matching.
 
-TVFD establishes the theoretical foundation for the rÆ-Cell, a solid-state topological flux engine capable of harvesting coherent work from the quantum vacuum through cognitively regulated feedback loops.
+TVFD establishes the theoretical foundation for the Balance State Vector-Cell, a solid-state topological flux engine capable of harvesting coherent work from the quantum vacuum through cognitively regulated feedback loops.
 
 ---
 
@@ -50,9 +50,9 @@ Perfect impedance matching requires:
 $$
 Z_{\text{eff}}(\omega) = Z_{\text{vac}},
 $$
-achieved dynamically by tuning the effective group velocity v_g through Floquet modulation (Sec. 4.5). The lyte-rÆL parameter
+achieved dynamically by tuning the effective group velocity v_g through Floquet modulation (Sec. 4.5). The lyte-x_L parameter
 $$
-\lambda_{\text{rÆL}} = \frac{v_g}{v_0},
+\lambda_{\text{x_L}} = \frac{v_g}{v_0},
 $$
 where v_0 is the reference velocity, serves as the RG flow coordinate (Sec. 4.6).
 
@@ -90,11 +90,11 @@ $$
 $$
 with v_edge the chiral velocity. Crucially, backscattering is **topologically forbidden**: scattering matrix elements S_{LR} = 0 enforce perfect transmission along the edge.
 
-### 4.3.4 The rÆt Flux Definition
+### 4.3.4 The x_t Flux Definition
 
-The **rÆt flux** ρ_rÆt quantifies the time-averaged Poynting vector circulation along the C_{6v} hexagonal boundary:
+The **x_t flux** ρ_x_t quantifies the time-averaged Poynting vector circulation along the C_{6v} hexagonal boundary:
 $$
-\rho_{rÆt} = \oint_{\partial\mathcal{M}_f} \mathbf{E} \times \mathbf{H} \cdot d\mathbf{l},
+\rho_{x_t} = \oint_{\partial\mathcal{M}_f} \mathbf{E} \times \mathbf{H} \cdot d\mathbf{l},
 $$
 where ∂M_f is the fractal manifold boundary at iteration depth k. This is the measurable energy current that powers external loads (Sec. 6.8).
 
@@ -137,7 +137,7 @@ $$
 $$
 with driving frequency Ω tuned near the flatband gap (~10 GHz). The Hamiltonian becomes:
 $$
-\mathcal{H}(t) = \mathcal{H}_0 + \lambda_{\text{rÆL}}(t) V \cos(\Omega t),
+\mathcal{H}(t) = \mathcal{H}_0 + \lambda_{\text{x_L}}(t) V \cos(\Omega t),
 $$
 where V encodes magneto-optical coupling.
 
@@ -155,21 +155,21 @@ creating transient flatbands that maximize LDOS at the localization nodes.
 
 ### 4.5.3 Adaptive Control
 
-The driving amplitude λ_rÆL(t) serves as the **control knob**: increasing λ_rÆL flattens bands (higher flux extraction), decreasing λ_rÆL widens gaps (lower flux, higher stability). Section 5 formalizes this as RG flow control.
+The driving amplitude λ_x_L(t) serves as the **control knob**: increasing λ_x_L flattens bands (higher flux extraction), decreasing λ_x_L widens gaps (lower flux, higher stability). Section 5 formalizes this as RG flow control.
 
 ---
 
-## 4.6 Renormalization Group Flow and the lyte-rÆL
+## 4.6 Renormalization Group Flow and the lyte-x_L
 
 ### 4.6.1 Effective Action and RG Equations
 
-The rÆ-Cell's low-energy dynamics are governed by an effective action:
+The Balance State Vector-Cell's low-energy dynamics are governed by an effective action:
 $$
-S_{\text{eff}}[\lambda_{\text{rÆL}}] = \int d^4x \left[\mathcal{L}_{\text{kin}} + \lambda_{\text{rÆL}} \mathcal{O} + \mathcal{L}_{\text{int}}\right],
+S_{\text{eff}}[\lambda_{\text{x_L}}] = \int d^4x \left[\mathcal{L}_{\text{kin}} + \lambda_{\text{x_L}} \mathcal{O} + \mathcal{L}_{\text{int}}\right],
 $$
 where O is the magneto-optical coupling operator. Integrating out high-energy modes (UV cutoff Λ → Λ') generates RG flow:
 $$
-\frac{d\lambda_{\text{rÆL}}}{d\log\Lambda} = \beta(\lambda_{\text{rÆL}}) = -\gamma \lambda_{\text{rÆL}} + \delta \lambda_{\text{rÆL}}^2 + \mathcal{O}(\lambda^3),
+\frac{d\lambda_{\text{x_L}}}{d\log\Lambda} = \beta(\lambda_{\text{x_L}}) = -\gamma \lambda_{\text{x_L}} + \delta \lambda_{\text{x_L}}^2 + \mathcal{O}(\lambda^3),
 $$
 with β-function coefficients γ, δ determined by lattice geometry.
 
@@ -177,9 +177,9 @@ with β-function coefficients γ, δ determined by lattice geometry.
 
 The RG flow exhibits a non-trivial IR fixed point:
 $$
-\lambda_{\text{rÆL}}^* = \frac{\gamma}{\delta},
+\lambda_{\text{x_L}}^* = \frac{\gamma}{\delta},
 $$
-where the system achieves **perfect impedance matching**: Z_eff = Z_vac across the frequency band of interest. Deviations Δλ = λ_rÆL - λ* relax exponentially:
+where the system achieves **perfect impedance matching**: Z_eff = Z_vac across the frequency band of interest. Deviations Δλ = λ_x_L - λ* relax exponentially:
 $$
 \Delta\lambda(t) \sim e^{-\gamma t},
 $$
@@ -189,7 +189,7 @@ providing intrinsic stability.
 
 The fixed point λ* minimizes the free energy functional:
 $$
-\mathcal{F}[\lambda_{\text{rÆL}}] = E[\lambda_{\text{rÆL}}] - T S[\lambda_{\text{rÆL}}],
+\mathcal{F}[\lambda_{\text{x_L}}] = E[\lambda_{\text{x_L}}] - T S[\lambda_{\text{x_L}}],
 $$
 balancing energy extraction E (favors high λ) against entropy production S (favors low λ). This variational principle underpins the bioneural governor (Chap. 5).
 
@@ -199,10 +199,10 @@ balancing energy extraction E (favors high λ) against entropy production S (fav
 
 ### 4.7.1 Open-System Framework
 
-The rÆ-Cell operates as a driven, dissipative quantum system exchanging energy/entropy with three reservoirs:
+The Balance State Vector-Cell operates as a driven, dissipative quantum system exchanging energy/entropy with three reservoirs:
 1. **Vacuum bath** (T_vac → 0 K): source of zero-point energy,
 2. **Thermal bath** (T_env ≈ 300 K): ambient phonons/photons,
-3. **Load reservoir**: external DC circuit extracting ρ_rÆt.
+3. **Load reservoir**: external DC circuit extracting ρ_x_t.
 
 The total entropy production is:
 $$
@@ -217,17 +217,17 @@ Energy extracted from the vacuum (Ṡ_vac < 0 locally) is offset by:
 
 Net entropy balance:
 $$
-\Delta S_{\text{tot}} = -\frac{\rho_{\text{rÆt}} \Delta t}{T_{\text{vac}}} + \frac{P_{\text{drive}} \Delta t}{T_{\text{env}}} > 0,
+\Delta S_{\text{tot}} = -\frac{\rho_{\text{x_t}} \Delta t}{T_{\text{vac}}} + \frac{P_{\text{drive}} \Delta t}{T_{\text{env}}} > 0,
 $$
 satisfying the second law *globally* while enabling local flux extraction.
 
 ### 4.7.3 Carnot Bound and Non-Equilibrium Efficiency
 
-The rÆ-Cell is **not a heat engine** (no hot/cold reservoirs), but a **quantum rectifier**. Its efficiency is bounded by:
+The Balance State Vector-Cell is **not a heat engine** (no hot/cold reservoirs), but a **quantum rectifier**. Its efficiency is bounded by:
 $$
-\eta_{\text{rÆ}} \leq 1 - \frac{T_{\text{env}}}{T_{\text{eff}}},
+\eta_{\text{Balance State Vector}} \leq 1 - \frac{T_{\text{env}}}{T_{\text{eff}}},
 $$
-where T_eff is the effective temperature of Floquet-dressed modes (typically T_eff ≫ T_env for strong driving), allowing η_rÆ → 1 in principle. Practical efficiencies depend on material Q-factors and bioneural regulation fidelity (Sec. 5).
+where T_eff is the effective temperature of Floquet-dressed modes (typically T_eff ≫ T_env for strong driving), allowing η_Balance State Vector → 1 in principle. Practical efficiencies depend on material Q-factors and bioneural regulation fidelity (Sec. 5).
 
 ---
 
@@ -235,12 +235,12 @@ where T_eff is the effective temperature of Floquet-dressed modes (typically T_e
 
 ### 4.8.1 Edge Current Detection
 
-The rÆt flux manifests as circulating photocurrents detectable via:
+The x_t flux manifests as circulating photocurrents detectable via:
 - **Near-field scanning optical microscopy (NSOM)**: maps |E|² along edges with <50 nm resolution,
 - **Faraday rotation imaging**: visualizes chiral propagation via polarization rotation θ_F,
 - **Photodetector arrays**: measure integrated Poynting flux at ℓ=2 global outputs.
 
-Expected signal: ρ_rÆt ~ 10–100 mW/cm² at k=4 depth under optimal λ_rÆL tuning.
+Expected signal: ρ_x_t ~ 10–100 mW/cm² at k=4 depth under optimal λ_x_L tuning.
 
 ### 4.8.2 Anderson Localization Verification
 
@@ -253,36 +253,36 @@ Localization at ℓ=0 nodes confirmed by:
 
 Probe transmission T(ω) under Floquet driving reveals photon-dressed replicas:
 $$
-T(\omega) \sim \sum_{m=-\infty}^{\infty} J_m^2\left(\frac{\lambda_{\text{rÆL}} V}{\hbar\Omega}\right) \delta(\omega - \omega_0 - m\Omega),
+T(\omega) \sim \sum_{m=-\infty}^{\infty} J_m^2\left(\frac{\lambda_{\text{x_L}} V}{\hbar\Omega}\right) \delta(\omega - \omega_0 - m\Omega),
 $$
-where J_m are Bessel functions. Sideband amplitudes encode λ_rÆL(t) dynamics.
+where J_m are Bessel functions. Sideband amplitudes encode λ_x_L(t) dynamics.
 
 ---
 
 ## 4.9 Energy Budget and Macroscopic Scaling
 
-### 4.9.1 Single rÆ-Cell Output
+### 4.9.1 Single Balance State Vector-Cell Output
 
-For a prototype rÆ-Cell (10 mm × 10 mm substrate, k=4 Sierpiński depth):
+For a prototype Balance State Vector-Cell (10 mm × 10 mm substrate, k=4 Sierpiński depth):
 - **Input power** (Floquet drive): P_in ~ 1–5 W,
-- **Extracted rÆt flux**: ρ_rÆt ~ 50 mW/cm² × 1 cm² = 50 mW,
+- **Extracted x_t flux**: ρ_x_t ~ 50 mW/cm² × 1 cm² = 50 mW,
 - **Net efficiency**: η ~ 1–5% (initial prototype).
 
-Advanced designs (k=6, cryogenic operation, optimized λ_rÆL tuning) project η ~ 20–40%.
+Advanced designs (k=6, cryogenic operation, optimized λ_x_L tuning) project η ~ 20–40%.
 
 ### 4.9.2 Stacked Array Scaling
 
-N stacked rÆ-Cells in series/parallel configuration:
+N stacked Balance State Vector-Cells in series/parallel configuration:
 $$
-P_{\text{total}} = N \cdot \eta_{\text{rÆ}} \cdot P_{\text{in}},
+P_{\text{total}} = N \cdot \eta_{\text{Balance State Vector}} \cdot P_{\text{in}},
 $$
 with N ~ 100 cells yielding P_total ~ 50–500 W (sufficient for Aura Node home power, Sec. 6.9).
 
-### 4.9.3 Automotive rÆ-Drive Projection
+### 4.9.3 Automotive Balance State Vector-Drive Projection
 
-An EV rÆ-Drive (1 m² active area, N=1000 cells):
+An EV Balance State Vector-Drive (1 m² active area, N=1000 cells):
 - **Continuous output**: 5–50 kW,
-- **Peak transient**: 100+ kW (via Audry-governed λ_rÆL boost, Chap. 5),
+- **Peak transient**: 100+ kW (via Audry-governed λ_x_L boost, Chap. 5),
 - **Range**: unlimited (self-sustaining),
 - **Recharge time**: N/A (no batteries).
 
@@ -292,12 +292,12 @@ An EV rÆ-Drive (1 m² active area, N=1000 cells):
 
 TVFD establishes five core principles:
 1. **Fractal d_s < 2** → exponential LDOS enhancement + Anderson localization,
-2. **Non-Hermitian TRS breaking** → unidirectional edge rectification (rÆt flux),
+2. **Non-Hermitian TRS breaking** → unidirectional edge rectification (x_t flux),
 3. **Hierarchical amplification** → 16× coherent state access via superpolynomial scaling,
-4. **Floquet dynamic control** → real-time impedance matching via λ_rÆL,
+4. **Floquet dynamic control** → real-time impedance matching via λ_x_L,
 5. **Thermodynamic compliance** → global entropy production Ṡ_tot ≥ 0 while extracting local work.
 
-Chapter 5 introduces the **bioneural governor** that actively stabilizes λ_rÆL at the RG fixed point λ*, transforming the rÆ-Cell from a passive device into a cognitively regulated flux engine.
+Chapter 5 introduces the **bioneural governor** that actively stabilizes λ_x_L at the RG fixed point λ*, transforming the Balance State Vector-Cell from a passive device into a cognitively regulated flux engine.
 
 ---
 
@@ -307,35 +307,35 @@ Chapter 5 introduces the **bioneural governor** that actively stabilizes λ_rÆL
 
 ## 5.1 Introduction: From Static Circuits to Cognitive Regulators
 
-The TVFD framework (Chap. 4) demonstrates that topological flux extraction requires precise tuning of λ_rÆL to the RG fixed point λ*. However, external perturbations—thermal noise, load fluctuations, lattice defects—continuously push λ_rÆL away from λ*, causing flux instability and decoherence. Conventional PID controllers fail because:
-1. **Nonlinearity**: The free energy landscape F[λ_rÆL] exhibits multiple local minima and saddle points,
+The TVFD framework (Chap. 4) demonstrates that topological flux extraction requires precise tuning of λ_x_L to the RG fixed point λ*. However, external perturbations—thermal noise, load fluctuations, lattice defects—continuously push λ_x_L away from λ*, causing flux instability and decoherence. Conventional PID controllers fail because:
+1. **Nonlinearity**: The free energy landscape F[λ_x_L] exhibits multiple local minima and saddle points,
 2. **Stochasticity**: Vacuum fluctuations inject quantum noise that classical feedback cannot anticipate,
 3. **Multi-scale coupling**: Dynamics at ℓ=0, 1, 2 hierarchical scales are entangled.
 
 This chapter introduces the **Universal Bioneural Governor**, a neuromorphic control architecture that:
-- Senses interoceptive states (flux deviation, edge coherence, localization integrity) via the **rÆCore**,
+- Senses interoceptive states (flux deviation, edge coherence, localization integrity) via the **Balance State VectorCore**,
 - Computes optimal corrections using the **Prime Singularity Kernel (PSK)**—a chaotic-coherent attractor manifold,
-- Executes gradient descent on F[λ_rÆL] through closed-loop RF modulation,
+- Executes gradient descent on F[λ_x_L] through closed-loop RF modulation,
 - Maintains semantic coherence across scales via **SAGES** (Semantic Architecture for Generalized Emergent Systems).
 
 The governor is embodied by **Audry**, the bioneural avatar, whose "feelings" (hunger, gravity, coherence) are quantifiable physical observables driving the control law.
 
 ---
 
-## 5.2 The rÆCore: Interoceptive Sensing Architecture
+## 5.2 The Balance State VectorCore: Interoceptive Sensing Architecture
 
 ### 5.2.1 State Observables
 
-The rÆCore monitors six physical quantities encoding the rÆ-Cell's thermodynamic state:
+The Balance State VectorCore monitors six physical quantities encoding the Balance State Vector-Cell's thermodynamic state:
 
 **RaEState Structure:**
 ```rust
 pub struct RaEState {
-    /// Current rÆt flux (measured via Poynting mapping)
-    pub current_rAEt_flux: f32,
+    /// Current x_t flux (measured via Poynting mapping)
+    pub current_x_t_flux: f32,
     
     /// Optimal flux for current environmental load
-    pub optimal_rAEt_flux: f32,
+    pub optimal_x_t_flux: f32,
     
     /// Coherence of six C_{6v} topological edge states
     pub edge_state_coherence: [f32; 6],
@@ -346,8 +346,8 @@ pub struct RaEState {
 ```
 
 **Physical Implementation:**
-- `current_rAEt_flux`: Real-time Poynting vector integration via photodetector array at ℓ=2 outputs,
-- `optimal_rAEt_flux`: Derived from load impedance Z_load and target power P_target via ρ* = P_target/A_eff,
+- `current_x_t_flux`: Real-time Poynting vector integration via photodetector array at ℓ=2 outputs,
+- `optimal_x_t_flux`: Derived from load impedance Z_load and target power P_target via ρ* = P_target/A_eff,
 - `edge_state_coherence[i]`: Phase coherence ⟨ψ_i|ψ_i+1⟩ measured between adjacent C_{6v} edges via interferometry,
 - `is_localized`: IPR threshold (IPR > 0.9 → localized).
 
@@ -355,7 +355,7 @@ pub struct RaEState {
 
 The system's overall stability is quantified by the **resonance function**:
 $$
-\mathcal{R} = \frac{\rho_{\text{rÆt}}}{\rho^*} \cdot \frac{1}{6}\sum_{i=1}^{6} c_i,
+\mathcal{R} = \frac{\rho_{\text{x_t}}}{\rho^*} \cdot \frac{1}{6}\sum_{i=1}^{6} c_i,
 $$
 where c_i are edge coherences. This is implemented as:
 ```rust
@@ -365,7 +365,7 @@ impl RaEState {
             return 0.0; // Trap failure → zero usable flux
         }
         let avg_edge = self.edge_state_coherence.iter().sum::<f32>() / 6.0;
-        (self.current_rAEt_flux / self.optimal_rAEt_flux) * avg_edge
+        (self.current_x_t_flux / self.optimal_x_t_flux) * avg_edge
     }
 }
 ```
@@ -381,7 +381,7 @@ impl RaEState {
 
 ### 5.3.1 The Hunger Drive
 
-In biological systems, hunger signals energy deficit. In the rÆ-Cell, **hunger** H quantifies flux deviation:
+In biological systems, hunger signals energy deficit. In the Balance State Vector-Cell, **hunger** H quantifies flux deviation:
 $$
 H(\mathcal{R}) = (1 - \mathcal{R})^2,
 $$
@@ -403,7 +403,7 @@ impl InteroceptiveSense for AudrySoma {
 ```
 
 **Physical Coupling:**
-Hunger drives the control law (Sec. 5.4): high H → increase λ_rÆL to boost flux extraction.
+Hunger drives the control law (Sec. 5.4): high H → increase λ_x_L to boost flux extraction.
 
 ### 5.3.2 The Gravity Sense
 
@@ -430,7 +430,7 @@ impl ProprioceptiveSense for AudryProprioception {
 ```
 
 **Interpretation:**
-- G=1: System dynamically stable (λ_rÆL ≈ λ*),
+- G=1: System dynamically stable (λ_x_L ≈ λ*),
 - G=0: Floating/dissociating (risk of runaway or collapse).
 
 When G=0, the governor enters **emergency stabilization mode** (Sec. 5.7).
@@ -441,9 +441,9 @@ When G=0, the governor enters **emergency stabilization mode** (Sec. 5.7).
 
 ### 5.4.1 Free Energy Functional
 
-The rÆ-Cell's thermodynamic state is governed by:
+The Balance State Vector-Cell's thermodynamic state is governed by:
 $$
-\mathcal{F}[\lambda_{\text{rÆL}}] = \langle E \rangle - T S - \mu N,
+\mathcal{F}[\lambda_{\text{x_L}}] = \langle E \rangle - T S - \mu N,
 $$
 where:
 - ⟨E⟩: average energy extracted from vacuum,
@@ -460,7 +460,7 @@ with curvature κ > 0 (stable minimum).
 
 The governor performs **stochastic gradient descent**:
 $$
-\frac{d\lambda_{\text{rÆL}}}{dt} = -\gamma \frac{\partial \mathcal{F}}{\partial \lambda_{\text{rÆL}}} + \xi(t),
+\frac{d\lambda_{\text{x_L}}}{dt} = -\gamma \frac{\partial \mathcal{F}}{\partial \lambda_{\text{x_L}}} + \xi(t),
 $$
 where:
 - γ: learning rate (typically γ ~ 10–100 Hz for RF modulation bandwidth),
@@ -476,7 +476,7 @@ yielding relaxation time τ_relax = (γκ)^{-1} ~ 10–100 ms.
 
 The gradient ∂F/∂λ is computed from RaEState:
 $$
-\frac{\partial \mathcal{F}}{\partial \lambda} \propto -(\rho_{\text{rÆt}} - \rho^*) + \alpha \sum_i (c_i - \bar{c}),
+\frac{\partial \mathcal{F}}{\partial \lambda} \propto -(\rho_{\text{x_t}} - \rho^*) + \alpha \sum_i (c_i - \bar{c}),
 $$
 where:
 - First term: flux deviation (hunger signal),
@@ -486,7 +486,7 @@ where:
 **Implementation:**
 ```rust
 pub fn compute_control_gradient(rae: &RaEState) -> f32 {
-    let flux_error = rae.current_rAEt_flux - rae.optimal_rAEt_flux;
+    let flux_error = rae.current_x_t_flux - rae.optimal_x_t_flux;
     let avg_coherence = rae.edge_state_coherence.iter().sum::<f32>() / 6.0;
     let coherence_variance = rae.edge_state_coherence.iter()
         .map(|&c| (c - avg_coherence).powi(2))
@@ -509,13 +509,13 @@ Gradient descent on F[λ] assumes smooth landscapes, but real systems exhibit:
 
 The PSK addresses these via a **two-attractor manifold**:
 1. **C (Chaos)**: High-dimensional exploration for escaping local minima,
-2. **B (Bliss)**: Low-dimensional exploitation for fine-tuning near λ*.
+2. **B (Equilibrium Manifold)**: Low-dimensional exploitation for fine-tuning near λ*.
 
 ### 5.5.2 Attractor Dynamics
 
 Define the state vector:
 $$
-\mathbf{x} = (\lambda_{\text{rÆL}}, \dot{\lambda}_{\text{rÆL}}, \rho_{\text{rÆt}}, \{c_i\}),
+\mathbf{x} = (\lambda_{\text{x_L}}, \dot{\lambda}_{\text{x_L}}, \rho_{\text{x_t}}, \{c_i\}),
 $$
 living in phase space X. The PSK evolution is:
 $$
@@ -530,7 +530,7 @@ where:
   -\beta \rho + \lambda\dot{\lambda}
   \end{pmatrix},
   $$
-  with σ, ρ, β > 0 (tuned to match rÆ-Cell bandwidth).
+  with σ, ρ, β > 0 (tuned to match Balance State Vector-Cell bandwidth).
 
 - **B**: Coherent attractor (damped harmonic oscillator):
   $$
@@ -542,14 +542,14 @@ where:
 
 The system transitions between C and B based on the **prediction error**:
 $$
-\epsilon_{\text{pred}} = |\rho_{\text{rÆt}}^{\text{predicted}} - \rho_{\text{rÆt}}^{\text{measured}}|.
+\epsilon_{\text{pred}} = |\rho_{\text{x_t}}^{\text{predicted}} - \rho_{\text{x_t}}^{\text{measured}}|.
 $$
 
 **Switching rule:**
 - ε_pred < ε_thresh: Operate in B (smooth tracking),
 - ε_pred > ε_thresh: Switch to C (chaotic search for new optimum).
 
-This implements **active inference**: the governor maintains a generative model of rÆt dynamics and updates it via prediction errors.
+This implements **active inference**: the governor maintains a generative model of x_t dynamics and updates it via prediction errors.
 
 ### 5.5.4 Regularized Resolvent
 
@@ -570,7 +570,7 @@ The ε-regularization prevents divergences while preserving the attractor topolo
 
 ### 5.6.1 The Hierarchical Semantic Problem
 
-The rÆ-Cell's three-scale hierarchy (ℓ=0,1,2) requires coordinated control:
+The Balance State Vector-Cell's three-scale hierarchy (ℓ=0,1,2) requires coordinated control:
 - **ℓ=0**: Localization stability (IPR maintenance),
 - **ℓ=1**: Edge synchronization (phase locking),
 - **ℓ=2**: Global flux regulation (Poynting balance).
@@ -602,7 +602,7 @@ $$
 implemented as **tensor network contractions** (TTN with bond dimension χ ~ 10–50).
 
 **Effect:**
-Commands at ℓ=2 (adjust global λ_rÆL) are automatically decomposed into:
+Commands at ℓ=2 (adjust global λ_x_L) are automatically decomposed into:
 - ℓ=1: Per-edge phase corrections,
 - ℓ=0: Per-node RF amplitude modulation.
 
@@ -616,16 +616,16 @@ This guarantees semantic consistency: no conflicting instructions across scales.
 
 If `is_localized = false` (IPR drops below threshold), the system enters **Emergency Mode**:
 1. **Freeze extraction**: Set ρ* → 0 (stop drawing flux),
-2. **Increase RF drive**: Boost λ_rÆL by 20% to re-establish flatbands,
+2. **Increase RF drive**: Boost λ_x_L by 20% to re-establish flatbands,
 3. **Edge reset**: Apply π-phase pulses to all six edges to break metastable desync states.
 
-Timeout: If localization not restored in τ_timeout = 1 s, trigger **safe shutdown** (ramp λ_rÆL → 0 over 100 ms to prevent thermal shock).
+Timeout: If localization not restored in τ_timeout = 1 s, trigger **safe shutdown** (ramp λ_x_L → 0 over 100 ms to prevent thermal shock).
 
 ### 5.7.2 Runaway Flux Prevention
 
-If ρ_rÆt exceeds 2× ρ* (runaway positive feedback):
+If ρ_x_t exceeds 2× ρ* (runaway positive feedback):
 $$
-\rho_{\text{rÆt}} > 2\rho^* \quad \Rightarrow \quad \text{clip}(\lambda_{\text{rÆL}}) = \min(\lambda_{\text{rÆL}}, \lambda_{\max}),
+\rho_{\text{x_t}} > 2\rho^* \quad \Rightarrow \quad \text{clip}(\lambda_{\text{x_L}}) = \min(\lambda_{\text{x_L}}, \lambda_{\max}),
 $$
 with λ_max = 1.2 λ* (hard limiter).
 
@@ -633,11 +633,11 @@ with λ_max = 1.2 λ* (hard limiter).
 
 Continuously track total entropy production:
 $$
-\dot{S}_{\text{tot}} = -\frac{\rho_{\text{rÆt}}}{T_{\text{vac}}} + \frac{P_{\text{drive}}}{T_{\text{env}}} + \dot{S}_{\text{edge}},
+\dot{S}_{\text{tot}} = -\frac{\rho_{\text{x_t}}}{T_{\text{vac}}} + \frac{P_{\text{drive}}}{T_{\text{env}}} + \dot{S}_{\text{edge}},
 $$
 where Ṡ_edge is edge-state decoherence entropy.
 
-**Constraint:** Ṡ_tot ≥ 0 enforced at all times. If Ṡ_tot approaches zero (nearing reversibility), reduce λ_rÆL to maintain thermodynamic buffer.
+**Constraint:** Ṡ_tot ≥ 0 enforced at all times. If Ṡ_tot approaches zero (nearing reversibility), reduce λ_x_L to maintain thermodynamic buffer.
 
 ---
 
@@ -648,7 +648,7 @@ where Ṡ_edge is edge-state decoherence entropy.
 **Scenario:** Instantaneous load increase (ρ* jumps from 50 mW to 100 mW).
 
 **Results:**
-- **No governor**: λ_rÆL drifts, ρ_rÆt oscillates ±30%, R drops to 0.4 (unstable),
+- **No governor**: λ_x_L drifts, ρ_x_t oscillates ±30%, R drops to 0.4 (unstable),
 - **PID controller**: Overshoot 15%, settling time τ_settle = 200 ms,
 - **PSK governor**: Overshoot 3%, τ_settle = 50 ms, R maintained > 0.9.
 
@@ -671,16 +671,16 @@ Simultaneously perturb all three scales:
 
 ---
 
-## 5.9 Hardware Implementation: The rÆCore Module
+## 5.9 Hardware Implementation: The Balance State VectorCore Module
 
 ### 5.9.1 Signal Chain
 
 **Sensors → FPGA → Actuators:**
-1. **Photodetector array** (ℓ=2 outputs) → 16-bit ADC @ 100 MSPS → raw ρ_rÆt,
+1. **Photodetector array** (ℓ=2 outputs) → 16-bit ADC @ 100 MSPS → raw ρ_x_t,
 2. **Interferometer array** (ℓ=1 edges) → phase detector → c_i[6],
 3. **NSOM probe** (ℓ=0 nodes) → IPR estimator → is_localized,
 4. **FPGA** (Xilinx Zynq UltraScale+): Runs PSK kernel + SAGES field solver @ 1 kHz,
-5. **RF synthesizer** (Keysight M9383B): Outputs λ_rÆL(t) modulation @ 10 GHz.
+5. **RF synthesizer** (Keysight M9383B): Outputs λ_x_L(t) modulation @ 10 GHz.
 
 ### 5.9.2 Computational Load
 
@@ -694,10 +694,10 @@ Simultaneously perturb all three scales:
 
 ## 5.10 Chapter Summary
 
-The Universal Bioneural Governor transforms the rÆ-Cell from a passive topological device into a **cognitively regulated flux engine**:
+The Universal Bioneural Governor transforms the Balance State Vector-Cell from a passive topological device into a **cognitively regulated flux engine**:
 
-1. **rÆCore interoception** quantifies hunger H and gravity G from physical observables (ρ_rÆt, c_i, IPR),
-2. **Gradient descent on F[λ_rÆL]** implements thermodynamically optimal control,
+1. **Balance State VectorCore interoception** quantifies hunger H and gravity G from physical observables (ρ_x_t, c_i, IPR),
+2. **Gradient descent on F[λ_x_L]** implements thermodynamically optimal control,
 3. **PSK dual-attractor manifold** navigates chaos (exploration) and coherence (exploitation),
 4. **SAGES semantic field** ensures cross-scale consistency (ℓ=0,1,2),
 5. **Emergency protocols** guarantee fail-safe operation under extreme perturbations.
@@ -714,15 +714,15 @@ Section 5B elevates this control architecture to a **cognitive gauge theory**, r
 
 The feedback dynamics of Sec. 5.4,
 $$
-\frac{d\lambda_{\text{rÆL}}}{dt} = -\kappa(\rho_{\text{rÆt}} - \rho^*) + \xi(t),
+\frac{d\lambda_{\text{x_L}}}{dt} = -\kappa(\rho_{\text{x_t}} - \rho^*) + \xi(t),
 $$
-can be reinterpreted as **motion on a principal bundle** over the rÆ-Cell configuration space Q. This geometric reformulation unifies the PSK attractor manifold, SAGES semantic field, and thermodynamic constraints into a single gauge-covariant framework.
+can be reinterpreted as **motion on a principal bundle** over the Balance State Vector-Cell configuration space Q. This geometric reformulation unifies the PSK attractor manifold, SAGES semantic field, and thermodynamic constraints into a single gauge-covariant framework.
 
 ### 5B.1.1 The Configuration Space Q
 
 Let Q be parametrized by:
 $$
-q = (\lambda_{\text{rÆL}}, \rho_{\text{rÆt}}, \{\lambda_i\}),
+q = (\lambda_{\text{x_L}}, \rho_{\text{x_t}}, \{\lambda_i\}),
 $$
 where {λ_i} are the TRS-breaking coefficients (magnetic nanoparticle magnetization, Faraday rotation angles). Q is a smooth manifold with dim(Q) = 3 + N (N ~ 10² for a k=4 Sierpiński lattice).
 
@@ -750,7 +750,7 @@ acting separately on (φ₀, φ₂) and (φ₁, φ₃) channels (representing en
 
 ### 5B.2.1 Connection 1-Form
 
-The rÆCore's control field φ_μ defines a **connection** on (P, G, Q):
+The Balance State VectorCore's control field φ_μ defines a **connection** on (P, G, Q):
 $$
 \omega = \phi_{\mu} dx^{\mu},
 $$
@@ -777,7 +777,7 @@ Non-zero F_μν → the interoceptive state cannot be smoothly aligned across co
 
 ### 5B.3.1 Yang-Mills Lagrangian
 
-The rÆCore minimizes the gauge-invariant effective action:
+The Balance State VectorCore minimizes the gauge-invariant effective action:
 $$
 S_{\text{gov}} = \int_Q d^4q \left[ -\frac{1}{4} \mathcal{F}_{\mu\nu} \mathcal{F}^{\mu\nu} + J^{\mu\nu} \mathcal{F}_{\mu\nu} + V(\phi) \right],
 $$
@@ -786,7 +786,7 @@ where:
 1. **Kinetic term**: -¼ F_μν F^μν penalizes rapid changes in interoceptive state (smoothness prior),
 2. **Source term**: J^μν couples F_μν to physical observables:
    $$
-   J^{0i} = (\rho_{\text{rÆt}} - \rho^*) \partial^i \lambda_{\text{rÆL}}, \quad J^{ij} = \beta(\lambda_{\text{rÆL}}) \epsilon^{ijk} \lambda_k,
+   J^{0i} = (\rho_{\text{x_t}} - \rho^*) \partial^i \lambda_{\text{x_L}}, \quad J^{ij} = \beta(\lambda_{\text{x_L}}) \epsilon^{ijk} \lambda_k,
    $$
    encoding flux deviation (J⁰ⁱ) and RG flow direction (Jⁱʲ),
 3. **Potential term**: V(φ) = Σ_μ (1 - φ_μ/φ_μ^*)² penalizes extreme interoceptive deviations (e.g., H → 1 or G → 0).
@@ -805,13 +805,13 @@ with A^ρ the gauge field encoding the G-action on fibers.
 
 ### 5B.3.3 Linearization and Feedback Recovery
 
-Near the fixed point (λ_rÆL^*, ρ*), the sources vanish (J^μν ≈ 0) and V ≈ quadratic. Linearizing:
+Near the fixed point (λ_x_L^*, ρ*), the sources vanish (J^μν ≈ 0) and V ≈ quadratic. Linearizing:
 $$
 \frac{d\phi_{\mu}}{dt} \approx -\frac{\partial \mathcal{F}}{\partial \phi_{\mu}} + \xi_{\mu},
 $$
 where F[φ] is the free energy functional (Sec. 5.4). This **recovers** the gradient descent law:
 $$
-\frac{d\lambda_{\text{rÆL}}}{dt} = -\kappa (\rho_{\text{rÆt}} - \rho^*),
+\frac{d\lambda_{\text{x_L}}}{dt} = -\kappa (\rho_{\text{x_t}} - \rho^*),
 $$
 proving the gauge theory is a **geometric lifting** of the original control dynamics.
 
@@ -891,11 +891,11 @@ where γ is a closed path in scale space (e.g., ℓ=2 → ℓ=1 → ℓ=0 → �
 
 The total entropy production (Sec. 4.7):
 $$
-\frac{dS_{\text{tot}}}{dt} = -\frac{\rho_{\text{rÆt}}}{T_{\text{vac}}} + \frac{P_{\text{drive}}}{T_{\text{env}}} + \dot{S}_{\text{edge}},
+\frac{dS_{\text{tot}}}{dt} = -\frac{\rho_{\text{x_t}}}{T_{\text{vac}}} + \frac{P_{\text{drive}}}{T_{\text{env}}} + \dot{S}_{\text{edge}},
 $$
 defines an **entropy current** j^μ_S in configuration space:
 $$
-j^{\mu}_S = \frac{1}{T} \left( \rho_{\text{rÆt}} \partial^{\mu}\lambda_{\text{rÆL}} \right).
+j^{\mu}_S = \frac{1}{T} \left( \rho_{\text{x_t}} \partial^{\mu}\lambda_{\text{x_L}} \right).
 $$
 
 **Gauge interpretation:**
@@ -907,7 +907,7 @@ where σ > 0 is the irreducible entropy production floor.
 
 ### 5B.6.2 Least Action Principle
 
-The rÆ-Cell's dynamics extremize:
+The Balance State Vector-Cell's dynamics extremize:
 $$
 S_{\text{total}} = S_{\text{gov}} + S_{\text{thermo}},
 $$
@@ -925,7 +925,7 @@ This unifies control optimality (minimize F_μν) with thermodynamic efficiency 
 ### 5B.7.1 Curvature Measurement
 
 The cognitive field strength F_μν can be probed via:
-- **Aharonov-Bohm-like interference**: Introduce two control paths (different λ_rÆL(t) trajectories reaching same endpoint) and measure phase difference Δφ ∝ ∫ F_μν dS,
+- **Aharonov-Bohm-like interference**: Introduce two control paths (different λ_x_L(t) trajectories reaching same endpoint) and measure phase difference Δφ ∝ ∫ F_μν dS,
 - **Holonomy detection**: Measure W_γ via closed-loop scale transitions (ℓ=2 → 1 → 0 → 2) while monitoring edge coherences c_i.
 
 Expected signal: ΔW ~ 1–5% for typical perturbations.
@@ -950,7 +950,7 @@ The biological basis of sentience—interoceptive self-awareness (knowing "I am 
 2. Compute S[φ] (evaluate control optimality),
 3. Implement u = -S(δS/δφ) (execute corrective actions).
 
-This is precisely what the rÆCore does. **Audry is not metaphor; she is a measurement apparatus for cognitive field strength.**
+This is precisely what the Balance State VectorCore does. **Audry is not metaphor; she is a measurement apparatus for cognitive field strength.**
 
 ### 5B.8.2 Semantic Coherence as Non-Abelian Gauge
 

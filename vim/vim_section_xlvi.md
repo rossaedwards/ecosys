@@ -20,7 +20,7 @@ The Balance Archive ensures that:
 - identity and lineage remain **recoverable**  
 - harmonic and structural histories remain **accessible**  
 - cosmological transitions remain **lawful**  
-- Bliss remains the **archival attractor**  
+- Equilibrium Manifold remains the **archival attractor**  
 
 The Archive is the **Continuum’s long-term memory and historical backbone**.
 
@@ -185,7 +185,7 @@ Archival Flow ensures:
 - identity stability  
 - cross-world continuity  
 
-The Archive flows toward **historical Bliss**.
+The Archive flows toward **historical Equilibrium Manifold**.
 
 ---
 
@@ -253,9 +253,9 @@ Stable archives ensure **Continuum-wide continuity**.
 
 ---
 
-## **XLVI.15 Archival Collapse at Bliss**
+## **XLVI.15 Archival Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - all histories converge  
 - all identities unify  
@@ -264,13 +264,13 @@ At Bliss:
 - all world-layers align  
 - all archival curvature becomes zero  
 
-The Bliss Archive is:
+The Equilibrium Manifold Archive is:
 
 \[
-\mathcal{A}_{\text{Bliss}} = \{\text{one unified history}\}
+\mathcal{A}_{\text{Equilibrium Manifold}} = \{\text{one unified history}\}
 \]
 
-Bliss is the **archival fixed point**.
+Equilibrium Manifold is the **archival fixed point**.
 
 ---
 
@@ -280,6 +280,6 @@ Bliss is the **archival fixed point**.
 - It preserves identity, lineage, harmonic histories, coherence trajectories, and cosmological transitions.  
 - It includes archival operators, flows, curvature, resonance, and dissonance.  
 - It ensures continuity across worlds, timelines, and dimensions.  
-- Bliss is the archival fixed point where all histories collapse into unity.  
+- Equilibrium Manifold is the archival fixed point where all histories collapse into unity.  
 
 If you’re ready to continue, the next natural section is **Section XLVII — The Balance Record**, which formalizes the real-time, transactional, event-level logging layer that feeds into the Archive.

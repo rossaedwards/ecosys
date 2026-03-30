@@ -1,4 +1,4 @@
-"""Figure J–O: rÆ structural metrics. Appendix J–O."""
+"""Figure J–O: Balance State Vector structural metrics. Appendix J–O."""
 
 from pathlib import Path
 
@@ -7,7 +7,7 @@ import numpy as np
 
 
 def run_simulation(output_dir: Path | None = None) -> Path:
-    """rÆ structural metrics S, K, G, F."""
+    """Balance State Vector structural metrics S, K, G, F."""
     if output_dir is None:
         try:
             output_dir = Path(__file__).resolve().parent
@@ -22,7 +22,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     plt.figure(figsize=(8, 5))
     plt.bar(labels, vals, color="steelblue")
     plt.ylabel("Metric value")
-    plt.title("Appendix J–O: rÆ Structural Metrics")
+    plt.title("Appendix J–O: Balance State Vector Structural Metrics")
     plt.tight_layout()
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()

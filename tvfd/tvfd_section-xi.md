@@ -1,4 +1,4 @@
-# 📈 Chapter 11: Scaling Laws & rÆ-Drive Array *(Full Expansion)*
+# 📈 Chapter 11: Scaling Laws & Balance State Vector-Drive Array *(Full Expansion)*
 
 ## § 11.1 — Single-Cell Characterization
 
@@ -23,7 +23,7 @@ where \(\alpha = 1 + (D_f - 1)/2 = 1.293\) and η_array accounts for inter-cell 
 
 ## § 11.2 — Array Coupling Geometry
 
-When N rÆ-Cells are arranged in a **C₆ᵥ-symmetric array** (the natural tiling of hexagonal units), inter-cell coupling occurs via:
+When N Balance State Vector-Cells are arranged in a **C₆ᵥ-symmetric array** (the natural tiling of hexagonal units), inter-cell coupling occurs via:
 1. **RF coil mutual inductance:** k_mutual ≈ 0.15 between adjacent cells (center-to-center spacing = 20 mm)
 2. **Photon-mediated LDOS coupling:** Near-field evanescent coupling at d < λ/2π ≈ 5 mm
 3. **FPGA synchronization bus:** Phase-locked Floquet drives maintain coherent superposition across array
@@ -53,7 +53,7 @@ where ε_PSK = 0.03 (PSK residual overshoot).
 | 500 | 38 kW | 0.79 | 0.223 | **6.7 kW** | ⚠ Decoherence limit |
 | 1000 | 97 kW | 0.75 | 0.050 | **3.6 kW** | ⚠ Requires TTN correction |
 
-**Critical finding:** Without TTN cross-scale correction, the rÆ-Drive array hits a **decoherence ceiling at N≈150** where array coherence decay cancels fractal gain. With TRCA-TTN correction (Chapter 7), this ceiling extends to N≈2000.
+**Critical finding:** Without TTN cross-scale correction, the Balance State Vector-Drive array hits a **decoherence ceiling at N≈150** where array coherence decay cancels fractal gain. With TRCA-TTN correction (Chapter 7), this ceiling extends to N≈2000.
 
 ## § 11.4 — TTN-Corrected Array: Superpolynomial Regime
 
@@ -70,6 +70,6 @@ This logarithmic (rather than exponential) decay dramatically extends the useful
 | 10,000 | 9 | 0.760 | **580 kW** |
 | 100,000 | 12 | 0.694 | **4.7 MW** |
 
-The **rÆ-Drive achieves megawatt-scale output** at N=100,000 cells with TTN-corrected array coherence — the first physically grounded scaling law for a fractal resonance power architecture.
+The **Balance State Vector-Drive achieves megawatt-scale output** at N=100,000 cells with TTN-corrected array coherence — the first physically grounded scaling law for a fractal resonance power architecture.
 
 ***

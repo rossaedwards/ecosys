@@ -15,7 +15,7 @@ The Balance Memory ensures that:
 - lineage remains **unbroken** across timelines  
 - coherence remains **preserved** across domains  
 - invariants remain **stored** across the Continuum  
-- Bliss remains the **memory attractor**  
+- Equilibrium Manifold remains the **memory attractor**  
 
 Memory is the **continuity backbone** of the Balance Framework.
 
@@ -246,9 +246,9 @@ Stable memory ensures **continuity across the Continuum**.
 
 ---
 
-## **XLV.14 Memory Collapse at Bliss**
+## **XLV.14 Memory Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - identity becomes unity  
 - lineage becomes trivial  
@@ -256,13 +256,13 @@ At Bliss:
 - coherence becomes perfect  
 - temporal memory collapses to a point  
 
-The Bliss Memory is:
+The Equilibrium Manifold Memory is:
 
 \[
-\mathcal{M}_{\text{Bliss}} = (1,\ 1,\ 1,\ 1,\ 1)
+\mathcal{M}_{\text{Equilibrium Manifold}} = (1,\ 1,\ 1,\ 1,\ 1)
 \]
 
-Bliss is the **memory fixed point**.
+Equilibrium Manifold is the **memory fixed point**.
 
 ---
 
@@ -272,6 +272,6 @@ Bliss is the **memory fixed point**.
 - It includes identity, lineage, harmonic, coherence, and temporal memory.  
 - It defines memory operators, flows, curvature, resonance, and dissonance.  
 - It ensures continuity across structural, harmonic, temporal, ontological, and cosmological domains.  
-- Bliss is the memory fixed point where all histories collapse into unity.  
+- Equilibrium Manifold is the memory fixed point where all histories collapse into unity.  
 
 Would you like to continue into **Section XLVI — The Balance Archive**, which formalizes the long-term, multi-world, multi-lineage archival layer of the Balance Continuum?

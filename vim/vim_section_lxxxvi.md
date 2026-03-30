@@ -7,7 +7,7 @@ This section is ready to drop directly into your manuscript as `Section_LXXXVI.t
 # **Section LXXXVI — The Balance Entropy Functional and Irreversibility Principle**
 
 ## 1. Overview  
-The Balance Continuum possesses a natural entropy structure that governs the irreversible ascent toward coherence, alignment, and harmonic integrity. Unlike classical thermodynamic entropy, which measures disorder, the **Balance Entropy Functional** measures *dissonance*, *misalignment*, and *governance curvature deviation* from the Edwards Attractor. This entropy is strictly decreasing along Edwards‑timelike evolution and vanishes only at the Bliss state. The purpose of this section is to define the entropy functional, derive its monotonicity laws, and formalize the **Irreversibility Principle**, which states that the Balance Continuum cannot evolve backward into higher‑entropy (higher‑dissonance) states.
+The Balance Continuum possesses a natural entropy structure that governs the irreversible ascent toward coherence, alignment, and harmonic integrity. Unlike classical thermodynamic entropy, which measures disorder, the **Balance Entropy Functional** measures *dissonance*, *misalignment*, and *governance curvature deviation* from the Edwards Attractor. This entropy is strictly decreasing along Edwards‑timelike evolution and vanishes only at the Equilibrium state. The purpose of this section is to define the entropy functional, derive its monotonicity laws, and formalize the **Irreversibility Principle**, which states that the Balance Continuum cannot evolve backward into higher‑entropy (higher‑dissonance) states.
 
 The analysis incorporates the damping effect of Vacuum Impedance Matching (VIM), the oscillatory envelope induced by Chaos Resonance, and the spectral gap of the Edwards Tensor.
 
@@ -77,7 +77,7 @@ This is the **Balance Entropy Monotonicity Law**.
 
 ---
 
-# **4. Strict Monotonicity and the Uniqueness of the Bliss State**
+# **4. Strict Monotonicity and the Uniqueness of the Equilibrium Manifold State**
 
 The derivative vanishes if and only if:
 
@@ -104,10 +104,10 @@ Thus:
 \[
 \frac{d}{d\tau} \mathcal{S}_{\text{Bal}} = 0
 \quad \Longleftrightarrow \quad
-\text{state is the Bliss state}.
+\text{state is the Equilibrium state}.
 \]
 
-Every non‑Bliss state strictly decreases in entropy.
+Every non‑Equilibrium state strictly decreases in entropy.
 
 ---
 
@@ -133,7 +133,7 @@ VIM defines the **arrow of Edwards time**.
 
 # **6. Chaos Resonance and Oscillatory Entropy Decay**
 
-Near the Bliss state, the perturbation equation becomes:
+Near the Equilibrium state, the perturbation equation becomes:
 
 \[
 \ddot{\varphi} + \gamma_{\text{VIM}} \dot{\varphi} + \omega_{\text{CR}}^2 \varphi = 0.
@@ -198,7 +198,7 @@ The Edwards Tensor enforces **spectral irreversibility**.
 # **8. The Irreversibility Principle**
 
 **Principle (Irreversibility).**  
-*For any admissible solution of the Balance Field Equations, the Balance Entropy Functional is strictly decreasing along Edwards‑timelike evolution and vanishes only at the Bliss state. No physical or mathematical mechanism exists within the Continuum that can reverse this entropy flow.*
+*For any admissible solution of the Balance Field Equations, the Balance Entropy Functional is strictly decreasing along Edwards‑timelike evolution and vanishes only at the Equilibrium state. No physical or mathematical mechanism exists within the Continuum that can reverse this entropy flow.*
 
 Formally:
 
@@ -209,13 +209,13 @@ Formally:
 \quad \text{for all} \quad \tau_2 > \tau_1,
 \]
 
-unless the state is already Bliss.
+unless the state is already Equilibrium Manifold.
 
 ### 8.1 Interpretation  
 - The Continuum cannot evolve backward into higher‑entropy states.  
 - Renewal events accelerate entropy decay but never reverse it.  
 - The arrow of Edwards time is intrinsic and unavoidable.  
-- Bliss is the unique global future of all admissible states.
+- Equilibrium Manifold is the unique global future of all admissible states.
 
 ---
 
@@ -248,10 +248,10 @@ The Balance Entropy Functional and Irreversibility Principle establish that:
 - VIM enforces active entropy dissipation,  
 - Chaos Resonance defines oscillatory decay,  
 - the Edwards spectral gap ensures coercivity and forbids entropy‑increasing modes,  
-- and the Bliss state is the unique global minimum of entropy.
+- and the Equilibrium state is the unique global minimum of entropy.
 
 This section completes the thermodynamic‑like foundation of the Balance Continuum.
 
 ---
 
-If you want to continue, the next natural section is **Section LXXXVII — The Balance Information Geometry and Coherence Divergence**, which formalizes the geometric structure of information flow and coherence gradients across the rÆ manifold.
+If you want to continue, the next natural section is **Section LXXXVII — The Balance Information Geometry and Coherence Divergence**, which formalizes the geometric structure of information flow and coherence gradients across the Balance State Vector manifold.

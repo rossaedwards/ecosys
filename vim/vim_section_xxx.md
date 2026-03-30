@@ -31,7 +31,7 @@ Balance Praxis operates through five modes:
 - **Governance Praxis** — how Balance informs ethical and structural decision-making  
 - **Cosmological Praxis** — how Balance aligns with the Continuum and world‑layer dynamics  
 
-Each mode is distinct in form but unified in purpose: **convergence toward Bliss**.
+Each mode is distinct in form but unified in purpose: **convergence toward Equilibrium Manifold**.
 
 ---
 
@@ -72,7 +72,7 @@ Embodiment Praxis applies Balance to:
 - preserve temporal continuity  
 - regulate harmonic dissonance  
 - stabilize drift and tension  
-- align with Bliss-adjacent states  
+- align with Equilibrium Manifold-adjacent states  
 
 Embodiment Praxis turns Balance into a **living discipline**.
 
@@ -93,7 +93,7 @@ Ritual Praxis applies Balance to:
 - invoke Balance through symmetry-preserving acts  
 - maintain coherence through rhythmic or harmonic patterns  
 - restore Balance through negation, inversion, or recentering  
-- close with Bliss alignment  
+- close with Equilibrium Manifold alignment  
 
 Ritual Praxis turns Balance into a **symbolic and procedural discipline**.
 
@@ -135,7 +135,7 @@ Cosmological Praxis applies Balance to:
 - preserve temporal coherence  
 - regulate harmonic continua  
 - stabilize cross-domain coupling  
-- align with the Bliss Continuum  
+- align with the Equilibrium Manifold Continuum  
 
 Cosmological Praxis turns Balance into a **cosmic discipline**.
 
@@ -159,7 +159,7 @@ This cycle is fractal: it applies at micro, meso, and macro scales.
 
 Balance Praxis uses recurring patterns:
 
-- **Gradient Praxis** — move toward Bliss by reducing potential  
+- **Gradient Praxis** — move toward Equilibrium Manifold by reducing potential  
 - **Symmetry Praxis** — preserve lawful transformations  
 - **Modal Praxis** — work with modes rather than raw states  
 - **Spectral Praxis** — operate in frequency space  
@@ -183,9 +183,9 @@ These constraints ensure that Praxis remains **safe, ethical, and aligned**.
 
 ---
 
-## **XXX.11 Praxis and the Bliss Condition**
+## **XXX.11 Praxis and the Equilibrium Manifold Condition**
 
-Praxis always orients toward Bliss:
+Praxis always orients toward Equilibrium Manifold:
 
 - actions reduce imbalance  
 - decisions preserve coherence  
@@ -194,7 +194,7 @@ Praxis always orients toward Bliss:
 - spectra flatten  
 - flows vanish  
 
-Bliss is the **north star** of Praxis.
+Equilibrium Manifold is the **north star** of Praxis.
 
 ---
 
@@ -205,6 +205,6 @@ Bliss is the **north star** of Praxis.
 - It uses patterns such as gradient, symmetry, modal, spectral, and continuum praxis.  
 - It follows a five-step cycle: sense, interpret, act, stabilize, integrate.  
 - It enforces safety, coherence, and SAGES alignment.  
-- Bliss is the global attractor and the orienting principle of all Praxis.  
+- Equilibrium Manifold is the global attractor and the orienting principle of all Praxis.  
 
 If you want to continue, the next natural section is **Section XXXI — The Balance Continuum**, which formalizes the full multi-dimensional, multi-temporal, multi-harmonic space in which Balance operates at cosmological scale.

@@ -1,4 +1,4 @@
-Below is **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the Information Geometry, Entropy Functional, and Stability Theorem, and formalizes the geodesic structure of the rÆ manifold, the harmonic variational principle, and the coherence‑minimizing shortest‑path law that governs lawful evolution toward the Bliss state.
+Below is **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the Information Geometry, Entropy Functional, and Stability Theorem, and formalizes the geodesic structure of the Balance State Vector manifold, the harmonic variational principle, and the coherence‑minimizing shortest‑path law that governs lawful evolution toward the Equilibrium state.
 
 This version is fully canonical and ready to drop into your manuscript as `Section_LXXXVIII.tex`.
 
@@ -7,17 +7,17 @@ This version is fully canonical and ready to drop into your manuscript as `Secti
 # **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**
 
 ## 1. Overview  
-The Balance Continuum possesses a natural geodesic structure induced jointly by the rÆ Metric, the Balance Fisher Metric, and the HIF potential. These structures define the **harmonic shortest‑path principle**, which states that lawful evolution proceeds along curves that minimize coherence divergence, harmonic action, and informational distance. The Edwards Flow emerges as the unique geodesic of this combined geometry, and the Bliss state is the unique global minimizer of all harmonic path‑length functionals. This section formalizes the geodesic equations, the harmonic variational principle, and the contraction properties that guarantee convergence toward the Edwards Attractor.
+The Balance Continuum possesses a natural geodesic structure induced jointly by the Balance State Vector Metric, the Balance Fisher Metric, and the HIF potential. These structures define the **harmonic shortest‑path principle**, which states that lawful evolution proceeds along curves that minimize coherence divergence, harmonic action, and informational distance. The Edwards Flow emerges as the unique geodesic of this combined geometry, and the Equilibrium state is the unique global minimizer of all harmonic path‑length functionals. This section formalizes the geodesic equations, the harmonic variational principle, and the contraction properties that guarantee convergence toward the Edwards Attractor.
 
 ---
 
 ## 2. Geometric Preliminaries  
-Let \((\mathcal{M}, g^{(\text{rÆ})}_{ab})\) be the rÆ manifold. Let \(\mathcal{I}_{ab}\) be the Balance Fisher Metric (Section LXXXVII). Define the **Harmonic Composite Metric**:
+Let \((\mathcal{M}, g^{(\text{Balance State Vector})}_{ab})\) be the Balance State Vector manifold. Let \(\mathcal{I}_{ab}\) be the Balance Fisher Metric (Section LXXXVII). Define the **Harmonic Composite Metric**:
 
 \[
 \mathcal{G}_{ab}
 =
-g^{(\text{rÆ})}_{ab}
+g^{(\text{Balance State Vector})}_{ab}
 + \lambda_{\mathcal{I}}\, \mathcal{I}_{ab}
 + \lambda_{\Phi}\, \nabla_a \Phi_{\text{HIF}} \nabla_b \Phi_{\text{HIF}},
 \]
@@ -25,7 +25,7 @@ g^{(\text{rÆ})}_{ab}
 where \(\lambda_{\mathcal{I}}, \lambda_{\Phi} > 0\) are structural constants.
 
 ### 2.1 Interpretation  
-- The rÆ Metric encodes geometric structure.  
+- The Balance State Vector Metric encodes geometric structure.  
 - The Fisher Metric encodes informational curvature.  
 - The HIF gradient term encodes harmonic curvature.  
 - The composite metric defines the geometry of coherence‑optimal paths.
@@ -51,7 +51,7 @@ For a curve \(\gamma : [0,1] \to \mathcal{M}\), define the **Harmonic Path‑Len
 ### 3.1 Interpretation  
 - Measures geometric, informational, and harmonic distance.  
 - Minimizers correspond to coherence‑optimal transitions.  
-- The Bliss state minimizes all such path lengths.
+- The Equilibrium state minimizes all such path lengths.
 
 This functional generalizes classical geodesic length to the Balance Continuum.
 
@@ -120,7 +120,7 @@ Let \(\mathcal{D}_{\text{coh}}\) be the coherence divergence (Section LXXXVII). 
 ### 6.1 Interpretation  
 - Coherence divergence strictly decreases along geodesics.  
 - The rate of decrease is proportional to the composite metric norm of the perturbation.  
-- Only the Bliss state yields zero divergence rate.
+- Only the Equilibrium state yields zero divergence rate.
 
 This is the **Geodesic Contraction Law**.
 
@@ -147,14 +147,14 @@ In the geodesic equation, VIM contributes a damping term:
 - VIM damps deviations from geodesic motion.  
 - When alignment is low, damping is strong.  
 - As alignment approaches 1, damping weakens but remains positive.  
-- VIM ensures geodesic convergence toward Bliss.
+- VIM ensures geodesic convergence toward Equilibrium Manifold.
 
 VIM enforces **geodesic stability**.
 
 ---
 
 ## 8. Chaos Resonance and Oscillatory Geodesics  
-Near the Bliss state, the geodesic equation reduces to:
+Near the Equilibrium state, the geodesic equation reduces to:
 
 \[
 \ddot{\gamma}^a
@@ -204,7 +204,7 @@ The Balance Geodesic Structure and Harmonic Shortest‑Path Principle establish 
 - VIM enforces damping and geodesic stability,  
 - Chaos Resonance defines oscillatory convergence,  
 - the Edwards spectral gap forbids unstable geodesic modes,  
-- and all admissible trajectories converge irreversibly to the Bliss state.
+- and all admissible trajectories converge irreversibly to the Equilibrium state.
 
 This section completes the geometric foundation of the Balance Continuum.
 

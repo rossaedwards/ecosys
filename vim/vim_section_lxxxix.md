@@ -5,19 +5,19 @@ Below is **Section LXXXIX — The Balance Variational Principle and Unified Acti
 # **Section LXXXIX — The Balance Variational Principle and Unified Action Functional**
 
 ## 1. Overview  
-The Balance Continuum is governed by a hierarchy of geometric, informational, and harmonic structures that together determine lawful evolution toward the Bliss state. These structures—rÆ geometry, the Balance Fisher Metric, the HIF potential, the Edwards Tensor, and the coherence divergence—are not independent. They arise from a single **Unified Action Functional**, whose stationary points define the Edwards Flow, the harmonic geodesics, the coherence‑gradient descent, and the global attractor structure. This section formalizes the **Balance Variational Principle**, derives the Euler–Lagrange equations associated with the Unified Action, and shows that all previously defined flows and stability laws emerge as consequences of this single variational foundation.
+The Balance Continuum is governed by a hierarchy of geometric, informational, and harmonic structures that together determine lawful evolution toward the Equilibrium state. These structures—Balance State Vector geometry, the Balance Fisher Metric, the HIF potential, the Edwards Tensor, and the coherence divergence—are not independent. They arise from a single **Unified Action Functional**, whose stationary points define the Edwards Flow, the harmonic geodesics, the coherence‑gradient descent, and the global attractor structure. This section formalizes the **Balance Variational Principle**, derives the Euler–Lagrange equations associated with the Unified Action, and shows that all previously defined flows and stability laws emerge as consequences of this single variational foundation.
 
 ---
 
 ## 2. The Unified Action Functional  
-Let \(\gamma : [0,1] \to \mathcal{M}\) be a smooth curve on the rÆ manifold. Define the **Unified Action Functional**:
+Let \(\gamma : [0,1] \to \mathcal{M}\) be a smooth curve on the Balance State Vector manifold. Define the **Unified Action Functional**:
 
 \[
 \mathcal{S}_{\text{Unified}}[\gamma]
 =
 \int_0^1
 \left[
-\frac{1}{2} g^{(\text{rÆ})}_{ab} \dot{\gamma}^a \dot{\gamma}^b
+\frac{1}{2} g^{(\text{Balance State Vector})}_{ab} \dot{\gamma}^a \dot{\gamma}^b
 + \frac{\lambda_{\mathcal{I}}}{2} \mathcal{I}_{ab} \dot{\gamma}^a \dot{\gamma}^b
 + \Phi_{\text{HIF}}(\gamma)
 + \frac{\lambda_{\mathcal{E}}}{2} \mathcal{E}_{ab} \mathcal{E}^{ab}
@@ -29,7 +29,7 @@ Let \(\gamma : [0,1] \to \mathcal{M}\) be a smooth curve on the rÆ manifold. De
 - The second term encodes informational kinetic energy.  
 - The third term encodes harmonic potential energy.  
 - The fourth term encodes governance curvature energy.  
-- The functional is minimized uniquely at the Bliss state.
+- The functional is minimized uniquely at the Equilibrium state.
 
 This action unifies all dynamical, geometric, and informational structures of the Continuum.
 
@@ -63,7 +63,7 @@ Varying the Unified Action yields:
 \frac{d}{ds}
 \left[
 \left(
-g^{(\text{rÆ})}_{ab}
+g^{(\text{Balance State Vector})}_{ab}
 + \lambda_{\mathcal{I}} \mathcal{I}_{ab}
 \right)
 \dot{\gamma}^b
@@ -80,14 +80,14 @@ g^{(\text{rÆ})}_{ab}
 - The left‑hand side is the generalized inertial term.  
 - The right‑hand side is the generalized force term.  
 - The Edwards Flow satisfies this equation exactly.  
-- The Bliss state is the unique global minimizer.
+- The Equilibrium state is the unique global minimizer.
 
 This is the **Unified Balance Equation of Motion**.
 
 ---
 
 ## 5. Recovery of the Edwards Flow  
-Let \(\tau\) be Edwards time. Setting \(s = \tau\) and projecting onto the rÆ Metric yields:
+Let \(\tau\) be Edwards time. Setting \(s = \tau\) and projecting onto the Balance State Vector Metric yields:
 
 \[
 \nabla_u u^a
@@ -125,7 +125,7 @@ This is the **Harmonic Geodesic Equation** (Section LXXXVIII).
 ### 6.1 Interpretation  
 - Harmonic geodesics minimize the Unified Action.  
 - The Edwards Flow is the unique timelike harmonic geodesic.  
-- Bliss is the unique geodesic fixed point.
+- Equilibrium Manifold is the unique geodesic fixed point.
 
 ---
 
@@ -143,7 +143,7 @@ This is the **coherence‑gradient descent** (Section LXXXVII).
 ### 7.1 Interpretation  
 - The Fisher geometry dominates.  
 - The system follows the steepest informational descent.  
-- Bliss is the unique informational minimum.
+- Equilibrium Manifold is the unique informational minimum.
 
 ---
 
@@ -189,7 +189,7 @@ Second variation of the Unified Action yields:
 - \(\gamma_{\text{VIM}}\) gives dissipative convexity.  
 - All terms are positive.
 
-Thus, the Bliss state is a **strict global minimizer** of the Unified Action.
+Thus, the Equilibrium state is a **strict global minimizer** of the Unified Action.
 
 ---
 
@@ -198,7 +198,7 @@ The Balance Variational Principle and Unified Action Functional establish that:
 
 - all lawful dynamics arise from a single variational structure,  
 - the Edwards Flow, harmonic geodesics, and coherence‑gradient descent are unified,  
-- the Bliss state is the unique global minimizer of the Unified Action,  
+- the Equilibrium state is the unique global minimizer of the Unified Action,  
 - VIM, Chaos Resonance, and the Edwards spectral gap emerge naturally from the second variation,  
 - and the entire Balance Continuum is governed by a single, coherent, variational law.
 

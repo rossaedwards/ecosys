@@ -1,7 +1,7 @@
 Appendix_A [&or] 3B. Extended Mathematical Framework for Dynamic Vacuum Impedance Matching
 (PRX‑style draft, v0.1)
 
-The lyte‑rÆL state introduced in Chapter 3 provides a tunable parameter for regulating the slowed‑light regime and achieving dynamic vacuum impedance matching. However, the full physical mechanism underlying this regulation requires a deeper treatment of symmetry breaking, time‑periodic driving, boundary non‑Hermiticity, renormalization flow, thermodynamic stability, and the tensor‑network representation of the fractal manifold. This section formalizes these mechanisms and establishes the mathematical infrastructure that supports the rÆ‑Cell architecture.
+The lyte‑x_L state introduced in Chapter 3 provides a tunable parameter for regulating the slowed‑light regime and achieving dynamic vacuum impedance matching. However, the full physical mechanism underlying this regulation requires a deeper treatment of symmetry breaking, time‑periodic driving, boundary non‑Hermiticity, renormalization flow, thermodynamic stability, and the tensor‑network representation of the fractal manifold. This section formalizes these mechanisms and establishes the mathematical infrastructure that supports the Balance State Vector‑Cell architecture.
 
 ---
 
@@ -70,10 +70,10 @@ vg^{(\mathrm{eff})} = vg \left( 1 + \chi \frac{V^2}{\hbar^2 \Omega^2} \right),
 
 where \( \chi \) is a geometry‑dependent coefficient.
 
-Thus, the RF coils act as a Floquet engine that dynamically tunes the lyte‑rÆL parameter:
+Thus, the RF coils act as a Floquet engine that dynamically tunes the lyte‑x_L parameter:
 
 \[
-\lambda{rÆL}^{(\mathrm{eff})} = \frac{vg^{(\mathrm{eff})}}{v_0}.
+\lambda{x_L}^{(\mathrm{eff})} = \frac{vg^{(\mathrm{eff})}}{v_0}.
 \]
 
 This provides the physical mechanism for real‑time impedance matching.
@@ -115,65 +115,65 @@ This algebra enforces:
 
 - non‑reciprocal edge transport,
 - suppression of back‑propagation,
-- rectification of vacuum fluctuations into the rÆt flux.
+- rectification of vacuum fluctuations into the x_t flux.
 
 ---
 
-3B.4 Renormalization‑Group Flow of the lyte‑rÆL Parameter
+3B.4 Renormalization‑Group Flow of the lyte‑x_L Parameter
 
 The fractal recursion depth \( k \) acts as a renormalization scale. Define the beta function:
 
 \[
-\beta(\lambda{rÆL}) = \frac{d\lambda{rÆL}}{d\ln k}.
+\beta(\lambda{x_L}) = \frac{d\lambda{x_L}}{d\ln k}.
 \]
 
 From Chapter 3:
 
 \[
-\lambda{rÆL}(k) = e^{-\beta0 k},
+\lambda{x_L}(k) = e^{-\beta0 k},
 \]
 
 so
 
 \[
-\beta(\lambda{rÆL}) = -\beta0 \lambda_{rÆL}.
+\beta(\lambda{x_L}) = -\beta0 \lambda_{x_L}.
 \]
 
 Because \( \beta_0 > 0 \), the flow satisfies:
 
 \[
-\beta(\lambda_{rÆL}) < 0,
+\beta(\lambda_{x_L}) < 0,
 \]
 
-implying that \( \lambda_{rÆL} \) flows toward the fixed point:
+implying that \( \lambda_{x_L} \) flows toward the fixed point:
 
 \[
-\lambda{rÆL} \to \lambda{rÆL}^*.
+\lambda{x_L} \to \lambda{x_L}^*.
 \]
 
 This establishes the slowed‑light regime as a stable RG fixed point, giving the system the mathematical structure of a quantum field theory.
 
 ---
 
-3B.5 Thermodynamic Potential for the rÆt Flux
+3B.5 Thermodynamic Potential for the x_t Flux
 
 Define a free‑energy‑like functional:
 
 \[
-\mathcal{F}[\lambda{rÆL}] = \int \left( Z(\mathcal{M}f) - Z_{\mathrm{vac}} \right)^2 d\omega.
+\mathcal{F}[\lambda{x_L}] = \int \left( Z(\mathcal{M}f) - Z_{\mathrm{vac}} \right)^2 d\omega.
 \]
 
 The system evolves according to:
 
 \[
-\frac{d\lambda{rÆL}}{dt} = -\frac{\partial \mathcal{F}}{\partial \lambda{rÆL}}.
+\frac{d\lambda{x_L}}{dt} = -\frac{\partial \mathcal{F}}{\partial \lambda{x_L}}.
 \]
 
 This gradient‑descent dynamics ensures:
 
 - stability of the impedance match,
 - suppression of fluctuations,
-- convergence to the fixed point \( \lambda_{rÆL}^* \).
+- convergence to the fixed point \( \lambda_{x_L}^* \).
 
 This provides the thermodynamic interpretation of the bioneural governor.
 
@@ -219,8 +219,8 @@ Summary of Chapter 3B
 - Magnetic nanoparticles introduce a topological mass term and quantized Chern number.
 - RF modulation acts as a Floquet engine tuning the slowed‑light regime.
 - Non‑Hermitian boundary operators enforce unidirectional edge transport.
-- The lyte‑rÆL parameter flows to a stable RG fixed point.
+- The lyte‑x_L parameter flows to a stable RG fixed point.
 - A thermodynamic potential governs the bioneural regulation loop.
 - A MERA‑like tensor network provides a microscopic derivation of spectral and impedance scaling.
 
-This extended mathematical framework completes the theoretical foundation required for Chapter 4 — The rÆ‑Cell Architecture, where these principles are translated into a solid‑state device blueprint.
+This extended mathematical framework completes the theoretical foundation required for Chapter 4 — The Balance State Vector‑Cell Architecture, where these principles are translated into a solid‑state device blueprint.

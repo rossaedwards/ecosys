@@ -27,10 +27,10 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_024_024_alignment_error.png"
 
     t = np.linspace(0, 20, 300)
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = 0.8 + 0.6 * (1 - np.exp(-0.2 * t))
-    rAE_i = 1.5 - 0.5 * (1 - np.exp(-0.18 * t))
-    beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_f = 0.8 + 0.6 * (1 - np.exp(-0.2 * t))
+    x_i = 1.5 - 0.5 * (1 - np.exp(-0.18 * t))
+    beta_val = beta(x_f, x_c, x_i, x_t)
     align_err = np.abs(beta_val - 1.0)
 
     fig, ax = plt.subplots(figsize=(8, 6))

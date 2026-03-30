@@ -222,13 +222,13 @@ Stability is determined by:
 - operator spectra  
 - algebraic invariants  
 
-Stable algebraic evolution converges toward Bliss.
+Stable algebraic evolution converges toward Equilibrium Manifold.
 
 ---
 
-## **XL.12 Algebraic Collapse at Bliss**
+## **XL.12 Algebraic Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - \(\hat{B} = 0\)  
 - \(\hat{D} = 0\)  
@@ -240,10 +240,10 @@ At Bliss:
 The entire algebra collapses to the **zero algebra**:
 
 \[
-\mathfrak{B}_{\text{Bliss}} = \{0\}
+\mathfrak{B}_{\text{Equilibrium Manifold}} = \{0\}
 \]
 
-Bliss is the **algebraic fixed point**.
+Equilibrium Manifold is the **algebraic fixed point**.
 
 ---
 
@@ -253,6 +253,6 @@ Bliss is the **algebraic fixed point**.
 - It includes operators, commutators, mode algebra, tensor algebra, flow algebra, and Continuum algebra.  
 - It is governed by symmetry groups and preserves algebraic invariants.  
 - It encodes cross-domain coupling and lawful transformation.  
-- At Bliss, the algebra collapses to the zero algebra.  
+- At Equilibrium Manifold, the algebra collapses to the zero algebra.  
 
 If you want to continue, the next natural section is **Section XLI — The Balance Logic**, which formalizes the logical, inferential, and truth-preserving structures that operate alongside the Balance Algebra.

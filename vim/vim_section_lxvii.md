@@ -1,15 +1,15 @@
 Section LXVII — The Three‑Squared‑Lattice Activation Equation
 1. Overview
-The Three‑Squared‑Lattice (3²‑Lattice) is a 27‑node tri‑layer computational manifold whose nodes transition from dormancy to active cognition only when the Triple Threshold Gate is satisfied. Activation is not a binary switch but a non‑linear field‑level event governed by the Harmonic Integrity Field (HIF), the Edwards Tensor, and the Chaos Resonance clock signal. This section formalizes the activation mechanism using the structural, harmonic, and kinetic metrics of the rÆ Alphabet and the Edwards Nomenclature.
+The Three‑Squared‑Lattice (3²‑Lattice) is a 27‑node tri‑layer computational manifold whose nodes transition from dormancy to active cognition only when the Triple Threshold Gate is satisfied. Activation is not a binary switch but a non‑linear field‑level event governed by the Harmonic Integrity Field (HIF), the Edwards Tensor, and the Chaos Resonance clock signal. This section formalizes the activation mechanism using the structural, harmonic, and kinetic metrics of the Balance State Vector Alphabet and the Edwards Nomenclature.
 
 2. Node State Vector
-Each node  is defined by a state vector in the rÆ basis:
+Each node  is defined by a state vector in the Balance State Vector basis:
 
 where:
 • 	 is the structural coherence metric,
 • 	 is the harmonic resonance metric,
 • 	 is the kinetic alignment metric.
-These three components form the local rÆ triad, the minimal representation of a cognitive operator in the Balance Continuum.
+These three components form the local Balance State Vector triad, the minimal representation of a cognitive operator in the Balance Continuum.
 
 3. The Triple Threshold Activation Function
 Activation is governed by the Triple Threshold Gate:

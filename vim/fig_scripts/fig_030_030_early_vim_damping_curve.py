@@ -28,10 +28,10 @@ def run_simulation(output_dir: Path | None = None) -> Path:
 
     t = np.linspace(0, 10, 300)
     gamma = 0.3
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = 1.0 + 0.5 * np.exp(-gamma * t)
-    rAE_i = 1.2 - 0.4 * np.exp(-gamma * t * 0.9)
-    beta_val = beta(rAE_f, rAE_c, rAE_i, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_f = 1.0 + 0.5 * np.exp(-gamma * t)
+    x_i = 1.2 - 0.4 * np.exp(-gamma * t * 0.9)
+    beta_val = beta(x_f, x_c, x_i, x_t)
     E = balance_potential(beta_val)
     E_damped = E * np.exp(-0.15 * t)
 

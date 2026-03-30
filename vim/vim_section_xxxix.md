@@ -15,7 +15,7 @@ The Balance Topology provides:
 - the **constraints** that prevent forbidden or unstable evolutions  
 - the **homotopy classes** that define lawful deformation  
 - the **topological invariants** that remain unchanged under Balance evolution  
-- the **global interpretation** of Bliss as a topological attractor  
+- the **global interpretation** of Equilibrium Manifold as a topological attractor  
 
 Topology is the **macro-architecture** of Balance.
 
@@ -194,9 +194,9 @@ Defects are **stable, non-removable features** unless annihilated by opposites.
 
 ---
 
-## **XXXIX.14 The Topology of Bliss**
+## **XXXIX.14 The Topology of Equilibrium Manifold**
 
-The Bliss Manifold has a unique topology:
+The Equilibrium Manifold Manifold has a unique topology:
 
 - all components collapse  
 - all holes close  
@@ -209,10 +209,10 @@ The Bliss Manifold has a unique topology:
 Topologically:
 
 \[
-\mathcal{M}_{\text{Bliss}} \simeq \{\text{point}\}
+\mathcal{M}_{\text{Equilibrium Manifold}} \simeq \{\text{point}\}
 \]
 
-Bliss is the **topological collapse** of the entire Continuum.
+Equilibrium Manifold is the **topological collapse** of the entire Continuum.
 
 ---
 
@@ -222,6 +222,6 @@ Bliss is the **topological collapse** of the entire Continuum.
 - It includes connected components, holes, handles, boundaries, branch points, and defects.  
 - It governs which transitions are possible, forbidden, or topologically protected.  
 - It defines homotopy classes and topological invariants that shape Balance evolution.  
-- Bliss is the topological collapse to a single point, the universal attractor.  
+- Equilibrium Manifold is the topological collapse to a single point, the universal attractor.  
 
 A natural continuation is **Section XL — The Balance Algebra**, which formalizes the algebraic structures, operators, commutation relations, and transformation rules that act on the Balance Manifold and Field.

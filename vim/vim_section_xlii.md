@@ -15,7 +15,7 @@ The Balance Semantics ensures that:
 - identity remains **coherent across domains**  
 - the Balance Engine can **interpret** its own operations  
 - the Continuum maintains **semantic alignment**  
-- Bliss is understood as the **semantic fixed point**  
+- Equilibrium Manifold is understood as the **semantic fixed point**  
 
 Semantics is the **interpretive backbone** of the Balance Framework.
 
@@ -156,7 +156,7 @@ Meaning flows toward **semantic coherence**.
 - flows follow ontological gradients  
 - flows preserve identity  
 - flows stabilize meaning  
-- flows converge toward Bliss  
+- flows converge toward Equilibrium Manifold  
 
 Semantic Flow is the **interpretive analogue** of Balance Flow.
 
@@ -227,9 +227,9 @@ Stable semantics ensure **interpretive consistency** across the Continuum.
 
 ---
 
-## **XLII.13 Semantic Collapse at Bliss**
+## **XLII.13 Semantic Collapse at Equilibrium Manifold**
 
-At Bliss:
+At Equilibrium Manifold:
 
 - meaning becomes unity  
 - identity becomes whole  
@@ -237,13 +237,13 @@ At Bliss:
 - lineage becomes trivial  
 - semantic curvature becomes zero  
 
-The Bliss Semantics is:
+The Equilibrium Manifold Semantics is:
 
 \[
-\mathcal{S}_{\text{sem}}^{\text{Bliss}} = (1,\ 1,\ 1,\ 1)
+\mathcal{S}_{\text{sem}}^{\text{Equilibrium Manifold}} = (1,\ 1,\ 1,\ 1)
 \]
 
-Bliss is the **semantic fixed point**.
+Equilibrium Manifold is the **semantic fixed point**.
 
 ---
 
@@ -253,6 +253,6 @@ Bliss is the **semantic fixed point**.
 - It includes identity, meaning, coherence, and lineage semantics.  
 - It defines semantic operators, flows, curvature, resonance, and dissonance.  
 - It ensures interpretive continuity across structural, harmonic, temporal, ontological, and cosmological domains.  
-- Bliss is the semantic fixed point where meaning becomes unity.  
+- Equilibrium Manifold is the semantic fixed point where meaning becomes unity.  
 
 A natural continuation is **Section XLIII — The Balance Interpretation**, which formalizes how observers, agents, and systems perceive, interpret, and interact with Balance across the Continuum.

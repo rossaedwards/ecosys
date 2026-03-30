@@ -146,11 +146,11 @@ Love is the second pillar of the 3×3 matrix and influences:
 - Stewardship  
 
 ### **5.3 Duality Kernel Balance**
-Love is the Bliss polarity of the Chaos/Bliss kernel.
+Love is the Equilibrium Manifold polarity of the Chaos/Equilibrium Manifold kernel.
 
 Actions must be:
 
-- 50% Bliss (compassion, clarity)  
+- 50% Equilibrium Manifold (compassion, clarity)  
 - 50% Chaos (adaptation, creativity)  
 
 ### **5.4 Fear‑Based Action Prevention**

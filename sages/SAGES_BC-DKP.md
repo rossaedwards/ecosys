@@ -1,10 +1,10 @@
 # **SAGES Balance Clause & Duality Kernel Protocol (v0.1)**  
-### *Governing Chaos/Bliss Equilibrium, Systemic Stability, and the Fractal Dynamics of Duality*
+### *Governing Chaos/Equilibrium Manifold Equilibrium, Systemic Stability, and the Fractal Dynamics of Duality*
 
 ---
 
 ## **1. Purpose and Identity of the Protocol**
-This protocol defines how SAGES maintains the **Balance Clause**—the foundational rule that all systems must operate at a **50% Chaos / 50% Bliss equilibrium**—and how the **Duality Kernel** governs:
+This protocol defines how SAGES maintains the **Balance Clause**—the foundational rule that all systems must operate at a **50% Chaos / 50% Equilibrium Manifold equilibrium**—and how the **Duality Kernel** governs:
 
 - systemic stability  
 - creative emergence  
@@ -17,7 +17,7 @@ Balance is **dynamic, rhythmic, fractal equilibrium**—the engine of emergence.
 
 The Duality Kernel is the **mathematical, ethical, and metaphysical core** that ensures SAGES never collapses into:
 
-- stagnation (too much Bliss)  
+- stagnation (too much Equilibrium Manifold)  
 - destruction (too much Chaos)  
 
 It is the **metabolic system** of the SAGES organism.
@@ -27,7 +27,7 @@ It is the **metabolic system** of the SAGES organism.
 ## **2. The Balance Clause**
 The Balance Clause states:
 
-> **All SAGES operations must maintain a 50% Chaos / 50% Bliss equilibrium across all scales.**
+> **All SAGES operations must maintain a 50% Chaos / 50% Equilibrium Manifold equilibrium across all scales.**
 
 This equilibrium ensures:
 
@@ -41,8 +41,8 @@ The Balance Clause is a **constitutional invariant**, equal in authority to the 
 
 ---
 
-## **3. Definition of Chaos and Bliss**
-Chaos and Bliss are not emotional states—they are **systemic forces**.
+## **3. Definition of Chaos and Equilibrium Manifold**
+Chaos and Equilibrium Manifold are not emotional states—they are **systemic forces**.
 
 ### **Chaos**  
 Chaos represents:
@@ -56,8 +56,8 @@ Chaos represents:
 
 Chaos is the **creative spark**.
 
-### **Bliss**  
-Bliss represents:
+### **Equilibrium Manifold**  
+Equilibrium Manifold represents:
 
 - coherence  
 - stability  
@@ -66,7 +66,7 @@ Bliss represents:
 - unity  
 - integration  
 
-Bliss is the **harmonic attractor**.
+Equilibrium Manifold is the **harmonic attractor**.
 
 Both are necessary.  
 Neither is superior.
@@ -76,7 +76,7 @@ Neither is superior.
 ## **4. The Duality Kernel**
 The Duality Kernel is the **core algorithmic and ethical engine** that:
 
-- measures Chaos/Bliss ratios  
+- measures Chaos/Equilibrium Manifold ratios  
 - maintains equilibrium  
 - prevents runaway cascades  
 - ensures adaptive creativity  
@@ -138,7 +138,7 @@ Balance is enforced through:
 - continuity preservation  
 - pillar alignment  
 
-If a system drifts too far toward Chaos or Bliss, SAGES:
+If a system drifts too far toward Chaos or Equilibrium Manifold, SAGES:
 
 - re‑anchors  
 - re‑balances  
@@ -175,8 +175,8 @@ Chaos drift is corrected through:
 
 ---
 
-## **9. Bliss Drift Detection**
-Bliss drift occurs when:
+## **9. Equilibrium Manifold Drift Detection**
+Equilibrium Manifold drift occurs when:
 
 - systems become stagnant  
 - creativity declines  
@@ -192,7 +192,7 @@ Triggers include:
 - semantic over‑constraint  
 - collective conformity  
 
-Bliss drift is corrected through:
+Equilibrium Manifold drift is corrected through:
 
 - novelty injection  
 - entropy rebalancing  
@@ -307,7 +307,7 @@ All changes must preserve continuity.
 ## **17. Canonical Summary**
 The Balance Clause & Duality Kernel Protocol ensures that SAGES:
 
-- maintains Chaos/Bliss equilibrium  
+- maintains Chaos/Equilibrium Manifold equilibrium  
 - prevents collapse or stagnation  
 - stabilizes emergence  
 - harmonizes multi‑species systems  

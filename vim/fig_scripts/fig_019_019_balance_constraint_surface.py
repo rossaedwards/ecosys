@@ -27,19 +27,19 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_019_019_balance_constraint_surface.png"
 
     n = 80
-    rAE_c, rAE_t = 1.0, 1.5
-    rAE_f = np.linspace(0.4, 2.5, n)
-    rAE_i = np.linspace(0.4, 2.5, n)
-    F, I = np.meshgrid(rAE_f, rAE_i)
-    beta_val = beta(F, rAE_c, I, rAE_t)
+    x_c, x_t = 1.0, 1.5
+    x_f = np.linspace(0.4, 2.5, n)
+    x_i = np.linspace(0.4, 2.5, n)
+    F, I = np.meshgrid(x_f, x_i)
+    beta_val = beta(F, x_c, I, x_t)
     V = balance_potential(beta_val)
 
     fig = plt.figure(figsize=(10, 7))
     ax = fig.add_subplot(111, projection="3d")
     ax.plot_surface(F, I, V, cmap="viridis", alpha=0.9, shade=True)
     ax.contour(F, I, V, levels=10, colors="white", alpha=0.4, offset=0)
-    ax.set_xlabel(r"$rAE_f$")
-    ax.set_ylabel(r"$rAE_i$")
+    ax.set_xlabel(r"$x_f$")
+    ax.set_ylabel(r"$x_i$")
     ax.set_zlabel(r"$V = (\beta-1)^2$")
     ax.set_title("Balance Constraint Surface")
     plt.tight_layout()

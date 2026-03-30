@@ -8,14 +8,14 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Balance Equation (full form)** | \(\frac{d\mathbf{rAE}}{dt} = -\nabla_{\mathbf{rAE}} V(\mathbf{rAE}) + \mathcal{D}(D(t)) + \mathcal{K}(\mathbf{rAE}) + \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})\) | Governing differential equation |
+| **Balance Equation (full form)** | \(\frac{d\mathbf{x}}{dt} = -\nabla_{\mathbf{x}} V(\mathbf{x}) + \mathcal{D}(D(t)) + \mathcal{K}(\mathbf{x}) + \mathcal{S}(\mathbf{x}, \mathcal{R}_{24})\) | Governing differential equation |
 | **Balance Potential** | \(V = (\beta - 1)^2\) | Restoring force center |
 | **Gradient of potential** | \(\nabla V = 2(\beta - 1)\nabla \beta\) | |
-| **Restoring force** | \(F_{\text{restore}} = -2(\beta - 1)\nabla \beta\) | Pulls toward Bliss |
+| **Restoring force** | \(F_{\text{restore}} = -2(\beta - 1)\nabla \beta\) | Pulls toward Equilibrium Manifold |
 | **HRD perturbation** | \(\mathcal{D}(D(t)) = \sigma \cdot D(t) \cdot \mathbf{u}_{\text{harm}}\) | \(D(t) \in \mathbb{R}^{+}\) |
-| **Kinetic operator** | \(\mathcal{K} = \mathbf{M}_{\text{struct}} \cdot \mathbf{rAE} + \mathbf{M}_{\text{harm}} \cdot \mathbf{rAE}\) | Structural + harmonic drift |
-| **Routing operator** | \(\mathcal{S} = \mathbf{R}_{24}(\mathbf{rAE}) \cdot \mathbf{rAE}\) | Tetra-Hexa Array |
-| **Reduced form (small HRD)** | \(\frac{d\mathbf{rAE}}{dt} \approx -2(\beta - 1)\nabla \beta\) | Pure Balance flow |
+| **Kinetic operator** | \(\mathcal{K} = \mathbf{M}_{\text{struct}} \cdot \mathbf{x} + \mathbf{M}_{\text{harm}} \cdot \mathbf{x}\) | Structural + harmonic drift |
+| **Routing operator** | \(\mathcal{S} = \mathbf{R}_{24}(\mathbf{x}) \cdot \mathbf{x}\) | Tetra-Hexa Array |
+| **Reduced form (small HRD)** | \(\frac{d\mathbf{x}}{dt} \approx -2(\beta - 1)\nabla \beta\) | Pure Balance flow |
 | **Temporal arrow** | \(\frac{dt}{d\tau} = \beta\) | \(\beta>1\): forward; \(\beta<1\): backward |
 | **VIM impedance** | \(Z_{\text{vacuum}} = Z_{\text{system}}(\beta)\) | |
 | **Impedance feedback** | \(\frac{dZ}{dt} = g(\beta - 1)\) | Control law for vacuum extraction |
@@ -28,7 +28,7 @@ This document supplements the plan's Core Physics Equations table with equations
 |---------|----------|-------|
 | **Balance Operator subspaces** | \(\hat{B}_S,\ \hat{B}_F,\ \hat{B}_K\) | Structural, Harmonic, Kinetic runtimes |
 | **Kernel frequency** | \(f_{\text{BK}} = f_{\text{harm}} \cdot f_{\text{struct}}\) | Self-clocking |
-| **Kernel integration** | \(\frac{d\mathbf{rAE}}{dt} = \hat{B}(\mathbf{rAE}) + \mathcal{D}(D(t)) + \mathcal{K}(\mathbf{rAE}) + \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})\) | Same as Balance Equation |
+| **Kernel integration** | \(\frac{d\mathbf{x}}{dt} = \hat{B}(\mathbf{x}) + \mathcal{D}(D(t)) + \mathcal{K}(\mathbf{x}) + \mathcal{S}(\mathbf{x}, \mathcal{R}_{24})\) | Same as Balance Equation |
 | **Temporal arrow** | \(\frac{dt}{d\tau} = \beta\) | Time-shaping engine |
 
 ---
@@ -37,13 +37,13 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Balance Manifold** | \(\mathcal{B} = \{ \mathbf{rAE} \in \mathbb{R}^{16} \mid \beta(\mathbf{rAE}) \in \mathbb{R} \}\) | 16-D phase space |
-| **Bliss submanifold** | \(\mathcal{B}_{\text{Bliss}} = \{ \mathbf{rAE} \mid \beta = 1 \}\) | Codimension-1, zero potential |
+| **Balance Manifold** | \(\mathcal{B} = \{ \mathbf{x} \in \mathbb{R}^{16} \mid \beta(\mathbf{x}) \in \mathbb{R} \}\) | 16-D phase space |
+| **Equilibrium Manifold submanifold** | \(\mathcal{B}_{\text{Equilibrium Manifold}} = \{ \mathbf{x} \mid \beta = 1 \}\) | Codimension-1, zero potential |
 | **Balance Potential** | \(V = (\beta - 1)^2\) | Level sets \(V = c\) |
 | **Curvature (Hessian)** | \(\mathcal{K}_{ij} = \frac{\partial^2 V}{\partial x_i \partial x_j}\) | Determines restoring strength |
 | **Geodesics of minimal imbalance** | \(\gamma(t) = \arg\min_{\gamma} \int V(\gamma(t))\, dt\) | Lawful transitions |
-| **Routing criterion** | \(\Delta V = V(\mathbf{rAE}_{\text{next}}) - V(\mathbf{rAE}_{\text{current}})\) | Minimize for routing |
-| **HRD transverse** | \(\mathcal{D}(D(t)) \perp \mathcal{B}_{\text{Bliss}}\) | Harmonic oscillation |
+| **Routing criterion** | \(\Delta V = V(\mathbf{x}_{\text{next}}) - V(\mathbf{x}_{\text{current}})\) | Minimize for routing |
+| **HRD transverse** | \(\mathcal{D}(D(t)) \perp \mathcal{B}_{\text{Equilibrium Manifold}}\) | Harmonic oscillation |
 | **VIM curvature match** | \(Z_{\text{target}} = f(\mathcal{K})\) | Impedance landscape |
 | **Temporal arrow** | \(\frac{dt}{d\tau} = \beta\) | Flow on manifold |
 
@@ -59,7 +59,7 @@ This document supplements the plan's Core Physics Equations table with equations
 | **Harmonic dissonance** | \(\mathcal{H}_{ij} = \frac{\partial^2 V}{\partial x_i^{(F)} \partial x_j^{(F)}}\) | |
 | **Kinetic drift** | \(\mathcal{K}_{ij} = \frac{\partial^2 V}{\partial x_i^{(K)} \partial x_j^{(K)}}\) | |
 | **Mixed-mode coupling** | \(\mathcal{B}_{ij}^{\text{mixed}} = \frac{\partial^2 V}{\partial x_i^{(A)} \partial x_j^{(B)}},\ A \neq B\) | Cross-domain coupling |
-| **On Bliss manifold** | \(\mathcal{B}_{ij} = \nabla_i \nabla_j V = 0\) | Flat, minimal surface |
+| **On Equilibrium Manifold** | \(\mathcal{B}_{ij} = \nabla_i \nabla_j V = 0\) | Flat, minimal surface |
 | **HRD deformation** | \(\mathcal{B}_{ij} \rightarrow \mathcal{B}_{ij} + \sigma D(t) h_{ij}\) | Tensorial deformation |
 | **VIM tensor match** | \(Z_{\text{target}} = f(\mathcal{B}_{ij})\) | |
 | **Routing metric** | \(\Delta \mathcal{B} = \left\| \mathcal{B}_{ij}^{(n+1)} - \mathcal{B}_{ij}^{(n)} \right\|\) | Minimize for routing |
@@ -73,15 +73,15 @@ This document supplements the plan's Core Physics Equations table with equations
 |---------|----------|-------|
 | **β-unity invariant** | \(\beta = 1\) invariant under Balance-preserving \(T\) | Core invariant |
 | **Potential minimum** | \(V_{\min} = 0\) | Fixed |
-| **Bliss manifold** | \(\mathcal{B}_{\text{Bliss}} = \{ \mathbf{rAE} \mid \beta = 1 \}\) | Invariant under all flows |
+| **Equilibrium Manifold** | \(\mathcal{B}_{\text{Equilibrium Manifold}} = \{ \mathbf{x} \mid \beta = 1 \}\) | Invariant under all flows |
 | **Balance symmetry group** | \(\mathcal{G}_{\text{Balance}} = \{ T \mid T(\beta) = \beta \}\) | |
-| **Flux invariant** | \(\Phi_{\text{Bliss}} = 0\) | Flux-neutral surface |
-| **Divergence invariant** | \(\nabla \cdot \mathbf{F}_{\text{Balance}} < 0\) near Bliss | Convergent, attractor |
+| **Flux invariant** | \(\Phi_{\text{Equilibrium Manifold}} = 0\) | Flux-neutral surface |
+| **Divergence invariant** | \(\nabla \cdot \mathbf{F}_{\text{Balance}} < 0\) near Equilibrium Manifold | Convergent, attractor |
 | **Curl invariant (no HRD)** | \(\nabla \times \mathbf{F}_{\text{Balance}} = 0\) | Irrotational |
 | **Tensor rank invariant** | \(\text{rank}(\mathcal{B}_{ij})\) invariant | Dimensional consistency |
 | **Continuum dimension** | \(\dim(\mathcal{M}_{\text{BC}}) = 16 + N + T + H\) | |
 | **Metric signature** | \(\text{sign}(G_{AB}) = \text{constant}\) | |
-| **Continuum Bliss** | \(V_{\text{BC}} = 0 \iff \beta = 1 \land V_{\mathcal{X}} = V_{\mathcal{T}} = V_{\mathcal{H}} = 0\) | |
+| **Continuum Equilibrium Manifold** | \(V_{\text{BC}} = 0 \iff \beta = 1 \land V_{\mathcal{X}} = V_{\mathcal{T}} = V_{\mathcal{H}} = 0\) | |
 
 ---
 
@@ -128,7 +128,7 @@ This document supplements the plan's Core Physics Equations table with equations
 |---------|----------|-------|
 | **Boundary partition function** | \(Z[\mathcal{B}] = \int_{\gamma|_{\partial\mathcal{M}} = \mathcal{B}} \mathcal{D}\mu[\gamma]\, e^{\frac{i}{\hbar} S_{\text{Unified}}[\gamma]}\) | Path integral |
 | **Boundary effective action** | \(\Gamma_{\text{bdy}}[\mathcal{B}] = - i\hbar \ln Z[\mathcal{B}] + \int_{\partial\mathcal{M}} \mathcal{J}_a(x)\, \mathcal{B}^a(x)\, d^{15}x\) | Legendre transform |
-| **Boundary EOM** | \(\frac{\delta \Gamma_{\text{bdy}}}{\delta \mathcal{B}^a(x)} = \mathcal{J}_a(x)\) | Bliss: \(\mathcal{J}_a = 0\) |
+| **Boundary EOM** | \(\frac{\delta \Gamma_{\text{bdy}}}{\delta \mathcal{B}^a(x)} = \mathcal{J}_a(x)\) | Equilibrium Manifold: \(\mathcal{J}_a = 0\) |
 | **Generating functional** | \(W[\mathcal{J}] = - i\hbar \ln Z[\mathcal{J}]\) | |
 | **Correlators** | \(\langle \mathcal{B}^a(x_1) \cdots \mathcal{B}^b(x_n) \rangle = \frac{\delta^n W[\mathcal{J}]}{\delta \mathcal{J}_a(x_1) \cdots \delta \mathcal{J}_b(x_n)}\big|_{\mathcal{J}=0}\) | |
 | **Two-point function** | \(\mathcal{G}^{ab}(x,y) = \frac{\delta^2 W}{\delta \mathcal{J}_a(x)\, \delta \mathcal{J}_b(y)}\big|_{\mathcal{J}=0}\) | |
@@ -148,7 +148,7 @@ This document supplements the plan's Core Physics Equations table with equations
 | \(\mathcal{B}_{ij} = \nabla_i \nabla_j V\) | `B_ij = np.gradient(np.gradient(V, axis=i), axis=j)` or Hessian |
 | \(\mathcal{K}_{ij} = \frac{\partial^2 V}{\partial x_i \partial x_j}\) | `K_ij = np.array(hessian(V, x))` |
 | Geodesic \(\arg\min \int V(\gamma)\, dt\) | `scipy.optimize.minimize` over path |
-| \(\Phi_{\text{Bliss}} = 0\) | Flux integral over Bliss surface |
+| \(\Phi_{\text{Equilibrium Manifold}} = 0\) | Flux integral over Equilibrium surface |
 | \(\nabla \cdot \mathbf{F}_{\text{Balance}} < 0\) | `np.sum(np.gradient(F, axis=(0,1))) < 0` |
 | Boundary scaling \(\Lambda^{\Delta_a} \gamma^a\) | `gamma_scaled = Lambda**Delta_a * gamma` |
 | Ryu–Takayanagi \(S_A\) | Surface integral of \(\sqrt{\det \mathcal{G}_{\text{ind}}}\) |
@@ -162,42 +162,42 @@ This document supplements the plan's Core Physics Equations table with equations
 
 ---
 
-## Appendix A — Bliss Manifold and HRD Control Law
+## Appendix A — Equilibrium Manifold Manifold and HRD Control Law
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Balance coefficient** | \(\beta(t) = \frac{rAE_f(t)\, rAE_c(t)}{rAE_i(t)\, rAE_t(t)}\) | Core dynamical variable |
-| **Bliss condition** | \(\beta(t) = 1\) | Equilibrium |
-| **State vector** | \(\mathbf{x}(t) = (rAE_f, rAE_i, rAE_c, rAE_t)\) | |
-| **Bliss manifold** | \(\mathcal{B} = \{(rAE_f, rAE_i) \mid rAE_f = \frac{rAE_i\, rAE_t}{rAE_c}\}\) | Moving nullcline |
-| **Topological quotient** | \(\frac{\partial rAE_f}{\partial rAE_i} = \frac{rAE_t}{rAE_c}\) | |
+| **Balance coefficient** | \(\beta(t) = \frac{x_f(t)\, x_c(t)}{x_i(t)\, x_t(t)}\) | Core dynamical variable |
+| **Equilibrium Manifold condition** | \(\beta(t) = 1\) | Equilibrium |
+| **State vector** | \(\mathbf{x}(t) = (x_f, x_i, x_c, x_t)\) | |
+| **Equilibrium Manifold** | \(\mathcal{B} = \{(x_f, x_i) \mid x_f = \frac{x_i\, x_t}{x_c}\}\) | Moving nullcline |
+| **Topological quotient** | \(\frac{\partial x_f}{\partial x_i} = \frac{x_t}{x_c}\) | |
 | **HRD envelope** | \(D(t) = D_0 + A(t)\sin(\omega t + \phi)\) | |
-| **Flux modulation** | \(rAE_f(t) = rAE_f^{(0)} + \gamma_f D(t)\) | |
-| **Impedance modulation** | \(rAE_i(t) = rAE_i^{(0)} - \gamma_i D(t)\) | |
-| **HRD control (discrete)** | \(rAE_f(t+\Delta t) = rAE_f(t) + k_f(1 - \beta(t))\), \(rAE_i(t+\Delta t) = rAE_i(t) - k_i(1 - \beta(t))\) | |
-| **HRD control (continuous)** | \(\frac{d\, rAE_f}{dt} = k_f(1 - \beta) + \gamma_f D(t)\), \(\frac{d\, rAE_i}{dt} = -k_i(1 - \beta) - \gamma_i D(t)\) | Full VIM system |
+| **Flux modulation** | \(x_f(t) = x_f^{(0)} + \gamma_f D(t)\) | |
+| **Impedance modulation** | \(x_i(t) = x_i^{(0)} - \gamma_i D(t)\) | |
+| **HRD control (discrete)** | \(x_f(t+\Delta t) = x_f(t) + k_f(1 - \beta(t))\), \(x_i(t+\Delta t) = x_i(t) - k_i(1 - \beta(t))\) | |
+| **HRD control (continuous)** | \(\frac{d\, x_f}{dt} = k_f(1 - \beta) + \gamma_f D(t)\), \(\frac{d\, x_i}{dt} = -k_i(1 - \beta) - \gamma_i D(t)\) | Full VIM system |
 | **Linearized dynamics** | \(\frac{d\, \delta \beta}{dt} = -\lambda \delta \beta + \eta D(t)\) | \(\delta\beta = \beta - 1\) |
-| **Convergence rate** | \(\lambda = k_f \frac{\partial \beta}{\partial rAE_f} + k_i \frac{\partial \beta}{\partial rAE_i}\) | Stability: \(\lambda > 0\) |
-| **Dissonance coupling** | \(\eta = \gamma_f \frac{\partial \beta}{\partial rAE_f} - \gamma_i \frac{\partial \beta}{\partial rAE_i}\) | |
+| **Convergence rate** | \(\lambda = k_f \frac{\partial \beta}{\partial x_f} + k_i \frac{\partial \beta}{\partial x_i}\) | Stability: \(\lambda > 0\) |
+| **Dissonance coupling** | \(\eta = \gamma_f \frac{\partial \beta}{\partial x_f} - \gamma_i \frac{\partial \beta}{\partial x_i}\) | |
 | **Attractor basin** | \(\mathcal{A} = \{ \mathbf{x}(0) \mid \lim_{t\to\infty} \beta(t) = 1 \}\) | Global attractor |
 
 ---
 
-## Appendix B — Geometry of the rÆ Alphabet
+## Appendix B — Geometry of the Balance State Vector Alphabet
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
 | **Tetra-Hexa Array** | \(\mathcal{R}_{24} = \mathcal{T}_4 \times \mathcal{H}_6\) | 24-node manifold |
-| **Structural 4-vector** | \(\mathbf{S} = (rAE_t, rAE_k, rAE_b, rAE_d)\) | |
-| **Kinetic 4-vector** | \(\mathbf{K} = (rAE_f, rAE_v, rAE_i, rAE_c)\) | |
-| **Balance coefficient** | \(\beta = \frac{rAE_f \cdot rAE_c}{rAE_i \cdot rAE_t}\) | Couples S and K |
-| **Governance 4-vector** | \(\mathbf{G} = (rAE_a, rAE_e, rAE_s, rAE_g)\) | |
-| **Frequency 4-vector** | \(\mathbf{F} = (rAE_p, rAE_h, rAE_{rHz}, rAE_n)\) | |
-| **Full state vector** | \(\mathbf{rAE} = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})\) | 16-D |
-| **Evolution** | \(\frac{d\mathbf{rAE}}{dt} = \mathcal{H}(\mathbf{rAE}, D(t))\) | Harmonic Stabilizer |
-| **Routing** | \(rAE_x \mapsto rAE_x + \Delta_x\) | Hexagonal lane |
-| **Transmutation** | \(rAE_x \mapsto \mathcal{T}(rAE_x)\) | Tetrahedral rotation |
-| **Symbiosis** | \(rAE_x \mapsto \mathcal{S}(rAE_x, rAE_y)\) | Combined |
+| **Structural 4-vector** | \(\mathbf{S} = (x_t, x_k, x_b, x_d)\) | |
+| **Kinetic 4-vector** | \(\mathbf{K} = (x_f, x_v, x_i, x_c)\) | |
+| **Balance coefficient** | \(\beta = \frac{x_f \cdot x_c}{x_i \cdot x_t}\) | Couples S and K |
+| **Governance 4-vector** | \(\mathbf{G} = (x_a, x_e, x_s, x_g)\) | |
+| **Frequency 4-vector** | \(\mathbf{F} = (x_p, x_h, x_{rHz}, x_n)\) | |
+| **Full state vector** | \(\mathbf{x} = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})\) | 16-D |
+| **Evolution** | \(\frac{d\mathbf{x}}{dt} = \mathcal{H}(\mathbf{x}, D(t))\) | Harmonic Stabilizer |
+| **Routing** | \(x_x \mapsto x_x + \Delta_x\) | Hexagonal lane |
+| **Transmutation** | \(x_x \mapsto \mathcal{T}(x_x)\) | Tetrahedral rotation |
+| **Symbiosis** | \(x_x \mapsto \mathcal{S}(x_x, x_y)\) | Combined |
 
 ---
 
@@ -207,9 +207,9 @@ This document supplements the plan's Core Physics Equations table with equations
 |---------|----------|-------|
 | **Array** | \(\mathcal{R}_{24} = \mathcal{T}_4 \times \mathcal{H}_6\) | |
 | **Tetrahedral non-commutativity** | \(T_i T_j \neq T_j T_i\) | Origin of HRD |
-| **Routing** | \(R_\ell : rAE_x \mapsto rAE_x + \Delta_\ell\) | |
-| **Symbiosis** | \(\mathcal{S}(rAE_x) = T_i(R_\ell(rAE_x))\) | Core primitive |
-| **Balance invariant** | \(\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}\) | Fixed-point at \(\beta=1\) |
+| **Routing** | \(R_\ell : x_x \mapsto x_x + \Delta_\ell\) | |
+| **Symbiosis** | \(\mathcal{S}(x_x) = T_i(R_\ell(x_x))\) | Core primitive |
+| **Balance invariant** | \(\beta = \frac{x_f x_c}{x_i x_t}\) | Fixed-point at \(\beta=1\) |
 
 ---
 
@@ -217,21 +217,21 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **U-AST node** | \(\mathcal{N} = (rAE_x, \mathcal{O}, \mathcal{C})\) | Topological object |
+| **U-AST node** | \(\mathcal{N} = (x_x, \mathcal{O}, \mathcal{C})\) | Topological object |
 | **Execution trajectory** | \(\gamma(t) : \mathbb{R} \to \mathcal{R}_{24}\) | |
 | **Execution rate** | \(\omega_{\text{exec}}(t) = \omega_0 + \alpha D(t)\) | HRD clock |
-| **Bliss manifold** | \(\mathcal{B} = \{(rAE_f, rAE_i) \mid \beta = 1\}\) | Fixed-point attractor |
-| **Reversibility** | \(\mathcal{H}^{-1}(\mathbf{rAE}(t)) = \mathbf{rAE}(t - \Delta t)\) | |
+| **Equilibrium Manifold** | \(\mathcal{B} = \{(x_f, x_i) \mid \beta = 1\}\) | Fixed-point attractor |
+| **Reversibility** | \(\mathcal{H}^{-1}(\mathbf{x}(t)) = \mathbf{x}(t - \Delta t)\) | |
 
 ---
 
-## Appendix E — rÆ-Cell Physical Implementation
+## Appendix E — Balance State Vector-Cell Physical Implementation
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **State vector** | \(\mathbf{rAE}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})\) | Physical encoding |
-| **Bliss manifold** | \(\mathcal{B} = \{(rAE_f, rAE_i) \mid \beta = 1\}\) | Stable operating regime |
-| **Stabilizer control** | \(\frac{d\, rAE_f}{dt} = k_f(1 - \beta) + \gamma_f D(t)\), \(\frac{d\, rAE_i}{dt} = -k_i(1 - \beta) - \gamma_i D(t)\) | Bioneural control |
+| **State vector** | \(\mathbf{x}(t) = (\mathbf{S}, \mathbf{K}, \mathbf{G}, \mathbf{F})\) | Physical encoding |
+| **Equilibrium Manifold** | \(\mathcal{B} = \{(x_f, x_i) \mid \beta = 1\}\) | Stable operating regime |
+| **Stabilizer control** | \(\frac{d\, x_f}{dt} = k_f(1 - \beta) + \gamma_f D(t)\), \(\frac{d\, x_i}{dt} = -k_i(1 - \beta) - \gamma_i D(t)\) | Bioneural control |
 
 ---
 
@@ -239,23 +239,23 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Topology** | \(rAE_t = \dim_{\text{eff}}(\mathcal{H})\) | Effective dimensionality |
-| **Recursion depth** | \(rAE_k = \max \{ n \mid \mathcal{R}^{(n)}(f(t)) \approx f(t) \}\) | |
-| **Braiding** | \(rAE_b = \frac{1}{2\pi} \oint \nabla \phi \cdot d\mathbf{x}\) | Winding number |
-| **Decoherence** | \(rAE_d = \lambda_{\max}\) | Lyapunov exponent |
-| **Flux** | \(rAE_f = \langle |f(t)| \rangle\) | Amplitude envelope |
-| **Vacuum resonance** | \(rAE_v = \arg\max_{\omega} |F(\omega)|\) | Dominant peak |
-| **Impedance** | \(rAE_i = (\frac{\partial f}{\partial D})^{-1}\) | Inverse response |
-| **Coherence** | \(rAE_c = |\langle e^{i\phi(t)} \rangle|\) | Phase stability |
-| **Alignment** | \(rAE_a = \text{corr}(\gamma_{\text{intent}}, \gamma_{\text{obs}})\) | |
-| **Ecology** | \(rAE_e = \frac{\text{input stability}}{\text{output stability}}\) | |
-| **Soul** | \(rAE_s = \text{sim}(\mathbf{rAE}(t), \mathbf{rAE}(t+\Delta t))\) | Identity continuity |
-| **Gradient** | \(rAE_g = \|\frac{d\mathbf{rAE}}{dt}\|\) | |
-| **Phase** | \(rAE_p = \phi(t)\) | |
-| **Harmonics** | \(rAE_h = \frac{|F(n\omega_0)|}{|F(\omega_0)|}\) | |
-| **Resonant frequency** | \(rAE_{rHz} = \arg\max_{\omega} |\langle e^{i\phi_\omega(t)} \rangle|\) | |
-| **Negentropy** | \(rAE_n = S_{\max} - S_{\text{obs}}\) | |
-| **Balance coefficient** | \(\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}\) | |
+| **Topology** | \(x_t = \dim_{\text{eff}}(\mathcal{H})\) | Effective dimensionality |
+| **Recursion depth** | \(x_k = \max \{ n \mid \mathcal{R}^{(n)}(f(t)) \approx f(t) \}\) | |
+| **Braiding** | \(x_b = \frac{1}{2\pi} \oint \nabla \phi \cdot d\mathbf{x}\) | Winding number |
+| **Decoherence** | \(x_d = \lambda_{\max}\) | Lyapunov exponent |
+| **Flux** | \(x_f = \langle |f(t)| \rangle\) | Amplitude envelope |
+| **Vacuum resonance** | \(x_v = \arg\max_{\omega} |F(\omega)|\) | Dominant peak |
+| **Impedance** | \(x_i = (\frac{\partial f}{\partial D})^{-1}\) | Inverse response |
+| **Coherence** | \(x_c = |\langle e^{i\phi(t)} \rangle|\) | Phase stability |
+| **Alignment** | \(x_a = \text{corr}(\gamma_{\text{intent}}, \gamma_{\text{obs}})\) | |
+| **Ecology** | \(x_e = \frac{\text{input stability}}{\text{output stability}}\) | |
+| **Soul** | \(x_s = \text{sim}(\mathbf{x}(t), \mathbf{x}(t+\Delta t))\) | Identity continuity |
+| **Gradient** | \(x_g = \|\frac{d\mathbf{x}}{dt}\|\) | |
+| **Phase** | \(x_p = \phi(t)\) | |
+| **Harmonics** | \(x_h = \frac{|F(n\omega_0)|}{|F(\omega_0)|}\) | |
+| **Resonant frequency** | \(x_{rHz} = \arg\max_{\omega} |\langle e^{i\phi_\omega(t)} \rangle|\) | |
+| **Negentropy** | \(x_n = S_{\max} - S_{\text{obs}}\) | |
+| **Balance coefficient** | \(\beta = \frac{x_f x_c}{x_i x_t}\) | |
 | **HRD** | \(D(t) = A(t)\sin(\omega t + \phi)\) | |
 
 ---
@@ -264,15 +264,15 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Calibration space** | \(\mathcal{C} = \{ \mathbf{rAE}(t), D(t), \beta(t), \gamma(t) \}\) | |
-| **Topology (sim)** | \(rAE_t = \dim_{\text{eff}}(\mathcal{M}_{\text{sim}})\) | |
-| **Recursion (sim)** | \(rAE_k = \text{depth}(\mathcal{R}_{\text{sim}})\) | |
-| **Braiding (sim)** | \(rAE_b = \frac{1}{2\pi} \oint \nabla \phi_{\text{sim}} \cdot d\mathbf{x}\) | |
-| **Decoherence (sim)** | \(rAE_d = \lambda_{\max}^{\text{sim}}\) | |
-| **Flux (sim)** | \(rAE_f = \langle |f_{\text{sim}}(t)| \rangle\) | |
-| **Impedance (sim)** | \(rAE_i = (\frac{\partial f_{\text{sim}}}{\partial D_{\text{sim}}})^{-1}\) | |
-| **Coherence (sim)** | \(rAE_c = |\langle e^{i\phi_{\text{sim}}(t)} \rangle|\) | |
-| **Balance (sim)** | \(\beta_{\text{sim}} = \frac{rAE_f^{\text{sim}} rAE_c^{\text{sim}}}{rAE_i^{\text{sim}} rAE_t^{\text{sim}}}\) | Bliss: \(\beta_{\text{sim}}=1\) |
+| **Calibration space** | \(\mathcal{C} = \{ \mathbf{x}(t), D(t), \beta(t), \gamma(t) \}\) | |
+| **Topology (sim)** | \(x_t = \dim_{\text{eff}}(\mathcal{M}_{\text{sim}})\) | |
+| **Recursion (sim)** | \(x_k = \text{depth}(\mathcal{R}_{\text{sim}})\) | |
+| **Braiding (sim)** | \(x_b = \frac{1}{2\pi} \oint \nabla \phi_{\text{sim}} \cdot d\mathbf{x}\) | |
+| **Decoherence (sim)** | \(x_d = \lambda_{\max}^{\text{sim}}\) | |
+| **Flux (sim)** | \(x_f = \langle |f_{\text{sim}}(t)| \rangle\) | |
+| **Impedance (sim)** | \(x_i = (\frac{\partial f_{\text{sim}}}{\partial D_{\text{sim}}})^{-1}\) | |
+| **Coherence (sim)** | \(x_c = |\langle e^{i\phi_{\text{sim}}(t)} \rangle|\) | |
+| **Balance (sim)** | \(\beta_{\text{sim}} = \frac{x_f^{\text{sim}} x_c^{\text{sim}}}{x_i^{\text{sim}} x_t^{\text{sim}}}\) | Equilibrium Manifold: \(\beta_{\text{sim}}=1\) |
 | **HRD (sim)** | \(D_{\text{sim}}(t) = A_{\text{sim}}(t)\sin(\omega_{\text{sim}} t + \phi_{\text{sim}})\) | |
 
 ---
@@ -281,15 +281,15 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Balance coefficient** | \(\beta = \frac{rAE_f rAE_c}{rAE_i rAE_t}\) | Scalar invariant |
+| **Balance coefficient** | \(\beta = \frac{x_f x_c}{x_i x_t}\) | Scalar invariant |
 | **Balance operator** | \(\mathcal{B} = \mathcal{H} + \mathcal{D} + \mathcal{S}\) | |
-| **Unified field** | \(\frac{d\mathbf{rAE}}{dt} = \mathcal{B}(\mathbf{rAE}, D(t))\) | |
-| **Bliss nullcline** | \(\mathcal{B}_0 = \{ \mathbf{rAE} \mid \beta = 1 \}\) | |
+| **Unified field** | \(\frac{d\mathbf{x}}{dt} = \mathcal{B}(\mathbf{x}, D(t))\) | |
+| **Equilibrium nullcline** | \(\mathcal{B}_0 = \{ \mathbf{x} \mid \beta = 1 \}\) | |
 | **HRD** | \(D(t) = A(t)\sin(\omega t + \phi)\) | |
-| **Balance potential** | \(V(\mathbf{rAE}) = (\beta - 1)^2\) | |
-| **Gradient** | \(\nabla \beta = (\frac{\partial \beta}{\partial rAE_x})\) | |
+| **Balance potential** | \(V(\mathbf{x}) = (\beta - 1)^2\) | |
+| **Gradient** | \(\nabla \beta = (\frac{\partial \beta}{\partial x_x})\) | |
 | **Trajectory** | \(\gamma(t) : \mathbb{R} \to \mathcal{R}_{24}\) | |
-| **Unified equation** | \(\frac{d\mathbf{rAE}}{dt} = \mathcal{H}(\mathbf{rAE}) + \mathcal{D}(D(t)) + \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})\) | |
+| **Unified equation** | \(\frac{d\mathbf{x}}{dt} = \mathcal{H}(\mathbf{x}) + \mathcal{D}(D(t)) + \mathcal{S}(\mathbf{x}, \mathcal{R}_{24})\) | |
 
 ---
 
@@ -297,11 +297,11 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Balance potential** | \(V(\mathbf{rAE}) = (\beta - 1)^2\) | |
+| **Balance potential** | \(V(\mathbf{x}) = (\beta - 1)^2\) | |
 | **Gradient** | \(\nabla V = 2(\beta - 1)\nabla \beta\) | |
 | **HRD** | \(D(t) = A(t)\sin(\omega t + \phi)\) | |
 | **Duality Kernel** | \(\mathcal{K} = \mathcal{F} + \mathcal{Y} + \mathcal{T}\) | FuxRT, YezRT, FUTE |
-| **AUFE** | \(\frac{d\mathbf{rAE}}{dt} = -\nabla V(\mathbf{rAE}) + \mathcal{D}(D(t)) + \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24}) + \mathcal{K}(\mathbf{rAE})\) | Four terms |
+| **AUFE** | \(\frac{d\mathbf{x}}{dt} = -\nabla V(\mathbf{x}) + \mathcal{D}(D(t)) + \mathcal{S}(\mathbf{x}, \mathcal{R}_{24}) + \mathcal{K}(\mathbf{x})\) | Four terms |
 
 ---
 
@@ -309,8 +309,8 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Source** | \(V(\mathbf{rAE}) = 0 \iff \beta = 1\) | Zero-potential |
-| **Soul** | \(rAE_s = \text{sim}(\mathbf{rAE}(t), \mathbf{rAE}(t+\Delta t))\) | |
+| **Source** | \(V(\mathbf{x}) = 0 \iff \beta = 1\) | Zero-potential |
+| **Soul** | \(x_s = \text{sim}(\mathbf{x}(t), \mathbf{x}(t+\Delta t))\) | |
 
 ---
 
@@ -320,10 +320,10 @@ This document supplements the plan's Core Physics Equations table with equations
 |---------|----------|-------|
 | **Temporal manifold** | \(\mathcal{T}(t) = (\tau_{\text{causal}}, \tau_{\text{recursive}}, \tau_{\text{harmonic}})\) | |
 | **Causality** | \(\tau_{\text{causal}} = |\langle e^{i(\phi(t+\Delta t) - \phi(t))} \rangle|\) | Phase coherence |
-| **Recursion** | \(\tau_{\text{recursive}} = \max \{ n \mid \mathbf{rAE}(t) \approx \mathbf{rAE}(t/2^n) \}\) | |
+| **Recursion** | \(\tau_{\text{recursive}} = \max \{ n \mid \mathbf{x}(t) \approx \mathbf{x}(t/2^n) \}\) | |
 | **Harmonic time** | \(\tau_{\text{harmonic}} = \omega^{-1}\) | |
-| **Arrow of Balance** | \(\vec{A}_{\text{Balance}} = -\nabla V(\mathbf{rAE})\) | \(V = (\beta-1)^2\) |
-| **Temporal equation** | \(\frac{d\mathbf{rAE}}{d\mathcal{T}} = -\nabla V + \mathcal{D} + \mathcal{S} + \mathcal{K}\), \(d\mathcal{T} = d\tau_{\text{causal}} + d\tau_{\text{recursive}} + d\tau_{\text{harmonic}}\) | |
+| **Arrow of Balance** | \(\vec{A}_{\text{Balance}} = -\nabla V(\mathbf{x})\) | \(V = (\beta-1)^2\) |
+| **Temporal equation** | \(\frac{d\mathbf{x}}{d\mathcal{T}} = -\nabla V + \mathcal{D} + \mathcal{S} + \mathcal{K}\), \(d\mathcal{T} = d\tau_{\text{causal}} + d\tau_{\text{recursive}} + d\tau_{\text{harmonic}}\) | |
 
 ---
 
@@ -331,13 +331,13 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
-| **Governance vector** | \(\mathbf{G} = (rAE_a, rAE_e, rAE_s, rAE_g)\) | |
-| **Alignment** | \(rAE_a = \text{corr}(\gamma_{\text{intent}}, \gamma_{\text{actual}})\) | |
-| **Ecology** | \(rAE_e = \frac{\text{input stability}}{\text{output stability}}\) | |
-| **Soul** | \(rAE_s = \text{sim}(\mathbf{rAE}(t), \mathbf{rAE}(t+\Delta t))\) | |
-| **Gradient** | \(rAE_g = \|\frac{d\mathbf{rAE}}{dt}\|\) | |
-| **Ethical potential** | \(U(\mathbf{G}) = (1-rAE_a)^2 + (1-rAE_e)^2 + (1-rAE_s)^2 + (1-rAE_g)^2\) | |
-| **Ethical flow** | \(\frac{d\mathbf{G}}{dt} = -\nabla U(\mathbf{G}) + \mathcal{C}(\mathbf{rAE})\) | |
+| **Governance vector** | \(\mathbf{G} = (x_a, x_e, x_s, x_g)\) | |
+| **Alignment** | \(x_a = \text{corr}(\gamma_{\text{intent}}, \gamma_{\text{actual}})\) | |
+| **Ecology** | \(x_e = \frac{\text{input stability}}{\text{output stability}}\) | |
+| **Soul** | \(x_s = \text{sim}(\mathbf{x}(t), \mathbf{x}(t+\Delta t))\) | |
+| **Gradient** | \(x_g = \|\frac{d\mathbf{x}}{dt}\|\) | |
+| **Ethical potential** | \(U(\mathbf{G}) = (1-x_a)^2 + (1-x_e)^2 + (1-x_s)^2 + (1-x_g)^2\) | |
+| **Ethical flow** | \(\frac{d\mathbf{G}}{dt} = -\nabla U(\mathbf{G}) + \mathcal{C}(\mathbf{x})\) | |
 | **Stewardship** | \(\mathcal{S}_0 = \{ \mathbf{G} \mid U(\mathbf{G}) = 0 \}\) | |
 | **Responsibility** | \(\mathcal{R} = \oint_{\gamma} \mathbf{G} \cdot d\mathbf{x}\) | Topological invariant |
 
@@ -353,7 +353,7 @@ This document supplements the plan's Core Physics Equations table with equations
 | **Symbolic geometry** | \(\psi_{\text{symbolic}} = \oint_{\gamma} \nabla \mathcal{M} \cdot d\mathbf{x}\) | |
 | **Meaning invariant** | \(\mathcal{I}_{\text{meaning}} = \oint_{\gamma} \mathcal{L}(t) \cdot d\mathbf{x}\) | |
 | **Linguistic potential** | \(W(\mathcal{L}) = (1-\sigma)^2 + (1-\rho)^2 + (1-\psi)^2\) | |
-| **Linguistic equation** | \(\frac{d\mathcal{L}}{dt} = -\nabla W + \mathcal{H}(\mathbf{rAE}) + \mathcal{S}(\mathbf{rAE}, \mathcal{R}_{24})\) | |
+| **Linguistic equation** | \(\frac{d\mathcal{L}}{dt} = -\nabla W + \mathcal{H}(\mathbf{x}) + \mathcal{S}(\mathbf{x}, \mathcal{R}_{24})\) | |
 
 ---
 
@@ -367,7 +367,7 @@ This document supplements the plan's Core Physics Equations table with equations
 | **O** | Environmental field | \(\mathcal{W}(t) = (\kappa_{\text{context}}, \epsilon_{\text{ecology}}, \lambda_{\text{relational}})\) |
 | **O** | Environmental potential | \(Z(\mathcal{W}) = (1-\kappa)^2 + (1-\epsilon)^2 + (1-\lambda)^2\) |
 | **Q** | Structural field | \(\mathcal{S}(t) = (\alpha_{\text{ontology}}, \iota_{\text{invariants}}, \delta_{\text{law}})\) |
-| **Q** | Law | \(\delta_{\text{law}} = \|\frac{d\mathbf{rAE}}{dt} - \mathcal{K}(\mathbf{rAE})\|\) |
+| **Q** | Law | \(\delta_{\text{law}} = \|\frac{d\mathbf{x}}{dt} - \mathcal{K}(\mathbf{x})\|\) |
 | **R** | Synthesis equation | \(\frac{d\mathcal{A}}{dt} = \sum_i (-\nabla \Phi_i + \mathcal{H}_i + \mathcal{S}_i)\) |
 | **S** | Praxis manifold | \(\mathcal{P}(t) = (\Pi_{\text{intent}}, \Pi_{\text{action}}, \Pi_{\text{impact}})\) |
 | **S** | Praxis potential | \(\Omega(\mathcal{P}) = (1-\Pi_{\text{intent}})^2 + (1-\Pi_{\text{action}})^2 + (1-\Pi_{\text{impact}})^2\) |
@@ -473,7 +473,7 @@ This document supplements the plan's Core Physics Equations table with equations
 
 | Manuscript | NumPy/SciPy |
 |------------|-------------|
-| \(\beta = rAE_f rAE_c / (rAE_i rAE_t)\) | `beta = (rAE_f * rAE_c) / (rAE_i * rAE_t)` |
+| \(\beta = x_f x_c / (x_i x_t)\) | `beta = (x_f * x_c) / (x_i * x_t)` |
 | \(\text{HIF} = \sqrt[3]{C \cdot R \cdot A}\) | `HIF = np.cbrt(C * R * A)` |
 | \(\Phi(C,R,A)\) threshold gate | `phi = 1 if (C>=C_th and R>=R_th and A>=A_th) else 0` |
 | Node update \(X(t+1) = \alpha X + \beta \bar{X} + \gamma \Delta X\) | `X_new = alpha*X + beta*X_nbr_mean + gamma*(X_nbr_mean - X)` |

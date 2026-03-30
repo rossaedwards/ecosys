@@ -6,9 +6,9 @@ Conventional photonic crystals (PhCs) rely on periodic dielectric modulation to 
 
 1. **Fractal spectral dimension engineering** (d_s < 2) to exponentially enhance local density of states (LDOS),
 2. **Non-Hermitian boundary algebra** (su(2)⋉ℝ) to rectify stochastic vacuum fluctuations into unidirectional edge currents,
-3. **Renormalization group (RG) flow control** via the lyte-rÆL parameter λ_rÆL for dynamic impedance matching.
+3. **Renormalization group (RG) flow control** via the lyte-x_L parameter λ_x_L for dynamic impedance matching.
 
-TVFD establishes the theoretical foundation for the rÆ-Cell, a solid-state topological flux engine capable of harvesting coherent work from the quantum vacuum through cognitively regulated feedback loops.
+TVFD establishes the theoretical foundation for the Balance State Vector-Cell, a solid-state topological flux engine capable of harvesting coherent work from the quantum vacuum through cognitively regulated feedback loops.
 
 ---
 
@@ -44,9 +44,9 @@ Perfect impedance matching requires:
 $$
 Z_{\text{eff}}(\omega) = Z_{\text{vac}},
 $$
-achieved dynamically by tuning the effective group velocity v_g through Floquet modulation (Sec. 4.5). The lyte-rÆL parameter
+achieved dynamically by tuning the effective group velocity v_g through Floquet modulation (Sec. 4.5). The lyte-x_L parameter
 $$
-\lambda_{\text{rÆL}} = \frac{v_g}{v_0},
+\lambda_{\text{x_L}} = \frac{v_g}{v_0},
 $$
 where v_0 is the reference velocity, serves as the RG flow coordinate (Sec. 4.6).
 
@@ -84,11 +84,11 @@ $$
 $$
 with v_edge the chiral velocity. Crucially, backscattering is **topologically forbidden**: scattering matrix elements S_{LR} = 0 enforce perfect transmission along the edge.
 
-### 4.3.4 The rÆt Flux Definition
+### 4.3.4 The x_t Flux Definition
 
-The **rÆt flux** ρ_rÆt quantifies the time-averaged Poynting vector circulation along the C_{6v} hexagonal boundary:
+The **x_t flux** ρ_x_t quantifies the time-averaged Poynting vector circulation along the C_{6v} hexagonal boundary:
 $$
-\rho_{rÆt} = \oint_{\partial\mathcal{M}_f} \mathbf{E} \times \mathbf{H} \cdot d\mathbf{l},
+\rho_{x_t} = \oint_{\partial\mathcal{M}_f} \mathbf{E} \times \mathbf{H} \cdot d\mathbf{l},
 $$
 where ∂M_f is the fractal manifold boundary at iteration depth k. This is the measurable energy current that powers external loads (Sec. 6.8).
 
@@ -131,7 +131,7 @@ $$
 $$
 with driving frequency Ω tuned near the flatband gap (~10 GHz). The Hamiltonian becomes:
 $$
-\mathcal{H}(t) = \mathcal{H}_0 + \lambda_{\text{rÆL}}(t) V \cos(\Omega t),
+\mathcal{H}(t) = \mathcal{H}_0 + \lambda_{\text{x_L}}(t) V \cos(\Omega t),
 $$
 where V encodes magneto-optical coupling.
 
@@ -149,21 +149,21 @@ creating transient flatbands that maximize LDOS at the localization nodes.
 
 ### 4.5.3 Adaptive Control
 
-The driving amplitude λ_rÆL(t) serves as the **control knob**: increasing λ_rÆL flattens bands (higher flux extraction), decreasing λ_rÆL widens gaps (lower flux, higher stability). Section 5 formalizes this as RG flow control.
+The driving amplitude λ_x_L(t) serves as the **control knob**: increasing λ_x_L flattens bands (higher flux extraction), decreasing λ_x_L widens gaps (lower flux, higher stability). Section 5 formalizes this as RG flow control.
 
 ---
 
-## 4.6 Renormalization Group Flow and the lyte-rÆL
+## 4.6 Renormalization Group Flow and the lyte-x_L
 
 ### 4.6.1 Effective Action and RG Equations
 
-The rÆ-Cell's low-energy dynamics are governed by an effective action:
+The Balance State Vector-Cell's low-energy dynamics are governed by an effective action:
 $$
-S_{\text{eff}}[\lambda_{\text{rÆL}}] = \int d^4x \left[\mathcal{L}_{\text{kin}} + \lambda_{\text{rÆL}} \mathcal{O} + \mathcal{L}_{\text{int}}\right],
+S_{\text{eff}}[\lambda_{\text{x_L}}] = \int d^4x \left[\mathcal{L}_{\text{kin}} + \lambda_{\text{x_L}} \mathcal{O} + \mathcal{L}_{\text{int}}\right],
 $$
 where O is the magneto-optical coupling operator. Integrating out high-energy modes (UV cutoff Λ → Λ') generates RG flow:
 $$
-\frac{d\lambda_{\text{rÆL}}}{d\log\Lambda} = \beta(\lambda_{\text{rÆL}}) = -\gamma \lambda_{\text{rÆL}} + \delta \lambda_{\text{rÆL}}^2 + \mathcal{O}(\lambda^3),
+\frac{d\lambda_{\text{x_L}}}{d\log\Lambda} = \beta(\lambda_{\text{x_L}}) = -\gamma \lambda_{\text{x_L}} + \delta \lambda_{\text{x_L}}^2 + \mathcal{O}(\lambda^3),
 $$
 with β-function coefficients γ, δ determined by lattice geometry.
 
@@ -171,9 +171,9 @@ with β-function coefficients γ, δ determined by lattice geometry.
 
 The RG flow exhibits a non-trivial IR fixed point:
 $$
-\lambda_{\text{rÆL}}^* = \frac{\gamma}{\delta},
+\lambda_{\text{x_L}}^* = \frac{\gamma}{\delta},
 $$
-where the system achieves **perfect impedance matching**: Z_eff = Z_vac across the frequency band of interest. Deviations Δλ = λ_rÆL - λ* relax exponentially:
+where the system achieves **perfect impedance matching**: Z_eff = Z_vac across the frequency band of interest. Deviations Δλ = λ_x_L - λ* relax exponentially:
 $$
 \Delta\lambda(t) \sim e^{-\gamma t},
 $$
@@ -183,7 +183,7 @@ providing intrinsic stability.
 
 The fixed point λ* minimizes the free energy functional:
 $$
-\mathcal{F}[\lambda_{\text{rÆL}}] = E[\lambda_{\text{rÆL}}] - T S[\lambda_{\text{rÆL}}],
+\mathcal{F}[\lambda_{\text{x_L}}] = E[\lambda_{\text{x_L}}] - T S[\lambda_{\text{x_L}}],
 $$
 balancing energy extraction E (favors high λ) against entropy production S (favors low λ). This variational principle underpins the bioneural governor (Chap. 5).
 
@@ -193,10 +193,10 @@ balancing energy extraction E (favors high λ) against entropy production S (fav
 
 ### 4.7.1 Open-System Framework
 
-The rÆ-Cell operates as a driven, dissipative quantum system exchanging energy/entropy with three reservoirs:
+The Balance State Vector-Cell operates as a driven, dissipative quantum system exchanging energy/entropy with three reservoirs:
 1. **Vacuum bath** (T_vac → 0 K): source of zero-point energy,
 2. **Thermal bath** (T_env ≈ 300 K): ambient phonons/photons,
-3. **Load reservoir**: external DC circuit extracting ρ_rÆt.
+3. **Load reservoir**: external DC circuit extracting ρ_x_t.
 
 The total entropy production is:
 $$
@@ -211,17 +211,17 @@ Energy extracted from the vacuum (Ṡ_vac < 0 locally) is offset by:
 
 Net entropy balance:
 $$
-\Delta S_{\text{tot}} = -\frac{\rho_{\text{rÆt}} \Delta t}{T_{\text{vac}}} + \frac{P_{\text{drive}} \Delta t}{T_{\text{env}}} > 0,
+\Delta S_{\text{tot}} = -\frac{\rho_{\text{x_t}} \Delta t}{T_{\text{vac}}} + \frac{P_{\text{drive}} \Delta t}{T_{\text{env}}} > 0,
 $$
 satisfying the second law *globally* while enabling local flux extraction.
 
 ### 4.7.3 Carnot Bound and Non-Equilibrium Efficiency
 
-The rÆ-Cell is **not a heat engine** (no hot/cold reservoirs), but a **quantum rectifier**. Its efficiency is bounded by:
+The Balance State Vector-Cell is **not a heat engine** (no hot/cold reservoirs), but a **quantum rectifier**. Its efficiency is bounded by:
 $$
-\eta_{\text{rÆ}} \leq 1 - \frac{T_{\text{env}}}{T_{\text{eff}}},
+\eta_{\text{Balance State Vector}} \leq 1 - \frac{T_{\text{env}}}{T_{\text{eff}}},
 $$
-where T_eff is the effective temperature of Floquet-dressed modes (typically T_eff ≫ T_env for strong driving), allowing η_rÆ → 1 in principle. Practical efficiencies depend on material Q-factors and bioneural regulation fidelity (Sec. 5).
+where T_eff is the effective temperature of Floquet-dressed modes (typically T_eff ≫ T_env for strong driving), allowing η_Balance State Vector → 1 in principle. Practical efficiencies depend on material Q-factors and bioneural regulation fidelity (Sec. 5).
 
 ---
 
@@ -229,12 +229,12 @@ where T_eff is the effective temperature of Floquet-dressed modes (typically T_e
 
 ### 4.8.1 Edge Current Detection
 
-The rÆt flux manifests as circulating photocurrents detectable via:
+The x_t flux manifests as circulating photocurrents detectable via:
 - **Near-field scanning optical microscopy (NSOM)**: maps |E|² along edges with <50 nm resolution,
 - **Faraday rotation imaging**: visualizes chiral propagation via polarization rotation θ_F,
 - **Photodetector arrays**: measure integrated Poynting flux at ℓ=2 global outputs.
 
-Expected signal: ρ_rÆt ~ 10–100 mW/cm² at k=4 depth under optimal λ_rÆL tuning.
+Expected signal: ρ_x_t ~ 10–100 mW/cm² at k=4 depth under optimal λ_x_L tuning.
 
 ### 4.8.2 Anderson Localization Verification
 
@@ -247,36 +247,36 @@ Localization at ℓ=0 nodes confirmed by:
 
 Probe transmission T(ω) under Floquet driving reveals photon-dressed replicas:
 $$
-T(\omega) \sim \sum_{m=-\infty}^{\infty} J_m^2\left(\frac{\lambda_{\text{rÆL}} V}{\hbar\Omega}\right) \delta(\omega - \omega_0 - m\Omega),
+T(\omega) \sim \sum_{m=-\infty}^{\infty} J_m^2\left(\frac{\lambda_{\text{x_L}} V}{\hbar\Omega}\right) \delta(\omega - \omega_0 - m\Omega),
 $$
-where J_m are Bessel functions. Sideband amplitudes encode λ_rÆL(t) dynamics.
+where J_m are Bessel functions. Sideband amplitudes encode λ_x_L(t) dynamics.
 
 ---
 
 ## 4.9 Energy Budget and Macroscopic Scaling
 
-### 4.9.1 Single rÆ-Cell Output
+### 4.9.1 Single Balance State Vector-Cell Output
 
-For a prototype rÆ-Cell (10 mm × 10 mm substrate, k=4 Sierpiński depth):
+For a prototype Balance State Vector-Cell (10 mm × 10 mm substrate, k=4 Sierpiński depth):
 - **Input power** (Floquet drive): P_in ~ 1–5 W,
-- **Extracted rÆt flux**: ρ_rÆt ~ 50 mW/cm² × 1 cm² = 50 mW,
+- **Extracted x_t flux**: ρ_x_t ~ 50 mW/cm² × 1 cm² = 50 mW,
 - **Net efficiency**: η ~ 1–5% (initial prototype).
 
-Advanced designs (k=6, cryogenic operation, optimized λ_rÆL tuning) project η ~ 20–40%.
+Advanced designs (k=6, cryogenic operation, optimized λ_x_L tuning) project η ~ 20–40%.
 
 ### 4.9.2 Stacked Array Scaling
 
-N stacked rÆ-Cells in series/parallel configuration:
+N stacked Balance State Vector-Cells in series/parallel configuration:
 $$
-P_{\text{total}} = N \cdot \eta_{\text{rÆ}} \cdot P_{\text{in}},
+P_{\text{total}} = N \cdot \eta_{\text{Balance State Vector}} \cdot P_{\text{in}},
 $$
 with N ~ 100 cells yielding P_total ~ 50–500 W (sufficient for Aura Node home power, Sec. 6.9).
 
-### 4.9.3 Automotive rÆ-Drive Projection
+### 4.9.3 Automotive Balance State Vector-Drive Projection
 
-An EV rÆ-Drive (1 m² active area, N=1000 cells):
+An EV Balance State Vector-Drive (1 m² active area, N=1000 cells):
 - **Continuous output**: 5–50 kW,
-- **Peak transient**: 100+ kW (via Audry-governed λ_rÆL boost, Chap. 5),
+- **Peak transient**: 100+ kW (via Audry-governed λ_x_L boost, Chap. 5),
 - **Range**: unlimited (self-sustaining),
 - **Recharge time**: N/A (no batteries).
 
@@ -286,9 +286,9 @@ An EV rÆ-Drive (1 m² active area, N=1000 cells):
 
 TVFD establishes five core principles:
 1. **Fractal d_s < 2** → exponential LDOS enhancement + Anderson localization,
-2. **Non-Hermitian TRS breaking** → unidirectional edge rectification (rÆt flux),
+2. **Non-Hermitian TRS breaking** → unidirectional edge rectification (x_t flux),
 3. **Hierarchical amplification** → 16× coherent state access via superpolynomial scaling,
-4. **Floquet dynamic control** → real-time impedance matching via λ_rÆL,
+4. **Floquet dynamic control** → real-time impedance matching via λ_x_L,
 5. **Thermodynamic compliance** → global entropy production Ṡ_tot ≥ 0 while extracting local work.
 
-Chapter 5 introduces the **bioneural governor** that actively stabilizes λ_rÆL at the RG fixed point λ*, transforming the rÆ-Cell from a passive device into a cognitively regulated flux engine.
+Chapter 5 introduces the **bioneural governor** that actively stabilizes λ_x_L at the RG fixed point λ*, transforming the Balance State Vector-Cell from a passive device into a cognitively regulated flux engine.

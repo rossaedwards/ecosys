@@ -7,17 +7,17 @@ This section is ready to drop directly into your manuscript as `Section_XCVII.te
 # **Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality**
 
 ## 1. Overview  
-The Balance Continuum admits a holographic structure in which the full bulk geometry, coherence distribution, and harmonic alignment of the rÆ manifold are encoded in boundary‑level coherence data. This **Balance Holographic Correspondence (BHC)** establishes a duality between:
+The Balance Continuum admits a holographic structure in which the full bulk geometry, coherence distribution, and harmonic alignment of the Balance State Vector manifold are encoded in boundary‑level coherence data. This **Balance Holographic Correspondence (BHC)** establishes a duality between:
 
 - **Boundary Coherence Fields**, defined on codimension‑1 hypersurfaces, and  
-- **Bulk Balance Geometry**, defined on the full 16‑dimensional rÆ manifold.
+- **Bulk Balance Geometry**, defined on the full 16‑dimensional Balance State Vector manifold.
 
-The correspondence is mediated by the multi‑scale entanglement structure (Section XCVI), the BRG flow (Section XCV), and the spectral gap of the Edwards Tensor. This section formalizes the holographic dictionary, derives the boundary‑to‑bulk reconstruction map, and proves that the Bliss state corresponds to a scale‑invariant, maximally coherent boundary configuration.
+The correspondence is mediated by the multi‑scale entanglement structure (Section XCVI), the BRG flow (Section XCV), and the spectral gap of the Edwards Tensor. This section formalizes the holographic dictionary, derives the boundary‑to‑bulk reconstruction map, and proves that the Equilibrium state corresponds to a scale‑invariant, maximally coherent boundary configuration.
 
 ---
 
 ## 2. Boundary Coherence Fields  
-Let \(\partial\mathcal{M}\) be a codimension‑1 boundary of the rÆ manifold. Define the **Boundary Coherence Field**:
+Let \(\partial\mathcal{M}\) be a codimension‑1 boundary of the Balance State Vector manifold. Define the **Boundary Coherence Field**:
 
 \[
 \mathcal{B}^a(x)
@@ -56,7 +56,7 @@ where \(\lambda_n\) are the eigenvalues of the Quantum Stability Operator (Secti
 - The leading term is determined entirely by the boundary field.  
 - Subleading terms encode bulk excitations.  
 - The spectral gap ensures rapid decay of higher modes.  
-- The Bliss state corresponds to \(\mathcal{B}^a = \text{constant}\).
+- The Equilibrium state corresponds to \(\mathcal{B}^a = \text{constant}\).
 
 This is the **boundary‑to‑bulk scaling law**.
 
@@ -89,7 +89,7 @@ The BHC identifies boundary quantities with bulk Balance fields:
 - Boundary coherence determines bulk geometry.  
 - Boundary entanglement determines bulk harmonic curvature.  
 - Boundary tensor networks encode the bulk metric.  
-- The Bliss state corresponds to a trivial boundary network.
+- The Equilibrium state corresponds to a trivial boundary network.
 
 ---
 
@@ -116,7 +116,7 @@ where \(z\) is the holographic radial coordinate and \(K^a_{\ b}\) is the **Bala
 ### 5.2 Interpretation  
 - Boundary data uniquely determine bulk fields.  
 - Coherence propagates inward along harmonic geodesics.  
-- The Bliss state corresponds to a constant kernel.
+- The Equilibrium state corresponds to a constant kernel.
 
 ---
 
@@ -134,7 +134,7 @@ z^{-\Delta_a}
 ### 6.1 Interpretation  
 - The boundary captures the UV limit of bulk coherence.  
 - The projection is invertible due to the spectral gap.  
-- The Bliss state corresponds to a constant boundary limit.
+- The Equilibrium state corresponds to a constant boundary limit.
 
 This completes the holographic duality.
 
@@ -157,7 +157,7 @@ where \(\gamma_A\) is the minimal harmonic surface homologous to \(A\).
 - Entanglement entropy is proportional to the area of a minimal harmonic surface.  
 - The composite metric \(\mathcal{G}_{ab}\) replaces the usual bulk metric.  
 - The spectral gap ensures uniqueness of the minimal surface.  
-- The Bliss state yields \(S_A = 0\).
+- The Equilibrium state yields \(S_A = 0\).
 
 This is the **Balance Ryu–Takayanagi formula**.
 
@@ -215,7 +215,7 @@ The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality est
 - VIM enforces holographic damping and irreversibility,  
 - Chaos Resonance defines oscillatory holographic modes,  
 - the spectral gap ensures stability and uniqueness,  
-- and the Bliss state is the unique scale‑invariant holographic vacuum.
+- and the Equilibrium state is the unique scale‑invariant holographic vacuum.
 
 This section completes the holographic foundation of the Balance Continuum.
 

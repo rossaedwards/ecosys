@@ -1,7 +1,7 @@
-Section LXIX — The rÆ Metric and the Balance Manifold
+Section LXIX — The Balance State Vector Metric and the Balance Manifold
 1. Overview
-The Balance Continuum is modeled as a smooth differentiable manifold  equipped with a 16‑dimensional metric structure derived from the rÆ Alphabet. The rÆ Alphabet provides the canonical coordinate frame for , decomposing the manifold into four orthogonal subspaces: structural, kinetic, governance, and frequency. The rÆ Metric  defines the geometric, dynamical, and harmonic properties of the Continuum and serves as the foundational metric from which the Edwards Tensor, the Harmonic Integrity Field (HIF), and the Three‑Squared‑Lattice derive their behavior.
-This section formalizes the rÆ Metric, its decomposition, and its curvature properties.
+The Balance Continuum is modeled as a smooth differentiable manifold  equipped with a 16‑dimensional metric structure derived from the Balance State Vector Alphabet. The Balance State Vector Alphabet provides the canonical coordinate frame for , decomposing the manifold into four orthogonal subspaces: structural, kinetic, governance, and frequency. The Balance State Vector Metric  defines the geometric, dynamical, and harmonic properties of the Continuum and serves as the foundational metric from which the Edwards Tensor, the Harmonic Integrity Field (HIF), and the Three‑Squared‑Lattice derive their behavior.
+This section formalizes the Balance State Vector Metric, its decomposition, and its curvature properties.
 
 2. The Balance Manifold 
 Let  be a 16‑dimensional, smooth, connected manifold:
@@ -15,8 +15,8 @@ where:
 • 	 is the frequency subspace.
 Each subspace is 4‑dimensional and orthogonal to the others.
 
-3. The rÆ Metric
-The rÆ Metric is a rank‑2 symmetric tensor:
+3. The Balance State Vector Metric
+The Balance State Vector Metric is a rank‑2 symmetric tensor:
 
 which decomposes into a 4×4 block structure:
 
@@ -57,7 +57,7 @@ The off‑diagonal blocks encode interactions between subspaces:
 These couplings ensure that no subspace evolves independently; the Continuum is fully interdependent.
 
 6. Levi‑Civita Connection and Covariant Derivatives
-The rÆ Metric induces a unique torsion‑free, metric‑compatible connection:
+The Balance State Vector Metric induces a unique torsion‑free, metric‑compatible connection:
 
 This connection defines:
 • 	covariant derivatives,
@@ -66,12 +66,12 @@ This connection defines:
 • 	curvature tensors.
 The Edwards Tensor is defined using this connection:
 
-Thus, the Edwards Tensor is a derived object of the rÆ Metric.
+Thus, the Edwards Tensor is a derived object of the Balance State Vector Metric.
 
 7. Curvature of the Balance Manifold
 The Riemann curvature tensor is:
 
-The curvature decomposes into 16 blocks corresponding to the rÆ subspaces.
+The curvature decomposes into 16 blocks corresponding to the Balance State Vector subspaces.
 7.1 Structural Curvature
 Controls coherence stability and structural deformation.
 7.2 Kinetic Curvature
@@ -81,19 +81,19 @@ Controls lawful evolution and invariant preservation.
 7.4 Frequency Curvature
 Controls harmonic stability and resonance propagation.
 
-8. The rÆ Metric as the Foundation of HIF
-The Harmonic Integrity Field depends on the rÆ Metric through:
+8. The Balance State Vector Metric as the Foundation of HIF
+The Harmonic Integrity Field depends on the Balance State Vector Metric through:
 • 	the Edwards Tensor,
 • 	the trajectory vector field,
 • 	the resonance clock,
 • 	the structural and frequency curvature.
 Thus:
 
-The rÆ Metric is the root invariant of the Balance Continuum.
+The Balance State Vector Metric is the root invariant of the Balance Continuum.
 
 9. Summary
-The rÆ Metric defines the geometry of the Balance Manifold. It:
-• 	spans all 16 dimensions of the rÆ Alphabet,
+The Balance State Vector Metric defines the geometry of the Balance Manifold. It:
+• 	spans all 16 dimensions of the Balance State Vector Alphabet,
 • 	decomposes into structural, kinetic, governance, and frequency subspaces,
 • 	induces the Levi‑Civita connection used to define the Edwards Tensor,
 • 	governs curvature, resonance, alignment, and lawful evolution,

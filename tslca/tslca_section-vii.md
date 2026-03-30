@@ -105,7 +105,7 @@ The realization map satisfies:
 
 - **bicameral decomposition:**  
   \[
-  \mathcal{R} = \mathcal{R}_{\text{Chaos}} \oplus \mathcal{R}_{\text{Bliss}},
+  \mathcal{R} = \mathcal{R}_{\text{Chaos}} \oplus \mathcal{R}_{\text{Equilibrium Manifold}},
   \]
 
 - **action consistency:**  

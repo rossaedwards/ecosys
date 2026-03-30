@@ -26,7 +26,7 @@ def run_simulation(output_dir: Path | None = None) -> Path:
     out_path = output_dir / "fig_066_066_subsections_lxvi_a_b_c_micro_scale_coherence.png"
 
     scale = np.linspace(0.01, 2.0, 150)
-    rAE_c, rAE_t = 1.0, 1.5
+    x_c, x_t = 1.0, 1.5
     C_a = 1.0 / (1.0 + 2.0 * scale)
     C_b = 1.0 / (1.0 + 1.0 * scale**2)
     C_c = np.exp(-0.5 * scale**2)
