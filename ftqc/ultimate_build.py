@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ORCID: 0009-0008-0539-1289
 """
 ULTIMATE FTQC BUILD SCRIPT
 1. Convert all .ris and .txt citation files to .bib

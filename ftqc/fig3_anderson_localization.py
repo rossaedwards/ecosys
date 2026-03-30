@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ORCID: 0009-0008-0539-1289
 """
 Figure 3: Anderson Localization on Sierpiński Gasket
 PRX Submission - Aurphyx

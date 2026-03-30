@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ORCID: 0009-0008-0539-1289
 """
 Figure 9: Integrated Information (Φ) and Connectivity Scaling
 PRX Submission - Aurphyx

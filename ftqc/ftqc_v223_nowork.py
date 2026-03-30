@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ORCID: 0009-0008-0539-1289
 """
 FTQC v2.23 - FIGS IN ROOT FOLDER (main/ftqc/)
 NO subfolders needed - Instant fix 7:26AM

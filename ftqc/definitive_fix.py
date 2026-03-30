@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ORCID: 0009-0008-0539-1289
 """
 DEFINITIVE FIX: Based on actual directory listing
 Fixes both figures AND citations (only 7 showing)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ORCID: 0009-0008-0539-1289
 """
 FTQC Bibliography Consolidator v2.0
 Converts RIS → BibTeX, merges ALL .bib files (including master_citations.bib),

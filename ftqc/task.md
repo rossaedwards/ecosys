@@ -12,7 +12,6 @@
 - [ ] The 'master_citations.bib' has over 200+ citations. The individual submission packages can have their own .bib files, but this is my first time submitting to these journals, so I am not sure how to handle the citations. 
 - [ ] There are many python scripts in the FTQC directory that I created last month to help with the submission process. The FTQC directory should be flat, no subfolders. Some of the scripts are:'fix_citations.py', 'compile_citations.py', 'ftqc_divine_pipeline.py', 'diagnose_ftqc.py', 'hecate_master_build.py', etc.
 - [ ] The 'hecate_master_build.py' script is the main script that will build all three manuscripts. It will build the arXiv manuscript first, then the PRX manuscript, then the Optica manuscript.
-- [ ] 
 
 ## Phase 2: Optica LaTeX Conversion
 - [ ] Fix preamble (remove optica.sty, add authblk, fix bst)
