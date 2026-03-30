@@ -20,7 +20,7 @@
       "soulshot (SoulShot Ecosystem)",
       "vibeaudio (Vibe Audio Protocol & Standard)",
       "vim (Vacuum Impedance Matching, Theory of Balance, Balance Continuum, APS)",
-      "standards (Standards for the Advancement of Physics and Science)",
+      "standards (Standards for the Advancement of Physics and Science)"
     ],
     "root_build_script": "hecate_build.py"
   },
