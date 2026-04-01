@@ -8,9 +8,9 @@
 
   <br/><br/>
 
-  <img src="docs/assets/rAE_icon.png"
+  <img src="docs/assets/rae_icon.png"
        alt="Ross A. Edwards | rAE"
-       width="68" />
+       width="84" />
 
   <br/><br/>
 
