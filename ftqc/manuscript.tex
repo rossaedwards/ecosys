@@ -2,7 +2,7 @@
 % OPTICA MANUSCRIPT: PHOTONIC BAND ENGINEERING FOR QUANTUM COHERENCE
 % Author: Ross A. Edwards | Aurphyx LLC
 % Target: Optica journal submission (10 pages maximum)
-% Location: Erie, Pennsylvania, USA
+% Location: 
 % ============================================================================
 
 \documentclass[10pt,letterpaper]{article}
@@ -33,8 +33,8 @@
 \title{Photonic Band Engineering in Hexagonal Resonant Lattices\\
 for Quantum Coherence Enhancement}
 
-\author[1]{Ross A. Edwards \orcidlink{0009-0008-0539-1289}\thanks{ross@aurphyx.org; ORCID: \href{https://orcid.org/0009-0008-0539-1289}{0009-0008-0539-1289}}}
-\affil[1]{Aurphyx LLC, Erie, Pennsylvania 16501, USA}
+\author[1]{Ross A. Edwards \orcidlink{0009-0008-0539-1289}\thanks{ross@aurphyx.org}}
+\affil[1]{Aurphyx LLC}
 
 \date{}
 
@@ -101,7 +101,9 @@ The first Brillouin zone is a regular hexagon with vertices at the $K$ points. W
 
 The photonic band structure is computed by solving the Maxwell eigenvalue equation in the frequency domain~\cite{Joannopoulos2008}:
 \begin{equation}
-\nabla \times \varepsilon^{-1}(\mathbf{r})\,\nabla \times \mathbf{H}(\mathbf{r}) = \frac{\omega^2}{c^2}\,\mathbf{H}(\mathbf{r}),
+
+abla \times \varepsilon^{-1}(\mathbf{r})\,
+abla \times \mathbf{H}(\mathbf{r}) = \frac{\omega^2}{c^2}\,\mathbf{H}(\mathbf{r}),
 \label{eq:maxwell}
 \end{equation}
 where $\varepsilon(\mathbf{r})$ is the spatially periodic dielectric function with $\varepsilon_\mathrm{silica} = 2.13$ ($n = 1.46$) and $\varepsilon_\mathrm{air} = 1.00$. We expand $\varepsilon^{-1}(\mathbf{r})$ in reciprocal lattice vectors $\mathbf{G}$ and solve the resulting matrix eigenvalue problem for $N_G = 441$ plane waves (sufficient for convergence to within $0.1\%$ in eigenfrequency).
@@ -129,7 +131,8 @@ The photonic density of states (DOS) is computed from the band structure via Bri
 \rho(\omega) = \sum_n \int_\mathrm{BZ} \frac{d^2k}{(2\pi)^2}\,\delta(\omega - \omega_n(\mathbf{k})).
 \label{eq:dos}
 \end{equation}
-The DOS computed with a Gaussian broadening of $0.02\,(2\pi c/a)$ reveals three key features: (i) the DOS vanishes within the band gap, confirming complete frequency exclusion; (ii) Van Hove singularities appear at band edges where $\nabla_\mathbf{k}\omega = 0$; and (iii) the flatband produces a pronounced DOS peak near $\omega = 3.50\,(2\pi c/a)$, with $\rho_\mathrm{fb}/\rho_\mathrm{avg} > 5$.
+The DOS computed with a Gaussian broadening of $0.02\,(2\pi c/a)$ reveals three key features: (i) the DOS vanishes within the band gap, confirming complete frequency exclusion; (ii) Van Hove singularities appear at band edges where $
+abla_\mathbf{k}\omega = 0$; and (iii) the flatband produces a pronounced DOS peak near $\omega = 3.50\,(2\pi c/a)$, with $\rho_\mathrm{fb}/\rho_\mathrm{avg} > 5$.
 
 This DOS enhancement has direct consequences for light--matter coupling. The Purcell factor for a dipole emitter at frequency $\omega_0$ within the flatband is~\cite{Akahane2003}:
 \begin{equation}
@@ -350,6 +353,6 @@ We have presented a hexagonal resonant lattice with $C_{6v}$ symmetry that combi
 % ============================================================================
 
 \bibliographystyle{opticajnl}
-\bibliography{optica_ftqc}
+\bibliography{manuscript.bib}
 
 \end{document}
