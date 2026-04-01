@@ -21,10 +21,10 @@ Superconducting transmon qubits represent the most mature quantum computing plat
 \item \textbf{Error correction overhead}: Surface codes require $\sim 1000$ physical qubits per logical qubit at current error rates ($p \sim 10^{-3}$).
 \end{itemize}
 
-The Aurphyx architecture addresses these limitations through fractal connectivity (eliminating SWAP overhead via hierarchical skip-layer coupling), Anderson localization (extending effective coherence by $\sim 16\times$), and non-semisimple topological protection (reducing error correction overhead by the same factor). Table~\ref{tab:platform_comparison} quantifies these advantages.
+The FTQC architecture addresses these limitations through fractal connectivity (eliminating SWAP overhead via hierarchical skip-layer coupling), Anderson localization (extending effective coherence by $\sim 16\times$), and non-semisimple topological protection (reducing error correction overhead by the same factor). Table~\ref{tab:platform_comparison} quantifies these advantages.
 
 \begin{table}[h]
-\caption{Comparison of Aurphyx with leading quantum computing platforms. Metrics normalized to current best-demonstrated values.}
+\caption{Comparison of FTQC with leading quantum computing platforms. Metrics normalized to current best-demonstrated values.}
 \label{tab:platform_comparison}
 \begin{ruledtabular}
 \begin{tabular}{lccccc}
@@ -70,13 +70,13 @@ The 21\% band gap and $16\times$ decoherence reduction position hexagonal $C_{6v
 
 Microsoft's Majorana-1 demonstration represents the first realization of topological qubits with measurable non-Abelian signatures~\cite{Microsoft2025}. The 99\% Z-parity fidelity validates the fundamental physics but falls short of fault-tolerant thresholds without additional error correction.
 
-The Aurphyx framework extends topological protection through two mechanisms:
+The FTQC framework extends topological protection through two mechanisms:
 \begin{enumerate}
 \item \textbf{Non-semisimple TQFTs}: Neglecton braiding provides universal gates without magic-state overhead, reducing total gate count by $\sim 100\times$ compared to Ising-type systems.
 \item \textbf{Fractal embedding}: The T-junction geometry (Protocol 4) enhances topological gaps through interference effects, projected to improve gate fidelity from 95\% (linear) to 98\% (fractal).
 \end{enumerate}
 
-This positions Aurphyx as a natural evolution of Microsoft's topological approach, adding fractal geometry as a complementary protection mechanism.
+This positions FTQC as a natural evolution of Microsoft's topological approach, adding fractal geometry as a complementary protection mechanism.
 
 \subsection{Theoretical Assumptions and Limitations}
 
@@ -142,7 +142,7 @@ Several groups have explored fractal structures for quantum information:
 \item \textbf{Fibonacci anyons on fractals}~\cite{Trebst2008}: Prior work explored Fibonacci anyons on Sierpi\'{n}ski lattices, finding modified fusion rules but not addressing Hilbert space scaling.
 \end{enumerate}
 
-The Aurphyx framework is distinguished by:
+The FTQC framework is distinguished by:
 \begin{itemize}
 \item Explicit Hilbert space scaling theorem with quantitative predictions.
 \item Integration of non-semisimple (rather than semisimple) TQFTs.
@@ -214,6 +214,6 @@ Full architecture integration:
 
 \subsection{Broader Context}
 
-The Aurphyx architecture represents a synthesis of three mature fields—fractal geometry, topological quantum field theory, and photonic crystals—applied to the quantum computing scaling problem. This interdisciplinary approach reflects a broader trend in quantum technology: as individual platforms approach fundamental limits, hybrid and unconventional architectures become increasingly attractive.
+The FTQC presents a Fault-Tolerant Quantum Computing architecture represents a synthesis of three mature fields—fractal geometry, topological quantum field theory, and photonic crystals—applied to the quantum computing scaling problem. This interdisciplinary approach reflects a broader trend in quantum technology: as individual platforms approach fundamental limits, hybrid and unconventional architectures become increasingly attractive.
 
 The $16\times$ overhead reduction, if experimentally validated, would shift the fault-tolerance threshold from $\sim 10^6$ physical qubits to $\sim 10^5$—potentially advancing practical quantum advantage by 5--10 years. This underscores the importance of exploring non-traditional architectures alongside incremental improvements to existing platforms.
