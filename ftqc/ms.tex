@@ -43,23 +43,21 @@
 \newtheorem{example}[theorem]{Example}
 \newtheorem{remark}[theorem]{Remark}
 
-\graphicspath{{}{./}}
-
-
-\usepackage{orcidlink}
+\graphicspath{{figures/}{./}}
+\begin{document}
 
 \title{Fractal-Enhanced Topological Quantum Computing: \\
 Hilbert Space Scaling and Decoherence Suppression via \\
 Non-Semisimple TQFTs and Photonic Band Engineering}
 
-\author{Ross A. Edwards \orcidlink{0009-0008-0539-1289}}}}
+\author{Ross A. Edwards}
 \affiliation{Aurphyx LLC}
 \email{ross@aurphyx.org}
 
 \date{\today}
 
 \begin{abstract}
-Current quantum computing architectures face fundamental scaling limitations from decoherence ($T_2 < 100~\mu$s for superconducting qubits) and error correction overhead ($\sim 1000:1$ physical-to-logical qubit ratio). We present Aurphyx, an architecture exploiting fractal lattice geometry to overcome both barriers. \textbf{Theorem 1}: Qubits on Sierpi\'{n}ski gaskets (Hausdorff dimension $\Df = \log 3/\log 2 \approx 1.585$) access Hilbert spaces scaling as $\dim(\Hilbert_{\mathrm{acc}}) = 2^{n \cdot \Df^{\alpha(k)}}$, yielding $10^4\times$ advantage at $n = 12$ qubits versus Euclidean lattices. \textbf{Theorem 2}: Non-semisimple topological quantum field theories, via neglecton braiding (anyons with quantum dimension $d_\omega = 0$), achieve universal quantum computation with $16\times$ reduced gate overhead compared to magic-state distillation. Photonic band engineering in hexagonal $C_{6v}$ lattices provides 21\% band gaps and Anderson localization ($d_s = 1.36 < 2$), suppressing decoherence by $\gamma_{\mathrm{fractal}}/\gamma_{\mathrm{Euclidean}} = 0.063$. We propose four experimental protocols—NV-diamond coherence enhancement, trapped-ion Hilbert scaling, photonic band characterization, and Majorana T-junction fidelity—with combined budget \$1.25M targeting Technology Readiness Level 4 within 18 months. Simulations validate the theoretical predictions: 7.1$\times$ Hilbert advantage at $n = 5$ (Qiskit), GHZ fidelity 0.912, and coherence enhancement consistent with $16\times$ improvement. These results establish fractal-topological architectures as a viable path toward fault-tolerant quantum computation with substantially reduced resource requirements.
+Current quantum computing architectures face fundamental scaling limitations from decoherence ($T_2 < 100~\mu$s for superconducting qubits) and error correction overhead ($\sim 1000:1$ physical-to-logical qubit ratio). We present Aurphyx, an architecture exploiting fractal lattice geometry to overcome both barriers. \textbf{Theorem 1}: Qubits on Sierpi\'{n}ski gaskets (Hausdorff dimension $\Df = \log 3/\log 2 \approx 1.585$) access Hilbert spaces scaling as $\dim(\Hilbert_{\mathrm{acc}}) = 2^{n \cdot \Df^{\alpha(k)}}$, yielding $10^4\times$ advantage at $n = 12$ qubits versus Euclidean lattices. \textbf{Theorem 2}: Non-semisimple topological quantum field theories, via neglecton braiding (anyons with quantum dimension $d_\omega = 0$), achieve universal quantum computation with $16\times$ reduced gate overhead compared to magic-state distillation. Photonic band engineering in hexagonal $C_{6v}$ lattices provides 21\% band gaps and Anderson localization ($d_s = 1.36 < 2$), suppressing decoherence by $\gamma_{\mathrm{fractal}}/\gamma_{\mathrm{Euclidean}} = 0.063$. We propose four experimental protocols---NV-diamond coherence enhancement, trapped-ion Hilbert scaling, photonic band characterization, and Majorana T-junction fidelity---with combined budget \$1.25M targeting Technology Readiness Level 4 within 18 months. Simulations validate the theoretical predictions: 7.1$\times$ Hilbert advantage at $n = 5$ (Qiskit), GHZ fidelity 0.912, and coherence enhancement consistent with $16\times$ improvement. These results establish fractal-topological architectures as a viable path toward fault-tolerant quantum computation with substantially reduced resource requirements.
 \end{abstract}
 
 \pacs{03.67.Lx, 03.67.Pp, 42.70.Qs, 05.45.Df}
@@ -74,9 +72,9 @@ Current quantum computing architectures face fundamental scaling limitations fro
 \section{Introduction}
 \label{sec:intro}
 
-Quantum computing promises exponential speedups for problems in cryptography, optimization, and quantum simulation, yet practical fault-tolerant systems remain elusive due to two fundamental barriers: decoherence and error correction overhead. Current leading platforms—superconducting qubits~\cite{IBM2023,Google2024}, trapped ions~\cite{IonQ2023,Quantinuum2024}, and photonic systems~\cite{PsiQuantum2024,Xanadu2024}—each face distinct scaling limitations. Superconducting systems achieve $T_2 \sim 100~\mu$s coherence times but require extensive wiring and suffer from crosstalk at scale. Trapped-ion platforms offer longer coherence ($T_2 \sim 1$ s) and high gate fidelities ($> 99.9\%$) but face speed limitations from sequential gate operations. Photonic approaches provide natural room-temperature operation but struggle with deterministic two-qubit gates.
+Quantum computing promises exponential speedups for problems in cryptography, optimization, and quantum simulation, yet practical fault-tolerant systems remain elusive due to two fundamental barriers: decoherence and error correction overhead. Current leading platforms---superconducting qubits~\cite{IBM2023,Google2024}, trapped ions~\cite{IonQ2023,Quantinuum2024}, and photonic systems~\cite{PsiQuantum2024,Xanadu2024}---each face distinct scaling limitations. Superconducting systems achieve $T_2 \sim 100~\mu$s coherence times but require extensive wiring and suffer from crosstalk at scale. Trapped-ion platforms offer longer coherence ($T_2 \sim 1$ s) and high gate fidelities ($> 99.9\%$) but face speed limitations from sequential gate operations. Photonic approaches provide natural room-temperature operation but struggle with deterministic two-qubit gates.
 
-Across all platforms, fault-tolerant quantum computation demands error correction, with surface codes requiring approximately 1000 physical qubits per logical qubit at current error rates~\cite{Fowler2012}. This overhead implies that million-qubit processors are necessary for practical quantum advantage—a hardware challenge that may take decades to achieve through incremental improvements alone.
+Across all platforms, fault-tolerant quantum computation demands error correction, with surface codes requiring approximately 1000 physical qubits per logical qubit at current error rates~\cite{Fowler2012}. This overhead implies that million-qubit processors are necessary for practical quantum advantage---a hardware challenge that may take decades to achieve through incremental improvements alone.
 
 This paper presents an alternative approach: exploiting the mathematical structure of fractal geometry and non-semisimple topological quantum field theories (TQFTs) to extract more computational power from fewer physical resources. The Aurphyx architecture achieves three synergistic advantages:
 
@@ -90,17 +88,17 @@ The combined effect is a projected $16\times$ reduction in error correction over
 
 \subsection{Fractal Geometry in Quantum Systems}
 
-Fractal structures—characterized by self-similarity across scales and non-integer Hausdorff dimensions—exhibit anomalous physical properties distinct from Euclidean lattices. The spectral dimension $d_s$, governing diffusion and localization, satisfies $d_s < d$ for fractals embedded in $d$-dimensional space~\cite{Rammal1983,Alexander1982}. For the Sierpi\'{n}ski gasket, $d_s \approx 1.36$, below the critical value $d_s^c = 2$ for the Anderson metal-insulator transition~\cite{Anderson1958}. This guarantees localization of excitations regardless of disorder strength—a property we exploit for coherence enhancement.
+Fractal structures---characterized by self-similarity across scales and non-integer Hausdorff dimensions---exhibit anomalous physical properties distinct from Euclidean lattices. The spectral dimension $d_s$, governing diffusion and localization, satisfies $d_s < d$ for fractals embedded in $d$-dimensional space~\cite{Rammal1983,Alexander1982}. For the Sierpi\'{n}ski gasket, $d_s \approx 1.36$, below the critical value $d_s^c = 2$ for the Anderson metal-insulator transition~\cite{Anderson1958}. This guarantees localization of excitations regardless of disorder strength---a property we exploit for coherence enhancement.
 
 Recent advances in nanofabrication enable construction of fractal structures at scales relevant for quantum systems. Electron-beam lithography achieves sub-10 nm resolution, sufficient for Sierpi\'{n}ski patterns with $k = 4$ recursion depth ($\sim 100$ sites). Combined with ion implantation for NV center creation and epitaxial growth for topological materials, the fabrication pathway to fractal quantum devices is now accessible.
 
 \subsection{Topological Quantum Computing}
 
-Topological quantum computing encodes information in non-local degrees of freedom—specifically, the fusion channels and braiding statistics of anyonic excitations~\cite{Kitaev2003,Nayak2008}. The approach offers intrinsic protection against local errors: information stored in topological sectors cannot be corrupted by local perturbations smaller than the system size.
+Topological quantum computing encodes information in non-local degrees of freedom---specifically, the fusion channels and braiding statistics of anyonic excitations~\cite{Kitaev2003,Nayak2008}. The approach offers intrinsic protection against local errors: information stored in topological sectors cannot be corrupted by local perturbations smaller than the system size.
 
 Microsoft's Majorana-1 demonstration~\cite{Microsoft2025} validated topological qubits with 99\% Z-parity fidelity using InSb/Al nanowires, confirming the viability of Majorana zero modes for quantum computation. However, the Ising anyon model realized by Majorana systems is not computationally universal; achieving universality requires either magic-state distillation~\cite{Bravyi2005} or access to richer anyon models.
 
-We address this limitation by extending beyond semisimple modular tensor categories (MTCs) to non-semisimple categories containing negligible objects—anyons with zero quantum dimension but non-trivial braiding. The resulting gate set achieves universality without magic-state overhead.
+We address this limitation by extending beyond semisimple modular tensor categories (MTCs) to non-semisimple categories containing negligible objects---anyons with zero quantum dimension but non-trivial braiding. The resulting gate set achieves universality without magic-state overhead.
 
 \subsection{Overview and Main Results}
 
@@ -186,7 +184,7 @@ This is consistent with the theoretical prediction $2^{5 \times 0.585} \approx 7
 
 Topological quantum computation is formalized through modular tensor categories (MTCs), which encode the fusion and braiding rules of anyonic excitations~\cite{Kitaev2006,Wang2010}. A MTC consists of simple objects $\{a, b, c, \ldots\}$ (anyon types), fusion rules $a \otimes b = \bigoplus_c N_{ab}^c \, c$, and R-matrices encoding braiding phases.
 
-Semisimple MTCs—where all simple objects have non-zero quantum dimension $d_a > 0$—include the Ising, Fibonacci, and toric code models. These form the basis for most topological quantum computing proposals.
+Semisimple MTCs---where all simple objects have non-zero quantum dimension $d_a > 0$---include the Ising, Fibonacci, and toric code models. These form the basis for most topological quantum computing proposals.
 
 \subsection{Non-Semisimple Extensions: Neglectons}
 
@@ -214,7 +212,7 @@ Combining non-semisimple TQFTs with fractal geometry enhances ground state degen
 \begin{equation}
 D_{\mathrm{ground}} \sim \mathcal{D}^{2g \cdot \Df^{\alpha}(k)},
 \end{equation}
-where $\mathcal{D}$ is the total quantum dimension and $g$ is the genus. For $(sl(2), k=2)$ on a torus with fractal embedding: $D_{\mathrm{ground}} \approx 100$ vs. 4 for the standard toric code—a $25\times$ increase in encoded information.
+where $\mathcal{D}$ is the total quantum dimension and $g$ is the genus. For $(sl(2), k=2)$ on a torus with fractal embedding: $D_{\mathrm{ground}} \approx 100$ vs. 4 for the standard toric code---a $25\times$ increase in encoded information.
 
 % ============================================================================
 % SECTION IV: PHOTONIC BAND ENGINEERING
@@ -336,7 +334,7 @@ We project: (1) 2026--2028: 12-qubit demonstration, NV coherence enhancement. (2
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have presented Aurphyx, a quantum computing architecture exploiting fractal geometry, non-semisimple TQFTs, and photonic band engineering to overcome fundamental scaling limitations. The key results are:
+We have presented FTQC, a Fault-Tolerant Quantum Computing architecture exploiting fractal geometry, non-semisimple TQFTs, and photonic band engineering to overcome fundamental scaling limitations. The key results are:
 
 \begin{enumerate}
 \item \textbf{Fractal Hilbert scaling}: $10^4\times$ advantage at $n = 12$ qubits (Theorem~\ref{thm:main}).
@@ -347,12 +345,10 @@ We have presented Aurphyx, a quantum computing architecture exploiting fractal g
 
 These results establish fractal-topological architectures as a viable path toward fault-tolerant quantum computation with substantially reduced resource requirements.
 
-
-
 % ============================================================================
 % BIBLIOGRAPHY
 % ============================================================================
 
-\bibliography{ms.bib}
+\bibliography{ms}
 
 \end{document}
