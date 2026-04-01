@@ -8,9 +8,9 @@ daemon:
   log_level: "INFO"
 
 backend:
-  primary: "aurafs_chroma"          # final: AuraFS + ChromaDB
-  transitional: "memori_sqlite"      # transitional: existing AurphyxMemori
-  mirror_to_primary: true            # double-write during migration
+  primary: "aurafs_chroma" # final: AuraFS + ChromaDB
+  transitional: "memori_sqlite" # transitional: existing AurphyxMemori
+  mirror_to_primary: true # double-write during migration
 
 aurafs:
   root: "~/.aurphyx/memoree"
@@ -25,7 +25,7 @@ chroma:
     - "procedural"
     - "meta"
     - "aps_canon"
-  embedding_model: "all-MiniLM-L6-v2"   # sentence-transformers, local, no API key
+  embedding_model: "all-MiniLM-L6-v2" # sentence-transformers, local, no API key
 
 memori_sqlite:
   db_path: "./aurphyx_memori.db"
@@ -36,7 +36,7 @@ llm_sync:
     - perplexity
     - claude
     - copilot
-    - cursor
+    - openclaw
     - gemini
     - grok
 

@@ -19,7 +19,7 @@
 \newcommand{\Hilbert}{\mathcal{H}}
 \newcommand{\Df}{D_f}
 \newcommand{\OrderOp}{\mathcal{O}}
-% \tr is provided by the physics package
+%  is provided by the physics package
 
 % Theorem environments
 \usepackage{amsthm}
@@ -154,7 +154,7 @@ A direct consequence for error correction: the physical-to-logical qubit ratio s
 Standard topological quantum computation relies on semisimple modular tensor categories (MTCs), wherein every object has positive quantum dimension~\cite{Kitaev2003,Nayak2008}. Non-semisimple TQFTs relax this constraint, permitting \emph{neglectons}---objects with zero quantum dimension but non-trivial braiding~\cite{Wen2017}.
 
 \begin{definition}[Neglecton]
-A \emph{neglecton} $\omega \in \mathcal{C}$ is a non-zero object in a ribbon category satisfying $d_\omega = \tr(\mathrm{id}_\omega) = 0$, with well-defined braiding matrices $R_{\omega, a}$ and fusion rules.
+A \emph{neglecton} $\omega \in \mathcal{C}$ is a non-zero object in a ribbon category satisfying $d_\omega = (\mathrm{id}_\omega) = 0$, with well-defined braiding matrices $R_{\omega, a}$ and fusion rules.
 \end{definition}
 
 For the $(s\ell(2), k{=}2)$ category, a negligible object $\omega$ with $d_\omega = 0$ has braiding phase $R_{\omega, V_1} = e^{i\pi/4}$, providing a non-trivial gate operation outside the semisimple gate set.
@@ -175,7 +175,7 @@ Qiskit simulations validate this framework. For $N = 5$ qubits with Sierpi\'{n}s
 \begin{tabular}{lcc}
 \textbf{Metric} & \textbf{Value} & \textbf{Target} \\
 \hline
-State purity $\tr(\rho^2)$ & 1.0000 & 1.0 \\
+State purity $(\rho^2)$ & 1.0000 & 1.0 \\
 GHZ fidelity $|\langle\mathrm{GHZ}|\psi\rangle|^2$ & 0.912 & 0.99 \\
 Fractal Hilbert dimension & 227 & --- \\
 Scaling advantage & $7.1\times$ & $10^4\times$ ($N{=}12$) \\
