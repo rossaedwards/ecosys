@@ -8,18 +8,19 @@
 
   <br/><br/>
 
-  <img src="docs/assets/balance_state_vector_icon.png"
-       alt="Balance State Vector Icon"
+  <img src="docs/assets/rAE_icon.png"
+       alt="Ross A. Edwards | rAE"
        width="68" />
 
   <br/><br/>
 
-  # AURPHYX LLC
-  ### *A Symbiotic Architecture for Human Flourishing*
+# AURPHYX LLC
+
+### *A Symbiotic Architecture for Human Flourishing*
 
   <br/>
 
-  **Ross A. Edwards** — Founder, Independent Researcher & Physicist
+  **Ross A. Edwards** — Father, Daddy, Architect, Researcher, & Founder
 
   <br/>
 
@@ -187,6 +188,7 @@ rossaedwards/main/
 ✓ sages_semantic_field.png — Semantic Field φ(r,l) Cross-Scale
 ✓ ds_peak.png — Peak LDOS vs Spectral Dimension
 ---
+
 ## 🏛️ Aurphyx LLC
 
 | | |
@@ -222,6 +224,6 @@ Free to share and adapt with credit to **Ross A. Edwards / Aurphyx LLC**.
 
   <br/>
 
-  **© 2026 Ross A. Edwards | Aurphyx LLC | ross@aurphyx.org**
+  **© 2026 Ross A. Edwards | Aurphyx LLC | <ross@aurphyx.org>**
 
 </div>
