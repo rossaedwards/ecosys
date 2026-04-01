@@ -35,17 +35,13 @@ The $C_{6v}$ point group contains 12 symmetry operations: identity $E$, rotation
 
 For transverse-magnetic (TM) polarization with electric field $\mathbf{E} = E_z(x,y) \hat{z}$, the wave equation in a periodic dielectric structure is~\cite{Joannopoulos2008}:
 \begin{equation}
-
-abla \times \left( \frac{1}{\epsilon(\mathbf{r})}
-abla \times \mathbf{H} \right) = \frac{\omega^2}{c^2} \mathbf{H}.
+\nabla \times \left( \frac{1}{\epsilon(\mathbf{r})} \nabla \times \mathbf{H} \right) = \frac{\omega^2}{c^2} \mathbf{H}.
 \label{eq:master}
 \end{equation}
 
 For TM modes, this reduces to:
 \begin{equation}
--
-abla \cdot \left( \frac{1}{\epsilon(\mathbf{r})}
-abla E_z \right) = \frac{\omega^2}{c^2} E_z.
+-\nabla \cdot \left( \frac{1}{\epsilon(\mathbf{r})} \nabla E_z \right) = \frac{\omega^2}{c^2} E_z.
 \label{eq:tm_scalar}
 \end{equation}
 
@@ -123,8 +119,7 @@ with Dirac frequency $\omega_D \approx 2.80 \times 2\pi c/a$ and group velocity 
 
 The topological character of the bands is characterized by the Berry phase acquired during adiabatic transport around the Brillouin zone. The Zak phase for band $n$ is:
 \begin{equation}
-\gamma_n = i \oint_{\mathrm{BZ}} \langle u_{n\mathbf{k}} |
-abla_{\mathbf{k}} | u_{n\mathbf{k}} \rangle \cdot d\mathbf{k},
+\gamma_n = i \oint_{\mathrm{BZ}} \langle u_{n\mathbf{k}} | \nabla_{\mathbf{k}} | u_{n\mathbf{k}} \rangle \cdot d\mathbf{k},
 \label{eq:zak}
 \end{equation}
 where $|u_{n\mathbf{k}}\rangle$ is the periodic part of the Bloch function.
@@ -147,7 +142,7 @@ Breaking time-reversal symmetry converts bidirectional edge states into unidirec
 
 The combination of flatband dispersion and fractal embedding induces Anderson localization of photonic modes. In disordered systems, the localization length $\xi$ depends on the spectral dimension $d_s$~\cite{Anderson1958,Kramer1993}:
 \begin{equation}
-\xi \propto \left( \frac{E - E_c}{W} \right)^{- u}, \quad  u = \frac{1}{d_s - d_s^c},
+\xi \propto \left( \frac{E - E_c}{W} \right)^{-\nu}, \quad \nu = \frac{1}{d_s - d_s^c},
 \label{eq:loc_length}
 \end{equation}
 where $W$ is the disorder strength and $d_s^c = 2$ is the critical spectral dimension for the Anderson transition. For $d_s < 2$ (as in fractal lattices with $d_s \approx 1.36$), all states are localized regardless of disorder strength.
@@ -229,20 +224,18 @@ Kagome lattice~\cite{Mukherjee2018} & 8\% & 0.3 dB/cm & Yes & Partial \\
 \end{ruledtabular}
 \end{table}
 
-The hexagonal $C_{6v}$ architecture uniquely combines large band gap (21\%), topological edge-state protection, and Anderson localization in flatband regions—a combination that provides the photonic foundation for the Aurphyx fractal quantum computing framework.
-
+The hexagonal $C_{6v}$ architecture uniquely combines large band gap (21\%), topological edge-state protection, and Anderson localization in flatband regions---a combination that provides the photonic foundation for the Aurphyx fractal quantum computing framework.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.48\textwidth]{Fig5_Band_Structure.png}
+\includegraphics[width=0.48\textwidth]{Fig5_Band_Structure.pdf}
 \caption{TRCA photonic band structure for C$_{6v}$ hexagonal lattice showing $21\%$ complete band gap (shaded) at normalized frequency $\omega a/2\pi c \in [2.5, 3.1]$ targeting 193.4 THz (1550 nm).}
 \label{fig:fig4:trca:band:structure}
 \end{figure}
 
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.48\textwidth]{Fig3_Anderson_Localization.png}
-\caption{Anderson localization on Sierpiński gasket demonstrating exponential decay $\exp(-x/\xi)$ with spectral dimension $d_s = 1.36 < 2$ for edge state confinement.}
+\includegraphics[width=0.48\textwidth]{Fig3_Anderson_Localization.pdf}
+\caption{Anderson localization on Sierpi\'{n}ski gasket demonstrating exponential decay $\exp(-x/\xi)$ with spectral dimension $d_s = 1.36 < 2$ for edge state confinement.}
 \label{fig:fig3:fractal:localization}
 \end{figure}
