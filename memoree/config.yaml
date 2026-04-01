@@ -1,47 +1,70 @@
-# Aurphyx_Memoree Daemon Configuration
-# f0rg3d in l0v3 by Ross Edwards
+# Memoree v3 — master config
+# Edit paths for your Windows D: drive setup
 
-daemon:
-  host: "127.0.0.1"
-  port: 7042
-  heartbeat_interval_sec: 10
-  log_level: "INFO"
+memore:
+  version: 3
+  data_root: "D:/aurphyx/memoree"          # change to C:/... if no D: drive
 
-backend:
-  primary: "aurafs_chroma"          # final: AuraFS + ChromaDB
-  transitional: "memori_sqlite"      # transitional: existing AurphyxMemori
-  mirror_to_primary: true            # double-write during migration
+# --- Vector store ---
+vector_backend: lancedb                      # options: lancedb | qdrant
+lancedb:
+  path: "D:/aurphyx/embeddings"             # LanceDB disk path (columnar files)
+  table_name: memoree_events
+  embed_dim: 384                             # all-MiniLM-L6-v2 default
+qdrant:
+  host: localhost
+  port: 6333
+  collection: memoree_events
 
-aurafs:
-  root: "~/.aurphyx/memoree"
-  shard_dir: "shards"
-  index_dir: "index"
+# --- SQLite ledger ---
+sqlite:
+  path: "D:/aurphyx/memoree/ledger.db"      # raw event store + FTS5
+  wal_mode: true
 
-chroma:
-  persist_dir: "~/.aurphyx/memoree/embeddings"
-  collections:
-    - "episodic"
-    - "semantic"
-    - "procedural"
-    - "meta"
-    - "aps_canon"
-  embedding_model: "all-MiniLM-L6-v2"   # sentence-transformers, local, no API key
+# --- Embedder ---
+embedder:
+  backend: sentence_transformers             # options: sentence_transformers | lmstudio
+  model: all-MiniLM-L6-v2
+  lmstudio_url: "http://localhost:1234/v1/embeddings"   # fallback if backend=lmstudio
 
-memori_sqlite:
-  db_path: "./aurphyx_memori.db"
+# --- LLM hooks ---
+hooks:
+  gemini:
+    enabled: true
+    auto_save: true
+  perplexity:
+    enabled: true
+    auto_save: true
+  supergrok:
+    enabled: false                           # stub — enable when WS bridge ready
+    ws_url: ""
+  lmstudio:
+    enabled: true
+    base_url: "http://localhost:1234/v1"
+    models:
+      - nemotron-3-nano-4b
+      - qwen-3.5-4b
 
-llm_sync:
-  base_dir: "~/.aurphyx/memoree/llm_sync"
-  assistants:
-    - perplexity
-    - claude
-    - copilot
-    - cursor
-    - gemini
-    - grok
+# --- Sync layer ---
+sync:
+  backend: powersync                        # options: powersync | pocketbase | none
+  powersync:
+    supabase_url: ""                        # your Supabase project URL
+    supabase_anon_key: ""                   # anon key — free tier ~500MB
+    sync_on_wifi_only: true
+    queue_path: "D:/aurphyx/memoree/sync_queue.db"
+  pocketbase:
+    url: "http://localhost:8090"
+    enabled: false
 
-state:
-  projects_file: "~/.aurphyx/memoree/state/projects.json"
-  volumes_file: "~/.aurphyx/memoree/state/volumes.json"
-  invariants_file: "~/.aurphyx/memoree/state/invariants.json"
-  dualities_file: "~/.aurphyx/memoree/state/dualities.json"
+# --- MemOS overlay (optional Docker) ---
+memos:
+  enabled: false
+  api_url: "http://localhost:9090"
+  cube_id: aurphyx_main
+
+# --- FastAPI daemon ---
+server:
+  host: 127.0.0.1
+  port: 8765
+  reload: true
