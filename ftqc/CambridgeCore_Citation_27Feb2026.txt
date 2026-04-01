@@ -1,1 +1,0 @@
-@inbook{Novotny_Hecht_2006, place={Cambridge}, title={Photonic crystals and resonators}, booktitle={Principles of Nano-Optics}, publisher={Cambridge University Press}, author={Novotny, Lukas and Hecht, Bert}, year={2006}, pages={363–377}} <div></div>

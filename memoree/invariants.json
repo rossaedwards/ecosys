@@ -1,7 +1,0 @@
-{
-  "invariants": [
-    {"fact": "Ross Edwards is the architect of APS", "verified": true, "confidence": 1.0},
-    {"fact": "The Invariant (A22) cannot be destroyed by any admissible transformation", "verified": true, "confidence": 1.0},
-    {"fact": "AuraFS is the canonical sovereign filesystem for all Aurphyx memory", "verified": true, "confidence": 1.0}
-  ]
-}
