@@ -188,8 +188,8 @@ Free to share and adapt with attribution to **Ross A. Edwards / Aurphyx LLC**.
 
 <div align="center">
 
-  <img src="docs/assets/balance_state_vector_icon.png"
-       alt="Balance State Vector"
+  <img src="docs/assets/rae_icon.png"
+       alt="rAE"
        width="40" />
 
   <br/>
