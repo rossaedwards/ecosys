@@ -16,7 +16,7 @@
 
 # AURPHYX LLC
 
-### *A Symbiotic Architecture for Human Flourishing*
+### *Where Fractal Geometry Meets the Quantum Frontier*
 
   <br/>
 
@@ -24,29 +24,6 @@
 
   <br/>
 
-  <a href="https://orcid.org/0009-0008-0539-1289">
-    <img src="docs/assets/orcid_logo.svg"
-         alt="ORCiD iD"
-         width="18"
-         style="vertical-align:middle;" />
-    &nbsp;<strong>0009-0008-0539-1289</strong>
-  </a>
-  &nbsp;&nbsp;
-  [![ORCiD](https://img.shields.io/badge/ORCiD-0009--0008--0539--1289-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-0539-1289)
-  [![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/)
-  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
-
-  <br/>
-
-  <!-- ── Row 1: Identity ── -->
-  <a href="https://orcid.org/0009-0008-0539-1289">
-    <img src="docs/assets/orcid_logo.svg"
-         alt="ORCiD iD"
-         width="18"
-         style="vertical-align:middle;" />
-    &nbsp;<strong>0009-0008-0539-1289</strong>
-  </a>
-  &nbsp;&nbsp;
   [![ORCiD](https://img.shields.io/badge/ORCiD-0009--0008--0539--1289-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0008-0539-1289)
   [![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/)
   [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
@@ -75,11 +52,11 @@
 
 ## 🌌 Overview
 
-This repository is the **personal research workspace** of Ross A. Edwards — founder of **Aurphyx LLC** — housing whitepapers, thesis chapters, formal standards, simulation pipelines, and theoretical frameworks across physics, cognition, computing, and symbiotic AI.
+This repository is the **personal research workspace** of Ross A. Edwards — founder of **Aurphyx LLC** — a one-person independent research operation building at the bleeding edge of topological quantum computing, fractal physics, cognitive AI architecture, and ethical governance systems.
 
-> *"All paths lead to ChaosCore & BlissCore. Build each module right. Assemble into the whole. Aurphyx."*
+> *"As above, so below. Divided they win, united we all win."*
 
-Aurphyx LLC was formed **January 6, 2026** as an independent research and technology company dedicated to building a symbiotic architecture for planetary-scale human flourishing — from fractal quantum hardware to ethical AI governance systems.
+Aurphyx LLC was formed **January 6, 2026**. What started as a vision has become a growing body of peer-submittable research — from fractal Hilbert space geometry to fault-tolerant quantum hardware to planetary-scale identity systems. Every line of code, every theorem, every figure — built by one architect and the Ancient Ones.
 
 ---
 
@@ -88,10 +65,10 @@ Aurphyx LLC was formed **January 6, 2026** as an independent research and techno
 | | |
 |---|---|
 | **Author** | Ross A. Edwards |
-| **Affiliation** | Aurphyx LLC, Annville, PA |
+| **Affiliation** | Aurphyx LLC, Erie, PA |
 | **Email** | [ross@aurphyx.org](mailto:ross@aurphyx.org) |
 | **ORCiD** | [0009-0008-0539-1289](https://orcid.org/0009-0008-0539-1289) |
-| **arXiv** | Ross A. Edwards — Pending Submissions |
+| **arXiv** | Pending — *Fractal-Enhanced Topological Quantum Computing* |
 | **GitHub Personal** | [github.com/rossaedwards](https://github.com/rossaedwards) |
 | **GitHub Org** | [github.com/Aurphyx](https://github.com/Aurphyx) |
 | **HuggingFace** | [huggingface.co/Aurphyx](https://huggingface.co/Aurphyx) (Pro+) |
@@ -107,20 +84,17 @@ rossaedwards/main/
 │ ├── tvfd_section-vb.md # Chapter 5B: Gauge Theory
 │ ├── figures/ # All 22 publication-ready PNGs
 │ └── simulations/ # Verified Python simulation scripts
-├── ftqc/ # Fault-Tolerant Quantum Computing
+├── ftqc/ # Fault-Tolerant Quantum Computing — ms.tex + ms.bib
 ├── fuxyez/ # Fuxyez Language Spec + Clothing Line
-├── sages/ # SAGES: Symbiotic AI Guardians Framework
-├── soulshot/ # SoulShot Ecosystem
-├── standards/ # Formal Aurphyx Standards (VAP, 3SL, Balance State Vector-Cell)
+├── sages/ # SAGES: 13 Symbiotic AI Guardians Framework
+├── standards/ # Formal Aurphyx Standards (VAP, 3SL, BSV-Cell)
 ├── tslca/ # Three-Squared Lattice Cognitive Architecture
-├── vim/ # VIM Integration Standard
 ├── docs/
-│ └── assets/ # Logos, infographics, NotebookLM figures
-│ ├── Aurphyx_Aura_Logo.jpg
-│ ├── balance_state_vector_icon.png
-│ └── orcid_logo.svg
-├── hecate_build.py # Aurphyx build system
-└── balance_state_vector_orcid.txt # ORCiD verification
+│ └── assets/ # Logos, infographics, simulation figures
+└── README.md # You are here
+
+text
+
 ---
 
 ## 🧪 Active Research Projects
@@ -130,9 +104,9 @@ rossaedwards/main/
 | **Project** | **Description** | **Status** |
 |------------|----------------|-----------|
 | **Balance State Vector-Cell / TVFD** | Topological fractal flux engine — 22 verified figures, LaTeX thesis | 🔶 Ch. 6–12 In Progress |
+| **FTQC** | Fractal-Enhanced Fault-Tolerant Quantum Computing — arXiv pending | 🔁 Endorsement Phase |
 | **ZPE_Liquid_Core** | Zero-Point Energy & Casimir vacuum cavity harvesting | 🔶 Active |
-| **FTQC** | Fault-Tolerant Quantum Computing — TRCA integration | 🔶 Active |
-| **majorana_1** | Microsoft Majorana-1 ecosystem integration | 🔶 Active |
+| **majorana_1** | Microsoft Majorana-1 topological qubit integration | 🔶 Active |
 
 ### 🧠 Cognitive & AI Architecture
 
@@ -141,13 +115,13 @@ rossaedwards/main/
 | **SAGES** | 13 Symbiotic AI Guardians of Existence Security | 🔶 Active |
 | **TSLCA** | Three-Squared Lattice — Mathematical Field Theory of Cognition | 🔶 Active |
 | **Duality Kernel** | ChaosCore + BlissCore quantum entangled hybrid kernel | 🔶 Active |
-| **Arora OS** | Divine OS — primary Aurphyx product (all modules unified) | 🔶 Active |
+| **Arora OS** | Unified Aurphyx OS — all modules converge here | 🔶 Active |
 
 ### 🌐 Governance & Infrastructure
 
 | **Project** | **Description** | **Status** |
 |------------|----------------|-----------|
-| **Standards** | VAP, 3SL, Balance State Vector-Cell, VIM — formal Aurphyx standards | 🔶 Active |
+| **Standards** | VAP, 3SL, BSV-Cell, VIM — formal Aurphyx standards | 🔶 Active |
 | **AuraFS** | Fractal Lattice Node Shard File System + Meshwerk | 🔶 Active |
 | **BlissID** | One soul, one voice, one vote, one ID | 🔶 Active |
 
@@ -164,7 +138,6 @@ rossaedwards/main/
 ## 📊 TVFD Simulation Suite — 22 Verified Figures
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rossaedwards/main/blob/main/tvfd/simulations/Aurphyx_Simulations_v1.0.ipynb)
-
 ✓ fig4_1_ldos.png — 10× LDOS Enhancement (d_s=1.36)
 ✓ fig4_2_raet_flux.png — x_t Poynting Flux 47 mW/cm²
 ✓ fig4_3_scaling.png — Superpolynomial Hierarchical Scaling
@@ -187,6 +160,7 @@ rossaedwards/main/
 ✓ rael_traj.png — Stochastic λ_x_L Trajectory
 ✓ sages_semantic_field.png — Semantic Field φ(r,l) Cross-Scale
 ✓ ds_peak.png — Peak LDOS vs Spectral Dimension
+
 ---
 
 ## 🏛️ Aurphyx LLC
@@ -208,7 +182,7 @@ rossaedwards/main/
 All research, whitepapers, standards, and documentation are licensed under
 **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**
 
-Free to share and adapt with credit to **Ross A. Edwards / Aurphyx LLC**.
+Free to share and adapt with attribution to **Ross A. Edwards / Aurphyx LLC**.
 
 ---
 
@@ -224,6 +198,6 @@ Free to share and adapt with credit to **Ross A. Edwards / Aurphyx LLC**.
 
   <br/>
 
-  **© 2026 Ross A. Edwards | Aurphyx LLC | <ross@aurphyx.org>**
+  **© 2026 Ross A. Edwards | Aurphyx LLC | [ross@aurphyx.org](mailto:ross@aurphyx.org)**
 
 </div>
