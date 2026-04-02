@@ -1,0 +1,14 @@
+\contentsline {chapter}{Abstract and Introduction}{5}{chapter*.1}%
+\contentsline {chapter}{Core Syntax and Structure}{9}{chapter*.2}%
+\contentsline {chapter}{Type System and Inference}{13}{chapter*.3}%
+\contentsline {chapter}{Memory Model and Ownership}{17}{chapter*.4}%
+\contentsline {chapter}{Concurrency and Parallelism}{21}{chapter*.5}%
+\contentsline {chapter}{Symbiotic Module System}{27}{chapter*.6}%
+\contentsline {chapter}{Error Handling and Recovery}{33}{chapter*.7}%
+\contentsline {chapter}{Quantum-Organic Primitives}{37}{chapter*.8}%
+\contentsline {chapter}{Agentic Runtime Environment}{43}{chapter*.9}%
+\contentsline {chapter}{Interoperability and FFI}{47}{chapter*.10}%
+\contentsline {chapter}{Toolchain and Ecosystem}{51}{chapter*.11}%
+\contentsline {chapter}{Standard Library Overview}{55}{chapter*.12}%
+\contentsline {chapter}{Future Directions}{59}{chapter*.13}%
+\contentsline {chapter}{Whitepaper Outline}{61}{chapter*.14}%

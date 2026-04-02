@@ -1,0 +1,134 @@
+# Memoree v3 — Sovereign Memory Substrate
+# Date: 2026-03-31
+# Foundation for AuraFS + God Mode Core
+
+memoree:
+  version: "3.1.0"
+  data_root: "D:/aurphyx/memoree"
+  project: memoree-v3
+
+<<<<<<< HEAD
+backend:
+  primary: "aurafs_chroma" # final: AuraFS + ChromaDB
+  transitional: "memori_sqlite" # transitional: existing AurphyxMemori
+  mirror_to_primary: true # double-write during migration
+=======
+# ─── Vector Store ───────────────────────────────────────────────
+# Primary: Qdrant (local Rust binary — superior filtering)
+# Fallback: LanceDB (embedded, zero-server columnar)
+vector_backend: qdrant                       # options: qdrant | lancedb
+>>>>>>> 1cc72638408504613399a0cbf457584ecae01b0d
+
+qdrant:
+  host: localhost
+  port: 6333
+  collection: memoree_events
+  storage_path: "D:/aurphyx/memoree/qdrant"  # mounted inside Docker
+  embed_dim: 384                             # all-MiniLM-L6-v2 default
+  # Hybrid search: dense vector + sparse BM25 (Qdrant >= 1.10)
+  hybrid:
+    enabled: true
+    sparse_model: bm25                       # built-in Qdrant sparse
+
+<<<<<<< HEAD
+chroma:
+  persist_dir: "~/.aurphyx/memoree/embeddings"
+  collections:
+    - "episodic"
+    - "semantic"
+    - "procedural"
+    - "meta"
+    - "aps_canon"
+  embedding_model: "all-MiniLM-L6-v2" # sentence-transformers, local, no API key
+=======
+lancedb:
+  path: "D:/aurphyx/embeddings"
+  table_name: memoree_events
+  embed_dim: 384
+>>>>>>> 1cc72638408504613399a0cbf457584ecae01b0d
+
+# ─── SQLite Ledger (episodic raw store + FTS5) ──────────────────
+sqlite:
+  path: "D:/aurphyx/memoree/ledger.db"
+  wal_mode: true
+
+<<<<<<< HEAD
+llm_sync:
+  base_dir: "~/.aurphyx/memoree/llm_sync"
+  assistants:
+    - perplexity
+    - claude
+    - copilot
+    - openclaw
+    - gemini
+    - grok
+=======
+# ─── Embedder ───────────────────────────────────────────────────
+embedder:
+  backend: sentence_transformers             # options: sentence_transformers | lmstudio
+  model: all-MiniLM-L6-v2
+  lmstudio_url: "http://localhost:1234/v1/embeddings"
+>>>>>>> 1cc72638408504613399a0cbf457584ecae01b0d
+
+# ─── MemOS Overlay ──────────────────────────────────────────────
+# docker run -p 9090:9090 memos/memos:latest
+memos:
+  enabled: false                             # flip to true when Docker is running
+  api_url: "http://localhost:9090"
+  cube_id: aurphyx_main                      # per-project isolation cube
+  decay:
+    enabled: true
+    half_life_days: 30
+  reinforcement:
+    enabled: true
+
+# ─── LLM Hooks ──────────────────────────────────────────────────
+hooks:
+  gemini:
+    enabled: true
+    auto_save: true
+    default_project: memoree-v3
+  perplexity:
+    enabled: true
+    auto_save: true
+    default_project: memoree-v3
+  supergrok:
+    enabled: false                           # Phase 2 WS bridge
+    ws_url: ""
+  lmstudio:
+    enabled: true
+    base_url: "http://localhost:1234/v1"
+    models:
+      nemotron-3-nano-4b:
+        alias: nemotron
+        default_project: god-mode-core
+      qwen-3.5-4b:
+        alias: qwen
+        default_project: god-mode-core
+
+# ─── Rich Metadata Defaults ─────────────────────────────────────
+metadata_defaults:
+  priority: 5                                # 1-10
+  mood: neutral                              # neutral | focused | inspired | debug
+  confidence: 0.8                            # 0.0 - 1.0
+  source: api                                # api | hook | manual | ws
+
+# ─── Sync Layer ─────────────────────────────────────────────────
+sync:
+  backend: pocketbase                        # options: pocketbase | powersync | none
+  pocketbase:
+    enabled: true
+    url: "http://localhost:8090"             # single binary, runs alongside daemon
+    collection: memoree_events
+  powersync:
+    supabase_url: ""
+    supabase_anon_key: ""
+    sync_on_wifi_only: true
+    queue_path: "D:/aurphyx/memoree/sync_queue.db"
+
+# ─── FastAPI + WebSocket Daemon ──────────────────────────────────
+server:
+  host: 127.0.0.1
+  port: 8765
+  reload: true
+  ws_path: /ws/memory

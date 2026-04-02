@@ -28,7 +28,12 @@
     \usepackage{lettrine}
     \usepackage{tocloft}
     \usepackage{setspace}
-    
+    \usepackage{ifthen}
+
+%% ============================================================
+%%  DUALITY FRAMES — Fux on odd pages, Yez on even pages
+%% ============================================================
+
     %% --- Page Geometry ---
     \geometry{
         a4paper,
@@ -42,7 +47,6 @@
     }
     
     %% --- Color Palette ---
-    \definecolor{cosmicbg}{HTML}{08020C}
     \definecolor{neonCyan}{HTML}{00FFDC}
     \definecolor{alienPurple}{HTML}{B400FF}
     \definecolor{voidBlack}{HTML}{050108}
@@ -55,7 +59,6 @@
     \definecolor{sectiongold}{HTML}{C8A400}
     
     %% --- Page Background ---
-    \pagecolor{cosmicbg}
     \color{starWhite}
     
     %% --- Fonts ---
@@ -126,7 +129,6 @@
     
     \lstset{
         language=fuxyez,
-        backgroundcolor=\color{codebg},
         basicstyle=\ttfamily\small\color{starWhite},
         breaklines=true,
         captionpos=b,
@@ -174,13 +176,17 @@
     
     %% ============================================================
     \begin{document}
-    
+
+    \newcommand{\fuxframe}{\includegraphics[width=\paperwidth,height=\paperheight]{fux\_frame.png}}
+    \newcommand{\yezframe}{\includegraphics[width=\paperwidth,height=\paperheight]{yez\_frame.png}}
+    % Auto-apply the correct frame to every page
+    \AddToShipoutPictureBG*{\ifthenelse{\isodd{\value{page}}}{\fuxframe}{\yezframe}}
+
     %% ============================================================
     %%  TITLE PAGE
     %% ============================================================
     \begin{titlepage}
-    \pagecolor{voidBlack}
-    \color{starWhite}
+     \color{starWhite}
     \centering
     \vspace*{2cm}
     
@@ -428,7 +434,7 @@ These contributions position Fuxyez as a new class of language: not a hybrid, no
 
 ---
 
-\#\# On your idea: \textit{Aurphyx_Mythology_Terminology_Codex}  
+\#\# On your idea: \textit{Aurphyx\_Mythology\_Terminology\_Codex}
 This is not only feasible—it is strategically powerful.
 
 \#\#\# What it would be  
@@ -445,7 +451,7 @@ A formal glossary that defines:
   \item It gives researchers a \textbf{precise vocabulary}.  
   \item It gives developers a \textbf{consistent conceptual model}.  
   \item It gives the public a \textbf{narrative entry point}.  
-  \item It mirrors the role of \textit{Scientific_Terminology.md} but through the duality lens.  
+  \item It mirrors the role of \textit{Scientific\_Terminology.md} but through the duality lens.  
 \end{itemize}
 
 \#\#\# Recommended Path  
@@ -1145,7 +1151,7 @@ A developer can:
   \item Export a WASM module for deployment  
   \item Keep the original Python version for debugging  
   \item Use both versions symbiotically in the same runtime  
-\end{itemize}
+\end{enumerate}
 
 This is the practical power of Fuxyez.
 
@@ -1332,7 +1338,7 @@ This section is rewritten to reflect the \textbf{true, unified architecture} of 
 Fuxyez is implemented as a \textbf{symbiotic system} composed of four inseparable components:
 
 \begin{itemize}
-  \item \textbf{compiler/} — the Fuxyez compiler (formerly \texttt{fuxyez_compiler/})  
+  \item \textbf{compiler/} — the Fuxyez compiler (formerly \texttt{fuxyez\_compiler/})  
   \item \textbf{fuxrt/} — the Fux host runtime  
   \item \textbf{yezrt/} — the Yez symbiotic runtime  
   \item \textbf{fute/} — the Universal Transmutation Engine  
@@ -1372,8 +1378,8 @@ This implementation is \textbf{not deprecated}. It is the \textbf{foundation} up
 \end{itemize}
   - \texttt{lexer.rs}, \texttt{parser.rs}, \texttt{ast.rs}  
   - \texttt{optimizer.rs}, \texttt{generator.rs}  
-  - \texttt{executor.rs}, \texttt{runtime_hooks.rs}  
-  - \texttt{sentinel_core.rs} (early semantic enforcement)  
+  - \texttt{executor.rs}, \texttt{runtime\_hooks.rs}  
+  - \texttt{sentinel\_core.rs} (early semantic enforcement)  
 
 \begin{itemize}
   \item \textbf{fuxrt/}  
@@ -1465,7 +1471,7 @@ Everything is alive.
 ---
 
 \#\# 9.5 Recommended Repository Structure (Unified and Professional)  
-Your instinct to rename \texttt{fuxyez_compiler/} to \texttt{compiler/} is correct.  
+Your instinct to rename \texttt{fuxyez\_compiler/} to \texttt{compiler/} is correct.  
 The unified structure should be:
 
 \begin{lstlisting}[language=fuxyez]

@@ -1,0 +1,1 @@
+Appendix Q — The Aurphyx Structural Field: Ontology, Invariants, and the Geometry of Law

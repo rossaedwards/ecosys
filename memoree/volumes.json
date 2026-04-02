@@ -1,0 +1,14 @@
+{
+  "Volume_I": {
+    "title": "Theory of Balance",
+    "status": "active"
+  },
+  "Volume_II": {
+    "title": "Balance Geometry",
+    "status": "active"
+  },
+  "Volume_III": {
+    "title": "Balance Continuum",
+    "status": "active"
+  }
+}
