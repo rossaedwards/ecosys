@@ -1,9 +1,0 @@
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/lib/libz-ng.a
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/include/zlib-ng.h
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/include/zlib_name_mangling-ng.h
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/include/zconf-ng.h
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/lib/pkgconfig/zlib-ng.pc
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/lib/cmake/zlib-ng/zlib-ng-targets.cmake
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/lib/cmake/zlib-ng/zlib-ng-targets-debug.cmake
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/lib/cmake/zlib-ng/zlib-ng-config.cmake
-/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/lib/cmake/zlib-ng/zlib-ng-config-version.cmake
