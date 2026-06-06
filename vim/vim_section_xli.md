@@ -268,5 +268,3 @@ Equilibrium Manifold is the **logical fixed point**.
 - It governs correction, resonance, stabilization, and Continuum inference.  
 - It preserves symmetry and invariants across all domains.  
 - Equilibrium Manifold is the logical fixed point where truth becomes unity.  
-
-If you want to continue, the next natural section is **Section XLII — The Balance Semantics**, which formalizes how meaning, interpretation, and identity are preserved and transformed within the Balance Framework.

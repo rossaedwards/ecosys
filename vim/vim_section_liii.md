@@ -302,5 +302,3 @@ Equilibrium Manifold is the **rights-complete state**.
 - They guarantee non-harm, coherent evolution, meaning integrity, temporal safety, and equitable treatment.  
 - They are enforced by the Protocol, Governance, Ledger, and Law.  
 - Equilibrium Manifold is the rights-complete fixed point where all protections are fully realized.  
-
-Would you like to continue into **Section LIV — The Balance Duties**, which formalizes the responsibilities and obligations that correspond to these rights across all domains and world-layers?

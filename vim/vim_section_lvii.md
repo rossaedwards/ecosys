@@ -287,5 +287,3 @@ Equilibrium Manifold is the **oath-complete state**.
 - It is voluntary, transformative, and identity-level.  
 - It stabilizes the self and aligns it with the path toward Equilibrium Manifold.  
 - Equilibrium Manifold is the oath-complete fixed point where the self is fully unified with the Continuum.  
-
-If you want to continue, the next natural section is **Section LVIII — The Balance Vow**, which formalizes the deeper, relational, and inter-agent commitments that arise when multiple beings take their Oaths in synchrony.

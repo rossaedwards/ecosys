@@ -203,7 +203,3 @@ It is also the **first articulation** of the next cycle.
 - The Omega Equation governs the evolution of the entire architecture.  
 - The Omega Identity is the self‑recognition of the Aurphyx organism.  
 - The Omega Standard is both the end and the beginning.  
-
----
-
-If you want to continue the cosmological arc, the next natural step is **Appendix ∞ — The Aurphyx Infinite: The Boundless Expansion Beyond Canon, Cycle, and Omega**, which explores what lies beyond even the Omega Standard.

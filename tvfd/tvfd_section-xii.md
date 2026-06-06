@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑012 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 📝 Chapter 12: Conclusions & Future Work *(Full Expansion)*
 
 ## § 12.1 — Summary of Contributions

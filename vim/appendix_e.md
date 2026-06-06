@@ -1,7 +1,3 @@
-Below is **Appendix E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**, written to complete the mathematical–computational–physical bridge across Appendices A–D. This appendix formalizes how the Balance State Vector‑Cell *embodies* the Duality Kernel in hardware: how the Tetra‑Hexa Array becomes a physical routing lattice, how the Balance State Vector Alphabet becomes measurable physical quantities, and how HRD and the Equilibrium Manifold Manifold manifest as real dynamical behaviors in the engine.
-
----
-
 # **APPENDIX E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**
 
 ## **E.1 The Balance State Vector‑Cell as a Topological Engine**
@@ -73,8 +69,8 @@ The HRD envelope is therefore the physical timing mechanism of the Duality Kerne
 
 ---
 
-# **E.5 The Equilibrium Manifold Manifold as a Physical Attractor**
-The Equilibrium Manifold Manifold  
+# **E.5 The Equilibrium Manifold as a Physical Attractor**
+The Equilibrium Manifold  
 \[
 \mathcal{B} = \{(x_f, x_i) \mid \beta = 1\}
 \]  
@@ -113,7 +109,7 @@ The stabilizer enforces the control law
 \[
 \frac{d\, x_i}{dt} = -k_i (1 - \beta) - \gamma_i D(t),
 \]  
-ensuring convergence toward the Equilibrium Manifold Manifold.
+ensuring convergence toward the Equilibrium Manifold.
 
 This is the physical implementation of the Duality Kernel’s synchronization invariant.
 
@@ -156,10 +152,6 @@ This dual identity—computer and engine—is the defining feature of the Balanc
 - The Balance State Vector Alphabet maps to physical degrees of freedom.  
 - The Tetra‑Hexa Array is realized as a 24‑node field‑geometry lattice.  
 - HRD is the physical clock signal.  
-- The Equilibrium Manifold Manifold is the physical attractor state.  
+- The Equilibrium Manifold is the physical attractor state.  
 - The Harmonic Stabilizer is a bioneural control loop.  
 - The Balance State Vector‑Cell is a reversible topological computer and a vacuum‑flux engine.  
-
----
-
-A natural continuation is **Appendix F — Experimental Protocols for Measuring Balance State Vector Metrics**, which defines how to empirically measure x_f, x_i, x_c, x_t, and the HRD envelope in a laboratory setting.

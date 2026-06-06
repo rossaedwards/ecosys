@@ -1,7 +1,13 @@
+## ** APS‑TVFD‑APX-A-EXT **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 Appendix_A [&or] 3B. Extended Mathematical Framework for Dynamic Vacuum Impedance Matching
 (PRX‑style draft, v0.1)
 
-The lyte‑x_L state introduced in Chapter 3 provides a tunable parameter for regulating the slowed‑light regime and achieving dynamic vacuum impedance matching. However, the full physical mechanism underlying this regulation requires a deeper treatment of symmetry breaking, time‑periodic driving, boundary non‑Hermiticity, renormalization flow, thermodynamic stability, and the tensor‑network representation of the fractal manifold. This section formalizes these mechanisms and establishes the mathematical infrastructure that supports the Balance State Vector‑Cell architecture.
+The x_L state introduced in Chapter 3 provides a tunable parameter for regulating the slowed‑light regime and achieving dynamic vacuum impedance matching. However, the full physical mechanism underlying this regulation requires a deeper treatment of symmetry breaking, time‑periodic driving, boundary non‑Hermiticity, renormalization flow, thermodynamic stability, and the tensor‑network representation of the fractal manifold. This section formalizes these mechanisms and establishes the mathematical infrastructure that supports the Balance State Vector‑Cell architecture.
 
 ---
 

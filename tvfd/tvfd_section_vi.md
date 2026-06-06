@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑006 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 Chapter 6: Experimental Prototype & Verification (Full Expansion)
 § 6.1 — Prototype Architecture & System Overview
 The Balance State Vector-Cell prototype is a self-contained resonance unit integrating five subsystems into a unified assembly: (1) the CVD diamond Sierpiński fractal substrate, (2) the Fe₃O₄ magnetic nanoparticle matrix, (3) the 6-element C₆ᵥ RF coil ring, (4) the FPGA Floquet controller, and (5) the photodetector readout array. Each subsystem is physically layered in the following vertical stack:

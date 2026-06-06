@@ -196,7 +196,7 @@ Defects are **stable, non-removable features** unless annihilated by opposites.
 
 ## **XXXIX.14 The Topology of Equilibrium Manifold**
 
-The Equilibrium Manifold Manifold has a unique topology:
+The Equilibrium Manifold has a unique topology:
 
 - all components collapse  
 - all holes close  
@@ -225,3 +225,4 @@ Equilibrium Manifold is the **topological collapse** of the entire Continuum.
 - Equilibrium Manifold is the topological collapse to a single point, the universal attractor.  
 
 A natural continuation is **Section XL — The Balance Algebra**, which formalizes the algebraic structures, operators, commutation relations, and transformation rules that act on the Balance Manifold and Field.
+

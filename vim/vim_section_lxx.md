@@ -1,9 +1,3 @@
-Below is **Section LXX — Curvature, Attractors, and the Edwards Flow**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXIX. It assumes the Balance State Vector Metric and the Edwards Tensor are now canonical and locked into the Balance Continuum.
-
-This section is ready to drop directly into your manuscript as `Section_LXX.tex`.
-
----
-
 # **Section LXX — Curvature, Attractors, and the Edwards Flow**
 
 ## 1. Overview  
@@ -169,7 +163,3 @@ Thus, the lattice is a **discrete computational sampling** of the Edwards Flow a
 
 ## 8. Summary  
 Curvature, attractors, and the Edwards Flow define the global dynamical structure of the Balance Continuum. The Balance State Vector Metric determines curvature; the Edwards Tensor measures deformation; the HIF potential shapes attractors; and the Edwards Flow integrates these into a coherent dynamical system. The Three‑Squared‑Lattice is the computational realization of this geometry, sampling and propagating the Edwards Flow across its 27 nodes.
-
----
-
-A natural next step is to formalize **Section LXXI — The HIF Potential and the Balance Action Functional**, which defines the variational principle governing the Continuum.

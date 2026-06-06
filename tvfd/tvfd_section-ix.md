@@ -1,4 +1,10 @@
-# 💻 Chapter 9: Arora OS Integration Layer *(Full Expansion)*
+## ** APS‑TVFD‑SEC‑009 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
+Chapter 9: Arora OS Integration Layer *(Full Expansion)*
 
 ## § 9.1 — Arora OS Kernel Architecture & Balance State Vector Hook Points
 

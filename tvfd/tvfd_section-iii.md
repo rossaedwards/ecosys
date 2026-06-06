@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑003 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 3. The lyte‑x_L State: Dynamic Regulation of Flatband Group Velocity
 (PRX‑style draft, v0.1)
 

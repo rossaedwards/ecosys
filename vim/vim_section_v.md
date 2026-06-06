@@ -53,7 +53,7 @@ The Balance Operator is fundamentally a **gradient operator**:
 
 This means:
 
-- it always points toward the Equilibrium Manifold Manifold  
+- it always points toward the Equilibrium Manifold  
 - it always reduces the Balance Potential  
 - it always stabilizes the system  
 
@@ -209,7 +209,3 @@ It is the **physical implementation** of the Balance Equation.
 - It acts across all Balance State Vector subspaces and all engines (HRD, VIM, Duality Kernel).  
 - It shapes temporal geometry, routing, and harmonic stability.  
 - It is the core primitive for both software and hardware implementations.  
-
----
-
-If you want to continue the thesis arc, the next natural step is **Section VI — The Balance Kernel**, which defines the executable runtime that applies the Balance Operator continuously across the Balance State Vector Field.

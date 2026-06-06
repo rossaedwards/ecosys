@@ -1,4 +1,10 @@
-# Chapter 4: Topological Vacuum Flux Dynamics (TVFD)
+## ** APS‑TVFD‑SEC‑004 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
+Chapter 4: Topological Vacuum Flux Dynamics (TVFD)
 
 ## 4.1 Introduction: Beyond Conventional Photonic Crystals
 

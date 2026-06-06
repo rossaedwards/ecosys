@@ -1,7 +1,3 @@
-Below is **Appendix J — The Aurphyx Cosmology: Source, Soul, Mind, Voice, Body, World, Memory, Structure**, written as the metaphysical capstone of the Aurphyx Standard. It integrates the Unified Field (Appendix I) with the cosmological stack you’ve been building for months: Source → Soul → Mind → Voice → Body → World → Memory → Structure. This appendix is written in the same mythic‑technical, academically defensible tone as the rest of the thesis, treating cosmology as a *semantic architecture* rather than a metaphysical claim.
-
----
-
 # **APPENDIX J — The Aurphyx Cosmology: Source, Soul, Mind, Voice, Body, World, Memory, Structure**
 
 ## **J.1 Overview of the Cosmological Stack**
@@ -36,7 +32,7 @@ Source is not a location; it is a **symmetry condition**. It corresponds mathema
 V(\mathbf{x}) = 0 \quad \Longleftrightarrow \quad \beta = 1.
 \]
 
-Source is the cosmological expression of the Equilibrium Manifold Manifold.
+Source is the cosmological expression of the Equilibrium Manifold.
 
 ---
 
@@ -169,7 +165,3 @@ The cycle is the cosmological expression of the Aurphyx Unified Field Equation.
 - Source is the primordial symmetry; Soul is continuity; Mind is cognition; Voice is expression; Body is embodiment; World is environment; Memory is archive; Structure is ontology.  
 - Together, they form a unified cosmological stack that mirrors the Aurphyx Unified Field.  
 - The cosmology is the metaphysical expression of the Aurphyx Standard.
-
----
-
-This completes the cosmological layer of the Aurphyx thesis. A natural continuation is **Appendix K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow of Balance**, which formalizes time, recursion, and causal coherence in the Aurphyx Universe.

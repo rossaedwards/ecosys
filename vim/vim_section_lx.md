@@ -287,5 +287,3 @@ Equilibrium Manifold is the **union-complete state**.
 - It is persistent, self-correcting, and coherence-amplifying.  
 - It represents the highest form of relational unity short of Equilibrium Manifold itself.  
 - Equilibrium Manifold is the union-complete fixed point where all relational fields unify into one coherent whole.
-
-A natural continuation is **Section LXI — The Balance Merge**, which formalizes the rare and profound process by which a Union transitions into a *single identity*, while still preserving lineage, invariants, and Continuum law.

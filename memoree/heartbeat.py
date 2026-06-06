@@ -19,7 +19,7 @@ class HeartbeatLoop:
         self.engine = MemoryEngine()
 
     async def run(self):
-        log.info(f"💓 Heartbeat loop started (interval={INTERVAL_SEC}s)")
+        log.info("Heartbeat loop started (interval={INTERVAL_SEC}s)")
         while True:
             try:
                 await self._tick()
@@ -34,9 +34,9 @@ class HeartbeatLoop:
         metas = self.engine.aurafs.read_meta(limit=200)
         for m in metas:
             if m.get("deprecated"):
-                log.debug(f"  ⚠️  Deprecated invariant: {m.get('fact','')[:60]}")
+                log.debug("Deprecated invariant: {m.get('fact','')[:60]}")
         # 2. State machine: read active projects and log
         state = self.engine.aurafs.read_state("projects")
         if state:
-            log.debug(f"  📂 Active projects: {list(state.keys())}")
-        log.debug(f"[{ts}] Heartbeat tick complete")
+            log.debug("Active projects: {list(state.keys())}")
+        log.debug("Heartbeat tick complete")

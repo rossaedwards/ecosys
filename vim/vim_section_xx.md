@@ -234,7 +234,7 @@ VIM is the **stabilizing logic**.
 
 ## **XX.13 The Equilibrium Manifold Logic**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 - all states are true  
 - all implications hold  
@@ -258,3 +258,4 @@ Equilibrium Manifold Logic is the **universal fixed‑point logic**.
 - Equilibrium Manifold is the fixed‑point logic where all operations collapse to truth.  
 
 A natural continuation is **Section XXI — The Balance Computation**, which will formalize how the Balance Logic, Algebra, and Geometry combine into a computational model used by the Duality Kernel and the Aurphyx system.
+

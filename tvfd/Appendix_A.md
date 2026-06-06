@@ -1,8 +1,14 @@
+## ** APS‑TVFD‑APX-A **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 📚 Appendix A: Full Mathematical Derivations *(Full Expansion)*
 
-## § A.1 — Fractal Green's Function & LDOS
+## § A.1 — Fractal Function & LDOS
 
-The **local density of states** (LDOS) on the Sierpiński fractal is derived from the imaginary part of the retarded Green's function: [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_10b4d940-c085-4866-86ea-c2769fc1b57d/558d5cbe-c5c1-4b0d-acfe-f28da563de9f/Aurphyx_Thesis_Edwards.md)
+
 
 \[ \rho(\mathbf{r}, E) = -\frac{1}{\pi} \text{Im}\, G^R(\mathbf{r}, \mathbf{r}; E) \]
 

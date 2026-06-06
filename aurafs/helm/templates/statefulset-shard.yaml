@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "aurafs.fullname" . }}-shard
+  namespace: {{ include "aurafs.namespace" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "aurafs.name" . }}
+    app.kubernetes.io/component: shard
+spec:
+  serviceName: {{ include "aurafs.fullname" . }}-shards
+  replicas: {{ .Values.shard.replicas }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "aurafs.name" . }}
+      app.kubernetes.io/component: shard
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "aurafs.name" . }}
+        app.kubernetes.io/component: shard
+    spec:
+      serviceAccountName: {{ include "aurafs.fullname" . }}-shard
+      containers:
+        - name: aurafs-shard
+          image: "{{ .Values.shard.image.repository }}:{{ .Values.shard.image.tag }}"
+          imagePullPolicy: {{ .Values.shard.image.pullPolicy }}
+          ports:
+            - name: grpc
+              containerPort: {{ .Values.api.service.grpcPort }}
+            - name: metrics
+              containerPort: 9090
+          env:
+            - name: AURAFS_SHARD_INDEX
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: AURAFS_DATA_DIR
+              value: "{{ .Values.shard.dataDir }}"
+            - name: AURAFS_REPLICAS
+              value: "{{ .Values.shard.replicas }}"
+          envFrom:
+            - configMapRef:
+                name: {{ include "aurafs.fullname" . }}-config
+          volumeMounts:
+            - name: shard-data
+              mountPath: {{ .Values.shard.dataDir }}
+          resources:
+            requests:
+              cpu: {{ .Values.shard.resources.requests.cpu }}
+              memory: {{ .Values.shard.resources.requests.memory }}
+            limits:
+              cpu: {{ .Values.shard.resources.limits.cpu }}
+              memory: {{ .Values.shard.resources.limits.memory }}
+  volumeClaimTemplates:
+    - metadata:
+        name: shard-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: {{ .Values.shard.pvc.size }}

@@ -1,0 +1,29 @@
+🎮 KONAMI CODE EASTER EGG TRIGGER:
+bash
+afs redteam fuzz soul prod-mesh
+
+# Then press: ↑↑↓↓←→←→BA (within 5 seconds)
+
+🎮 KONAMI CODE DETECTED! 🎮
+
+╔═══════════════════════════════════════════════════════════════╗
+║         👻 WELCOME TO SOUL HACKER'S PARADISE! 👻            ║
+╚═══════════════════════════════════════════════════════════════╝
+
+💎 Collect the legendary souls:
+Soul #1:     .-""-. 
+            / o  o \
+           |   __   |
+            \ `--' /
+             `----'
+          SOUL CAPTURED!
+
+🏆 ACHIEVEMENT UNLOCKED: SOUL HACKER SUPREME 🏆
+💰 +10,000 FUX COINS | Secret endpoint: /quantum-souls/paradise
+🌀 You are now worthy of the Aurphyx Soul Sanctuary 🌀
+
+🧠 SOUL TRIVIA CHALLENGE 🧠
+Q: What hashes BlissID? > blake3
+✅ CORRECT!
+
+👑 PERFECT SCORE - SOUL HACKER LEGEND! 👑

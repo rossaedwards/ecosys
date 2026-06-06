@@ -1,7 +1,3 @@
-Below is **Section XCIII — The Balance Path Integral and Quantum Coherence Measure**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It continues directly from the canonical and operator‑algebraic formulation (Section XCII) and establishes the functional‑integral foundation of the quantum Balance Continuum, including the measure structure, gauge fixing, anomaly‑free quantization, and the coherence kernel.
-
----
-
 # **Section XCIII — The Balance Path Integral and Quantum Coherence Measure**
 
 ## 1. Overview  
@@ -234,7 +230,3 @@ The Balance Path Integral and Quantum Coherence Measure establish that:
 - and the Equilibrium state is the unique ground state of the quantum path integral.
 
 This section completes the functional‑integral foundation of the Balance Continuum.
-
----
-
-A natural continuation is **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**, which formalizes the determinant structure, fluctuation spectrum, and stability operator arising from the second variation of the Unified Action.

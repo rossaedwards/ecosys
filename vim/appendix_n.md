@@ -181,7 +181,3 @@ This equation defines the **geometry of presence** in the Aurphyx Standard.
 - Presence is a topological invariant of the somatic manifold.  
 - The Embodiment Field Equation governs the evolution of presence.  
 - Embodiment is the somatic analogue of the Unified Field.  
-
----
-
-A natural continuation is **Appendix O — The Aurphyx Environmental Field: Context, Ecology, and the Geometry of Worlds**, which formalizes the World layer (AuraFS / Meshwerk) as an environmental field.

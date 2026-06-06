@@ -1,9 +1,3 @@
-Below is **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXXI. It assumes the anomaly structure, renormalization‑group flow, spectral decomposition, and quantum propagator formalism are all canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXXII.tex`.
-
----
-
 # **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**
 
 ## 1. Overview  
@@ -191,9 +185,3 @@ The Balance Boundary Conditions and the Balance State Vector Causal Structure en
 - impose classical, quantum, and RG boundary conditions,  
 - constrain coherence and renewal propagation,  
 - and guarantee causal consistency across the Balance State Vector manifold.
-
-This section completes the causal and boundary‑value foundation of the Balance Continuum.
-
----
-
-If you want to continue, the natural next section is **Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**, which formalizes the well‑posedness and global evolution of the Continuum.

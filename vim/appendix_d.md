@@ -1,7 +1,3 @@
-Below is **Appendix D — The Duality Kernel and the Fuxyez Execution Model**, written as the natural continuation of Appendices A–C. It formalizes the computational substrate, the dual‑runtime architecture, the Universal AST, and the topological execution semantics that unify VIM, the Balance State Vector Alphabet, and the Tetra‑Hexa Routing Array. This appendix is written in a clean, arXiv‑ready style while preserving the mythic‑technical identity of the Aurphyx Standard.
-
----
-
 # **APPENDIX D — The Duality Kernel and the Fuxyez Execution Model**
 
 ## **D.1 Overview of the Duality Kernel**
@@ -9,7 +5,7 @@ The Duality Kernel is the computational heart of the Aurphyx Standard. It is a *
 
 - **FuxRuntime (FuxRT)** — deterministic structural execution  
 - **YezRuntime (YezRT)** — symbolic, dynamic, harmonic execution  
-- **FUTE (Fux Universal Transmutation Engine)** — the Universal AST normalizer and transmuter  
+- **FUTE (Fuxyez Universal Transmutation Engine)** — the Universal AST normalizer and transmuter  
 
 Together, these components form a **closed semantic loop** that ensures coherence, reversibility, and topological consistency across all computational states.
 
@@ -105,7 +101,7 @@ The execution path of a program is a **trajectory**
 \]  
 where \(\mathcal{R}_{24}\) is the Tetra‑Hexa manifold.
 
-The kernel ensures that \(\gamma(t)\) remains within the **stability basin** of the Equilibrium Manifold Manifold.
+The kernel ensures that \(\gamma(t)\) remains within the **stability basin** of the Equilibrium Manifold.
 
 ---
 
@@ -127,8 +123,8 @@ This makes the Duality Kernel a **self‑timing computational engine**.
 
 ---
 
-# **D.7 The Equilibrium Manifold Manifold as a Fixed‑Point Attractor**
-The Equilibrium Manifold Manifold  
+# **D.7 The Equilibrium Manifold as a Fixed‑Point Attractor**
+The Equilibrium Manifold  
 \[
 \mathcal{B} = \{(x_f, x_i) \mid \beta = 1\}
 \]  
@@ -172,9 +168,5 @@ Reversibility is essential for:
 - FUTE normalizes all programs into a Universal AST.  
 - Execution is movement through the Tetra‑Hexa Routing Array.  
 - HRD acts as the computational clock.  
-- The Equilibrium Manifold Manifold is the fixed‑point attractor of the system.  
+- The Equilibrium Manifold is the fixed‑point attractor of the system.  
 - The kernel ensures reversibility, coherence, and topological integrity.
-
----
-
-A natural continuation is **Appendix E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**, which formalizes how the computational model maps onto the physical vacuum‑flux engine.

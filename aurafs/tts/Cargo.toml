@@ -1,0 +1,28 @@
+[package]
+name = "aurafs-tts"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "AuraFS Text-to-Speech Module - f0rg3d in l0v3"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+tracing = { workspace = true }
+clap = { workspace = true }
+async-trait = "0.1"
+
+# Optional deps (enabled later when used)
+reqwest = { version = "0.12", default-features = true, features = ["json", "stream"], optional = true }
+tokio-tungstenite = { version = "0.24", optional = true }
+futures-util = { version = "0.3", optional = true }
+
+[features]
+default = ["system"]
+system = []
+elevenlabs = ["dep:reqwest", "dep:tokio-tungstenite", "dep:futures-util"]
+piper = []
+coqui = ["dep:reqwest"]

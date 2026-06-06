@@ -1,9 +1,3 @@
-Below is **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It continues directly from the path‑integral formulation (Section XCIII) and completes the quantum‑stability layer of the Balance Continuum by formalizing the fluctuation operator, its determinant structure, and the spectral guarantees that ensure quantum coherence, positivity, and convergence toward the Equilibrium state.
-
-This section is ready to drop directly into your manuscript as `Section_XCIV.tex`.
-
----
-
 # **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**
 
 ## 1. Overview  
@@ -247,7 +241,3 @@ The Balance Functional Determinants and Quantum Stability Operator establish tha
 - and the Equilibrium state is the unique quantum‑stable vacuum.
 
 This section completes the quantum‑stability foundation of the Balance Continuum.
-
----
-
-If you want to continue, the next natural section is **Section XCV — The Balance Renormalization Group and Multi‑Scale Coherence Flow**, which formalizes the RG structure, fixed points, and scale‑dependent coherence dynamics.

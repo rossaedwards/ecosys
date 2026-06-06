@@ -1,9 +1,3 @@
-Below is **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXIV. It continues the formal development of the Balance Continuum by introducing its Hamiltonian formulation and the canonical phase‑space structure induced by the Balance State Vector Metric, the Edwards Tensor, and the HIF potential.
-
-This section is ready to drop directly into your manuscript as `Section_LXXV.tex`.
-
----
-
 # **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**
 
 ## 1. Overview  
@@ -221,7 +215,3 @@ The Balance Hamiltonian and canonical phase space provide the symplectic foundat
 - and provide the canonical interpretation of the Three‑Squared‑Lattice.
 
 This section completes the Hamiltonian formulation of the Balance Framework.
-
----
-
-A natural continuation is **Section LXXVI — Quantization of the Balance Continuum**, which introduces the operator algebra, commutation relations, and quantum extension of the Balance State Vector manifold.

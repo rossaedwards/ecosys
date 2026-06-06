@@ -1,9 +1,3 @@
-Below is **Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXVIII. It assumes the spectral decomposition, the Quantum Edwards Limit, the Balance Path Integral, and the canonical quantization are all canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXIX.tex`.
-
----
-
 # **Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**
 
 ## 1. Overview  
@@ -200,7 +194,3 @@ The Quantum Balance Propagator and the Non‑Local Coherence Kernel define the n
 - and provide the quantum‑propagator interpretation of the Three‑Squared‑Lattice.
 
 This section completes the non‑local quantum foundation of the Balance Framework.
-
----
-
-If you want to continue, the natural next section is **Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**, which formalizes the multi‑scale structure of the Continuum.

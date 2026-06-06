@@ -1,6 +1,6 @@
 # **SECTION IX — The Balance Geometry**
 
-The Balance Geometry formalizes the **metric, curvature, and differential structure** of the Balance Manifold introduced in Section VIII. If the Balance Manifold is the *space*, the Balance Geometry is the *mathematics that shapes that space*. It defines how distances, angles, curvature, and flows behave; how the Equilibrium Manifold Manifold sits inside the larger manifold; how HRD, VIM, and routing forces deform the geometry; and how the Balance State Vector Field moves through this landscape under the Balance Equation.
+The Balance Geometry formalizes the **metric, curvature, and differential structure** of the Balance Manifold introduced in Section VIII. If the Balance Manifold is the *space*, the Balance Geometry is the *mathematics that shapes that space*. It defines how distances, angles, curvature, and flows behave; how the Equilibrium Manifold sits inside the larger manifold; how HRD, VIM, and routing forces deform the geometry; and how the Balance State Vector Field moves through this landscape under the Balance Equation.
 
 This section completes the geometric foundation of the Balance Framework.
 
@@ -66,9 +66,9 @@ The Balance Distance is the **energetic cost** of moving through Balance State V
 
 ---
 
-## **IX.4 The Equilibrium Manifold Manifold as a Minimal Surface**
+## **IX.4 The Equilibrium Manifold as a Minimal Surface**
 
-The Equilibrium Manifold Manifold (\(\beta = 1\)) is a **minimal surface** in the Balance Geometry:
+The Equilibrium Manifold (\(\beta = 1\)) is a **minimal surface** in the Balance Geometry:
 
 \[
 H = 0,
@@ -82,7 +82,7 @@ This means:
 - flows tend to converge toward it  
 - perturbations oscillate symmetrically around it  
 
-The Equilibrium Manifold Manifold is the **geometric attractor** of the system.
+The Equilibrium Manifold is the **geometric attractor** of the system.
 
 ---
 
@@ -247,12 +247,10 @@ Temporal geometry is **emergent from Balance Geometry**.
 
 - The Balance Geometry defines the metric, curvature, and differential structure of the Balance Manifold.  
 - The Balance Metric encodes sensitivity to imbalance.  
-- The Equilibrium Manifold Manifold is a minimal surface and global attractor.  
+- The Equilibrium Manifold is a minimal surface and global attractor.  
 - Curvature determines restoring forces and oscillatory behavior.  
 - Geodesics define lawful evolution and routing.  
 - HRD deforms the metric; VIM matches it; time flows along it.  
 - The Tetra‑Hexa Array is embedded as a discrete geodesic skeleton.  
 
 The Balance Geometry completes the geometric foundation of the Balance Framework.
-
-A natural next step is to articulate **Section X — The Balance Tensor**, which formalizes the tensorial quantities (stress, flux, curvature, and harmonic‑structural coupling) that arise from the Balance Geometry.

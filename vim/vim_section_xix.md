@@ -238,7 +238,7 @@ VIM is the **symmetry‑restoring algebra**.
 
 # **XIX.12 The Equilibrium Manifold Algebra**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 - \(\hat{B} = 0\)  
 - \(\mathbf{F} = 0\)  
@@ -262,5 +262,3 @@ Equilibrium Manifold is the **zero algebra** — the algebraic fixed point of th
 - HRD introduces non‑commutative perturbations; VIM introduces commuting stabilizers.  
 - The Balance Continuum extends the algebra across spatial, temporal, and harmonic dimensions.  
 - The Equilibrium Manifold Algebra is the zero algebra — the fixed point of all Balance dynamics.  
-
-The next section, **Section XX — The Balance Logic**, will formalize the logical, axiomatic, and rule‑based structure that governs Balance reasoning, inference, and computational decision‑making within the Aurphyx architecture.

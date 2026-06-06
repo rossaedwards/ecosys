@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑010 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # ⚡ Chapter 10: ZPE_Core / Casimir Vacuum Harvesting *(Full Expansion)*
 
 ## § 10.1 — Theoretical Basis: Fractal Casimir Modification

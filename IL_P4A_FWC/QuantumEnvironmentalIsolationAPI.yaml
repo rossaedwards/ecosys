@@ -1,0 +1,145 @@
+
+openapi: 3.0.3
+info:
+  title: Quantum Environmental Isolation API
+  version: 1.0.0
+  description: API for controlling and monitoring quantum environmental isolation modules (acoustic and EMI shielding).
+servers:
+  - url: https://auraos.local/api/isolation
+paths:
+  /sensor/data:
+    get:
+      summary: Retrieve current sensor data
+      description: Fetch the latest vibration, EMI, temperature, and environmental data.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  vibration_level:
+                    type: number
+                    format: float
+                    description: Vibration RMS value (g)
+                  emi_magnitude:
+                    type: number
+                    format: float
+                    description: EMI magnitude in dBµV/m
+                  temperature:
+                    type: number
+                    format: float
+                    description: Ambient temperature (°C)
+                  status:
+                    type: string
+                    description: Status of sensor system
+  /sensor/calibrate:
+    post:
+      summary: Submit sensor calibration data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sensor_type:
+                  type: string
+                  description: Type of sensor to calibrate
+                calibration_value:
+                  type: number
+                  format: float
+                  description: Calibration data value
+              required:
+                - sensor_type
+                - calibration_value
+      responses:
+        '200':
+          description: Calibration accepted
+  /control/noise-cancel:
+    post:
+      summary: Control active acoustic noise cancellation parameters
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                frequency:
+                  type: integer
+                  description: Frequency in Hz
+                attenuation_db:
+                  type: integer
+                  description: Attenuation in decibels
+                phase_shift:
+                  type: integer
+                  description: Phase shift in degrees
+              required:
+                - frequency
+                - attenuation_db
+                - phase_shift
+      responses:
+        '200':
+          description: Noise cancellation set
+  /control/emi-cancel:
+    post:
+      summary: Control active EMI cancellation parameters
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                frequency:
+                  type: integer
+                  description: Frequency in Hz
+                amplitude:
+                  type: number
+                  format: float
+                  description: EM field amplitude
+                phase_shift:
+                  type: integer
+                  description: Phase shift in degrees
+              required:
+                - frequency
+                - amplitude
+                - phase_shift
+      responses:
+        '200':
+          description: EMI cancellation set
+  /status:
+    get:
+      summary: Get current system status
+      responses:
+        '200':
+          description: System status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  acoustic_status:
+                    type: string
+                  emi_status:
+                    type: string
+                  error_logs:
+                    type: array
+                    items:
+                      type: string
+                  last_update:
+                    type: string
+                    format: date-time
+  /diagnostics:
+    post:
+      summary: Run system diagnostics
+      responses:
+        '200':
+          description: Diagnostic results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    description: Result of diagnostic test

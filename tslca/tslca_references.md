@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-REFERENCES-001 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## References
 
 The references section is structured to match the conventions of formal scientific papers, particularly those submitted to arXiv in physics, mathematics, and computer science. Because the Three‑Squared‑Lattice Cognitive Architecture synthesizes concepts from differential geometry, tensor field theory, gauge theory, topological computation, distributed systems, and semantic formalisms, the references are grouped by domain. Each group contains the canonical foundational works that underpin the mathematical and theoretical structures used throughout the whitepaper.

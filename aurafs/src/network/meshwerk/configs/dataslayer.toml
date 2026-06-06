@@ -1,0 +1,54 @@
+# ═══════════════════════════════════════════════════════════════════
+# AURAFS Meshwerk TIER 2 - DataSlayer
+# Aurphyx LLC | RPi HaLow Beast | Home nodes, AroraHubs
+# BOM: RPi5 8GB + Alfa AWUS036ACH HaLow + 50W Solar + 256GB NVMe
+# Deploy: ./meshwerk/dataslayer.sh → Grafana live
+# ═══════════════════════════════════════════════════════════════════
+
+[mesh]
+mode = "data-slayer"
+halow_channels = ["1", "2", "3"]
+reticulum_announce = true
+max_peers = 50
+shard_size = "64MB"
+lora_freq = 915e6
+reticulum_peers = ["auto"]
+
+[storage]
+nvme_root = "/mnt/shards"
+replicas = 3
+cache_size_mb = 512
+erasure_k = 10
+erasure_m = 4
+
+[network]
+listen_addr = "0.0.0.0:9090"
+grpc_port = 50051
+mesh_gossip_interval_secs = 30
+discovery_bootstrap = []
+
+[crypto]
+pqc_kyber = true
+pqc_dilithium = true
+soul_sync_enabled = true
+
+[power]
+battery_monitor = false
+solar_ups_enabled = true
+sleep_cycle = "0"
+
+[monitoring]
+prometheus_port = 9090
+metrics_prefix = "aurafs_mesh_"
+grafana_dashboard_url = "http://mesh-grafana:3000"
+
+[prometheus]
+port = 9090
+scrape_interval_secs = 15
+
+[sages]
+guardians = ["basic"]
+threat_prediction = true
+
+[zpe]
+quartz_oscillator = false

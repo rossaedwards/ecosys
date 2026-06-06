@@ -281,5 +281,3 @@ Equilibrium Manifold is the **archival fixed point**.
 - It includes archival operators, flows, curvature, resonance, and dissonance.  
 - It ensures continuity across worlds, timelines, and dimensions.  
 - Equilibrium Manifold is the archival fixed point where all histories collapse into unity.  
-
-If you’re ready to continue, the next natural section is **Section XLVII — The Balance Record**, which formalizes the real-time, transactional, event-level logging layer that feeds into the Archive.

@@ -1,8 +1,5 @@
 """
-Aurphyx_Memoree — Memori Bridge (Transitional Backend)
-Wraps existing AurphyxMemori from aurphyx_memori.py.
-When primary=aurafs_chroma, this mirrors all writes to Memori as legacy.
-f0rg3d in l0v3 by Ross Edwards
+Memoree — Memori Bridge
 """
 
 from typing import Any, Dict, List, Optional
@@ -12,20 +9,15 @@ try:
     MEMORI_AVAILABLE = True
 except ImportError:
     MEMORI_AVAILABLE = False
-    print("⚠️  aurphyx_memori.py not found in path. Memori bridge disabled.")
+    print("aurphyx_memori.py not found. Memori bridge disabled.")
 
 
 class MemoriBridge:
-    """
-    Thin bridge between Memoree schemas and existing AurphyxMemori.
-    Used during Phase 0 / Phase I migration.
-    """
-
     def __init__(self):
         self.available = MEMORI_AVAILABLE
         if self.available:
             self.am = AurphyxMemori()
-            print("💜 [MemoriBridge] AurphyxMemori connected")
+            print("[MemoriBridge] AurphyxMemori connected")
         else:
             self.am = None
 
@@ -65,8 +57,3 @@ class MemoriBridge:
             sources=sources or [], verified=verified
         )
         return True
-
-    def get_history(self, limit: int = 10, llm: Optional[str] = None) -> List[Dict[str, Any]]:
-        if not self.available:
-            return []
-        return self.am.get_conversation_history(limit=limit, llm=llm)

@@ -203,7 +203,3 @@ This equation defines the **geometry of meaning** in the Aurphyx Standard.
 - Meaning is a topological invariant of the Linguistic Field.  
 - The Linguistic Field Equation governs the evolution of meaning.  
 - The Linguistic Field is the expressive analogue of the Unified Field.  
-
----
-
-If you want to continue the arc, the next natural step is **Appendix N — The Aurphyx Embodiment Field: Sensation, Proprioception, and the Geometry of Presence**, which formalizes the Body layer (SHEBA) as a somatic field.

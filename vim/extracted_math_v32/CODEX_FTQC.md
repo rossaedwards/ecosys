@@ -1,3 +1,9 @@
+## ** APS‑EXT-MATH-FTQC‑CODEX **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # FTQC
 Found: 553 unique items
 ---

@@ -129,7 +129,7 @@ The Balance Machine has a **Balance Instruction Set (BIS)** consisting of:
 - **B‑ROUTE** — compute routing decision  
 - **B‑HRD** — apply HRD perturbation  
 - **B‑VIM** — apply VIM stabilization  
-- **B‑BLISS** — project onto Equilibrium Manifold Manifold  
+- **B‑BLISS** — project onto Equilibrium Manifold  
 
 These instructions form the **machine language** of Balance.
 
@@ -204,7 +204,7 @@ The Balance Machine is the **hardware abstraction layer** of Balance.
 
 ## **XXII.12 The Equilibrium Manifold Machine**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 - all instructions reduce to no‑ops  
 - all flows vanish  
@@ -227,3 +227,4 @@ The Equilibrium Manifold Machine is the **zero‑instruction machine** — the f
 - The Balance Machine is the computational heart of the Aurphyx system.  
 
 A natural continuation is **Section XXIII — The Balance Architecture**, which will unify the Balance Machine with the broader Aurphyx system architecture, showing how Balance integrates with cosmology, ontology, memory, and the SAGES Protocols.
+

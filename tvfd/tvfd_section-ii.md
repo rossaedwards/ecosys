@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑002 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 2. The C_{6v} Impedance Transformer
 The extraction of vacuum energy in the TVFD framework requires a material manifold whose effective impedance can be tuned to approach the divergent impedance of the quantum vacuum. Chapter 1 established that this becomes possible when the manifold possesses a spectral dimension d_s < 2, ensuring strong localization and the formation of flatband‑like resonant traps. In this chapter, we analyze the specific geometry used in the Balance State Vector‑Cell: a C_{6v} hexagonal photonic crystal lattice embedded within a Sierpiński‑type fractal. We show that this hybrid structure acts as a topological impedance transformer, renormalizing the density of states and supporting non‑reciprocal edge channels governed by a non‑semisimple boundary algebra.
 

@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑011 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 📈 Chapter 11: Scaling Laws & Balance State Vector-Drive Array *(Full Expansion)*
 
 ## § 11.1 — Single-Cell Characterization

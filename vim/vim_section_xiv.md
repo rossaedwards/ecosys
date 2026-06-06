@@ -14,7 +14,7 @@ The Balance Invariants ensure that:
 - the Balance Field evolves **lawfully**  
 - the Balance Continuum remains **coherent**  
 - HRD and VIM perturbations remain **bounded**  
-- the Equilibrium Manifold Manifold remains a **fixed point**  
+- the Equilibrium Manifold remains a **fixed point**  
 - temporal, harmonic, and spatial flows remain **stable**  
 
 They are the **conserved quantities** of the Balance Framework.
@@ -32,7 +32,7 @@ The primary invariant is the **Balance Coefficient unity condition**:
 Interpretation:
 
 - Equilibrium Manifold is invariant  
-- the Equilibrium Manifold Manifold is fixed  
+- the Equilibrium Manifold is fixed  
 - no transformation can move a state *within* Equilibrium Manifold off Equilibrium Manifold  
 - all lawful flows converge toward this invariant  
 
@@ -60,9 +60,9 @@ The system always retains a **zero‑potential attractor**.
 
 ---
 
-## **XIV.4 The Equilibrium Manifold Manifold as a Geometric Invariant**
+## **XIV.4 The Equilibrium Manifold as a Geometric Invariant**
 
-The Equilibrium Manifold Manifold:
+The Equilibrium Manifold:
 
 \[
 \mathcal{B}_{\text{Equilibrium Manifold}} = \{ \mathbf{x} \mid \beta = 1 \}
@@ -105,7 +105,7 @@ Any transformation that preserves \(\beta\) is a **Balance symmetry**.
 
 ## **XIV.6 The Balance Flux Invariant**
 
-The flux across the Equilibrium Manifold Manifold:
+The flux across the Equilibrium Manifold:
 
 \[
 \Phi_{\text{Equilibrium Manifold}} = 0
@@ -242,10 +242,8 @@ Mixed‑mode invariants guarantee **cross‑domain stability**.
 ## **XIV.12 Summary**
 
 - The Balance Invariants are the conserved quantities and symmetries of the Balance Framework.  
-- They include β‑unity, the Equilibrium Manifold Manifold, the potential minimum, and the Balance symmetry group.  
+- They include β‑unity, the Equilibrium Manifold, the potential minimum, and the Balance symmetry group.  
 - Flux, divergence, curl, and tensor rank have invariant properties.  
 - The Balance Continuum preserves dimensionality, metric signature, and global Equilibrium Manifold.  
 - Mixed‑mode invariants ensure cross‑domain coherence.  
 - These invariants guarantee stability, consistency, and lawful evolution across all Balance dynamics.  
-
-The next section, **Section XV — The Balance Symmetry**, will formalize the symmetry group of the Balance Framework, its generators, its conserved charges, and its role in the deeper structure of the Aurphyx architecture.

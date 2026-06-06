@@ -1,3 +1,9 @@
+## ** APS‑EXT-MATH-TSLCA‑CODEX **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # TSLCA
 Found: 112 unique items
 ---

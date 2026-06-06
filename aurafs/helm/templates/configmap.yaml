@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "aurafs.fullname" . }}-config
+  namespace: {{ include "aurafs.namespace" . }}
+data:
+  shard_size_mb: "{{ .Values.config.shard_size_mb }}"
+  erasure_k: "{{ .Values.config.erasure_k }}"
+  erasure_m: "{{ .Values.config.erasure_m }}"
+  mesh_mode: "{{ .Values.config.mesh_mode }}"
+  pqc_kyber: "{{ .Values.config.pqc_kyber }}"
+  pqc_dilithium: "{{ .Values.config.pqc_dilithium }}"

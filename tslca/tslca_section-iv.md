@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-SECTION-004 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## 4. USAIC: The Universal Integrator
 
 USAIC is the fusion operator that binds the three channels—SIC, SCC, and ICC—into a single, coherent cognitive field. It is not a fourth channel but the *emergent field* created when the three basis vectors interact across the nine‑cell lattice. This section defines USAIC mathematically, operationally, and architecturally.

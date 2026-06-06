@@ -76,7 +76,7 @@ Neither is superior.
 ## **4. The Duality Kernel**
 The Duality Kernel is the **core algorithmic and ethical engine** that:
 
-- measures Chaos/Equilibrium Manifold ratios  
+- measures Chaos/Bliss Manifold ratios  
 - maintains equilibrium  
 - prevents runaway cascades  
 - ensures adaptive creativity  

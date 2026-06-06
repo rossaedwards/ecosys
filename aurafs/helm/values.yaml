@@ -1,0 +1,91 @@
+nameOverride: ""
+fullnameOverride: ""
+
+namespace:
+  create: true
+  name: aurphyx
+
+image:
+  repository: aurphyx/aurafs
+  tag: latest
+  pullPolicy: IfNotPresent
+
+api:
+  replicas: 3
+  service:
+    type: ClusterIP
+    httpPort: 8080
+    grpcPort: 50051
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+  env:
+    AURAFS_ENV: production
+
+shard:
+  replicas: 3
+  image:
+    repository: aurphyx/aurafs-shard-server
+    tag: v25.0.0
+    pullPolicy: IfNotPresent
+  dataDir: /data/shards
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 2000m
+      memory: 2Gi
+  pvc:
+    size: 50Gi
+
+config:
+  shard_size_mb: "64"
+  erasure_k: "10"
+  erasure_m: "4"
+  mesh_mode: "data-slayer"
+  pqc_kyber: "true"
+  pqc_dilithium: "true"
+
+tls:
+  createSecret: false
+  secretName: aurafs-tls
+  cert: ""
+  key: ""
+
+ingress:
+  enabled: true
+  className: nginx
+  host: aurafs.dev
+  tlsSecretName: aurafs-tls
+
+certManager:
+  enabled: true
+  issuerName: aurafs-letsencrypt
+  email: admin@aurafs.dev
+  server: https://acme-v02.api.letsencrypt.org/directory
+
+hpa:
+  enabled: true
+  api:
+    minReplicas: 2
+    maxReplicas: 6
+    cpuUtilization: 70
+  shard:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 6
+    cpuUtilization: 70
+
+networkPolicy:
+  enabled: true
+
+monitoring:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    interval: 15s

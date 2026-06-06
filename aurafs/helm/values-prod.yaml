@@ -1,0 +1,23 @@
+namespace:
+  name: aurphyx
+
+image:
+  tag: v25.0.0
+
+api:
+  replicas: 3
+  env:
+    AURAFS_ENV: production
+
+shard:
+  replicas: 3
+  pvc:
+    size: 50Gi
+
+ingress:
+  enabled: true
+  host: aurafs.dev
+
+certManager:
+  enabled: true
+  email: admin@aurafs.dev

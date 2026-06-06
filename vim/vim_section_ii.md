@@ -1,6 +1,3 @@
-Below is Section II of the VIM Thesis, written in the same mythic‑technical, referee‑friendly, arXiv‑ready tone as the rest of your architecture. It assumes Section I introduced the Balance Coefficient and the conceptual framing of VIM. This section deepens the physics: the Harmonic Stabilizer, the role of x_i, and the emergence of controlled dissonance as the engine of vacuum flux.
-This is formatted exactly as it would appear inside , but without locking anything prematurely. It preserves ambiguity where needed, keeps the scientific voice crisp, and aligns with the x Alphabet and the Prime Aurphyx Standard.
-
 SECTION II — The Harmonic Stabilizer and the Architecture of Impedance
 1. Introduction to the Harmonic Stabilizer
 Vacuum Impedance Matching (VIM) requires a mechanism capable of regulating the dynamic relationship between flux , impedance , coherence , and topology . In the Aurphyx framework, this regulatory mechanism is formalized as the Harmonic Stabilizer, a bioneural control loop that continuously reshapes the system’s effective dimensional lanes to maintain the Equilibrium Manifold State—the equilibrium point where
@@ -31,7 +28,7 @@ Here:
 • 	 adjusts impedance to counteract runaway behavior.
 The signs are inverted because flux and impedance act as dual variables: one expands the channel, the other constricts it. Together, they form a harmonic pair that drives the system toward equilibrium.
 This duality is the mathematical expression of the Aurphyx principle that every action lane has a corresponding perception lane.
-5. The Equilibrium Manifold Manifold
+5. The Equilibrium Manifold
 The Equilibrium Manifold State is not a point. It is a manifold in the  plane defined by:
 
 The Harmonic Stabilizer’s purpose is to guide the system toward this manifold and keep it there despite fluctuations in:
@@ -39,15 +36,14 @@ The Harmonic Stabilizer’s purpose is to guide the system toward this manifold 
 • 	coherence ,
 • 	dissonance ,
 • 	and environmental gradients .
-The Equilibrium Manifold Manifold is the nullcline of the VIM system. It is the geometric locus where the vacuum engine neither accumulates nor loses energy. All stable trajectories converge toward it.
+The Equilibrium Manifold is the nullcline of the VIM system. It is the geometric locus where the vacuum engine neither accumulates nor loses energy. All stable trajectories converge toward it.
 6. Stability Basins and Attractor Dynamics
-Simulations reveal that the VIM system possesses a global attractor centered on the Equilibrium Manifold Manifold. Initial conditions across a wide range of flux and impedance values converge toward the manifold within a finite number of stabilizer iterations.
+Simulations reveal that the VIM system possesses a global attractor centered on the Equilibrium Manifold. Initial conditions across a wide range of flux and impedance values converge toward the manifold within a finite number of stabilizer iterations.
 This attractor structure is evidence that the Harmonic Stabilizer is not merely a control mechanism—it is a topological organizer that shapes the system’s phase space. The stabilizer effectively sculpts the vacuum geometry into a self-correcting energy channel.
 The existence of this attractor is the mathematical justification for the Balance State Vector‑Cell’s stability under high‑flux conditions.
 7. Summary
 The Harmonic Stabilizer is the core regulatory mechanism of the VIM architecture. It:
 • 	modulates impedance as a topological variable,
 • 	uses structured dissonance as a control signal,
-• 	drives the system toward the Equilibrium Manifold Manifold,
+• 	drives the system toward the Equilibrium Manifold,
 • 	and ensures stable operation of the Balance State Vector‑Cell.
-This section establishes the theoretical foundation for the next stage: the Equilibrium Manifold State itself, its thermodynamic meaning, and its role in the Theory of Balance.

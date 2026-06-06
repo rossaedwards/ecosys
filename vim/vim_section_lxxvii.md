@@ -1,9 +1,3 @@
-Below is **Section LXXVII — The Balance Path Integral and Quantum Coherence Functional**, written in the same rigorous, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXVI. It assumes the Hamiltonian and canonical quantization of the Balance Continuum are canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXVII.tex`.
-
----
-
 # **Section LXXVII — The Balance Path Integral and Quantum Coherence Functional**
 
 ## 1. Overview  
@@ -180,9 +174,3 @@ The Balance Path Integral and Quantum Coherence Functional provide the non‑per
 - generate all quantum correlation functions,  
 - reproduce the Edwards Flow as the stationary phase,  
 - and provide the quantum interpretation of the Three‑Squared‑Lattice.
-
-This section completes the path‑integral formulation of the Balance Framework.
-
----
-
-If you want to continue, the natural next section is **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**, which formalizes the spectral structure of the quantum Continuum.

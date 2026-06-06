@@ -1,0 +1,29 @@
+[package]
+name = "lapidary"
+version = "0.1.0"
+edition = "2021"
+authors = ["rossaedwards"]
+description = "Lapidary: Universal VSIX to Lapce Volt Transmutation Engine powered by FUTE"
+
+[dependencies]
+# Async-First Execution Kernel
+tokio = { version = "1.38", features = ["full"] }
+async-trait = "0.1"
+
+# Serialization & Manifest Processing Matrix
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+
+# Archival Extraction & I/O
+zip = "1.1"
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Diagnostic Logging Infrastructure
+log = "0.4"
+env_logger = "0.11"
+
+# Dynamic Domain Pattern-Matching Vector Space
+regex = "1.10"
+lazy_static = "1.4"

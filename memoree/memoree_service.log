@@ -1,0 +1,283 @@
+2026-04-03 14:23:28,973 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 14:44:46,301 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 14:48:46,726 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 15:16:46,167 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 15:48:40,431 [INFO] memoree: Memoree shutting down...
+2026-04-03 17:09:06,191 [INFO] memoree: Memoree shutting down...
+2026-04-03 17:09:06,863 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 17:13:16,107 [INFO] memoree: Memoree shutting down...
+2026-04-03 17:13:16,808 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 17:28:48,833 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 17:58:34,107 [INFO] memoree: Memoree shutting down...
+2026-04-03 17:58:34,763 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 18:04:28,422 [INFO] memoree: Memoree shutting down...
+2026-04-03 18:06:27,369 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 18:16:03,409 [INFO] memoree: Memoree shutting down...
+2026-04-03 18:16:04,132 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 18:26:51,232 [INFO] memoree: Memoree shutting down...
+2026-04-03 18:26:51,846 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 18:44:52,971 [INFO] memoree: Memoree shutting down...
+2026-04-03 20:02:56,371 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-03 20:26:36,146 [INFO] memoree: Memoree shutting down...
+2026-04-04 18:12:21,099 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-04 19:38:56,230 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-04 19:40:28,067 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-04 20:49:28,128 [INFO] memoree: Memoree shutting down...
+2026-04-04 20:49:28,844 [INFO] memoree: Memoree starting on http://127.0.0.1:7042
+2026-04-04 21:38:38,044 [INFO] memoree: Memoree shutting down...
+2026-04-05 01:43:14,374 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-05 01:43:14,374 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-05 01:43:14,374 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-05 01:43:14,374 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-05 01:43:14,374 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-05 01:43:14,374 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-05 01:43:14,374 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-05 01:43:14,374 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-05 01:43:14,375 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-05 04:28:16,724 [WARNING] fastapi: email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2026-04-05 09:13:25,472 [WARNING] memoree.engine: [diagnostics] vector backend unreachable: 'VectorBackend' object has no attribute 'list_collections'
+2026-04-05 17:07:27,860 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-05 17:07:27,861 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-05 17:07:27,862 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-05 17:07:27,862 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-05 17:07:27,862 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-05 17:07:27,863 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-05 17:07:27,863 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-05 17:07:27,863 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-05 17:07:27,863 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-06 11:41:51,650 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-06 11:41:51,651 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-06 11:41:51,652 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-06 11:41:51,652 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-06 11:41:51,652 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-06 11:41:51,653 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-06 11:41:51,653 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-06 11:41:51,653 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-06 11:41:51,653 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-07 00:42:30,877 [INFO] memoree: Memoree shutting down — backends flushed.
+2026-04-07 00:42:31,710 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-07 00:42:31,710 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-07 00:42:31,710 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-07 00:42:31,710 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-07 00:42:31,711 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-07 00:42:31,711 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-07 00:42:31,711 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-07 00:42:31,711 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-07 00:42:31,711 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-07 01:53:43,115 [INFO] memoree: Memoree shutting down — backends flushed.
+2026-04-09 03:12:00,652 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-09 03:12:00,652 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-09 03:12:00,652 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-09 03:12:00,653 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-09 03:12:00,653 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-09 03:12:00,653 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-09 03:12:00,653 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-09 03:12:00,653 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-09 03:12:00,653 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-09 03:19:49,843 [WARNING] memoree.engine: [diagnostics] vector backend unreachable: 'VectorBackend' object has no attribute 'list_collections'
+2026-04-09 03:25:06,666 [WARNING] memoree.engine: [diagnostics] vector backend unreachable: 'VectorBackend' object has no attribute 'list_collections'
+2026-04-09 03:25:34,515 [ERROR] memoree.routes: [mcp] memoree_get_context failed: 5 validation errors for ContextResponse
+invariants.0
+  Input should be a valid string [type=string_type, input_value={'fact': 'Ross Edwards OR...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.1
+  Input should be a valid string [type=string_type, input_value={'fact': 'Aurphyx LLC EIN...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.2
+  Input should be a valid string [type=string_type, input_value={'fact': 'The Invariant (...e': 'theory_of_balance'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.3
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance coeffic..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.4
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance Potenti..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-04-09 03:26:02,113 [ERROR] memoree.routes: [mcp] memoree_get_context failed: 5 validation errors for ContextResponse
+invariants.0
+  Input should be a valid string [type=string_type, input_value={'fact': 'Ross Edwards OR...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.1
+  Input should be a valid string [type=string_type, input_value={'fact': 'Aurphyx LLC EIN...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.2
+  Input should be a valid string [type=string_type, input_value={'fact': 'The Invariant (...e': 'theory_of_balance'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.3
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance coeffic..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.4
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance Potenti..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-04-09 03:26:27,220 [ERROR] memoree.routes: [mcp] memoree_get_context failed: 5 validation errors for ContextResponse
+invariants.0
+  Input should be a valid string [type=string_type, input_value={'fact': 'Ross Edwards OR...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.1
+  Input should be a valid string [type=string_type, input_value={'fact': 'Aurphyx LLC EIN...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.2
+  Input should be a valid string [type=string_type, input_value={'fact': 'The Invariant (...e': 'theory_of_balance'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.3
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance coeffic..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.4
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance Potenti..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-04-09 03:55:51,168 [INFO] memoree: Memoree shutting down — backends flushed.
+2026-04-09 20:31:42,799 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-09 20:31:42,800 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-09 20:31:42,800 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-09 20:31:42,800 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-09 20:31:42,800 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-09 20:31:42,800 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-09 20:31:42,800 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-09 20:31:42,800 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-09 20:31:42,800 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-10 04:40:56,816 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-10 04:40:56,817 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-10 04:40:56,817 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-10 04:40:56,817 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-10 04:40:56,817 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-10 04:40:56,818 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-10 04:40:56,818 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-10 04:40:56,818 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-10 04:40:56,818 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-11 11:47:41,421 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-11 11:47:41,423 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-11 11:47:41,424 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-11 11:47:41,425 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-11 11:47:41,425 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-11 11:47:41,426 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-11 11:47:41,426 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-11 11:47:41,427 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-11 11:47:41,427 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-11 12:45:59,557 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-11 12:45:59,558 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-11 12:45:59,559 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-11 12:45:59,559 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-11 12:45:59,559 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-11 12:45:59,559 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-11 12:45:59,559 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-11 12:45:59,560 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-11 12:45:59,560 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-11 18:56:43,800 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-11 18:56:43,801 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-11 18:56:43,801 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-11 18:56:43,803 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-11 18:56:43,804 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-11 18:56:43,808 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-11 18:56:43,809 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-11 18:56:43,809 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-11 18:56:43,810 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-13 12:33:34,641 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-13 12:33:34,643 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-13 12:33:34,643 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-13 12:33:34,643 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-13 12:33:34,644 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-13 12:33:34,644 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-13 12:33:34,644 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-13 12:33:34,644 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-13 12:33:34,645 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-13 17:42:14,035 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-13 17:42:14,036 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-13 17:42:14,036 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-13 17:42:14,036 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-13 17:42:14,037 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-13 17:42:14,037 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-13 17:42:14,037 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-13 17:42:14,037 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-13 17:42:14,037 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-14 11:54:40,203 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-14 11:54:40,204 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-14 11:54:40,204 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-14 11:54:40,205 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-14 11:54:40,205 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-14 11:54:40,205 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-14 11:54:40,206 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-14 11:54:40,206 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-14 11:54:40,206 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-15 04:37:49,165 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-15 04:37:49,166 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-15 04:37:49,166 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-15 04:37:49,167 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-15 04:37:49,167 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-15 04:37:49,167 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-15 04:37:49,167 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-15 04:37:49,167 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-15 04:37:49,168 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-15 12:24:57,707 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-15 12:24:57,707 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-15 12:24:57,708 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-15 12:24:57,708 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-15 12:24:57,708 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-15 12:24:57,708 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-15 12:24:57,708 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-15 12:24:57,708 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-15 12:24:57,708 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-15 15:42:22,009 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-15 15:42:22,018 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-15 15:42:22,019 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-15 15:42:22,020 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-15 15:42:22,020 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-15 15:42:22,024 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-15 15:42:22,025 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-15 15:42:22,026 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-15 15:42:22,027 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-16 01:11:11,012 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-16 01:11:11,013 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-16 01:11:11,014 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-16 01:11:11,014 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-16 01:11:11,014 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-16 01:11:11,014 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-16 01:11:11,014 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-16 01:11:11,015 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-16 01:11:11,015 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-16 01:41:21,370 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-16 01:41:21,371 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-16 01:41:21,374 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-16 01:41:21,375 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-16 01:41:21,375 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-16 01:41:21,377 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-16 01:41:21,377 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-16 01:41:21,381 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-16 01:41:21,383 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-16 23:07:52,470 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-16 23:07:52,471 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-16 23:07:52,471 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-16 23:07:52,472 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-16 23:07:52,472 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-16 23:07:52,472 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-16 23:07:52,472 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-16 23:07:52,473 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-16 23:07:52,473 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-18 20:38:02,693 [WARNING] memoree.engine: [diagnostics] vector backend unreachable: 'VectorBackend' object has no attribute 'list_collections'
+2026-04-18 20:38:46,774 [ERROR] memoree.routes: [mcp] memoree_get_context failed: 5 validation errors for ContextResponse
+invariants.0
+  Input should be a valid string [type=string_type, input_value={'fact': 'Ross Edwards OR...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.1
+  Input should be a valid string [type=string_type, input_value={'fact': 'Aurphyx LLC EIN...ce': 'personal_context'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.2
+  Input should be a valid string [type=string_type, input_value={'fact': 'The Invariant (...e': 'theory_of_balance'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.3
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance coeffic..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+invariants.4
+  Input should be a valid string [type=string_type, input_value={'fact': 'Balance Potenti..._EXTRACTION_SUPPLEMENT'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2026-04-18 20:39:16,880 [INFO] memoree: Memoree shutting down — backends flushed.
+2026-04-18 20:39:19,600 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-18 20:39:19,601 [INFO] memoree:   Memoree Daemon — Sovereign Memory Substrate
+2026-04-18 20:39:19,601 [INFO] memoree:   Owner   : Ross Edwards / Aurphyx LLC
+2026-04-18 20:39:19,601 [INFO] memoree:   Binding : http://127.0.0.1:7042
+2026-04-18 20:39:19,602 [INFO] memoree:   Health  : http://127.0.0.1:7042/health
+2026-04-18 20:39:19,602 [INFO] memoree:   MCP     : http://127.0.0.1:7042/mcp
+2026-04-18 20:39:19,602 [INFO] memoree:   Stream  : http://127.0.0.1:7042/stream/context
+2026-04-18 20:39:19,602 [INFO] memoree:   Docs    : http://127.0.0.1:7042/docs
+2026-04-18 20:39:19,602 [INFO] memoree: ════════════════════════════════════════════════════════════
+2026-04-18 20:39:23,655 [WARNING] memoree.engine: [diagnostics] vector backend unreachable: 'VectorBackend' object has no attribute 'list_collections'
+2026-04-19 03:14:43,082 [INFO] memoree: Memoree shutting down — backends flushed.

@@ -35,3 +35,4 @@ Fuxyez is both a standalone language project and the ritual programming layer of
 - **Auditability**: FUTE’s Universal AST and transformation passes create reproducible, inspectable transmutation traces.  
 - **Extensibility**: Ritual modes let teams choose conservative (standard) or experimental (mystical) transformation strategies with predictable tradeoffs.  
 - **Deployment**: Artifacts produced by FUTE are deployable to AuraFS/Arora runtimes or exported to conventional targets, enabling gradual adoption.
+- 

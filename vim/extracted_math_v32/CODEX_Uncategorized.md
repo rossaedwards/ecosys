@@ -1,4 +1,10 @@
-# Uncategorized
+## ** APS‑EXT-MATH-TBU‑CODEX **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
+# THEORY_BALANCE_UNCATEGORIZED
 Found: 1861 unique items
 ---
 **display**   vim\appendix_a.md

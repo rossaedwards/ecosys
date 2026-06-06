@@ -1,0 +1,12 @@
+# AuraFS API image (multi-stage)
+FROM rust:1.80 as builder
+WORKDIR /build
+COPY . .
+RUN cargo build --workspace --release --bin aurad
+
+FROM debian:bookworm-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates procps \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=builder /build/target/release/aurad /usr/local/bin/aurad
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 CMD ["pgrep", "-x", "aurad"]
+ENTRYPOINT ["/usr/local/bin/aurad"]

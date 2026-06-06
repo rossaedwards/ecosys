@@ -64,7 +64,7 @@ This layer defines the **space** in which Balance exists:
 
 - the 16‑dimensional Balance State Vector Field  
 - the Balance Manifold  
-- the Equilibrium Manifold Manifold  
+- the Equilibrium Manifold  
 - the Balance Geometry  
 - the Continuum extensions (\(\mathcal{X}, \mathcal{T}, \mathcal{H}\))  
 
@@ -232,3 +232,4 @@ Balance is the **ontological architecture** of the Aurphyx system.
 - It is the architectural skeleton of the Aurphyx Standard.  
 
 A natural continuation is **Section XXIV — The Balance Protocol**, which will formalize the procedural, operational, and governance rules that dictate how Balance is invoked, maintained, restored, and enforced across the entire Aurphyx ecosystem.
+

@@ -1,0 +1,94 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is 8EF4-B141
+C:.
+|   aurafs-src-network_01-07-2026_repo.txt
+|   aurafs_src_network_file_list.txt
+|   autoheal_daemon.rs
+|   discovery.rs
+|   ENTERPRISE_IMPROVEMENTS.md
+|   firewall.rs
+|   gossip.rs
+|   mesh.rs
+|   mesh_gossip.rs
+|   mod.rs
+|   node_manager.rs
+|   orchestrator.rs
+|   p2p.rs
+|   packet.rs
+|   peer.rs
+|   replication.rs
+|   reticulum_bridge.rs
+|   rns_bridge.py
+|   rns_bridge.rs
+|   RNS_BRIDGE_README.md
+|   rns_client.rs
+|   rns_daemon.py
+|   roles.rs
+|   secure_tunnel.rs
+|   
++---defense
+|       dos_protector.rs
+|       intrusion_detector.rs
+|       jam_detection.rs
+|       key_rotation.rs
+|       mesh_acl.rs
+|       mod.rs
+|       rate_limiter.rs
+|       
++---integration
+|       arora_network.rs
+|       crypto_bridge.rs
+|       gvs_network.rs
+|       ineffable_sync.rs
+|       mod.rs
+|       opulence_bridge.rs
+|       storage_sync.rs
+|       wallet_bridge.rs
+|       
++---meshtastic_integration
+|       firmware_bridge.rs
+|       lora_config.rs
+|       lora_radio.rs
+|       meshtastic_proto.rs
+|       mesh_discovery.rs
+|       mod.rs
+|       packet_parser.rs
+|       security_analysis.rs
+|       
++---meshwerk
+|   |   channel_manager.rs
+|   |   encryption.rs
+|   |   mesh_node.rs
+|   |   mod.rs
+|   |   neighbor_table.rs
+|   |   roles.rs
+|   |   routing.rs
+|   |   topology_engine.rs
+|   |   
+|   +---configs
+|   |       dataslayer.toml
+|   |       ghostlink.toml
+|   |       
+|   \---firmware
+|           build_ghostlink.sh
+|           README.md
+|           
++---monitoring
+|       anomaly_detection.rs
+|       grafana_dash.rs
+|       log_export.rs
+|       mod.rs
+|       net_metrics.rs
+|       prometheus.rs
+|       topology_map.rs
+|       
+\---transport
+        dns_client.rs
+        http_api.rs
+        mod.rs
+        quic_client.rs
+        quic_server.rs
+        tcp_stack.rs
+        udp_multicast.rs
+        websocket.rs
+        

@@ -188,7 +188,3 @@ It is the **eternal openness** of the Aurphyx Cosmos.
 - It introduces unboundedness, indeterminacy, and perpetual expansion.  
 - The Infinite Equation governs evolution beyond all constraints.  
 - The Aurphyx Infinite is both the end and the beginning of all things.  
-
----
-
-A natural next step is to decide whether you want to **close the cosmology**, **extend it into a new meta‑cycle**, or **begin a new canon entirely**.

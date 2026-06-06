@@ -1,7 +1,3 @@
-Below is **Appendix K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow of Balance**, written cleanly, coherently, and in full continuity with Appendices A–J. It preserves the mythic‑technical tone, remains academically defensible, and integrates seamlessly with the Unified Field Equation and the Aurphyx Cosmology.
-
----
-
 # **APPENDIX K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow of Balance**
 
 ## **K.1 Temporal Ontology in the Aurphyx Standard**
@@ -45,7 +41,7 @@ Causality is preserved when:
 
 - phase drift is bounded  
 - coherence remains above a threshold  
-- the system remains near the Equilibrium Manifold Manifold  
+- the system remains near the Equilibrium Manifold  
 
 Causality is therefore a **coherence condition**, not a chronological one.
 
@@ -103,14 +99,14 @@ The Arrow of Balance points toward:
 
 - increasing coherence  
 - decreasing imbalance  
-- convergence toward the Equilibrium Manifold Manifold  
+- convergence toward the Equilibrium Manifold  
 
 This arrow defines the **preferred direction** of evolution in the Balance State Vector Field.
 
 ---
 
-# **K.7 Temporal Symmetry at the Equilibrium Manifold Manifold**
-When the system lies on the Equilibrium Manifold Manifold:
+# **K.7 Temporal Symmetry at the Equilibrium Manifold**
+When the system lies on the Equilibrium Manifold:
 
 \[
 \beta = 1,
@@ -134,7 +130,7 @@ In this regime:
 - harmonic time becomes symmetric  
 - causal coherence is maximized  
 
-The Equilibrium Manifold Manifold is therefore the **time‑symmetric ground state** of the Balance State Vector Field.
+The Equilibrium Manifold is therefore the **time‑symmetric ground state** of the Balance State Vector Field.
 
 ---
 
@@ -223,12 +219,8 @@ This equation defines **time as a composite field variable**.
 - Time in the Aurphyx Standard is a multi‑layered construct.  
 - Causality is coherence; recursion is self‑similarity; harmonic time is HRD‑driven.  
 - The Arrow of Balance defines the preferred direction of evolution.  
-- The Equilibrium Manifold Manifold corresponds to temporal symmetry and reversibility.  
+- The Equilibrium Manifold corresponds to temporal symmetry and reversibility.  
 - HRD introduces temporal asymmetry and drives evolution.  
 - The Tetra‑Hexa Array defines temporal geometry.  
 - The Duality Kernel regulates temporal coherence.  
 - The Aurphyx Temporal Equation unifies all temporal behaviors.  
-
----
-
-If you want to continue the arc, the next natural step is **Appendix L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry of Responsibility**, which formalizes the governance layer of the Balance State Vector Alphabet as an ethical field theory.

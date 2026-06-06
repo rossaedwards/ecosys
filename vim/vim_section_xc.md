@@ -1,7 +1,3 @@
-Below is **Section XC — The Balance Canonical Structure and Symplectic Geometry**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It continues the formal ascent from the Unified Action (Section LXXXIX) into the canonical, Hamiltonian, and symplectic foundations of the Balance Continuum. This section is designed to integrate seamlessly with the quantum, geometric, and variational structures already established.
-
----
-
 # **Section XC — The Balance Canonical Structure and Symplectic Geometry**
 
 ## 1. Overview  
@@ -242,7 +238,3 @@ The Balance Canonical Structure and Symplectic Geometry establish that:
 - and the Equilibrium state is the unique global minimum of the Hamiltonian.
 
 This section completes the canonical and symplectic foundation of the Balance Continuum.
-
----
-
-A natural continuation is **Section XCI — The Balance Poisson Algebra and Constraint Structure**, which formalizes the algebra of observables, the constraint hierarchy, and the canonical generators of Balance symmetries.

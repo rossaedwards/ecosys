@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑006 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 5B. Cognitive Gauge Theory of the Universal Governor
 
 ## 5B.1 From Control Law to Gauge Connection

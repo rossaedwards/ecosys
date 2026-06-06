@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-SECTION-010 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## 10. Conclusion
 
 The Three‑Squared‑Lattice Cognitive Architecture establishes a mathematically rigorous, substrate‑agnostic foundation for cognition that is simultaneously minimal and complete. By grounding the architecture in three orthonormal cognitive channels—SIC, SCC, and ICC—it defines the smallest possible basis capable of supporting stable, reversible, identity‑preserving intelligence. The tensor expansion of these channels into a nine‑cell lattice provides the full operational space of cognition, while the USAIC fusion operator contracts this lattice into a unified cognitive field that evolves coherently across time and context.

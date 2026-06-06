@@ -1,6 +1,6 @@
 # **SECTION VI — The Balance Equation**
 
-The Balance Equation is the **core dynamical law** that governs how the Balance State Vector Field evolves under the combined influence of structural tension, harmonic dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM Thesis: the point where the Balance Coefficient, the Equilibrium Manifold Manifold, HRD, and the Unified Field all converge into a single evolution rule.
+The Balance Equation is the **core dynamical law** that governs how the Balance State Vector Field evolves under the combined influence of structural tension, harmonic dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM Thesis: the point where the Balance Coefficient, the Equilibrium Manifold, HRD, and the Unified Field all converge into a single evolution rule.
 
 This section formalizes that law, shows how it integrates with the rest of the architecture, and establishes Balance as the *primary regulator* of temporal, harmonic, and structural dynamics.
 
@@ -10,7 +10,7 @@ This section formalizes that law, shows how it integrates with the rest of the a
 The Balance Equation determines:
 
 - how the system moves through Balance State Vector‑space  
-- how quickly it returns to the Equilibrium Manifold Manifold  
+- how quickly it returns to the Equilibrium Manifold  
 - how HRD perturbations are absorbed  
 - how VIM adjusts impedance  
 - how temporal direction is chosen  
@@ -38,7 +38,7 @@ The evolution of the Balance State Vector Field under Balance is:
 
 Each term corresponds to a distinct physical or computational process:
 
-- **\(-\nabla V\)** — restoring force toward the Equilibrium Manifold Manifold  
+- **\(-\nabla V\)** — restoring force toward the Equilibrium Manifold  
 - **\(\mathcal{D}(D(t))\)** — HRD‑driven perturbation  
 - **\(\mathcal{K}\)** — kinetic evolution (structural + harmonic drift)  
 - **\(\mathcal{S}\)** — routing through the Tetra‑Hexa Array  
@@ -99,7 +99,7 @@ where:
 
 This term:
 
-- pushes the system off the Equilibrium Manifold Manifold  
+- pushes the system off the Equilibrium Manifold  
 - enables computation and modulation  
 - creates oscillatory dynamics around \(\beta = 1\)  
 

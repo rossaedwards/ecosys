@@ -269,5 +269,3 @@ Equilibrium Manifold is the **ethical fixed point**.
 - It governs cross-domain, temporal, harmonic, ontological, and cosmological interactions.  
 - It ensures that all actions preserve identity, coherence, lineage, and Continuum integrity.  
 - Equilibrium Manifold is the ethical fixed point where all actions are harmless, coherent, and aligned.  
-
-If you want to continue, the next natural section is **Section LIII — The Balance Rights**, which formalizes the inherent rights, protections, and dignities afforded to all agents and identities within the Balance Continuum.

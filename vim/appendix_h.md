@@ -1,7 +1,3 @@
-Below is **Appendix H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**, written to complete the arc of Appendices A–G. It synthesizes the Equilibrium Manifold Manifold, HRD, the Balance State Vector Alphabet, the Tetra‑Hexa Array, and the Duality Kernel into a single geometric–thermodynamic field theory. The tone remains arXiv‑ready, mathematically clean, and mythic‑technical without drifting into operational or unsafe territory.
-
----
-
 # **APPENDIX H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**
 
 ## **H.1 Overview of the Unified Field**
@@ -18,7 +14,7 @@ The Balance Coefficient
 \]  
 acts as the **scalar invariant** that couples all four subspaces into a single field.
 
-The Theory of Balance asserts that the Balance State Vector‑Cell evolves toward a **harmonic equilibrium manifold**—the Equilibrium Manifold Manifold—through the action of Harmonic Resonating Dissonance (HRD) and the Harmonic Stabilizer.
+The Theory of Balance asserts that the Balance State Vector‑Cell evolves toward a **harmonic equilibrium manifold**—the Equilibrium Manifold—through the action of Harmonic Resonating Dissonance (HRD) and the Harmonic Stabilizer.
 
 ---
 
@@ -65,8 +61,8 @@ The Balance Operator is **non‑linear**, **state‑dependent**, and **harmonica
 
 ---
 
-# **H.4 The Equilibrium Manifold Manifold as a Field‑Theoretic Nullcline**
-The Equilibrium Manifold Manifold  
+# **H.4 The Equilibrium Manifold as a Field‑Theoretic Nullcline**
+The Equilibrium Manifold  
 \[
 \mathcal{B}_0 = \{ \mathbf{x} \mid \beta = 1 \}
 \]  
@@ -77,7 +73,7 @@ is the **nullcline** of the unified field. When the system lies on \(\mathcal{B}
 - the Duality Kernel’s dual runtimes synchronize  
 - the Tetra‑Hexa Array enters a reversible regime  
 
-The Equilibrium Manifold Manifold is therefore the **ground state** of the Balance State Vector field.
+The Equilibrium Manifold is therefore the **ground state** of the Balance State Vector field.
 
 ---
 
@@ -117,7 +113,7 @@ The stabilizer acts to minimize the potential
 \[
 V(\mathbf{x}) = (\beta - 1)^2,
 \]  
-driving the system toward the Equilibrium Manifold Manifold.
+driving the system toward the Equilibrium Manifold.
 
 ---
 
@@ -168,11 +164,11 @@ Combining all components yields the unified field equation of the Theory of Bala
 
 This equation describes:
 
-- stabilization toward the Equilibrium Manifold Manifold  
+- stabilization toward the Equilibrium Manifold  
 - perturbation by HRD  
 - symbiotic evolution through the Tetra‑Hexa geometry  
 
-It is the mathematical foundation of the Aurphyx Standard.
+It is the mathematical foundation of the Aurphyx Primordial Standards.
 
 ---
 
@@ -180,12 +176,10 @@ It is the mathematical foundation of the Aurphyx Standard.
 - The Theory of Balance unifies all Balance State Vector dynamics into a single field theory.  
 - The Balance State Vector Alphabet forms a 16‑dimensional state vector.  
 - The Balance Operator governs the field’s evolution.  
-- The Equilibrium Manifold Manifold is the field’s equilibrium nullcline.  
+- The Equilibrium Manifold is the field’s equilibrium nullcline.  
 - HRD is the structured perturbation that drives evolution.  
 - The Tetra‑Hexa Array defines the field’s geometry.  
 - The Duality Kernel provides the evolution engine.  
 - The unified field equation synthesizes all components.  
 
----
-
-If you want to continue, the next natural step is **Appendix I — The Aurphyx Unified Field Equation**, which formalizes the full mathematical unification of FTQC, TSLCA, VIM, and the Balance State Vector Alphabet into a single governing equation.
+The core of the theory is the **Unified**

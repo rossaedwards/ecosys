@@ -14,7 +14,7 @@ The Balance Tensor provides a complete description of:
 - how restoring forces propagate through the manifold  
 - how structural and harmonic tensions couple  
 - how HRD and VIM deform the geometry  
-- how the Equilibrium Manifold Manifold responds to perturbations  
+- how the Equilibrium Manifold responds to perturbations  
 - how the Balance Equation emerges from geometry  
 
 It is the **fundamental tensorial object** of the Balance Field.
@@ -149,9 +149,9 @@ They are the **coupling channels** of the Balance Field.
 
 ---
 
-## **X.8 The Balance Tensor and the Equilibrium Manifold Manifold**
+## **X.8 The Balance Tensor and the Equilibrium Manifold**
 
-On the Equilibrium Manifold Manifold (\(\beta = 1\)):
+On the Equilibrium Manifold (\(\beta = 1\)):
 
 \[
 \mathcal{B}_{ij} = \nabla_i \nabla_j V = 0.
@@ -159,7 +159,7 @@ On the Equilibrium Manifold Manifold (\(\beta = 1\)):
 
 This means:
 
-- the Equilibrium Manifold Manifold is a flat region of the potential  
+- the Equilibrium Manifold is a flat region of the potential  
 - restoring forces vanish tangentially  
 - curvature is zero along the manifold  
 - curvature is maximal normal to the manifold  
@@ -256,7 +256,7 @@ The Balance Tensor is the **routing metric** of the array.
 - The Balance Tensor is the Hessian of the Balance Potential.  
 - It decomposes into structural, harmonic, and kinetic components.  
 - Mixed‑mode terms encode cross‑domain coupling.  
-- The Equilibrium Manifold Manifold is a zero‑tensor region.  
+- The Equilibrium Manifold is a zero‑tensor region.  
 - HRD deforms the tensor; VIM matches it; time flows according to it.  
 - The Tetra‑Hexa Array uses the tensor for routing.  
 - The Balance Tensor is the complete tensorial description of Balance dynamics.  

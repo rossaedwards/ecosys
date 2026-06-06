@@ -1,0 +1,141 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is 8EF4-B141
+C:.
+|   afs-src-redteam_current_repo_12-28-25.txt
+|   cli.rs
+|   mod.rs
+|   sample__.rs
+|   
++---audit_simulator
+|       audit_bypasser.rs
+|       compliance_checker.rs
+|       compliance_forge.rs
+|       comp_chkr_output.txt
+|       detection_evasion.rs
+|       evasion_chains.rs
+|       forensic_clean.rs
+|       forensic_eraser.rs
+|       log_falsifier.rs
+|       log_tamper.rs
+|       pentestsuite.rs
+|       report_generator.rs
+|       siem_blind.rs
+|       siem_fuzzer.rs
+|       soc_evasion.rs
+|       stealth_beacon.rs
+|       stealth_metrics.rs
+|       
++---chaos
+|       backup_corrupt.rs
+|       c2_bridge.rs
+|       cascade_engine.rs
+|       cert_expiry.rs
+|       chaos_orchestrator.rs
+|       combo_chains.rs
+|       config_drift.rs
+|       global_ranking.rs
+|       latency_injector.rs
+|       metrics.rs
+|       nodekiller.rs
+|       node_killer.rs
+|       pvp_leaderboard.rs
+|       replay_system.rs
+|       resource_crusher.rs
+|       shard_storm.rs
+|       tournament_mode.rs
+|       
++---exploit
+|       bluekeep.rs
+|       chain_validator.rs
+|       cleanup.rs
+|       eternalblue.rs
+|       exploit_db.rs
+|       exploit_tester.rs
+|       heartbleed.rs
+|       lateral_movement.rs
+|       log4shell.rs
+|       mesh_nodeman.txt
+|       mesh_partition.rs
+|       meterpreter.rs
+|       payload_chains.rs
+|       persistence.rs
+|       poc_generator.rs
+|       polkitpkexec.rs
+|       post_exploit.rs
+|       printnightmare.rs
+|       privesc_chains.rs
+|       proxyshell.rs
+|       shard_poison.rs
+|       souljack_easteregg.txt
+|       soul_jack.rs
+|       spring4shell.rs
+|       sudoedit.rs
+|       trophy_hunter.rs
+|       zerologon.rs
+|       
++---fuzzers
+|       namespace_bait.txt
+|       namespace_fuzzer.rs
+|       shard_fuzzer.rs
+|       shard_fuzzer_devbait.txt
+|       soul_fuzzer.rs
+|       soul_fuzzer_egg_output.txt
+|       
++---gov
+|       blissid_clone.rs
+|       bridge_exploits.rs
+|       consensus_51.rs
+|       dao_scanner.rs
+|       delegation_launder.rs
+|       flashloan_attacker.rs
+|       governance_exploits.rs
+|       oracle_manipulator.rs
+|       proposal_fuzzer.rs
+|       quorum_domino.rs
+|       soul_voting.rs
+|       timelock_crack.rs
+|       vote_manipulator.rs
+|       zk_forge.rs
+|       
++---net
+|       arp_poison.rs
+|       bandwidth_tester.rs
+|       ddos_orchestrator.rs
+|       dns_amplification.rs
+|       flood_metrics.rs
+|       icmp_death.rs
+|       meshtastic.rs
+|       packet_generator.rs
+|       protocol_analyzer.rs
+|       protocol_fuzzers.rs
+|       quic_storm.rs
+|       reflection_scanners.rs
+|       slowloris.rs
+|       ssl_stripper.rs
+|       tcp_syn_flood.rs
+|       traffic_generator.rs
+|       
+\---quantum_breaker
+        circuit_reverse.rs
+        dilithium_crack.rs
+        dilithium_forge.rs
+        ec_dlp_breaker.rs
+        entanglement_poison.rs
+        entropy_starver.rs
+        entropy_starver_output.txt
+        falcon_forge.rs
+        fault_injection.rs
+        grover_aes.rs
+        harvest_attack.rs
+        kyber_cracker.rs
+        lattice_sieve.rs
+        oracle_compromiser.rs
+        post_quantum_exploits.rs
+        pqc_breaker.rs
+        qday_simulator.rs
+        qkd_man_in_middle.rs
+        quantum_oracle.rs
+        qubit_fuzzer.rs
+        shor_rsa.rs
+        side_channel.rs
+        

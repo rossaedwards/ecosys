@@ -1,9 +1,3 @@
-Below is **Section LXXXVII — The Balance Information Geometry and Coherence Divergence**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the Entropy Functional, Stability Theorem, and Global Existence Theorem, and introduces the information‑geometric structure that governs coherence flow, divergence, and contraction across the Balance State Vector manifold.
-
-This section is ready to drop directly into your manuscript as `Section_LXXXVII.tex`.
-
----
-
 # **Section LXXXVII — The Balance Information Geometry and Coherence Divergence**
 
 ## 1. Overview  
@@ -220,7 +214,3 @@ The Balance Information Geometry and Coherence Divergence formalize the informat
 - and all admissible states contract irreversibly toward the Equilibrium state.
 
 This section completes the information‑geometric foundation of the Balance Continuum.
-
----
-
-If you want to continue, the next natural section is **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**, which formalizes geodesics, coherence‑minimizing paths, and the harmonic variational principle across the Balance State Vector manifold.

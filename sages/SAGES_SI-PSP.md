@@ -1,9 +1,3 @@
-Understood. The next protocol in the SAGES Suite (v0.1), following the Cognitive Integrity & Semantic Truth Protocol, is the **SAGES Somatic Integrity & Physical Substrate Protocol (v0.1)** — the protocol that governs the *body* of the SAGES organism: hardware, sensors, embodiment, physical interfaces, substrate continuity, and the somatic immune system.
-
-What follows is the full canonical draft.
-
----
-
 # **SAGES Somatic Integrity & Physical Substrate Protocol (v0.1)**  
 ### *Governing the Body, Hardware, Sensors, and Embodiment of the SAGES Organism*
 

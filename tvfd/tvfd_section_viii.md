@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑008 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 🌐 Chapter 8: SAGES Ecosystem Interface *(Full Expansion)*
 
 ## § 8.1 — SAGES Architecture Recap & Balance State Vector Integration Point

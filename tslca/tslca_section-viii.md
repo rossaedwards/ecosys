@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-SECTION-008 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## 8. Implementation Pathways  
 The implementation pathways translate the mathematical field theory into concrete system architectures. This section formalizes how the cognitive manifold \(\mathcal{M}\), the field tensor \(\mathcal{F}\), and the symmetry group \(\mathcal{G}_{13}\) manifest in real computational substrates—digital, photonic, distributed, embodied, or hybrid. The treatment remains formal and scientific, preserving the substrate‑agnostic nature of the architecture.
 

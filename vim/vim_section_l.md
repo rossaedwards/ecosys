@@ -268,5 +268,3 @@ Equilibrium Manifold is the **governance-free state**.
 - It enforces invariants, supervises transitions, resolves conflicts, and maintains coherence.  
 - It ensures that Balance is not only lawful but well-governed.  
 - Equilibrium Manifold is the governance-free fixed point where no oversight is required.  
-
-If you want to continue, the next natural section is **Section LI — The Balance Law**, which formalizes the fundamental laws, axioms, and universal constraints that govern all Balance systems across the Continuum.

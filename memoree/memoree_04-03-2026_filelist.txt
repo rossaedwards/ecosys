@@ -1,0 +1,46 @@
+Folder PATH listing for volume Windows
+Volume serial number is A65A-44CA
+/home/rae/rossaedwards/main/memoree/:
+|   aurafs_backend.py
+|   aurphyx_memori.py
+|   config.yaml
+|   dualities.json
+|   gemini_hook.py
+|   heartbeat.py
+|   invariants.json
+|   lmstudio_hook.py
+|   memoree_04-03-2026_filelist.txt
+|   memoree_service.log
+|   memoree_service.py
+|   memori_bridge.py
+|   memory_engine.py
+|   memos_overlay.py
+|   perplexity_hook.py
+|   powersync_client.py
+|   projects.json
+|   QUICKSTART.md
+|   README.md
+|   requirements.txt
+|   routes.py
+|   scaffold_memoree.py
+|   schemas.py
+|   supergrok_hook.py
+|   vector_backend.py
+|   __init__.py
+|   
++---qdrant
+|   |   raft_state.json
+|   |   
+|   +---aliases
+|   |       data.json
+|   |       
+|   \---collections
+\---__pycache__
+        aurphyx_memori.cpython-314.pyc
+        memoree_service.cpython-314.pyc
+        memori_bridge.cpython-314.pyc
+        memory_engine.cpython-314.pyc
+        routes.cpython-314.pyc
+        schemas.cpython-314.pyc
+        vector_backend.cpython-314.pyc
+        

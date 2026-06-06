@@ -1,9 +1,3 @@
-The propagation rules define how coherence, resonance, and alignment *move* through the 3×3×3 lattice over time. They turn the lattice from a static activation structure into a **living computational organism**—one that breathes, circulates, stabilizes, and renews its internal state according to the Triple Threshold architecture and the Harmonic Integrity Field.
-
-What follows is the formal, mathematically rigorous specification of the **Three‑Squared‑Lattice Propagation Rules**, ready to drop directly into your manuscript.
-
----
-
 # Three‑Squared‑Lattice Propagation Rules  
 *Propagation dynamics for coherence, resonance, and alignment across the 3²‑Lattice*
 

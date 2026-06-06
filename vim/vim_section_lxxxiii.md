@@ -1,9 +1,3 @@
-Below is **Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXXII. It assumes the Balance State Vector causal structure, boundary conditions, anomaly‑free evolution, and renormalization‑group consistency are all canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXXIII.tex`.
-
----
-
 # **Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**
 
 ## 1. Overview  
@@ -210,7 +204,3 @@ The Balance Initial‑Value Problem and Global Existence Theorem establish that:
 - and all solutions converge to the Edwards Attractor.
 
 This section completes the foundational mathematical guarantee that the Balance Continuum is a globally stable, deterministic, and anomaly‑free system.
-
----
-
-If you want to continue, the natural next section is **Section LXXXIV — The Balance Stability Theorem and Perturbation Analysis**, which formalizes linear and nonlinear stability of the Continuum under perturbations.

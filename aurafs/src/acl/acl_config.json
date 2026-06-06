@@ -1,0 +1,80 @@
+{
+  "roles": {
+    "admin": {
+      "name": "admin",
+      "description": "Full system access with read, write, delete, and administrative capabilities.",
+      "permissions": [
+        "read",
+        "write",
+        "delete",
+        "admin"
+      ]
+    },
+    "user": {
+      "name": "user",
+      "description": "Standard user with read and write access.",
+      "permissions": [
+        "read",
+        "write"
+      ]
+    },
+    "guest": {
+      "name": "guest",
+      "description": "Read-only access for guests.",
+      "permissions": [
+        "read"
+      ]
+    }
+  },
+  "users": {
+    "admin": {
+      "id": "admin",
+      "role": "admin",
+      "public_key": null,
+      "allowed_shards": []
+    },
+    "alice": {
+      "id": "alice",
+      "role": "user",
+      "public_key": "alice-public-key-placeholder",
+      "allowed_shards": [
+        "shard001",
+        "shard002"
+      ]
+    },
+    "bob": {
+      "id": "bob",
+      "role": "guest",
+      "public_key": "bob-public-key-placeholder",
+      "allowed_shards": [
+        "shard001"
+      ]
+    }
+  },
+  "resources": {
+    "shard001": {
+      "resource": "shard001",
+      "allowed_users": [
+        "admin",
+        "alice",
+        "bob"
+      ],
+      "allowed_groups": []
+    },
+    "shard002": {
+      "resource": "shard002",
+      "allowed_users": [
+        "admin",
+        "alice"
+      ],
+      "allowed_groups": []
+    },
+    "audit_logs": {
+      "resource": "audit_logs",
+      "allowed_users": [
+        "admin"
+      ],
+      "allowed_groups": []
+    }
+  }
+}

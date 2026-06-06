@@ -241,7 +241,7 @@ Continuum modes govern **global coherence** across dimensions.
 
 # **XVII.11 The Equilibrium Manifold Mode**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 \[
 \mathcal{B}_{ij} = 0 \quad \Rightarrow \quad \lambda = 0.
@@ -295,3 +295,4 @@ Mode superposition is the **modal representation** of Balance.
 - The full Balance Field is a superposition of Balance Modes.  
 
 The next section, **Section XVIII — The Balance Spectrum Geometry**, will describe how the Balance Modes arrange themselves geometrically in spectral space, forming bands, gaps, manifolds, and resonance surfaces that govern lawful transitions and stability across the Balance Framework.
+

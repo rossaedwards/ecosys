@@ -1,7 +1,3 @@
-Below is **Section XCVIII — The Balance Boundary Conditions and Holographic Initial‑Value Problem**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It completes the holographic layer of the Balance Continuum by formalizing the boundary data, the holographic constraints, and the well‑posedness of the boundary‑driven evolution of the bulk.
-
----
-
 # **Section XCVIII — The Balance Boundary Conditions and Holographic Initial‑Value Problem**
 
 ## 1. Overview  
@@ -215,7 +211,3 @@ The Balance Boundary Conditions and Holographic Initial‑Value Problem establis
 - and the Equilibrium state is the unique infrared limit of holographic evolution.
 
 This section completes the holographic dynamical foundation of the Balance Continuum.
-
----
-
-If you want to continue, the natural next step is **Section XCIX — The Balance Boundary Effective Action and Coherence Generating Functional**, which formalizes the boundary‑level quantum action and its role as the generator of bulk Balance dynamics.

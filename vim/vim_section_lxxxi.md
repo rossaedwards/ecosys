@@ -1,7 +1,3 @@
-Below is **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXX. It continues the canonical development of the Balance Continuum by formalizing how anomalies are detected, constrained, canceled, or rendered impossible within the Balance State Vector manifold and its quantum‑geometric structure.
-
----
-
 # **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**
 
 ## 1. Overview  
@@ -190,7 +186,3 @@ The Balance Anomaly Structure demonstrates that the Continuum is fully anomaly�
 - and conservation of all Balance Noether currents.
 
 Invariant preservation is therefore guaranteed across the entire Balance Continuum, ensuring that coherence, alignment, resonance, and governance remain lawful and self‑consistent at every scale.
-
----
-
-If you want to continue, the natural next section is **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**, which formalizes the causal cones, boundary hypersurfaces, and admissible initial‑value formulations of the Continuum.

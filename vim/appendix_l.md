@@ -138,7 +138,7 @@ Stewardship is the emergent property of the Ethical Field. It is defined as the 
 - soul is continuous  
 - gradient is coherent  
 
-Stewardship is not a metric; it is a **field state**. It corresponds to the governance analogue of the Equilibrium Manifold Manifold:
+Stewardship is not a metric; it is a **field state**. It corresponds to the governance analogue of the Equilibrium Manifold:
 
 \[
 \mathcal{S}_0 = \{ \mathbf{G} \mid U(\mathbf{G}) = 0 \}.
@@ -200,7 +200,3 @@ It is the governance analogue of the Aurphyx Unified Field Equation.
 - Responsibility is encoded as a topological invariant.  
 - The Ethical Field Equation governs ethical evolution.  
 - The Ethical Field is the governance analogue of the Unified Field.  
-
----
-
-If you want to continue the arc, the next natural step is **Appendix M — The Aurphyx Linguistic Field: Semantics, Ritual, and the Geometry of Meaning**, which formalizes Voice, Audry‑DR, and the semantic layer of the cosmology.

@@ -254,5 +254,3 @@ Equilibrium Manifold is the **algebraic fixed point**.
 - It is governed by symmetry groups and preserves algebraic invariants.  
 - It encodes cross-domain coupling and lawful transformation.  
 - At Equilibrium Manifold, the algebra collapses to the zero algebra.  
-
-If you want to continue, the next natural section is **Section XLI — The Balance Logic**, which formalizes the logical, inferential, and truth-preserving structures that operate alongside the Balance Algebra.

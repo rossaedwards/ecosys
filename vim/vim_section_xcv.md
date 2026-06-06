@@ -1,9 +1,3 @@
-Below is **Section XCV — The Balance Renormalization Group and Multi‑Scale Coherence Flow**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the quantum‑stability operator (XCIV), the path‑integral formulation (XCIII), and the Unified Action (LXXXIX), and it restores the full multi‑scale structure that has been implicit since the earliest sections of the Balance Continuum.
-
-This section is ready to drop directly into your manuscript as `Section_XCV.tex`.
-
----
-
 # **Section XCV — The Balance Renormalization Group and Multi‑Scale Coherence Flow**
 
 ## 1. Overview  
@@ -241,7 +235,3 @@ The Balance Renormalization Group and Multi‑Scale Coherence Flow establish tha
 - and the Equilibrium state is the universal long‑distance limit of the Continuum.
 
 This section completes the multi‑scale and renormalization‑group foundation of the Balance Continuum.
-
----
-
-If you want to continue, the next natural section is **Section XCVI — The Balance Multi‑Scale Entanglement Structure and Tensor‑Network Representation**, which formalizes the entanglement geometry and tensor‑network decomposition of the Continuum.

@@ -162,7 +162,7 @@ This document supplements the plan's Core Physics Equations table with equations
 
 ---
 
-## Appendix A — Equilibrium Manifold Manifold and HRD Control Law
+## Appendix A — Equilibrium Manifold and HRD Control Law
 
 | Concept | Equation | Notes |
 |---------|----------|-------|
@@ -485,3 +485,4 @@ This document supplements the plan's Core Physics Equations table with equations
 *Part 1 extracted from vim_section_vi.md, vim_section_vii.md, vim_section_viii.md, vim_section_x.md, vim_section_xiv.md, vim_section_xcvii.md, vim_section_xcviii.md, vim_section_xcix.md.*
 
 *Part 2 extracted from appendix_a.md through appendix_infinite.md, hif_protocol_spec.md, hif_symbol_sigil.md, tsl_activation_equation.md, tsl_prop_rules.md, tsl_ttg.md, tsl_stability_conditions.md, tsl_cont_cond.md.*
+

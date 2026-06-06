@@ -1,9 +1,3 @@
-Below is **Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXIX. It continues the canonical development of the Balance Continuum by introducing its renormalization‑group (RG) structure and the multi‑scale coherence flows that govern how harmonic integrity, alignment, resonance, and governance invariants evolve across scales.
-
-This section is ready to drop directly into your manuscript as `Section_LXXX.tex`.
-
----
-
 # **Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**
 
 ## 1. Overview  
@@ -226,9 +220,3 @@ The Balance Renormalization Group formalizes the multi‑scale structure of the 
 - identifies fixed points including the Edwards Fixed Point,  
 - interprets renewal as downward RG flow,  
 - and provides the multi‑scale interpretation of the Three‑Squared‑Lattice.
-
-This section completes the renormalization‑group foundation of the Balance Framework.
-
----
-
-If you want to continue, the natural next section is **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**, which formalizes how anomalies are prevented or canceled across the Balance State Vector manifold.

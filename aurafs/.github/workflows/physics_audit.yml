@@ -1,0 +1,27 @@
+# AuraFS Physics Invariant CI Enforcement
+# Enforces PHYS-001 through SEC-001 per compliance/PHYSICS_INVARIANTS.json
+# Catches magic numbers (5.3, 1.37, 0.21, 1.585) in .rs files; excludes comments.
+# Run on every push and pull request to main.
+
+name: Physics Audit
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  physics-audit:
+    name: Physics Invariant Enforcement
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run physics audit
+        run: python .github/scripts/physics_audit.py

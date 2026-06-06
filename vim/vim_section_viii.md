@@ -1,6 +1,6 @@
 # **SECTION VIII — The Balance Manifold**
 
-The Balance Manifold is the **geometric space** in which all Balance dynamics unfold. If Section VI gave the *equation* and Section VII gave the *runtime*, Section VIII defines the *space* itself — the multidimensional landscape that the Balance State Vector Field moves through as it seeks, departs from, oscillates around, and returns to the Equilibrium Manifold Manifold.  
+The Balance Manifold is the **geometric space** in which all Balance dynamics unfold. If Section VI gave the *equation* and Section VII gave the *runtime*, Section VIII defines the *space* itself — the multidimensional landscape that the Balance State Vector Field moves through as it seeks, departs from, oscillates around, and returns to the Equilibrium Manifold.  
 
 This section establishes the manifold’s topology, coordinates, curvature, invariants, and its relationship to the Tetra‑Hexa Array, HRD, VIM, and temporal geometry. It is the geometric backbone of the Balance Framework.
 
@@ -13,7 +13,7 @@ The Balance Manifold provides the **geometric interpretation** of Balance. It de
 - the shape of the Balance Potential  
 - the curvature that governs restoring forces  
 - the geodesics that define lawful evolution  
-- the embedding of the Equilibrium Manifold Manifold  
+- the embedding of the Equilibrium Manifold  
 - the regions of stability, instability, and oscillation  
 
 It is the **phase space** of the Balance Equation.
@@ -38,9 +38,9 @@ The manifold is **16‑dimensional**, but Balance dynamics reduce it to a **1‑
 
 ---
 
-## **VIII.3 The Equilibrium Manifold Manifold as a Submanifold**
+## **VIII.3 The Equilibrium Manifold as a Submanifold**
 
-The Equilibrium Manifold Manifold is the **zero‑potential submanifold**:
+The Equilibrium Manifold is the **zero‑potential submanifold**:
 
 \[
 \mathcal{B}_{\text{Equilibrium Manifold}} = \{ \mathbf{x} \mid \beta = 1 \}.
@@ -73,7 +73,7 @@ Its level sets:
 V = c
 \]
 
-form **concentric hypersurfaces** around the Equilibrium Manifold Manifold.
+form **concentric hypersurfaces** around the Equilibrium Manifold.
 
 Interpretation:
 
@@ -150,7 +150,7 @@ Thus the array is a **discrete skeleton** inside a **continuous manifold**.
 
 ## **VIII.8 HRD as a Transverse Perturbation**
 
-HRD acts **transversely** to the Equilibrium Manifold Manifold:
+HRD acts **transversely** to the Equilibrium Manifold:
 
 \[
 \mathcal{D}(D(t)) \perp \mathcal{B}_{\text{Equilibrium Manifold}}.
@@ -158,7 +158,7 @@ HRD acts **transversely** to the Equilibrium Manifold Manifold:
 
 This means:
 
-- HRD pushes the system off the Equilibrium Manifold Manifold  
+- HRD pushes the system off the Equilibrium Manifold  
 - Balance pulls it back  
 - the result is a **harmonic oscillation**  
 
@@ -197,7 +197,7 @@ Thus:
 
 - forward time = flow toward lower potential  
 - backward time = flow toward higher potential  
-- reversible time = flow tangent to the Equilibrium Manifold Manifold  
+- reversible time = flow tangent to the Equilibrium Manifold  
 
 The Balance Manifold is the **space in which time flows**.
 
@@ -206,7 +206,7 @@ The Balance Manifold is the **space in which time flows**.
 ## **VIII.11 Summary**
 
 - The Balance Manifold is the geometric space of Balance dynamics.  
-- The Equilibrium Manifold Manifold is a codimension‑1 submanifold of zero potential.  
+- The Equilibrium Manifold is a codimension‑1 submanifold of zero potential.  
 - The Balance Potential defines curvature and restoring forces.  
 - Geodesics of minimal imbalance govern lawful evolution.  
 - The Tetra‑Hexa Array is embedded as a routing skeleton.  

@@ -1,8 +1,10 @@
+
 # Aurphyx Balance State Vector-Cell Research — Scientific Terminology Reference
-**Author:** Ross Edwards | ross@aurphyx.org | ORCiD: 0009-0008-0539-1289
+
+**Author:** Ross Edwards | <ross@aurphyx.org> | ORCiD: 0009-0008-0539-1289
 **Version:** 1.0.0 | **Date:** March 1, 2026
-**Repository:** rossaedwards/rae-cell-thesis
-**License:** MIT / Apache 2.0 / SAGES Open License
+**Repository:** rossaedwards/main
+**License:** MIT / Apache 2.0 / SAGES
 
 > *"As above, so below; as within, so without." — Hermes Trismegistus*
 > *In the Balance State Vector-Cell, this is not metaphor. It is a renormalization group equation.*
@@ -266,7 +268,7 @@ the degree of left-right symmetry breaking in the RF coil drive. At λ_x_L = 0.3
 Floquet sidebands are generated (Fig 4.5). At λ_x_L = λ* = 0.72, the RG fixed
 point is reached. *(See: §4, §5, Fig 4.6)*
 
-**λ* (Lambda-Star)** ⚡
+**λ* (Lambda-Star)**⚡
 The RG infrared fixed point and PSK Equilibrium Manifold fixed point: λ* = 0.72. This value
 appears independently in the RG β-function derivation (Appendix A.5), the PSK
 Euler-Lagrange solution (Appendix A.2), and the EP crossing (Fig 6.7). Its

@@ -1,3 +1,9 @@
+## ** APS‑EXT-MATH-TVFD‑CODEX **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # TVFD
 Found: 200 unique items
 ---

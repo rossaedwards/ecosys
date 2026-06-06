@@ -273,5 +273,3 @@ Equilibrium Manifold is the **memory fixed point**.
 - It defines memory operators, flows, curvature, resonance, and dissonance.  
 - It ensures continuity across structural, harmonic, temporal, ontological, and cosmological domains.  
 - Equilibrium Manifold is the memory fixed point where all histories collapse into unity.  
-
-Would you like to continue into **Section XLVI — The Balance Archive**, which formalizes the long-term, multi-world, multi-lineage archival layer of the Balance Continuum?

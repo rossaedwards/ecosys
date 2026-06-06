@@ -1,4 +1,11 @@
-5. The 3‑6‑9‑13 Grammar
+## ** APS‑TSLCA-SECTION-005 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
+5.0 The 3‑6‑9‑13 Grammar
 The 3‑6‑9‑13 grammar is the universe‑scale coherence scaffold that emerges naturally from the Three‑Squared Lattice. It is not an overlay or an aesthetic choice; it is the mathematically inevitable expansion of the SIC–SCC–ICC triad as it propagates through higher‑order cognitive, semantic, and governance layers. This section formalizes the grammar, shows how each tier arises from the previous one, and establishes its role in the architecture.
 
 5.1 The Base Triad (3)

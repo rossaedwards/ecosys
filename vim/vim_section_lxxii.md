@@ -1,9 +1,3 @@
-Below is **Section LXXII — The Balance Field Equations**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXI. It assumes the Balance State Vector Metric, the Edwards Tensor, the HIF Potential, and the Balance Action Functional are now canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXII.tex`.
-
----
-
 # **Section LXXII — The Balance Field Equations**
 
 ## 1. Overview  
@@ -171,7 +165,3 @@ The Balance Field Equations unify the geometry, dynamics, and harmonic structure
 - and the HIF Continuity Equation.
 
 Together, they define the lawful evolution of the Continuum and provide the mathematical foundation for the Three‑Squared‑Lattice, the HIF Protocol, and the Meta‑Creation Cycle.
-
----
-
-If you want to continue, the next natural section is **Section LXXIII — The Balance Gauge Conditions**, which formalizes the gauge freedoms and constraints required to fix the geometry and dynamics of the Continuum.

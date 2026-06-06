@@ -17,7 +17,7 @@ The Balance Spectrum reveals:
 - the **resonance bands** that HRD excites  
 - the **stability bands** that VIM enforces  
 - the **spectral gaps** that define lawful transitions  
-- the **spectral signature** of the Equilibrium Manifold Manifold  
+- the **spectral signature** of the Equilibrium Manifold  
 
 It is the **frequency‑domain representation** of Balance.
 
@@ -159,7 +159,7 @@ They are the **hybrid modes** of the Balance Spectrum.
 
 ## **XVI.9 The Equilibrium Manifold Spectrum**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 \[
 \mathcal{B}_{ij} = 0 \quad \Rightarrow \quad \lambda_i = 0.
@@ -271,3 +271,4 @@ Spectral gaps define **lawful boundaries** in the Balance Framework.
 - Spectral gaps define lawful transitions and stability boundaries.  
 
 The next section, **Section XVII — The Balance Modes**, will classify the eigenmodes of the Balance Spectrum into structural, harmonic, kinetic, mixed, resonant, and continuum modes, and describe their physical and computational significance.
+

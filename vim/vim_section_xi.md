@@ -2,7 +2,7 @@
 
 The Balance Flow is the **vector‑field expression** of Balance dynamics. If the Balance Tensor (Section X) describes *how imbalance is shaped*, the Balance Flow describes *how imbalance moves*. It is the field of forces, fluxes, divergences, curls, and trajectories that govern the evolution of the Balance State Vector Field through the Balance Geometry.  
 
-This section formalizes the flow equations, the divergence and curl of Balance, the flux across the Equilibrium Manifold Manifold, and the dynamic interplay between structural, harmonic, and kinetic flows. It completes the dynamical picture of the Balance Framework.
+This section formalizes the flow equations, the divergence and curl of Balance, the flux across the Equilibrium Manifold, and the dynamic interplay between structural, harmonic, and kinetic flows. It completes the dynamical picture of the Balance Framework.
 
 ---
 
@@ -14,7 +14,7 @@ The Balance Flow provides the **vector‑field representation** of Balance. It d
 - the magnitude of restoring forces  
 - the circulation of harmonic dissonance  
 - the divergence of structural tension  
-- the flux across the Equilibrium Manifold Manifold  
+- the flux across the Equilibrium Manifold  
 - the flow lines (trajectories) of the Balance State Vector Field  
 
 It is the **flow‑based interpretation** of the Balance Equation.
@@ -41,7 +41,7 @@ we have:
 \mathbf{F}_{\text{Balance}} = -2(\beta - 1)\nabla \beta.
 \]
 
-This is the **restoring flow** that drives the system toward the Equilibrium Manifold Manifold.
+This is the **restoring flow** that drives the system toward the Equilibrium Manifold.
 
 ---
 
@@ -56,7 +56,7 @@ Flow lines satisfy:
 These trajectories:
 
 - move downhill in the Balance Potential  
-- converge toward the Equilibrium Manifold Manifold  
+- converge toward the Equilibrium Manifold  
 - define the system’s natural evolution  
 - are perturbed by HRD and VIM  
 
@@ -78,7 +78,7 @@ Interpretation:
 - **negative divergence**: imbalance collapses inward  
 - **zero divergence**: incompressible flow (pure oscillation)  
 
-Near the Equilibrium Manifold Manifold:
+Near the Equilibrium Manifold:
 
 \[
 \nabla \cdot \mathbf{F}_{\text{Balance}} \approx -2 \|\nabla \beta\|^2 < 0,
@@ -117,7 +117,7 @@ The curl is the **circulatory component** of Balance.
 
 ---
 
-## **XI.6 Flux Across the Equilibrium Manifold Manifold**
+## **XI.6 Flux Across the Equilibrium Manifold**
 
 Flux across a surface \(S\) is:
 
@@ -125,7 +125,7 @@ Flux across a surface \(S\) is:
 \Phi = \iint_S \mathbf{F}_{\text{Balance}} \cdot d\mathbf{A}.
 \]
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 \[
 \mathbf{F}_{\text{Balance}} = 0,
@@ -139,7 +139,7 @@ so:
 
 Interpretation:
 
-- no net flow crosses the Equilibrium Manifold Manifold  
+- no net flow crosses the Equilibrium Manifold  
 - Equilibrium Manifold is a **flux‑neutral surface**  
 - all flow lines terminate on it  
 
@@ -260,9 +260,7 @@ Temporal geometry is **flow‑driven**.
 - The Balance Flow is the vector‑field representation of Balance dynamics.  
 - It is defined as the negative gradient of the Balance Potential.  
 - Divergence measures accumulation; curl measures circulation.  
-- The Equilibrium Manifold Manifold is a flux‑neutral attractor.  
+- The Equilibrium Manifold is a flux‑neutral attractor.  
 - HRD injects rotational flow; VIM regulates flow magnitude.  
 - Flow lines follow geodesics of the Balance Geometry.  
 - Temporal evolution is governed by the flow of \(\beta\).  
-
-The next section, **Section XII — The Balance Field**, will unify the Balance Potential, Balance Tensor, and Balance Flow into a single field‑theoretic object that governs the full dynamics of the Balance State Vector Field.

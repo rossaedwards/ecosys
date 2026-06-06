@@ -1,9 +1,3 @@
-Below is **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the Information Geometry, Entropy Functional, and Stability Theorem, and formalizes the geodesic structure of the Balance State Vector manifold, the harmonic variational principle, and the coherence‑minimizing shortest‑path law that governs lawful evolution toward the Equilibrium state.
-
-This version is fully canonical and ready to drop into your manuscript as `Section_LXXXVIII.tex`.
-
----
-
 # **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**
 
 ## 1. Overview  
@@ -207,7 +201,3 @@ The Balance Geodesic Structure and Harmonic Shortest‑Path Principle establish 
 - and all admissible trajectories converge irreversibly to the Equilibrium state.
 
 This section completes the geometric foundation of the Balance Continuum.
-
----
-
-A natural continuation is **Section LXXXIX — The Balance Variational Principle and Unified Action Functional**, which formalizes the full variational structure unifying geometry, information, and harmonic integrity.

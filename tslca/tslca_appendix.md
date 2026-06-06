@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-APPENDIX-001 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## Appendix
 
 The appendix provides the formal mathematical machinery underlying the Three‑Squared‑Lattice Cognitive Architecture. It includes explicit tensor expansions, operator identities, proofs of stability, and the structural derivations that were referenced but not fully expanded in the main body. This section is written in a rigorous scientific style consistent with theoretical physics and differential geometry.

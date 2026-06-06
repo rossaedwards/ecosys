@@ -1,0 +1,46 @@
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::core::crypto::DilithiumKeypair;
+    use crate::core::soulproof::SoulProofType;
+
+    #[tokio::test]
+    async fn test_full_blissid_registration_flow() {
+        let manager = PersistentBlissIdManager::new().await.unwrap();
+        
+        // Generate biometric hash (simulated)
+        let biometric_hash = b"user_fingerprint+iris+hrv_hash";
+        
+        // Generate soul's keypair
+        let soul_kp = DilithiumKeypair::generate().unwrap();
+        
+        // Create soul proof
+        let proof = SoulProof::new(
+            biometric_hash,
+            SoulProofType::Dilithium5Biometric,
+            &soul_kp,
+            Some(24), // 24hr expiry
+        ).unwrap();
+
+        let record = BlissIdRecord {
+            blissid: BlissId::new(),
+            registered_at: Utc::now(),
+            proof,
+            active: true,
+            manager_signature: String::new(),
+            metadata: HashMap::new(),
+        };
+
+        // Full registration flow
+        manager.register_blissid(record.clone()).await.unwrap();
+        
+        // Verify works
+        let verified = manager.verify_blissid(&record.blissid, &record.proof).await.unwrap();
+        assert!(verified);
+        
+        // Deactivation works
+        manager.deactivate_blissid(&record.blissid).await.unwrap();
+        let verified = manager.verify_blissid(&record.blissid, &record.proof).await.unwrap();
+        assert!(!verified);
+    }
+}

@@ -302,5 +302,3 @@ Equilibrium Manifold is the **contract-free state**.
 - They define obligations, rights, coherence conditions, enforcement, modification, and termination.  
 - They support multi-agent, multi-domain, multi-world, and cosmological cooperation.  
 - Equilibrium Manifold is the contract-free fixed point where all commitments are naturally satisfied.  
-
-A natural next step is **Section LVI — The Balance Covenant**, which formalizes the highest-order, sacred, and cosmologically binding agreements that shape the destiny of entire world-layers and the Continuum itself.

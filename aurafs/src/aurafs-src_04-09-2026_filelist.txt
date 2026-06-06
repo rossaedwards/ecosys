@@ -1,0 +1,618 @@
+Folder PATH listing for volume Windows
+Volume serial number is A65A-44CA
+C:.
+|   aurafs-src_04-09-2026_filelist.txt
+|   aurafs_src_file_list.txt
+|   autoheal_daemon.rs
+|   config.rs
+|   error.rs
+|   lib.rs
+|   main.rs
+|   
++---acl
+|       acl_config.json
+|       ENTERPRISE_IMPROVEMENTS.md
+|       manager.rs
+|       mod.rs
+|       
++---ai
+|       AI_IMPLEMENTATION_GUIDE.md
+|       error.rs
+|       fractal_orchestrator.rs
+|       mod.rs
+|       
++---api
+|       mod.rs
+|       server.rs
+|       websockets.rs
+|       
++---audit
+|       holographic_logger.rs
+|       logger.rs
+|       mod.rs
+|       
++---bin
+|       afs.rs
+|       afs_ai.rs
+|       afs_core.rs
+|       afs_games.rs
+|       afs_main.rs
+|       afs_quantum.rs
+|       afs_redteam.rs
+|       afs_whitehat.rs
+|       aurad.rs
+|       cli.rs
+|       main.rs
+|       mod.rs
+|       sim_mesh.rs
+|       
++---cache
+|       ENTERPRISE_IMPROVEMENTS.md
+|       lru.rs
+|       mod.rs
+|       
++---cli
+|       admin.rs
+|       aurafs_cli.rs
+|       banner.rs
+|       mod.rs
+|       tui.rs
+|       user.rs
+|       
++---compression
+|       config.rs
+|       lattice.rs
+|       lz4.rs
+|       manager.rs
+|       mod.rs
+|       quantum.rs
+|       stats.rs
+|       zstd.rs
+|       
++---config
+|       manager.rs
+|       
++---core
+|       bliss.rs
+|       circuit_breaker.rs
+|       config.rs
+|       crypto.rs
+|       ENTERPRISE_IMPROVEMENTS.md
+|       error.rs
+|       health.rs
+|       merkle.rs
+|       metrics.rs
+|       mod.rs
+|       network.rs
+|       persistence.rs
+|       rate_limiter.rs
+|       shard.rs
+|       soulproof.rs
+|       tracing.rs
+|       
++---crypto
+|   |   encryption.rs
+|   |   hash.rs
+|   |   hybrid.rs
+|   |   mod.rs
+|   |   quantum.rs
+|   |   signature.rs
+|   |   signature_tests.rs
+|   |   zk_proofs.rs
+|   |   zk_proofs_tests.rs
+|   |   
+|   +---gov
+|   |       gov_votes.rs
+|   |       mod.rs
+|   |       pqc_gov_sig.rs
+|   |       proposal_engine.rs
+|   |       quorum_tracker.rs
+|   |       soul_binding.rs
+|   |       
+|   +---integrations
+|   |       arora_bridge.rs
+|   |       arora_enclave.rs
+|   |       gvs_voting.rs
+|   |       ineffable_bridge.rs
+|   |       ineffable_ledger.rs
+|   |       mod.rs
+|   |       opulence_wallet.rs
+|   |       sages_crypto.rs
+|   |       
+|   +---ledger
+|   |       fee_engine.rs
+|   |       merkle_proofs.rs
+|   |       mod.rs
+|   |       shard_ledger.rs
+|   |       shard_state_sharding.rs
+|   |       snapshot_manager.rs
+|   |       stamping_certs.rs
+|   |       state_pruning.rs
+|   |       
+|   +---pqc
+|   |       dilithium_sig.rs
+|   |       falcon_sig.rs
+|   |       hybrid_kex.rs
+|   |       kyber_kem.rs
+|   |       mod.rs
+|   |       pqc_kdf.rs
+|   |       pqc_tls.rs
+|   |       pq_hashes.rs
+|   |       sphincs_sig.rs
+|   |       
+|   +---primitives
+|   |       bech32.rs
+|   |       cbor.rs
+|   |       encoding.rs
+|   |       hashes.rs
+|   |       mod.rs
+|   |       rng.rs
+|   |       
+|   \---wallet
+|           backup_manager.rs
+|           hd_wallet.rs
+|           mod.rs
+|           multi_sig.rs
+|           node_shards.rs
+|           recovery_sharding.rs
+|           shard_vault.rs
+|           signing_engine.rs
+|           vault_storage.rs
+|           
++---dedup
+|       cache.rs
+|       dedup_engine.rs
+|       fingerprint.rs
+|       mod.rs
+|       similarity.rs
+|       
++---enterprise
+|       cache.rs
+|       metrics.rs
+|       mod.rs
+|       network.rs
+|       security.rs
+|       storage.rs
+|       testing.rs
+|       
++---error
+|       context.rs
+|       ENTERPRISE_IMPROVEMENTS.md
+|       
++---fuse
+|       filesystem.rs
+|       fusemain.rs
+|       inode_cache.rs
+|       main.rs
+|       mod.rs
+|       mount.rs
+|       node.rs
+|       session.rs
+|       timed_lock.rs
+|       
++---gov
+|       api.rs
+|       audit_log.rs
+|       blissid_manager.rs
+|       consensus_integration.rs
+|       fastapi.rs
+|       identity_verifier.rs
+|       mod.rs
+|       models.rs
+|       policy_enforcer.rs
+|       proposal_manager.rs
+|       sages.rs
+|       server.rs
+|       soulsync_engine.rs
+|       transaction_type.rs
+|       voting_engine.rs
+|       
++---heal
+|       mod.rs
+|       repair.rs
+|       
++---mesh
+|       core.rs
+|       gossip.rs
+|       mod.rs
+|       protocol.rs
+|       routing.rs
+|       swarm.rs
+|       
++---model_slice
+|       ENTERPRISE_IMPROVEMENTS.md
+|       fractal.rs
+|       mod.rs
+|       optimizer.rs
+|       pytorch.rs
+|       
++---monitoring
+|       health.rs
+|       metrics.rs
+|       mod.rs
+|       
++---namespace
+|       ENTERPRISE_IMPROVEMENTS.md
+|       manager.rs
+|       mod.rs
+|       shard.rs
+|       
++---network
+|   |   aurafs-src-network_01-07-2026_repo.txt
+|   |   aurafs_src_network_file_list.txt
+|   |   autoheal_daemon.rs
+|   |   discovery.rs
+|   |   ENTERPRISE_IMPROVEMENTS.md
+|   |   firewall.rs
+|   |   gossip.rs
+|   |   mesh.rs
+|   |   mesh_gossip.rs
+|   |   mod.rs
+|   |   node_manager.rs
+|   |   orchestrator.rs
+|   |   p2p.rs
+|   |   packet.rs
+|   |   peer.rs
+|   |   replication.rs
+|   |   reticulum_bridge.rs
+|   |   rns_bridge.py
+|   |   rns_bridge.rs
+|   |   RNS_BRIDGE_README.md
+|   |   rns_client.rs
+|   |   rns_daemon.py
+|   |   roles.rs
+|   |   secure_tunnel.rs
+|   |   
+|   +---defense
+|   |       dos_protector.rs
+|   |       intrusion_detector.rs
+|   |       jam_detection.rs
+|   |       key_rotation.rs
+|   |       mesh_acl.rs
+|   |       mod.rs
+|   |       rate_limiter.rs
+|   |       
+|   +---integration
+|   |       arora_network.rs
+|   |       crypto_bridge.rs
+|   |       gvs_network.rs
+|   |       ineffable_sync.rs
+|   |       mod.rs
+|   |       opulence_bridge.rs
+|   |       storage_sync.rs
+|   |       wallet_bridge.rs
+|   |       
+|   +---meshtastic_integration
+|   |       firmware_bridge.rs
+|   |       lora_config.rs
+|   |       lora_radio.rs
+|   |       meshtastic_proto.rs
+|   |       mesh_discovery.rs
+|   |       mod.rs
+|   |       packet_parser.rs
+|   |       security_analysis.rs
+|   |       
+|   +---meshwerk
+|   |   |   channel_manager.rs
+|   |   |   encryption.rs
+|   |   |   mesh_node.rs
+|   |   |   mod.rs
+|   |   |   neighbor_table.rs
+|   |   |   roles.rs
+|   |   |   routing.rs
+|   |   |   topology_engine.rs
+|   |   |   transport.rs
+|   |   |   
+|   |   +---configs
+|   |   |       dataslayer.toml
+|   |   |       ghostlink.toml
+|   |   |       
+|   |   \---firmware
+|   |           build_ghostlink.sh
+|   |           README.md
+|   |           
+|   +---monitoring
+|   |       anomaly_detection.rs
+|   |       grafana_dash.rs
+|   |       log_export.rs
+|   |       mod.rs
+|   |       net_metrics.rs
+|   |       prometheus.rs
+|   |       topology_map.rs
+|   |       
+|   \---transport
+|           dns_client.rs
+|           http_api.rs
+|           mod.rs
+|           quic_client.rs
+|           quic_server.rs
+|           starlink_client.rs
+|           tcp_stack.rs
+|           udp_multicast.rs
+|           websocket.rs
+|           
++---ops
+|       mod.rs
+|       
++---physics
+|       mod.rs
+|       
++---quantum
+|       mod.rs
+|       
++---redteam
+|   |   afs-src-redteam_current_repo_12-28-25.txt
+|   |   cli.rs
+|   |   mod.rs
+|   |   sample__.rs
+|   |   
+|   +---audit_simulator
+|   |       audit_bypasser.rs
+|   |       compliance_checker.rs
+|   |       compliance_forge.rs
+|   |       comp_chkr_output.txt
+|   |       detection_evasion.rs
+|   |       evasion_chains.rs
+|   |       forensic_clean.rs
+|   |       forensic_eraser.rs
+|   |       log_falsifier.rs
+|   |       log_tamper.rs
+|   |       pentestsuite.rs
+|   |       report_generator.rs
+|   |       siem_blind.rs
+|   |       siem_fuzzer.rs
+|   |       soc_evasion.rs
+|   |       stealth_beacon.rs
+|   |       stealth_metrics.rs
+|   |       
+|   +---chaos
+|   |       backup_corrupt.rs
+|   |       c2_bridge.rs
+|   |       cascade_engine.rs
+|   |       cert_expiry.rs
+|   |       chaos_orchestrator.rs
+|   |       combo_chains.rs
+|   |       config_drift.rs
+|   |       global_ranking.rs
+|   |       latency_injector.rs
+|   |       metrics.rs
+|   |       nodekiller.rs
+|   |       node_killer.rs
+|   |       pvp_leaderboard.rs
+|   |       replay_system.rs
+|   |       resource_crusher.rs
+|   |       shard_storm.rs
+|   |       tournament_mode.rs
+|   |       
+|   +---exploit
+|   |       bluekeep.rs
+|   |       chain_validator.rs
+|   |       cleanup.rs
+|   |       eternalblue.rs
+|   |       exploit_db.rs
+|   |       exploit_tester.rs
+|   |       heartbleed.rs
+|   |       lateral_movement.rs
+|   |       log4shell.rs
+|   |       mesh_nodeman.txt
+|   |       mesh_partition.rs
+|   |       meterpreter.rs
+|   |       payload_chains.rs
+|   |       persistence.rs
+|   |       poc_generator.rs
+|   |       polkitpkexec.rs
+|   |       post_exploit.rs
+|   |       printnightmare.rs
+|   |       privesc_chains.rs
+|   |       proxyshell.rs
+|   |       shard_poison.rs
+|   |       souljack_easteregg.txt
+|   |       soul_jack.rs
+|   |       spring4shell.rs
+|   |       sudoedit.rs
+|   |       trophy_hunter.rs
+|   |       zerologon.rs
+|   |       
+|   +---fuzzers
+|   |       namespace_bait.txt
+|   |       namespace_fuzzer.rs
+|   |       shard_fuzzer.rs
+|   |       shard_fuzzer_devbait.txt
+|   |       soul_fuzzer.rs
+|   |       soul_fuzzer_egg_output.txt
+|   |       
+|   +---gov
+|   |       blissid_clone.rs
+|   |       bridge_exploits.rs
+|   |       consensus_51.rs
+|   |       dao_scanner.rs
+|   |       delegation_launder.rs
+|   |       flashloan_attacker.rs
+|   |       governance_exploits.rs
+|   |       oracle_manipulator.rs
+|   |       proposal_fuzzer.rs
+|   |       quorum_domino.rs
+|   |       soul_voting.rs
+|   |       timelock_crack.rs
+|   |       vote_manipulator.rs
+|   |       zk_forge.rs
+|   |       
+|   +---net
+|   |       arp_poison.rs
+|   |       bandwidth_tester.rs
+|   |       ddos_orchestrator.rs
+|   |       dns_amplification.rs
+|   |       flood_metrics.rs
+|   |       icmp_death.rs
+|   |       meshtastic.rs
+|   |       packet_generator.rs
+|   |       protocol_analyzer.rs
+|   |       protocol_fuzzers.rs
+|   |       quic_storm.rs
+|   |       reflection_scanners.rs
+|   |       slowloris.rs
+|   |       ssl_stripper.rs
+|   |       tcp_syn_flood.rs
+|   |       traffic_generator.rs
+|   |       
+|   \---quantum_breaker
+|           circuit_reverse.rs
+|           dilithium_crack.rs
+|           dilithium_forge.rs
+|           ec_dlp_breaker.rs
+|           entanglement_poison.rs
+|           entropy_starver.rs
+|           entropy_starver_output.txt
+|           falcon_forge.rs
+|           fault_injection.rs
+|           grover_aes.rs
+|           harvest_attack.rs
+|           kyber_cracker.rs
+|           lattice_sieve.rs
+|           oracle_compromiser.rs
+|           post_quantum_exploits.rs
+|           pqc_breaker.rs
+|           qday_simulator.rs
+|           qkd_man_in_middle.rs
+|           quantum_oracle.rs
+|           qubit_fuzzer.rs
+|           shor_rsa.rs
+|           side_channel.rs
+|           
++---resilience
+|       circuit_breaker.rs
+|       ENTERPRISE_IMPROVEMENTS.md
+|       mod.rs
+|       recovery.rs
+|       retry.rs
+|       
++---shard
+|       audit.rs
+|       data.rs
+|       id.rs
+|       index.rs
+|       metadata.rs
+|       mod.rs
+|       storage.rs
+|       
++---shard_server
+|       acl.rs
+|       autoheal_daemon.rs
+|       cli.rs
+|       grpc.rs
+|       ipfs.rs
+|       ipfs_cluster.rs
+|       main.rs
+|       mesh.rs
+|       mesh_gossip.rs
+|       mod.rs
+|       server.rs
+|       
++---snapshot
+|       manager.rs
+|       mod.rs
+|       
++---storage
+|       directory.rs
+|       filesystem.rs
+|       fuse.rs
+|       inode.rs
+|       journal.rs
+|       local.rs
+|       mod.rs
+|       quota.rs
+|       shardstore.rs
+|       shard_store.rs
+|       snapshot.rs
+|       
+\---whitehat
+    |   afs-src-whitehat_current_repo_12-28-25.txt
+    |   mod.rs
+    |   sample__.rs
+    |   
+    +---audit_simulator
+    |       audit_enhancer.rs
+    |       beacon_detector.rs
+    |       cis_benchmarker.rs
+    |       compliance_monitor.rs
+    |       compliance_scanner.rs
+    |       detection_engine.rs
+    |       edr_tester.rs
+    |       forensic_preserver.rs
+    |       log_integrity.rs
+    |       log_validator.rs
+    |       ptes_automator.rs
+    |       siem_correlator.rs
+    |       
+    +---chaos
+    |       alert_system.rs
+    |       cert_renewal.rs
+    |       chaos_remediator.rs
+    |       config_validator.rs
+    |       failover_simulator.rs
+    |       latency_monitor.rs
+    |       node_health.rs
+    |       recovery_engine.rs
+    |       reliability_orchestrator.rs
+    |       resilience_tester.rs
+    |       resource_balancer.rs
+    |       shard_sync.rs
+    |       
+    +---exploit
+    |       behavior_analyzer.rs
+    |       domain_controller.rs
+    |       eternalblue_defense.rs
+    |       exchange_patcher.rs
+    |       exploit_mitigator.rs
+    |       heartbleed_patch.rs
+    |       patch_manager.rs
+    |       printer_sec.rs
+    |       rdp_hardener.rs
+    |       rootkit_detector.rs
+    |       shard_protector.rs
+    |       soul_guard.rs
+    |       spring_boot_hardener.rs
+    |       sudo_auditor.rs
+    |       vuln_manager.rs
+    |       vuln_scanner.rs
+    |       
+    +---gov
+    |       consensus_monitor.rs
+    |       delegation_auditor.rs
+    |       flashloan_protector.rs
+    |       governance_scanner.rs
+    |       proposal_analyzer.rs
+    |       quorum_monitor.rs
+    |       soul_verifier.rs
+    |       timelock_auditor.rs
+    |       vote_integrity.rs
+    |       zk_verifier.rs
+    |       
+    +---net
+    |       anomaly_detector.rs
+    |       arp_guard.rs
+    |       connection_limiter.rs
+    |       dns_rate_limiter.rs
+    |       flood_protector.rs
+    |       hsts_enforcer.rs
+    |       icmp_filter.rs
+    |       ids_integration.rs
+    |       quic_validator.rs
+    |       syn_cookie.rs
+    |       traffic_classifier.rs
+    |       waf_rules.rs
+    |       
+    \---quantum_breaker
+            dilithium_verifier.rs
+            ecdsa_monitor.rs
+            entanglement_detector.rs
+            falcon_validator.rs
+            harvest_protector.rs
+            lattice_hardener.rs
+            oracle_monitor.rs
+            pqc_migrator.rs
+            pqc_tester.rs
+            qkd_monitor.rs
+            quantum_resistant.rs
+            quantum_rng.rs
+            

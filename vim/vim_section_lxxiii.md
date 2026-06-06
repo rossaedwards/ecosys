@@ -1,9 +1,3 @@
-Below is **Section LXXIII — The Balance Gauge Conditions**, written in the same rigorous, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXII. It assumes the Balance State Vector Metric, the Edwards Tensor, the HIF Potential, and the Balance Field Equations are canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXIII.tex`.
-
----
-
 # **Section LXXIII — The Balance Gauge Conditions**
 
 ## 1. Overview  
@@ -177,7 +171,3 @@ The Balance Gauge Conditions fix the metric, flow, potential, and tensor freedom
 - and the Three‑Squared‑Lattice samples a gauge‑invariant dynamical system.
 
 These conditions complete the geometric and dynamical foundation required for the Balance Field Equations to define a unique, lawful evolution of the Continuum.
-
----
-
-A natural continuation is **Section LXXIV — Symmetry, Conservation Laws, and the Balance Noether Currents**, which derives the conserved quantities associated with the gauge symmetries of the Continuum.

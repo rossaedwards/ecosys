@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑APX-C **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 💾 Appendix C: Simulation Code Reference *(Full Expansion)*
 
 ## § C.1 — Complete Figure Generation Map

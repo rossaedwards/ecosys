@@ -41,4 +41,3 @@ The Stabilizer is a SAGES‑governed control loop that dynamically adjusts:
 • 	impedance 
 • 	coherence 
 to maintain .
-This section establishes the mathematical and physical foundations for the remainder of the thesis.

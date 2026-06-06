@@ -1,83 +1,141 @@
-# Memoree v3 — Sovereign Memory Substrate
-# Date: 2026-04-03
-# Cleaned + configured for LM Studio + Qdrant + your exact paths
+# Memoree — Sovereign Memory Substrate
+# Public-safe config: no API keys or secrets.
+# Path: C:/memoree/config.yaml
 
 memoree:
-  version: "3.1.0"
-  data_root: "C:/rossaedwards/main/memoree"
-  project: memoree-v3
+  version: "0.1.0"
+  data_root: "C:/memoree"
+  project: memoree
 
-# ─── Vector Store ───────────────────────────────────────────────
-vector_backend: qdrant
+# ─── Core Backend Selection ──────────────────────────────────────────────
+backend:
+  # Primary vector backend for all seven memory types.
+  # Options (current): qdrant
+  vector_backend: qdrant
 
+  # Mirror Memoree writes to the external Aurphyx Memori service.
+  # Controls MemoryEngine.mirror / MemoriBridge.
+  mirror_to_primary: true
+
+  # Enable or disable AuraFS shard persistence (for future re‑enable).
+  aurafs_enabled: false
+
+# ─── Qdrant Vector Store ────────────────────────────────────────────────
+# Qdrant is the only vector DB Memoree uses.
 qdrant:
-  host: localhost
+  host: "127.0.0.1"
   port: 6333
-  collection: memoree_events
-  storage_path: "C:/rossaedwards/main/memoree/qdrant"
+
+  # Optional: HTTP scheme and API key (leave blank for local dev).
+  scheme: "http"
+  api_key: ""
+
+  # Collection naming strategy: Memoree will create one collection
+  # per memory type using this prefix, e.g.:
+  #   memoree_episodic, memoree_semantic, memoree_procedural, ...
+  collection_prefix: "memoree_"
+
+  # Embedding dimension. Must match the embedding model you actually use.
+  # all-MiniLM-L6-v2 → 384 dimensions (sentence-transformers default).
   embed_dim: 384
+
+  # Distance metric for vector similarity. Qdrant supports:
+  #   Cosine, Euclid, Dot
+  distance: "Cosine"
+
+  # Enable Qdrant's hybrid / sparse search (BM25 / text-based).
+  # Implementation is in VectorBackend; this is just the feature flag.
   hybrid:
     enabled: true
-    sparse_model: bm25
+    sparse_model: "bm25"
 
-# ─── SQLite Ledger ──────────────────────────────────────────────
-sqlite:
-  path: "C:/rossaedwards/main/memoree/ledger.db"
-  wal_mode: true
-
-# ─── Embedder — LM Studio (exactly what you asked for) ───────────
+# ─── Embedding Model / Embedder ─────────────────────────────────────────
 embedder:
-  backend: lmstudio
-  model: all-MiniLM-L6-v2
+  # Backend that actually produces embeddings before they go into Qdrant.
+  # Options you support: "sentence_transformers" or "lmstudio".
+  backend: "sentence_transformers"
+
+  # Default local embedding model (Python / sentence-transformers).
+  model: "all-MiniLM-L6-v2"
+
+  # Optional LM Studio HTTP endpoint for remote embeddings.
+  # Leave as-is if you are not using LM Studio for embeddings.
   lmstudio_url: "http://localhost:1234/v1/embeddings"
 
-# ─── LLM Hooks ──────────────────────────────────────────────────
+# ─── LLM Hooks (Perplexity, Gemini, SuperGrok, LM Studio) ───────────────
+# These match the LLMProvider enum and your hook modules.
 hooks:
   gemini:
     enabled: true
     auto_save: true
-    default_project: memoree-v3
+    # Default project key from projects.json
+    default_project: memoree
+
   perplexity:
     enabled: true
     auto_save: true
-    default_project: memoree-v3
+    default_project: memoree
+
+  supergrok:
+    enabled: true
+    auto_save: true
+    default_project: memoree
+
   lmstudio:
     enabled: true
+    auto_save: true
     base_url: "http://localhost:1234/v1"
     models:
-      nemotron-3-nano-4b:
-        alias: nemotron
-        default_project: god-mode-core
-      qwen-3.5-4b:
-        alias: qwen
-        default_project: god-mode-core
-  supergrok:
-    enabled: false
+      "liquid/lfm2.5-1.2b":
+        alias: "liquid"
+        default_project: memoree
+      "nemotron-3-nano-4b":
+        alias: "nemotron"
+        default_project: memoree
+      "qwen-3.5-4b":
+        alias: "qwen"
+        default_project: memoree
 
-# ─── MemOS Overlay (optional) ───────────────────────────────────
+# ─── SQL Ledger / System-of-Record (Optional, Local) ────────────────────
+# Used for traces, sessions, and ledger-style records. Safe defaults.
+sqlite:
+  path: "C:/memoree/ledger.db"
+  wal_mode: true
+
+# ─── Sync Layer (Optional, Disabled by Default) ─────────────────────────
+# For future PocketBase / PowerSync integration. Not used by MemoryEngine
+# today; kept for forwards compatibility.
+sync:
+  backend: "pocketbase"   # options: "none", "pocketbase"
+
+  pocketbase:
+    enabled: false
+    url: "http://localhost:8090"
+    collection: "memoree_events"
+
+  powersync:
+    supabase_url: ""
+    supabase_anon_key: ""
+    queue_path: "C:/memoree/sync_queue.db"
+
+# ─── MemOS / Overlay (Optional) ─────────────────────────────────────────
+# External overlay UI / MemOS; disabled by default.
 memos:
   enabled: false
   api_url: "http://localhost:9090"
-  cube_id: aurphyx_main
+  cube_id: "rossaedwards_main"
 
-# ─── Rich Metadata Defaults ─────────────────────────────────────
+# ─── Metadata Defaults (for Memory Records) ─────────────────────────────
 metadata_defaults:
   priority: 5
-  mood: neutral
-  confidence: 0.8
-  source: api
+  mood: "neutral"
+  confidence: 0.84
+  source: "api"
 
-# ─── Sync Layer ─────────────────────────────────────────────────
-sync:
-  backend: pocketbase
-  pocketbase:
-    enabled: true
-    url: "http://localhost:8090"
-    collection: memoree_events
-
-# ─── FastAPI + WebSocket Daemon ──────────────────────────────────
+# ─── FastAPI Daemon / Server Settings ───────────────────────────────────
 server:
-  host: 127.0.0.1
+  host: "127.0.0.1"
   port: 7042
-  reload: true
-  ws_path: /ws/memory
+  reload: false
+  # Reserved for future WebSocket layer; current Memoree uses HTTP + SSE.
+  ws_path: "/ws/memory"

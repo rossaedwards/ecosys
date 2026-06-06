@@ -1,0 +1,101 @@
+{
+  "version": "0.1.0",
+  "namespace": "aurphyx.aps",
+  "updated_at": "2026-05-30T03:25:00Z",
+
+  "providers": {
+    "perplexity": {
+      "id": "perplexity",
+      "kind": "llm",
+      "llm_provider_enum": "PERPLEXITY",
+      "default_project": "memoree",
+      "description": "Default Memoree context LLM"
+    },
+    "gemini": {
+      "id": "gemini",
+      "kind": "llm",
+      "llm_provider_enum": "GEMINI",
+      "default_project": "aurafs",
+      "description": "Google Gemini integration"
+    }
+    // add: claude, lmstudio, supergrok, openai, ollama…
+  },
+
+  "projects": {
+    "memoree": {
+      "id": "memoree",
+      "kind": "project",
+      "owner": "rossaedwards",
+      "primary_domain": "MEMORY",
+      "dualities": [
+        "coherence/decoherence",
+        "discrete/continuous",
+        "order/chaos"
+      ],
+      "preferred_provider": "perplexity"
+    },
+    "aurafs": {
+      "id": "aurafs",
+      "kind": "project",
+      "owner": "aurphyx",
+      "primary_domain": "FILE_SYSTEM",
+      "dualities": [
+        "structure/randomness",
+        "local/global"
+      ],
+      "preferred_provider": "gemini"
+    }
+    // mirror everything from projects.json, but compressed for routing
+  },
+
+  "memory_types": {
+    "episodic": {
+      "enum": "EPISODIC",
+      "collection": "episodic",
+      "description": "Conversation turns, session-bound interactions",
+      "default_top_k": 5,
+      "priority": 10
+    },
+    "semantic": {
+      "enum": "SEMANTIC",
+      "collection": "semantic",
+      "description": "Project knowledge, facts, relationships, dualities",
+      "default_top_k": 10,
+      "priority": 9
+    }
+    // procedural, meta, quantum, creative, governance
+  },
+
+  "protocols": {
+    "mcp": {
+      "id": "mcp",
+      "spec": "Model Context Protocol",
+      "transports": ["http", "stdio"],
+      "default_route": "mcp.tool_call"
+    },
+    "apc": {
+      "id": "apc",
+      "spec": "Agent/Protocol Controller",
+      "default_route": "api.chat"
+    },
+    "acp": {
+      "id": "acp",
+      "spec": "Agent Communication Protocol",
+      "default_route": "acp.agent_message"
+    }
+  },
+
+  "dualities": {
+    "coherence/decoherence": {
+      "id": "coherence/decoherence",
+      "tags": ["quantum", "stability", "memoree"],
+      "preferred_projects": ["memoree", "tvfd", "vim", "ftqc"]
+    },
+    "identity/sovereignty": {
+      "id": "identity/sovereignty",
+      "tags": ["identity", "governance"],
+      "preferred_projects": ["soulshot", "blissid"]
+    }
+    // etc., pulled from projects.json
+  }
+}

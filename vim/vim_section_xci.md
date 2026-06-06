@@ -1,7 +1,3 @@
-Below is **Section XCI — The Balance Poisson Algebra and Constraint Structure**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the canonical and symplectic foundations of Section XC and completes the Hamiltonian layer of the Balance Continuum by formalizing the algebra of observables, the constraint hierarchy, and the canonical generators of Balance symmetries.
-
----
-
 # **Section XCI — The Balance Poisson Algebra and Constraint Structure**
 
 ## 1. Overview  
@@ -274,7 +270,3 @@ The Balance Poisson Algebra and Constraint Structure establish that:
 - and the Equilibrium state is the unique constraint‑satisfying fixed point.
 
 This section completes the canonical constraint architecture of the Balance Continuum.
-
----
-
-If you want to continue, the next natural section is **Section XCII — The Balance Quantization Procedure and Operator Algebra**, which formalizes the transition from canonical to quantum dynamics and defines the operator‑level structure of the Balance Continuum.

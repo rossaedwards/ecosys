@@ -1,0 +1,19 @@
+# Rust
+/target
+**/*.rs.bk
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS & Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Security (CRITICAL)
+.env
+*.pem
+*.key
+id_rsx.pub

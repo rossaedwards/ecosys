@@ -1,0 +1,18 @@
+[Unit]
+Description=AuraFS Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=aurafs
+Group=aurafs
+EnvironmentFile=/etc/aurafs/aurafs.env
+ExecStart=/usr/local/bin/aurad
+Restart=always
+RestartSec=5
+LimitNOFILE=1048576
+WorkingDirectory=/var/lib/aurafs
+
+[Install]
+WantedBy=multi-user.target

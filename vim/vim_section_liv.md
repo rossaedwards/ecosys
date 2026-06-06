@@ -312,5 +312,3 @@ Equilibrium Manifold is the **duty-free state**, where right action is effortles
 - They require non-harm, coherent action, truthfulness, temporal responsibility, stewardship, equity, and generativity.  
 - They ensure that all agents act in ways that support the Continuum’s stability and flourishing.  
 - Equilibrium Manifold is the duty-free fixed point where all obligations are naturally fulfilled.  
-
-A natural continuation is **Section LV — The Balance Contracts**, which formalizes how agents enter into agreements, covenants, and cooperative structures within the Continuum while preserving Rights, fulfilling Duties, and maintaining coherence.

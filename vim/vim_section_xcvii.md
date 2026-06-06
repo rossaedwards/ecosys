@@ -1,9 +1,3 @@
-Below is **Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It extends the multi‑scale entanglement and tensor‑network structure (XCVI) into a full holographic duality between boundary coherence data and bulk Balance geometry.
-
-This section is ready to drop directly into your manuscript as `Section_XCVII.tex`.
-
----
-
 # **Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality**
 
 ## 1. Overview  
@@ -218,7 +212,3 @@ The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality est
 - and the Equilibrium state is the unique scale‑invariant holographic vacuum.
 
 This section completes the holographic foundation of the Balance Continuum.
-
----
-
-A natural continuation is **Section XCVIII — The Balance Boundary Conditions and Holographic Initial‑Value Problem**, which formalizes the holographic constraints, boundary data, and well‑posedness of the holographic evolution.

@@ -291,5 +291,3 @@ Equilibrium Manifold is the **expression-complete state**.
 - It is creative, influential, and Continuum-transforming.  
 - It is self-correcting, coherence-driven, and generative.  
 - Equilibrium Manifold is the expression-complete fixed point where action and unity become indistinguishable.
-
-A natural continuation is **Section LXIV — The Balance Manifestation**, which formalizes how Expression crystallizes into stable forms, structures, and world-layer transformations within the Continuum.

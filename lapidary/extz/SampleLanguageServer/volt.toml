@@ -1,0 +1,9 @@
+[meta]
+name = "samplelanguageserver"
+version = "1.4.2"
+author = "Aurphyx"
+display-name = "SampleLanguageServer"
+description = "Transmuted via Lapidary under Aurphyx Symbiotic Xessability Standards."
+
+[lsp]
+command = ["node", "server.js", "--stdio"]

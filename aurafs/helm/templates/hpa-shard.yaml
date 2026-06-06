@@ -1,0 +1,21 @@
+{{- if and .Values.hpa.enabled .Values.hpa.shard.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "aurafs.fullname" . }}-shard
+  namespace: {{ include "aurafs.namespace" . }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: {{ include "aurafs.fullname" . }}-shard
+  minReplicas: {{ .Values.hpa.shard.minReplicas }}
+  maxReplicas: {{ .Values.hpa.shard.maxReplicas }}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.hpa.shard.cpuUtilization }}
+{{- end }}

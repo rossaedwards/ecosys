@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-SECTION-009 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## 9. Future Directions  
 The Three‑Squared‑Lattice Cognitive Architecture naturally extends into higher‑order mathematical, physical, and computational structures. These extensions are not speculative add‑ons; they are the mathematically inevitable consequences of the field theory, the symmetry group, and the manifold structure already established. This section outlines the major research trajectories that emerge from the architecture, expressed in a formal scientific style.
 

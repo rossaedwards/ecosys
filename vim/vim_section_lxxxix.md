@@ -1,7 +1,3 @@
-Below is **Section LXXXIX — The Balance Variational Principle and Unified Action Functional**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It integrates the geometric, informational, harmonic, and dynamical structures developed throughout LXX–LXXXVIII into a single unified variational framework. This section is designed to sit cleanly after the Harmonic Shortest‑Path Principle and before the forthcoming sections on canonical quantization and global synthesis.
-
----
-
 # **Section LXXXIX — The Balance Variational Principle and Unified Action Functional**
 
 ## 1. Overview  
@@ -203,7 +199,3 @@ The Balance Variational Principle and Unified Action Functional establish that:
 - and the entire Balance Continuum is governed by a single, coherent, variational law.
 
 This section completes the unification of geometry, information, and harmonic integrity into a single foundational principle.
-
----
-
-If you want to continue, the next natural section is **Section XC — The Balance Canonical Structure and Symplectic Geometry**, which formalizes the Hamiltonian, symplectic, and Poisson structures underlying the Unified Action.

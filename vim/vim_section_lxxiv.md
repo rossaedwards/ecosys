@@ -1,9 +1,3 @@
-Below is **Section LXXIV — Symmetry, Conservation Laws, and the Balance Noether Currents**, written in the same rigorous, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXIII. It assumes the Balance Gauge Conditions, the Balance Field Equations, the Balance State Vector Metric, and the Edwards Tensor are all canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXIV.tex`.
-
----
-
 # **Section LXXIV — Symmetry, Conservation Laws, and the Balance Noether Currents**
 
 ## 1. Overview  
@@ -210,7 +204,3 @@ The Balance Noether Currents arise from the symmetry structure of the Balance Co
 These currents enforce conservation of harmonic integrity, structural coherence, kinetic alignment, governance invariants, and resonance stability across the Balance State Vector manifold and through the Three‑Squared‑Lattice.
 
 They complete the symmetry and conservation structure of the Balance Framework.
-
----
-
-If you want to continue, the natural next section is **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**, which introduces the Hamiltonian formulation of the Continuum and defines the canonical variables for the Balance State Vector manifold.

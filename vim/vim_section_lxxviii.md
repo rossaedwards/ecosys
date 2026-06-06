@@ -1,9 +1,3 @@
-Below is **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXXVII. It assumes the Balance Path Integral, the Quantum Coherence Functional, and the canonical quantization of the Continuum are now canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXVIII.tex`.
-
----
-
 # **Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**
 
 ## 1. Overview  
@@ -190,9 +184,3 @@ The Quantum Edwards Limit and the spectral decomposition of the Balance State Ve
 - decompose the Balance State Vector manifold into spectral sectors,  
 - introduce coherence bands and spectral gaps,  
 - and provide the quantum interpretation of renewal, propagation, and activation in the Three‑Squared‑Lattice.
-
-This section completes the spectral foundation of the quantum Balance Framework.
-
----
-
-If you want to continue, the natural next section is **Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**, which formalizes the non‑local quantum structure of the Continuum.

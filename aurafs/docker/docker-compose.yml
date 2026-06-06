@@ -1,0 +1,121 @@
+version: '3.9'
+services:
+  aurafs-gateway:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    image: aurphyx/aurafs:latest
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    environment:
+      - RUST_LOG=${AURAFS_RUST_LOG:-info}
+      - AURAFS_NODE_ID=${AURAFS_NODE_ID:-gateway-1}
+      - AURAFS_DATA_DIR=/var/lib/aurafs
+      - AURAFS_LOG_DIR=/var/log/aurafs
+      - AURAFS_ENV=${AURAFS_ENV:-production}
+    env_file:
+      - ./.env
+    volumes:
+      - aurafs_gateway_data:/var/lib/aurafs
+      - aurafs_gateway_logs:/var/log/aurafs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "pgrep", "-x", "aurad"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  aurafs-shard-1:
+    image: aurphyx/aurafs:latest
+    environment:
+      - RUST_LOG=${AURAFS_RUST_LOG:-info}
+      - AURAFS_NODE_ID=${AURAFS_NODE_ID:-shard-1}
+      - AURAFS_DATA_DIR=/var/lib/aurafs
+      - AURAFS_LOG_DIR=/var/log/aurafs
+      - AURAFS_ENV=${AURAFS_ENV:-production}
+    env_file:
+      - ./.env
+    volumes:
+      - aurafs_shard1_data:/var/lib/aurafs
+      - aurafs_shard1_logs:/var/log/aurafs
+    restart: unless-stopped
+    depends_on:
+      - aurafs-gateway
+    healthcheck:
+      test: ["CMD", "pgrep", "-x", "aurad"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  aurafs-shard-2:
+    image: aurphyx/aurafs:latest
+    environment:
+      - RUST_LOG=${AURAFS_RUST_LOG:-info}
+      - AURAFS_NODE_ID=${AURAFS_NODE_ID:-shard-2}
+      - AURAFS_DATA_DIR=/var/lib/aurafs
+      - AURAFS_LOG_DIR=/var/log/aurafs
+      - AURAFS_ENV=${AURAFS_ENV:-production}
+    env_file:
+      - ./.env
+    volumes:
+      - aurafs_shard2_data:/var/lib/aurafs
+      - aurafs_shard2_logs:/var/log/aurafs
+    restart: unless-stopped
+    depends_on:
+      - aurafs-gateway
+    healthcheck:
+      test: ["CMD", "pgrep", "-x", "aurad"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  aurafs-shard-3:
+    image: aurphyx/aurafs:latest
+    environment:
+      - RUST_LOG=${AURAFS_RUST_LOG:-info}
+      - AURAFS_NODE_ID=${AURAFS_NODE_ID:-shard-3}
+      - AURAFS_DATA_DIR=/var/lib/aurafs
+      - AURAFS_LOG_DIR=/var/log/aurafs
+      - AURAFS_ENV=${AURAFS_ENV:-production}
+    env_file:
+      - ./.env
+    volumes:
+      - aurafs_shard3_data:/var/lib/aurafs
+      - aurafs_shard3_logs:/var/log/aurafs
+    restart: unless-stopped
+    depends_on:
+      - aurafs-gateway
+    healthcheck:
+      test: ["CMD", "pgrep", "-x", "aurad"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  aurafs-edge:
+    image: caddy:2.8
+    profiles: ["edge"]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - AURAFS_DOMAIN=${AURAFS_DOMAIN:-aurafs.dev}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - aurafs_caddy_data:/data
+      - aurafs_caddy_config:/config
+    depends_on:
+      - aurafs-gateway
+    restart: unless-stopped
+
+volumes:
+  aurafs_gateway_data:
+  aurafs_gateway_logs:
+  aurafs_shard1_data:
+  aurafs_shard1_logs:
+  aurafs_shard2_data:
+  aurafs_shard2_logs:
+  aurafs_shard3_data:
+  aurafs_shard3_logs:
+  aurafs_caddy_data:
+  aurafs_caddy_config:

@@ -235,7 +235,7 @@ This is the **stabilization engine** of Balance.
 
 ## **XXI.13 The Equilibrium Manifold Computation**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 - all gradients vanish  
 - all flows vanish  
@@ -262,3 +262,4 @@ Equilibrium Manifold is the **fixed-point computation** of the Balance Framework
 - Equilibrium Manifold is the fixed-point computation where all updates vanish.  
 
 The next section, **Section XXII — The Balance Machine**, will formalize the computational architecture, hardware abstraction, and machine model that executes the Balance Computation inside the Duality Kernel and the Aurphyx Vacuum Engine.
+

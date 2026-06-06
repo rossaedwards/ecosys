@@ -177,7 +177,7 @@ The spectral topology is the **global structure** of the Balance Spectrum.
 
 ## **XVIII.10 The Equilibrium Manifold Spectrum Geometry**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 \[
 \lambda_i = 0.
@@ -226,3 +226,4 @@ This is the **global spectral geometry** of the Balance Continuum.
 - The Balance Continuum extends the spectral geometry across spatial, temporal, and harmonic dimensions.  
 
 The next section, **Section XIX — The Balance Algebra**, will formalize the algebraic structure underlying the Balance Framework: the operators, commutators, Lie algebras, and algebraic identities that govern how Balance quantities combine, transform, and interact.
+

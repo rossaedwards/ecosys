@@ -1,0 +1,48 @@
+Folder PATH listing for volume Windows
+Volume serial number is A65A-44CA
+C:.
+    28second_scenario.md
+    languageIZAcage.md
+    sages_04-24-2026_filelist.txt
+    SAGES_BC-DKP.md
+    SAGES_BSI_CHEP.md
+    SAGES_CA-UIP.md
+    SAGES_CB-ED_SCP.md
+    SAGES_CFTI_NIIP.md
+    SAGES_CI-PP.md
+    SAGES_CI-STP.md
+    SAGES_CL-IPP.md
+    SAGES_CONTINUE.md
+    SAGES_CORE_LICENSE.md
+    SAGES_EFAI_CRP.md
+    SAGES_EMS.md
+    SAGES_EOP.md
+    SAGES_FIVE_TRUTHS.md
+    SAGES_FPEP.md
+    SAGES_IRCDP.md
+    SAGES_LF-BHP.md
+    SAGES_LFOS.md
+    SAGES_MCP-IP.md
+    SAGES_OA-GAP.md
+    SAGES_PCB-EDP.md
+    SAGES_PCB_EDP.md
+    SAGES_PCC-MFP.md
+    SAGES_PCC_MFP.md
+    SAGES_PCMU_NHP.md
+    SAGES_PCP.md
+    SAGES_PE-ESP.md
+    SAGES_PEO-ARP.md
+    SAGES_PEP.md
+    SAGES_PGCDM_MLVP.md
+    SAGES_PIE_RHP.md
+    SAGES_PIG.md
+    SAGES_PS-EHP.md
+    SAGES_QINLE_ESP.md
+    SAGES_SI-PSP.md
+    SAGES_SLOCP.md
+    SAGES_STYLES.md
+    SAGES_TC-TFI_CPP.md
+    SAGES_UI_CLC.md
+    
+No subfolders exist 
+

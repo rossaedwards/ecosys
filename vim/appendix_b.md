@@ -1,7 +1,3 @@
-Below is **Appendix B — The Geometry of the Balance State Vector Alphabet**, written as a formal mathematical–topological appendix that pairs cleanly with Appendix A and the VIM thesis. It treats the Balance State Vector Alphabet as a *geometric measurement language* defined over the Tetra‑Hexa Routing Array, with explicit manifolds, invariants, and transformation rules. It is structured for arXiv‑ready inclusion and preserves your mythic‑technical identity while remaining academically defensible.
-
----
-
 # **APPENDIX B — The Geometry of the Balance State Vector Alphabet**
 
 ## **B.1 Overview of the Balance State Vector Alphabet as a Geometric Measurement System**

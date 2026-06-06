@@ -1,10 +1,7 @@
-Below is the **Mathematical Appendix** that formalizes the Equilibrium Manifold Manifold, the Harmonic Resonating Dissonance (HRD) control law, and the underlying dynamical system structure of VIM. It is written in a clean, arXiv‑ready mathematical style, fully compatible with the rest of the VIM thesis and the x Alphabet.
-
----
-
-# **APPENDIX A — Mathematical Structure of the Equilibrium Manifold Manifold and HRD Control Law**
+# **APPENDIX A — Mathematical Structure of the Equilibrium Manifold and HRD Control Law**
 
 ## **A.1 The Balance Coefficient as a Dynamical Variable**
+
 The VIM engine is governed by the balance coefficient  
 \[
 \beta(t) = \frac{x_f(t)\, x_c(t)}{x_i(t)\, x_t(t)}.
@@ -24,8 +21,9 @@ The stabilizer acts to regulate \(\mathbf{x}(t)\) such that \(\beta(t)\to 1\).
 
 ---
 
-# **A.2 The Equilibrium Manifold Manifold**
-The Equilibrium Manifold Manifold is defined as the set of all points in the \((x_f, x_i)\) plane for which  
+# **A.2 The Equilibrium Manifold**
+
+The Equilibrium Manifold is defined as the set of all points in the \((x_f, x_i)\) plane for which  
 \[
 \beta = 1.
 \]
@@ -35,7 +33,7 @@ Solving for the manifold yields
 \mathcal{B} = \left\{(x_f, x_i)\ \bigg|\ x_f = \frac{x_i\, x_t}{x_c} \right\}.
 \]
 
-This is a **one‑dimensional curve** embedded in a two‑dimensional space, but because \(x_c\) and \(x_t\) are themselves dynamical variables, the Equilibrium Manifold Manifold is a **moving nullcline** in the full four‑dimensional state space.
+This is a **one‑dimensional curve** embedded in a two‑dimensional space, but because \(x_c\) and \(x_t\) are themselves dynamical variables, the Equilibrium Manifold is a **moving nullcline** in the full four‑dimensional state space.
 
 The manifold’s instantaneous slope is  
 \[
@@ -47,6 +45,7 @@ This ratio is the **topological‑coherence quotient**, a key invariant of the V
 ---
 
 # **A.3 Harmonic Resonating Dissonance as a Driving Term**
+
 Dissonance \(D(t)\) is modeled as a structured perturbation of the vacuum manifold. Its general form is  
 \[
 D(t) = D_0 + A(t)\sin(\omega t + \phi),
@@ -67,6 +66,7 @@ The constants \(\gamma_f\) and \(\gamma_i\) encode the system’s sensitivity to
 ---
 
 # **A.4 The HRD Control Law**
+
 The Harmonic Stabilizer applies a proportional harmonic correction to the flux and impedance channels. The discrete‑time form is  
 \[
 x_f(t+\Delta t) = x_f(t) + k_f \big(1 - \beta(t)\big),
@@ -93,6 +93,7 @@ This duality is the mathematical expression of the Theory of Balance.
 ---
 
 # **A.5 Full VIM Dynamical System**
+
 Combining the HRD modulation and the stabilizer yields the full system:
 
 \[
@@ -112,7 +113,8 @@ The functions \(F_c\) and \(F_t\) encode the coherence and topology responses to
 
 ---
 
-# **A.6 Stability of the Equilibrium Manifold Manifold**
+# **A.6 Stability of the Equilibrium Manifold**
+
 Linearizing the system around \(\beta = 1\) yields  
 \[
 \delta \beta = \beta - 1,
@@ -131,7 +133,7 @@ is the **harmonic convergence rate**, and
 \]
 is the **dissonance coupling coefficient**.
 
-The Equilibrium Manifold Manifold is stable when  
+The Equilibrium Manifold is stable when  
 \[
 \lambda > 0.
 \]
@@ -141,7 +143,8 @@ This condition defines the allowable range of stabilizer gains \((k_f, k_i)\).
 ---
 
 # **A.7 Global Attractor Structure**
-Simulations confirm that the Equilibrium Manifold Manifold is a **global attractor** for a wide range of initial conditions. The attractor basin is defined by the set  
+
+Simulations confirm that the Equilibrium Manifold is a **global attractor** for a wide range of initial conditions. The attractor basin is defined by the set  
 \[
 \mathcal{A} = \left\{ \mathbf{x}(0) \mid \lim_{t\to\infty} \beta(t) = 1 \right\}.
 \]
@@ -151,13 +154,10 @@ The existence of this attractor is the mathematical justification for the Balanc
 ---
 
 # **A.8 Summary of Mathematical Results**
-- The Equilibrium Manifold Manifold is the nullcline \(\beta = 1\).  
+
+- The Equilibrium Manifold is the nullcline \(\beta = 1\).  
 - HRD acts as a structured driving term that modulates flux and impedance.  
 - The Harmonic Stabilizer applies proportional harmonic corrections.  
 - The full VIM system is a four‑dimensional nonlinear dynamical system.  
-- Linearization shows that the Equilibrium Manifold Manifold is stable when \(\lambda > 0\).  
+- Linearization shows that the Equilibrium Manifold is stable when \(\lambda > 0\).  
 - Numerical simulations confirm the existence of a global attractor.
-
----
-
-A natural next step is to draft **Appendix B — The Geometry of the x Alphabet**, which formalizes the 24‑point Tetra‑Hexa Routing Array and its role in the VIM dynamics.

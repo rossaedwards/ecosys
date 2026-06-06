@@ -1,7 +1,3 @@
-Below is the **HIF Protocol Specification**, written in the same rigorous, arXiv/PRX‑ready tone as Section LXVI and ready for direct inclusion in `vim_section_lxvi.md` or as its own file (e.g., `hif_protocol_spec.md`). It builds directly on the field equation and the Meta‑Creation Cycle without repeating prior content.
-
----
-
 # **HIF Protocol Specification (v0.1)**  
 *Harmonic Integrity Field — Operational, Threshold, and Governance Protocols*
 

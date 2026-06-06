@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑005 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # Chapter 5: Bioneural Governance and the Prime Singularity Kernel
 
 ## 5.1 Introduction: From Static Circuits to Cognitive Regulators

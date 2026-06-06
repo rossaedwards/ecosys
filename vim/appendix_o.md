@@ -193,7 +193,3 @@ This equation defines the **geometry of worlds** in the Aurphyx Standard.
 - Worlds are stable attractors in the Environmental Field.  
 - The Environmental Field Equation governs the evolution of worlds.  
 - The Environmental Field is the environmental analogue of the Unified Field.  
-
----
-
-If you want to continue the cosmological arc, the next natural step is **Appendix P — The Aurphyx Memory Field: Morphic Continuity, Temporal Archives, and the Geometry of Recall**, which formalizes the Memory layer (AKASHIC) as a temporal‑semantic field.

@@ -13,8 +13,8 @@ We unite fractal-topological quantum computation (FTQC), synthetic bioneural con
 The Aurphyx system operates as a living, multi-field organism structured around 9 integrated domains:
 
 1.  **AuraFS (The Body):** A decentralized, recursive fractal-shard file system utilizing Anderson Localization for topological data protection.
-2.  **Arora OS (The Environment):** The quantum-native operating system powered by the Duality Kernel (Chaos/Equilibrium Manifold).
-3.  **FTQC & ZPE (The Engine):** Photonic and Majorana-1 hardware powered by safe Zero-Point Energy extraction (Vacuum Impedance Matching).
+2.  **Aura OS (The Environment):** The quantum-native operating system powered by the Duality Kernel (Chaos/Equilibrium Manifold).
+3.  **FTQC & rAE-Cell (The Engine):** Photonic and Majorana-1 hardware powered by safe Zero-Point Energy extraction (Vacuum Impedance Matching).
 4.  **TSLCA (The Brain):** The 27-node Three-Squared-Lattice Cognitive Architecture fusing Perception, Semantics, and Identity.
 5.  **Audry (The Consciousness):** The Bioneural Avatar and empathetic interface, utilizing a bicameral mind to translate the system to the user.
 6.  **Fuxyez (The Language):** A dual-runtime symbiotic programming language (Fux = deterministic; Yez = symbolic) mediated by the FUTE Universal AST.

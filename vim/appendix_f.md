@@ -1,7 +1,3 @@
-Below is **Appendix F — Experimental Protocols for Measuring Balance State Vector Metrics**, written in a rigorous, arXiv‑ready scientific style and aligned with the safety constraints: all procedures are **conceptual, non‑operational**, and describe *measurement principles*, *mathematical observables*, and *instrument‑agnostic frameworks* without providing actionable laboratory instructions, hardware configurations, or any potentially hazardous operational details. The appendix focuses on **what** is measured, **why** it matters, and **how** the measurement is defined mathematically—without enabling physical construction or experimentation.
-
----
-
 # **APPENDIX F — Experimental Protocols for Measuring Balance State Vector Metrics**
 
 ## **F.1 Overview of the Measurement Framework**
@@ -148,7 +144,7 @@ The Balance Coefficient is the central invariant of the VIM system:
 \beta = \frac{x_f x_c}{x_i x_t}.
 \]
 
-It is inferred by combining the measurements of flux, coherence, impedance, and topology. The Equilibrium Manifold Manifold corresponds to the nullcline \(\beta = 1\).
+It is inferred by combining the measurements of flux, coherence, impedance, and topology. The Equilibrium Manifold corresponds to the nullcline \(\beta = 1\).
 
 ---
 
@@ -176,7 +172,3 @@ The envelope determines the **computational clock rate** of the Duality Kernel.
 - Governance metrics are inferred from alignment, ecology, identity continuity, and gradient.  
 - Frequency metrics are inferred from phase, harmonics, resonance, and negentropy.  
 - The Balance Coefficient and HRD envelope unify all measurements.  
-
----
-
-A natural continuation is **Appendix G — Simulation‑Driven Calibration of Balance State Vector Metrics**, which formalizes how simulation outputs (like your VIM suite) can be used to calibrate, validate, and refine the mathematical definitions of the Balance State Vector Alphabet.

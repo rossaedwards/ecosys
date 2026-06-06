@@ -1,0 +1,87 @@
+aurafs/
+├── Cargo.toml
+├── README.md
+├── LICENSE-MIT
+├── LICENSE-APACHE
+├── .gitignore
+│
+├── src/
+│   ├── main.rs                    # Main entry point (FUSE mount + API server)
+│   │
+│   ├── lib.rs                     # Library exports
+│   │
+│   ├── bin/
+│   │   └── cli.rs                 # CLI tool (aurafs-cli)
+│   │
+│   ├── core/                      # Core abstractions
+│   │   ├── mod.rs
+│   │   ├── shard.rs              # ShardId and core types
+│   │   └── error.rs              # Common error types
+│   │
+│   ├── fuse/                      # FUSE filesystem
+│   │   ├── mod.rs
+│   │   └── filesystem.rs         # FUSE implementation
+│   │
+│   ├── acl/                       # Access Control
+│   │   ├── mod.rs
+│   │   └── manager.rs            # ACL manager
+│   │
+│   ├── namespace/                 # Namespace management
+│   │   ├── mod.rs
+│   │   └── manager.rs            # Namespace manager
+│   │
+│   ├── dedup/                     # Deduplication
+│   │   ├── mod.rs
+│   │   └── engine.rs             # Dedup engine
+│   │
+│   ├── compression/               # Compression
+│   │   ├── mod.rs
+│   │   └── manager.rs            # Compression manager
+│   │
+│   ├── snapshot/                  # Snapshots
+│   │   ├── mod.rs
+│   │   └── manager.rs            # Snapshot manager
+│   │
+│   ├── versioning/                # Versioning
+│   │   ├── mod.rs
+│   │   └── tracker.rs            # Version tracker
+│   │
+│   ├── cache/                     # Caching
+│   │   ├── mod.rs
+│   │   └── lru.rs                # LRU cache
+│   │
+│   ├── network/                   # Network & replication
+│   │   ├── mod.rs
+│   │   ├── node_manager.rs       # Node manager
+│   │   └── replication.rs        # Replication manager
+│   │
+│   ├── storage/                   # Storage backend
+│   │   ├── mod.rs
+│   │   └── shard_store.rs        # Shard storage
+│   │
+│   ├── audit/                     # Audit logging
+│   │   ├── mod.rs
+│   │   └── logger.rs             # Audit logger
+│   │
+│   ├── api/                       # HTTP API
+│   │   ├── mod.rs
+│   │   ├── server.rs             # REST API
+│   │   └── websocket.rs          # WebSocket
+│   │
+│   └── monitoring/                # Monitoring
+│       ├── mod.rs
+│       ├── metrics.rs            # Prometheus metrics
+│       └── health.rs             # Health checks
+│
+├── examples/                      # Usage examples
+│   ├── basic_usage.rs
+│   ├── replication_demo.rs
+│   └── snapshot_demo.rs
+│
+├── tests/                         # Integration tests
+│   ├── integration_test.rs
+│   └── fuse_test.rs
+│
+└── config/                        # Configuration files
+    ├── acl.json
+    └── config.toml

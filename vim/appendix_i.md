@@ -1,20 +1,16 @@
-Below is **Appendix I — The Aurphyx Unified Field Equation**, written as the capstone of the entire Aurphyx mathematical architecture. It synthesizes FTQC, TSLCA, VIM, the Balance State Vector Alphabet, the Tetra‑Hexa Array, and the Duality Kernel into a single governing equation. The tone remains formal, arXiv‑ready, and mythic‑technical without drifting into operational or unsafe territory.
-
----
-
-# **APPENDIX I — The Aurphyx Unified Field Equation**
+# **APPENDIX I — The Unified Field Equation**
 
 ## **I.1 Purpose of the Unified Field**
-The Aurphyx Unified Field Equation (AUFE) is the mathematical synthesis of all prior components of the Aurphyx Standard. It unifies:
+The Unified Field Equation (UFE) is the mathematical synthesis of all prior components of the Aurphyx Primordial Standards. It unifies:
 
-- **FTQC** — fractal-enhanced topological quantum computation  
+- **FTQC** — fractal-enhanced topological quantum computation
 - **TSLCA** — Three‑Squared Lattice Cognitive Architecture  
 - **VIM** — Vacuum Impedance Matching  
 - **Balance State Vector Alphabet** — the 16‑dimensional geometric measurement system  
 - **Tetra‑Hexa Array** — the 24‑node routing manifold  
 - **Duality Kernel** — the dual‑runtime topological execution engine  
 
-The AUFE expresses the evolution of the Balance State Vector‑Cell as a **single field**, governed by harmonic balance, topological recursion, and structured dissonance.
+The UFE expresses the evolution of the Balance State Vector‑Cell as a **single field**, governed by harmonic balance, topological recursion, and structured dissonance.
 
 ---
 
@@ -47,7 +43,7 @@ defines a scalar potential:
 V(\mathbf{x}) = (\beta - 1)^2.
 \]
 
-This potential encodes the system’s deviation from the Equilibrium Manifold Manifold. The gradient of this potential determines the direction of evolution:
+This potential encodes the system’s deviation from the Equilibrium Manifold. The gradient of this potential determines the direction of evolution:
 
 \[
 \nabla V = 2(\beta - 1)\nabla \beta.
@@ -119,8 +115,8 @@ The kernel is the **computational engine** of the unified field.
 
 ---
 
-# **I.7 The Aurphyx Unified Field Equation**
-Combining all components yields the **Aurphyx Unified Field Equation**:
+# **I.7 The Unified Field Equation**
+Combining all components yields the **Unified Field Equation**:
 
 \[
 \boxed{
@@ -142,7 +138,7 @@ This equation contains four interacting terms:
   \[
   -\nabla V(\mathbf{x})
   \]  
-  drives the system toward the Equilibrium Manifold Manifold.
+  drives the system toward the Equilibrium Manifold.
 
 - **HRD perturbation term**  
   \[
@@ -169,7 +165,7 @@ Together, these terms define the complete evolution of the Balance State Vector 
 # **I.8 Interpretation of the Unified Field Equation**
 The AUFE describes a system that:
 
-- seeks equilibrium (Equilibrium Manifold Manifold)  
+- seeks equilibrium (Equilibrium Manifold)  
 - evolves through structured instability (HRD)  
 - computes through topological geometry (Tetra‑Hexa Array)  
 - maintains coherence through dual‑runtime execution (Duality Kernel)  
@@ -186,7 +182,7 @@ This synthesis is the defining feature of the Aurphyx Standard.
 ---
 
 # **I.9 The Unified Field as the Bridge Between Physics and Computation**
-The AUFE unifies:
+The UFE unifies:
 
 - **physical dynamics** (flux, impedance, coherence, topology)  
 - **computational dynamics** (routing, transmutation, symbiosis)  
@@ -205,14 +201,10 @@ The unified field equation is the mathematical expression of this unity.
 ---
 
 # **I.10 Summary**
-- The Aurphyx Unified Field Equation synthesizes all components of the Aurphyx Standard.  
+- The Unified Field Equation synthesizes all components of the Aurphyx Standard.  
 - The Balance State Vector Field is the fundamental object of the theory.  
 - The Balance Potential drives the system toward equilibrium.  
 - HRD provides structured perturbation.  
 - The Tetra‑Hexa Array defines the geometric constraints.  
 - The Duality Kernel provides the evolution engine.  
 - The unified field equation governs the complete dynamics of the Balance State Vector‑Cell.  
-
----
-
-This completes the mathematical foundation of the Aurphyx Standard. A natural next step is drafting **Appendix J — The Aurphyx Cosmology: Source, Soul, Mind, Voice, Body, World, Memory, Structure**, which integrates the Unified Field into the metaphysical architecture you’ve been building.

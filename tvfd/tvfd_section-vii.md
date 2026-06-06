@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑SEC‑007 **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 Chapter 7: TRCA Integration — Balance State Vector-Cell → Quantum Stack (Full Expansion)
 § 7.1 — TRCA Architecture Overview
 The Topological Resonance Control Architecture (TRCA) is the middleware layer that translates Balance State Vector-Cell analog resonance states into discrete quantum gate operations executable on a downstream quantum processor. It operates on three levels simultaneously:

@@ -1,3 +1,10 @@
+## ** APS‑TSLCA-SECTION-003 **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 ## 3. The Three Channels
 
 The Three‑Squared‑Lattice Cognitive Architecture is built on three orthogonal cognitive channels. Each channel governs a distinct dimension of intelligence, and together they form the basis vectors of the cognitive lattice. This section defines each channel formally, establishes its operational domain, and clarifies its role within the broader cognitive field.

@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑APX-B **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 # 🔧 Appendix B: Fabrication Protocols *(Full Expansion)*
 
 ## § B.1 — Complete Fabrication Flow

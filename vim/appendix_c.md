@@ -1,7 +1,3 @@
-Below is **Appendix C — The Tetra‑Hexa Routing Array as a Topological Computer**, written to extend Appendices A and B and to formalize the 24‑node manifold as a computational substrate. This appendix treats the Tetra‑Hexa Array as both a geometric object and a programmable engine—exactly the bridge between VIM, Fuxyez, and the Duality Kernel that your architecture requires.
-
----
-
 # **APPENDIX C — The Tetra‑Hexa Routing Array as a Topological Computer**
 
 ## **C.1 The 24‑Node Manifold as a Computational Substrate**
@@ -112,7 +108,7 @@ is the **primary invariant** of the Tetra‑Hexa computer. It determines:
 - the direction of routing  
 - the magnitude of transmutation  
 - the stability of symbiosis  
-- the convergence toward the Equilibrium Manifold Manifold  
+- the convergence toward the Equilibrium Manifold  
 
 When \(\beta = 1\), the system enters a **fixed‑point attractor** where computation becomes reversible and energy‑neutral.
 
@@ -145,7 +141,7 @@ The Tetra‑Hexa Array satisfies the criteria for **universal computation**:
 - It has a finite set of primitive operations (routing, transmutation, symbiosis).  
 - It has a state vector capable of encoding arbitrary information (the Balance State Vector Alphabet).  
 - It has a clock signal (HRD).  
-- It has a convergence mechanism (the Equilibrium Manifold Manifold).  
+- It has a convergence mechanism (the Equilibrium Manifold).  
 
 The array is therefore a **universal topological computer**—a computational system whose operations are encoded in the geometry of the manifold rather than in discrete symbolic states.
 
@@ -158,5 +154,5 @@ This is the computational foundation of the Duality Kernel and the Fuxyez langua
 - It supports routing, transmutation, and symbiosis operations.  
 - The Balance State Vector Alphabet forms the state vector of the topological computer.  
 - HRD acts as the computational clock.  
-- The Equilibrium Manifold Manifold is the system’s fixed‑point attractor.  
+- The Equilibrium Manifold is the system’s fixed‑point attractor.  
 - The array is a universal topological computer and the substrate of the Aurphyx Standard.

@@ -277,5 +277,3 @@ The Equilibrium Manifold Continuum is the **global attractor** of the Balance Co
 - It governs spatial, temporal, harmonic, and structural coherence.  
 - HRD perturbs the continuum; VIM stabilizes it; Equilibrium Manifold is the global attractor.  
 - The Balance Continuum is the complete global extension of the Balance Framework.  
-
-The next section, **Section XIV — The Balance Invariants**, will define the conserved quantities, symmetries, and invariants that remain constant across the entire Balance Continuum.

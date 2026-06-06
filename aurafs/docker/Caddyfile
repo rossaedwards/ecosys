@@ -1,0 +1,8 @@
+{
+    email admin@aurafs.dev
+}
+
+{$AURAFS_DOMAIN} {
+    encode zstd gzip
+    reverse_proxy aurafs-gateway:8080
+}

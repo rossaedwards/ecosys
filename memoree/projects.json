@@ -1,8 +1,446 @@
 {
-  "Aurphyx_Memoree": {
-    "active_volumes": ["Volume_I", "Volume_II"],
-    "active_axioms": ["A22_Invariant", "A12_Local_Global"],
-    "active_dualities": ["coherence/decoherence", "discrete/continuous"],
-    "description": "Sovereign memory daemon"
+  "projects": {
+    "memoree": {
+      "description": "Sovereign memory daemon and core substrate",
+      "active_volumes": [
+        "Volume_I",
+        "Volume_II",
+        "Volume_III"
+      ],
+      "active_axioms": [
+        "A22_Invariant",
+        "A12_Local_Global"
+      ],
+      "active_dualities": [
+        "coherence/decoherence",
+        "discrete/continuous",
+        "order/chaos"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "aurafs": {
+      "description": "Aura Fractal Lattice Node Shard File System + Meshwerk \u2014 quantum secure, decentralized, off-grid, distributed storage, file system, and mesh network",
+      "active_volumes": [
+        "Volume_I",
+        "Volume_II"
+      ],
+      "active_axioms": [
+        "A22_Invariant"
+      ],
+      "active_dualities": [
+        "structure/randomness",
+        "local/global"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "g0dm0d3": {
+      "description": "g0dm0d3 (God Mode) - \u2014 Multi-Cross-Systems, fully customizable skinning/theme system, plugin & theme marketplace, Multi-AI orchestration admin console with web/desktop/mobile versions",
+      "active_volumes": [
+        "Volume_III"
+      ],
+      "active_axioms": [],
+      "active_dualities": [
+        "unity/multiplicity"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "aura": {
+      "description": "Aura OS \u2014 divine hybrid operating system embedding Audry, AuraFS, Chakra DataCore, DataOrb, SoulShot, g0dm0d3, SAGES, AINTS, and BlissID as system components",
+      "active_volumes": [
+        "Volume_II"
+      ],
+      "active_axioms": [],
+      "active_dualities": [
+        "freedom/constraint"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "audry": {
+      "description": "Audry \u2014 SoulGuardian AI companion/assistant/voice of the Aura Operating System with 33 sensor matrix",
+      "active_volumes": [
+        "Volume_I"
+      ],
+      "active_axioms": [],
+      "active_dualities": [
+        "connection/isolation",
+        "love/hate"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "ftqc": {
+      "description": "Fractal-enhanced Topological Quantum Computing or Fault Tolerant Quantum Computing (FTQC) - fractal lattice-based topological quantum computing for enhanced error correction, coherence, and infinite scalability",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "fractal/topological",
+        "classical/quantum"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "tvfd": {
+      "description": "Topological Vacuum Flux Dynamics (TVFD) \u2014 physical topological flux dynamics of the quantum vacuum and its applications for energy harvesting, computing, and more",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "vacuum/flux",
+        "harmony/entropy"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "vim": {
+      "description": "Vacuum Impedance Matching \u2014 Vacuum Impedance Matching for maximum energy transfer and resonance with the quantum vacuum",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "impedance/resonance",
+        "harmony/entropy"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "tslca": {
+      "description": "Three-Squared-Lattice Cognitive Architecture \u2014 cognitive architecture and AGI design framework based on three squared lattice layers (consciousness, subconsciousness, superconsciousness)",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "identity/sovereignty",
+        "conscious/subconscious"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "sages": {
+      "description": "Symbiotic AI Guardians of Existence Security \u2014 Immune system and governance field. 13 Guardians for 13 Balance Fields",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "protection/freedom",
+        "symbiosis/conflict"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "suxs": {
+      "description": "Symbiotic Universal Xessability Standards (SUXS) \u2014 SUXS defines the standards for ICC, SCC, SIC, USIS, and 'USAIC(Fusion Operator)'.",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "standard/innovation",
+        "SIC, SCC, ICC, USIS, USAIC"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "soulshot": {
+      "description": "SoulShot genesis engine \u2014 biometric soul authentication via HRV, voice, quantum entropy [ SoulShot | SoulChart | SoulHash | GuardHash | SoulCrypt | SoulSync | BLISS.iD ]",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "identity/anonymity",
+        "birth/death"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "gil": {
+      "description": "Global Ineffable Ledgers (GIL) \u2014 decentralized, off-grid, transparent, immutable, omni-channel archival ledgers",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "immutable/mutable",
+        "transparent/private"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "gvs": {
+      "description": "Global Voting System \u2014 decentralized, off-grid, global voting, consensus, and transparent governance",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "consensus/dissent",
+        "individual/collective"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "p4a": {
+      "description": "Opulence (P4A) \u2014 formerly Profit-4-All / Prosperity-4-All; recursive abundance distribution system",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "abundance/scarcity",
+        "giving/receiving"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "fuxyez": {
+      "description": "Fuxyez \u2014 symbiotic quantum computer programming language derived from Rust, and a clothing line",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "expression/constraint",
+        "art/code"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "blissid": {
+      "description": "BlissID \u2014 one soul, one voice, one vote, one ID. Soul-based decentralized identity system",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "identity/sovereignty",
+        "unity/uniqueness"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "adore": {
+      "description": "Adore \u2014 DAW to Create, Manipulate, Transmute, and Master audio",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "creation/destruction",
+        "signal/noise"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "egophyx": {
+      "description": "EgoPhyx (formerly OmniZen) \u2014 Aura/RHEL-hybrid ethical, transparent, admin, security & governance OS to be gifted to all 52 states and world governments",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "governance/freedom",
+        "transparency/privacy"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "chakra_datacore": {
+      "description": "Chakra DataCore System \u2014 Seven ChakraCores + ChaosCore & BlissCore = Infrastructure of the Duality Kernel",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "chaos/bliss",
+        "seven/one"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "duality_kernel": {
+      "description": "Duality Kernel \u2014 quantum entangled ChaosCore + BlissCore + SAGES + 7 ChakraCores; first fractal lattice kernel",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "chaos/bliss",
+        "discrete/continuous",
+        "order/entropy"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "dataorb": {
+      "description": "DataOrb \u2014 quantum data storage and distribution orb node system",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "local/distributed",
+        "static/dynamic"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "aints": {
+      "description": "AINTS \u2014 Aurphyx Ecosystem Integrations: Scripts, Daemons, and integration layer",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "integration/isolation"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "majorana_1": {
+      "description": "majorana_1 \u2014 Microsoft Majorana-1 quantum hardware integration for the Aurphyx ecosystem",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "topological/classical",
+        "error/correction"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "rAE-Cell": {
+      "description": "rAE-Cell / Casimir forcused Topological Vacuum Flux Dynamics \u2014 physical device prototype for quantum vacuum energy harvesting and quantum computing",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "vacuum/energy",
+        "flux/vim"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "aethornyx": {
+      "description": "Aethornyx \u2014 AR/VR/MMORPG/Real-World game using AuraFS shards as in-game currency",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "virtual/real",
+        "play/purpose"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "aurphyx_casino": {
+      "description": "Aurphyx Casino \u2014 provably fair DeFi casino for seeding AuraFS crypto/blockchain shards",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "risk/reward",
+        "chaos/order"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "rf_lovezme": {
+      "description": "RF_Lovezme \u2014 author/writer identity for A Divine Love Saga: novel series, short films, movies, and global co-authoring/co-publishing project",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "love/loss",
+        "individual/collective"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "soulsync": {
+      "description": "Soulsync \u2014 initiative for the synchronization of individual and collective consciousness, aiming to transcend oppressive systems and forces",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "access/restriction",
+        "universal/individual"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "lyte_rael": {
+      "description": "Lyte-raeL - Speed of Light Autonomous Vehicle & Railway Transportation Systems",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "autonomy/control",
+        "local/global"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "auraorb": {
+      "description": "AuraOrb & Arora Portal \u2014 Smart Speaker / AuraFS repeater/extender node device & Arora Smart Hub/Tablet",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "physical/digital",
+        "node/hub"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "vibe_media_player": {
+      "description": "Vibe Media Player \u2014 open-source media player for Vibe Audio files and streaming with Vibe Metadata support",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "signal/silence",
+        "standard/expression"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "vibe_audio_standard": {
+      "description": "Vibe Audio Standard & Protocol \u2014 open standard and protocol for Vibe Metadata and Vibe Data for audio files, streaming, and devices",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "signal/silence",
+        "standard/expression"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "tarot": {
+      "description": "Chaos & Bliss Tarot Deck, Book, Calendar, and series of short books.",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "chaos/bliss",
+        "fate/free_will"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "oracle_deck": {
+      "description": "Aurphyx Oracle Deck & Book",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "known/unknown",
+        "past/future"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "thirteen_month_calendar": {
+      "description": "Aurphyx Thirteen Month Calendars",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "time/timelessness"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    },
+    "soulcrypt": {
+      "description": "SoulCrypt \u2014 ineffable, immutable, post-quantum encryption system using SoulShot with biometric authentication via HRV, voice, and zkps.",
+      "active_volumes": [],
+      "active_axioms": [
+        "A22_Invariant"
+      ],
+      "active_dualities": [
+        "quantum/classical",
+        "sacred/scientific"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
+    },
+    "aurafs_devices": {
+      "description": "AuraFS Devices \u2014 hardware nodes for the AuraFS mesh network (Survivor/Citizen/Titan tiers)",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "hardware/software",
+        "node/network"
+      ],
+      "status": "active",
+      "owner": "aurphyx"
+    }
+  },
+  "global_settings": {
+    "default_project": "memoree",
+    "default_llm": "perplexity",
+    "context_window_days": 30,
+    "owner": "Ross Edwards / Aurphyx LLC"
   }
 }

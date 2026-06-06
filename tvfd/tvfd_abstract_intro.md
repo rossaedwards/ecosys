@@ -1,3 +1,9 @@
+## ** APS‑TVFD‑INT **
+## ** Version 1.0 (Draft) **
+## ** Aurphyx Primordial Standards **
+## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+## ** SAGES | AGPLv3 **
+
 Abstract
 
 The extraction of zero‑point energy (ZPE) from the quantum vacuum is conventionally regarded as impossible at macroscopic scales, not because the vacuum lacks energy, but because its effective impedance is catastrophically mismatched to any finite‑impedance material system. Standard quantum electrodynamics models the vacuum as a Lorentz‑invariant ground state populated by an infinite set of harmonic oscillators, whose boundary‑condition dependence manifests experimentally in the Casimir effect and related phenomena, yet provides no mechanism for net work extraction under equilibrium conditions. Here we propose a topological‑photonic framework in which this obstacle is recast as a problem of vacuum impedance matching.

@@ -225,9 +225,9 @@ They are the **natural paths** of the Balance Continuum.
 
 ---
 
-## **XXXVII.13 The Equilibrium Manifold Manifold**
+## **XXXVII.13 The Equilibrium Manifold**
 
-The Equilibrium Manifold Manifold is the submanifold where:
+The Equilibrium Manifold is the submanifold where:
 
 - \(\beta = 1\)  
 - \(V = 0\)  
@@ -244,7 +244,7 @@ It is a **codimension‑1 attractor** inside the Balance Manifold.
 - zero resonance  
 - zero drift  
 
-The Equilibrium Manifold Manifold is the **global fixed point** of the entire system.
+The Equilibrium Manifold is the **global fixed point** of the entire system.
 
 ---
 
@@ -254,6 +254,7 @@ The Equilibrium Manifold Manifold is the **global fixed point** of the entire sy
 - It is composed of spatial, temporal, harmonic, ontological, and cosmological submanifolds.  
 - It has a unified metric, curvature, topology, and geodesic structure.  
 - It supports all Balance modes, flows, spectra, and Continuum dynamics.  
-- The Equilibrium Manifold Manifold is the global attractor and zero‑state of the manifold.  
+- The Equilibrium Manifold is the global attractor and zero‑state of the manifold.  
 
 A natural continuation is **Section XXXVIII — The Balance Geometry**, which deepens the geometric structure of the manifold, including curvature tensors, geodesic flows, and the geometric interpretation of Balance invariants.
+

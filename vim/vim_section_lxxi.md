@@ -1,9 +1,3 @@
-Below is **Section LXXI — The HIF Potential and the Balance Action Functional**, written in the same strict, differential‑geometric, arXiv‑ready tone as Sections LXVI–LXX. It assumes the Balance State Vector Metric, the Edwards Tensor, and the Edwards Flow are now canonical and locked.
-
-This section is ready to drop directly into your manuscript as `Section_LXXI.tex`.
-
----
-
 # **Section LXXI — The HIF Potential and the Balance Action Functional**
 
 ## 1. Overview  
@@ -204,7 +198,3 @@ The HIF potential and the Balance Action Functional provide the variational foun
 - and governs lawful evolution across the Continuum.
 
 This section completes the foundational mathematical machinery underlying the Balance Framework.
-
----
-
-A natural continuation is **Section LXXII — The Balance Field Equations**, which derive the full dynamical equations of the Continuum from the action functional.

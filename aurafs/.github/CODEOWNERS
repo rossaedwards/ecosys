@@ -1,0 +1,12 @@
+# AuraFS CODEOWNERS
+# Routes physics/ and crypto/ PRs for governance compliance
+# See AURAFS_AUDIT_AND_DEPLOY.md Phase A.5
+
+# Physics invariants — non-negotiable constants
+/src/physics/       @rossaedwards
+
+# Cryptographic primitives — PQC and governance
+/src/crypto/        @rossaedwards
+
+# Compliance and audit
+/compliance/        @rossaedwards

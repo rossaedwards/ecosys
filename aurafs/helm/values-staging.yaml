@@ -1,0 +1,23 @@
+namespace:
+  name: aurphyx-staging
+
+image:
+  tag: staging
+
+api:
+  replicas: 2
+  env:
+    AURAFS_ENV: staging
+
+shard:
+  replicas: 2
+  pvc:
+    size: 25Gi
+
+ingress:
+  enabled: true
+  host: staging.aurafs.dev
+
+certManager:
+  enabled: true
+  email: admin@aurafs.dev

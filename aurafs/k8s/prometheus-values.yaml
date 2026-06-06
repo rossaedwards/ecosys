@@ -1,0 +1,134 @@
+# ═══════════════════════════════════════════════════════════════════
+# AURAFS Prometheus Values - Shard Metrics
+# Aurphyx LLC | Use with kube-prometheus-stack or standalone Prometheus
+# Install: helm install prometheus prometheus-community/kube-prometheus-stack -f k8s/prometheus-values.yaml -n aurphyx
+# ═══════════════════════════════════════════════════════════════════
+
+# AuraFS-specific scrape configs (merge into prometheus.prometheusSpec.additionalScrapeConfigs if using Helm)
+# Or use as reference for ConfigMap prometheus.yml
+
+# Shard metrics endpoints expected from AuraFS shard-server:
+# - aurafs_shard_total
+# - aurafs_shard_size_bytes
+# - aurafs_shard_replicas_healthy
+# - aurafs_shard_store_operations_total
+# - aurafs_erasure_coding_operations_total
+# - aurafs_mesh_peers_total
+# - aurafs_pqc_sign_operations_total
+
+prometheus:
+  prometheusSpec:
+    retention: 30d
+    retentionSize: "45GB"
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "250m"
+      limits:
+        memory: "2Gi"
+        cpu: "1000m"
+    # Additional scrape configs for AuraFS
+    additionalScrapeConfigs:
+      - job_name: aurafs-shards
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces:
+              names: [aurphyx]
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            action: keep
+            regex: aurafs-shard
+          - source_labels: [__meta_kubernetes_pod_ip]
+            target_label: __address__
+            replacement: ${1}:9090
+          - source_labels: [__meta_kubernetes_pod_name]
+            target_label: pod
+          - source_labels: [__meta_kubernetes_namespace]
+            target_label: namespace
+          - target_label: job
+            replacement: aurafs-shards
+      - job_name: aurafs-api
+        kubernetes_sd_configs:
+          - role: pod
+            namespaces:
+              names: [aurphyx]
+        relabel_configs:
+          - source_labels: [__meta_kubernetes_pod_label_app]
+            action: keep
+            regex: aurafs-api
+          - source_labels: [__meta_kubernetes_pod_ip]
+            target_label: __address__
+            replacement: ${1}:8080
+          - source_labels: [__meta_kubernetes_pod_name]
+            target_label: pod
+          - target_label: job
+            replacement: aurafs-api
+
+# Grafana dashboards (optional - AuraFS shard dashboard)
+grafana:
+  enabled: true
+  defaultDashboardsEnabled: true
+  additionalDataSources: []
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+        - name: aurafs
+          orgId: 1
+          folder: AuraFS
+          type: file
+          disableDeletion: false
+          editable: true
+          options:
+            path: /var/lib/grafana/dashboards/aurafs
+  dashboardsConfigMaps:
+    aurafs-shards: "aurphyx/grafana-dashboard-aurafs-shards"
+
+# Alertmanager rules for AuraFS (optional)
+alertmanager:
+  enabled: true
+  config:
+    route:
+      receiver: default
+      group_by: [namespace, app]
+      routes:
+        - match:
+            app: aurafs-shard
+          receiver: aurafs-shards
+          continue: true
+    receivers:
+      - name: default
+      - name: aurafs-shards
+        # Configure Slack/PagerDuty here
+
+# Prometheus rules for AuraFS shard alerts
+defaultRules:
+  create: true
+additionalPrometheusRulesMap:
+  aurafs-rules:
+    groups:
+      - name: aurafs-shards
+        interval: 30s
+        rules:
+          - alert: AuraFSShardDown
+            expr: up{job="aurafs-shards"} == 0
+            for: 2m
+            labels:
+              severity: critical
+            annotations:
+              summary: "AuraFS shard node down"
+              description: "Shard pod {{ $labels.pod }} is down."
+          - alert: AuraFSShardReplicasDegraded
+            expr: aurafs_shard_replicas_healthy < 3
+            for: 5m
+            labels:
+              severity: warning
+            annotations:
+              summary: "AuraFS shard replication degraded"
+          - alert: AuraFSShardStoreHighLatency
+            expr: rate(aurafs_shard_store_operations_total[5m]) > 1000
+            for: 10m
+            labels:
+              severity: warning
+            annotations:
+              summary: "AuraFS shard store high operation rate"

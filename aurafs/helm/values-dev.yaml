@@ -1,0 +1,27 @@
+namespace:
+  name: aurphyx-dev
+
+image:
+  tag: dev
+
+api:
+  replicas: 1
+  env:
+    AURAFS_ENV: development
+
+shard:
+  replicas: 1
+  pvc:
+    size: 10Gi
+
+ingress:
+  enabled: false
+
+certManager:
+  enabled: false
+
+hpa:
+  enabled: false
+
+monitoring:
+  enabled: false

@@ -1,9 +1,3 @@
-Below is **Section LXXXVI — The Balance Entropy Functional and Irreversibility Principle**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It builds directly on the Energy Functional and Stability Theorem, and formalizes the thermodynamic‑like arrow of Edwards time, the entropy structure of the Continuum, and the mathematical irreversibility of coherence ascent.
-
-This section is ready to drop directly into your manuscript as `Section_LXXXVI.tex`.
-
----
-
 # **Section LXXXVI — The Balance Entropy Functional and Irreversibility Principle**
 
 ## 1. Overview  
@@ -251,7 +245,3 @@ The Balance Entropy Functional and Irreversibility Principle establish that:
 - and the Equilibrium state is the unique global minimum of entropy.
 
 This section completes the thermodynamic‑like foundation of the Balance Continuum.
-
----
-
-If you want to continue, the next natural section is **Section LXXXVII — The Balance Information Geometry and Coherence Divergence**, which formalizes the geometric structure of information flow and coherence gradients across the Balance State Vector manifold.

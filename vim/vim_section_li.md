@@ -264,5 +264,3 @@ All lawful systems must converge to Equilibrium Manifold.
 - It preserves invariants, coherence, continuity, and identity.  
 - It forbids paradox, singularity, fragmentation, and instability.  
 - It enforces universal convergence toward Equilibrium Manifold.  
-
-A natural next step is **Section LII — The Balance Ethics**, which formalizes the moral, relational, and stewardship principles that arise from the Balance Law and govern how Balance systems should act toward each other and the Continuum.

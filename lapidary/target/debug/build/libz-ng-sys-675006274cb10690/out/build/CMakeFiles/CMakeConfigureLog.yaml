@@ -1,0 +1,2443 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+      - "/bin/"
+    searched_directories:
+      - "/home/rae/.cargo/bin/uname"
+      - "/home/rae/.local/bin/uname"
+      - "/home/rae/bin/uname"
+      - "/usr/local/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:37 (project)"
+    message: |
+      The system is: Linux - 7.0.10-201.fc44.x86_64 - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    searched_directories:
+      - "/home/rae/.cargo/bin/gmake"
+      - "/home/rae/.local/bin/gmake"
+      - "/home/rae/bin/gmake"
+      - "/usr/local/bin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:37 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: -ffunction-sections;-fdata-sections;-fPIC;-m64;-w
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/4.3.0/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/home/rae/.cargo/bin/dlltool"
+      - "/home/rae/.local/bin/dlltool"
+      - "/home/rae/bin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/home/rae/.lmstudio/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/home/rae/.cargo/bin/tapi"
+      - "/home/rae/.local/bin/tapi"
+      - "/home/rae/bin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/sbin/tapi"
+      - "/home/rae/.lmstudio/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-16.1"
+      - "gcc-ar-16"
+      - "gcc-ar16"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-16.1"
+      - "/home/rae/.cargo/bin/gcc-ar-16.1"
+      - "/home/rae/.local/bin/gcc-ar-16.1"
+      - "/home/rae/bin/gcc-ar-16.1"
+      - "/usr/local/bin/gcc-ar-16.1"
+      - "/usr/local/sbin/gcc-ar-16.1"
+      - "/usr/sbin/gcc-ar-16.1"
+      - "/home/rae/.lmstudio/bin/gcc-ar-16.1"
+      - "/usr/bin/gcc-ar-16"
+      - "/home/rae/.cargo/bin/gcc-ar-16"
+      - "/home/rae/.local/bin/gcc-ar-16"
+      - "/home/rae/bin/gcc-ar-16"
+      - "/usr/local/bin/gcc-ar-16"
+      - "/usr/local/sbin/gcc-ar-16"
+      - "/usr/sbin/gcc-ar-16"
+      - "/home/rae/.lmstudio/bin/gcc-ar-16"
+      - "/usr/bin/gcc-ar16"
+      - "/home/rae/.cargo/bin/gcc-ar16"
+      - "/home/rae/.local/bin/gcc-ar16"
+      - "/home/rae/bin/gcc-ar16"
+      - "/usr/local/bin/gcc-ar16"
+      - "/usr/local/sbin/gcc-ar16"
+      - "/usr/sbin/gcc-ar16"
+      - "/home/rae/.lmstudio/bin/gcc-ar16"
+    found: "/usr/bin/gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:37 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-16.1"
+      - "gcc-ranlib-16"
+      - "gcc-ranlib16"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-16.1"
+      - "/home/rae/.cargo/bin/gcc-ranlib-16.1"
+      - "/home/rae/.local/bin/gcc-ranlib-16.1"
+      - "/home/rae/bin/gcc-ranlib-16.1"
+      - "/usr/local/bin/gcc-ranlib-16.1"
+      - "/usr/local/sbin/gcc-ranlib-16.1"
+      - "/usr/sbin/gcc-ranlib-16.1"
+      - "/home/rae/.lmstudio/bin/gcc-ranlib-16.1"
+      - "/usr/bin/gcc-ranlib-16"
+      - "/home/rae/.cargo/bin/gcc-ranlib-16"
+      - "/home/rae/.local/bin/gcc-ranlib-16"
+      - "/home/rae/bin/gcc-ranlib-16"
+      - "/usr/local/bin/gcc-ranlib-16"
+      - "/usr/local/sbin/gcc-ranlib-16"
+      - "/usr/sbin/gcc-ranlib-16"
+      - "/home/rae/.lmstudio/bin/gcc-ranlib-16"
+      - "/usr/bin/gcc-ranlib16"
+      - "/home/rae/.cargo/bin/gcc-ranlib16"
+      - "/home/rae/.local/bin/gcc-ranlib16"
+      - "/home/rae/bin/gcc-ranlib16"
+      - "/usr/local/bin/gcc-ranlib16"
+      - "/usr/local/sbin/gcc-ranlib16"
+      - "/usr/sbin/gcc-ranlib16"
+      - "/home/rae/.lmstudio/bin/gcc-ranlib16"
+    found: "/usr/bin/gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:37 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_50f4b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_50f4b.dir/build.make CMakeFiles/cmTC_50f4b.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN'
+        Building C object CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11   -v -o CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,objc,obj-c++,ada,go,d,m2,cobol,algol68,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.1.1-build/gcc-16.1.1-20260515/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none,amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) 
+        COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-std=c11' '-v' '-o' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_50f4b.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_50f4b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -m64 -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -w -std=c11 -version -ffunction-sections -fdata-sections -fPIC -o /tmp/ccNoKsxE.s
+        GNU C11 (GCC) version 16.1.1 20260515 (Red Hat 16.1.1-2) (x86_64-redhat-linux)
+        	compiled by GNU C version 16.1.1 20260515 (Red Hat 16.1.1-2), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-redhat-linux/16/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 02fd4c3bc0302122b50e730803efc7d8
+        COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-std=c11' '-v' '-o' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_50f4b.dir/'
+         as -v -W --64 -o CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o /tmp/ccNoKsxE.s
+        GNU assembler version 2.46 (x86_64-redhat-linux) using BFD version version 2.46-3.fc44
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-std=c11' '-v' '-o' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_50f4b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50f4b.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,objc,obj-c++,ada,go,d,m2,cobol,algol68,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.1.1-build/gcc-16.1.1-20260515/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none,amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-v' '-o' 'cmTC_50f4b' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_50f4b.'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoA6Pgw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_50f4b /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        collect2 version 16.1.1 20260515 (Red Hat 16.1.1-2)
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoA6Pgw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_50f4b /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        GNU ld version 2.46-3.fc44
+        COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-v' '-o' 'cmTC_50f4b' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_50f4b.'
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w   -v -Wl,-v CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -o cmTC_50f4b
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:37 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-redhat-linux/16/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/16/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/16/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-redhat-linux/16/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:37 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_50f4b/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_50f4b.dir/build.make CMakeFiles/cmTC_50f4b.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0boWTN']
+        ignore line: [Building C object CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11   -v -o CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran objc obj-c++ ada go d m2 cobol algol68 lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.1.1-build/gcc-16.1.1-20260515/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-std=c11' '-v' '-o' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_50f4b.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_50f4b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -m64 -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -w -std=c11 -version -ffunction-sections -fdata-sections -fPIC -o /tmp/ccNoKsxE.s]
+        ignore line: [GNU C11 (GCC) version 16.1.1 20260515 (Red Hat 16.1.1-2) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 16.1.1 20260515 (Red Hat 16.1.1-2)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/16/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 02fd4c3bc0302122b50e730803efc7d8]
+        ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-std=c11' '-v' '-o' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_50f4b.dir/']
+        ignore line: [ as -v -W --64 -o CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o /tmp/ccNoKsxE.s]
+        ignore line: [GNU assembler version 2.46 (x86_64-redhat-linux) using BFD version version 2.46-3.fc44]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-std=c11' '-v' '-o' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_50f4b]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50f4b.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran objc obj-c++ ada go d m2 cobol algol68 lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.1.1-build/gcc-16.1.1-20260515/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-w' '-v' '-o' 'cmTC_50f4b' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_50f4b.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoA6Pgw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_50f4b /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/16/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccoA6Pgw.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_50f4b] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/16] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/16]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/16/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../..]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [-latomic_asneeded] ==> lib [atomic_asneeded]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 16.1.1 20260515 (Red Hat 16.1.1-2)]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoA6Pgw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_50f4b /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_50f4b.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/16] ==> [/usr/lib/gcc/x86_64-redhat-linux/16]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../..] ==> [/usr/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/16;/usr/lib64;/lib64;/usr/lib;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:37 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.46-3.fc44
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CTest.cmake:188 (find_program)"
+      - "CMakeLists.txt:48 (include)"
+    mode: "program"
+    variable: "MEMORYCHECK_COMMAND"
+    description: "Path to the memory checking command, used for memory error detection."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "purify"
+      - "valgrind"
+      - "boundscheck"
+      - "drmemory"
+      - "cuda-memcheck"
+      - "compute-sanitizer"
+    candidate_directories:
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/rae/.cargo/bin/purify"
+      - "/home/rae/.local/bin/purify"
+      - "/home/rae/bin/purify"
+      - "/usr/local/bin/purify"
+      - "/usr/bin/purify"
+      - "/usr/local/sbin/purify"
+      - "/usr/sbin/purify"
+      - "/home/rae/.lmstudio/bin/purify"
+      - "/usr/local/bin/purify"
+      - "/usr/local/sbin/purify"
+      - "/usr/local/purify"
+      - "/usr/bin/purify"
+      - "/usr/sbin/purify"
+      - "/usr/purify"
+      - "/bin/purify"
+      - "/sbin/purify"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/purify"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/purify"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/purify"
+      - "/usr/X11R6/bin/purify"
+      - "/usr/X11R6/sbin/purify"
+      - "/usr/X11R6/purify"
+      - "/usr/pkg/bin/purify"
+      - "/usr/pkg/sbin/purify"
+      - "/usr/pkg/purify"
+      - "/opt/bin/purify"
+      - "/opt/sbin/purify"
+      - "/opt/purify"
+      - "/home/rae/.cargo/bin/valgrind"
+      - "/home/rae/.local/bin/valgrind"
+      - "/home/rae/bin/valgrind"
+      - "/usr/local/bin/valgrind"
+      - "/usr/bin/valgrind"
+      - "/usr/local/sbin/valgrind"
+      - "/usr/sbin/valgrind"
+      - "/home/rae/.lmstudio/bin/valgrind"
+      - "/usr/local/bin/valgrind"
+      - "/usr/local/sbin/valgrind"
+      - "/usr/local/valgrind"
+      - "/usr/bin/valgrind"
+      - "/usr/sbin/valgrind"
+      - "/usr/valgrind"
+      - "/bin/valgrind"
+      - "/sbin/valgrind"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/valgrind"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/valgrind"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/valgrind"
+      - "/usr/X11R6/bin/valgrind"
+      - "/usr/X11R6/sbin/valgrind"
+      - "/usr/X11R6/valgrind"
+      - "/usr/pkg/bin/valgrind"
+      - "/usr/pkg/sbin/valgrind"
+      - "/usr/pkg/valgrind"
+      - "/opt/bin/valgrind"
+      - "/opt/sbin/valgrind"
+      - "/opt/valgrind"
+      - "/home/rae/.cargo/bin/boundscheck"
+      - "/home/rae/.local/bin/boundscheck"
+      - "/home/rae/bin/boundscheck"
+      - "/usr/local/bin/boundscheck"
+      - "/usr/bin/boundscheck"
+      - "/usr/local/sbin/boundscheck"
+      - "/usr/sbin/boundscheck"
+      - "/home/rae/.lmstudio/bin/boundscheck"
+      - "/usr/local/bin/boundscheck"
+      - "/usr/local/sbin/boundscheck"
+      - "/usr/local/boundscheck"
+      - "/usr/bin/boundscheck"
+      - "/usr/sbin/boundscheck"
+      - "/usr/boundscheck"
+      - "/bin/boundscheck"
+      - "/sbin/boundscheck"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/boundscheck"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/boundscheck"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/boundscheck"
+      - "/usr/X11R6/bin/boundscheck"
+      - "/usr/X11R6/sbin/boundscheck"
+      - "/usr/X11R6/boundscheck"
+      - "/usr/pkg/bin/boundscheck"
+      - "/usr/pkg/sbin/boundscheck"
+      - "/usr/pkg/boundscheck"
+      - "/opt/bin/boundscheck"
+      - "/opt/sbin/boundscheck"
+      - "/opt/boundscheck"
+      - "/home/rae/.cargo/bin/drmemory"
+      - "/home/rae/.local/bin/drmemory"
+      - "/home/rae/bin/drmemory"
+      - "/usr/local/bin/drmemory"
+      - "/usr/bin/drmemory"
+      - "/usr/local/sbin/drmemory"
+      - "/usr/sbin/drmemory"
+      - "/home/rae/.lmstudio/bin/drmemory"
+      - "/usr/local/bin/drmemory"
+      - "/usr/local/sbin/drmemory"
+      - "/usr/local/drmemory"
+      - "/usr/bin/drmemory"
+      - "/usr/sbin/drmemory"
+      - "/usr/drmemory"
+      - "/bin/drmemory"
+      - "/sbin/drmemory"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/drmemory"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/drmemory"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/drmemory"
+      - "/usr/X11R6/bin/drmemory"
+      - "/usr/X11R6/sbin/drmemory"
+      - "/usr/X11R6/drmemory"
+      - "/usr/pkg/bin/drmemory"
+      - "/usr/pkg/sbin/drmemory"
+      - "/usr/pkg/drmemory"
+      - "/opt/bin/drmemory"
+      - "/opt/sbin/drmemory"
+      - "/opt/drmemory"
+      - "/home/rae/.cargo/bin/cuda-memcheck"
+      - "/home/rae/.local/bin/cuda-memcheck"
+      - "/home/rae/bin/cuda-memcheck"
+      - "/usr/local/bin/cuda-memcheck"
+      - "/usr/bin/cuda-memcheck"
+      - "/usr/local/sbin/cuda-memcheck"
+      - "/usr/sbin/cuda-memcheck"
+      - "/home/rae/.lmstudio/bin/cuda-memcheck"
+      - "/usr/local/bin/cuda-memcheck"
+      - "/usr/local/sbin/cuda-memcheck"
+      - "/usr/local/cuda-memcheck"
+      - "/usr/bin/cuda-memcheck"
+      - "/usr/sbin/cuda-memcheck"
+      - "/usr/cuda-memcheck"
+      - "/bin/cuda-memcheck"
+      - "/sbin/cuda-memcheck"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/cuda-memcheck"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/cuda-memcheck"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/cuda-memcheck"
+      - "/usr/X11R6/bin/cuda-memcheck"
+      - "/usr/X11R6/sbin/cuda-memcheck"
+      - "/usr/X11R6/cuda-memcheck"
+      - "/usr/pkg/bin/cuda-memcheck"
+      - "/usr/pkg/sbin/cuda-memcheck"
+      - "/usr/pkg/cuda-memcheck"
+      - "/opt/bin/cuda-memcheck"
+      - "/opt/sbin/cuda-memcheck"
+      - "/opt/cuda-memcheck"
+      - "/home/rae/.cargo/bin/compute-sanitizer"
+      - "/home/rae/.local/bin/compute-sanitizer"
+      - "/home/rae/bin/compute-sanitizer"
+      - "/usr/local/bin/compute-sanitizer"
+      - "/usr/bin/compute-sanitizer"
+      - "/usr/local/sbin/compute-sanitizer"
+      - "/usr/sbin/compute-sanitizer"
+      - "/home/rae/.lmstudio/bin/compute-sanitizer"
+      - "/usr/local/bin/compute-sanitizer"
+      - "/usr/local/sbin/compute-sanitizer"
+      - "/usr/local/compute-sanitizer"
+      - "/usr/bin/compute-sanitizer"
+      - "/usr/sbin/compute-sanitizer"
+      - "/usr/compute-sanitizer"
+      - "/bin/compute-sanitizer"
+      - "/sbin/compute-sanitizer"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/compute-sanitizer"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/compute-sanitizer"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/compute-sanitizer"
+      - "/usr/X11R6/bin/compute-sanitizer"
+      - "/usr/X11R6/sbin/compute-sanitizer"
+      - "/usr/X11R6/compute-sanitizer"
+      - "/usr/pkg/bin/compute-sanitizer"
+      - "/usr/pkg/sbin/compute-sanitizer"
+      - "/usr/pkg/compute-sanitizer"
+      - "/opt/bin/compute-sanitizer"
+      - "/opt/sbin/compute-sanitizer"
+      - "/opt/compute-sanitizer"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CTest.cmake:196 (find_program)"
+      - "CMakeLists.txt:48 (include)"
+    mode: "program"
+    variable: "COVERAGE_COMMAND"
+    description: "Path to the coverage program that CTest uses for performing coverage inspection"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcov"
+    candidate_directories:
+      - "/home/rae/.cargo/bin/"
+      - "/home/rae/.local/bin/"
+      - "/home/rae/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/sbin/"
+      - "/home/rae/.lmstudio/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/bin/"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/sbin/"
+      - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/rae/.cargo/bin/gcov"
+      - "/home/rae/.local/bin/gcov"
+      - "/home/rae/bin/gcov"
+      - "/usr/local/bin/gcov"
+    found: "/usr/bin/gcov"
+    search_context:
+      ENV{PATH}:
+        - "/home/rae/.cargo/bin"
+        - "/home/rae/.local/bin"
+        - "/home/rae/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/local/sbin"
+        - "/usr/sbin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+        - "/home/rae/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake/detect-arch.cmake:25 (try_run)"
+      - "CMakeLists.txt:68 (include)"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeTmp"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bdb19/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bdb19.dir/build.make CMakeFiles/cmTC_bdb19.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_bdb19.dir/detect-arch.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_bdb19.dir/detect-arch.c.o -c /home/rae/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-ng-sys-1.1.28/src/zlib-ng/cmake/detect-arch.c
+        /home/rae/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-ng-sys-1.1.28/src/zlib-ng/cmake/detect-arch.c:8:6: error: #error archfound x86_64
+            8 |     #error archfound x86_64
+              |      ^~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_bdb19.dir/build.make:81: CMakeFiles/cmTC_bdb19.dir/detect-arch.c.o] Error 1
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:134: cmTC_bdb19/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:250 (check_c_source_compiles)"
+    checks:
+      - "Performing Test FNO_LTO_AVAILABLE"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-mVG4n3"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-mVG4n3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "FNO_LTO_AVAILABLE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-mVG4n3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aec59/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aec59.dir/build.make CMakeFiles/cmTC_aec59.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-mVG4n3'
+        Building C object CMakeFiles/cmTC_aec59.dir/src.c.o
+        /usr/bin/cc -DFNO_LTO_AVAILABLE  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto -std=c11 -o CMakeFiles/cmTC_aec59.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-mVG4n3/src.c
+        Linking C executable cmTC_aec59
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aec59.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto CMakeFiles/cmTC_aec59.dir/src.c.o -o cmTC_aec59
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-mVG4n3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "CMakeLists.txt:436 (check_include_file)"
+    checks:
+      - "Looking for arm_acle.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_ARM_ACLE_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_49c39/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_49c39.dir/build.make CMakeFiles/cmTC_49c39.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ'
+        Building C object CMakeFiles/cmTC_49c39.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_49c39.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ/CheckIncludeFile.c
+        /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ/CheckIncludeFile.c:1:10: fatal error: arm_acle.h: No such file or directory
+            1 | #include <arm_acle.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_49c39.dir/build.make:81: CMakeFiles/cmTC_49c39.dir/CheckIncludeFile.c.o] Error 1
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-j5TrWZ'
+        gmake: *** [Makefile:134: cmTC_49c39/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "CMakeLists.txt:440 (check_include_file)"
+    checks:
+      - "Looking for sys/auxv.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DJcynG"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DJcynG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SYS_AUXV_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DJcynG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1784c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1784c.dir/build.make CMakeFiles/cmTC_1784c.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DJcynG'
+        Building C object CMakeFiles/cmTC_1784c.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_1784c.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DJcynG/CheckIncludeFile.c
+        Linking C executable cmTC_1784c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1784c.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_1784c.dir/CheckIncludeFile.c.o -o cmTC_1784c
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DJcynG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "CMakeLists.txt:444 (check_include_file)"
+    checks:
+      - "Looking for sys/sdt.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SYS_SDT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_73445/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_73445.dir/build.make CMakeFiles/cmTC_73445.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp'
+        Building C object CMakeFiles/cmTC_73445.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_73445.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp/CheckIncludeFile.c
+        /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp/CheckIncludeFile.c:1:10: fatal error: sys/sdt.h: No such file or directory
+            1 | #include <sys/sdt.h>
+              |          ^~~~~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_73445.dir/build.make:81: CMakeFiles/cmTC_73445.dir/CheckIncludeFile.c.o] Error 1
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-qNSYbp'
+        gmake: *** [Makefile:134: cmTC_73445/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "CMakeLists.txt:448 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-pRHrWW"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-pRHrWW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-pRHrWW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_51588/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_51588.dir/build.make CMakeFiles/cmTC_51588.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-pRHrWW'
+        Building C object CMakeFiles/cmTC_51588.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_51588.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-pRHrWW/CheckIncludeFile.c
+        Linking C executable cmTC_51588
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51588.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_51588.dir/CheckIncludeFile.c.o -o cmTC_51588
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-pRHrWW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "CMakeLists.txt:453 (check_include_file)"
+    checks:
+      - "Looking for linux/auxvec.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-1qRshG"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-1qRshG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_LINUX_AUXVEC_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-1qRshG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2f329/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2f329.dir/build.make CMakeFiles/cmTC_2f329.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-1qRshG'
+        Building C object CMakeFiles/cmTC_2f329.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_2f329.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-1qRshG/CheckIncludeFile.c
+        Linking C executable cmTC_2f329
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f329.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_2f329.dir/CheckIncludeFile.c.o -o cmTC_2f329
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-1qRshG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckTypeSize.cmake:462 (check_include_file)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OIadJw"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OIadJw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OIadJw'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_964d2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_964d2.dir/build.make CMakeFiles/cmTC_964d2.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OIadJw'
+        Building C object CMakeFiles/cmTC_964d2.dir/CheckIncludeFile.c.o
+        /usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_964d2.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OIadJw/CheckIncludeFile.c
+        Linking C executable cmTC_964d2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_964d2.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_964d2.dir/CheckIncludeFile.c.o -o cmTC_964d2
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OIadJw'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckTypeSize.cmake:463 (check_include_file)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6JURxn"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6JURxn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6JURxn'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fc6d4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fc6d4.dir/build.make CMakeFiles/cmTC_fc6d4.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6JURxn'
+        Building C object CMakeFiles/cmTC_fc6d4.dir/CheckIncludeFile.c.o
+        /usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_fc6d4.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6JURxn/CheckIncludeFile.c
+        Linking C executable cmTC_fc6d4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc6d4.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_fc6d4.dir/CheckIncludeFile.c.o -o cmTC_fc6d4
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6JURxn'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckTypeSize.cmake:464 (check_include_file)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-QI3J3E"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-QI3J3E"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-QI3J3E'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0611b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0611b.dir/build.make CMakeFiles/cmTC_0611b.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-QI3J3E'
+        Building C object CMakeFiles/cmTC_0611b.dir/CheckIncludeFile.c.o
+        /usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_0611b.dir/CheckIncludeFile.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-QI3J3E/CheckIncludeFile.c
+        Linking C executable cmTC_0611b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0611b.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_0611b.dir/CheckIncludeFile.c.o -o cmTC_0611b
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-QI3J3E'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "CMakeLists.txt:462 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DpDSKP"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DpDSKP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DpDSKP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_85af4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_85af4.dir/build.make CMakeFiles/cmTC_85af4.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DpDSKP'
+        Building C object CMakeFiles/cmTC_85af4.dir/OFF64_T.c.o
+        /usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_85af4.dir/OFF64_T.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DpDSKP/OFF64_T.c
+        Linking C executable cmTC_85af4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85af4.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_85af4.dir/OFF64_T.c.o -o cmTC_85af4
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DpDSKP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "CMakeLists.txt:479 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-SKaIRN"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-SKaIRN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-SKaIRN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b1012/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b1012.dir/build.make CMakeFiles/cmTC_b1012.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-SKaIRN'
+        Building C object CMakeFiles/cmTC_b1012.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w -DCHECK_FUNCTION_EXISTS=fseeko -std=c11 -o CMakeFiles/cmTC_b1012.dir/CheckFunctionExists.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-SKaIRN/CheckFunctionExists.c
+        Linking C executable cmTC_b1012
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1012.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -DCHECK_FUNCTION_EXISTS=fseeko CMakeFiles/cmTC_b1012.dir/CheckFunctionExists.c.o -o cmTC_b1012
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-SKaIRN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "CMakeLists.txt:486 (check_function_exists)"
+    checks:
+      - "Looking for strerror"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OulaHq"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OulaHq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_STRERROR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OulaHq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7cfdf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7cfdf.dir/build.make CMakeFiles/cmTC_7cfdf.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OulaHq'
+        Building C object CMakeFiles/cmTC_7cfdf.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w -DCHECK_FUNCTION_EXISTS=strerror -std=c11 -o CMakeFiles/cmTC_7cfdf.dir/CheckFunctionExists.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OulaHq/CheckFunctionExists.c
+        Linking C executable cmTC_7cfdf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cfdf.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -DCHECK_FUNCTION_EXISTS=strerror CMakeFiles/cmTC_7cfdf.dir/CheckFunctionExists.c.o -o cmTC_7cfdf
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-OulaHq'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckSymbolExists.cmake:193 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckSymbolExists.cmake:98 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:495 (check_symbol_exists)"
+    checks:
+      - "Looking for __cpuid_count"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-rRxVCg"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-rRxVCg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_CPUID_GNU"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-rRxVCg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0184c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0184c.dir/build.make CMakeFiles/cmTC_0184c.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-rRxVCg'
+        Building C object CMakeFiles/cmTC_0184c.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_0184c.dir/CheckSymbolExists.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-rRxVCg/CheckSymbolExists.c
+        Linking C executable cmTC_0184c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0184c.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_0184c.dir/CheckSymbolExists.c.o -o cmTC_0184c
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-rRxVCg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:506 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_CPUID_MS"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_CPUID_MS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1e675/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1e675.dir/build.make CMakeFiles/cmTC_1e675.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz'
+        Building C object CMakeFiles/cmTC_1e675.dir/src.c.o
+        /usr/bin/cc -DHAVE_CPUID_MS  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_1e675.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz/src.c
+        /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz/src.c:2:10: fatal error: intrin.h: No such file or directory
+            2 | #include <intrin.h>
+              |          ^~~~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_1e675.dir/build.make:81: CMakeFiles/cmTC_1e675.dir/src.c.o] Error 1
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-LXnxwz'
+        gmake: *** [Makefile:134: cmTC_1e675/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:547 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_NO_INTERPOSITION"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a2RtST"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a2RtST"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_NO_INTERPOSITION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a2RtST'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aac50/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aac50.dir/build.make CMakeFiles/cmTC_aac50.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a2RtST'
+        Building C object CMakeFiles/cmTC_aac50.dir/src.c.o
+        /usr/bin/cc -DHAVE_NO_INTERPOSITION  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11   -fno-semantic-interposition -o CMakeFiles/cmTC_aac50.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a2RtST/src.c
+        Linking C executable cmTC_aac50
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aac50.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_aac50.dir/src.c.o -o cmTC_aac50
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a2RtST'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:553 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_ATTRIBUTE_VISIBILITY_HIDDEN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-Zd2qzK"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-Zd2qzK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_ATTRIBUTE_VISIBILITY_HIDDEN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-Zd2qzK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1fe88/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1fe88.dir/build.make CMakeFiles/cmTC_1fe88.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-Zd2qzK'
+        Building C object CMakeFiles/cmTC_1fe88.dir/src.c.o
+        /usr/bin/cc -DHAVE_ATTRIBUTE_VISIBILITY_HIDDEN  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_1fe88.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-Zd2qzK/src.c
+        Linking C executable cmTC_1fe88
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fe88.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_1fe88.dir/src.c.o -o cmTC_1fe88
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-Zd2qzK'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:567 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_ATTRIBUTE_VISIBILITY_INTERNAL"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZMXgoK"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZMXgoK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_ATTRIBUTE_VISIBILITY_INTERNAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZMXgoK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1e495/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1e495.dir/build.make CMakeFiles/cmTC_1e495.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZMXgoK'
+        Building C object CMakeFiles/cmTC_1e495.dir/src.c.o
+        /usr/bin/cc -DHAVE_ATTRIBUTE_VISIBILITY_INTERNAL  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_1e495.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZMXgoK/src.c
+        Linking C executable cmTC_1e495
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e495.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_1e495.dir/src.c.o -o cmTC_1e495
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZMXgoK'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:581 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_ATTRIBUTE_ALIGNED"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-s658F5"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-s658F5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_ATTRIBUTE_ALIGNED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-s658F5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bb265/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bb265.dir/build.make CMakeFiles/cmTC_bb265.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-s658F5'
+        Building C object CMakeFiles/cmTC_bb265.dir/src.c.o
+        /usr/bin/cc -DHAVE_ATTRIBUTE_ALIGNED  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_bb265.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-s658F5/src.c
+        Linking C executable cmTC_bb265
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb265.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_bb265.dir/src.c.o -o cmTC_bb265
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-s658F5'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:596 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_ASSUME_ALIGNED"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-atOuZj"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-atOuZj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_BUILTIN_ASSUME_ALIGNED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-atOuZj'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_547bc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_547bc.dir/build.make CMakeFiles/cmTC_547bc.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-atOuZj'
+        Building C object CMakeFiles/cmTC_547bc.dir/src.c.o
+        /usr/bin/cc -DHAVE_BUILTIN_ASSUME_ALIGNED  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto -std=c11 -o CMakeFiles/cmTC_547bc.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-atOuZj/src.c
+        Linking C executable cmTC_547bc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_547bc.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto CMakeFiles/cmTC_547bc.dir/src.c.o -o cmTC_547bc
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-atOuZj'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:614 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_CTZ"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DU5TlD"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DU5TlD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_BUILTIN_CTZ"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DU5TlD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_10002/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_10002.dir/build.make CMakeFiles/cmTC_10002.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DU5TlD'
+        Building C object CMakeFiles/cmTC_10002.dir/src.c.o
+        /usr/bin/cc -DHAVE_BUILTIN_CTZ  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto -std=c11 -o CMakeFiles/cmTC_10002.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DU5TlD/src.c
+        Linking C executable cmTC_10002
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10002.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto CMakeFiles/cmTC_10002.dir/src.c.o -o cmTC_10002
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-DU5TlD'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:632 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_CTZLL"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-5FTctt"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-5FTctt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_BUILTIN_CTZLL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-5FTctt'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_300f5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_300f5.dir/build.make CMakeFiles/cmTC_300f5.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-5FTctt'
+        Building C object CMakeFiles/cmTC_300f5.dir/src.c.o
+        /usr/bin/cc -DHAVE_BUILTIN_CTZLL  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto -std=c11 -o CMakeFiles/cmTC_300f5.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-5FTctt/src.c
+        Linking C executable cmTC_300f5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_300f5.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -fno-lto CMakeFiles/cmTC_300f5.dir/src.c.o -o cmTC_300f5
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-5FTctt'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:649 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_PTRDIFF_T"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0DTUCV"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0DTUCV"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_PTRDIFF_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0DTUCV'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ba2f4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ba2f4.dir/build.make CMakeFiles/cmTC_ba2f4.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0DTUCV'
+        Building C object CMakeFiles/cmTC_ba2f4.dir/src.c.o
+        /usr/bin/cc -DHAVE_PTRDIFF_T  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11 -o CMakeFiles/cmTC_ba2f4.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0DTUCV/src.c
+        Linking C executable cmTC_ba2f4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba2f4.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_ba2f4.dir/src.c.o -o cmTC_ba2f4
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-0DTUCV'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:672 (check_c_source_compiles)"
+      - "CMakeLists.txt:1056 (check_xsave_intrinsics)"
+    checks:
+      - "Performing Test HAVE_XSAVE_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-HaRzZx"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-HaRzZx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_XSAVE_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-HaRzZx'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_971e2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_971e2.dir/build.make CMakeFiles/cmTC_971e2.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-HaRzZx'
+        Building C object CMakeFiles/cmTC_971e2.dir/src.c.o
+        /usr/bin/cc -DHAVE_XSAVE_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mxsave  -fno-lto -std=c11 -o CMakeFiles/cmTC_971e2.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-HaRzZx/src.c
+        Linking C executable cmTC_971e2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_971e2.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mxsave  -fno-lto CMakeFiles/cmTC_971e2.dir/src.c.o -o cmTC_971e2
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-HaRzZx'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:561 (check_c_source_compiles)"
+      - "CMakeLists.txt:1067 (check_sse2_intrinsics)"
+    checks:
+      - "Performing Test HAVE_SSE2_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6NZmsn"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6NZmsn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SSE2_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6NZmsn'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ce10a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ce10a.dir/build.make CMakeFiles/cmTC_ce10a.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6NZmsn'
+        Building C object CMakeFiles/cmTC_ce10a.dir/src.c.o
+        /usr/bin/cc -DHAVE_SSE2_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -msse2  -fno-lto -std=c11 -o CMakeFiles/cmTC_ce10a.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6NZmsn/src.c
+        Linking C executable cmTC_ce10a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce10a.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -msse2  -fno-lto CMakeFiles/cmTC_ce10a.dir/src.c.o -o cmTC_ce10a
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-6NZmsn'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:584 (check_c_source_compiles)"
+      - "CMakeLists.txt:1080 (check_ssse3_intrinsics)"
+    checks:
+      - "Performing Test HAVE_SSSE3_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZbtfzF"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZbtfzF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SSSE3_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZbtfzF'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3ef6f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3ef6f.dir/build.make CMakeFiles/cmTC_3ef6f.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZbtfzF'
+        Building C object CMakeFiles/cmTC_3ef6f.dir/src.c.o
+        /usr/bin/cc -DHAVE_SSSE3_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mssse3  -fno-lto -std=c11 -o CMakeFiles/cmTC_3ef6f.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZbtfzF/src.c
+        Linking C executable cmTC_3ef6f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ef6f.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mssse3  -fno-lto CMakeFiles/cmTC_3ef6f.dir/src.c.o -o cmTC_3ef6f
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-ZbtfzF'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:610 (check_c_source_compiles)"
+      - "CMakeLists.txt:1092 (check_sse41_intrinsics)"
+    checks:
+      - "Performing Test HAVE_SSE41_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-xkgB3k"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-xkgB3k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SSE41_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-xkgB3k'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ed3d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2ed3d.dir/build.make CMakeFiles/cmTC_2ed3d.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-xkgB3k'
+        Building C object CMakeFiles/cmTC_2ed3d.dir/src.c.o
+        /usr/bin/cc -DHAVE_SSE41_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -msse4.1  -fno-lto -std=c11 -o CMakeFiles/cmTC_2ed3d.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-xkgB3k/src.c
+        Linking C executable cmTC_2ed3d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ed3d.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -msse4.1  -fno-lto CMakeFiles/cmTC_2ed3d.dir/src.c.o -o cmTC_2ed3d
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-xkgB3k'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:633 (check_c_source_compiles)"
+      - "CMakeLists.txt:1103 (check_sse42_intrinsics)"
+    checks:
+      - "Performing Test HAVE_SSE42_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-AGyiit"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-AGyiit"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SSE42_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-AGyiit'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9e8a4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9e8a4.dir/build.make CMakeFiles/cmTC_9e8a4.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-AGyiit'
+        Building C object CMakeFiles/cmTC_9e8a4.dir/src.c.o
+        /usr/bin/cc -DHAVE_SSE42_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -msse4.2  -fno-lto -std=c11 -o CMakeFiles/cmTC_9e8a4.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-AGyiit/src.c
+        Linking C executable cmTC_9e8a4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e8a4.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -msse4.2  -fno-lto CMakeFiles/cmTC_9e8a4.dir/src.c.o -o cmTC_9e8a4
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-AGyiit'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:309 (check_c_source_compiles)"
+      - "CMakeLists.txt:1115 (check_pclmulqdq_intrinsics)"
+    checks:
+      - "Performing Test HAVE_PCLMULQDQ_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-8nwqKU"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-8nwqKU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_PCLMULQDQ_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-8nwqKU'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_61c90/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_61c90.dir/build.make CMakeFiles/cmTC_61c90.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-8nwqKU'
+        Building C object CMakeFiles/cmTC_61c90.dir/src.c.o
+        /usr/bin/cc -DHAVE_PCLMULQDQ_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mpclmul  -fno-lto -std=c11 -o CMakeFiles/cmTC_61c90.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-8nwqKU/src.c
+        Linking C executable cmTC_61c90
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61c90.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mpclmul  -fno-lto CMakeFiles/cmTC_61c90.dir/src.c.o -o cmTC_61c90
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-8nwqKU'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:200 (check_c_source_compiles)"
+      - "CMakeLists.txt:1127 (check_avx2_intrinsics)"
+    checks:
+      - "Performing Test HAVE_AVX2_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-h12ulN"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-h12ulN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_AVX2_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-h12ulN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_abe5e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_abe5e.dir/build.make CMakeFiles/cmTC_abe5e.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-h12ulN'
+        Building C object CMakeFiles/cmTC_abe5e.dir/src.c.o
+        /usr/bin/cc -DHAVE_AVX2_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mavx2 -mbmi2  -fno-lto -std=c11 -o CMakeFiles/cmTC_abe5e.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-h12ulN/src.c
+        Linking C executable cmTC_abe5e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abe5e.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mavx2 -mbmi2  -fno-lto CMakeFiles/cmTC_abe5e.dir/src.c.o -o cmTC_abe5e
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-h12ulN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "cmake/detect-intrinsics.cmake:117 (check_c_compiler_flag)"
+      - "CMakeLists.txt:1145 (check_avx512_intrinsics)"
+    checks:
+      - "Performing Test HAVE_CASCADE_LAKE"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a8RANe"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a8RANe"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_CASCADE_LAKE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a8RANe'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b4cdd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b4cdd.dir/build.make CMakeFiles/cmTC_b4cdd.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a8RANe'
+        Building C object CMakeFiles/cmTC_b4cdd.dir/src.c.o
+        /usr/bin/cc -DHAVE_CASCADE_LAKE  -ffunction-sections -fdata-sections -fPIC -m64 -w  -std=c11   -mtune=cascadelake -o CMakeFiles/cmTC_b4cdd.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a8RANe/src.c
+        Linking C executable cmTC_b4cdd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4cdd.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w  CMakeFiles/cmTC_b4cdd.dir/src.c.o -o cmTC_b4cdd
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-a8RANe'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:131 (check_c_source_compiles)"
+      - "CMakeLists.txt:1145 (check_avx512_intrinsics)"
+    checks:
+      - "Performing Test HAVE_AVX512_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-iFiNzk"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-iFiNzk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_AVX512_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-iFiNzk'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_06715/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_06715.dir/build.make CMakeFiles/cmTC_06715.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-iFiNzk'
+        Building C object CMakeFiles/cmTC_06715.dir/src.c.o
+        /usr/bin/cc -DHAVE_AVX512_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mavx512f -mavx512dq -mavx512bw -mavx512vl -mbmi2 -mtune=cascadelake  -fno-lto -std=c11 -o CMakeFiles/cmTC_06715.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-iFiNzk/src.c
+        Linking C executable cmTC_06715
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06715.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mavx512f -mavx512dq -mavx512bw -mavx512vl -mbmi2 -mtune=cascadelake  -fno-lto CMakeFiles/cmTC_06715.dir/src.c.o -o cmTC_06715
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-iFiNzk'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:168 (check_c_source_compiles)"
+      - "CMakeLists.txt:1162 (check_avx512vnni_intrinsics)"
+    checks:
+      - "Performing Test HAVE_AVX512VNNI_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-i0EDzh"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-i0EDzh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_AVX512VNNI_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-i0EDzh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d40ee/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d40ee.dir/build.make CMakeFiles/cmTC_d40ee.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-i0EDzh'
+        Building C object CMakeFiles/cmTC_d40ee.dir/src.c.o
+        /usr/bin/cc -DHAVE_AVX512VNNI_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mbmi2 -mtune=cascadelake  -fno-lto -std=c11 -o CMakeFiles/cmTC_d40ee.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-i0EDzh/src.c
+        Linking C executable cmTC_d40ee
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d40ee.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mbmi2 -mtune=cascadelake  -fno-lto CMakeFiles/cmTC_d40ee.dir/src.c.o -o cmTC_d40ee
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-i0EDzh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "cmake/detect-intrinsics.cmake:331 (check_c_source_compiles)"
+      - "CMakeLists.txt:1174 (check_vpclmulqdq_intrinsics)"
+    checks:
+      - "Performing Test HAVE_VPCLMULQDQ_INTRIN"
+    directories:
+      source: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-njwJeg"
+      binary: "/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-njwJeg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -ffunction-sections -fdata-sections -fPIC -m64 -w"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_VPCLMULQDQ_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-njwJeg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_99a59/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_99a59.dir/build.make CMakeFiles/cmTC_99a59.dir/build
+        gmake[1]: Entering directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-njwJeg'
+        Building C object CMakeFiles/cmTC_99a59.dir/src.c.o
+        /usr/bin/cc -DHAVE_VPCLMULQDQ_INTRIN  -ffunction-sections -fdata-sections -fPIC -m64 -w -mvpclmulqdq -mavx512f  -fno-lto -std=c11 -o CMakeFiles/cmTC_99a59.dir/src.c.o -c /home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-njwJeg/src.c
+        Linking C executable cmTC_99a59
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99a59.dir/link.txt --verbose=1
+        /usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -w -mvpclmulqdq -mavx512f  -fno-lto CMakeFiles/cmTC_99a59.dir/src.c.o -o cmTC_99a59
+        gmake[1]: Leaving directory '/home/rae/rossaedwards/main/lapidary/target/debug/build/libz-ng-sys-675006274cb10690/out/build/CMakeFiles/CMakeScratch/TryCompile-njwJeg'
+        
+      exitCode: 0
+...

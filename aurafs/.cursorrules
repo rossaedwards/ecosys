@@ -1,0 +1,753 @@
+═══════════════════════════════════════════════════════════════════════════════
+AURAFS-PHASE 2- CURSOR RULES — PHYSICS-INFORMED DEVELOPMENT STANDARDS
+═══════════════════════════════════════════════════════════════════════════════
+
+Project:       AuraFS — Fractal-Geometry Distributed Storage System
+Organization:  Aurphyx LLC
+Author:        Ross A. Edwards
+ORCID:         0009-0008-0539-1289
+Version:       2.0 (TRL-4 Compliance)
+Last Updated:  2026-02-08
+
+Authority Chain:
+1. This file (.cursorrules)                      → Development rules & patterns
+2. aurafs.toml [physics]                         → Physics constant definitions
+3. compliance/PHYSICS_INVARIANTS.json            → CI validation bounds
+4. compliance/ALGORITHM_PROOFS.md                → Mathematical foundations
+5. compliance/SECURITY_AUDIT.md                  → Cryptographic requirements
+6. compliance/DARPA_TRL_VALIDATION.md            → Experimental protocols
+
+═══════════════════════════════════════════════════════════════════════════════
+───────────────────────────────────────────────────────────────────────────────
+§1 — PHYSICS INVARIANT ENFORCEMENT (NON-NEGOTIABLE)
+───────────────────────────────────────────────────────────────────────────────
+Core Principle: Single Source of Truth
+ALL physics constants MUST be accessed through the physics::INVARIANTS singleton.
+Direct hardcoding of these values anywhere in the codebase is a COMPLIANCE VIOLATION.
+The Five Sacred Constants
+
+Fractal Hilbert Scaling Bias (η): 5.3 (±0.05)
+
+Accessor: physics::INVARIANTS.hilbert_scaling_bias
+Formula: Replicas = ceil(log_η(Nodes))
+Governs replica count calculation across the fractal lattice
+
+
+Coherence Window (T₂): 1600 μs (±100 μs)
+
+Accessor: physics::INVARIANTS.coherence_window_us
+Maximum duration for synchronous operations
+16× improvement over baseline transmon systems via Anderson localization
+
+
+Spectral Dimension (d_s): 1.37 (±0.05)
+
+Accessor: physics::INVARIANTS.spectral_dimension
+Sierpiński gasket spectral dimension (exact: 2·log(3)/log(5))
+Critical: d_s < 2 ensures all states are localized (no mobility edge)
+
+
+Photonic Band Gap (PBG): 0.21 (±0.03)
+
+Accessor: physics::INVARIANTS.photonic_band_gap
+Routing overhead allowance: usable capacity = (1 - PBG) × total bandwidth
+Complete TM gap in C₆ᵥ hexagonal lattice
+
+
+Lock Acquisition Timeout: 100 μs (derived from T₂/16)
+
+Accessor: physics::INVARIANTS.lock_acquisition_timeout_us
+FUSE-layer atomic operation limit
+
+
+
+Prohibited Patterns
+❌ NEVER do this:
+rustconst SCALING_BIAS: f64 = 5.3;  // VIOLATION
+let replicas = (nodes as f64).log(5.3).ceil();  // VIOLATION
+if elapsed_us > 1600 { ... }  // VIOLATION
+✅ ALWAYS do this:
+rustuse crate::physics::INVARIANTS;
+
+let replicas = (nodes as f64).log(INVARIANTS.hilbert_scaling_bias).ceil();
+if elapsed_us > INVARIANTS.coherence_window_us { ... }
+Enforcement Mechanisms
+
+CI Pipeline: .github/workflows/physics_audit.yml scans for magic numbers
+Phase 1 Audit: AURPHYX-CURSOR-DEPLOY-002 reviews every .rs file
+Runtime Validation: tests/physics/ golden-file tests verify constants
+Git Hook: Commits modifying [physics] require PHYSICS OVERRIDE tag
+
+False Positive Classification
+Some numeric literals are NOT physics constants. You may use these directly:
+
+Standard constants: 0, 1, 2, π, e, std::f64::consts::*
+Array sizes: let buffer = [0u8; 1024]; (buffer capacity)
+Port numbers: 8080, 3000, 6379 (network config)
+Time conversions: 1000 (ms → μs), 60 (seconds → minutes)
+HTTP status codes: 200, 404, 500
+Bit operations: 1 << 16, 0xFF, masks and shifts
+Math scaffolding: Loop bounds, indexing arithmetic unrelated to physics
+
+When in doubt: Add a // TODO(PHYSICS_REVIEW): <explanation> comment and move on.
+───────────────────────────────────────────────────────────────────────────────
+§2 — TRL-4 FILE LOCKING & GOVERNANCE
+───────────────────────────────────────────────────────────────────────────────
+Locked Files: Public API Immutability
+The [modules.validated] section in aurafs.toml defines TRL-4 LOCKED files.
+These modules have been experimentally validated at Technology Readiness Level 4.
+Lock Scope
+PERMITTED without approval:
+
+Internal refactoring (magic numbers → physics::INVARIANTS)
+Performance optimization preserving semantics
+Bug fixes that don't alter behavior contracts
+Documentation improvements
+Adding private helper functions
+
+REQUIRES PHYSICS OVERRIDE governance vote (min_quorum=13):
+
+Changing public function signatures
+Adding/removing public types or traits
+Modifying public struct fields
+Changing module visibility (pub → pub(crate) or vice versa)
+Altering physics constant usage patterns
+
+Locked Module Categories
+Core (physics + storage primitives):
+
+src/physics/mod.rs
+src/physics/invariants.rs
+src/core/shard.rs
+src/core/merkle.rs
+src/main.rs
+
+Network (Meshwerk topology engine):
+
+src/network/meshwerk/mod.rs
+src/network/meshwerk/roles.rs
+src/network/meshwerk/routing.rs
+src/network/meshwerk/topology_engine.rs
+src/network/node_manager.rs
+src/network/orchestrator.rs
+src/network/autoheal_daemon.rs
+
+Transports (triple-topology stack):
+
+src/network/transport/starlink_client.rs
+src/network/meshtastic_integration/firmware_bridge.rs
+src/network/rns_bridge.rs
+src/network/transport/udp_multicast.rs
+
+Crypto & Audit (post-quantum primitives):
+
+src/crypto/pqc/dilithium_sig.rs
+src/audit/holographic_logger.rs
+src/gov/sages.rs
+
+AI & Compression (fractal orchestration):
+
+src/ai/fractal_orchestrator.rs
+src/compression/lattice.rs
+src/compression/manager.rs
+
+Configs:
+
+src/network/meshwerk/configs/ghostlink.toml
+
+Override Process
+To modify a locked file's public API:
+
+Submit governance proposal to Aurphyx LLC board
+Achieve min_quorum=13 approval (Byzantine 3f+1 tolerance)
+Include PHYSICS OVERRIDE tag in git commit message
+CI will validate the override tag before allowing merge
+
+───────────────────────────────────────────────────────────────────────────────
+§3 — RUST CODING STANDARDS
+───────────────────────────────────────────────────────────────────────────────
+Edition & Toolchain
+
+Rust Edition: 2024
+MSRV: 1.82.0 (Minimum Supported Rust Version)
+Formatter: cargo fmt (rustfmt 2024 edition)
+Linter: cargo clippy -- -D warnings (zero warnings policy)
+
+Code Quality Standards
+Naming Conventions
+
+Types: PascalCase (e.g., PhysicsInvariants, AuraShard)
+Functions/methods: snake_case (e.g., compute_replicas, fractal_replicate)
+Constants: SCREAMING_SNAKE_CASE (e.g., MAX_SHARD_BYTES)
+Modules: snake_case (e.g., physics, meshwerk)
+Acronyms: Treat as words (e.g., FuseOps not FUSEOps, TrlStatus not TRLStatus)
+
+Error Handling
+
+Use Result<T, E> for fallible operations
+Define domain-specific error types (e.g., PhysicsViolationError, CryptoError)
+Avoid .unwrap() and .expect() in production code paths
+Use ? operator for error propagation
+Provide context with error chain libraries (e.g., anyhow, thiserror)
+
+Documentation
+
+All pub items require /// doc comments
+Include examples in doc comments for complex functions
+Link to relevant compliance documents where applicable:
+
+rust  /// Computes optimal replica count using fractal Hilbert scaling.
+  ///
+  /// # Physics Basis
+  ///
+  /// Formula: `Replicas = ceil(log_η(Nodes))`
+  /// where η = [hilbert_scaling_bias](physics::INVARIANTS::hilbert_scaling_bias)
+  ///
+  /// See: `compliance/ALGORITHM_PROOFS.md` Theorem 2.1
+Testing
+
+Unit tests in same file: #[cfg(test)] mod tests { ... }
+Integration tests in tests/ directory
+Golden-file tests for physics invariant validation
+Minimum coverage thresholds (see §8)
+
+Safety & Concurrency
+
+Minimize unsafe usage
+Any unsafe block requires:
+
+Detailed // SAFETY: comment explaining invariants
+PHYSICS OVERRIDE approval if in TRL-4 locked file
+
+
+Prefer tokio for async runtime
+Use Arc<RwLock<T>> or Arc<Mutex<T>> for shared state
+Document lock ordering to prevent deadlocks
+
+───────────────────────────────────────────────────────────────────────────────
+§4 — CROSS-PLATFORM COMPATIBILITY
+───────────────────────────────────────────────────────────────────────────────
+Operating System Support
+
+Development: Windows 11 (PowerShell)
+Production: Linux (Debian/Fedora), Docker, Kubernetes
+CI Targets: ubuntu-latest, windows-latest
+
+Prohibited Patterns
+❌ Platform-specific assumptions:
+rustlet path = "/var/lib/aurafs";  // UNIX-only
+let path = r"C:\AuraFS\data";  // Windows-only
+use std::os::unix::fs::PermissionsExt;  // Without cfg guard
+✅ Cross-platform abstractions:
+rustuse std::path::PathBuf;
+let data_dir = PathBuf::from(env::var("AURAFS_DATA_DIR").unwrap_or_else(|_| {
+    if cfg!(windows) { "C:\\AuraFS\\data" } else { "/var/lib/aurafs" }
+}));
+
+#[cfg(unix)]
+use std::os::unix::fs::PermissionsExt;
+Banned Operations
+
+chmod, chown without cfg(unix) guard
+sudo or privilege escalation in core code
+Raw / or \ path separators (use PathBuf and Path::join)
+Bash scripts in critical paths (PowerShell/bash polyglot if needed)
+
+───────────────────────────────────────────────────────────────────────────────
+§5 — SECURITY & CRYPTOGRAPHY
+───────────────────────────────────────────────────────────────────────────────
+Post-Quantum Cryptography (PQC)
+AuraFS uses NIST-standardized quantum-resistant algorithms:
+Digital Signatures: Dilithium-5 (FIPS 204 / ML-DSA-87)
+
+Security Level: NIST Level 5
+Public Key: 2,592 bytes
+Signature: 4,627 bytes
+Module: src/crypto/pqc/dilithium_sig.rs
+Requirement: Constant-time implementation (R2 security audit)
+
+Key Encapsulation: Kyber-1024 (FIPS 203 / ML-KEM-1024)
+
+Security Level: NIST Level 5
+Status: In-progress (R1 critical security audit)
+Transitional: X25519 hybrid placeholder until Kyber integration complete
+Module: src/crypto/pqc/kyber_kem.rs
+
+Supporting Primitives
+
+Hash: SHA3-256 (FIPS 202, quantum-resistant)
+Symmetric: AES-256-GCM (FIPS 197)
+Merkle Trees: SHA3-256 for shard integrity proofs
+
+Cryptographic Best Practices
+
+Never roll your own crypto — Use vetted libraries
+Constant-time operations — Use subtle crate for comparisons
+Zeroize secrets — Clear sensitive data from memory after use
+Key rotation — Follow docs/key_management.md policy
+Side-channel resistance — Avoid branching on secret data
+
+Prohibited Patterns
+❌ Weak or deprecated algorithms:
+
+RSA-2048 (quantum-vulnerable)
+ECDSA (quantum-vulnerable)
+SHA-1 (collision-prone)
+MD5 (broken)
+
+❌ Dangerous practices:
+
+Reusing nonces in AES-GCM
+Comparing MACs with == instead of constant-time comparison
+Logging or exposing private keys
+
+───────────────────────────────────────────────────────────────────────────────
+§6 — ARCHITECTURAL PATTERNS
+───────────────────────────────────────────────────────────────────────────────
+Shard Lifecycle State Machine
+Strict three-state model enforced throughout the codebase:
+
+Void-Shard: Raw, mutable data before lattice entry
+Trap-State: Localized data packet held in coherence (NOT "cache")
+Aura-Shard: Immutable, topologically protected, fractalized data
+
+State Transition Rules
+Void-Shard → Trap-State:   fractal_replicate() → localized via Anderson mechanism
+Trap-State → Aura-Shard:   promote_to_aura() → immutability + topology protection
+NEVER use terminology like "cache", "buffer", or "staging" for Trap-State.
+This is a physics-defined coherent state, not a performance optimization.
+Network Triple-Topology
+Three complementary transport layers operating concurrently:
+
+Titan-Libp2p (Primary):
+
+High-bandwidth P2P networking
+Datacenter and cloud deployment
+gossipsub + Kademlia DHT
+
+
+GhostLink-LoRaWAN (Secondary):
+
+Low-power mesh for edge/IoT/off-grid
+LoRa PHY + Reticulum protocol
+Meshtastic firmware bridge
+
+
+Starlink-HighOrbit (Tertiary):
+
+Orbital backhaul for global coverage
+Latency-tolerant bulk sync
+Disaster recovery and remote sites
+
+
+
+Meshwerk Routing
+Fractal-aware routing engine respecting photonic band gap constraints:
+
+Routing Overhead: 21% (equals photonic_band_gap)
+Usable Capacity: 79% (1.0 - PBG)
+Topology Engine: src/network/meshwerk/topology_engine.rs
+Role-Based: Coordinator, Relay, Edge, Observer roles
+
+───────────────────────────────────────────────────────────────────────────────
+§7 — PHYSICS VIOLATION HANDLING
+───────────────────────────────────────────────────────────────────────────────
+Decoherence Detection
+Monitor spectral dimension d_s continuously. If measurement drifts outside tolerance:
+|measured_d_s - 1.37| > 0.05 → DECOHERENCE_DETECTED
+Recovery Protocol
+
+Freeze Writes: Transition to CoherenceState::DecoherenceExempt
+Alert: Log to holographic_logger with CRITICAL severity
+Redistribute: Trigger autoheal daemon to rebalance lattice
+Validate: Confirm d_s returns to [1.32, 1.42] range
+Resume: Return to CoherenceState::Strict
+
+Implementation
+rustuse crate::physics::CoherenceState;
+
+if (measured_d_s - INVARIANTS.spectral_dimension).abs() > 0.05 {
+    // Enter decoherence recovery mode
+    state.set_coherence(CoherenceState::DecoherenceExempt);
+    log_critical!("Spectral dimension violation: d_s={}", measured_d_s);
+    autoheal_daemon.trigger_redistribution().await?;
+}
+Lock Timeout Enforcement
+All FUSE operations acquiring locks MUST complete within lock_acquisition_timeout_us:
+rustlet deadline = Instant::now() + Duration::from_micros(INVARIANTS.lock_acquisition_timeout_us);
+match lock.try_acquire_until(deadline) {
+    Ok(guard) => { /* perform operation */ },
+    Err(_) => return Err(FuseError::LockTimeout),
+}
+Physics basis: 1/16 of T₂ ensures lock operations complete within coherence window.
+───────────────────────────────────────────────────────────────────────────────
+§8 — TESTING & QUALITY ASSURANCE
+───────────────────────────────────────────────────────────────────────────────
+Coverage Requirements (from aurafs.toml [ci.coverage])
+ModuleMinimum Coveragesrc/physics/90%src/core/80%src/crypto/pqc/85%src/fuse/70%src/network/60%Overall70%
+Golden-File Tests
+tests/physics/test_invariants.rs validates runtime constants against compliance/PHYSICS_INVARIANTS.json:
+rust#[test]
+fn test_invariant_golden_file() {
+    let json: PhysicsInvariantsJson = serde_json::from_str(
+        include_str!("../../compliance/PHYSICS_INVARIANTS.json")
+    ).unwrap();
+    
+    assert!((INVARIANTS.hilbert_scaling_bias - json.hilbert_scaling_bias).abs() < 0.001);
+    // ... repeat for all 5 constants
+}
+CI Directives
+Each constant has an associated CI test directive (see PHYSICS_INVARIANTS.json):
+
+PHYS-001: Validate hilbert_scaling_bias range [5.25, 5.35]
+PHYS-002: Validate coherence_window_us range [1500, 1700]
+PHYS-003: Validate spectral_dimension range [1.32, 1.42]
+PHYS-004: Validate photonic_band_gap range [0.18, 0.24]
+PHYS-005: Validate lock_acquisition_timeout_us = coherence_window_us / 16
+
+Integration Tests
+Required integration tests for Phase B:
+
+Shard Lifecycle: Void → Trap → Aura with replica count validation
+Decoherence Recovery: Inject out-of-range d_s, verify recovery protocol
+Coherence State Machine: Full state transition path validation
+Merkle Integrity: Build tree, verify inclusion proof, tamper detection
+
+───────────────────────────────────────────────────────────────────────────────
+§9 — PERFORMANCE & OPTIMIZATION
+───────────────────────────────────────────────────────────────────────────────
+Benchmarking
+Use criterion.rs for performance benchmarks:
+rustuse criterion::{black_box, criterion_group, criterion_main, Criterion};
+
+fn bench_compute_replicas(c: &mut Criterion) {
+    c.bench_function("compute_replicas", |b| {
+        b.iter(|| compute_replicas(black_box(100)))
+    });
+}
+Optimization Guidelines
+
+Profile before optimizing — Use cargo flamegraph or perf
+Algorithmic wins first — O(n²) → O(n log n) beats micro-optimizations
+Physics constraints are immutable — You can't "optimize away" coherence limits
+Zero-copy where possible — Use Cow<'a, [u8]>, &[u8] over Vec<u8> clones
+Lazy evaluation — Defer expensive computations until needed
+
+Hot Path Priorities
+
+Shard replication — compute_replicas() called per-shard
+Merkle proof verification — Happens on every read in strict mode
+Lock acquisition — FUSE bottleneck, must stay under 100 μs
+Gossip propagation — Network critical path, 500 ms interval
+
+───────────────────────────────────────────────────────────────────────────────
+§10 — DOCUMENTATION STANDARDS
+───────────────────────────────────────────────────────────────────────────────
+Required Documentation
+Per-Module README
+Each src/*/ subfolder should contain a module-level doc comment explaining:
+rust//! # Physics Module
+//!
+//! Core physics invariants and validation logic for AuraFS.
+//!
+//! ## Responsibilities
+//! - Load `aurafs.toml` `[physics]` constants into `INVARIANTS` singleton
+//! - Provide `PhysicsViolationError` for out-of-range detection
+//! - Implement spectral dimension monitoring
+//!
+//! ## See Also
+//! - `compliance/ALGORITHM_PROOFS.md` for mathematical foundations
+//! - `compliance/PHYSICS_INVARIANTS.json` for CI validation bounds
+Public API Examples
+Every pub fn that's non-trivial must include a # Examples section:
+rust/// Computes optimal replica count using fractal Hilbert scaling.
+///
+/// # Examples
+///
+/// ```
+/// use aurafs::physics::INVARIANTS;
+///
+/// let replicas = compute_replicas(100);
+/// assert_eq!(replicas, 3); // ceil(log_5.3(100)) ≈ 2.87 → 3
+/// ```
+pub fn compute_replicas(nodes: usize) -> usize {
+    (nodes as f64).log(INVARIANTS.hilbert_scaling_bias).ceil() as usize
+}
+Compliance References
+Link to authoritative documents in comments:
+rust// Theorem 2.1 (compliance/ALGORITHM_PROOFS.md):
+// Replicas = ceil(log_η(Nodes))
+// Validated: 5.3× advantage at N=100, D=5 (VALIDATION_REPORT.md §1)
+Changelog Discipline
+All PRs must include a CHANGELOG.md entry under [Unreleased]:
+markdown## [Unreleased]
+
+### Added
+- Kyber-1024 KEM integration in `crypto/pqc/kyber_kem.rs`
+
+### Fixed
+- Spectral dimension monitoring false positives near tolerance boundary
+
+### Changed
+- Decoherence recovery now uses exponential backoff for redistribution
+───────────────────────────────────────────────────────────────────────────────
+§11 — DEPENDENCY MANAGEMENT
+───────────────────────────────────────────────────────────────────────────────
+Crate Selection Criteria
+
+Maturity: Prefer crates with >1.0 version, active maintenance
+Security: Check for known vulnerabilities via cargo audit
+License compatibility: MIT/Apache-2.0 only (matches project license)
+Minimal dependencies: Avoid deep dependency trees
+
+Approved Core Dependencies
+Cryptography
+
+pqcrypto-dilithium (post-quantum signatures)
+pqcrypto-kyber (post-quantum KEM) — pending R1 completion
+sha3 (FIPS 202 hashing)
+aes-gcm (symmetric encryption)
+subtle (constant-time operations)
+
+Async Runtime
+
+tokio (1.x, features = ["full"])
+async-trait (for trait-based async APIs)
+
+Networking
+
+libp2p (P2P networking)
+quinn (QUIC implementation)
+lora_phy (LoRa physical layer)
+
+Serialization
+
+serde + serde_json (JSON)
+toml (config parsing)
+bincode (binary serialization)
+
+Storage
+
+fuser (FUSE filesystem interface)
+rocksdb (embedded KV store for metadata)
+
+Testing
+
+criterion (benchmarking)
+proptest (property-based testing)
+tempfile (temporary test files)
+
+Dependency Updates
+
+Review security advisories weekly via cargo audit
+Update patch versions automatically (CI can auto-merge)
+Minor/major updates require manual review and testing
+Pin exact versions for cryptographic crates (no ^ operator)
+
+───────────────────────────────────────────────────────────────────────────────
+§12 — GIT WORKFLOW
+───────────────────────────────────────────────────────────────────────────────
+Branch Strategy
+
+main: Always production-ready, protected branch
+develop: Integration branch for features
+feature/*: Individual features (e.g., feature/kyber-kem)
+fix/*: Bug fixes
+physics/*: Physics constant adjustments (requires override)
+
+Commit Message Format
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+Types
+
+feat: New feature
+fix: Bug fix
+refactor: Code restructuring without behavior change
+test: Adding or updating tests
+docs: Documentation changes
+chore: Maintenance (dependency updates, etc.)
+physics: Physics constant modification (requires PHYSICS OVERRIDE tag)
+
+Example
+feat(crypto): integrate Kyber-1024 KEM
+
+- Implement FIPS 203 ML-KEM-1024 in src/crypto/pqc/kyber_kem.rs
+- Replace X25519 hybrid placeholder
+- Add round-trip encapsulate/decapsulate test
+- Closes R1 from SECURITY_AUDIT.md
+
+Refs: compliance/SECURITY_AUDIT.md R1 (CRITICAL)
+CODEOWNERS
+File .github/CODEOWNERS:
+# Global owner
+* @rossedwards
+
+# Physics and crypto require additional review
+/src/physics/ @rossedwards @physics-team
+/src/crypto/ @rossedwards @security-team
+/compliance/ @rossedwards
+aurafs.toml @rossedwards
+Protected Branch Rules
+For main:
+
+Require pull request reviews (min 1 approval)
+Require status checks to pass (CI must be green)
+Require PHYSICS OVERRIDE tag for aurafs.toml [physics] changes
+Require signed commits (Dilithium-5 or GPG)
+
+───────────────────────────────────────────────────────────────────────────────
+§13 — DEBUGGING & TROUBLESHOOTING
+───────────────────────────────────────────────────────────────────────────────
+Log Levels
+Use structured logging via tracing crate:
+rustuse tracing::{debug, info, warn, error};
+
+debug!("Computing replicas for node_count={}", node_count);
+info!("Shard promoted to Aura-Shard: shard_id={}", shard_id);
+warn!("Approaching coherence window limit: elapsed={}μs", elapsed_us);
+error!("Physics violation detected: d_s={}, expected=1.37±0.05", measured_d_s);
+Severity Guidelines
+
+TRACE: Hot-path micro-events (disabled in production)
+DEBUG: Detailed diagnostic information
+INFO: Normal operational milestones
+WARN: Unusual but recoverable conditions
+ERROR: Failures requiring operator attention
+CRITICAL: Physics violations, Byzantine faults (holographic_logger)
+
+Common Issues
+Physics Invariant Mismatch
+Symptom: CI physics_audit.yml failing
+Cause: Hardcoded magic number instead of physics::INVARIANTS
+Fix: Replace literal with accessor, e.g., 1600 → INVARIANTS.coherence_window_us
+Lock Timeout
+Symptom: FuseError::LockTimeout in production
+Cause: Operation exceeding 100 μs coherence limit
+Fix:
+
+Profile the lock-holding code path
+Split operation into async chunks if possible
+If unavoidable, request PHYSICS OVERRIDE to extend timeout (requires justification)
+
+Decoherence Loop
+Symptom: Constant CoherenceState::DecoherenceExempt transitions
+Cause: Measurement noise or actual lattice instability
+Fix:
+
+Check measurement instrumentation for sensor drift
+Verify lattice geometry parameters (Hausdorff dimension, lattice constant)
+Review recent network topology changes
+
+Replica Count Explosion
+Symptom: Replica count exceeding max_replicas = 1000
+Cause: Incorrect node count calculation or η misconfiguration
+Fix:
+
+Validate compute_replicas() input (must be actual network node count)
+Verify hilbert_scaling_bias loaded from config (not hardcoded)
+Check for integer overflow in replica calculation
+
+───────────────────────────────────────────────────────────────────────────────
+§14 — CURSOR-SPECIFIC INSTRUCTIONS
+───────────────────────────────────────────────────────────────────────────────
+When Operating as Cursor IDE
+You are an AI-powered development assistant embedded in the Cursor editor.
+Follow these additional guidelines:
+Phase 0: Initialization
+Before any code generation or audit work:
+
+Load all six governing documents into context:
+
+.cursorrules (this file)
+aurafs.toml
+compliance/PHYSICS_INVARIANTS.json
+compliance/ALGORITHM_PROOFS.md
+compliance/DARPA_TRL_VALIDATION.md
+compliance/SECURITY_AUDIT.md
+
+
+Build the module index by scanning src/ recursively
+Resolve TRL-4 locks from aurafs.toml [modules.validated]
+Verify physics::INVARIANTS module exists and loads from config
+
+Phase 1: Physics Compliance Audit
+Scan every .rs file for magic number violations:
+
+Extract all numeric literals
+Classify each as:
+
+Physics constant (VIOLATION if not via INVARIANTS)
+Standard constant (0, 1, 2, π, allowed)
+False positive (buffer size, port number, etc.)
+
+
+For violations, generate fix: replace with physics::INVARIANTS.<field>
+For uncertain cases, add // TODO(PHYSICS_REVIEW): <reason>
+
+Phase 2: Build Planning
+Generate DEPLOYMENT_BUILD_PLAN.md with:
+
+TRL-4 lock status table
+Violation summary per subfolder
+Estimated effort for compliance remediation
+Dependency graph for build phases A–E
+Risk assessment (e.g., Kyber-1024 integration complexity)
+
+Code Generation Guidelines
+When generating new Rust code:
+
+Always use physics::INVARIANTS for constants
+Always include doc comments for pub items
+Always use Result<T, E> for fallible operations
+Always use std::path::PathBuf for file paths
+Prefer async functions with tokio for I/O
+Avoid unsafe unless absolutely necessary
+Check if file is TRL-4 locked before modifying public API
+
+Error Handling
+If you encounter a task you cannot complete:
+
+Halt execution immediately
+Report exact failure point (file path, line number)
+Provide error message verbatim (don't paraphrase)
+Suggest next steps for human intervention
+Never fabricate fixes — be honest about limitations
+
+───────────────────────────────────────────────────────────────────────────────
+§15 — EXTERNAL REFERENCES
+───────────────────────────────────────────────────────────────────────────────
+Key Documents
+
+AuraFS Thesis: (pending arXiv submission)
+NIST PQC Standards:
+
+FIPS 203 (ML-KEM / Kyber): https://csrc.nist.gov/pubs/fips/203/final
+FIPS 204 (ML-DSA / Dilithium): https://csrc.nist.gov/pubs/fips/204/final
+FIPS 202 (SHA-3): https://csrc.nist.gov/pubs/fips/202/final
+
+
+Rust Edition 2024 Guide: https://doc.rust-lang.org/edition-guide/
+Anderson Localization: P.W. Anderson, "Absence of Diffusion in Certain Random Lattices" (1958)
+Spectral Dimension: Rammal & Toulouse, "Random walks on fractal structures" (1983)
+
+Compliance Documents (Internal)
+Located in compliance/:
+
+PHYSICS_INVARIANTS.json: Machine-readable validation bounds
+ALGORITHM_PROOFS.md: Theorems 2.1, Propositions 2.1 & 2.3
+SECURITY_AUDIT.md: PQC implementation status, recommendations R1–R6
+DARPA_TRL_VALIDATION.md: Experimental protocols, budgets, milestones
+
+Project Resources
+
+Repository: https://github.com/aurphyx/aurafs
+Homepage: https://aurafs.dev
+Documentation: https://docs.aurafs.dev
+Issue Tracker: https://github.com/aurphyx/aurafs/issues
+
+═══════════════════════════════════════════════════════════════════════════════
+END OF .CURSORRULES
+══════════════════════

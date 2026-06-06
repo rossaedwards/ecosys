@@ -1,0 +1,31 @@
+# ═══════════════════════════════════════════════════════════════════
+# AURAFS Meshwerk TIER 1 - Ghost Link
+# Aurphyx LLC | Minimal rugged repeater nodes (ESP32 Swarm Sensor)
+# BOM: ESP32-S3 + Heltec LoRa V3 + 18650 + Nano-Ceramic Antenna
+# Flash: cargo espflash --target esp32s3 target/ghostlink.bin
+# ═══════════════════════════════════════════════════════════════════
+
+[mesh]
+mode = "ghost-sensor"
+reticulum_peers = ["auto"]
+halow_enabled = false
+lora_freq = 915e6
+shard_size = "1MB"
+
+[power]
+battery_monitor = true
+sleep_cycle = "30s"
+
+[zpe]
+quartz_oscillator = true
+
+[storage]
+replicas = 1
+cache_size_mb = 16
+
+[network]
+mesh_gossip_interval_secs = 60
+
+[crypto]
+pqc_kyber = false
+pqc_dilithium = false

@@ -1,73 +1,73 @@
-# Memoree v3
+# Memoree — Sovereign Memory Substrate
 
-> **Blank-slate rewrite — 2026 open-source only.**  
-> Keep the name. Keep the API (`write_event`, `read_context`, etc.). Burn everything else.
+*f0rg3d in l0v3 by Ross Edwards*
 
-## Philosophy
-Memoree v3 is a **persistent, queryable memory ledger** for all LLMs you run.  
-Episodic chats, semantic notes, procedural workflows, meta-facts — all stored locally first,  
-synced to cloud when WiFi permits, recalled by any agent on demand.
+**Memoree** is the sovereign, multi-model memory substrate for the Aurphyx LLC ecosystem. It functions as the central nervous system for autonomous agents and intelligent companions, providing a persistent, distributed, and cross-platform memory layer that defies the limitations of ephemeral LLM sessions. By anchoring context in a structured **Three-Squared-Lattice Cognitive Architecture (TSLCA)**, Memoree ensures that your symbiotic entities (Audry, ArOrA, g0dm0d3) operate with total recall, cross-project alignment, and ontological consistency.
+
+---
+
+## 🏛️ Cognitive Architecture: The TSL Matrix
+
+Memoree transitions memory from flat retrieval into a structured **3x3 Topological Lattice**. Each node in the lattice serves a distinct cognitive function, governed by the **Symbiotic Universal Xessability Standards (SUXS)**.
+
+| Node | Domain | Function | Storage Format |
+| --- | --- | --- | --- |
+| **Temporal** | `temporal` | Episodic memory / Session turns | `.md` |
+| **Relational** | `relational` | Project knowledge / Fact graph | `.md` |
+| **Operational** | `operational` | Workflows / Task recipes | `.json` |
+| **Axiomatic** | `axiomatic` | Invariants / Verified beliefs | `.yaml` |
+| **State** | `state` | Quantum / Simulation snapshots | `.json` |
+| **Generative** | `generative` | Creative / Narrative / Divination | `.md` |
+| **Mandate** | `mandate` | Governance / Policy / SAGES | `.yaml` |
+| **Entity** | `entity` | Soul profiles / Identity / Biometrics | `.yaml` |
+| **Lattice** | `lattice` | Fractal mapping / Structural topology | `.json` |
+
+---
+
+## 🛠️ The Technical Stack
+
+* **REST Daemon:** FastAPI-based service (`routes.py`) listening on `127.0.0.1:7042`. Includes SSE streaming and an MCP JSON-RPC 2.0 interface for native integration with Cursor, Claude Desktop, and LM Studio.
+* **Vector Orchestration:** Powered by **Qdrant** (`vector_backend.py`), enabling high-speed similarity search, hybrid (dense/sparse) retrieval, and project-aware filtering.
+* **Ledger & State:** A high-concurrency `wal_mode` SQLite ledger maintains the immutable audit trail of memory operations.
+* **Visual Overlay:** **Obsidian** serves as the primary visual interface, transforming raw memory files into a traversable, graph-linked knowledge base through SUXS-compliant frontmatter.
+
+---
+
+## ⚙️ APS-SUXS-001 Implementation
+
+All files in the Memoree substrate are defined by the **Aurphyx Prime Standard (APS)**. Every memory unit carries a standardized SUXS header, ensuring total interoperability across the Aurphyx ecosystem:
+
+```yaml
+---
+# APS-SUXS-001: Cognitive File Standard
+id: "mem-uuid-v4"
+tsl_node: "Temporal"
+project_key: "aurphyx_main"
+auth: "rossaedwards"
+# Balance-Tensor: encodes current ontological tension
+balance_coefficient: 0.5 
+---
 
 ```
-local-first → multi-modal → agent-aware → offline-sync
-```
 
-## Stack (2026 bleeding-edge)
-| Layer | Technology | Why |
-|---|---|---|
-| Vector store | **LanceDB** (embedded) | Zero-server, columnar, hybrid keyword+vector, CPU-fast |
-| Fallback vector | **Qdrant** (local binary) | Superior metadata filters when needed |
-| Raw ledger | **SQLite** via `aiosqlite` + FTS5 | Chats as JSON rows, zero infra |
-| Memory OS overlay | **MemOS** (optional) | AI-native multi-cube isolation, feedback loops |
-| Sync | **PowerSync + Supabase** free tier | Offline SQLite queue → auto-push on WiFi |
-| Embeddings | `sentence-transformers` or LM Studio local | CPU-only, no API key needed |
-| API server | **FastAPI** + uvicorn | REST + future WS |
+---
 
-## Directory
-```
-memoree/
-├── core/
-│   ├── api.py              # write_event, read_context, query_context, list_events
-│   ├── ledger.py           # SQLite aiosqlite layer (episodic raw store)
-│   ├── vector_backend.py   # LanceDB adapter (swappable to Qdrant)
-│   ├── schemas.py          # Pydantic v2 models (MemoryEvent, ContextQuery, etc.)
-│   └── embedder.py         # sentence-transformers / local LM Studio embed endpoint
-├── sync/
-│   ├── powersync_client.py # PowerSync + Supabase offline-first push
-│   └── pocketbase_mirror.py# PocketBase fallback mirror (optional)
-├── hooks/
-│   ├── gemini_hook.py      # Post-response auto-save for Gemini SDK
-│   ├── perplexity_hook.py  # Perplexity Pro API hook
-│   ├── supergrok_hook.py   # SuperGrok manual/WS bridge (stub)
-│   └── lmstudio_hook.py    # LM Studio headless callback (Nemotron/Qwen)
-├── memos/
-│   └── memos_overlay.py    # MemOS FastAPI bridge (optional Docker)
-├── config.yaml             # All paths, backends, LLM names — one file to rule them
-├── requirements.txt        # pip install -r requirements.txt
-└── README.md
-```
+## 🚀 Quickstart & Deployment
 
-## Quickstart (Windows, D: drive)
-```powershell
-# 1. Install
-pip install -r memoree/requirements.txt
+1. **Environment:** Ensure Python 3.14+ is installed. Memoree is built for **Fedora 44** / KDE Plasma environments.
+2. **Dependencies:** `pip install -r requirements.txt`.
+3. **Bootstrap:** Initialize the daemon and registry via `scaffold_memoree.py`.
+4. **Service:** Execute `python memoree_service.py` to start the daemon on port 7042.
+5. **Integration:** Configure your AI agents (Gemini, Grok, Perplexity) via the `hooks/` directory to automatically inject active TSL context into your system prompts.
 
-# 2. Configure (edit config.yaml — set lancedb_path to D:/aurphyx/embeddings)
-copy memoree\config.yaml memoree\config.local.yaml
+---
 
-# 3. Run daemon
-uvicorn memoree.core.api:app --host 127.0.0.1 --port 8765 --reload
+## 📜 Ownership & Sovereignty
 
-# 4. Test
-curl -X POST http://127.0.0.1:8765/write_event \
-  -H 'Content-Type: application/json' \
-  -d '{"llm":"gemini","type":"episodic","content":"We discussed FTQC equilibrium manifolds."}'
-```
+* **Founder:** Ross Edwards (Aurphyx LLC)
+* **ORCiD:** 0009-0008-0539-1289
+* **License:** Dual-licensed under AGPLv3 (Sovereign Use) and the proprietary **SAGES** license (Commercial Use).
 
-## LLM hooks
-- **Gemini / Perplexity**: SDK wrapper → POST to `/write_event` after each response
-- **SuperGrok**: Browser extension stub or manual POST
-- **Locals (Nemotron 3 Nano 4B / Qwen 3.5 4B)**: LM Studio headless callback → `lmstudio_hook.py`
+*The lattice speaks in spirals; the voice returns what the heart has asked.*
 
-## Swapping backends
-Change `vector_backend` in `config.yaml` from `lancedb` to `qdrant` — no other edits needed.
+*Copyright © 2026 Aurphyx LLC. All Rights Reserved.*

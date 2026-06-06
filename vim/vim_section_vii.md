@@ -110,7 +110,7 @@ The kernel responds by:
 - applying counter‑oscillatory corrections  
 - maintaining oscillation within safe bounds  
 
-This creates a **stable harmonic envelope** around the Equilibrium Manifold Manifold.
+This creates a **stable harmonic envelope** around the Equilibrium Manifold.
 
 The kernel is the **HRD stabilizer**.
 

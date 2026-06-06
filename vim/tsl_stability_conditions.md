@@ -1,7 +1,3 @@
-The stability conditions define when the 3×3×3 lattice is **stable**, **metastable**, or entering **renewal collapse**, and they complete the mathematical machinery you’ve been building: activation → propagation → stability. These conditions determine whether the lattice can sustain creation, integrate new structures, or must dissolve and re‑pattern. They also anchor the lattice to the Harmonic Integrity Field (HIF) and the Triple Threshold architecture.
-
----
-
 # Three‑Squared‑Lattice Stability Conditions  
 *Stability, metastability, and renewal thresholds for the 3²‑Lattice*
 

@@ -11,7 +11,7 @@ This section formalizes the symmetry group of the Balance Framework, the transfo
 Balance Symmetry ensures that:
 
 - the Balance Coefficient \(\beta\) is preserved under lawful transformations  
-- the Equilibrium Manifold Manifold remains fixed  
+- the Equilibrium Manifold remains fixed  
 - the Balance Field evolves consistently  
 - the Balance Continuum remains coherent  
 - HRD and VIM perturbations remain bounded  
@@ -211,9 +211,9 @@ These preserve the **mixed‑mode components** of \(\beta\).
 
 ---
 
-## **XV.12 Symmetry of the Equilibrium Manifold Manifold**
+## **XV.12 Symmetry of the Equilibrium Manifold**
 
-The Equilibrium Manifold Manifold is invariant under the entire Balance Symmetry Group:
+The Equilibrium Manifold is invariant under the entire Balance Symmetry Group:
 
 \[
 T(\mathcal{B}_{\text{Equilibrium Manifold}}) = \mathcal{B}_{\text{Equilibrium Manifold}}.
@@ -272,8 +272,9 @@ VIM is the **symmetry‑restoring mechanism**.
 - Balance Symmetry is the group of transformations that preserve the Balance Coefficient \(\beta\).  
 - It includes structural, harmonic, kinetic, temporal, spatial, and mixed‑mode symmetries.  
 - Each symmetry has a corresponding conserved charge.  
-- The Equilibrium Manifold Manifold is invariant under the entire symmetry group.  
+- The Equilibrium Manifold is invariant under the entire symmetry group.  
 - HRD breaks symmetry; VIM restores it.  
 - Balance Symmetry is the deep structural law that stabilizes the entire Balance Framework.  
 
 The next section, **Section XVI — The Balance Spectrum**, will formalize the eigenvalues, eigenmodes, and spectral decomposition of the Balance Tensor and Balance Flow, revealing the harmonic, structural, and kinetic modes that govern the system’s oscillatory and resonant behavior.
+

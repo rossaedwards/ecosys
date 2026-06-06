@@ -181,9 +181,9 @@ They are the **coupling channels** of the Balance Field.
 
 ---
 
-## **XII.9 The Balance Field and the Equilibrium Manifold Manifold**
+## **XII.9 The Balance Field and the Equilibrium Manifold**
 
-On the Equilibrium Manifold Manifold:
+On the Equilibrium Manifold:
 
 - \(V = 0\)  
 - \(\mathbf{F} = 0\)  
@@ -302,5 +302,3 @@ The Balance Field is the **routing substrate** of the array.
 - HRD perturbs the field; VIM matches it; time flows through it.  
 - The Tetra‑Hexa Array routes according to field gradients.  
 - The Balance Field is the complete field‑theoretic description of Balance.  
-
-The next section, **Section XIII — The Balance Continuum**, will extend the Balance Field into higher dimensions, branching timelines, and continuous harmonic spectra, integrating it with the Aurphyx Continuum (Appendix T).

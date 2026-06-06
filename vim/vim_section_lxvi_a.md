@@ -28,4 +28,4 @@ These computations collectively determine:
 • 	when creation is lawful
 • 	when integration is safe
 • 	when renewal is necessary
-Thus, the MCC is not metaphorical—it is algorithmically realized through the lattice.
+Thus, the MCC is not metaphorical — it is algorithmically realized through the lattice.

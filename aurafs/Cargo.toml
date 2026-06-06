@@ -1,0 +1,413 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# AURAFS CARGO MANIFEST
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Physics-Informed Distributed Storage System
+# Fractal Geometry + Topological Protection + Quantum-Resistant Cryptography
+#
+# Organization:   Aurphyx LLC
+# Author:         Ross A. Edwards
+# ORCID:          0009-0008-0539-1289
+# TRL Status:     TRL-4 (Lab-Validated)
+# Last Updated:   February 10, 2026 16:50 EST
+#
+# Configuration Authority:
+#   - aurafs.toml          → Runtime configuration & physics constants
+#   - .cursorrules         → Development standards & governance
+#   - SECURITY_AUDIT.md    → Cryptographic requirements
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[package]
+name = "aurafs"
+version = "0.4.0-phase2-hardening"
+authors = ["Ross Edwards <ross@aurphyx.com>"]
+edition = "2024"
+rust-version = "1.93.0"
+license = "MIT OR Apache-2.0"
+description = "Physics-informed distributed storage powered by fractal geometry and topological protection"
+homepage = "https://aurafs.dev"
+repository = "https://github.com/aurphyx/aurafs"
+documentation = "https://docs.aurafs.dev"
+readme = "README.md"
+keywords = ["distributed-storage", "fractal-geometry", "quantum-resistant", "topological-protection", "mesh-network"]
+categories = ["filesystem", "cryptography", "network-programming", "science"]
+
+# Workspace configuration for multi-crate setup (if needed)
+# [workspace]
+# members = ["crates/*"]
+
+[[bin]]
+name = "aurafs"
+path = "src/bin/aurafs.rs"
+
+# Optional: FUSE daemon binary
+# [[bin]]
+# name = "aurafs-fuse"
+# path = "src/bin/fuse_daemon.rs"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CORE DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+
+[dependencies]
+
+# --- SERIALIZATION & CONFIGURATION ---
+serde = { version = "1.0", features = ["derive", "rc"] }
+serde_json = "1.0"
+toml = "0.8"
+config = "0.14"
+
+# --- ERROR HANDLING ---
+thiserror = "1.0"
+anyhow = "1.0"
+
+# --- CONCURRENCY & SYNCHRONIZATION ---
+lazy_static = "1.4"
+once_cell = "1.19"              # High-performance initialization for physics::INVARIANTS
+parking_lot = "0.12"            # Fast, fair mutex/rwlock implementations
+
+# --- ASYNC RUNTIME ---
+tokio = { version = "1.40", features = [
+    "full",                     # Complete tokio feature set
+    "rt-multi-thread",          # Multi-threaded runtime
+    "macros",                   # Async macros
+    "sync",                     # Async synchronization primitives
+    "time",                     # Time utilities for T₂ window enforcement
+    "fs",                       # Async filesystem operations
+    "io-util",                  # Async I/O utilities
+    "net",                      # Async networking
+] }
+tokio-util = { version = "0.7", features = ["codec", "time"] }
+futures = "0.3"
+async-trait = "0.1"
+
+# --- DATA TYPES ---
+bytes = "1.7"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.10", features = ["v4", "v5", "serde"] }
+
+# --- NETWORKING: TITAN-LIBP2P (Primary Transport) ---
+libp2p = { version = "0.54", optional = true, features = [
+    "tcp",                      # TCP transport
+    "dns",                      # DNS resolution
+    "websocket",                # WebSocket support
+    "noise",                    # Noise protocol encryption
+    "yamux",                    # Stream multiplexing
+    "kad",                      # Kademlia DHT
+    "gossipsub",                # Pub/sub messaging
+    "identify",                 # Peer identification
+    "request-response",         # Request/response protocol
+    "ping",                     # Ping protocol
+    "mdns",                     # Multicast DNS discovery
+] }
+libp2p-quic = { version = "0.10", optional = true }
+multiaddr = { version = "0.18", optional = true }
+
+# --- NETWORKING: HTTP CLIENT (Starlink API) ---
+reqwest = { version = "0.12", optional = true, features = [
+    "json",                     # JSON body support
+    "rustls-tls",               # TLS via rustls (no OpenSSL)
+    "gzip",                     # Compression support
+] }
+url = { version = "2.5", optional = true }
+
+# --- CRYPTO: POST-QUANTUM SIGNATURES (Dilithium-5) ---
+pqcrypto-dilithium = { version = "0.5", optional = true }
+pqcrypto-traits = { version = "0.3", optional = true }
+# TODO: Implement Kyber-1024 KEM (R1 from SECURITY_AUDIT.md)
+# pqcrypto-kyber = { version = "0.8", optional = true }
+
+# --- CRYPTO: HASHING & SYMMETRIC ---
+blake3 = { version = "1.5", features = ["std", "serde"] }
+sha3 = "0.10"                  # SHA3-256 for quantum-resistant hashing
+aes-gcm = "0.10"               # AES-256-GCM for Trap-State encryption
+chacha20poly1305 = "0.10"      # Alternative AEAD cipher
+argon2 = "0.5"                 # Key derivation (password hashing)
+
+# --- CRYPTO: RANDOM NUMBER GENERATION ---
+rand = "0.8"
+rand_core = { version = "0.6", features = ["std"] }
+getrandom = "0.2"
+
+# --- STORAGE: EMBEDDED DATABASES ---
+rocksdb = { version = "0.22", optional = true, default-features = false, features = [
+    "snappy",                   # Snappy compression
+] }
+redb = { version = "2.1", optional = true }
+sled = { version = "0.34", optional = true }
+
+# --- STORAGE: IN-MEMORY STRUCTURES ---
+dashmap = "6.1"                # Concurrent HashMap for shard mapping
+
+# --- COMPRESSION ---
+zstd = { version = "0.13", optional = true }
+lz4 = { version = "1.28", optional = true }
+
+# --- OBSERVABILITY: LOGGING & TRACING ---
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",               # Environment-based log filtering
+    "json",                     # JSON-formatted logs
+    "registry",                 # Tracing registry
+    "fmt",                      # Formatted output
+] }
+tracing-appender = "0.2"       # Log rotation
+
+# --- OBSERVABILITY: METRICS ---
+prometheus = { version = "0.13", optional = true, features = ["process"] }
+prometheus-client = { version = "0.22", optional = true }
+
+# --- CLI & USER INTERACTION ---
+clap = { version = "4.5", features = ["derive", "cargo", "env"] }
+env_logger = "0.11"
+colored = "2.1"                # Colored terminal output
+
+# --- FILESYSTEM: FUSE BINDINGS ---
+fuser = { version = "0.15", optional = true }
+
+# --- TESTING & BENCHMARKING ---
+criterion = { version = "0.5", optional = true }
+proptest = { version = "1.5", optional = true }
+
+# --- UTILITIES ---
+itertools = "0.13"
+rayon = "1.10"                 # Data parallelism
+num-traits = "0.2"
+num-bigint = "0.4"
+hex = "0.4"
+base64 = "0.22"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PLATFORM-SPECIFIC DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_Storage_FileSystem",
+] }
+winapi = { version = "0.3", features = ["winbase", "fileapi"] }
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+nix = { version = "0.29", features = ["signal", "fs"] }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEVELOPMENT DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3.13"
+wiremock = "0.6"               # HTTP mocking for Starlink API tests
+quickcheck = "1.0"
+quickcheck_macros = "1.0"
+proptest = "1.5"
+criterion = { version = "0.5", features = ["html_reports"] }
+pretty_assertions = "1.4"
+serial_test = "3.1"            # Serialize tests that share state
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BUILD DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+
+[build-dependencies]
+vergen = { version = "9.0", features = ["build"] }
+vergen-gitcl = { version = "1.0" }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FEATURES
+# ─────────────────────────────────────────────────────────────────────────────
+
+[features]
+default = ["titan-libp2p", "rocksdb-storage", "dilithium5"]
+
+# Transport layers
+titan-libp2p = ["dep:libp2p", "dep:libp2p-quic", "dep:multiaddr"]
+ghostlink-lorawan = []         # TODO: Implement LoRaWAN transport
+starlink-backhaul = ["dep:reqwest", "dep:url"]
+
+# Storage backends
+rocksdb-storage = ["dep:rocksdb"]
+redb-storage = ["dep:redb"]
+sled-storage = ["dep:sled"]
+
+# Cryptographic algorithms
+dilithium5 = ["dep:pqcrypto-dilithium", "dep:pqcrypto-traits"]
+# kyber1024 = ["dep:pqcrypto-kyber"]  # TODO: Enable after R1 completion
+
+# Compression algorithms
+zstd-compression = ["dep:zstd"]
+lz4-compression = ["dep:lz4"]
+
+# Observability
+metrics = ["dep:prometheus", "dep:prometheus-client"]
+tracing-json = ["tracing-subscriber/json"]
+
+# FUSE filesystem support
+fuse = ["dep:fuser"]
+
+# Development tools
+benchmarks = ["dep:criterion"]
+property-testing = ["dep:proptest"]
+
+# Experimental features (unstable)
+experimental = []
+physics-override = []          # Enables physics constant modification
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PROFILE CONFIGURATIONS
+# ─────────────────────────────────────────────────────────────────────────────
+
+[profile.dev]
+opt-level = 0
+debug = true
+split-debuginfo = "unpacked"
+strip = false
+debug-assertions = true
+overflow-checks = true
+lto = false
+panic = "unwind"
+incremental = true
+codegen-units = 256
+rpath = false
+
+[profile.release]
+opt-level = 3
+debug = false
+split-debuginfo = "off"
+strip = true
+debug-assertions = false
+overflow-checks = false
+lto = "fat"                    # Full link-time optimization
+panic = "abort"                # Clean abort on physics violation
+incremental = false
+codegen-units = 1              # Maximum optimization
+rpath = false
+
+# Optimized development profile
+[profile.dev-opt]
+inherits = "dev"
+opt-level = 2
+debug-assertions = true
+overflow-checks = true
+
+# Production release with debug symbols
+[profile.release-debug]
+inherits = "release"
+debug = true
+strip = false
+
+# Benchmarking profile
+[profile.bench]
+inherits = "release"
+debug = true
+strip = false
+lto = "thin"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PACKAGE METADATA
+# ─────────────────────────────────────────────────────────────────────────────
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[package.metadata.deb]
+maintainer = "Ross Edwards <ross@aurphyx.com>"
+copyright = "2026, Aurphyx LLC"
+license-file = ["LICENSE-MIT", "LICENSE-APACHE", "4"]
+extended-description = """\
+AuraFS is a physics-informed distributed storage system that leverages \
+fractal geometry and topological protection to achieve unprecedented \
+resilience, efficiency, and quantum-readiness."""
+depends = "$auto"
+section = "utils"
+priority = "optional"
+assets = [
+    ["target/release/aurafs", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/aurafs/", "644"],
+    ["aurafs.toml", "etc/aurafs/", "644"],
+]
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# LINTING & CLIPPY CONFIGURATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+[lints.rust]
+unsafe_code = "forbid"         # No unsafe code allowed
+missing_docs = "warn"
+unused_extern_crates = "warn"
+unused_import_braces = "warn"
+unused_qualifications = "warn"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+nursery = "warn"
+cargo = "warn"
+
+# Specific lints
+redundant_field_names = "warn"
+redundant_closure_for_method_calls = "warn"
+needless_borrow = "warn"
+manual_string_new = "warn"
+match_wildcard_for_single_variants = "warn"
+unnecessary_wraps = "warn"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKSPACE DEPENDENCIES (for future multi-crate setup)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# [workspace.dependencies]
+# aurafs-core = { path = "crates/core" }
+# aurafs-crypto = { path = "crates/crypto" }
+# aurafs-network = { path = "crates/network" }
+# aurafs-storage = { path = "crates/storage" }
+# aurafs-gov = { path = "crates/gov" }
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# COMPLIANCE NOTES
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Physics Constants:
+#   - Defined in aurafs.toml [physics] section
+#   - Loaded at runtime via src/physics/invariants.rs
+#   - Never hardcoded in source files
+#
+# Security:
+#   - Dilithium-5 (FIPS 204) for signatures
+#   - Kyber-1024 (FIPS 203) for KEM [in progress]
+#   - SHA3-256 (FIPS 202) for hashing
+#   - AES-256-GCM for symmetric encryption
+#
+# Governance:
+#   - Physics constant changes require 'PHYSICS OVERRIDE' tag
+#   - Minimum quorum: 13 of 19 (Byzantine tolerance)
+#   - Enforced by .github/workflows/physics_audit.yml
+#
+# Testing:
+#   - Coverage targets: physics 90%, core 80%, crypto 85%
+#   - Golden-file tests validate physics constants
+#   - Property-based tests for invariants
+#
+# Documentation:
+#   - aurafs.toml                      → Configuration authority
+#   - AURAFS_PROJECT_CONTEXT.md        → Developer guide
+#   - compliance/PHYSICS_INVARIANTS    → Mathematical proofs
+#   - compliance/SECURITY_AUDIT.md     → Cryptographic audit
+#   - VALIDATION_REPORT.md             → Experimental validation
+#   - compliance/DARPA_TRL_VALIDATION  → TRL-4 readiness
+#
+# ═══════════════════════════════════════════════════════════════════════════════

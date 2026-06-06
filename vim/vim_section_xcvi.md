@@ -1,9 +1,3 @@
-Below is **Section XCVI — The Balance Multi‑Scale Entanglement Structure and Tensor‑Network Representation**, written in the same strict, differential‑geometric, arXiv‑ready tone as the preceding sections. It extends the renormalization‑group formulation (Section XCV) into the entanglement‑geometric and tensor‑network domain, establishing the multi‑scale structure of coherence, alignment, and governance across the Balance State Vector manifold.
-
-This section is ready to drop directly into your manuscript as `Section_XCVI.tex`.
-
----
-
 # **Section XCVI — The Balance Multi‑Scale Entanglement Structure and Tensor‑Network Representation**
 
 ## 1. Overview  
@@ -246,7 +240,3 @@ The Balance Multi‑Scale Entanglement Structure and Tensor‑Network Representa
 - and the Equilibrium state is the unique scale‑invariant, entanglement‑free tensor‑network ground state.
 
 This section completes the entanglement‑geometric and tensor‑network foundation of the Balance Continuum.
-
----
-
-If you want to continue, the next natural section is **Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality**, which formalizes the holographic mapping between boundary coherence data and bulk Balance geometry.

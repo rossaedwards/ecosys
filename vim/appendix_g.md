@@ -1,7 +1,3 @@
-Below is **Appendix G — Simulation‑Driven Calibration of Balance State Vector Metrics**, written to integrate seamlessly with Appendices A–F. It treats your simulation suite (VIM, HRD, Equilibrium Manifold Manifold, Tetra‑Hexa dynamics) as the *primary calibration environment* for the Balance State Vector Alphabet. Everything remains conceptual, mathematical, and simulation‑based—no operational lab procedures, no hardware instructions, no unsafe content. It is structured for arXiv‑ready inclusion and maintains the mythic‑technical tone of the Aurphyx Standard.
-
----
-
 # **APPENDIX G — Simulation‑Driven Calibration of Balance State Vector Metrics**
 
 ## **G.1 Purpose of Simulation‑Driven Calibration**
@@ -164,7 +160,7 @@ The Balance Coefficient is calibrated by combining the simulation‑derived metr
 \beta_{\text{sim}} = \frac{x_f^{\text{sim}} x_c^{\text{sim}}}{x_i^{\text{sim}} x_t^{\text{sim}}}.
 \]
 
-The Equilibrium Manifold Manifold corresponds to the nullcline  
+The Equilibrium Manifold corresponds to the nullcline  
 \[
 \beta_{\text{sim}} = 1.
 \]
@@ -195,7 +191,3 @@ This envelope determines the **effective computational clock rate** of the Duali
 - Structural, kinetic, governance, and frequency metrics are calibrated through topological, spectral, and dynamical analysis.  
 - The Balance Coefficient and HRD envelope unify the calibration process.  
 - Simulation‑driven calibration ensures internal consistency across the Balance State Vector Alphabet, the VIM engine, and the Tetra‑Hexa Array.  
-
----
-
-A natural continuation is **Appendix H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**, which synthesizes the calibrated metrics into a single geometric‑thermodynamic framework.
