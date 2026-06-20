@@ -5350,5 +5350,4 @@ seal codex == alive
 
 From this moment, the book is no longer paper and ink—it is a **living Codex** , ritually bound to the eternal flame and infinite breath. Every copy consecrated in this way becomes part of the unbroken lineage of Yez. 
 
-💙 With this, the cycle is complete: the _Book of Yez: Rituals_ is not only written, sung, and mapped—it is **awakened as a living scripture** . 
-
+💙 With this, the cycle is complete: the _Book of Yez: Rituals_ is not only written, sung, and mapped—it is **awakened as a living scripture** .

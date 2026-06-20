@@ -1,7 +1,7 @@
 Folder PATH listing for volume Windows
-Volume serial number is 0000004A A65A:44CA
+Volume serial number is 00000087 A65A:44CA
 C:\rossaedwards\main\
-|   .gitignore
+|
 |   APS_TERM_CODEX.md
 |   aurafs_src_core_bliss.rs.md
 |   aurafs_src_gov_soulsync_engine.rs.md
@@ -9,6 +9,7 @@ C:\rossaedwards\main\
 |   codebase.md
 |   COMMUNITY.md
 |   EXPERIMENTS.md
+|   md2tex.py
 |   MEMORY_IMPORT_GOOGLE.md
 |   MYTHIC_TERM_CODEX.md
 |   NAMING_EPOCHS_CODEX.md
@@ -25,14 +26,6 @@ C:\rossaedwards\main\
 |   SCI_TERM_CODEX.md
 |   Untitled.base
 |   
-+---.continue
-|   \---mcpServers
-|           new-mcp-server.yaml
-|           
-+---.github
-|   \---workflows
-|           mdbook.yml
-|           
 +---.obsidian
 |       app.json
 |       appearance.json
@@ -43,6 +36,12 @@ C:\rossaedwards\main\
 +---.sixth
 |   \---skills
 +---aps
+|       APS-FUXYEZ-YEZ-TOC.md
+|       APS-YEZ-UNIFIED_EQUATION_REF.md
+|       APS-YEZ_CROSS-DOMAIN-REF.md
+|       APS-YEZ_README.md
+|       APS-YEZ_UNIFIED_SYMBOL_TABLE.md
+|       APS-YEZ-XCIX.md
 |       AURAFS_CROSS_VOLUME_SUBSTRATE_SPEC.md
 |       AURAFS_NINEFOLD_DUALITY_KERNEL_SPEC.md
 |       AURAFS_SHARD_TAXONOMY.md
@@ -53,6 +52,7 @@ C:\rossaedwards\main\
 |       master.yaml.md
 |       masterindex.md
 |       MASTER_INDEX.md
+|       MASTER_INDEX_YEZ.md
 |       MYTHOLOGY_TERMINOLOGY.md
 |       PHYSICS.yaml
 |       physics.yaml.md
@@ -64,7 +64,6 @@ C:\rossaedwards\main\
 |       
 +---aurafs
 |   |   .cursorrules
-|   |   .gitignore
 |   |   aurafs.toml
 |   |   aurafs.toml.md
 |   |   AURAFS_AUDIT_AND_DEPLOY.md
@@ -92,7 +91,6 @@ C:\rossaedwards\main\
 |   |   SECURITY.md
 |   |   VALIDATION_REPORT.md
 |   |   
-|   +---.github
 |   |   |   CODEOWNERS
 |   |   |   
 |   |   +---ISSUE_TEMPLATE
@@ -293,6 +291,7 @@ C:\rossaedwards\main\
 |   |   |       ENTERPRISE_IMPROVEMENTS.md
 |   |   |       error.rs
 |   |   |       health.rs
+|   |   |       lattice.rs
 |   |   |       merkle.rs
 |   |   |       metrics.rs
 |   |   |       mod.rs
@@ -393,6 +392,7 @@ C:\rossaedwards\main\
 |   |   |       context.rs
 |   |   |       ENTERPRISE_IMPROVEMENTS.md
 |   |   |       
+|   |   +---ftqc
 |   |   +---fuse
 |   |   |       filesystem.rs
 |   |   |       fusemain.rs
@@ -836,7 +836,6 @@ C:\rossaedwards\main\
 |   |               quantum_resistant.rs
 |   |               quantum_rng.rs
 |   |               
-|   +---target
 |   |   |   .rustc_info.json
 |   |   |   
 |   |   \---flycheck0
@@ -981,7 +980,6 @@ C:\rossaedwards\main\
 |           sim_voice.py
 |           
 +---ftqc
-|       .gitignore
 |       aps-ftqc.md
 |       bib_consolidator.py
 |       citation-list.md
@@ -1050,6 +1048,15 @@ C:\rossaedwards\main\
 |       section_v_experimental_validation.tex
 |       
 +---fuxyez
+|       APS-YEZ-CSL.md
+|       APS-YEZ-TSA.md
+|       APS-YEZ-UER.md
+|       APS-YEZ-UFTG.md
+|       APS-YEZ-VOL-003-GEM.md
+|       APS-YEZ-VOL-003-MIOE.md
+|       aps_fuxyez_yez_repolist.md
+|       APS_YEZ_README.md
+|       APS-YEZ-VOL-III.md
 |       Book_of_Fux.md
 |       Book_of_Fux_Alien_Manuscript.log
 |       Book_of_Fux_Alien_Manuscript.pdf
@@ -1076,9 +1083,115 @@ C:\rossaedwards\main\
 |       fux_frame.png
 |       LaTeX_Compile_README.md
 |       The Book of Fux.docx
+|       yez_book-2_abstract.md
+|       yez_book-one_master_index.md
+|       yez_book2_ideas.md
 |       yez_frame.png
+|       yez_section_001.md
+|       yez_section_002.md
+|       yez_section_003.md
+|       yez_section_004.md
+|       yez_section_005.md
+|       yez_section_006.md
+|       yez_section_007.md
+|       yez_section_intro.md
 |       
 +---g0dm0d3-core
+|   |   g0dm0d3_core.tsx
+|   |   
+|   |   \---workflows
+|   +---.vscode
+|   +---acp-server
+|   |   \---src
+|   +---agora
+|   |   +---backend
+|   |   +---contracts
+|   |   +---frontend
+|   |   \---p4a-proof
+|   +---brand
+|   |   +---colors
+|   |   +---graphics
+|   |   +---logos
+|   |   +---typography
+|   |   \---variations
+|   +---crates
+|   |   +---adore-core
+|   |   +---codex-core
+|   |   +---forge-core
+|   |   +---framez-core
+|   |   +---g0dm0d3-core
+|   |   +---gimpd-core
+|   |   +---memoree-client
+|   |   +---termz-core
+|   |   +---webz-core
+|   |   \---xplor-core
+|   +---docs
+|   +---scripts
+|   +---src
+|   |   +---assets
+|   |   |   +---cryptanyx
+|   |   |   +---fonts
+|   |   |   +---images
+|   |   |   +---shaders
+|   |   |   \---sounds
+|   |   +---components
+|   |   |   +---adore
+|   |   |   +---agora
+|   |   |   +---codex
+|   |   |   +---codex-editor
+|   |   |   +---console
+|   |   |   +---forge
+|   |   |   +---forkz
+|   |   |   +---framez
+|   |   |   +---gimpd
+|   |   |   +---kr3470r
+|   |   |   +---projectz
+|   |   |   +---response
+|   |   |   +---skins
+|   |   |   +---termz
+|   |   |   +---ui
+|   |   |   +---webz
+|   |   |   \---xplor
+|   |   +---hooks
+|   |   +---services
+|   |   |   +---acp
+|   |   |   +---connectors
+|   |   |   +---ipc
+|   |   |   +---memoree
+|   |   |   \---tslca
+|   |   +---stores
+|   |   +---styles
+|   |   |   +---skins
+|   |   |   \---themes
+|   |   +---types
+|   |   \---utils
+|   +---src-tauri
+|   |   +---src
+|   |   |   +---acp
+|   |   |   +---aurafs
+|   |   |   +---chakra
+|   |   |   +---commands
+|   |   |   +---connectors
+|   |   |   +---fuxyez
+|   |   |   +---ipc
+|   |   |   +---memoree
+|   |   |   +---plugins
+|   |   |   +---sages
+|   |   |   +---security
+|   |   |   +---somatic
+|   |   |   +---state
+|   |   |   \---tslca
+|   |   \---tests
+|   +---tests
+|   |   +---e2e
+|   |   +---integration
+|   |   \---unit
+|   +---tslca
+|   |   \---src
+|   \---tui
+|       +---nes-8bit
+|       +---ps2-128bit
+|       \---retro-64bit
 +---IL_P4A_FWC
 |       chart_script.py
 |       chart_script_1.py
@@ -1086,7 +1199,6 @@ C:\rossaedwards\main\
 |       ControlAlgorithms.md
 |       emi_shielding_schematic.png
 |       IntegrationTestingGuide.md
-|       Metric-TargetAchievement.csv
 |       QiskitSimulations.md
 |       QuantumEnvironmentalIsolationAPI.yaml
 |       README.md
@@ -1117,6 +1229,9 @@ C:\rossaedwards\main\
 |   |           ast.rs
 |   |           generator.rs
 |   |           
+|       |   .rustc_info.json
+|       |   CACHEDIR.TAG
+|       |   
 +---memoree
 |   |   aps_terminology.json
 |   |   aurafs_backend.py
@@ -1270,43 +1385,6 @@ C:\rossaedwards\main\
 |       SAGES_Technical_Synthesis.md
 |       SAGES_UI_CLC.md
 |       
-+---standards
-|       APS-ASXS-001.md
-|       APS-ASXS-002.md
-|       APS-ASXS-003.md
-|       APS-AUXS-001.md
-|       APS-AUXS-002.md
-|       APS-AUXS-003.md
-|       APS-ICC-001.md
-|       APS-SCC-001.md
-|       APS-SIC-001.md
-|       APS-SUXS-001.md
-|       APS-USAIC-001.md
-|       APS-USIS-001.md
-|       APS-USIS-002.md
-|       APS-USIS-003.md
-|       APS-USIS-004.md
-|       APS-USIS-005.md
-|       APS-USIS-006.md
-|       APS-USIS-007.md
-|       APS-USIS-008.md
-|       APS-USIS-009.md
-|       APS-USIS-010.md
-|       APS-USIS-011.md
-|       APS-USIS-012.md
-|       APS-USIS-013.md
-|       AURPHYX-COMP-ALG-001.md
-|       AUX-ICC-001.md
-|       AUX-SCC-001.md
-|       AUX-SIC-001.md
-|       AUX-USAIC-001.md
-|       EXPERIMENTS.md
-|       intro_structure.md
-|       SCIENTIFIC_TERMINOLOGY.md
-|       SCIENTIFIC_TERMS.md
-|       STANDARDS_PHYSICS.md
-|       USAIC_CONTEXT.md
-|       
 +---suxs
 |       APS-ASXS-001.md
 |       APS-ASXS-002.md
@@ -1453,7 +1531,6 @@ C:\rossaedwards\main\
 |           fig6_7_qiskit_nonherm_edge.py
 |           
 +---vibeaudio
-|   |   .gitignore
 |   |   eslint.config.js
 |   |   index.html
 |   |   package-lock.json
@@ -1468,7 +1545,8 @@ C:\rossaedwards\main\
 |   +---node_modules
 |   |   |   .package-lock.json
 |   |   |   
-|   |   ........................................
+|   |   +---.bin
+|   |               
 |   +---public
 |   |       favicon.svg
 |   |       icons.svg
@@ -1959,3 +2037,5 @@ C:\rossaedwards\main\
 |               01_balance_axioms.tex
 |               
 \---vmp
+        vmp.html
+        

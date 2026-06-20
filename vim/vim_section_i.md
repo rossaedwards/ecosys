@@ -1,6 +1,5 @@
 ABSTRACT_INTRO_SECTION-I.md
 Vacuum Impedance Matching and the Theory of Balance
-Harmonic Resonating Dissonance in Topological Flux Engines
 Author: Ross A. Edwards, Aurphyx LLC
 
 Abstract

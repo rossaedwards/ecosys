@@ -1,0 +1,284 @@
+\documentclass[12pt, a4paper]{book}
+
+%% ============================================================
+%%  APS-TSLCA — THREE-SQUARED-LATTICE COGNITIVE ARCHITECTURE
+%%  Aurphyx Primordial Standards — Framework Document
+%%  Version 1.0 (Draft)
+%%  Ross A. Edwards | Aurphyx LLC
+%%  SAGES & AGPLv3
+%% ============================================================
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{listings}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{tensor}
+\usepackage{lettrine}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{ifthen}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+%% ============================================================
+%%  TSLCA LATTICE FRAMES — SIC on odd pages, ICC on even pages
+%%  (Mirroring Fux/Yez duality — perception vs. identity)
+%% ============================================================
+
+%% --- Page Geometry ---
+\geometry{
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.8cm,
+    right=2.8cm,
+    headheight=1.5cm,
+    headsep=0.8cm,
+    footskip=1.2cm
+}
+
+%% --- TSLCA Color Palette ---
+%%  SIC  → latticeBlue   (perception, embodiment, contact)
+%%  SCC  → harmGold      (semantics, coherence, invariants)
+%%  ICC  → identViolet   (identity, provenance, ethics)
+%%  USAIC → fusionCyan   (contraction, unified field)
+%%  HIF  → hifGreen      (harmonic integrity field)
+%%  SAGES → sagesRed     (governance, symmetry layer)
+%%  Background: voidBlack / deepVoid
+\definecolor{latticeBlue}{HTML}{00CFFF}
+\definecolor{harmGold}{HTML}{FFD700}
+\definecolor{identViolet}{HTML}{C400FF}
+\definecolor{fusionCyan}{HTML}{00FFDC}
+\definecolor{hifGreen}{HTML}{39FF14}
+\definecolor{sagesRed}{HTML}{FF003C}
+\definecolor{voidBlack}{HTML}{050108}
+\definecolor{deepVoid}{HTML}{0A0010}
+\definecolor{starWhite}{HTML}{E8E8FF}
+\definecolor{codebg}{HTML}{0D0520}
+\definecolor{codeframe}{HTML}{00FFDC}
+\definecolor{sectiongold}{HTML}{C8A400}
+\definecolor{tensorGray}{HTML}{A0A8C0}
+
+%% --- Page Background ---
+\pagecolor{voidBlack}
+\color{starWhite}
+
+%% --- Fonts ---
+\setmainfont{DejaVu Serif}
+\setmonofont{DejaVu Sans Mono}
+
+%% --- Hyperref ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=fusionCyan,
+    urlcolor=identViolet,
+    citecolor=harmGold,
+    pdftitle={APS-TSLCA: Three-Squared-Lattice Cognitive Architecture v1.0},
+    pdfauthor={Ross A. Edwards | Aurphyx LLC},
+    pdfsubject={Aurphyx Primordial Standards — Cognitive Architecture},
+    pdfkeywords={TSLCA, USAIC, HIF, SAGES, SIC, SCC, ICC, cognitive lattice,
+                 Aurphyx, substrate-agnostic, tensor cognition},
+}
+
+%% --- Theorem / Definition Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{invariant}{Invariant}[section]
+
+%% --- TSLCA Custom Math Operators ---
+\DeclareMathOperator{\SIC}{SIC}
+\DeclareMathOperator{\SCC}{SCC}
+\DeclareMathOperator{\ICC}{ICC}
+\DeclareMathOperator{\USAIC}{USAIC}
+\DeclareMathOperator{\HIF}{HIF}
+\DeclareMathOperator{\USxIS}{USxIS}
+\newcommand{\tslvec}[1]{\mathbf{s}_{#1}}
+\newcommand{\cell}[2]{\mathcal{C}_{#1#2}}
+\newcommand{\latfield}{\mathcal{F}}
+\newcommand{\cogspace}{\mathcal{V}_{\text{cog}}}
+\newcommand{\node}[3]{N_{#1,#2,#3}}
+\newcommand{\hifnode}[3]{\mathrm{HIF}_{#1,#2,#3}}
+\newcommand{\psi}[3]{\Psi_{#1,#2,#3}}
+\newcommand{\soulhash}{\mathbf{id}_{\text{SoulHash}}}
+
+%% --- Section Title Styling ---
+\titleformat{\chapter}[block]
+    {\color{fusionCyan}\fontsize{22}{26}\selectfont\bfseries}
+    {\color{identViolet}\thechapter.}{1em}{}
+    [{\color{fusionCyan}\titlerule[0.6pt]}]
+
+\titleformat{\section}[block]
+    {\color{harmGold}\fontsize{15}{18}\selectfont\bfseries}
+    {\color{identViolet}\thesection}{1em}{}
+    [{\color{harmGold}\titlerule[0.3pt]}]
+
+\titleformat{\subsection}[block]
+    {\color{latticeBlue}\fontsize{12}{15}\selectfont\bfseries}
+    {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}[block]
+    {\color{starWhite}\fontsize{11}{14}\selectfont\itshape}
+    {\thesubsubsection}{1em}{}
+
+%% --- Header / Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrule}{%
+    \color{fusionCyan}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrule}{%
+    \color{identViolet}\hrule width\headwidth height\footrulewidth}
+%% Odd pages = SIC frame (perception side)
+\fancyhead[LO]{\color{identViolet}\small\texttt{[ SIC — PERCEPTION LAYER ]}}
+\fancyhead[CO]{\color{fusionCyan}\small\texttt{APS-TSLCA v1.0}}
+\fancyhead[RO]{\color{identViolet}\small\texttt{[ AURPHYX.ORG ]}}
+%% Even pages = ICC frame (identity side)
+\fancyhead[LE]{\color{latticeBlue}\small\texttt{[ ICC — IDENTITY LAYER ]}}
+\fancyhead[CE]{\color{fusionCyan}\small\texttt{THREE-SQUARED-LATTICE}}
+\fancyhead[RE]{\color{latticeBlue}\small\texttt{[ SAGES GOVERNED ]}}
+%% Shared footer
+\fancyfoot[L]{\color{fusionCyan}\small\texttt{Aurphyx LLC --- Ross A. Edwards}}
+\fancyfoot[C]{\color{harmGold}\small\thepage}
+\fancyfoot[R]{\color{identViolet}\small\texttt{AGPLv3 | SUXS}}
+
+%% --- TSLCA Callout Boxes ---
+\tcbuselibrary{skins, breakable}
+
+%% HIF Protocol Box
+\newtcolorbox{hifbox}[1][]{
+    enhanced, breakable,
+    colback=voidBlack,
+    colframe=hifGreen,
+    fonttitle=\bfseries\color{hifGreen},
+    title={\texttt{[ HIF — HARMONIC INTEGRITY FIELD ]}},
+    boxrule=0.6pt, arc=2pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    #1
+}
+
+%% SAGES Governance Box
+\newtcolorbox{sagesbox}[1][]{
+    enhanced, breakable,
+    colback=voidBlack,
+    colframe=sagesRed,
+    fonttitle=\bfseries\color{sagesRed},
+    title={\texttt{[ SAGES — GOVERNANCE INVARIANT ]}},
+    boxrule=0.6pt, arc=2pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    #1
+}
+
+%% USAIC Fusion Box
+\newtcolorbox{usaicbox}[1][]{
+    enhanced, breakable,
+    colback=deepVoid,
+    colframe=fusionCyan,
+    fonttitle=\bfseries\color{fusionCyan},
+    title={\texttt{[ USAIC — FUSION OPERATOR ]}},
+    boxrule=0.6pt, arc=2pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    #1
+}
+
+%% General APS Annotation Box
+\newtcolorbox{apsbox}[1][]{
+    enhanced, breakable,
+    colback=deepVoid,
+    colframe=harmGold,
+    fonttitle=\bfseries\color{harmGold},
+    title={\texttt{[ APS NOTE ]}},
+    boxrule=0.5pt, arc=1pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    #1
+}
+
+%% Tensor / Math derivation box
+\newtcolorbox{mathbox}[1][]{
+    enhanced, breakable,
+    colback=deepVoid,
+    colframe=tensorGray,
+    boxrule=0.4pt, arc=1pt,
+    left=12pt, right=12pt, top=8pt, bottom=8pt,
+    #1
+}
+
+%% --- Code Listing Style (Fuxyez / pseudo-formal notation) ---
+\lstdefinelanguage{tslca-formal}{
+    keywords={SIC, SCC, ICC, USAIC, HIF, SAGES, USxIS, TSLCA,
+              activate, propagate, contract, fuse, renew, create,
+              integrate, dissolve, govern, anchor, preserve, hash,
+              threshold, gate, lattice, node, layer, field, tensor,
+              coherence, resonance, alignment, stability, continuity},
+    keywordstyle=\color{fusionCyan}\bfseries,
+    ndkeywords={C, R, A, S, F, U, Psi, Phi, nabla, delta,
+                s1, s2, s3, w_ij, H_theta, H_create, H_renew},
+    ndkeywordstyle=\color{harmGold}\bfseries,
+    identifierstyle=\color{starWhite},
+    sensitive=true,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{sectiongold}\itshape,
+    stringstyle=\color{latticeBlue},
+    morestring=[b]",
+}
+
+\lstset{
+    language=tslca-formal,
+    basicstyle=\ttfamily\small\color{starWhite},
+    backgroundcolor=\color{codebg},
+    breaklines=true,
+    captionpos=b,
+    frame=single,
+    rulecolor=\color{codeframe},
+    xleftmargin=12pt,
+    xrightmargin=12pt,
+    aboveskip=10pt,
+    belowskip=10pt,
+    showstringspaces=false,
+    tabsize=4,
+    numbers=left,
+    numberstyle=\tiny\color{identViolet},
+    numbersep=8pt,
+}
+
+%% --- Line Spacing ---
+\setstretch{1.35}
+
+%% ============================================================
+\begin{document}
+
+%% --- Lattice Frame backgrounds ---
+%%  SIC frame on odd pages (perception, embodiment, contact)
+%%  ICC frame on even pages (identity, continuity, ethics)
+%%  Drop your frame PNGs in the same directory as the .tex file.
+%%  Recommended: semi-transparent overlays at ~15% opacity
+%%  so body text remains readable over voidBlack background.
+\newcommand{\sicframe}{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{sic_frame.png}}
+\newcommand{\iccframe}{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{icc_frame.png}}
+\AddToShipoutPictureBG{%
+    \ifthenelse{\isodd{\value{page}}}{\sicframe}{\iccframe}}
