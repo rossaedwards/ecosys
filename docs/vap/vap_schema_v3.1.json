@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vibe Audio Protocol (V.A.P.) v3.1",
+  "description": "Universal Metadata Standard for Experiential Audio Identity — Aurphyx SUXS",
+  "type": "object",
+  "required": ["VAP_VERSION", "IDENTITY", "PILLARS"],
+  "properties": {
+    "VAP_VERSION": {
+      "type": "string",
+      "const": "3.1"
+    },
+    "IDENTITY": {
+      "type": "object",
+      "required": ["TITLE", "ARTIST"],
+      "properties": {
+        "TITLE": { "type": "string" },
+        "ARTIST": { "type": "string" },
+        "ISRC": { "type": "string" },
+        "SOURCE_DNA": { "type": "string" },
+        "VAP_GENERATED_BY": {
+          "type": "string",
+          "enum": ["HUMAN", "ML_INFERRED", "DSP_EXTRACTED", "HYBRID"],
+          "description": "Provenance flag: how each pillar's metadata was generated. Critical for GVS trust weighting."
+        }
+      }
+    },
+    "PILLARS": {
+      "type": "object",
+      "description": "The 9-Dimensional Holographic Identity",
+      "properties": {
+        "STRUCTURAL": {
+          "description": "Pillar 1: Skeleton (Time/Rhythm)",
+          "type": "object",
+          "properties": {
+            "BPM_RAW": { "type": "number" },
+            "BPM_PERCEIVED_MULTIPLIER": { "type": "number", "enum": [0.5, 1.0, 2.0] },
+            "GROOVE_QUANTIZATION": { "type": "string" },
+            "TIME_SIGNATURE": { "type": "string" },
+            "SYNCOPATION_INDEX": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "KICK_TRANSIENT_PROFILE_MS": { "type": "number", "minimum": 0 },
+            "GHOST_NOTE_DENSITY": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "MIX_WINDOW_INDEX_BARS": { "type": "number" },
+            "BREAKDOWN_DEPTH_PCT": { "type": "number", "minimum": 0, "maximum": 100 }
+          }
+        },
+        "TONAL": {
+          "description": "Pillar 2: Flesh (Harmony/Pitch)",
+          "type": "object",
+          "properties": {
+            "KEY": { "type": "string" },
+            "SCALE": { "type": "string" },
+            "CHORD_COMPLEXITY": { "type": "string", "enum": ["TRIADIC", "EXTENDED"] },
+            "DISSONANCE_DENSITY_PCT": { "type": "number", "minimum": 0, "maximum": 100 },
+            "HOOK_STRENGTH": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "RANGE_SPAN_OCTAVES": { "type": "number" },
+            "REFERENCE_PITCH_HZ": { "type": "number", "enum": [432, 440, 444] },
+            "MICROTONALITY": { "type": "boolean" }
+          }
+        },
+        "TIMBRAL": {
+          "description": "Pillar 3: Skin (Texture/Physics)",
+          "type": "object",
+          "properties": {
+            "SPECTRAL_CENTROID_HZ": { "type": "number", "minimum": 0 },
+            "SATURATION_INDEX_THD": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "FIDELITY_SCORE": { "type": "string", "enum": ["LO_FI", "MID_FI", "HI_FI"] },
+            "DYNAMIC_RANGE_LRA": { "type": "number" },
+            "SPATIAL_WIDTH": { "type": "string", "enum": ["MONO", "STEREO", "BINAURAL", "ATMOS"] },
+            "TEXTURE_SURFACE": { "type": "string", "enum": ["GLASSY", "GRITTY", "WOODEN", "METALLIC", "LIQUID"] },
+            "ARTIFACTS": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "LINGUISTIC": {
+          "description": "Pillar 4: Voice (Semantics/Delivery)",
+          "type": "object",
+          "properties": {
+            "EXPLICIT_SEVERITY_TIER": { "type": "integer", "minimum": 1, "maximum": 4 },
+            "TOPIC_CLUSTERS": { "type": "array", "items": { "type": "string" } },
+            "NARRATIVE_ARC": { "type": "string", "enum": ["LINEAR", "ABSTRACT", "MANTRA"] },
+            "DELIVERY_STYLE": { "type": "string", "enum": ["SUNG", "RAPPED", "SCREAMED", "SPOKEN", "WHISPERED"] },
+            "VOCAL_PROCESSING": { "type": "string", "enum": ["DRY", "AUTO_TUNED", "CHOPPED_SCREWED", "VOCODED"] },
+            "PRIMARY_LANGUAGE": { "type": "string", "pattern": "^[a-z]{2}$", "description": "ISO 639-1 code" },
+            "DIALECT_SLANG": { "type": "string" }
+          }
+        },
+        "AFFECTIVE": {
+          "description": "Pillar 5: Heart (Emotion/Psychology) — Audry affect engine input",
+          "type": "object",
+          "properties": {
+            "VALENCE": { "type": "number", "minimum": -1.0, "maximum": 1.0 },
+            "AROUSAL": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "DOMINANCE": { "type": "number", "minimum": -1.0, "maximum": 1.0 },
+            "MOOD_STABILITY": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "CATHARSIS_POTENTIAL": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "NOSTALGIA_TRIGGER": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "BUILDUP_VELOCITY": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "RESOLUTION_STATE": { "type": "string", "enum": ["TRIUMPHANT", "MELANCHOLIC", "UNRESOLVED"] }
+          }
+        },
+        "CONTEXTUAL": {
+          "description": "Pillar 6: Scene (Environment/Situation)",
+          "type": "object",
+          "properties": {
+            "MACRO_SETTING": { "type": "string", "enum": ["GYM", "CAR", "BEDROOM", "CLUB", "NATURE", "OFFICE"] },
+            "MICRO_ACTIVITY": { "type": "string" },
+            "SOCIAL_SETTING": { "type": "string", "enum": ["SOLO", "COUPLE", "SMALL_GROUP", "CROWD"] },
+            "FUNCTIONAL_GOAL": { "type": "string", "enum": ["FOCUS", "HYPE", "SLEEP", "SEDUCTION", "FILTER"] },
+            "TIME_OF_DAY": { "type": "string", "enum": ["MORNING", "GOLDEN_HOUR", "LATE_NIGHT", "3AM"] },
+            "WEATHER": { "type": "string", "enum": ["RAIN", "SUN", "FOG", "SNOW", "STORM"] },
+            "SCENARIO_CONFIDENCE_PCT": { "type": "number", "minimum": 0, "maximum": 100 },
+            "SCENARIO_OVERRIDE": {
+              "type": "boolean",
+              "description": "Deterministic veto flag. When true, hardware (AuraOrb) rejects tracks below scenario threshold."
+            }
+          }
+        },
+        "PHOTOMETRIC": {
+          "description": "Pillar 7: Eye (Light/Color — AuraOS UI + AuraOrb)",
+          "type": "object",
+          "properties": {
+            "PRIMARY_HEX": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+            "SECONDARY_HEX": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+            "PALETTE_TEMPERATURE": { "type": "string", "enum": ["COOL", "WARM", "NEUTRAL"] },
+            "DOMINANT_WAVELENGTH_NM": { "type": "number", "minimum": 380, "maximum": 780 },
+            "BRIGHTNESS_FLOOR": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "BRIGHTNESS_CEILING": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "STROBE_TRIGGER_THRESHOLD": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "FADE_RATE": { "type": "string", "enum": ["SHARP", "SMOOTH"] },
+            "FOG_DENSITY": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "LASER_COMPATIBILITY": { "type": "boolean" },
+            "VISUAL_NOISE": { "type": "string", "enum": ["STATIC_GLITCH", "CLEAN_SOLID"] }
+          }
+        },
+        "KINETIC": {
+          "description": "Pillar 8: Body (Biometric/Motor)",
+          "type": "object",
+          "properties": {
+            "TARGET_HR_ZONE_MIN": { "type": "number" },
+            "TARGET_HR_ZONE_MAX": { "type": "number" },
+            "HRV_IMPACT": { "type": "string", "enum": ["STRESS", "FLOW", "NEUTRAL"] },
+            "BREATH_RATE_BPM": { "type": "number" },
+            "ENTRAINMENT_FACTOR": { "type": "number", "minimum": 0, "maximum": 100 },
+            "MET_SCORE": { "type": "number", "minimum": 1.0 },
+            "MOTOR_DRIVE": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "MOTOR_SWAY": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "MOTOR_HEAD_NOD": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+          }
+        },
+        "GENEALOGICAL": {
+          "description": "Pillar 9: Roots (Lineage/Tribe/Culture)",
+          "type": "object",
+          "properties": {
+            "RELEASE_DATE": { "type": "string", "format": "date" },
+            "CULTURAL_ERA": { "type": "string" },
+            "TIMELESSNESS_SCORE": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "SAMPLE_LINEAGE": { "type": "array", "items": { "type": "string" } },
+            "GENRE_TREE": {
+              "type": "object",
+              "properties": {
+                "PARENT_GENRE": { "type": "string" },
+                "SUB_GENRE": { "type": "string" },
+                "MICRO_GENRE": { "type": "string" }
+              }
+            },
+            "SUBCULTURE_ID": { "type": "string" },
+            "AUTHENTICITY_SCORE": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+            "LINEAGE_WEIGHT": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Weighted edge trust value for VVS graph propagation. ML_INFERRED < HUMAN."
+            },
+            "VIRAL_VELOCITY": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+          }
+        }
+      }
+    }
+  }
+}
