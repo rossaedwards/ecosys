@@ -1,8 +1,12 @@
-## ** APS‑TVFD‑INT **
-## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standards **
-## ** Ross A. Edwards | Aurphyx LLC | SUXS **
-## ** SAGES | AGPLv3 **
+## ### ** APS‑TVFD‑INT **
+
+## ### ** Version 1.0 (Draft) **
+
+## ### ** Aurphyx Primordial Standards **
+
+## ### ** Ross A. Edwards | Aurphyx LLC  **
+
+## ### ** Copyright 2026 Auprhyx LLC **
 
 Abstract
 

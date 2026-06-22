@@ -1,0 +1,77 @@
+Folder PATH listing for volume Windows
+Volume serial number is 0000008E A65A:44CA
+C:.
+|   aps_terminology.json
+|   aurafs_backend.py
+|   aurphyx_memori.py
+|   aurphyx_memori.py.md
+|   config.yaml
+|   config.yaml.md
+|   dualities.json
+|   dualities.json.md
+|   gemini_hook.py
+|   gemini_hook.py.md
+|   heartbeat.py
+|   heartbeat.py.md
+|   hermes_acp.md
+|   hermes_creating_skills.md
+|   hermes_memory_provider.md
+|   hermes_platform_adapter.md
+|   invariants.json
+|   invariants.json.md
+|   lmstudio_hook.py
+|   lmstudio_hook.py.md
+|   memoree_06-21-2026_tree.txt
+|   memoree_fs_server.py
+|   memoree_fs_server.py.md
+|   memoree_service.log
+|   memoree_service.py
+|   memoree_service.py.md
+|   memori_bridge.py
+|   memori_bridge.py.md
+|   memory_engine.py
+|   memory_engine.py.md
+|   memos_overlay.py
+|   memos_overlay.py.md
+|   naming_codex.md
+|   perplexity_hook.py
+|   perplexity_hook.py.md
+|   powersync_client.py
+|   powersync_client.py.md
+|   projects.json
+|   projects.json.md
+|   QUICKSTART.md
+|   README.md
+|   requirements.txt
+|   routes.py
+|   routes.py.md
+|   schemas.py
+|   schemas.py.md
+|   supergrok_hook.py
+|   supergrok_hook.py.md
+|   vector_backend.py
+|   vector_backend.py.md
+|   __init__.py
+|   
++---.zed
+|       settings.json
+|       
++---embeddings
++---projects
++---qdrant
+|   |   raft_state.json
+|   |   
+|   +---.deleted
+|   +---aliases
+|   |       data.json
+|   |       
+|   \---collections
+\---__pycache__
+        aurphyx_memori.cpython-314.pyc
+        memoree_service.cpython-314.pyc
+        memori_bridge.cpython-314.pyc
+        memory_engine.cpython-314.pyc
+        routes.cpython-314.pyc
+        schemas.cpython-314.pyc
+        vector_backend.cpython-314.pyc
+        
