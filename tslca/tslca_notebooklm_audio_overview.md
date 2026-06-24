@@ -1270,7 +1270,7 @@ Yes, the transformer handles the heavy lifting of semantic parsing and language 
 00:36:46 Speaker 2
 It's essentially the vocabulary engine.
 00:36:48 Speaker 1
-Meanwhile, the broader USAEC fusion algorithm runs the Sage's governance and SIC perception bounces a shell over the whole GPU cluster.
+Meanwhile, the broader SUXS-IFO fusion algorithm runs the Sage's governance and SIC perception bounces a shell over the whole GPU cluster.
 00:36:58 Speaker 1
 The transformer handles the language, but the TSLCA architecture handles the mind, the identity, and the ethics.
 00:37:04 Speaker 2
