@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurphyx OpenSCAD Prototype Index</title>
+<style>
+  :root {
+    --bg: #0a0a12;
+    --surface: #12121e;
+    --card: #1a1a2e;
+    --border: #2a2a4a;
+    --accent: #00d4ff;
+    --accent2: #9b59b6;
+    --accent3: #e74c3c;
+    --gold: #f1c40f;
+    --text: #e0e0f0;
+    --muted: #7a7a9a;
+    --green: #2ecc71;
+    --warn: #f39c12;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 2rem; }
+  header { text-align: center; margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+  header h1 { font-size: 2.2rem; color: var(--accent); letter-spacing: 0.05em; }
+  header p { color: var(--muted); margin-top: 0.5rem; font-size: 0.9rem; }
+  header a { color: var(--accent); text-decoration: none; }
+  .section-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin: 2.5rem 0 1rem; font-weight: 600; }
+  .section-label span { border-left: 3px solid var(--accent); padding-left: 0.6rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s; }
+  .card:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(0,212,255,0.08); }
+  .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #0d0d1a; border-bottom: 1px solid var(--border); }
+  .card-img-placeholder { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border); font-size: 3rem; }
+  .card-body { padding: 1.2rem; }
+  .card-title { font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; word-break: break-all; }
+  .card-subtitle { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.8rem; }
+  .card-desc { font-size: 0.85rem; line-height: 1.6; color: var(--text); }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+  .tag { font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 999px; font-weight: 600; letter-spacing: 0.04em; }
+  .tag-system { background: rgba(0,212,255,0.12); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .tag-active { background: rgba(46,204,113,0.12); color: var(--green); border: 1px solid rgba(46,204,113,0.25); }
+  .tag-alias { background: rgba(243,156,18,0.12); color: var(--warn); border: 1px solid rgba(243,156,18,0.25); }
+  .tag-module { background: rgba(155,89,182,0.12); color: var(--accent2); border: 1px solid rgba(155,89,182,0.25); }
+  .param-table { width: 100%; font-size: 0.75rem; margin-top: 0.8rem; border-collapse: collapse; }
+  .param-table th { text-align: left; color: var(--muted); padding: 0.2rem 0.4rem; border-bottom: 1px solid var(--border); }
+  .param-table td { padding: 0.2rem 0.4rem; color: var(--text); font-family: monospace; }
+  .dep-note { margin-top: 0.8rem; font-size: 0.75rem; color: var(--muted); background: rgba(255,255,255,0.03); border-left: 2px solid var(--border); padding: 0.4rem 0.6rem; border-radius: 0 4px 4px 0; }
+  .archive-card { border: 1px dashed var(--warn); background: rgba(243,156,18,0.04); }
+  .archive-card .card-title { color: var(--warn); }
+  footer { text-align: center; margin-top: 4rem; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  code { font-family: 'Cascadia Code', 'Fira Code', monospace; background: rgba(255,255,255,0.06); padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔩 Aurphyx OpenSCAD Prototype Index</h1>
+  <p>Source: <a href="https://github.com/rossaedwards/ecosys/tree/main/openscad" target="_blank">rossaedwards/ecosys/openscad</a> &nbsp;|&nbsp; Generated: 2026-07-04 &nbsp;|&nbsp; 9 prototypes &nbsp;|&nbsp; 5 system domains</p>
+</header>
+
+<div class="section-label"><span>🔵 AuraFS — Storage &amp; Mesh Architecture</span></div>
+<div class="grid">
+
+  <div class="card">
+    <img class="card-img" src="aurafs_datacore.png" alt="AuraFS DataCore Orb render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">aurafs_datacore.scad</div>
+      <div class="card-subtitle">AuraFS DataCore Orb — 9-Node Flower of Life Lattice</div>
+      <div class="card-desc">Spherical 9-node lattice geometry mapping the AuraFS distributed storage node. Nodes span ChaosCore (S pole) → 6 equatorial Meshwerk cores → CrownCore (N pole), anchored to central BlissCore. Ref: TVFD Ch.9.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">AuraFS</span>
+        <span class="tag tag-active">✓ Active</span>
+        <span class="tag tag-module">$fn=60</span>
+      </div>
+      <table class="param-table"><tr><th>Parameter</th><th>Default</th></tr>
+        <tr><td>orb_radius</td><td>40 mm</td></tr>
+        <tr><td>core_radius</td><td>8 mm</td></tr>
+      </table>
+      <div class="dep-note">🔗 Deps: None — pure OpenSCAD primitives</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="aurafs_datacore_shard.png" alt="AuraFS DataCore Shard render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">aurafs_datacore_shard.scad</div>
+      <div class="card-subtitle">AuraFS DataCore Shard — Mesh Replica Fragment</div>
+      <div class="card-desc">A shard-slice variant of the DataCore orb, representing a partial distributed replica used for AuraFS mesh replication and fault tolerance topology.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">AuraFS</span>
+        <span class="tag tag-active">✓ Active</span>
+      </div>
+      <div class="dep-note">🔗 Deps: aurafs_datacore (shared geometry base)</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="aurafs-raecell-home-device.png" alt="RaeCell Home Device render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">aurafs_raecell_arora_pc.scad</div>
+      <div class="card-subtitle">AuraFS RaeCell — Arora Personal Computer</div>
+      <div class="card-desc">Physical form-factor enclosure for the RaeCell home node running Ora OS (formerly Arora). Models port layout, topology, and chassis of the Aurphyx personal compute unit for off-grid AuraFS mesh participation.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">AuraFS</span>
+        <span class="tag tag-system">Ora OS</span>
+        <span class="tag tag-active">✓ Active</span>
+      </div>
+      <div class="dep-note">🔗 Deps: RaeCell spec, Ora OS form factor (conceptual)</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img-placeholder">💾</div>
+    <div class="card-body">
+      <div class="card-title">dataorb.scad</div>
+      <div class="card-subtitle">DataOrb — Alias of aurafs_datacore</div>
+      <div class="card-desc">Identical SHA to <code>aurafs_datacore.scad</code>. This is a legacy naming alias. The DataOrb name appeared in earlier design docs; <code>aurafs_datacore.scad</code> is the canonical file.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">AuraFS</span>
+        <span class="tag tag-alias">⚠ Duplicate/Alias</span>
+      </div>
+      <div class="dep-note">🔗 Action: consolidate to aurafs_datacore.scad</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label"><span>⚡ TVFD / ZPE — Topological Vacuum Flux Dynamics</span></div>
+<div class="grid">
+
+  <div class="card">
+    <img class="card-img" src="balance_state_vector_flux_pump-1.png" alt="ZPE Harvester render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">balance_state_vector_flux_pump.scad</div>
+      <div class="card-subtitle">Aurphyx ZPE Harvester — Casimir Fractal Plates &amp; YBCO Flux Pump</div>
+      <div class="card-desc">Zero Point Energy harvester. Sierpinski hexagonal fractal Casimir plates (ds=1.36, 12% vacuum suppression target) + YBCO superconducting ring with flux pinning sites + Tesla 3-6-9 coil array (C9v). Ref: TVFD Ch.10.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">TVFD</span>
+        <span class="tag tag-system">ZPE</span>
+        <span class="tag tag-active">✓ Active</span>
+        <span class="tag tag-module">$fn=60</span>
+      </div>
+      <table class="param-table"><tr><th>Parameter</th><th>Default</th></tr>
+        <tr><td>plate_gap</td><td>4.0 mm</td></tr>
+        <tr><td>fractal_depth</td><td>3</td></tr>
+        <tr><td>plate_radius</td><td>25 mm</td></tr>
+      </table>
+      <div class="dep-note">🔗 Deps: None — uses recursive internal module sierpinski_hex_3d()</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="golden_silk_adibatic-spirals.png" alt="Golden Silk Adiabatic Spirals render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">Golden Silk Adiabatic Spirals.scad</div>
+      <div class="card-subtitle">Golden-Ratio Adiabatic Spiral Geometry</div>
+      <div class="card-desc">Golden-ratio adiabatic spiral geometry for Aurphyx thermal management and Vibe Audio Standard resonant enclosure waveguide shaping. Related to TVFD adiabatic flux routing.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">TVFD</span>
+        <span class="tag tag-system">Vibe Audio</span>
+        <span class="tag tag-active">✓ Active</span>
+      </div>
+      <div class="dep-note">🔗 Deps: None</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label"><span>🧠 TSLCA — Three-Squared-Lattice Cognitive Architecture</span></div>
+<div class="grid">
+
+  <div class="card">
+    <img class="card-img" src="tslca_tvfd_vim_raecells_powercore.png" alt="27-Cell Macro Array render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">tslca_tvfd_vim_raecells_powercore.scad</div>
+      <div class="card-subtitle">TRL-4: 27-Cell 3²-Lattice Macro-Array (Prototype 6)</div>
+      <div class="card-desc">The primary compute substrate. 27 RaeCells in a 3×3×3 lattice across Creation (Cyan), Integration (Purple), and Renewal (DarkRed) cognitive layers. Each C6v hexagonal cell has YBCO core + RF Floquet coil + SIC/SCC/ICC waveguide routing. Ref: TVFD Ch.11 &amp; TSLCA.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">TSLCA</span>
+        <span class="tag tag-system">TVFD</span>
+        <span class="tag tag-system">VIM</span>
+        <span class="tag tag-active">✓ TRL-4</span>
+        <span class="tag tag-module">$fn=40</span>
+      </div>
+      <table class="param-table"><tr><th>Parameter</th><th>Default</th></tr>
+        <tr><td>lattice_spacing</td><td>40.0 mm</td></tr>
+        <tr><td>cell_radius</td><td>12.0 mm</td></tr>
+        <tr><td>cell_height</td><td>15.0 mm</td></tr>
+        <tr><td>waveguide_radius</td><td>2.5 mm</td></tr>
+      </table>
+      <div class="dep-note">🔗 Deps: TSLCA spec, TVFD Ch.11, VIM (conceptual refs only — no file includes)</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label"><span>🔬 FTQC — Fractal-Enhanced Topological Quantum Computing</span></div>
+<div class="grid">
+
+  <div class="card">
+    <img class="card-img" src="FTQC_photonic_hexagonal_lattice.png" alt="FTQC Photonic Waveguide render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">ftqc_pwg.scad</div>
+      <div class="card-subtitle">FTQC Photonic Waveguide Grid</div>
+      <div class="card-desc">Hexagonal lattice photonic crystal waveguide geometry for the FTQC substrate. Models topological qubit routing channels and photon confinement geometry for the Fractal-Enhanced Topological Quantum Computing framework.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">FTQC</span>
+        <span class="tag tag-active">✓ Active</span>
+      </div>
+      <div class="dep-note">🔗 Deps: FTQC framework (conceptual)</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label"><span>🖥 Hardware — Board &amp; Chassis</span></div>
+<div class="grid">
+
+  <div class="card">
+    <img class="card-img" src="chakracore_nexus_board.png" alt="ChakraCore Nexus Board render" loading="lazy">
+    <div class="card-body">
+      <div class="card-title">chakracore_nexusboard.scad</div>
+      <div class="card-subtitle">ChakraCore Nexus Board</div>
+      <div class="card-desc">PCB/substrate form-factor model for the Aurphyx ChakraCore system interconnect board. Hardware backbone linking RaeCells, YBCO flux pumps, FPGA power rails, and photonic waveguides into a unified chassis topology.</div>
+      <div class="tag-row">
+        <span class="tag tag-system">Hardware</span>
+        <span class="tag tag-system">ChakraCore</span>
+        <span class="tag tag-active">✓ Active</span>
+      </div>
+      <div class="dep-note">🔗 Deps: ChakraCore spec (conceptual)</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label"><span>📦 Archive</span></div>
+<div class="grid">
+  <div class="card archive-card">
+    <div class="card-img-placeholder">📦</div>
+    <div class="card-body">
+      <div class="card-title">prototypes.zip (4.28 MB)</div>
+      <div class="card-subtitle">Compressed Prototype Archive</div>
+      <div class="card-desc">Contains the full prototype suite. May include additional .scad files, STL exports, or additional renders not individually committed to the repo root.</div>
+      <div class="tag-row">
+        <span class="tag tag-alias">⚠ Extract &amp; Commit Individually</span>
+      </div>
+      <div class="dep-note">🔗 Action: unzip, version-track each file, remove zip from repo</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Aurphyx LLC &nbsp;|&nbsp; Ross Edwards &nbsp;|&nbsp; <a href="https://github.com/rossaedwards/ecosys" style="color:#00d4ff;text-decoration:none">rossaedwards/ecosys</a> &nbsp;|&nbsp; All prototypes use pure OpenSCAD primitives — no external library dependencies detected.</p>
+</footer>
+</body>
+</html>
