@@ -1,6 +1,6 @@
 ###############################################################################
 # CMakeLists.txt — Vibe Audio Visualizer VLC Plugin
-# Aurphyx SUXS / rAE
+# Aurphyx LLC & Aurphyx SUXS
 # V.A.P. v3.1 — 9-Pillar TSLCA Cymatic Engine
 ###############################################################################
 
