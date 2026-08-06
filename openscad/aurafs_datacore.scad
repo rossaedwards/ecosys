@@ -6,9 +6,9 @@
 
 /* [Orb Parameters] */
 // Overall radius of the DataCore Orb
-orb_radius = 40; // [20:5:100]
+orb_radius = 50; // [20:5:100]
 // Radius of the individual DataCores
-core_radius = 8; // [2:1:15]
+core_radius = 10; // [2:1:15]
 
 /* [Subsystem Toggles] */
 show_bliss_core = 1; // [0: Hidden, 1: Visible]
@@ -58,26 +58,26 @@ module lattice_links() {
             for (i = [0 : 60 : 359]) {
                 rotate([0, 0, i])
                 rotate([0, 90, 0])
-                cylinder(r=1.5, h=orb_radius, center=false);
+                cylinder(r=2.5, h=orb_radius, center=false);
             }
             // Link Equator to Poles
             for (i = [0 : 60 : 359]) {
                 rotate([0, 0, i]) {
                     hull() {
-                        translate([orb_radius, 0, 0]) sphere(r=1.5);
-                        translate([0, 0, orb_radius]) sphere(r=1.5);
+                        translate([orb_radius, 0, 0]) sphere(r=2.5);
+                        translate([0, 0, orb_radius]) sphere(r=2.5);
                     }
                     hull() {
-                        translate([orb_radius, 0, 0]) sphere(r=1.5);
-                        translate([0, 0, -orb_radius]) sphere(r=1.5);
+                        translate([orb_radius, 0, 0]) sphere(r=2.5);
+                        translate([0, 0, -orb_radius]) sphere(r=2.5);
                     }
                 }
             }
             // Link Equator Ring
             for (i = [0 : 60 : 359]) {
                 hull() {
-                    rotate([0, 0, i]) translate([orb_radius, 0, 0]) sphere(r=1.5);
-                    rotate([0, 0, i+60]) translate([orb_radius, 0, 0]) sphere(r=1.5);
+                    rotate([0, 0, i]) translate([orb_radius, 0, 0]) sphere(r=2.5);
+                    rotate([0, 0, i+60]) translate([orb_radius, 0, 0]) sphere(r=2.5);
                 }
             }
             // Link Poles to Center (The Central Axis)

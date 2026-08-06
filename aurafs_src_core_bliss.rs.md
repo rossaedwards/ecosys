@@ -1,5 +1,5 @@
 //! ═══════════════════════════════════════════════════════════════════
-//! 🔮 AuraFS Core Bliss - Quantum-Safe Identity Manager
+//! 🔮 AuraFS-SRC-CORE-Bliss - Quantum-Safe Identity Manager
 //! ✨ f0rg3d with Ineffable l0v3 by Aurphyx Quantum Division ✨
 //! Complete lifecycle with crypto, ZK proofs, soul verification, and enterprise features.
 //! ═══════════════════════════════════════════════════════════════════
@@ -32,12 +32,11 @@ impl BlissId {
         let digest = hasher.finalize();
         Self(hex::encode(digest))
     }
-    
     /// Generate genesis BlissID (system root)
     pub fn genesis() -> Self {
         Self("genesis_0000000000000000000000000000000000000000000000000000000000000000".to_string())
     }
-    
+
     /// Create from hex string with validation
     pub fn from_hex(hex: &str) -> Result<Self> {
         if hex.is_empty() {
@@ -51,7 +50,7 @@ impl BlissId {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         // Validate hex format (64 hex chars for SHA3-256)
         if hex.len() != 64 || !hex.chars().all(|c| c.is_ascii_hexdigit()) {
             return Err(client(
@@ -64,24 +63,25 @@ impl BlissId {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         Ok(Self(hex.to_string()))
     }
-    
+
     /// Validate BlissID format
     pub fn is_valid(&self) -> bool {
         self.0.len() == 64 && self.0.chars().all(|c| c.is_ascii_hexdigit())
     }
-    
+
     /// Get hex representation
     pub fn to_hex(&self) -> &str {
         &self.0
     }
-    
+
     /// Get as bytes (for hashing/signing)
     pub fn as_bytes(&self) -> &[u8] {
         self.0.as_bytes()
     }
+
 }
 
 impl fmt::Display for BlissId {
@@ -101,21 +101,21 @@ impl From<String> for BlissId {
 pub trait BlissIdManager: Send + Sync {
     /// Register new BlissID with soul proof
     async fn register_blissid(&self, record: BlissIdRecord) -> Result<()>;
-    
     /// Verify BlissID with proof
     async fn verify_blissid(&self, blissid: &BlissId, proof: &SoulProof) -> Result<bool>;
-    
+
     /// Deactivate BlissID
     async fn deactivate_blissid(&self, blissid: &BlissId) -> Result<()>;
-    
+
     /// Check if BlissID is active
     async fn is_blissid_active(&self, blissid: &BlissId) -> Result<bool>;
-    
+
     /// Get BlissID record
     async fn get_record(&self, blissid: &BlissId) -> Result<Option<BlissIdRecord>>;
-    
+
     /// List all active BlissIDs
     async fn list_active(&self) -> Result<Vec<BlissId>>;
+
 }
 
 /// BlissID record with full metadata
@@ -153,7 +153,6 @@ impl BlissIdRecord {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
         Ok(Self {
             blissid,
             registered_at: Utc::now(),
@@ -165,7 +164,7 @@ impl BlissIdRecord {
             verification_count: 0,
         })
     }
-    
+
     /// Validate record integrity
     pub fn validate(&self) -> Result<()> {
         if !self.blissid.is_valid() {
@@ -179,7 +178,7 @@ impl BlissIdRecord {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         if self.manager_signature.is_empty() {
             return Err(client(
                 AuraFSError::Soul {
@@ -191,9 +190,10 @@ impl BlissIdRecord {
                 ErrorCode::InvalidSignature,
             ));
         }
-        
+
         Ok(())
     }
+
 }
 
 /// In-memory BlissID Manager (for testing/development)
@@ -215,7 +215,6 @@ impl BlissIdManager for InMemoryBlissIdManager {
     async fn register_blissid(&self, record: BlissIdRecord) -> Result<()> {
         // Validate record
         record.validate()?;
-        
         // Check for duplicates
         {
             let cache = self.cache.read().await;
@@ -231,16 +230,16 @@ impl BlissIdManager for InMemoryBlissIdManager {
                 ));
             }
         }
-        
+
         // Store record
         {
             let mut cache = self.cache.write().await;
             cache.insert(record.blissid.clone(), record);
         }
-        
+
         Ok(())
     }
-    
+
     async fn verify_blissid(&self, blissid: &BlissId, proof: &SoulProof) -> Result<bool> {
         // Validate inputs
         if !blissid.is_valid() {
@@ -254,18 +253,18 @@ impl BlissIdManager for InMemoryBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let cache = self.cache.read().await;
         if let Some(record) = cache.get(blissid) {
             if !record.active {
                 return Ok(false);
             }
-            
+
             // Verify proof matches
             if record.proof.commitment != proof.commitment {
                 return Ok(false);
             }
-            
+
             // Verify proof cryptographically
             let proof_status = proof.verify().await?;
             Ok(proof_status == ProofStatus::Valid)
@@ -273,7 +272,7 @@ impl BlissIdManager for InMemoryBlissIdManager {
             Ok(false)
         }
     }
-    
+
     async fn deactivate_blissid(&self, blissid: &BlissId) -> Result<()> {
         if !blissid.is_valid() {
             return Err(client(
@@ -286,7 +285,7 @@ impl BlissIdManager for InMemoryBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let mut cache = self.cache.write().await;
         if let Some(record) = cache.get_mut(blissid) {
             record.active = false;
@@ -303,7 +302,7 @@ impl BlissIdManager for InMemoryBlissIdManager {
             ))
         }
     }
-    
+
     async fn is_blissid_active(&self, blissid: &BlissId) -> Result<bool> {
         if !blissid.is_valid() {
             return Err(client(
@@ -316,11 +315,11 @@ impl BlissIdManager for InMemoryBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let cache = self.cache.read().await;
         Ok(cache.get(blissid).map(|r| r.active).unwrap_or(false))
     }
-    
+
     async fn get_record(&self, blissid: &BlissId) -> Result<Option<BlissIdRecord>> {
         if !blissid.is_valid() {
             return Err(client(
@@ -333,11 +332,11 @@ impl BlissIdManager for InMemoryBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let cache = self.cache.read().await;
         Ok(cache.get(blissid).cloned())
     }
-    
+
     async fn list_active(&self) -> Result<Vec<BlissId>> {
         let cache = self.cache.read().await;
         Ok(cache.values()
@@ -345,18 +344,19 @@ impl BlissIdManager for InMemoryBlissIdManager {
             .map(|r| r.blissid.clone())
             .collect())
     }
+
 }
 
 /// Production-ready persistent BlissID Manager with crypto verification
 pub struct PersistentBlissIdManager {
     /// In-memory cache for fast lookups
     cache: Arc<tokio::sync::RwLock<HashMap<BlissId, BlissIdRecord>>>,
-    
     /// Dilithium5 keypair for manager operations
     signing_keypair: Arc<DilithiumKeypair>,
-    
+
     /// Persistence backend (TODO: database)
     _persistence: (),
+
 }
 
 impl PersistentBlissIdManager {
@@ -370,13 +370,13 @@ impl PersistentBlissIdManager {
                 },
                 ErrorPhase::Crypto,
             ))?);
-        
         Ok(Arc::new(Self {
             cache: Arc::new(tokio::sync::RwLock::new(HashMap::new())),
             signing_keypair,
             _persistence: (),
         }))
     }
+
 }
 
 #[async_trait::async_trait]
@@ -384,7 +384,6 @@ impl BlissIdManager for PersistentBlissIdManager {
     async fn register_blissid(&self, mut record: BlissIdRecord) -> Result<()> {
         // Validate record structure
         record.validate()?;
-        
         // 1. Validate proof structure & crypto
         let proof_status = record.proof.verify().await?;
         if proof_status != ProofStatus::Valid {
@@ -398,7 +397,7 @@ impl BlissIdManager for PersistentBlissIdManager {
                 ErrorCode::InvalidSoulProof,
             ));
         }
-        
+
         // 2. Check for duplicate registration
         {
             let cache = self.cache.read().await;
@@ -414,7 +413,7 @@ impl BlissIdManager for PersistentBlissIdManager {
                 ));
             }
         }
-        
+
         // 3. Manager signs the registration for audit trail
         let registration_msg = format!(
             "register:{}:{}", 
@@ -429,18 +428,18 @@ impl BlissIdManager for PersistentBlissIdManager {
                 },
                 ErrorPhase::Crypto,
             ))?;
-        
+
         // 4. Store with manager signature
         record.manager_signature = base64::encode(manager_sig);
         {
             let mut cache = self.cache.write().await;
             cache.insert(record.blissid.clone(), record);
         }
-        
+
         // TODO: Persist to database with retry logic
         Ok(())
     }
-    
+
     async fn verify_blissid(&self, blissid: &BlissId, proof: &SoulProof) -> Result<bool> {
         // Validate inputs
         if !blissid.is_valid() {
@@ -454,18 +453,18 @@ impl BlissIdManager for PersistentBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let cache = self.cache.read().await;
         if let Some(record) = cache.get(blissid) {
             if !record.active {
                 return Ok(false);
             }
-            
+
             // Verify provided proof matches stored proof
             if record.proof.commitment != proof.commitment {
                 return Ok(false);
             }
-            
+
             // Double-check crypto signature with timeout
             match tokio::time::timeout(
                 std::time::Duration::from_secs(5),
@@ -491,7 +490,7 @@ impl BlissIdManager for PersistentBlissIdManager {
             Ok(false)
         }
     }
-    
+
     async fn deactivate_blissid(&self, blissid: &BlissId) -> Result<()> {
         // Validate BlissID
         if !blissid.is_valid() {
@@ -505,7 +504,7 @@ impl BlissIdManager for PersistentBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let mut cache = self.cache.write().await;
         if let Some(record) = cache.get_mut(blissid) {
             // Sign deactivation for audit
@@ -537,7 +536,7 @@ impl BlissIdManager for PersistentBlissIdManager {
             ))
         }
     }
-    
+
     async fn is_blissid_active(&self, blissid: &BlissId) -> Result<bool> {
         if !blissid.is_valid() {
             return Err(client(
@@ -550,11 +549,11 @@ impl BlissIdManager for PersistentBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let cache = self.cache.read().await;
         Ok(cache.get(blissid).map(|r| r.active).unwrap_or(false))
     }
-    
+
     async fn get_record(&self, blissid: &BlissId) -> Result<Option<BlissIdRecord>> {
         if !blissid.is_valid() {
             return Err(client(
@@ -567,11 +566,11 @@ impl BlissIdManager for PersistentBlissIdManager {
                 ErrorCode::SoulInvalid,
             ));
         }
-        
+
         let cache = self.cache.read().await;
         Ok(cache.get(blissid).cloned())
     }
-    
+
     async fn list_active(&self) -> Result<Vec<BlissId>> {
         let cache = self.cache.read().await;
         Ok(cache.values()
@@ -579,12 +578,12 @@ impl BlissIdManager for PersistentBlissIdManager {
             .map(|r| r.blissid.clone())
             .collect())
     }
+
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    
     #[test]
     fn test_blissid_generation() {
         let biometric = b"test_biometric_data";
@@ -592,14 +591,15 @@ mod tests {
         assert!(blissid.is_valid());
         assert_eq!(blissid.0.len(), 64);
     }
-    
+
     #[test]
     fn test_blissid_from_hex() {
         let hex = "a".repeat(64);
         let blissid = BlissId::from_hex(&hex).unwrap();
         assert!(blissid.is_valid());
-        
+
         // Invalid hex
         assert!(BlissId::from_hex("invalid").is_err());
     }
+
 }
