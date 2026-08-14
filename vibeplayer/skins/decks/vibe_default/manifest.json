@@ -1,0 +1,14 @@
+{
+  "id": "vibe_default",
+  "brand": "Vibe / Aurphyx",
+  "models": ["Vinyl Vibez dual platter"],
+  "version": "0.1.0",
+  "layout": "layout.toml",
+  "engine": "vmp-vinyl",
+  "touch_profile": "capacitive_default",
+  "assets": {
+    "deck_a_vinyl": "assets/deck_a_vinyl.png",
+    "deck_b_vinyl": "assets/deck_b_vinyl.png"
+  },
+  "notes": "Drop your large vinyl record images into assets/ then resume Live touch work."
+}

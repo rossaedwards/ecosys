@@ -1,0 +1,19 @@
+[package]
+name = "vmp-vinyl"
+version.workspace = true
+edition.workspace = true
+# Mixxx-derived symbiont — keep GPL when real Mixxx code is transmuted in.
+# Until then this crate is a clean scaffolding API for the transmute target.
+license = "GPL-2.0-or-later"
+description = "Vinyl Vibez — Mixxx-class DJ engine symbiont for Vibe Media Player (FUTE transmute target)"
+authors.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+vmp-audio = { path = "../vmp-audio" }
+vmp-dsp = { path = "../vmp-dsp" }
+vmp-vap = { path = "../vmp-vap" }
+vmp-viz = { path = "../vmp-viz" }
+parking_lot = "0.12"

@@ -1,0 +1,331 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aurphyx.org/schema/vap_schema_v3_1.json",
+  "title": "Vibe Audio Protocol (V.A.P.) v3.1",
+  "description": "Universal Metadata Standard for Experiential Audio Identity — full 9-pillar TSLCA taxonomy",
+  "type": "object",
+  "required": ["VAP_VERSION", "IDENTITY", "PILLARS"],
+  "additionalProperties": false,
+  "properties": {
+    "VAP_VERSION": {
+      "type": "string",
+      "const": "3.1"
+    },
+    "IDENTITY": {
+      "type": "object",
+      "required": ["TITLE", "ARTIST"],
+      "properties": {
+        "TITLE": { "type": "string" },
+        "ARTIST": { "type": "string" },
+        "ISRC": { "type": "string" },
+        "SOURCE_DNA": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "PILLARS": {
+      "type": "object",
+      "description": "The 9-Dimensional Holographic Identity",
+      "required": ["STRUCTURAL", "AFFECTIVE", "PHOTOMETRIC", "KINETIC"],
+      "properties": {
+        "STRUCTURAL": {
+          "description": "Pillar 1: Skeleton (Time/Rhythm)",
+          "type": "object",
+          "properties": {
+            "TEMPORAL_DYNAMICS": {
+              "type": "object",
+              "properties": {
+                "BPM_RAW": { "type": "number", "minimum": 0 },
+                "BPM_PERCEIVED": { "type": ["string", "number"] },
+                "GROOVE_QUANTIZATION": { "type": "string" },
+                "TIME_SIGNATURE": { "type": "string" }
+              }
+            },
+            "ARRANGEMENT": {
+              "type": "object",
+              "properties": {
+                "SECTIONAL_MARKERS": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "label": { "type": "string" },
+                      "time_sec": { "type": "number" }
+                    }
+                  }
+                },
+                "MIX_WINDOW_BARS": { "type": "number" },
+                "BREAKDOWN_DEPTH": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            },
+            "PERCUSSIVE_DNA": {
+              "type": "object",
+              "properties": {
+                "KICK_TRANSIENT": { "type": "string" },
+                "KICK_ATTACK_MS": { "type": "number" },
+                "SYNCOPATION_INDEX": { "type": "number", "minimum": 0, "maximum": 1 },
+                "GHOST_NOTE_DENSITY": { "type": ["string", "number"] }
+              }
+            },
+            "BPM_RAW": { "type": "number" },
+            "GROOVE_QUANTIZATION": { "type": "string" },
+            "SYNCOPATION_INDEX": { "type": "number" }
+          }
+        },
+        "TONAL": {
+          "description": "Pillar 2: Flesh (Harmony/Pitch)",
+          "type": "object",
+          "properties": {
+            "HARMONIC_PROFILE": {
+              "type": "object",
+              "properties": {
+                "KEY": { "type": "string" },
+                "CHORD_COMPLEXITY": { "type": "string" },
+                "DISSONANCE_RATING": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            },
+            "MELODIC_CONTOUR": {
+              "type": "object",
+              "properties": {
+                "RANGE_SPAN_OCTAVES": { "type": "number" },
+                "HOOK_STRENGTH": { "type": "number", "minimum": 0, "maximum": 1 },
+                "MELODIC_MOTION": { "type": "string" }
+              }
+            },
+            "TUNING": {
+              "type": "object",
+              "properties": {
+                "REFERENCE_PITCH_HZ": { "type": "number" },
+                "MICROTONALITY": { "type": "boolean" }
+              }
+            },
+            "KEY": { "type": "string" },
+            "DISSONANCE_RATING": { "type": "number" }
+          }
+        },
+        "TIMBRAL": {
+          "description": "Pillar 3: Skin (Texture/Physics)",
+          "type": "object",
+          "properties": {
+            "SPECTRAL_PHYSICS": {
+              "type": "object",
+              "properties": {
+                "FREQ_BALANCE": { "type": "string" },
+                "SPECTRAL_CENTROID_HZ": { "type": "number" },
+                "SPECTRAL_SATURATION": { "type": "string" },
+                "SATURATION_INDEX": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            },
+            "PRODUCTION_AESTHETIC": {
+              "type": "object",
+              "properties": {
+                "FIDELITY": { "type": "string" },
+                "DYNAMIC_RANGE_LRA": { "type": "number" },
+                "SPATIAL_WIDTH": { "type": "string" },
+                "TEXTURE_GRAIN": { "type": "string" }
+              }
+            },
+            "FIDELITY": { "type": "string" }
+          }
+        },
+        "LINGUISTIC": {
+          "description": "Pillar 4: Voice (Semantics)",
+          "type": "object",
+          "properties": {
+            "VOCAL_TEXTURE": {
+              "type": "object",
+              "properties": {
+                "POSITION": { "type": "string" },
+                "DELIVERY": { "type": "string" },
+                "PROCESSING": { "type": "string" }
+              }
+            },
+            "SEMANTIC_CONTENT": {
+              "type": "object",
+              "properties": {
+                "TOPIC": { "type": "string" },
+                "EXPLICIT_TIER": {
+                  "type": "string",
+                  "enum": ["CLEAN", "MILD", "EXPLICIT", "SEVERE", "severe_tier_4", "clean", "mild", "explicit"]
+                },
+                "NARRATIVE_ARC": { "type": "string" }
+              }
+            },
+            "LANGUAGE": {
+              "type": "object",
+              "properties": {
+                "PRIMARY": { "type": "string" },
+                "DIALECT": { "type": "string" }
+              }
+            },
+            "EXPLICIT_TIER": { "type": "string" }
+          }
+        },
+        "AFFECTIVE": {
+          "description": "Pillar 5: Heart (Emotion)",
+          "type": "object",
+          "properties": {
+            "THAYER_COORDINATES": {
+              "type": "object",
+              "properties": {
+                "VALENCE": { "type": "number", "minimum": -1, "maximum": 1 },
+                "AROUSAL": { "type": "number", "minimum": 0, "maximum": 1 },
+                "DOMINANCE": { "type": ["number", "string"], "minimum": 0, "maximum": 1 }
+              }
+            },
+            "EMOTIONAL_COMPLEXITY": {
+              "type": "object",
+              "properties": {
+                "MOOD_STABILITY": { "type": ["number", "string"] },
+                "CATHARSIS_POTENTIAL": { "type": ["number", "string"] },
+                "NOSTALGIA_TRIGGER": { "type": "number" }
+              }
+            },
+            "TENSION_ARC": {
+              "type": "object",
+              "properties": {
+                "BUILDUP_VELOCITY": { "type": "number" },
+                "RESOLUTION_STATE": { "type": "string" }
+              }
+            },
+            "VALENCE": { "type": "number", "minimum": -1, "maximum": 1 },
+            "AROUSAL": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "CONTEXTUAL": {
+          "description": "Pillar 6: Scene (Scenario)",
+          "type": "object",
+          "properties": {
+            "SCENARIO_ENGINE": {
+              "type": "object",
+              "properties": {
+                "MACRO": { "type": "string" },
+                "MICRO": { "type": "string" },
+                "SOCIAL_SETTING": { "type": "string" }
+              }
+            },
+            "INTENT_VECTORS": {
+              "type": "object",
+              "properties": {
+                "FUNCTIONAL_GOAL": { "type": "string" },
+                "TIME_OF_DAY": { "type": "string" },
+                "NARRATIVE_TROPE": { "type": "string" }
+              }
+            },
+            "METEOROLOGICAL": {
+              "type": "object",
+              "properties": {
+                "WEATHER": { "type": "string" },
+                "TEMPERATURE": { "type": "string" }
+              }
+            }
+          }
+        },
+        "PHOTOMETRIC": {
+          "description": "Pillar 7: Eye (Light/Color)",
+          "type": "object",
+          "properties": {
+            "CHROMATIC_MAP": {
+              "type": "object",
+              "properties": {
+                "PRIMARY_HEX": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                },
+                "SECONDARY_HEX": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                },
+                "PALETTE_TEMP": { "type": "string" }
+              }
+            },
+            "LUMEN_DYNAMICS": {
+              "type": "object",
+              "properties": {
+                "BRIGHTNESS_FLOOR": { "type": "number", "minimum": 0, "maximum": 1 },
+                "BRIGHTNESS_CEILING": { "type": "number", "minimum": 0, "maximum": 1 },
+                "STROBE_TRIGGER": { "type": ["number", "string"] },
+                "FADE_RATE": { "type": "string" }
+              }
+            },
+            "VISUAL_TEXTURE": {
+              "type": "object",
+              "properties": {
+                "FOG_DENSITY": { "type": "number", "minimum": 0, "maximum": 1 },
+                "LASER_COMPATIBLE": { "type": "boolean" },
+                "VISUAL_NOISE": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            },
+            "PRIMARY_HEX": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "PALETTE_TEMP": { "type": "string" }
+          }
+        },
+        "KINETIC": {
+          "description": "Pillar 8: Body (Bio-Entrainment)",
+          "type": "object",
+          "properties": {
+            "BIOMETRIC_ENTRAINMENT": {
+              "type": "object",
+              "properties": {
+                "TARGET_HR_ZONE": { "type": "string" },
+                "HRV_IMPACT": { "type": "string" },
+                "BREATH_RATE": { "type": "number" }
+              }
+            },
+            "MOTOR_RESPONSE": {
+              "type": ["object", "string"],
+              "properties": {
+                "DRIVE": { "type": "number" },
+                "SWAY": { "type": "number" },
+                "HEAD_NOD": { "type": "number" },
+                "LABEL": { "type": "string" }
+              }
+            },
+            "ENERGY": {
+              "type": "object",
+              "properties": {
+                "MET_SCORE": { "type": "number" },
+                "ENTRAINMENT_FACTOR": { "type": "number" }
+              }
+            },
+            "TARGET_HR_ZONE": { "type": "string" },
+            "MET_SCORE": { "type": "number" }
+          }
+        },
+        "GENEALOGICAL": {
+          "description": "Pillar 9: Roots (Tribe)",
+          "type": "object",
+          "properties": {
+            "ERA_ANCHORING": {
+              "type": "object",
+              "properties": {
+                "RELEASE_DATE": { "type": "string" },
+                "CULTURAL_ERA": { "type": "string" },
+                "TIMELESSNESS_SCORE": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            },
+            "DNA_SAMPLING": {
+              "type": "object",
+              "properties": {
+                "SAMPLE_LINEAGE": { "type": "array", "items": { "type": "string" } },
+                "INTERPOLATION": { "type": "array", "items": { "type": "string" } },
+                "GENRE_TREE": { "type": "array", "items": { "type": "string" } }
+              }
+            },
+            "TRIBE_ALIGNMENT": {
+              "type": "object",
+              "properties": {
+                "SUBCULTURE": { "type": "string" },
+                "AUTHENTICITY_SCORE": { "type": "number", "minimum": 0, "maximum": 1 },
+                "VIRAL_VELOCITY": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

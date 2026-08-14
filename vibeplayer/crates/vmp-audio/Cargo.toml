@@ -1,0 +1,34 @@
+[package]
+name = "vmp-audio"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Multi-format decode (Symphonia), VAP tags, and real-time playback for Vibe Media Player"
+authors.workspace = true
+
+[features]
+# cpal output (ALSA/CoreAudio/WASAPI). Default on now that alsa-lib-devel is present.
+default = ["playback"]
+playback = ["dep:cpal"]
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+vmp-vap = { path = "../vmp-vap" }
+vmp-dsp = { path = "../vmp-dsp" }
+symphonia = { version = "0.5", features = [
+    "mp3",
+    "aac",
+    "flac",
+    "ogg",
+    "pcm",
+    "isomp4",
+    "wav",
+    "alac",
+] }
+lofty = "0.22"
+parking_lot = "0.12"
+cpal = { version = "0.15", optional = true }
+
+[dev-dependencies]

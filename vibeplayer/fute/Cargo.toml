@@ -1,0 +1,33 @@
+[package]
+name = "fute"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "v01d — Fuxyez Universal Transmutation Engine (FUTE). Host-agnostic symbiotic packaging for Vibe Media Player."
+authors.workspace = true
+readme = "README.md"
+
+[lib]
+name = "fute"
+path = "src/lib.rs"
+
+[[bin]]
+name = "v01d"
+path = "src/bin/v01d.rs"
+required-features = ["cli"]
+
+[features]
+default = ["cli"]
+cli = ["dep:clap"]
+# Real C/C++ AST via libclang (requires: dnf install clang-devel llvm-devel)
+clang-ast = ["dep:clang"]
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+clap = { version = "4", features = ["derive"], optional = true }
+clang = { version = "2", optional = true }
+
+[dev-dependencies]

@@ -1,0 +1,2721 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vibe Media Player</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* ═══════════════════════════════════════════
+   VIBE MEDIA PLAYER — VAP × AURPHYX
+   Theme: Soul Cosmic Dark
+   Version: 1.0.0
+═══════════════════════════════════════════ */
+
+            :root {
+                --vmp-void: #0a0a18;
+                --vmp-surface: #11112a;
+                --vmp-panel: #18183a;
+                --vmp-raised: #1e1e45;
+                --vmp-border: #2a2a55;
+                --vmp-border2: #3a3a70;
+                --vmp-violet: #9b5de5;
+                --vmp-violet2: #c77dff;
+                --vmp-teal: #00f5d4;
+                --vmp-teal2: #80ffee;
+                --vmp-pink: #f72585;
+                --vmp-pink2: #ff6eb4;
+                --vmp-gold: #ffd166;
+                --vmp-gold2: #ffe599;
+                --vmp-text: #e0d9ff;
+                --vmp-muted: #7b7aab;
+                --vmp-faint: #3d3d70;
+                --vmp-glow-v: rgba(155, 93, 229, 0.35);
+                --vmp-glow-t: rgba(0, 245, 212, 0.3);
+                --vmp-glow-p: rgba(247, 37, 133, 0.35);
+                --vmp-glow-g: rgba(255, 209, 102, 0.3);
+                --font-ui: "JetBrains Mono", monospace;
+                --font-display: "Orbitron", sans-serif;
+                --radius-sm: 4px;
+                --radius-md: 8px;
+                --radius-lg: 14px;
+                --radius-xl: 20px;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: var(--font-ui);
+                background: var(--vmp-void);
+                background-image:
+                    radial-gradient(
+                        ellipse at 20% 20%,
+                        rgba(155, 93, 229, 0.07) 0%,
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        ellipse at 80% 80%,
+                        rgba(0, 245, 212, 0.05) 0%,
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        ellipse at 50% 50%,
+                        rgba(247, 37, 133, 0.03) 0%,
+                        transparent 70%
+                    );
+                min-height: 100vh;
+                color: var(--vmp-text);
+                overflow-x: hidden;
+                user-select: none;
+            }
+
+            /* ═══ SCROLLBAR ═══ */
+            ::-webkit-scrollbar {
+                width: 4px;
+            }
+            ::-webkit-scrollbar-track {
+                background: var(--vmp-void);
+            }
+            ::-webkit-scrollbar-thumb {
+                background: var(--vmp-border2);
+                border-radius: 2px;
+            }
+
+            /* ═══ LAYOUT ═══ */
+            .vmp-app {
+                max-width: 1440px;
+                margin: 0 auto;
+                padding: 12px;
+                display: grid;
+                grid-template-rows: auto 1fr;
+                gap: 8px;
+                min-height: 100vh;
+            }
+
+            /* ═══ TITLEBAR ═══ */
+            .vmp-titlebar {
+                background: var(--vmp-surface);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-lg);
+                padding: 10px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0 0 20px rgba(155, 93, 229, 0.1);
+            }
+
+            .vmp-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .vmp-logo-mark {
+                width: 32px;
+                height: 32px;
+                position: relative;
+            }
+
+            .vmp-logo-text {
+                font-family: var(--font-display);
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 4px;
+                background: linear-gradient(
+                    135deg,
+                    var(--vmp-violet),
+                    var(--vmp-teal)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-transform: uppercase;
+            }
+
+            .vmp-version {
+                font-size: 9px;
+                color: var(--vmp-muted);
+                letter-spacing: 2px;
+            }
+
+            .vmp-titlebar-controls {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .vmp-tb-btn {
+                background: var(--vmp-panel);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-sm);
+                color: var(--vmp-muted);
+                font-size: 9px;
+                letter-spacing: 1px;
+                padding: 4px 10px;
+                cursor: pointer;
+                font-family: var(--font-ui);
+                transition: all 0.2s;
+                text-transform: uppercase;
+            }
+
+            .vmp-tb-btn:hover {
+                background: var(--vmp-raised);
+                color: var(--vmp-violet);
+                border-color: var(--vmp-violet);
+            }
+
+            .vmp-tb-btn.active {
+                background: rgba(155, 93, 229, 0.15);
+                color: var(--vmp-violet2);
+                border-color: var(--vmp-violet);
+            }
+
+            /* ═══ MAIN LAYOUT ═══ */
+            .vmp-main {
+                display: grid;
+                grid-template-columns: 280px 1fr 300px;
+                grid-template-rows: 1fr 200px;
+                gap: 8px;
+                height: calc(100vh - 80px);
+            }
+
+            /* ═══ PANEL BASE ═══ */
+            .vmp-panel {
+                background: var(--vmp-panel);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-lg);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .vmp-panel-header {
+                background: var(--vmp-surface);
+                border-bottom: 1px solid var(--vmp-border);
+                padding: 8px 12px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-shrink: 0;
+            }
+
+            .vmp-panel-title {
+                font-family: var(--font-display);
+                font-size: 8px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: var(--vmp-muted);
+            }
+
+            .vmp-panel-title.accent-v {
+                color: var(--vmp-violet);
+            }
+            .vmp-panel-title.accent-t {
+                color: var(--vmp-teal);
+            }
+            .vmp-panel-title.accent-p {
+                color: var(--vmp-pink);
+            }
+            .vmp-panel-title.accent-g {
+                color: var(--vmp-gold);
+            }
+
+            .vmp-panel-badge {
+                font-size: 8px;
+                padding: 2px 6px;
+                border-radius: var(--radius-sm);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .badge-v {
+                background: rgba(155, 93, 229, 0.2);
+                color: var(--vmp-violet2);
+                border: 1px solid rgba(155, 93, 229, 0.3);
+            }
+            .badge-t {
+                background: rgba(0, 245, 212, 0.15);
+                color: var(--vmp-teal);
+                border: 1px solid rgba(0, 245, 212, 0.25);
+            }
+            .badge-p {
+                background: rgba(247, 37, 133, 0.15);
+                color: var(--vmp-pink);
+                border: 1px solid rgba(247, 37, 133, 0.25);
+            }
+            .badge-g {
+                background: rgba(255, 209, 102, 0.15);
+                color: var(--vmp-gold);
+                border: 1px solid rgba(255, 209, 102, 0.25);
+            }
+
+            /* ═══ LEFT COLUMN: TRANSPORT + EQ ═══ */
+            .col-left {
+                grid-column: 1;
+                grid-row: 1 / 3;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            /* ═══ TRANSPORT CORE ═══ */
+            .vmp-transport {
+                flex-shrink: 0;
+            }
+
+            .track-info {
+                padding: 14px;
+                border-bottom: 1px solid var(--vmp-border);
+            }
+
+            .track-title {
+                font-family: var(--font-display);
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: var(--vmp-text);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 3px;
+            }
+
+            .track-artist {
+                font-size: 9px;
+                color: var(--vmp-teal);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 2px;
+            }
+
+            .track-meta {
+                font-size: 8px;
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+            }
+
+            /* Progress */
+            .progress-container {
+                padding: 10px 14px;
+                border-bottom: 1px solid var(--vmp-border);
+            }
+
+            .progress-bar-wrap {
+                position: relative;
+                height: 4px;
+                background: var(--vmp-border);
+                border-radius: 2px;
+                cursor: pointer;
+                margin-bottom: 6px;
+            }
+
+            .progress-fill {
+                height: 100%;
+                border-radius: 2px;
+                background: linear-gradient(
+                    90deg,
+                    var(--vmp-violet),
+                    var(--vmp-teal)
+                );
+                position: relative;
+                transition: width 0.1s linear;
+                box-shadow: 0 0 8px var(--vmp-glow-v);
+            }
+
+            .progress-thumb {
+                position: absolute;
+                right: -5px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                background: var(--vmp-teal2);
+                border-radius: 50%;
+                box-shadow: 0 0 8px var(--vmp-glow-t);
+            }
+
+            .progress-times {
+                display: flex;
+                justify-content: space-between;
+                font-size: 9px;
+                color: var(--vmp-muted);
+            }
+
+            /* Controls */
+            .transport-controls {
+                padding: 10px 14px;
+                border-bottom: 1px solid var(--vmp-border);
+            }
+
+            .controls-row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                margin-bottom: 8px;
+            }
+
+            .ctrl-btn {
+                background: var(--vmp-raised);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-sm);
+                color: var(--vmp-muted);
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 11px;
+                transition: all 0.15s;
+            }
+
+            .ctrl-btn:hover {
+                color: var(--vmp-text);
+                border-color: var(--vmp-border2);
+                background: var(--vmp-panel);
+            }
+
+            .ctrl-btn.play-btn {
+                width: 44px;
+                height: 44px;
+                background: linear-gradient(
+                    135deg,
+                    var(--vmp-violet),
+                    var(--vmp-pink)
+                );
+                border: none;
+                color: white;
+                font-size: 16px;
+                border-radius: var(--radius-md);
+                box-shadow: 0 0 20px var(--vmp-glow-v);
+            }
+
+            .ctrl-btn.play-btn:hover {
+                box-shadow:
+                    0 0 30px var(--vmp-glow-v),
+                    0 0 15px var(--vmp-glow-p);
+                transform: scale(1.05);
+            }
+
+            .ctrl-btn.active {
+                color: var(--vmp-teal);
+                border-color: var(--vmp-teal);
+                background: rgba(0, 245, 212, 0.08);
+            }
+
+            /* Volume */
+            .volume-row {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .vol-icon {
+                font-size: 10px;
+                color: var(--vmp-muted);
+            }
+
+            .slider-track {
+                flex: 1;
+                height: 3px;
+                background: var(--vmp-border);
+                border-radius: 2px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .slider-fill-v {
+                height: 100%;
+                border-radius: 2px;
+                background: linear-gradient(
+                    90deg,
+                    var(--vmp-violet),
+                    var(--vmp-violet2)
+                );
+                position: relative;
+            }
+
+            .slider-fill-v::after {
+                content: "";
+                position: absolute;
+                right: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                background: var(--vmp-violet2);
+                border-radius: 50%;
+            }
+
+            .vol-pct {
+                font-size: 9px;
+                color: var(--vmp-muted);
+                min-width: 26px;
+                text-align: right;
+            }
+
+            /* ═══ EQ RACK ═══ */
+            .vmp-eq {
+                flex: 1;
+                min-height: 0;
+            }
+
+            .eq-grid {
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                gap: 4px;
+                padding: 12px 10px;
+                height: calc(100% - 40px);
+                align-items: end;
+            }
+
+            .eq-band {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                height: 100%;
+            }
+
+            .eq-slider-wrap {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+            }
+
+            .eq-slider {
+                appearance: none;
+                writing-mode: vertical-lr;
+                direction: rtl;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .eq-slider::-webkit-slider-runnable-track {
+                width: 3px;
+                background: var(--vmp-border);
+                border-radius: 2px;
+            }
+
+            .eq-slider::-webkit-slider-thumb {
+                appearance: none;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background: var(--vmp-violet);
+                border: 2px solid var(--vmp-violet2);
+                box-shadow: 0 0 8px var(--vmp-glow-v);
+                cursor: grab;
+                margin-left: -5px;
+            }
+
+            .eq-slider:hover::-webkit-slider-thumb {
+                background: var(--vmp-teal);
+                border-color: var(--vmp-teal2);
+                box-shadow: 0 0 10px var(--vmp-glow-t);
+            }
+
+            .eq-label {
+                font-size: 7px;
+                color: var(--vmp-muted);
+                letter-spacing: 0.5px;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .eq-val {
+                font-size: 7px;
+                color: var(--vmp-faint);
+                text-align: center;
+            }
+
+            /* ═══ CENTER COLUMN ═══ */
+            .col-center {
+                grid-column: 2;
+                grid-row: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            /* ═══ VISUALIZER ═══ */
+            .vmp-visualizer {
+                flex: 1;
+                min-height: 0;
+            }
+
+            .viz-canvas-wrap {
+                position: relative;
+                flex: 1;
+                background: var(--vmp-void);
+                overflow: hidden;
+                border-radius: 0 0 var(--radius-md) var(--radius-md);
+            }
+
+            #vizCanvas {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            .viz-overlay {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                display: flex;
+                gap: 4px;
+            }
+
+            .viz-mode-btn {
+                background: rgba(0, 0, 0, 0.5);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-sm);
+                color: var(--vmp-muted);
+                font-size: 8px;
+                font-family: var(--font-ui);
+                padding: 3px 7px;
+                cursor: pointer;
+                letter-spacing: 1px;
+                transition: all 0.2s;
+            }
+
+            .viz-mode-btn.active {
+                background: rgba(155, 93, 229, 0.3);
+                color: var(--vmp-violet2);
+                border-color: var(--vmp-violet);
+            }
+
+            /* ═══ VAP HUD ═══ */
+            .vmp-hud {
+                flex-shrink: 0;
+                height: 90px;
+            }
+
+            .hud-grid {
+                display: grid;
+                grid-template-columns: repeat(9, 1fr);
+                gap: 0;
+                height: calc(100% - 32px);
+            }
+
+            .hud-pillar {
+                padding: 6px 4px;
+                border-right: 1px solid var(--vmp-border);
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+
+            .hud-pillar:last-child {
+                border-right: none;
+            }
+            .hud-pillar:hover {
+                background: rgba(255, 255, 255, 0.03);
+            }
+
+            .hud-pillar-num {
+                font-size: 7px;
+                color: var(--vmp-faint);
+                letter-spacing: 1px;
+            }
+
+            .hud-pillar-name {
+                font-family: var(--font-display);
+                font-size: 6px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+
+            .hud-val {
+                font-size: 8px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                margin-top: auto;
+            }
+
+            .hud-sub {
+                font-size: 6px;
+                color: var(--vmp-muted);
+                letter-spacing: 0.5px;
+                line-height: 1;
+            }
+
+            .hp1 .hud-pillar-name,
+            .hp1 .hud-val {
+                color: var(--vmp-violet);
+            }
+            .hp2 .hud-pillar-name,
+            .hp2 .hud-val {
+                color: #7eb8f7;
+            }
+            .hp3 .hud-pillar-name,
+            .hp3 .hud-val {
+                color: var(--vmp-teal);
+            }
+            .hp4 .hud-pillar-name,
+            .hp4 .hud-val {
+                color: #a8edea;
+            }
+            .hp5 .hud-pillar-name,
+            .hp5 .hud-val {
+                color: var(--vmp-pink);
+            }
+            .hp6 .hud-pillar-name,
+            .hp6 .hud-val {
+                color: var(--vmp-gold);
+            }
+            .hp7 .hud-pillar-name,
+            .hp7 .hud-val {
+                color: var(--vmp-violet2);
+            }
+            .hp8 .hud-pillar-name,
+            .hp8 .hud-val {
+                color: #b5f5ec;
+            }
+            .hp9 .hud-pillar-name,
+            .hp9 .hud-val {
+                color: var(--vmp-pink2);
+            }
+
+            /* ═══ BOTTOM CENTER: SPECTRUM ═══ */
+            .col-center-bottom {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            .spectrum-wrap {
+                padding: 8px 10px;
+                height: calc(100% - 32px);
+                display: flex;
+                align-items: flex-end;
+                gap: 2px;
+                background: var(--vmp-void);
+                border-radius: 0 0 var(--radius-md) var(--radius-md);
+            }
+
+            .spec-bar {
+                flex: 1;
+                border-radius: 2px 2px 0 0;
+                transition: height 0.05s ease;
+                min-height: 2px;
+            }
+
+            /* ═══ RIGHT COLUMN: DATA PANELS ═══ */
+            .col-right {
+                grid-column: 3;
+                grid-row: 1 / 3;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            /* ═══ THAYER COMPASS ═══ */
+            .vmp-thayer {
+                flex-shrink: 0;
+            }
+
+            .thayer-wrap {
+                padding: 12px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .thayer-compass {
+                position: relative;
+                width: 110px;
+                height: 110px;
+                flex-shrink: 0;
+            }
+
+            #thayerCanvas {
+                width: 110px;
+                height: 110px;
+            }
+
+            .thayer-vals {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .tval-row {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .tval-label {
+                font-size: 8px;
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .tval-bar {
+                height: 3px;
+                background: var(--vmp-border);
+                border-radius: 2px;
+                position: relative;
+                overflow: visible;
+            }
+
+            .tval-fill {
+                height: 100%;
+                border-radius: 2px;
+                position: relative;
+            }
+
+            .tval-fill::after {
+                content: attr(data-val);
+                position: absolute;
+                right: -18px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 8px;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+            .tf-valence {
+                background: linear-gradient(
+                    90deg,
+                    var(--vmp-pink),
+                    var(--vmp-gold)
+                );
+            }
+            .tf-valence::after {
+                color: var(--vmp-gold);
+            }
+            .tf-arousal {
+                background: linear-gradient(
+                    90deg,
+                    var(--vmp-violet),
+                    var(--vmp-pink)
+                );
+            }
+            .tf-arousal::after {
+                color: var(--vmp-pink2);
+            }
+            .tf-dominance {
+                background: linear-gradient(
+                    90deg,
+                    var(--vmp-teal),
+                    var(--vmp-violet)
+                );
+            }
+            .tf-dominance::after {
+                color: var(--vmp-teal);
+            }
+
+            /* ═══ PHOTOMETRIC PANEL ═══ */
+            .vmp-photo {
+                flex-shrink: 0;
+            }
+
+            .photo-grid {
+                padding: 10px 12px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .photo-swatch-row {
+                grid-column: 1 / 3;
+                display: flex;
+                gap: 6px;
+            }
+
+            .photo-swatch {
+                flex: 1;
+                height: 28px;
+                border-radius: var(--radius-sm);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 8px;
+                letter-spacing: 1px;
+                font-family: var(--font-ui);
+            }
+
+            .photo-stat {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .pstat-label {
+                font-size: 7px;
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .pstat-val {
+                font-size: 10px;
+                font-weight: 700;
+                color: var(--vmp-text);
+            }
+
+            .pstat-bar {
+                height: 2px;
+                background: var(--vmp-border);
+                border-radius: 1px;
+                overflow: hidden;
+                margin-top: 2px;
+            }
+
+            .pstat-fill {
+                height: 100%;
+                border-radius: 1px;
+            }
+
+            /* ═══ KINETIC RING ═══ */
+            .vmp-kinetic {
+                flex-shrink: 0;
+            }
+
+            .kinetic-wrap {
+                padding: 12px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+            }
+
+            #kineticCanvas {
+                flex-shrink: 0;
+            }
+
+            .kinetic-stats {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .kstat {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .kstat-label {
+                font-size: 8px;
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+            }
+            .kstat-val {
+                font-size: 10px;
+                font-weight: 700;
+            }
+            .kstat-val.v {
+                color: var(--vmp-violet);
+            }
+            .kstat-val.t {
+                color: var(--vmp-teal);
+            }
+            .kstat-val.p {
+                color: var(--vmp-pink);
+            }
+            .kstat-val.g {
+                color: var(--vmp-gold);
+            }
+
+            /* ═══ GENEALOGY ═══ */
+            .vmp-genealogy {
+                flex: 1;
+                min-height: 0;
+            }
+
+            .gene-content {
+                padding: 10px 12px;
+                overflow-y: auto;
+                height: calc(100% - 32px);
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .gene-tree {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .gene-node {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .gene-connector {
+                font-size: 8px;
+                color: var(--vmp-faint);
+                flex-shrink: 0;
+            }
+
+            .gene-tag {
+                background: var(--vmp-raised);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-sm);
+                padding: 2px 7px;
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            .gene-tag.parent {
+                color: var(--vmp-violet);
+                border-color: rgba(155, 93, 229, 0.3);
+            }
+            .gene-tag.sub {
+                color: var(--vmp-teal);
+                border-color: rgba(0, 245, 212, 0.25);
+            }
+            .gene-tag.micro {
+                color: var(--vmp-pink);
+                border-color: rgba(247, 37, 133, 0.25);
+            }
+
+            .tribe-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+
+            .tribe-chip {
+                background: rgba(255, 209, 102, 0.1);
+                border: 1px solid rgba(255, 209, 102, 0.25);
+                border-radius: var(--radius-full);
+                padding: 2px 8px;
+                font-size: 8px;
+                color: var(--vmp-gold);
+                letter-spacing: 1px;
+            }
+
+            .gene-row {
+                display: flex;
+                justify-content: space-between;
+                font-size: 8px;
+                padding: 3px 0;
+                border-bottom: 1px solid var(--vmp-border);
+            }
+
+            .gene-row:last-child {
+                border-bottom: none;
+            }
+            .gene-key {
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+            }
+            .gene-val {
+                color: var(--vmp-text);
+                font-weight: 500;
+            }
+
+            /* ═══ BOTTOM LEFT: PLAYLIST ═══ */
+            .col-bottom-left {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .playlist-list {
+                overflow-y: auto;
+                height: calc(100% - 32px);
+                padding: 4px 0;
+            }
+
+            .pl-item {
+                display: flex;
+                align-items: center;
+                padding: 6px 12px;
+                gap: 8px;
+                cursor: pointer;
+                transition: background 0.15s;
+                border-radius: 0;
+            }
+
+            .pl-item:hover {
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            .pl-item.active {
+                background: rgba(155, 93, 229, 0.1);
+                border-left: 2px solid var(--vmp-violet);
+            }
+
+            .pl-num {
+                font-size: 8px;
+                color: var(--vmp-faint);
+                min-width: 14px;
+            }
+
+            .pl-info {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .pl-title {
+                font-size: 9px;
+                color: var(--vmp-text);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                letter-spacing: 0.5px;
+            }
+
+            .pl-item.active .pl-title {
+                color: var(--vmp-violet2);
+            }
+
+            .pl-artist {
+                font-size: 8px;
+                color: var(--vmp-muted);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .pl-dur {
+                font-size: 8px;
+                color: var(--vmp-faint);
+                flex-shrink: 0;
+            }
+
+            /* ═══ BOTTOM RIGHT: AGORA PLUGINS ═══ */
+            .col-bottom-right {
+                grid-column: 3;
+                grid-row: 2;
+            }
+
+            .agora-grid {
+                padding: 8px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                height: calc(100% - 32px);
+            }
+
+            .agora-slot {
+                background: var(--vmp-surface);
+                border: 1px dashed var(--vmp-border);
+                border-radius: var(--radius-md);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                cursor: pointer;
+                transition: all 0.2s;
+                padding: 8px;
+            }
+
+            .agora-slot:hover {
+                border-color: var(--vmp-violet);
+                background: rgba(155, 93, 229, 0.05);
+            }
+
+            .agora-slot.loaded {
+                border-style: solid;
+                border-color: var(--vmp-border);
+                background: var(--vmp-raised);
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            .agora-slot-icon {
+                font-size: 16px;
+            }
+            .agora-slot-label {
+                font-size: 7px;
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            .agora-slot-name {
+                font-size: 8px;
+                color: var(--vmp-teal);
+                letter-spacing: 1px;
+            }
+            .agora-slot-type {
+                font-size: 7px;
+                color: var(--vmp-muted);
+            }
+
+            /* ═══ SKIN EDITOR OVERLAY ═══ */
+            .vmp-skin-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.85);
+                z-index: 100;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .vmp-skin-overlay.show {
+                display: flex;
+            }
+
+            .skin-editor {
+                background: var(--vmp-surface);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-xl);
+                padding: 24px;
+                width: 520px;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+
+            .skin-editor-title {
+                font-family: var(--font-display);
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                color: var(--vmp-violet);
+                margin-bottom: 16px;
+                text-transform: uppercase;
+            }
+
+            .skin-presets {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+
+            .skin-preset {
+                border-radius: var(--radius-md);
+                height: 50px;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 7px;
+                font-family: var(--font-display);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .skin-preset.active {
+                border-color: white;
+            }
+            .skin-preset:hover {
+                transform: scale(1.04);
+            }
+
+            .skin-s1 {
+                background: linear-gradient(135deg, #0d0d1a, #1a0a2e);
+                color: #9b5de5;
+            }
+            .skin-s2 {
+                background: linear-gradient(135deg, #0a1a0a, #0a2a1a);
+                color: #00f5d4;
+            }
+            .skin-s3 {
+                background: linear-gradient(135deg, #1a0a0a, #2a0a1a);
+                color: #f72585;
+            }
+            .skin-s4 {
+                background: linear-gradient(135deg, #1a1a0a, #2a1a00);
+                color: #ffd166;
+            }
+
+            .skin-color-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                margin-bottom: 16px;
+            }
+
+            .skin-color-item {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .skin-color-label {
+                font-size: 8px;
+                color: var(--vmp-muted);
+                letter-spacing: 1px;
+            }
+
+            .skin-color-input {
+                width: 100%;
+                height: 28px;
+                border-radius: var(--radius-sm);
+                border: 1px solid var(--vmp-border);
+                background: var(--vmp-panel);
+                cursor: pointer;
+                padding: 2px;
+            }
+
+            .skin-editor-close {
+                background: var(--vmp-raised);
+                border: 1px solid var(--vmp-border);
+                border-radius: var(--radius-md);
+                color: var(--vmp-muted);
+                padding: 8px 16px;
+                font-family: var(--font-ui);
+                font-size: 10px;
+                letter-spacing: 2px;
+                cursor: pointer;
+                width: 100%;
+                text-transform: uppercase;
+                transition: all 0.2s;
+            }
+
+            .skin-editor-close:hover {
+                background: rgba(155, 93, 229, 0.15);
+                color: var(--vmp-violet);
+                border-color: var(--vmp-violet);
+            }
+
+            /* ═══ SCROLLBAR IN PANELS ═══ */
+            .gene-content::-webkit-scrollbar,
+            .playlist-list::-webkit-scrollbar {
+                width: 3px;
+            }
+            .gene-content::-webkit-scrollbar-thumb,
+            .playlist-list::-webkit-scrollbar-thumb {
+                background: var(--vmp-border2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="vmp-app">
+            <!-- TITLEBAR -->
+            <div class="vmp-titlebar">
+                <div class="vmp-logo">
+                    <svg
+                        class="vmp-logo-mark"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="16"
+                            cy="16"
+                            r="14"
+                            stroke="#9b5de5"
+                            stroke-width="1.5"
+                            opacity="0.6"
+                        />
+                        <circle
+                            cx="16"
+                            cy="16"
+                            r="9"
+                            stroke="#00f5d4"
+                            stroke-width="1"
+                            opacity="0.7"
+                        />
+                        <circle
+                            cx="16"
+                            cy="16"
+                            r="4"
+                            fill="#f72585"
+                            opacity="0.8"
+                        />
+                        <path
+                            d="M16 2 L16 6 M16 26 L16 30 M2 16 L6 16 M26 16 L30 16"
+                            stroke="#ffd166"
+                            stroke-width="1"
+                            opacity="0.5"
+                        />
+                        <path
+                            d="M16 16 L22 10"
+                            stroke="#9b5de5"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                    <div>
+                        <div class="vmp-logo-text">Vibe Media Player</div>
+                        <div class="vmp-version">V.A.P. v3.1 × AURPHYX</div>
+                    </div>
+                </div>
+                <div class="vmp-titlebar-controls">
+                    <button
+                        class="vmp-tb-btn active"
+                        onclick="toggleModule('visualizer')"
+                    >
+                        VIZ
+                    </button>
+                    <button
+                        class="vmp-tb-btn active"
+                        onclick="toggleModule('eq')"
+                    >
+                        EQ
+                    </button>
+                    <button
+                        class="vmp-tb-btn active"
+                        onclick="toggleModule('hud')"
+                    >
+                        HUD
+                    </button>
+                    <button class="vmp-tb-btn" onclick="openSkinEditor()">
+                        SKIN
+                    </button>
+                    <button class="vmp-tb-btn" onclick="openAgora()">
+                        AGORA
+                    </button>
+                    <button class="vmp-tb-btn">⚙</button>
+                </div>
+            </div>
+
+            <!-- MAIN GRID -->
+            <div class="vmp-main">
+                <!-- LEFT: TRANSPORT + EQ -->
+                <div class="col-left">
+                    <!-- Transport Core -->
+                    <div class="vmp-panel vmp-transport">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title accent-v"
+                                >Transport</span
+                            >
+                            <span class="vmp-panel-badge badge-v"
+                                >P1 · STRUCTURAL</span
+                            >
+                        </div>
+                        <div class="track-info">
+                            <div class="track-title" id="trackTitle">
+                                Midnight Resonance
+                            </div>
+                            <div class="track-artist" id="trackArtist">
+                                V.A.P. Demo · Aurphyx Labs
+                            </div>
+                            <div class="track-meta" id="trackMeta">
+                                FLAC 24bit · 96kHz · 4.2MB
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div
+                                class="progress-bar-wrap"
+                                id="progressWrap"
+                                onclick="seekTo(event)"
+                            >
+                                <div
+                                    class="progress-fill"
+                                    id="progressFill"
+                                    style="width: 0%"
+                                >
+                                    <div class="progress-thumb"></div>
+                                </div>
+                            </div>
+                            <div class="progress-times">
+                                <span id="timeCurrent">0:00</span>
+                                <span id="timeDuration">5:42</span>
+                            </div>
+                        </div>
+                        <div class="transport-controls">
+                            <div class="controls-row">
+                                <button
+                                    class="ctrl-btn"
+                                    onclick="prevTrack()"
+                                    title="Previous"
+                                >
+                                    ⏮
+                                </button>
+                                <button
+                                    class="ctrl-btn"
+                                    onclick="skipBack()"
+                                    title="-10s"
+                                >
+                                    ⟨10
+                                </button>
+                                <button
+                                    class="ctrl-btn play-btn"
+                                    id="playBtn"
+                                    onclick="togglePlay()"
+                                >
+                                    ▶
+                                </button>
+                                <button
+                                    class="ctrl-btn"
+                                    onclick="skipFwd()"
+                                    title="+10s"
+                                >
+                                    10⟩
+                                </button>
+                                <button
+                                    class="ctrl-btn"
+                                    onclick="nextTrack()"
+                                    title="Next"
+                                >
+                                    ⏭
+                                </button>
+                            </div>
+                            <div
+                                class="controls-row"
+                                style="
+                                    gap: 12px;
+                                    justify-content: space-between;
+                                "
+                            >
+                                <button
+                                    class="ctrl-btn"
+                                    id="shuffleBtn"
+                                    onclick="toggleShuffle()"
+                                    title="Shuffle"
+                                    style="font-size: 9px; padding: 4px 8px"
+                                >
+                                    ⇌ SHUF
+                                </button>
+                                <button
+                                    class="ctrl-btn active"
+                                    id="repeatBtn"
+                                    onclick="toggleRepeat()"
+                                    title="Repeat"
+                                    style="font-size: 9px; padding: 4px 8px"
+                                >
+                                    ↺ RPT
+                                </button>
+                                <button
+                                    class="ctrl-btn"
+                                    id="crossBtn"
+                                    title="Crossfade"
+                                    style="font-size: 9px; padding: 4px 8px"
+                                >
+                                    ✕ XFDE
+                                </button>
+                            </div>
+                            <div class="volume-row" style="margin-top: 8px">
+                                <span class="vol-icon">🔈</span>
+                                <div
+                                    class="slider-track"
+                                    id="volTrack"
+                                    onclick="setVolume(event)"
+                                >
+                                    <div
+                                        class="slider-fill-v"
+                                        id="volFill"
+                                        style="width: 75%"
+                                    ></div>
+                                </div>
+                                <span class="vol-pct" id="volPct">75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EQ Rack -->
+                    <div class="vmp-panel vmp-eq" id="eqPanel">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title accent-t"
+                                >EQ · DSP Rack</span
+                            >
+                            <span class="vmp-panel-badge badge-t"
+                                >P3 · TIMBRAL</span
+                            >
+                        </div>
+                        <div class="eq-grid" id="eqGrid"></div>
+                    </div>
+                </div>
+
+                <!-- CENTER: VISUALIZER + HUD -->
+                <div class="col-center">
+                    <!-- Visualizer -->
+                    <div class="vmp-panel vmp-visualizer" id="vizPanel">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title">Visualizer</span>
+                            <div
+                                class="viz-overlay"
+                                style="
+                                    position: relative;
+                                    top: auto;
+                                    right: auto;
+                                "
+                            >
+                                <button
+                                    class="viz-mode-btn active"
+                                    id="vizBars"
+                                    onclick="setVizMode('bars')"
+                                >
+                                    BARS
+                                </button>
+                                <button
+                                    class="viz-mode-btn"
+                                    id="vizWave"
+                                    onclick="setVizMode('wave')"
+                                >
+                                    WAVE
+                                </button>
+                                <button
+                                    class="viz-mode-btn"
+                                    id="vizCircle"
+                                    onclick="setVizMode('circle')"
+                                >
+                                    ORBIT
+                                </button>
+                                <button
+                                    class="viz-mode-btn"
+                                    id="vizMatrix"
+                                    onclick="setVizMode('matrix')"
+                                >
+                                    MATRIX
+                                </button>
+                            </div>
+                        </div>
+                        <div class="viz-canvas-wrap" style="flex: 1; height: 0">
+                            <canvas id="vizCanvas"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- VAP HUD -->
+                    <div class="vmp-panel vmp-hud" id="hudPanel">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title"
+                                >V.A.P. Live Metadata — 9 Pillars</span
+                            >
+                            <span class="vmp-panel-badge badge-v">ACTIVE</span>
+                        </div>
+                        <div class="hud-grid">
+                            <div class="hud-pillar hp1" title="Structural">
+                                <div class="hud-pillar-num">P.1</div>
+                                <div class="hud-pillar-name">Struct</div>
+                                <div class="hud-val" id="h1v">128 BPM</div>
+                                <div class="hud-sub">4/4 · Duple</div>
+                            </div>
+                            <div class="hud-pillar hp2" title="Tonal">
+                                <div class="hud-pillar-num">P.2</div>
+                                <div class="hud-pillar-name">Tonal</div>
+                                <div class="hud-val" id="h2v">A♭ Min</div>
+                                <div class="hud-sub">Extended 9th</div>
+                            </div>
+                            <div class="hud-pillar hp3" title="Timbral">
+                                <div class="hud-pillar-num">P.3</div>
+                                <div class="hud-pillar-name">Timbre</div>
+                                <div class="hud-val" id="h3v">Hi-Fi</div>
+                                <div class="hud-sub">Mid-Fwd</div>
+                            </div>
+                            <div class="hud-pillar hp4" title="Linguistic">
+                                <div class="hud-pillar-num">P.4</div>
+                                <div class="hud-pillar-name">Lingua</div>
+                                <div class="hud-val" id="h4v">Mild</div>
+                                <div class="hud-sub">EN · Abstract</div>
+                            </div>
+                            <div class="hud-pillar hp5" title="Affective">
+                                <div class="hud-pillar-num">P.5</div>
+                                <div class="hud-pillar-name">Affect</div>
+                                <div class="hud-val" id="h5v">+0.6</div>
+                                <div class="hud-sub">V:0.75 A:0.8</div>
+                            </div>
+                            <div class="hud-pillar hp6" title="Contextual">
+                                <div class="hud-pillar-num">P.6</div>
+                                <div class="hud-pillar-name">Context</div>
+                                <div class="hud-val" id="h6v">Club</div>
+                                <div class="hud-sub">3AM · Solo</div>
+                            </div>
+                            <div class="hud-pillar hp7" title="Photometric">
+                                <div class="hud-pillar-num">P.7</div>
+                                <div class="hud-pillar-name">Photo</div>
+                                <div class="hud-val" id="h7v">#191970</div>
+                                <div class="hud-sub">Cool · 0.2L</div>
+                            </div>
+                            <div class="hud-pillar hp8" title="Kinetic">
+                                <div class="hud-pillar-num">P.8</div>
+                                <div class="hud-pillar-name">Kinetic</div>
+                                <div class="hud-val" id="h8v">120–140</div>
+                                <div class="hud-sub">HR Zone 4</div>
+                            </div>
+                            <div class="hud-pillar hp9" title="Genealogical">
+                                <div class="hud-pillar-num">P.9</div>
+                                <div class="hud-pillar-name">Gene</div>
+                                <div class="hud-val" id="h9v">Techno</div>
+                                <div class="hud-sub">Berlin · Y2K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENTER BOTTOM: SPECTRUM -->
+                <div class="vmp-panel col-center-bottom">
+                    <div class="vmp-panel-header">
+                        <span class="vmp-panel-title accent-t"
+                            >Spectrum Analyzer</span
+                        >
+                        <span class="vmp-panel-badge badge-t"
+                            >P3 · TIMBRAL</span
+                        >
+                    </div>
+                    <div class="spectrum-wrap" id="spectrumWrap"></div>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-right">
+                    <!-- Thayer Compass -->
+                    <div class="vmp-panel vmp-thayer">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title accent-p"
+                                >Thayer Coordinates</span
+                            >
+                            <span class="vmp-panel-badge badge-p"
+                                >P5 · AFFECTIVE</span
+                            >
+                        </div>
+                        <div class="thayer-wrap">
+                            <canvas
+                                id="thayerCanvas"
+                                width="110"
+                                height="110"
+                            ></canvas>
+                            <div class="thayer-vals">
+                                <div class="tval-row">
+                                    <div class="tval-label">Valence</div>
+                                    <div class="tval-bar">
+                                        <div
+                                            class="tval-fill tf-valence"
+                                            id="tValence"
+                                            style="width: 87%"
+                                            data-val="+0.75"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="tval-row">
+                                    <div class="tval-label">Arousal</div>
+                                    <div class="tval-bar">
+                                        <div
+                                            class="tval-fill tf-arousal"
+                                            id="tArousal"
+                                            style="width: 80%"
+                                            data-val="0.80"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="tval-row">
+                                    <div class="tval-label">Dominance</div>
+                                    <div class="tval-bar">
+                                        <div
+                                            class="tval-fill tf-dominance"
+                                            id="tDominance"
+                                            style="width: 65%"
+                                            data-val="0.65"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photometric -->
+                    <div class="vmp-panel vmp-photo">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title accent-v"
+                                >Photometric Data</span
+                            >
+                            <span class="vmp-panel-badge badge-v"
+                                >P7 · PHOTOMETRIC</span
+                            >
+                        </div>
+                        <div class="photo-grid">
+                            <div class="photo-swatch-row">
+                                <div
+                                    class="photo-swatch"
+                                    id="photoSwatch1"
+                                    style="background: #191970; color: #9b9fff"
+                                >
+                                    ⬛ #191970
+                                </div>
+                                <div
+                                    class="photo-swatch"
+                                    id="photoSwatch2"
+                                    style="background: #4b0082; color: #d580ff"
+                                >
+                                    ⬛ #4B0082
+                                </div>
+                            </div>
+                            <div class="photo-stat">
+                                <div class="pstat-label">Brightness</div>
+                                <div class="pstat-val" id="pBright">0.2</div>
+                                <div class="pstat-bar">
+                                    <div
+                                        class="pstat-fill"
+                                        id="pBrightBar"
+                                        style="
+                                            width: 20%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                var(--vmp-violet),
+                                                var(--vmp-violet2)
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="photo-stat">
+                                <div class="pstat-label">Strobe Thr.</div>
+                                <div class="pstat-val" id="pStrobe">0.7</div>
+                                <div class="pstat-bar">
+                                    <div
+                                        class="pstat-fill"
+                                        id="pStrobeBar"
+                                        style="
+                                            width: 70%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                var(--vmp-pink),
+                                                var(--vmp-gold)
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="photo-stat">
+                                <div class="pstat-label">Palette Temp</div>
+                                <div class="pstat-val" id="pTemp">Cool</div>
+                                <div class="pstat-bar">
+                                    <div
+                                        class="pstat-fill"
+                                        style="
+                                            width: 25%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                #4488ff,
+                                                #44ddff
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="photo-stat">
+                                <div class="pstat-label">Fog Density</div>
+                                <div class="pstat-val" id="pFog">0.6</div>
+                                <div class="pstat-bar">
+                                    <div
+                                        class="pstat-fill"
+                                        style="
+                                            width: 60%;
+                                            background: linear-gradient(
+                                                90deg,
+                                                var(--vmp-teal),
+                                                var(--vmp-teal2)
+                                            );
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kinetic Ring -->
+                    <div class="vmp-panel vmp-kinetic">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title accent-g"
+                                >Kinetic · Biometric</span
+                            >
+                            <span class="vmp-panel-badge badge-g"
+                                >P8 · KINETIC</span
+                            >
+                        </div>
+                        <div class="kinetic-wrap">
+                            <canvas
+                                id="kineticCanvas"
+                                width="90"
+                                height="90"
+                            ></canvas>
+                            <div class="kinetic-stats">
+                                <div class="kstat">
+                                    <span class="kstat-label">HR ZONE</span
+                                    ><span class="kstat-val v" id="kHR"
+                                        >120–140</span
+                                    >
+                                </div>
+                                <div class="kstat">
+                                    <span class="kstat-label">HRV IMPACT</span
+                                    ><span class="kstat-val t" id="kHRV"
+                                        >FLOW</span
+                                    >
+                                </div>
+                                <div class="kstat">
+                                    <span class="kstat-label">DRIVE</span
+                                    ><span class="kstat-val p" id="kDrive"
+                                        >0.82</span
+                                    >
+                                </div>
+                                <div class="kstat">
+                                    <span class="kstat-label">MET SCORE</span
+                                    ><span class="kstat-val g" id="kMET"
+                                        >7.5</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Genealogy -->
+                    <div class="vmp-panel vmp-genealogy">
+                        <div class="vmp-panel-header">
+                            <span class="vmp-panel-title accent-p"
+                                >Genealogy · Tribe</span
+                            >
+                            <span class="vmp-panel-badge badge-p"
+                                >P9 · GENEALOGICAL</span
+                            >
+                        </div>
+                        <div class="gene-content">
+                            <div class="gene-tree">
+                                <div class="gene-node">
+                                    <span class="gene-connector">●</span
+                                    ><span class="gene-tag parent"
+                                        >Electronic</span
+                                    >
+                                </div>
+                                <div
+                                    class="gene-node"
+                                    style="padding-left: 14px"
+                                >
+                                    <span class="gene-connector">└</span
+                                    ><span class="gene-tag sub">Techno</span>
+                                </div>
+                                <div
+                                    class="gene-node"
+                                    style="padding-left: 28px"
+                                >
+                                    <span class="gene-connector">└</span
+                                    ><span class="gene-tag micro"
+                                        >Berlin Minimal</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="tribe-tags">
+                                <span class="tribe-chip">Raver</span>
+                                <span class="tribe-chip">Audiophile</span>
+                                <span class="tribe-chip">Club Kid</span>
+                            </div>
+                            <div>
+                                <div class="gene-row">
+                                    <span class="gene-key">ERA</span
+                                    ><span class="gene-val"
+                                        >Y2K · Late Night</span
+                                    >
+                                </div>
+                                <div class="gene-row">
+                                    <span class="gene-key">SAMPLE</span
+                                    ><span class="gene-val"
+                                        >Amen Break (mod.)</span
+                                    >
+                                </div>
+                                <div class="gene-row">
+                                    <span class="gene-key">TIMELESS</span
+                                    ><span class="gene-val">0.82</span>
+                                </div>
+                                <div class="gene-row">
+                                    <span class="gene-key">AUTHENTIC</span
+                                    ><span class="gene-val">TRUE ✓</span>
+                                </div>
+                                <div class="gene-row">
+                                    <span class="gene-key">VIRAL VEL.</span
+                                    ><span class="gene-val">RISING ↑</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM LEFT: PLAYLIST -->
+                <div class="vmp-panel col-bottom-left">
+                    <div class="vmp-panel-header">
+                        <span class="vmp-panel-title">Playlist Engine</span>
+                        <span class="vmp-panel-badge badge-t"
+                            >P6 · CONTEXTUAL</span
+                        >
+                    </div>
+                    <div class="playlist-list" id="playlistList"></div>
+                </div>
+
+                <!-- BOTTOM RIGHT: AGORA PLUGINS -->
+                <div class="vmp-panel col-bottom-right">
+                    <div class="vmp-panel-header">
+                        <span class="vmp-panel-title accent-g"
+                            >Agora Plugins</span
+                        >
+                        <span class="vmp-panel-badge badge-g">MARKETPLACE</span>
+                    </div>
+                    <div class="agora-grid">
+                        <div class="agora-slot loaded">
+                            <div class="agora-slot-name">SoulSync VU</div>
+                            <div class="agora-slot-type">VISUALIZER · v1.2</div>
+                        </div>
+                        <div class="agora-slot loaded">
+                            <div class="agora-slot-name">Aphex EQ</div>
+                            <div class="agora-slot-type">DSP · v2.0</div>
+                        </div>
+                        <div class="agora-slot" onclick="openAgora()">
+                            <div class="agora-slot-icon">＋</div>
+                            <div class="agora-slot-label">Add Plugin</div>
+                        </div>
+                        <div class="agora-slot" onclick="openAgora()">
+                            <div class="agora-slot-icon">🎨</div>
+                            <div class="agora-slot-label">Add Skin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /vmp-main -->
+        </div>
+        <!-- /vmp-app -->
+
+        <!-- SKIN EDITOR OVERLAY -->
+        <div class="vmp-skin-overlay" id="skinOverlay">
+            <div class="skin-editor">
+                <div class="skin-editor-title">Skin Editor — Aurphyx Agora</div>
+                <div class="skin-presets">
+                    <div
+                        class="skin-preset skin-s1 active"
+                        onclick="applySkin('soul')"
+                        data-skin="soul"
+                    >
+                        Soul Cosmic
+                    </div>
+                    <div
+                        class="skin-preset skin-s2"
+                        onclick="applySkin('forest')"
+                        data-skin="forest"
+                    >
+                        Soul Forest
+                    </div>
+                    <div
+                        class="skin-preset skin-s3"
+                        onclick="applySkin('blood')"
+                        data-skin="blood"
+                    >
+                        Blood Moon
+                    </div>
+                    <div
+                        class="skin-preset skin-s4"
+                        onclick="applySkin('gold')"
+                        data-skin="gold"
+                    >
+                        Soul Gold
+                    </div>
+                </div>
+                <div class="skin-color-grid">
+                    <div class="skin-color-item">
+                        <div class="skin-color-label">Void BG</div>
+                        <input
+                            type="color"
+                            class="skin-color-input"
+                            value="#0a0a18"
+                            onchange="setVar('--vmp-void', this.value)"
+                        />
+                    </div>
+                    <div class="skin-color-item">
+                        <div class="skin-color-label">Surface</div>
+                        <input
+                            type="color"
+                            class="skin-color-input"
+                            value="#11112a"
+                            onchange="setVar('--vmp-surface', this.value)"
+                        />
+                    </div>
+                    <div class="skin-color-item">
+                        <div class="skin-color-label">Panel</div>
+                        <input
+                            type="color"
+                            class="skin-color-input"
+                            value="#18183a"
+                            onchange="setVar('--vmp-panel', this.value)"
+                        />
+                    </div>
+                    <div class="skin-color-item">
+                        <div class="skin-color-label">Violet Acc.</div>
+                        <input
+                            type="color"
+                            class="skin-color-input"
+                            value="#9b5de5"
+                            onchange="setVar('--vmp-violet', this.value)"
+                        />
+                    </div>
+                    <div class="skin-color-item">
+                        <div class="skin-color-label">Teal Acc.</div>
+                        <input
+                            type="color"
+                            class="skin-color-input"
+                            value="#00f5d4"
+                            onchange="setVar('--vmp-teal', this.value)"
+                        />
+                    </div>
+                    <div class="skin-color-item">
+                        <div class="skin-color-label">Pink Acc.</div>
+                        <input
+                            type="color"
+                            class="skin-color-input"
+                            value="#f72585"
+                            onchange="setVar('--vmp-pink', this.value)"
+                        />
+                    </div>
+                </div>
+                <button class="skin-editor-close" onclick="closeSkinEditor()">
+                    Close Skin Editor
+                </button>
+            </div>
+        </div>
+
+        <script>
+            /* ═══════════════════════════════════════════
+   VIBE MEDIA PLAYER — CORE ENGINE
+   V.A.P. × AURPHYX
+═══════════════════════════════════════════ */
+
+            // ─── STATE ───
+            const VMP = {
+                playing: false,
+                currentTrack: 0,
+                progress: 0,
+                duration: 342,
+                volume: 75,
+                shuffle: false,
+                repeat: true,
+                vizMode: "bars",
+                time: 0,
+                plugins: [],
+                registerPlugin(id, config) {
+                    this.plugins.push({ id, ...config });
+                    console.log(`[VMP Agora] Plugin registered: ${id}`);
+                },
+            };
+
+            // Expose global API for Agora plugins
+            window.VMP = VMP;
+
+            // ─── PLAYLIST DATA ───
+            const PLAYLIST = [
+                {
+                    title: "Midnight Resonance",
+                    artist: "Aurphyx Labs",
+                    dur: "5:42",
+                    bpm: 128,
+                    key: "A♭m",
+                },
+                {
+                    title: "Soul Frequency 432",
+                    artist: "V.A.P. Demo",
+                    dur: "4:18",
+                    bpm: 108,
+                    key: "D Dor",
+                },
+                {
+                    title: "Rune Signal",
+                    artist: "Aurphyx",
+                    dur: "7:03",
+                    bpm: 140,
+                    key: "F# Min",
+                },
+                {
+                    title: "BlissID Sequence",
+                    artist: "SoulTech OST",
+                    dur: "3:55",
+                    bpm: 96,
+                    key: "C Maj",
+                },
+                {
+                    title: "Thayer Drift",
+                    artist: "Vibe Engine",
+                    dur: "6:22",
+                    bpm: 118,
+                    key: "E♭ Lyd",
+                },
+                {
+                    title: "SKIM Mandala Loop",
+                    artist: "Aurphyx",
+                    dur: "5:10",
+                    bpm: 133,
+                    key: "G Min",
+                },
+                {
+                    title: "GuardHash Protocol",
+                    artist: "V.A.P. Labs",
+                    dur: "8:01",
+                    bpm: 155,
+                    key: "B Min",
+                },
+                {
+                    title: "SoulSync v2",
+                    artist: "Aurphyx OST",
+                    dur: "4:44",
+                    bpm: 102,
+                    key: "A Maj",
+                },
+            ];
+
+            // ─── BUILD PLAYLIST ───
+            function buildPlaylist() {
+                const list = document.getElementById("playlistList");
+                list.innerHTML = PLAYLIST.map(
+                    (t, i) => `
+    <div class="pl-item ${i === 0 ? "active" : ""}" onclick="loadTrack(${i})" id="plt${i}">
+      <span class="pl-num">${String(i + 1).padStart(2, "0")}</span>
+      <div class="pl-info">
+        <div class="pl-title">${t.title}</div>
+        <div class="pl-artist">${t.artist} · ${t.key} · ${t.bpm}bpm</div>
+      </div>
+      <span class="pl-dur">${t.dur}</span>
+    </div>
+  `,
+                ).join("");
+            }
+            buildPlaylist();
+
+            // ─── BUILD EQ ───
+            const EQ_BANDS = [
+                "32Hz",
+                "63",
+                "125",
+                "250",
+                "500",
+                "1k",
+                "2k",
+                "4k",
+                "8k",
+                "16k",
+            ];
+            const EQ_VALS = [3, 1, 0, -1, 2, 4, 2, 1, -1, 2];
+            function buildEQ() {
+                const grid = document.getElementById("eqGrid");
+                grid.innerHTML = EQ_BANDS.map(
+                    (band, i) => `
+    <div class="eq-band">
+      <div class="eq-val" id="eqv${i}">${EQ_VALS[i] > 0 ? "+" : ""}${EQ_VALS[i]}</div>
+      <div class="eq-slider-wrap">
+        <input type="range" class="eq-slider" id="eqs${i}"
+          min="-12" max="12" value="${EQ_VALS[i]}" step="0.5"
+          oninput="updateEQ(${i},this.value)"
+          orient="vertical">
+      </div>
+      <div class="eq-label">${band}</div>
+    </div>
+  `,
+                ).join("");
+            }
+            buildEQ();
+
+            function updateEQ(band, val) {
+                const v = parseFloat(val);
+                document.getElementById(`eqv${band}`).textContent =
+                    (v > 0 ? "+" : "") + v.toFixed(1);
+            }
+
+            // ─── BUILD SPECTRUM BARS ───
+            function buildSpectrum() {
+                const wrap = document.getElementById("spectrumWrap");
+                wrap.innerHTML = Array.from({ length: 64 }, (_, i) => {
+                    const hue = 260 + (i / 64) * 80;
+                    return `<div class="spec-bar" id="sb${i}" style="background:hsl(${hue},80%,60%);height:2px;"></div>`;
+                }).join("");
+            }
+            buildSpectrum();
+
+            // ─── PLAYBACK ───
+            function togglePlay() {
+                VMP.playing = !VMP.playing;
+                const btn = document.getElementById("playBtn");
+                btn.textContent = VMP.playing ? "⏸" : "▶";
+            }
+
+            function loadTrack(idx) {
+                VMP.currentTrack = idx;
+                VMP.progress = 0;
+                VMP.time = 0;
+                document
+                    .querySelectorAll(".pl-item")
+                    .forEach((el) => el.classList.remove("active"));
+                document.getElementById(`plt${idx}`)?.classList.add("active");
+                const t = PLAYLIST[idx];
+                document.getElementById("trackTitle").textContent = t.title;
+                document.getElementById("trackArtist").textContent = t.artist;
+                document.getElementById("h1v").textContent = `${t.bpm} BPM`;
+                document.getElementById("h2v").textContent = t.key;
+                const [m, s] = t.dur.split(":");
+                VMP.duration = parseInt(m) * 60 + parseInt(s);
+                document.getElementById("timeDuration").textContent = t.dur;
+                if (!VMP.playing) togglePlay();
+            }
+
+            function prevTrack() {
+                loadTrack(
+                    (VMP.currentTrack - 1 + PLAYLIST.length) % PLAYLIST.length,
+                );
+            }
+            function nextTrack() {
+                loadTrack((VMP.currentTrack + 1) % PLAYLIST.length);
+            }
+            function skipBack() {
+                VMP.time = Math.max(0, VMP.time - 10);
+            }
+            function skipFwd() {
+                VMP.time = Math.min(VMP.duration, VMP.time + 10);
+            }
+
+            function toggleShuffle() {
+                VMP.shuffle = !VMP.shuffle;
+                document
+                    .getElementById("shuffleBtn")
+                    .classList.toggle("active", VMP.shuffle);
+            }
+
+            function toggleRepeat() {
+                VMP.repeat = !VMP.repeat;
+                document
+                    .getElementById("repeatBtn")
+                    .classList.toggle("active", VMP.repeat);
+            }
+
+            function seekTo(e) {
+                const wrap = document.getElementById("progressWrap");
+                const rect = wrap.getBoundingClientRect();
+                const pct = Math.max(
+                    0,
+                    Math.min(1, (e.clientX - rect.left) / rect.width),
+                );
+                VMP.time = pct * VMP.duration;
+            }
+
+            function setVolume(e) {
+                const track = document.getElementById("volTrack");
+                const rect = track.getBoundingClientRect();
+                const pct = Math.max(
+                    0,
+                    Math.min(1, (e.clientX - rect.left) / rect.width),
+                );
+                VMP.volume = Math.round(pct * 100);
+                document.getElementById("volFill").style.width =
+                    VMP.volume + "%";
+                document.getElementById("volPct").textContent =
+                    VMP.volume + "%";
+            }
+
+            function fmtTime(secs) {
+                const m = Math.floor(secs / 60);
+                const s = Math.floor(secs % 60);
+                return `${m}:${String(s).padStart(2, "0")}`;
+            }
+
+            // ─── PLAYBACK CLOCK ───
+            setInterval(() => {
+                if (!VMP.playing) return;
+                VMP.time += 0.1;
+                if (VMP.time >= VMP.duration) {
+                    if (VMP.repeat) VMP.time = 0;
+                    else {
+                        VMP.time = 0;
+                        nextTrack();
+                    }
+                }
+                const pct = (VMP.time / VMP.duration) * 100;
+                document.getElementById("progressFill").style.width = pct + "%";
+                document.getElementById("timeCurrent").textContent = fmtTime(
+                    VMP.time,
+                );
+            }, 100);
+
+            // ─── VISUALIZER ───
+            const vizCanvas = document.getElementById("vizCanvas");
+            const vizCtx = vizCanvas.getContext("2d");
+            let vizPhase = 0;
+
+            function resizeViz() {
+                const wrap = vizCanvas.parentElement;
+                vizCanvas.width = wrap.offsetWidth;
+                vizCanvas.height = wrap.offsetHeight;
+            }
+            window.addEventListener("resize", resizeViz);
+            setTimeout(resizeViz, 100);
+
+            function setVizMode(mode) {
+                VMP.vizMode = mode;
+                document
+                    .querySelectorAll(".viz-mode-btn")
+                    .forEach((b) => b.classList.remove("active"));
+                document
+                    .getElementById(
+                        "viz" + mode.charAt(0).toUpperCase() + mode.slice(1),
+                    )
+                    ?.classList.add("active");
+            }
+
+            // Fake audio data
+            function getFakeAudio(count, phase) {
+                return Array.from({ length: count }, (_, i) => {
+                    const base = Math.sin((i / count) * Math.PI) * 0.7;
+                    const beat = VMP.playing
+                        ? Math.abs(Math.sin(phase * 2 + i * 0.3)) * 0.5
+                        : 0;
+                    const noise = Math.random() * 0.15;
+                    return (base + beat + noise) * (VMP.playing ? 1 : 0.15);
+                });
+            }
+
+            function drawBars(data) {
+                const W = vizCanvas.width,
+                    H = vizCanvas.height;
+                vizCtx.clearRect(0, 0, W, H);
+                const bw = W / data.length - 1;
+                data.forEach((v, i) => {
+                    const h = v * H * 0.85;
+                    const hue = 260 + (i / data.length) * 80;
+                    const grad = vizCtx.createLinearGradient(0, H - h, 0, H);
+                    grad.addColorStop(0, `hsla(${hue},90%,70%,1)`);
+                    grad.addColorStop(1, `hsla(${hue + 20},70%,40%,0.6)`);
+                    vizCtx.fillStyle = grad;
+                    vizCtx.beginPath();
+                    vizCtx.roundRect(i * (bw + 1), H - h, bw, h, [2, 2, 0, 0]);
+                    vizCtx.fill();
+                });
+            }
+
+            function drawWave(data) {
+                const W = vizCanvas.width,
+                    H = vizCanvas.height;
+                vizCtx.clearRect(0, 0, W, H);
+                const grad = vizCtx.createLinearGradient(0, 0, W, 0);
+                grad.addColorStop(0, "#9b5de5");
+                grad.addColorStop(0.5, "#00f5d4");
+                grad.addColorStop(1, "#f72585");
+                vizCtx.strokeStyle = grad;
+                vizCtx.lineWidth = 2;
+                vizCtx.shadowColor = "#9b5de5";
+                vizCtx.shadowBlur = 10;
+                vizCtx.beginPath();
+                data.forEach((v, i) => {
+                    const x = (i / data.length) * W;
+                    const y = H / 2 + (v - 0.5) * H * 0.7;
+                    i === 0 ? vizCtx.moveTo(x, y) : vizCtx.lineTo(x, y);
+                });
+                vizCtx.stroke();
+                vizCtx.shadowBlur = 0;
+            }
+
+            function drawCircle(data) {
+                const W = vizCanvas.width,
+                    H = vizCanvas.height;
+                vizCtx.clearRect(0, 0, W, H);
+                const cx = W / 2,
+                    cy = H / 2,
+                    r = Math.min(W, H) * 0.25;
+                vizCtx.strokeStyle = "rgba(155,93,229,0.2)";
+                vizCtx.lineWidth = 1;
+                vizCtx.beginPath();
+                vizCtx.arc(cx, cy, r, 0, Math.PI * 2);
+                vizCtx.stroke();
+                data.forEach((v, i) => {
+                    const angle = (i / data.length) * Math.PI * 2 - Math.PI / 2;
+                    const len = r + v * r * 1.2;
+                    const x1 = cx + Math.cos(angle) * r;
+                    const y1 = cy + Math.sin(angle) * r;
+                    const x2 = cx + Math.cos(angle) * len;
+                    const y2 = cy + Math.sin(angle) * len;
+                    const hue = 260 + (i / data.length) * 80;
+                    vizCtx.strokeStyle = `hsl(${hue},90%,65%)`;
+                    vizCtx.lineWidth = 2;
+                    vizCtx.shadowColor = `hsl(${hue},90%,65%)`;
+                    vizCtx.shadowBlur = 6;
+                    vizCtx.beginPath();
+                    vizCtx.moveTo(x1, y1);
+                    vizCtx.lineTo(x2, y2);
+                    vizCtx.stroke();
+                });
+                vizCtx.shadowBlur = 0;
+            }
+
+            let matrixChars = Array.from({ length: 30 }, () => ({
+                x: Math.random(),
+                y: Math.random(),
+                speed: 0.002 + Math.random() * 0.003,
+                trail: [],
+            }));
+            function drawMatrix() {
+                const W = vizCanvas.width,
+                    H = vizCanvas.height;
+                vizCtx.fillStyle = "rgba(10,10,24,0.15)";
+                vizCtx.fillRect(0, 0, W, H);
+                const RUNES = "⊕⊗⋈⟁⌘⍟⎔⌬⌭⏣⎊⎋⍬⍫⍭⍮⌀⌁☍♦♣♠";
+                matrixChars.forEach((c) => {
+                    if (VMP.playing) c.y += c.speed;
+                    if (c.y > 1) {
+                        c.y = 0;
+                        c.x = Math.random();
+                    }
+                    const x = c.x * W,
+                        y = c.y * H;
+                    vizCtx.font = `${12 + Math.random() * 8}px 'JetBrains Mono'`;
+                    vizCtx.fillStyle = VMP.playing
+                        ? `rgba(155,93,229,${0.4 + Math.random() * 0.6})`
+                        : "rgba(155,93,229,0.15)";
+                    const ch = RUNES[Math.floor(Math.random() * RUNES.length)];
+                    vizCtx.fillText(ch, x, y);
+                });
+            }
+
+            function animateViz() {
+                vizPhase += 0.02;
+                const data = getFakeAudio(64, vizPhase);
+                switch (VMP.vizMode) {
+                    case "bars":
+                        drawBars(data);
+                        break;
+                    case "wave":
+                        drawWave(data);
+                        break;
+                    case "circle":
+                        drawCircle(data);
+                        break;
+                    case "matrix":
+                        drawMatrix();
+                        break;
+                }
+                // Update spectrum bars
+                const spec32 = getFakeAudio(64, vizPhase + 0.5);
+                spec32.forEach((v, i) => {
+                    const bar = document.getElementById(`sb${i}`);
+                    if (bar) bar.style.height = Math.max(2, v * 160) + "px";
+                });
+                requestAnimationFrame(animateViz);
+            }
+            animateViz();
+
+            // ─── THAYER COMPASS ───
+            const thayerCtx = document
+                .getElementById("thayerCanvas")
+                .getContext("2d");
+            let thayerPhase = 0;
+
+            function drawThayer() {
+                const c = thayerCtx,
+                    W = 110,
+                    H = 110,
+                    cx = 55,
+                    cy = 55,
+                    r = 42;
+                c.clearRect(0, 0, W, H);
+
+                // Grid
+                c.strokeStyle = "rgba(155,93,229,0.15)";
+                c.lineWidth = 1;
+                c.beginPath();
+                c.moveTo(cx - r, cy);
+                c.lineTo(cx + r, cy);
+                c.stroke();
+                c.beginPath();
+                c.moveTo(cx, cy - r);
+                c.lineTo(cx, cy + r);
+                c.stroke();
+
+                // Rings
+                [0.33, 0.66, 1].forEach((f) => {
+                    c.strokeStyle = `rgba(155,93,229,${0.1 + f * 0.1})`;
+                    c.beginPath();
+                    c.arc(cx, cy, r * f, 0, Math.PI * 2);
+                    c.stroke();
+                });
+
+                // Labels
+                c.font = "7px JetBrains Mono";
+                c.fillStyle = "rgba(123,122,171,0.8)";
+                c.textAlign = "center";
+                c.fillText("HYPE", cx, cy - r - 4);
+                c.fillText("CALM", cx, cy + r + 10);
+                c.fillStyle = "rgba(123,122,171,0.6)";
+                c.textAlign = "left";
+                c.fillText("+", cx - r - 10, cy + 3);
+                c.textAlign = "right";
+                c.fillText("−", cx + r + 10, cy + 3);
+
+                // Data point (animated)
+                const px = cx + Math.cos(thayerPhase * 0.1) * r * 0.75;
+                const py = cy - Math.sin(thayerPhase * 0.1) * r * 0.8;
+
+                // Trail
+                c.strokeStyle = "rgba(247,37,133,0.3)";
+                c.lineWidth = 1;
+                c.setLineDash([2, 4]);
+                c.beginPath();
+                c.moveTo(cx, cy);
+                c.lineTo(px, py);
+                c.stroke();
+                c.setLineDash([]);
+
+                // Dot
+                const grad = c.createRadialGradient(px, py, 0, px, py, 8);
+                grad.addColorStop(0, "rgba(247,37,133,1)");
+                grad.addColorStop(1, "rgba(247,37,133,0)");
+                c.fillStyle = grad;
+                c.beginPath();
+                c.arc(px, py, 8, 0, Math.PI * 2);
+                c.fill();
+                c.fillStyle = "#fff";
+                c.beginPath();
+                c.arc(px, py, 3, 0, Math.PI * 2);
+                c.fill();
+            }
+
+            setInterval(() => {
+                thayerPhase++;
+                drawThayer();
+            }, 80);
+            drawThayer();
+
+            // ─── KINETIC RING ───
+            const kCtx = document
+                .getElementById("kineticCanvas")
+                .getContext("2d");
+            let kPhase = 0;
+
+            function drawKinetic() {
+                const c = kCtx,
+                    W = 90,
+                    H = 90,
+                    cx = 45,
+                    cy = 45,
+                    r = 36;
+                c.clearRect(0, 0, W, H);
+
+                const bpm = PLAYLIST[VMP.currentTrack]?.bpm || 128;
+                const zones = [
+                    { pct: 1.0, color: "rgba(247,37,133,0.2)" },
+                    { pct: 0.75, color: "rgba(155,93,229,0.3)" },
+                    { pct: 0.55, color: "rgba(0,245,212,0.3)" },
+                ];
+                zones.forEach((z) => {
+                    c.strokeStyle = z.color;
+                    c.lineWidth = 8;
+                    c.beginPath();
+                    c.arc(cx, cy, r, 0, Math.PI * 2 * z.pct);
+                    c.stroke();
+                });
+
+                const activity = VMP.playing ? (Math.sin(kPhase) + 1) / 2 : 0;
+                const sweepEnd = activity * 0.82 * Math.PI * 2 - Math.PI / 2;
+                const sweepGrad = c.createLinearGradient(0, 0, W, H);
+                sweepGrad.addColorStop(0, "#9b5de5");
+                sweepGrad.addColorStop(1, "#00f5d4");
+                c.strokeStyle = sweepGrad;
+                c.lineWidth = 4;
+                c.lineCap = "round";
+                c.beginPath();
+                c.arc(cx, cy, r, -Math.PI / 2, sweepEnd);
+                c.stroke();
+                c.lineCap = "butt";
+
+                c.font = "bold 13px Orbitron";
+                c.fillStyle = "#e0d9ff";
+                c.textAlign = "center";
+                c.textBaseline = "middle";
+                c.fillText(bpm, cx, cy - 5);
+                c.font = "7px JetBrains Mono";
+                c.fillStyle = "rgba(123,122,171,0.8)";
+                c.fillText("BPM", cx, cy + 8);
+
+                kPhase += VMP.playing ? 0.05 : 0.005;
+            }
+            setInterval(drawKinetic, 50);
+            drawKinetic();
+
+            // ─── MODULE TOGGLE ───
+            function toggleModule(id) {
+                const map = {
+                    visualizer: "vizPanel",
+                    eq: "eqPanel",
+                    hud: "hudPanel",
+                };
+                const el = document.getElementById(map[id]);
+                if (!el) return;
+                const hidden = el.style.display === "none";
+                el.style.display = hidden ? "" : "none";
+            }
+
+            // ─── SKIN EDITOR ───
+            function openSkinEditor() {
+                document.getElementById("skinOverlay").classList.add("show");
+            }
+            function closeSkinEditor() {
+                document.getElementById("skinOverlay").classList.remove("show");
+            }
+            function setVar(name, val) {
+                document.documentElement.style.setProperty(name, val);
+            }
+
+            const SKINS = {
+                soul: {
+                    void: "#0a0a18",
+                    surface: "#11112a",
+                    panel: "#18183a",
+                    violet: "#9b5de5",
+                    teal: "#00f5d4",
+                    pink: "#f72585",
+                },
+                forest: {
+                    void: "#030d0a",
+                    surface: "#061510",
+                    panel: "#0a2018",
+                    violet: "#22d18b",
+                    teal: "#7affd4",
+                    pink: "#a8ff78",
+                },
+                blood: {
+                    void: "#130505",
+                    surface: "#1f0808",
+                    panel: "#2a0a0a",
+                    violet: "#e53939",
+                    teal: "#ff7c7c",
+                    pink: "#ff2266",
+                },
+                gold: {
+                    void: "#0d0a03",
+                    surface: "#1a1508",
+                    panel: "#261e0a",
+                    violet: "#e5b800",
+                    teal: "#ffd966",
+                    pink: "#ff9900",
+                },
+            };
+
+            function applySkin(name) {
+                const s = SKINS[name];
+                if (!s) return;
+                Object.entries({
+                    void: s.void,
+                    surface: s.surface,
+                    panel: s.panel,
+                    violet: s.violet,
+                    teal: s.teal,
+                    pink: s.pink,
+                }).forEach(([k, v]) => {
+                    setVar(`--vmp-${k}`, v);
+                });
+                document
+                    .querySelectorAll(".skin-preset")
+                    .forEach((el) =>
+                        el.classList.toggle("active", el.dataset.skin === name),
+                    );
+            }
+
+            function openAgora() {
+                alert(
+                    "🌐 Aurphyx Agora\n\nPlugins and Skins marketplace launching soon.\nThe VMP.registerPlugin() API is available for developers.\n\nVisit: agora.aurphyx.org",
+                );
+            }
+        </script>
+    </body>
+</html>

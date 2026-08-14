@@ -1,0 +1,13 @@
+[package]
+name = "vmp-v01d"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Vibe Media Player bridge to v01d/FUTE symbiotic packaging"
+authors.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+fute = { path = "../../fute" }

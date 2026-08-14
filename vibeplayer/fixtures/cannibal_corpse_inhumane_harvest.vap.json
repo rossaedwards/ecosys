@@ -1,0 +1,160 @@
+{
+  "VAP_VERSION": "3.1",
+  "IDENTITY": {
+    "ARTIST": "Cannibal Corpse",
+    "TITLE": "Inhumane Harvest",
+    "ISRC": "US-MB-21-00042",
+    "SOURCE_DNA": "Golden_Set_Entry_002"
+  },
+  "PILLARS": {
+    "STRUCTURAL": {
+      "TEMPORAL_DYNAMICS": {
+        "BPM_RAW": 140,
+        "BPM_PERCEIVED": "double_time_blast",
+        "GROOVE_QUANTIZATION": "human_speed_limit_push",
+        "TIME_SIGNATURE": "4/4"
+      },
+      "ARRANGEMENT": {
+        "SECTIONAL_MARKERS": [],
+        "MIX_WINDOW_BARS": 8,
+        "BREAKDOWN_DEPTH": 0.1
+      },
+      "PERCUSSIVE_DNA": {
+        "KICK_TRANSIENT": "sharp_click_metal",
+        "KICK_ATTACK_MS": 6.0,
+        "SYNCOPATION_INDEX": 0.35,
+        "GHOST_NOTE_DENSITY": "max_saturation_blastbeat"
+      }
+    },
+    "TONAL": {
+      "HARMONIC_PROFILE": {
+        "KEY": "ATONAL_CHROMATIC",
+        "CHORD_COMPLEXITY": "power_chord_tritone",
+        "DISSONANCE_RATING": 0.95
+      },
+      "MELODIC_CONTOUR": {
+        "RANGE_SPAN_OCTAVES": 2.0,
+        "HOOK_STRENGTH": 0.4,
+        "MELODIC_MOTION": "disjunct"
+      },
+      "TUNING": {
+        "REFERENCE_PITCH_HZ": 440,
+        "MICROTONALITY": false
+      }
+    },
+    "TIMBRAL": {
+      "SPECTRAL_PHYSICS": {
+        "FREQ_BALANCE": "mid_scooped_high_gain",
+        "SPECTRAL_CENTROID_HZ": 2800.0,
+        "SPECTRAL_SATURATION": "extreme_distortion",
+        "SATURATION_INDEX": 0.85
+      },
+      "PRODUCTION_AESTHETIC": {
+        "FIDELITY": "modern_high_gain",
+        "DYNAMIC_RANGE_LRA": 6.5,
+        "SPATIAL_WIDTH": "stereo",
+        "TEXTURE_GRAIN": "gritty_abrasive"
+      }
+    },
+    "LINGUISTIC": {
+      "VOCAL_TEXTURE": {
+        "POSITION": "forward",
+        "DELIVERY": "guttural_growl",
+        "PROCESSING": "minimal_raw"
+      },
+      "SEMANTIC_CONTENT": {
+        "TOPIC": "horror_gore",
+        "EXPLICIT_TIER": "SEVERE",
+        "NARRATIVE_ARC": "linear_story"
+      },
+      "LANGUAGE": {
+        "PRIMARY": "en",
+        "DIALECT": "death_metal_growl"
+      }
+    },
+    "AFFECTIVE": {
+      "THAYER_COORDINATES": {
+        "VALENCE": -0.9,
+        "AROUSAL": 1.0,
+        "DOMINANCE": 0.95
+      },
+      "EMOTIONAL_COMPLEXITY": {
+        "MOOD_STABILITY": 0.95,
+        "CATHARSIS_POTENTIAL": 0.98,
+        "NOSTALGIA_TRIGGER": 0.2
+      },
+      "TENSION_ARC": {
+        "BUILDUP_VELOCITY": 0.9,
+        "RESOLUTION_STATE": "unresolved"
+      }
+    },
+    "CONTEXTUAL": {
+      "SCENARIO_ENGINE": {
+        "MACRO": "gym_peak_pr",
+        "MICRO": "the_filter_test",
+        "SOCIAL_SETTING": "crowd"
+      },
+      "INTENT_VECTORS": {
+        "FUNCTIONAL_GOAL": "shock_value_weed_out",
+        "TIME_OF_DAY": "any",
+        "NARRATIVE_TROPE": "the_monster"
+      },
+      "METEOROLOGICAL": {
+        "WEATHER": "storm",
+        "TEMPERATURE": "cold"
+      }
+    },
+    "PHOTOMETRIC": {
+      "CHROMATIC_MAP": {
+        "PRIMARY_HEX": "#8B0000",
+        "SECONDARY_HEX": "#000000",
+        "PALETTE_TEMP": "blood_cool"
+      },
+      "LUMEN_DYNAMICS": {
+        "BRIGHTNESS_FLOOR": 0.05,
+        "BRIGHTNESS_CEILING": 1.0,
+        "STROBE_TRIGGER": 0.4,
+        "FADE_RATE": "instant_cut"
+      },
+      "VISUAL_TEXTURE": {
+        "FOG_DENSITY": 0.2,
+        "LASER_COMPATIBLE": true,
+        "VISUAL_NOISE": 0.7
+      }
+    },
+    "KINETIC": {
+      "BIOMETRIC_ENTRAINMENT": {
+        "TARGET_HR_ZONE": "150-180",
+        "HRV_IMPACT": "sympathetic_nervous_spike",
+        "BREATH_RATE": 28
+      },
+      "MOTOR_RESPONSE": {
+        "DRIVE": 0.9,
+        "SWAY": 0.2,
+        "HEAD_NOD": 0.95,
+        "LABEL": "headbang_mosh"
+      },
+      "ENERGY": {
+        "MET_SCORE": 8.5,
+        "ENTRAINMENT_FACTOR": 85.0
+      }
+    },
+    "GENEALOGICAL": {
+      "ERA_ANCHORING": {
+        "RELEASE_DATE": "2021-03-26",
+        "CULTURAL_ERA": "modern_death_metal",
+        "TIMELESSNESS_SCORE": 0.75
+      },
+      "DNA_SAMPLING": {
+        "SAMPLE_LINEAGE": [],
+        "INTERPOLATION": [],
+        "GENRE_TREE": ["Metal", "Death Metal", "Technical Death Metal"]
+      },
+      "TRIBE_ALIGNMENT": {
+        "SUBCULTURE": "death_metal_legend",
+        "AUTHENTICITY_SCORE": 1.0,
+        "VIRAL_VELOCITY": "evergreen"
+      }
+    }
+  }
+}

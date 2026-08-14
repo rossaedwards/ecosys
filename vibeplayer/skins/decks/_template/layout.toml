@@ -1,0 +1,34 @@
+# Normalized layout (0..1 of Live stage). Fullscreen Live mode.
+
+[stage]
+aspect = "16:9"
+
+[deck_a]
+x = 0.02
+y = 0.08
+w = 0.38
+h = 0.75
+platter_center_x = 0.21
+platter_center_y = 0.45
+platter_radius = 0.16
+
+[deck_b]
+x = 0.60
+y = 0.08
+w = 0.38
+h = 0.75
+platter_center_x = 0.79
+platter_center_y = 0.45
+platter_radius = 0.16
+
+[mixer]
+x = 0.40
+y = 0.12
+w = 0.20
+h = 0.70
+
+[crossfader]
+x = 0.42
+y = 0.78
+w = 0.16
+h = 0.06

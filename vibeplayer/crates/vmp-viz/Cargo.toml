@@ -1,0 +1,13 @@
+[package]
+name = "vmp-viz"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "V.A.P. live runtime + Phase-I DSP — transmuted from vibe-audio-visualizer (C) via v01d/FUTE"
+authors.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+vmp-vap = { path = "../vmp-vap" }
+vmp-dsp = { path = "../vmp-dsp" }

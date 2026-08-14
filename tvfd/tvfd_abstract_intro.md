@@ -1,8 +1,8 @@
-## ### ** APS‑TVFD‑INT **
+##  ### ** APS‑TVFD‑INTRO-ABSTRACT **
 
 ## ### ** Version 1.0 (Draft) **
 
-## ### ** Aurphyx Primordial Standards **
+## ### ** Aurphyx Primordial Standard **
 
 ## ### ** Ross A. Edwards | Aurphyx LLC  **
 

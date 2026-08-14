@@ -1,0 +1,16 @@
+[package]
+name = "vmp-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Vibe Media Player core session, playlist, modules, and transport state"
+authors.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+vmp-vap = { path = "../vmp-vap" }
+vmp-dsp = { path = "../vmp-dsp" }
+vmp-audio = { path = "../vmp-audio" }
+vmp-v01d = { path = "../vmp-v01d" }

@@ -1,0 +1,12 @@
+[package]
+name = "vmp-dsp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Vibe Media Player DSP: equalizer modes, analysis helpers, Phase-I scoring math"
+authors.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+
+[dev-dependencies]

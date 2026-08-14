@@ -1,7 +1,11 @@
 ## ** APS‑TVFD‑APX-A-EXT **
+
 ## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standards **
-## ** Ross A. Edwards | Aurphyx LLC | SUXS **
+
+## ** Aurphyx Primordial Standard **
+
+## ** Ross A. Edwards | Aurphyx LLC | Symbiotic Universal Xessability Standards **
+
 ## ** SAGES | AGPLv3 **
 
 Appendix_A [&or] 3B. Extended Mathematical Framework for Dynamic Vacuum Impedance Matching

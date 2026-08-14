@@ -1,0 +1,15 @@
+{
+  "id": "template_booth",
+  "brand": "Generic",
+  "models": ["dual-deck", "mixer"],
+  "version": "0.1.0",
+  "layout": "layout.toml",
+  "engine": "vmp-vinyl",
+  "touch_profile": "capacitive_default",
+  "assets": {
+    "deck_a_vinyl": "assets/deck_a_vinyl.png",
+    "deck_b_vinyl": "assets/deck_b_vinyl.png",
+    "mixer": "assets/mixer_face.png"
+  },
+  "notes": "Copy this folder to skins/decks/<your_kit_id>/ and fill assets."
+}
