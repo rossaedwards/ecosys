@@ -1,0 +1,130 @@
+// Fux Grammar (PEG)
+// Pure Fuxyez language syntax definition
+
+WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
+COMMENT = _{ "//" ~ (!"\n" ~ ANY)* }
+
+// Keywords
+KW_SIGIL = { "sigil" }
+KW_RITUAL = { "ritual" }
+KW_COLLAPSE = { "collapse" }
+KW_ECHO = { "echo" }
+KW_LET = { "let" }
+KW_WEAVE = { "weave" }
+KW_LATTICE = { "lattice" }
+KW_SPINON = { "spinon" }
+KW_THREAD = { "thread" }
+KW_IF = { "if" }
+KW_ELSE = { "else" }
+KW_FOR = { "for" }
+KW_WHILE = { "while" }
+KW_RETURN = { "return" }
+KW_IMPORT = { "import" }
+
+// Identifiers
+identifier = @{ ASCII_ALPHA ~ (ASCII_ALPHANUMERIC | "_")* }
+
+// Literals
+integer = @{ "-"? ~ ASCII_DIGIT+ }
+float = @{ "-"? ~ ASCII_DIGIT+ ~ "." ~ ASCII_DIGIT+ }
+string = @{ "\"" ~ (!"\"" ~ ANY)* ~ "\"" }
+boolean = { "true" | "false" }
+
+// Types
+type_annotation = { ":" ~ type_expr }
+type_expr = { identifier ~ generic_args? }
+generic_args = { "<" ~ type_expr ~ ("," ~ type_expr)* ~ ">" }
+
+// Expressions
+expression = {
+    literal
+    | identifier
+    | function_call
+    | binary_op
+    | unary_op
+    | block
+    | if_expr
+    | lattice_literal
+}
+
+literal = { float | integer | string | boolean }
+
+function_call = {
+    identifier ~ "(" ~ (expression ~ ("," ~ expression)*)? ~ ")"
+}
+
+binary_op = {
+    expression ~ operator ~ expression
+}
+
+operator = {
+    "+" | "-" | "*" | "/" | "%" |
+    "==" | "!=" | "<" | ">" | "<=" | ">=" |
+    "&&" | "||"
+}
+
+unary_op = {
+    ("-" | "!") ~ expression
+}
+
+block = {
+    "{" ~ statement* ~ expression? ~ "}"
+}
+
+if_expr = {
+    KW_IF ~ expression ~ block ~ (KW_ELSE ~ (if_expr | block))?
+}
+
+lattice_literal = {
+    "[" ~ (expression ~ ("," ~ expression)*)? ~ "]"
+}
+
+// Statements
+statement = {
+    let_statement
+    | echo_statement
+    | collapse_statement
+    | weave_statement
+    | expression_statement
+}
+
+let_statement = {
+    KW_LET ~ identifier ~ type_annotation? ~ "=" ~ expression
+}
+
+echo_statement = {
+    KW_ECHO ~ expression
+}
+
+collapse_statement = {
+    KW_COLLAPSE ~ identifier
+}
+
+weave_statement = {
+    KW_WEAVE ~ expression ~ "into" ~ identifier
+}
+
+expression_statement = {
+    expression
+}
+
+// Top-level declarations
+program = {
+    SOI ~ (import_statement | sigil_decl | ritual_decl)* ~ EOI
+}
+
+import_statement = {
+    KW_IMPORT ~ identifier ~ ("::" ~ identifier)*
+}
+
+sigil_decl = {
+    KW_SIGIL ~ identifier ~ sigil_params? ~ block
+}
+
+sigil_params = {
+    "(" ~ (identifier ~ type_annotation ~ ("," ~ identifier ~ type_annotation)*)? ~ ")"
+}
+
+ritual_decl = {
+    KW_RITUAL ~ identifier ~ block
+}

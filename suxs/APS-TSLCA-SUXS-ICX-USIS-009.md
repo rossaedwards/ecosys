@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS TSLCA SUXS ICX USIS 009
+description: The Arora OS Governance Runtime Standard defines how the Arora Operating System -
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑009.md
 Arora Operating System Governance Runtime Standard
 Version 0.1.69 (Draft)
@@ -60,13 +104,13 @@ AUX‑USIS‑007 — Global Voting System Specification
 
 AUX‑USIS‑008 — Opulence Governance Integration Standard
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -113,14 +157,14 @@ non‑maleficence
 
 renewal
 
-4.3 Semantic Layer (SCC)
+4.3 Semantic Layer (SCX)
 governance semantics
 
 meaning preservation
 
 invariant propagation
 
-4.4 Perceptual Layer (SIC)
+4.4 Perceptual Layer (SIX)
 multimodal governance accessibility
 
 voice‑native interaction
@@ -212,7 +256,7 @@ verify SoulKey continuity
 
 verify SoulSync presence
 
-preserve ICC invariants
+preserve ICX invariants
 
 6.2 Ethical Requirements
 Arora OS MUST enforce:

@@ -23,7 +23,7 @@ SoulShot to SoulCrypt will be proprietary to start off as will most of the proje
 
 **Aurphyx Primordial Standard iz a the collection or encyclopedia of theories, frameworks, standards, blueprints, technical specifications, and whitepapers:**
 
--Fractal-enhanced Topological Quantum Computing or Fault Tolerant Quantum Computer
+-Fractal-enhanced Topological Quantum Computing or Fault Tolerant Quantum Computing
 
 -Three-Squared-Lattice Cognitive Architecture
 
@@ -39,7 +39,7 @@ SoulShot to SoulCrypt will be proprietary to start off as will most of the proje
 
 -Vibe Audio Standard \& Protocol
 
--Topological Resonating Cavity Array - TRCA Hardware
+-Topological Resonating Cavity Architecture - TRCA Hardware
 
 **Aura** iz the **Operating System**
 -Aura: Soul Operating System (Personal)
@@ -47,8 +47,8 @@ SoulShot to SoulCrypt will be proprietary to start off as will most of the proje
 -Arora: ALL Other Devices (IOT-Edge-Embedded)
 -Biznyx: Enterprise/Business Operating System (Small Business to Enterprise)
 
-**Fuxyez** iz the symbiotic quantum programming language base host iz Rust.
--Compiler - Fux Compiler
+**Fuxyez** iz the symbiotic quantum programming language. The base host iz Rust.
+-Compiler - Fux Compiler - Three-Squared-Lattice Duality Kernel & Compiler
 -FuxRT - Fux Runtime
 -YezRT - Yez Runtime
 -FUTE - Fuxyez Universal Transmutation Engine
@@ -145,6 +145,6 @@ Device name    Aura**:
 
 **DataOrb-Voiceorb -** Software Proof of Concept for Chakra Datacore System, AuraFS, and Meshwrk. 
 
-**Vibe Media Player** - Name describes itself and still needs to be designed and built.
+**Vibe Media Player** - 20% complete located at 'ecosys/vibeplayer/'
 
 ##### **---TRIBE WELCOME DOCUMENT END---**

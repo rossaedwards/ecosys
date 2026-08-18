@@ -1,0 +1,389 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is 8EF4-B141
+C:.
+|   Expand-FuxyezWorkspace.ps1
+|   FUTE-Scaffold-Generator.ps1
+|   fuxyez.code-workspace
+|   fuxyez.toml
+|   fuxyez_01-14-2026_repolist.txt
+|   fuxyez_02-25-2026-repolist.txt
+|   fuxyez_currepolist.txt
+|   index.html
+|   LICENSE
+|   repo_structure.txt
+|   tree.ps1
+|   
++---compiler
+|   |   .gitignore
+|   |   .gitlab-ci.yml
+|   |   Aurphyx_CI_Pipeline.txt
+|   |   Cargo.lock
+|   |   Cargo.toml
+|   |   fuxyez.pest
+|   |   README.md
+|   |   ritual.fuxyez
+|   |   
+|   +---.git
+|   |   |   config
+|   |   |   description
+|   |   |   FETCH_HEAD
+|   |   |   HEAD
+|   |   |   
+|   |   +---hooks
+|   |   |       applypatch-msg.sample
+|   |   |       commit-msg.sample
+|   |   |       fsmonitor-watchman.sample
+|   |   |       post-update.sample
+|   |   |       pre-applypatch.sample
+|   |   |       pre-commit.sample
+|   |   |       pre-merge-commit.sample
+|   |   |       pre-push.sample
+|   |   |       pre-rebase.sample
+|   |   |       pre-receive.sample
+|   |   |       prepare-commit-msg.sample
+|   |   |       push-to-checkout.sample
+|   |   |       sendemail-validate.sample
+|   |   |       update.sample
+|   |   |       
+|   |   +---info
+|   |   |       exclude
+|   |   |       
+|   |   +---objects
+|   |   |   +---info
+|   |   |   \---pack
+|   |   \---refs
+|   |       +---heads
+|   |       \---tags
+|   +---fux_frontend
+|   |       grammar.pest
+|   |       main.rs
+|   |       
+|   +---src
+|   |       ast.rs
+|   |       diagnostics.rs
+|   |       executor.rs
+|   |       generator.rs
+|   |       lexer.rs
+|   |       lib.rs
+|   |       main.rs
+|   |       optimizer.rs
+|   |       parser.rs
+|   |       quantum.rs
+|   |       runtime_hooks.rs
+|   |       sages.rs
+|   |       sentinel_core.rs
+|   |       uir.rs
+|   |       
+|   \---yez_frontend
+|           grammar.pest
+|           main.rs
+|           
++---configs
+|       default.xuf
+|       js_runtime.sjxuf
+|       oracle_schema.zey
+|       python_env.ypxuf
+|       README.md
+|       rust_bridge.srxuf
+|       
++---docs
+|       CONTRIBUTING.md
+|       EXTENSION_GUIDE.md
+|       GETTING_STARTED.md
+|       ROADMAP.md
+|       
++---examples
+|   |   aurafs_basic.fux
+|   |   aurafs_distributed_compute.fux
+|   |   aurafs_ml_dataset.fux
+|   |   aurafs_oracle.yez
+|   |   README.md
+|   |   
+|   +---hello_world
+|   |       main.fux
+|   |       main.xuf
+|   |       
+|   +---oracle_query
+|   |       prophecy.yez
+|   |       prophecy.zey
+|   |       
+|   +---python_script
+|   |       data_process.fuxpy
+|   |       data_process.ypxuf
+|   |       
+|   \---rust_ffi
+|       |   bridge.fuxrs
+|       |   bridge.srxuf
+|       |   
+|       \---rust_lib
+|           |   Cargo.toml
+|           |   
+|           \---src
+|                   lib.rs
+|                   
++---fute
+|   |   Cargo.toml
+|   |   LICENSE
+|   |   mod.rs
+|   |   README.md
+|   |   
+|   +---docs
+|   |       ARCHITECTURE.md
+|   |       CLI_REFERENCE.md
+|   |       EXAMPLES.md
+|   |       LANGUAGE_PLUGINS.md
+|   |       SYMBIOTIC_MODES.md
+|   |       
+|   +---examples
+|   |       multi_language.rs
+|   |       python_to_rust.rs
+|   |       rust_to_fuxyez.rs
+|   |       symbiotic_transform.rs
+|   |       
+|   +---src
+|   |   |   lib.rs
+|   |   |   main.rs
+|   |   |   
+|   |   +---ast
+|   |   |       mod.rs
+|   |   |       parser.rs
+|   |   |       traversal.rs
+|   |   |       universal.rs
+|   |   |       
+|   |   +---cli
+|   |   |   |   args.rs
+|   |   |   |   banner.rs
+|   |   |   |   mod.rs
+|   |   |   |   
+|   |   |   \---commands
+|   |   |           build.rs
+|   |   |           collapse.rs
+|   |   |           divine.rs
+|   |   |           export.rs
+|   |   |           harmonize.rs
+|   |   |           invoke.rs
+|   |   |           mod.rs
+|   |   |           new.rs
+|   |   |           publish.rs
+|   |   |           purge.rs
+|   |   |           search.rs
+|   |   |           transmute.rs
+|   |   |           weave.rs
+|   |   |           
+|   |   +---codegen
+|   |   |       fuxyez.rs
+|   |   |       mod.rs
+|   |   |       
+|   |   +---core
+|   |   |       context.rs
+|   |   |       engine.rs
+|   |   |       mod.rs
+|   |   |       pipeline.rs
+|   |   |       registry.rs
+|   |   |       transformer.rs
+|   |   |       types.rs
+|   |   |       
+|   |   +---languages
+|   |   |   |   mod.rs
+|   |   |   |   traits.rs
+|   |   |   |   
+|   |   |   +---csharp
+|   |   |   |       generator.rs
+|   |   |   |       mod.rs
+|   |   |   |       parser.rs
+|   |   |   |       
+|   |   |   +---javascript
+|   |   |   |       mod.rs
+|   |   |   |       
+|   |   |   +---python
+|   |   |   |       generator.rs
+|   |   |   |       mod.rs
+|   |   |   |       parser.rs
+|   |   |   |       
+|   |   |   +---rust
+|   |   |   |       generator.rs
+|   |   |   |       mod.rs
+|   |   |   |       parser.rs
+|   |   |   |       
+|   |   |   \---wasm
+|   |   |           generator.rs
+|   |   |           mod.rs
+|   |   |           
+|   |   +---patterns
+|   |   |       analytics.rs
+|   |   |       cache.rs
+|   |   |       detector.rs
+|   |   |       ext.rs
+|   |   |       library.rs
+|   |   |       matcher.rs
+|   |   |       mod.rs
+|   |   |       rules.rs
+|   |   |       test_utils.rs
+|   |   |       
+|   |   +---transformer
+|   |   |   |   diagnostics.rs
+|   |   |   |   effect.rs
+|   |   |   |   mir_utils.rs
+|   |   |   |   mod.rs
+|   |   |   |   optimizer.rs
+|   |   |   |   plugin.rs
+|   |   |   |   quantum.rs
+|   |   |   |   semantic.rs
+|   |   |   |   symbiotic.rs
+|   |   |   |   
+|   |   |   \---passes
+|   |   |           dead_code_elim.rs
+|   |   |           entanglement_map.rs
+|   |   |           quantum_fuse.rs
+|   |   |           
+|   |   \---utils
+|   |           config.rs
+|   |           logger.rs
+|   |           mod.rs
+|   |           
+|   \---tests
++---fuxrt
+|   |   Cargo.toml
+|   |   fuxyez_fuxrt_repolist.txt
+|   |   lib.rs
+|   |   
+|   +---core
+|   |       collapse.rs
+|   |       lattice.rs
+|   |       mod.rs
+|   |       oracle.rs
+|   |       sigil.rs
+|   |       spinon.rs
+|   |       thread.rs
+|   |       
+|   \---std
+|       |   mod.rs
+|       |   README.md
+|       |   
+|       +---aurafs
+|       |       fuxyez_bindings.fux
+|       |       mod.rs
+|       |       
+|       +---core
+|       |   |   echo.fux
+|       |   |   lattice.fux
+|       |   |   spinon.fux
+|       |   |   std.rs
+|       |   |   
+|       |   +---chains
+|       |   |       chainritual.rs
+|       |   |       chanlink.rs
+|       |   |       mod.rs
+|       |   |       ritualchain.rs
+|       |   |       ritual_chainlink.rs
+|       |   |       ritual_link.rs
+|       |   |       
+|       |   +---echoes
+|       |   |       cymatic_monitor.rs
+|       |   |       lattice_echo.rs
+|       |   |       mod.rs
+|       |   |       neglecton_echo.rs
+|       |   |       quantum_trace.rs
+|       |   |       
+|       |   +---oracle
+|       |   |       aurafs_oracle.rs
+|       |   |       cymatic_oracle.rs
+|       |   |       hilbert_predictor.rs
+|       |   |       mod.rs
+|       |   |       neglecton_compiler.rs
+|       |   |       prophecy_cache.rs
+|       |   |       quantum_db.rs
+|       |   |       rae_diviner.rs
+|       |   |       
+|       |   \---rituals
+|       |           collapse_ritual.rs
+|       |           cymatic_ritual.rs
+|       |           lattice_ceremony.rs
+|       |           mod.rs
+|       |           neglecton_ceremony.rs
+|       |           quantum_ritual.rs
+|       |           rae_invocation.rs
+|       |           
+|       \---io
+|               fux.rs
+|               mod.rs
+|               
++---governance
+|       api.rs
+|       audit_log.rs
+|       blissid_manager.rs
+|       Cargo.toml
+|       consensus_integration.rs
+|       fastapi.rs
+|       identity_verifier.rs
+|       lib.rs
+|       main.rs
+|       mod.rs
+|       models.rs
+|       policy_enforcer.rs
+|       proposal_manager.rs
+|       server.rs
+|       soulsync_engine.rs
+|       transaction_type.rs
+|       voting_engine.rs
+|       
++---integrations
+|   |   README.md
+|   |   
+|   +---audry
+|   +---aurafs
+|   |       backend.rs
+|   |       mod.rs
+|   |       shard.rs
+|   |       
+|   +---global_voting
+|   +---ineffable_ledger
+|   +---opulence
+|   +---sentinel
+|   \---universal_access
++---stdlib
+|   |   README.md
+|   |   
+|   +---aurafs
+|   |       fuxyez_bindings.fux
+|   |       
+|   +---core
+|   |       lattice.fux
+|   |       spinon.fux
+|   |       
+|   +---io
+|   |       echo.fux
+|   |       
+|   \---oracle
++---tests
+|   |   aurafs_integration.fuxtest
+|   |   
+|   +---integration
+|   \---unit
++---tools
+|   |   README.md
+|   |   
+|   +---fuxyez-fmt
+|   +---fuxyez-lsp
+|   \---fuxyez-repl
++---yezl
+|   |   README.md
+|   |   
+|   +---cpp
+|   +---csharp
+|   +---elixir
+|   +---go
+|   +---java
+|   +---javascript
+|   +---python
+|   |       bridge.rs
+|   |       README.md
+|   |       
+|   +---rust
+|   |       bridge.rs
+|   |       README.md
+|   |       
+|   \---webassembly
+|           codegen.rs
+|           
+\---yezrt

@@ -1,8 +1,49 @@
+---
+type: theory-standard
+title: Aurphyx Ecosystem — Scientific Lexicon
+description: This document defines the canonical scientific terminology used across the Aurphyx ecosystem, including the Three‑Squared‑Lattice Cognitive Architecture, SAGES, SUXS-IFO, Fuxyez, AuraFS, Audry, and all associated standards.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+domains:
+  - cognition
+  - xessability
+  - identity
+  - semantics
+  - provenance
+  - ethics
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## Aurphyx Ecosystem — Scientific Lexicon
 ## Version 1.0
 
 1. Purpose
-This document defines the canonical scientific terminology used across the Aurphyx ecosystem, including the Three‑Squared‑Lattice Cognitive Architecture, SAGES, USAIC, Fuxyez, AuraFS, Audry, and all associated standards. Terms are defined with mathematical precision and cross‑referenced to their operational roles.
+This document defines the canonical scientific terminology used across the Aurphyx ecosystem, including the Three‑Squared‑Lattice Cognitive Architecture, SAGES, SUXS-IFO, Fuxyez, AuraFS, Audry, and all associated standards. Terms are defined with mathematical precision and cross‑referenced to their operational roles.
 
 2. Core Cognitive Terms
 Cognitive Manifold (
@@ -26,15 +67,15 @@ The orthonormal cognitive axes:
 
 𝑆
 1
- — SIC (Symbiotic Integration Channel)
+ — SIX (Sensorimotor Integration aXis)
 
 𝑆
 2
- — SCC (Systemic Coherence Channel)
+ — SCX (Systemic Coherence aXis)
 
 𝑆
 3
- — ICC (Identity‑Coherence Channel)
+ — ICX (Soul Identity aXis)
 
 Cognitive Field Tensor (
 𝐹
@@ -60,22 +101,22 @@ A second‑order tensor encoding the nine‑cell lattice:
 Unified Cognitive Field (
 Φ
 )
-The scalar field produced by USAIC contraction of 
+The scalar field produced by SUXS-IFO contraction of 
 𝐹
 .
 
-3. Channel‑Specific Terms
-SIC (Symbiotic Integration Channel)
+3. aXis‑Specific Terms
+SIX (Sensorimotor Integration aXis)
 The perceptual and environmental coupling axis. Governs multimodal perception, accessibility, and sensorimotor integration.
 
-SCC (Systemic Coherence Channel)
+SCX (Systemic Coherence aXis)
 The semantic and invariance‑preserving axis. Governs reasoning, semantic structure, and global coherence.
 
-ICC (Identity‑Coherence Channel)
+ICX (Soul Identity aXis)
 The identity, provenance, and ethical‑stability axis. Governs continuity of self and value alignment.
 
-4. USAIC Terminology
-USAIC (Universal & Symbiotic Accessibility Intelligence Channel)
+4. SUXS-IFO Terminology
+SUXS-IFO (SUXS Intelligence Fusion Operator)
 The fusion operator that contracts the nine‑cell lattice into a unified cognitive field.
 
 Fusion Weight Matrix (
@@ -83,7 +124,7 @@ Fusion Weight Matrix (
 𝑖
 𝑗
 )
-A normalized, non‑negative matrix defining USAIC’s contraction coefficients.
+A normalized, non‑negative matrix defining SUXS-IFO’s contraction coefficients.
 
 Accessibility Transform
 A reversible mapping that preserves semantic and identity invariants while modifying perceptual representation.

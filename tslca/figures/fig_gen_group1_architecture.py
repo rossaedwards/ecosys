@@ -8,8 +8,8 @@ AGPLv3 | R.F. Lovezme 🔥⚔️⚖️
 
 Figures generated:
   1.1  fig_tsl_lattice_3x3
-  1.2  fig_channel_basis_vectors
-  1.3  fig_channel_domains
+  1.2  fig_aXis_basis_vectors
+  1.3  fig_aXis_domains
   1.4  fig_off_diagonal_asymmetry
   1.5  fig_lattice_cell_taxonomy
   1.6  fig_3_6_9_13_grammar
@@ -20,7 +20,7 @@ Figures generated:
   1.11 fig_cognitive_field_definition
   1.12 fig_lattice_completeness
   1.13 fig_cell_interaction_graph
-  1.14 fig_channel_algebra_table
+  1.14 fig_aXis_algebra_table
 
 Usage:
   python fig_gen_group1_architecture.py --out ./output/figures/group1
@@ -114,10 +114,10 @@ def _author_tag(fig: plt.Figure) -> None:
 # ===========================================================================
 
 def fig_tsl_lattice_3x3(out_dir: Path, fmt: str, dpi: int) -> Path:
-    """Canonical 3×3 TSLCA lattice with cell labels and channel axes."""
+    """Canonical 3×3 TSLCA lattice with cell labels and aXis axes."""
     log.info("Generating 1.1 fig_tsl_lattice_3x3")
 
-    channels = ["SIC", "SCC", "ICC"]
+    aXes = ["SIX", "SCX", "ICX"]
     ch_colors = [COLOR["sic"], COLOR["scc"], COLOR["icc"]]
     cell_labels = [
         [r"$s_1\!\otimes\!s_1$", r"$s_1\!\otimes\!s_2$", r"$s_1\!\otimes\!s_3$"],
@@ -171,8 +171,8 @@ def fig_tsl_lattice_3x3(out_dir: Path, fmt: str, dpi: int) -> Path:
                         fontsize=6.5, color="white",
                         fontweight="bold", zorder=5)
 
-    # channel axis labels
-    for i, (ch, col) in enumerate(zip(channels, ch_colors)):
+    # aXis axis labels
+    for i, (ch, col) in enumerate(zip(aXes, ch_colors)):
         y = 2 - i + 0.49
         ax.text(-0.32, y, ch, ha="center", va="center",
                 fontsize=10, fontweight="bold", color=col,
@@ -212,18 +212,18 @@ def fig_tsl_lattice_3x3(out_dir: Path, fmt: str, dpi: int) -> Path:
 
 
 # ===========================================================================
-# FIG 1.2 — Channel basis vectors in 3D cognitive space
+# FIG 1.2 — aXis basis vectors in 3D cognitive space
 # ===========================================================================
 
-def fig_channel_basis_vectors(out_dir: Path, fmt: str, dpi: int) -> Path:
-    log.info("Generating 1.2 fig_channel_basis_vectors")
+def fig_aXis_basis_vectors(out_dir: Path, fmt: str, dpi: int) -> Path:
+    log.info("Generating 1.2 fig_aXis_basis_vectors")
     fig = plt.figure(figsize=(7, 7), facecolor=COLOR["bg"])
     ax = fig.add_subplot(111, projection="3d")
     ax.set_facecolor(COLOR["bg"])
 
     origin = np.zeros(3)
     vecs = np.eye(3)
-    labels = ["SIC\n$s_1$", "SCC\n$s_2$", "ICC\n$s_3$"]
+    labels = ["SIX\n$s_1$", "SCX\n$s_2$", "ICX\n$s_3$"]
     colors = [COLOR["sic"], COLOR["scc"], COLOR["icc"]]
     axes_labels = ["Perception / Embodiment",
                    "Semantics / Coherence",
@@ -252,25 +252,25 @@ def fig_channel_basis_vectors(out_dir: Path, fmt: str, dpi: int) -> Path:
     ax.set_xlim(0, 1.3)
     ax.set_ylim(0, 1.3)
     ax.set_zlim(0, 1.3)
-    ax.set_xlabel("$s_1$ (SIC)", labelpad=6, **FONT["label"])
-    ax.set_ylabel("$s_2$ (SCC)", labelpad=6, **FONT["label"])
-    ax.set_zlabel("$s_3$ (ICC)", labelpad=6, **FONT["label"])
+    ax.set_xlabel("$s_1$ (SIX)", labelpad=6, **FONT["label"])
+    ax.set_ylabel("$s_2$ (SCX)", labelpad=6, **FONT["label"])
+    ax.set_zlabel("$s_3$ (ICX)", labelpad=6, **FONT["label"])
     ax.set_title(
-        "Channel Basis Vectors in Cognitive Space\n"
+        "aXis Basis Vectors in Cognitive Space\n"
         r"$\{\mathbf{s}_1,\mathbf{s}_2,\mathbf{s}_3\}$ — orthonormal basis",
         **FONT["title"], pad=12,
     )
     ax.view_init(elev=22, azim=38)
     _author_tag(fig)
-    return _save(fig, out_dir, "fig_channel_basis_vectors", fmt, dpi)
+    return _save(fig, out_dir, "fig_aXis_basis_vectors", fmt, dpi)
 
 
 # ===========================================================================
-# FIG 1.3 — Channel domain Venn diagram
+# FIG 1.3 — aXis domain Venn diagram
 # ===========================================================================
 
-def fig_channel_domains(out_dir: Path, fmt: str, dpi: int) -> Path:
-    log.info("Generating 1.3 fig_channel_domains")
+def fig_aXis_domains(out_dir: Path, fmt: str, dpi: int) -> Path:
+    log.info("Generating 1.3 fig_aXis_domains")
     fig, ax = plt.subplots(figsize=(9, 6.5), facecolor=COLOR["bg"])
     ax.set_facecolor(COLOR["bg"])
     ax.set_xlim(-1.0, 5.0)
@@ -279,9 +279,9 @@ def fig_channel_domains(out_dir: Path, fmt: str, dpi: int) -> Path:
     ax.axis("off")
 
     circles = [
-        (0.8,  1.3, COLOR["sic"], "SIC",  0.36),
-        (2.0,  2.6, COLOR["scc"], "SCC",  0.36),
-        (3.2,  1.3, COLOR["icc"], "ICC",  0.36),
+        (0.8,  1.3, COLOR["sic"], "SIX",  0.36),
+        (2.0,  2.6, COLOR["scc"], "SCX",  0.36),
+        (3.2,  1.3, COLOR["icc"], "ICX",  0.36),
     ]
     r = 1.55
     for cx, cy, col, lbl, _ in circles:
@@ -292,11 +292,11 @@ def fig_channel_domains(out_dir: Path, fmt: str, dpi: int) -> Path:
         ax.add_patch(circ_border)
 
     domain_text = [
-        (0.05, 0.8,  COLOR["sic"], "SIC", ["Multimodal Perception", "Environmental Salience",
+        (0.05, 0.8,  COLOR["sic"], "SIX", ["Multimodal Perception", "Environmental Salience",
                                             "Embodied Coupling", "Accessibility Transform"]),
-        (2.0,  3.55, COLOR["scc"], "SCC", ["Semantic Coherence", "Invariant Preservation",
+        (2.0,  3.55, COLOR["scc"], "SCX", ["Semantic Coherence", "Invariant Preservation",
                                             "Contextual Propagation", "Systemic Reasoning"]),
-        (3.9,  0.8,  COLOR["icc"], "ICC", ["Identity Anchoring", "Provenance Preservation",
+        (3.9,  0.8,  COLOR["icc"], "ICX", ["Identity Anchoring", "Provenance Preservation",
                                             "Ethical Constraint", "Self-Consistency"]),
     ]
     for tx, ty, col, lbl, items in domain_text:
@@ -316,7 +316,7 @@ def fig_channel_domains(out_dir: Path, fmt: str, dpi: int) -> Path:
     ax.text(2.0,  0.65, "Identity-\nPercept",
             ha="center", fontsize=7.5, color=COLOR["edge"],
             fontstyle="italic", zorder=3)
-    ax.text(2.0,  1.75, "USAIC\n(fusion)",
+    ax.text(2.0,  1.75, "SUXS-IFO\n(fusion)",
             ha="center", fontsize=9, fontweight="bold",
             color=COLOR["usaic"], zorder=4,
             bbox=dict(boxstyle="round,pad=0.3",
@@ -324,11 +324,11 @@ def fig_channel_domains(out_dir: Path, fmt: str, dpi: int) -> Path:
                       edgecolor=COLOR["usaic"]))
 
     ax.set_title(
-        "TSLCA Channel Domain Diagram\nSIC · SCC · ICC — Mutually Constraining Dimensions",
+        "TSLCA aXis Domain Diagram\nSIX · SCX · ICX — Mutually Constraining Dimensions",
         **FONT["title"], pad=10,
     )
     _author_tag(fig)
-    return _save(fig, out_dir, "fig_channel_domains", fmt, dpi)
+    return _save(fig, out_dir, "fig_aXis_domains", fmt, dpi)
 
 
 # ===========================================================================
@@ -341,13 +341,13 @@ def fig_off_diagonal_asymmetry(out_dir: Path, fmt: str, dpi: int) -> Path:
     fig.subplots_adjust(wspace=0.35)
 
     pairs = [
-        ("SIC", "SCC", COLOR["sic"], COLOR["scc"],
+        ("SIX", "SCX", COLOR["sic"], COLOR["scc"],
          r"$s_1 \otimes s_2$", r"$s_2 \otimes s_1$",
          [0.85, 0.35], [0.45, 0.65]),
-        ("SIC", "ICC", COLOR["sic"], COLOR["icc"],
+        ("SIX", "ICX", COLOR["sic"], COLOR["icc"],
          r"$s_1 \otimes s_3$", r"$s_3 \otimes s_1$",
          [0.78, 0.28], [0.52, 0.70]),
-        ("SCC", "ICC", COLOR["scc"], COLOR["icc"],
+        ("SCX", "ICX", COLOR["scc"], COLOR["icc"],
          r"$s_2 \otimes s_3$", r"$s_3 \otimes s_2$",
          [0.80, 0.32], [0.48, 0.68]),
     ]
@@ -411,7 +411,7 @@ def fig_off_diagonal_asymmetry(out_dir: Path, fmt: str, dpi: int) -> Path:
 
 def fig_lattice_cell_taxonomy(out_dir: Path, fmt: str, dpi: int) -> Path:
     log.info("Generating 1.5 fig_lattice_cell_taxonomy")
-    channels = ["SIC", "SCC", "ICC"]
+    aXes = ["SIX", "SCX", "ICX"]
     ch_colors = [COLOR["sic"], COLOR["scc"], COLOR["icc"]]
     cell_roles = [
         ["Pure-mode\nPerception",    "Percept interpreting\nSemantic field",  "Percept anchored to\nIdentity"],
@@ -468,7 +468,7 @@ def fig_lattice_cell_taxonomy(out_dir: Path, fmt: str, dpi: int) -> Path:
                     linespacing=1.35, zorder=3)
 
     # row/col headers
-    for k, (ch, col) in enumerate(zip(channels, ch_colors)):
+    for k, (ch, col) in enumerate(zip(aXes, ch_colors)):
         y = 2 - k + 0.49
         ax.text(-0.55, y, ch, ha="center", va="center",
                 fontsize=10, fontweight="bold", color=col,
@@ -513,11 +513,11 @@ def fig_3_6_9_13_grammar(out_dir: Path, fmt: str, dpi: int) -> Path:
 
     levels = [
         {"n": 3,  "y": 3.0, "col": COLOR["sic"],
-         "items": ["SIC", "SCC", "ICC"],
-         "label": "3 Basis Channels"},
+         "items": ["SIX", "SCX", "ICX"],
+         "label": "3 Basis aXes"},
         {"n": 6,  "y": 1.7, "col": COLOR["scc"],
-         "items": ["SIC→SCC", "SIC→ICC", "SCC→SIC",
-                   "SCC→ICC", "ICC→SIC", "ICC→SCC"],
+         "items": ["SIX→SCX", "SIX→ICX", "SCX→SIX",
+                   "SCX→ICX", "ICX→SIX", "ICX→SCX"],
          "label": "6 Dual-Triad Interactions"},
         {"n": 9,  "y": 0.4, "col": COLOR["icc"],
          "items": [f"$s_{i}\\!\\otimes\\!s_{j}$"
@@ -566,7 +566,7 @@ def fig_3_6_9_13_grammar(out_dir: Path, fmt: str, dpi: int) -> Path:
 
     ax.set_title(
         "TSLCA 3-6-9-13 Structural Grammar\n"
-        "Channels → Interactions → Cells → Governance Invariants",
+        "aXes → Interactions → Cells → Governance Invariants",
         **FONT["title"], pad=10,
     )
     _author_tag(fig)
@@ -574,7 +574,7 @@ def fig_3_6_9_13_grammar(out_dir: Path, fmt: str, dpi: int) -> Path:
 
 
 # ===========================================================================
-# FIG 1.7 — USAIC as tensor contraction arrow diagram
+# FIG 1.7 — SUXS-IFO as tensor contraction arrow diagram
 # ===========================================================================
 
 def fig_usaic_contraction(out_dir: Path, fmt: str, dpi: int) -> Path:
@@ -614,7 +614,7 @@ def fig_usaic_contraction(out_dir: Path, fmt: str, dpi: int) -> Path:
     ax.text(1.95, -0.02, "Cognitive Tensor",
             ha="center", fontsize=8, color=COLOR["neutral"])
 
-    # USAIC operator box
+    # SUXS-IFO operator box
     usaic_box = FancyBboxPatch((4.4, 1.5), 2.2, 2.0,
                                 boxstyle="round,pad=0.12",
                                 linewidth=2.5,
@@ -622,7 +622,7 @@ def fig_usaic_contraction(out_dir: Path, fmt: str, dpi: int) -> Path:
                                 facecolor=mcolors.to_rgba(COLOR["usaic"], 0.12),
                                 zorder=2)
     ax.add_patch(usaic_box)
-    ax.text(5.5, 2.85, "USAIC", ha="center",
+    ax.text(5.5, 2.85, "SUXS-IFO", ha="center",
             fontsize=13, fontweight="bold", color=COLOR["usaic"], zorder=3)
     ax.text(5.5, 2.45, "Contraction Operator",
             ha="center", fontsize=8, color=COLOR["usaic"], zorder=3)
@@ -654,7 +654,7 @@ def fig_usaic_contraction(out_dir: Path, fmt: str, dpi: int) -> Path:
                 arrowprops=dict(arrowstyle="->", color=COLOR["usaic"], lw=2.5))
 
     ax.set_title(
-        r"USAIC as Tensor Contraction: $\mathbf{T} \xrightarrow{\mathrm{USAIC}} \mathbf{\Phi}$",
+        r"SUXS-IFO as Tensor Contraction: $\mathbf{T} \xrightarrow{\mathrm{SUXS-IFO}} \mathbf{\Phi}$",
         **FONT["title"], pad=10,
     )
     _author_tag(fig)
@@ -662,7 +662,7 @@ def fig_usaic_contraction(out_dir: Path, fmt: str, dpi: int) -> Path:
 
 
 # ===========================================================================
-# FIG 1.8 — USAIC fusion operator mathematical flow
+# FIG 1.8 — SUXS-IFO fusion operator mathematical flow
 # ===========================================================================
 
 def fig_usaic_fusion_operator(out_dir: Path, fmt: str, dpi: int) -> Path:
@@ -674,9 +674,9 @@ def fig_usaic_fusion_operator(out_dir: Path, fmt: str, dpi: int) -> Path:
     ax.axis("off")
 
     stages = [
-        {"x": 0.5,  "label": "SIC\nInput",          "sub": r"$\mathbf{s}_1$",  "col": COLOR["sic"]},
-        {"x": 0.5,  "label": "SCC\nInput",          "sub": r"$\mathbf{s}_2$",  "col": COLOR["scc"], "dy": -1.5},
-        {"x": 0.5,  "label": "ICC\nInput",          "sub": r"$\mathbf{s}_3$",  "col": COLOR["icc"], "dy": -3.0},
+        {"x": 0.5,  "label": "SIX\nInput",          "sub": r"$\mathbf{s}_1$",  "col": COLOR["sic"]},
+        {"x": 0.5,  "label": "SCX\nInput",          "sub": r"$\mathbf{s}_2$",  "col": COLOR["scc"], "dy": -1.5},
+        {"x": 0.5,  "label": "ICX\nInput",          "sub": r"$\mathbf{s}_3$",  "col": COLOR["icc"], "dy": -3.0},
         {"x": 3.5,  "label": "Tensor\nProduct",     "sub": r"$\mathbf{T}=s_i\!\otimes\!s_j$", "col": COLOR["edge"]},
         {"x": 6.0,  "label": "Weight\nAssignment",  "sub": r"$w_{ij}\mathbf{T}_{ij}$", "col": COLOR["neutral"]},
         {"x": 8.5,  "label": "Contraction\n+ Constraints", "sub": "Rev · Acc · Prov · Sym", "col": COLOR["usaic"]},
@@ -700,7 +700,7 @@ def fig_usaic_fusion_operator(out_dir: Path, fmt: str, dpi: int) -> Path:
     # three input boxes fan into tensor product
     input_ys = [y0, y0 - 1.5, y0 - 3.0]
     for i, (stage_lbl, col_k) in enumerate(
-            zip(["SIC\nInput", "SCC\nInput", "ICC\nInput"],
+            zip(["SIX\nInput", "SCX\nInput", "ICX\nInput"],
                 [COLOR["sic"], COLOR["scc"], COLOR["icc"]])):
         sub_k = [r"$\mathbf{s}_1$", r"$\mathbf{s}_2$", r"$\mathbf{s}_3$"][i]
         draw_box(1.2, input_ys[i], stage_lbl, sub_k, col_k)
@@ -724,7 +724,7 @@ def fig_usaic_fusion_operator(out_dir: Path, fmt: str, dpi: int) -> Path:
         prev_x = px
 
     ax.set_title(
-        "USAIC Fusion Operator — Mathematical Flow Pipeline",
+        "SUXS-IFO Fusion Operator — Mathematical Flow Pipeline",
         **FONT["title"], pad=10,
     )
     _author_tag(fig)
@@ -899,9 +899,9 @@ def fig_cognitive_field_definition(out_dir: Path, fmt: str, dpi: int) -> Path:
         ("Semantic Density",     r"$\rho_{ij}$",     COLOR["scc"],
          "Concentration of\nmeaning in the field"),
         ("Accessibility\nRelevance", r"$\alpha_{ij}$", COLOR["usaic"],
-         "USAIC accessibility\nweight per cell"),
+         "SUXS-IFO accessibility\nweight per cell"),
         ("Identity Weight",      r"$\iota_{ij}$",    COLOR["icc"],
-         "ICC identity anchoring\nstrength per cell"),
+         "ICX identity anchoring\nstrength per cell"),
     ]
 
     fig, ax = plt.subplots(figsize=(13, 5), facecolor=COLOR["bg"])
@@ -958,12 +958,12 @@ def fig_lattice_completeness(out_dir: Path, fmt: str, dpi: int) -> Path:
     fig.subplots_adjust(wspace=0.10)
 
     configs = [
-        ("Full TSLCA\n(3 channels)",  [True, True, True],   COLOR["usaic"]),
-        ("Remove SIC",                [False, True, True],   COLOR["highlight"]),
-        ("Remove SCC",                [True, False, True],   COLOR["highlight"]),
-        ("Remove ICC",                [True, True, False],   COLOR["highlight"]),
+        ("Full TSLCA\n(3 aXes)",  [True, True, True],   COLOR["usaic"]),
+        ("Remove SIX",                [False, True, True],   COLOR["highlight"]),
+        ("Remove SCX",                [True, False, True],   COLOR["highlight"]),
+        ("Remove ICX",                [True, True, False],   COLOR["highlight"]),
     ]
-    ch_names = ["SIC", "SCC", "ICC"]
+    ch_names = ["SIX", "SCX", "ICX"]
     ch_colors = [COLOR["sic"], COLOR["scc"], COLOR["icc"]]
 
     for ax, (title, active, title_col) in zip(axes, configs):
@@ -1011,7 +1011,7 @@ def fig_lattice_completeness(out_dir: Path, fmt: str, dpi: int) -> Path:
                             color=COLOR["edge"], zorder=3)
 
         lost = sum(1 for a in active if not a)
-        dof_lost = lost * 3  # each channel governs a row + column
+        dof_lost = lost * 3  # each aXis governs a row + column
         ax.text(1.49, -0.52,
                 f"DOF lost: {dof_lost}" if lost > 0 else "Complete (9 DOF)",
                 ha="center", fontsize=8,
@@ -1019,7 +1019,7 @@ def fig_lattice_completeness(out_dir: Path, fmt: str, dpi: int) -> Path:
                 fontweight="bold")
 
     fig.suptitle(
-        "Lattice Minimality: Removing Any Channel Collapses Essential Degrees of Freedom",
+        "Lattice Minimality: Removing Any aXis Collapses Essential Degrees of Freedom",
         **FONT["title"],
     )
     _author_tag(fig)
@@ -1057,7 +1057,7 @@ def fig_cell_interaction_graph(out_dir: Path, fmt: str, dpi: int) -> Path:
         COLOR["icc"], COLOR["icc"], COLOR["icc"],
     ]
 
-    # draw edges (all pairs, weight by channel relationship)
+    # draw edges (all pairs, weight by aXis relationship)
     rng = np.random.default_rng(7)
     for a_idx in range(9):
         for b_idx in range(a_idx + 1, 9):
@@ -1113,12 +1113,12 @@ def fig_cell_interaction_graph(out_dir: Path, fmt: str, dpi: int) -> Path:
 
 
 # ===========================================================================
-# FIG 1.14 — Channel algebra non-commutativity table
+# FIG 1.14 — aXis algebra non-commutativity table
 # ===========================================================================
 
-def fig_channel_algebra_table(out_dir: Path, fmt: str, dpi: int) -> Path:
-    log.info("Generating 1.14 fig_channel_algebra_table")
-    channels = ["SIC ($s_1$)", "SCC ($s_2$)", "ICC ($s_3$)"]
+def fig_aXis_algebra_table(out_dir: Path, fmt: str, dpi: int) -> Path:
+    log.info("Generating 1.14 fig_aXis_algebra_table")
+    aXes = ["SIX ($s_1$)", "SCX ($s_2$)", "ICX ($s_3$)"]
     ch_short = ["$s_1$", "$s_2$", "$s_3$"]
     ch_colors = [COLOR["sic"], COLOR["scc"], COLOR["icc"]]
 
@@ -1186,7 +1186,7 @@ def fig_channel_algebra_table(out_dir: Path, fmt: str, dpi: int) -> Path:
                         fontweight="bold", zorder=4)
 
     # row / col headers
-    for k, (ch, col) in enumerate(zip(channels, ch_colors)):
+    for k, (ch, col) in enumerate(zip(aXes, ch_colors)):
         y = (2 - k) * cell_size + 0.5 + 0.49
         ax.text(0.17, y, ch, ha="center", va="center",
                 fontsize=8.5, fontweight="bold", color=col, rotation=90)
@@ -1212,12 +1212,12 @@ def fig_channel_algebra_table(out_dir: Path, fmt: str, dpi: int) -> Path:
               framealpha=0.9, edgecolor=COLOR["grid"])
 
     ax.set_title(
-        "Channel Algebra Table — Non-Commutative Tensor Products\n"
+        "aXis Algebra Table — Non-Commutative Tensor Products\n"
         r"$s_i \otimes s_j \neq s_j \otimes s_i$ (off-diagonal asymmetry shown by ↑↓)",
         **FONT["title"], pad=12,
     )
     _author_tag(fig)
-    return _save(fig, out_dir, "fig_channel_algebra_table", fmt, dpi)
+    return _save(fig, out_dir, "fig_aXis_algebra_table", fmt, dpi)
 
 
 # ===========================================================================
@@ -1226,8 +1226,8 @@ def fig_channel_algebra_table(out_dir: Path, fmt: str, dpi: int) -> Path:
 
 FIGURES: dict[str, tuple[str, Callable]] = {
     "1.1":  ("fig_tsl_lattice_3x3",           fig_tsl_lattice_3x3),
-    "1.2":  ("fig_channel_basis_vectors",      fig_channel_basis_vectors),
-    "1.3":  ("fig_channel_domains",            fig_channel_domains),
+    "1.2":  ("fig_aXis_basis_vectors",      fig_aXis_basis_vectors),
+    "1.3":  ("fig_aXis_domains",            fig_aXis_domains),
     "1.4":  ("fig_off_diagonal_asymmetry",     fig_off_diagonal_asymmetry),
     "1.5":  ("fig_lattice_cell_taxonomy",      fig_lattice_cell_taxonomy),
     "1.6":  ("fig_3_6_9_13_grammar",           fig_3_6_9_13_grammar),
@@ -1238,7 +1238,7 @@ FIGURES: dict[str, tuple[str, Callable]] = {
     "1.11": ("fig_cognitive_field_definition", fig_cognitive_field_definition),
     "1.12": ("fig_lattice_completeness",       fig_lattice_completeness),
     "1.13": ("fig_cell_interaction_graph",     fig_cell_interaction_graph),
-    "1.14": ("fig_channel_algebra_table",      fig_channel_algebra_table),
+    "1.14": ("fig_aXis_algebra_table",      fig_aXis_algebra_table),
 }
 
 

@@ -1,0 +1,14 @@
+// Rust FFI Bridge Example
+// Demonstrates calling Rust from Fuxyez
+
+import rust_lib::calculate_fibonacci
+
+sigil fib_demo {
+    let n = 10
+    let result = calculate_fibonacci(n)
+    echo "Fibonacci({n}) = {result}"
+}
+
+ritual main {
+    collapse fib_demo
+}

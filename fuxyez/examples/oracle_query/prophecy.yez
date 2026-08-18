@@ -1,0 +1,20 @@
+// Yezian Oracle Query Example
+// Demonstrates meta-programming and divination
+
+oracle WeatherOracle {
+    source: "https://api.weather.com"
+    cache: true
+    ttl: 3600
+}
+
+query CurrentWeather(city: String) -> WeatherData {
+    divine WeatherOracle {
+        endpoint: "/current/{city}"
+        transform: json_to_weather
+    }
+}
+
+ritual main {
+    let forecast = CurrentWeather("San Francisco")
+    echo "Weather: {forecast.temperature}°F, {forecast.conditions}"
+}

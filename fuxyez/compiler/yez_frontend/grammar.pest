@@ -1,0 +1,128 @@
+// Yez Grammar (PEG)
+// Meta-programming and oracle query language
+
+WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
+COMMENT = _{ "//" ~ (!"\n" ~ ANY)* }
+
+// Keywords
+KW_ORACLE = { "oracle" }
+KW_QUERY = { "query" }
+KW_DIVINE = { "divine" }
+KW_PROPHECY = { "prophecy" }
+KW_SCHEMA = { "schema" }
+KW_ENTITY = { "entity" }
+KW_RITUAL = { "ritual" }
+KW_LET = { "let" }
+KW_ECHO = { "echo" }
+
+// Identifiers
+identifier = @{ ASCII_ALPHA ~ (ASCII_ALPHANUMERIC | "_")* }
+
+// Literals
+integer = @{ "-"? ~ ASCII_DIGIT+ }
+float = @{ "-"? ~ ASCII_DIGIT+ ~ "." ~ ASCII_DIGIT+ }
+string = @{ "\"" ~ (!"\"" ~ ANY)* ~ "\"" }
+boolean = { "true" | "false" }
+
+// Types
+type_annotation = { ":" ~ type_expr }
+type_expr = { identifier ~ generic_args? }
+generic_args = { "<" ~ type_expr ~ ("," ~ type_expr)* ~ ">" }
+
+// Oracle Declarations
+oracle_decl = {
+    KW_ORACLE ~ identifier ~ "{" ~ oracle_property* ~ "}"
+}
+
+oracle_property = {
+    identifier ~ ":" ~ (string | boolean | integer)
+}
+
+// Query Declarations
+query_decl = {
+    KW_QUERY ~ identifier ~ 
+    "(" ~ (identifier ~ type_annotation ~ ("," ~ identifier ~ type_annotation)*)? ~ ")" ~ 
+    "->" ~ type_expr ~ 
+    "{" ~ divine_block ~ "}"
+}
+
+divine_block = {
+    KW_DIVINE ~ identifier ~ "{" ~ divine_property* ~ "}"
+}
+
+divine_property = {
+    identifier ~ ":" ~ expression
+}
+
+// Schema Declarations
+schema_decl = {
+    KW_SCHEMA ~ "{" ~ entity_decl* ~ "}"
+}
+
+entity_decl = {
+    KW_ENTITY ~ identifier ~ "{" ~ field_decl* ~ "}"
+}
+
+field_decl = {
+    identifier ~ type_annotation
+}
+
+// Expressions
+expression = {
+    literal
+    | identifier
+    | function_call
+    | block
+    | string_interpolation
+}
+
+literal = { float | integer | string | boolean }
+
+function_call = {
+    identifier ~ "(" ~ (expression ~ ("," ~ expression)*)? ~ ")"
+}
+
+string_interpolation = {
+    "\"" ~ (interpolation_part | regular_char)* ~ "\""
+}
+
+interpolation_part = {
+    "{" ~ identifier ~ "}"
+}
+
+regular_char = {
+    !("\"" | "{") ~ ANY
+}
+
+block = {
+    "{" ~ statement* ~ expression? ~ "}"
+}
+
+// Statements
+statement = {
+    let_statement
+    | echo_statement
+    | expression_statement
+}
+
+let_statement = {
+    KW_LET ~ identifier ~ type_annotation? ~ "=" ~ expression
+}
+
+echo_statement = {
+    KW_ECHO ~ expression
+}
+
+expression_statement = {
+    expression
+}
+
+// Ritual (main entry point for .yez files)
+ritual_decl = {
+    KW_RITUAL ~ identifier ~ block
+}
+
+// Program
+program = {
+    SOI ~ (oracle_decl | query_decl | schema_decl | ritual_decl)* ~ EOI
+}

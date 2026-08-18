@@ -1,0 +1,86 @@
+// AuraFS Fuxyez Standard Library
+// Native bindings for fractal shard storage
+
+// ============================================================================
+// Core AuraFS Operations
+// ============================================================================
+
+sigil aurafs_connect {
+    // Connect to AuraFS network
+    // Returns: connection handle
+    native aurafs::connect()
+}
+
+sigil aurafs_persist(lattice: Lattice) -> String {
+    // Persist lattice to fractal shards
+    // Returns: lattice shard ID
+    native aurafs::persist_lattice(lattice)
+}
+
+sigil aurafs_load(shard_id: String) -> Lattice {
+    // Load lattice from AuraFS by shard ID
+    native aurafs::load_lattice(shard_id)
+}
+
+sigil aurafs_query(query_str: String) -> [Lattice] {
+    // Query AuraFS for lattices matching criteria
+    // Example: "lattice_id:abc123"
+    native aurafs::query_shards(query_str)
+}
+
+sigil aurafs_delete(shard_id: String) {
+    // Delete shard from AuraFS network
+    native aurafs::delete_shard(shard_id)
+}
+
+// ============================================================================
+// Shard Management
+// ============================================================================
+
+sigil shard_stats(shard_id: String) -> ShardInfo {
+    // Get statistics for a shard
+    native aurafs::get_shard_stats(shard_id)
+}
+
+sigil shard_verify(shard_id: String) -> Bool {
+    // Verify shard integrity (checksum)
+    native aurafs::verify_shard(shard_id)
+}
+
+// ============================================================================
+// Advanced Operations
+// ============================================================================
+
+sigil aurafs_replicate(shard_id: String, factor: i32) {
+    // Increase replication factor
+    native aurafs::replicate(shard_id, factor)
+}
+
+sigil aurafs_migrate(shard_id: String, target_nodes: [String]) {
+    // Migrate shard to specific nodes
+    native aurafs::migrate_shard(shard_id, target_nodes)
+}
+
+// ============================================================================
+// Configuration
+// ============================================================================
+
+sigil aurafs_configure(config: AuraFsConfig) {
+    // Configure AuraFS backend
+    native aurafs::configure(config)
+}
+
+// Type definitions
+type ShardInfo {
+    id: String,
+    size: i64,
+    replicas: i32,
+    created_at: i64
+}
+
+type AuraFsConfig {
+    bootstrap_nodes: [String],
+    replication_factor: i32,
+    cache_enabled: Bool,
+    cache_ttl: i64
+}

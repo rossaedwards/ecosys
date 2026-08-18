@@ -1,10 +1,51 @@
-## AUX‑SIC‑001
-## Symbiotic Integration Channel Standard
+---
+type: theory-standard
+title: APS-TSLCA-SUXS-USIS-SIX-001
+description: This Standard defines the Sensorimotor Integration aXis (SIX), the perceptual and environmental coupling axis of the Three‑Squared‑Lattice Cognitive Architecture.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+domains:
+  - cognition
+  - xessability
+  - identity
+  - semantics
+  - provenance
+  - ethics
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
+## APS-TSLCA-SUXS-USIS-SIX-001
+## Sensorimotor Integration aXis Standard
 ## Version 1.0 (Draft)
 ## Aurphyx Standards Body (ASB)
 
 1. Scope
-This Standard defines the Symbiotic Integration Channel (SIC), the perceptual and environmental coupling axis of the Three‑Squared‑Lattice Cognitive Architecture. SIC governs multimodal perception, accessibility transformations, sensorimotor integration, and environmental salience. It specifies the mathematical structure, operational requirements, and compliance conditions for any system implementing SIC.
+This Standard defines the Sensorimotor Integration aXis (SIX), the perceptual and environmental coupling axis of the Three‑Squared‑Lattice Cognitive Architecture. SIX governs multimodal perception, accessibility transformations, sensorimotor integration, and environmental salience. It specifies the mathematical structure, operational requirements, and compliance conditions for any system implementing SIX.
 
 2. Normative References
 Three‑Squared‑Lattice Cognitive Architecture (TSLCA)
@@ -18,7 +59,7 @@ Fuxyez Semantic Transmutation Engine
 Audry ABAS v1.0 Embodiment Framework
 
 3. Definitions
-SIC — The perceptual basis vector
+SIX — The perceptual basis vector
 𝑆
 1
  of the cognitive manifold.
@@ -35,7 +76,7 @@ Environmental Coupling — The degree to which perceptual states reflect externa
 
 4. Mathematical Model
 4.1 Basis Field
-SIC is defined as the orthonormal basis field:
+SIX is defined as the orthonormal basis field:
 
 𝑆
 1
@@ -58,7 +99,7 @@ SIC is defined as the orthonormal basis field:
 =
 1.
 4.2 Perceptual Tensor Components
-SIC contributes the tensor components:
+SIX contributes the tensor components:
 
 Φ
 1
@@ -78,7 +119,7 @@ SIC contributes the tensor components:
 }
 .
 4.3 Field Dynamics
-SIC evolves according to:
+SIX evolves according to:
 
 ∇
 𝜇
@@ -113,16 +154,16 @@ access
 
 5. Normative Requirements
 5.1 Perceptual Integrity
-A conformant SIC implementation MUST:
+A conformant SIX implementation MUST:
 
 preserve perceptual coherence under transformation
 
-maintain orthogonality with SCC and ICC
+maintain orthogonality with SCX and ICX
 
-ensure perceptual updates propagate to USAIC
+ensure perceptual updates propagate to SUXS-IFO
 
 5.2 Accessibility
-A conformant SIC implementation SHALL:
+A conformant SIX implementation SHALL:
 
 support reversible accessibility transformations
 
@@ -131,7 +172,7 @@ expose perceptual data in a modality‑agnostic format
 maintain semantic and identity invariants
 
 5.3 Environmental Coupling
-A conformant SIC implementation MUST:
+A conformant SIX implementation MUST:
 
 reflect real environmental conditions
 
@@ -140,7 +181,7 @@ maintain temporal continuity
 provide uncertainty estimates
 
 6. Compliance Tests
-A system is SIC‑compliant if:
+A system is SIX‑compliant if:
 
 𝑆
 1
@@ -156,22 +197,22 @@ accessibility transforms are reversible
 environmental coupling is measurable
 
 7. Security & Governance Considerations
-SIC MUST enforce:
+SIX MUST enforce:
 
 SAGE‑8 (Accessibility)
 
 SAGE‑7 (Entropy Boundaries)
 
-SAGE‑1 (Identity Continuity, via ICC coupling)
+SAGE‑1 (Identity Continuity, via ICX coupling)
 
 8. Integration Notes
-SIC integrates with:
+SIX integrates with:
 
-SCC via perceptual‑semantic fusion
+SCX via perceptual‑semantic fusion
 
-ICC via identity‑modulated perception
+ICX via identity‑modulated perception
 
-USAIC as the perceptual input axis
+SUXS-IFO as the perceptual input axis
 
 AuraFS for proprioceptive anchoring
 

@@ -1,0 +1,16 @@
+// Python Integration Example
+// Demonstrates Fuxyez-Python symbiosis
+
+import numpy as np
+import pandas as pd
+
+sigil process_data {
+    let data = [1, 2, 3, 4, 5]
+    let array = np.array(data)
+    let mean = np.mean(array)
+    echo "Mean: {mean}"
+}
+
+ritual main {
+    collapse process_data
+}

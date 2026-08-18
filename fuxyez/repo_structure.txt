@@ -1,0 +1,1641 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is 8EF4-B141
+C:\USERS\OWNER\ONEDRIVE\DOCUMENTS\GITHUB\MAIN\FUXYEZ
+|   Expand-FuxyezWorkspace.ps1
+|   FUTE-Scaffold-Generator.ps1
+|   fuxyez.code-workspace
+|   fuxyez.toml
+|   index.html
+|   LICENSE
+|   repo_structure.txt
+|   
++---configs
+|       default.xuf
+|       js_runtime.sjxuf
+|       oracle_schema.zey
+|       python_env.ypxuf
+|       README.md
+|       rust_bridge.srxuf
+|       
++---docs
+|       CONTRIBUTING.md
+|       EXTENSION_GUIDE.md
+|       GETTING_STARTED.md
+|       ROADMAP.md
+|       
++---examples
+|   |   aurafs_basic.fux
+|   |   aurafs_distributed_compute.fux
+|   |   aurafs_ml_dataset.fux
+|   |   aurafs_oracle.yez
+|   |   README.md
+|   |   
+|   +---hello_world
+|   |       main.fux
+|   |       main.xuf
+|   |       
+|   +---oracle_query
+|   |       prophecy.yez
+|   |       prophecy.zey
+|   |       
+|   +---python_script
+|   |       data_process.fuxpy
+|   |       data_process.ypxuf
+|   |       
+|   \---rust_ffi
+|       |   bridge.fuxrs
+|       |   bridge.srxuf
+|       |   
+|       \---rust_lib
+|           |   Cargo.toml
+|           |   
+|           \---src
+|                   lib.rs
+|                   
++---fute
+|   |   Cargo.toml
+|   |   LICENSE
+|   |   mod.rs
+|   |   README.md
+|   |   
+|   +---docs
+|   |       ARCHITECTURE.md
+|   |       CLI_REFERENCE.md
+|   |       EXAMPLES.md
+|   |       LANGUAGE_PLUGINS.md
+|   |       SYMBIOTIC_MODES.md
+|   |       
+|   +---examples
+|   |       multi_language.rs
+|   |       python_to_rust.rs
+|   |       rust_to_fuxyez.rs
+|   |       symbiotic_transform.rs
+|   |       
+|   +---src
+|   |   |   lib.rs
+|   |   |   main.rs
+|   |   |   
+|   |   +---ast
+|   |   |       mod.rs
+|   |   |       parser.rs
+|   |   |       traversal.rs
+|   |   |       universal.rs
+|   |   |       
+|   |   +---cli
+|   |   |   |   args.rs
+|   |   |   |   banner.rs
+|   |   |   |   mod.rs
+|   |   |   |   
+|   |   |   \---commands
+|   |   |           build.rs
+|   |   |           collapse.rs
+|   |   |           divine.rs
+|   |   |           export.rs
+|   |   |           harmonize.rs
+|   |   |           invoke.rs
+|   |   |           mod.rs
+|   |   |           new.rs
+|   |   |           publish.rs
+|   |   |           purge.rs
+|   |   |           search.rs
+|   |   |           transmute.rs
+|   |   |           weave.rs
+|   |   |           
+|   |   +---codegen
+|   |   |       fuxyez.rs
+|   |   |       mod.rs
+|   |   |       
+|   |   +---core
+|   |   |       context.rs
+|   |   |       engine.rs
+|   |   |       mod.rs
+|   |   |       pipeline.rs
+|   |   |       registry.rs
+|   |   |       types.rs
+|   |   |       
+|   |   +---languages
+|   |   |   |   mod.rs
+|   |   |   |   traits.rs
+|   |   |   |   
+|   |   |   +---csharp
+|   |   |   |       generator.rs
+|   |   |   |       mod.rs
+|   |   |   |       parser.rs
+|   |   |   |       
+|   |   |   +---javascript
+|   |   |   |       mod.rs
+|   |   |   |       
+|   |   |   +---python
+|   |   |   |       generator.rs
+|   |   |   |       mod.rs
+|   |   |   |       parser.rs
+|   |   |   |       
+|   |   |   +---rust
+|   |   |   |       generator.rs
+|   |   |   |       mod.rs
+|   |   |   |       parser.rs
+|   |   |   |       
+|   |   |   \---wasm
+|   |   |           generator.rs
+|   |   |           mod.rs
+|   |   |           
+|   |   +---patterns
+|   |   |       detector.rs
+|   |   |       library.rs
+|   |   |       matcher.rs
+|   |   |       mod.rs
+|   |   |       
+|   |   +---transformer
+|   |   |       mod.rs
+|   |   |       optimizer.rs
+|   |   |       semantic.rs
+|   |   |       symbiotic.rs
+|   |   |       
+|   |   \---utils
+|   |           config.rs
+|   |           logger.rs
+|   |           mod.rs
+|   |           
+|   \---tests
++---fuxrt
+|   |   Cargo.toml
+|   |   lib.rs
+|   |   
+|   +---core
+|   |       collapse.rs
+|   |       lattice.rs
+|   |       mod.rs
+|   |       sigil.rs
+|   |       spinon.rs
+|   |       thread.rs
+|   |       
+|   \---std
+|       |   mod.rs
+|       |   README.md
+|       |   
+|       +---aurafs
+|       |       fuxyez_bindings.fux
+|       |       
+|       +---core
+|       |   |   lattice.fux
+|       |   |   spinon.fux
+|       |   |   
+|       |   +---chains
+|       |   |       chainritual.rs
+|       |   |       chanlink.rs
+|       |   |       mod.rs
+|       |   |       ritualchain.rs
+|       |   |       ritual_chainlink.rs
+|       |   |       ritual_link.rs
+|       |   |       
+|       |   +---echoes
+|       |   |       mod.rs
+|       |   |       
+|       |   +---oracle
+|       |   |       mod.rs
+|       |   |       
+|       |   \---rituals
+|       |           mod.rs
+|       |           
+|       \---io
+|               echo.fux
+|               
++---fuxyez_compiler
+|   |   .gitignore
+|   |   .gitlab-ci.yml
+|   |   Aurphyx_CI_Pipeline.txt
+|   |   Cargo.lock
+|   |   Cargo.toml
+|   |   fuxyez.pest
+|   |   README.md
+|   |   ritual.fuxyez
+|   |   
+|   +---fux_frontend
+|   |       grammar.pest
+|   |       main.rs
+|   |       
+|   +---src
+|   |       ast.rs
+|   |       diagnostics.rs
+|   |       executor.rs
+|   |       generator.rs
+|   |       lexer.rs
+|   |       lib.rs
+|   |       main.rs
+|   |       optimizer.rs
+|   |       parser.rs
+|   |       runtime_hooks.rs
+|   |       sentinel_core.rs
+|   |       uir.rs
+|   |       
+|   +---target
+|   |   |   .rustc_info.json
+|   |   |   CACHEDIR.TAG
+|   |   |   
+|   |   \---debug
+|   |       |   .cargo-lock
+|   |       |   fuxyez_compiler.d
+|   |       |   fuxyez_compiler.exe
+|   |       |   fuxyez_compiler.pdb
+|   |       |   
+|   |       +---.fingerprint
+|   |       |   +---anstream-17d3097b4cabc88b
+|   |       |   |       dep-lib-anstream
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-anstream
+|   |       |   |       lib-anstream.json
+|   |       |   |       
+|   |       |   +---anstyle-84a70bfe2de908ea
+|   |       |   |       dep-lib-anstyle
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-anstyle
+|   |       |   |       lib-anstyle.json
+|   |       |   |       
+|   |       |   +---anstyle-parse-4a6461b818c3778f
+|   |       |   |       dep-lib-anstyle_parse
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-anstyle_parse
+|   |       |   |       lib-anstyle_parse.json
+|   |       |   |       
+|   |       |   +---anstyle-query-a8010aa8d482968a
+|   |       |   |       dep-lib-anstyle_query
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-anstyle_query
+|   |       |   |       lib-anstyle_query.json
+|   |       |   |       
+|   |       |   +---anstyle-wincon-588488aaa3264f0e
+|   |       |   |       dep-lib-anstyle_wincon
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-anstyle_wincon
+|   |       |   |       lib-anstyle_wincon.json
+|   |       |   |       
+|   |       |   +---bytes-2026280b01880f04
+|   |       |   |       dep-lib-bytes
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-bytes
+|   |       |   |       lib-bytes.json
+|   |       |   |       
+|   |       |   +---cfg-if-4764b5446a0ab7e6
+|   |       |   |       dep-lib-cfg_if
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-cfg_if
+|   |       |   |       lib-cfg_if.json
+|   |       |   |       
+|   |       |   +---clap-66a6f3c19d264f37
+|   |       |   |       dep-lib-clap
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-clap
+|   |       |   |       lib-clap.json
+|   |       |   |       
+|   |       |   +---clap_builder-baefb4bee675e44d
+|   |       |   |       dep-lib-clap_builder
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-clap_builder
+|   |       |   |       lib-clap_builder.json
+|   |       |   |       
+|   |       |   +---clap_derive-fcc74f2e5dc82e2a
+|   |       |   |       dep-lib-clap_derive
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-clap_derive
+|   |       |   |       lib-clap_derive.json
+|   |       |   |       
+|   |       |   +---clap_lex-81afaec31863382e
+|   |       |   |       dep-lib-clap_lex
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-clap_lex
+|   |       |   |       lib-clap_lex.json
+|   |       |   |       
+|   |       |   +---colorchoice-bc8c9fd0ebc2b95a
+|   |       |   |       dep-lib-colorchoice
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-colorchoice
+|   |       |   |       lib-colorchoice.json
+|   |       |   |       
+|   |       |   +---futures-channel-9e5c316323f84ede
+|   |       |   |       dep-lib-futures_channel
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_channel
+|   |       |   |       lib-futures_channel.json
+|   |       |   |       
+|   |       |   +---futures-core-8abcf6f89e967e18
+|   |       |   |       dep-lib-futures_core
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_core
+|   |       |   |       lib-futures_core.json
+|   |       |   |       
+|   |       |   +---futures-e185a53d26606114
+|   |       |   |       dep-lib-futures
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures
+|   |       |   |       lib-futures.json
+|   |       |   |       
+|   |       |   +---futures-executor-34dd5ff07c945622
+|   |       |   |       dep-lib-futures_executor
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_executor
+|   |       |   |       lib-futures_executor.json
+|   |       |   |       
+|   |       |   +---futures-io-3443a20f1a6ae0ae
+|   |       |   |       dep-lib-futures_io
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_io
+|   |       |   |       lib-futures_io.json
+|   |       |   |       
+|   |       |   +---futures-macro-e920ac3ad54ed315
+|   |       |   |       dep-lib-futures_macro
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_macro
+|   |       |   |       lib-futures_macro.json
+|   |       |   |       
+|   |       |   +---futures-sink-5a7674bf20c5fae1
+|   |       |   |       dep-lib-futures_sink
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_sink
+|   |       |   |       lib-futures_sink.json
+|   |       |   |       
+|   |       |   +---futures-task-c3e45ef3f709d10b
+|   |       |   |       dep-lib-futures_task
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_task
+|   |       |   |       lib-futures_task.json
+|   |       |   |       
+|   |       |   +---futures-util-f62d5bb8a394f7d2
+|   |       |   |       dep-lib-futures_util
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-futures_util
+|   |       |   |       lib-futures_util.json
+|   |       |   |       
+|   |       |   +---fuxyez_compiler-07effc7739e5d323
+|   |       |   |       invoked.timestamp
+|   |       |   |       output-lib-fuxyez_compiler
+|   |       |   |       
+|   |       |   +---fuxyez_compiler-3b6e6ea875fe1109
+|   |       |   |       dep-test-bin-fuxyez_compiler
+|   |       |   |       invoked.timestamp
+|   |       |   |       test-bin-fuxyez_compiler
+|   |       |   |       test-bin-fuxyez_compiler.json
+|   |       |   |       
+|   |       |   +---fuxyez_compiler-50ff52bb5fbacf5b
+|   |       |   |       bin-fuxyez_compiler
+|   |       |   |       bin-fuxyez_compiler.json
+|   |       |   |       dep-bin-fuxyez_compiler
+|   |       |   |       invoked.timestamp
+|   |       |   |       output-bin-fuxyez_compiler
+|   |       |   |       
+|   |       |   +---fuxyez_compiler-6521b2295ac16fc2
+|   |       |   |       bin-fuxyez_compiler
+|   |       |   |       bin-fuxyez_compiler.json
+|   |       |   |       dep-bin-fuxyez_compiler
+|   |       |   |       invoked.timestamp
+|   |       |   |       output-bin-fuxyez_compiler
+|   |       |   |       
+|   |       |   +---heck-420969f9825c8e1b
+|   |       |   |       dep-lib-heck
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-heck
+|   |       |   |       lib-heck.json
+|   |       |   |       
+|   |       |   +---is_terminal_polyfill-a03850f9cb675f88
+|   |       |   |       dep-lib-is_terminal_polyfill
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-is_terminal_polyfill
+|   |       |   |       lib-is_terminal_polyfill.json
+|   |       |   |       
+|   |       |   +---itoa-e82d52ede3ccce7c
+|   |       |   |       dep-lib-itoa
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-itoa
+|   |       |   |       lib-itoa.json
+|   |       |   |       
+|   |       |   +---lazy_static-73731f1283323c75
+|   |       |   |       dep-lib-lazy_static
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-lazy_static
+|   |       |   |       lib-lazy_static.json
+|   |       |   |       
+|   |       |   +---libc-1eab5a15e2441e61
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---libc-55b33c0c0259090a
+|   |       |   |       dep-lib-libc
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-libc
+|   |       |   |       lib-libc.json
+|   |       |   |       
+|   |       |   +---libc-90e64a5161783b21
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---lock_api-c291d8fe03581746
+|   |       |   |       dep-lib-lock_api
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-lock_api
+|   |       |   |       lib-lock_api.json
+|   |       |   |       
+|   |       |   +---log-c7349a97ce13d918
+|   |       |   |       dep-lib-log
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-log
+|   |       |   |       lib-log.json
+|   |       |   |       
+|   |       |   +---memchr-1b36ac37216fb55d
+|   |       |   |       dep-lib-memchr
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-memchr
+|   |       |   |       lib-memchr.json
+|   |       |   |       
+|   |       |   +---memchr-5963c4b4d7540ace
+|   |       |   |       dep-lib-memchr
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-memchr
+|   |       |   |       lib-memchr.json
+|   |       |   |       
+|   |       |   +---memchr-c4b3cbf5a1cbc63d
+|   |       |   |       dep-lib-memchr
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-memchr
+|   |       |   |       lib-memchr.json
+|   |       |   |       
+|   |       |   +---mio-2aed4fb86dcd99bd
+|   |       |   |       dep-lib-mio
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-mio
+|   |       |   |       lib-mio.json
+|   |       |   |       
+|   |       |   +---notify-a34d56412d6da59a
+|   |       |   |       dep-lib-notify
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-notify
+|   |       |   |       lib-notify.json
+|   |       |   |       
+|   |       |   +---notify-types-2fae018212de3e97
+|   |       |   |       dep-lib-notify_types
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-notify_types
+|   |       |   |       lib-notify_types.json
+|   |       |   |       
+|   |       |   +---nu-ansi-term-4bd15b6d3e019a5f
+|   |       |   |       dep-lib-nu_ansi_term
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-nu_ansi_term
+|   |       |   |       lib-nu_ansi_term.json
+|   |       |   |       
+|   |       |   +---once_cell-d4f2bcf067b1114c
+|   |       |   |       dep-lib-once_cell
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-once_cell
+|   |       |   |       lib-once_cell.json
+|   |       |   |       
+|   |       |   +---once_cell_polyfill-5154e094ceb5dce0
+|   |       |   |       dep-lib-once_cell_polyfill
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-once_cell_polyfill
+|   |       |   |       lib-once_cell_polyfill.json
+|   |       |   |       
+|   |       |   +---parking_lot-9cb75007ea1bd1c2
+|   |       |   |       dep-lib-parking_lot
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-parking_lot
+|   |       |   |       lib-parking_lot.json
+|   |       |   |       
+|   |       |   +---parking_lot_core-39ace72b11582f2c
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---parking_lot_core-d3120e8d33c8aa2d
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---parking_lot_core-e91e48452ed94ddc
+|   |       |   |       dep-lib-parking_lot_core
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-parking_lot_core
+|   |       |   |       lib-parking_lot_core.json
+|   |       |   |       
+|   |       |   +---pest-1562b8c1217b968d
+|   |       |   |       dep-lib-pest
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest
+|   |       |   |       lib-pest.json
+|   |       |   |       
+|   |       |   +---pest-45db52a727a57da5
+|   |       |   |       dep-lib-pest
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest
+|   |       |   |       lib-pest.json
+|   |       |   |       
+|   |       |   +---pest-47b07a8655d469d4
+|   |       |   |       dep-lib-pest
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest
+|   |       |   |       lib-pest.json
+|   |       |   |       
+|   |       |   +---pest-e9fcef16fce9f6ee
+|   |       |   |       dep-lib-pest
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest
+|   |       |   |       lib-pest.json
+|   |       |   |       
+|   |       |   +---pest_derive-152dcc1f7d3c9c3c
+|   |       |   |       dep-lib-pest_derive
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_derive
+|   |       |   |       lib-pest_derive.json
+|   |       |   |       
+|   |       |   +---pest_derive-4483bd9f836b69f5
+|   |       |   |       dep-lib-pest_derive
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_derive
+|   |       |   |       lib-pest_derive.json
+|   |       |   |       
+|   |       |   +---pest_derive-d0be2c067bcad374
+|   |       |   |       dep-lib-pest_derive
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_derive
+|   |       |   |       lib-pest_derive.json
+|   |       |   |       
+|   |       |   +---pest_generator-09bfbe89ee1441c5
+|   |       |   |       dep-lib-pest_generator
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_generator
+|   |       |   |       lib-pest_generator.json
+|   |       |   |       
+|   |       |   +---pest_generator-a2ea9bfaf2a02b1c
+|   |       |   |       dep-lib-pest_generator
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_generator
+|   |       |   |       lib-pest_generator.json
+|   |       |   |       
+|   |       |   +---pest_generator-f693ba5a52298599
+|   |       |   |       dep-lib-pest_generator
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_generator
+|   |       |   |       lib-pest_generator.json
+|   |       |   |       
+|   |       |   +---pest_meta-22a3f1f2c83be4ff
+|   |       |   |       dep-lib-pest_meta
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_meta
+|   |       |   |       lib-pest_meta.json
+|   |       |   |       
+|   |       |   +---pest_meta-44bdbe751fb8f6ae
+|   |       |   |       dep-lib-pest_meta
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_meta
+|   |       |   |       lib-pest_meta.json
+|   |       |   |       
+|   |       |   +---pest_meta-a14d0992440c7623
+|   |       |   |       dep-lib-pest_meta
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pest_meta
+|   |       |   |       lib-pest_meta.json
+|   |       |   |       
+|   |       |   +---pin-project-lite-69a18155656350ae
+|   |       |   |       dep-lib-pin_project_lite
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pin_project_lite
+|   |       |   |       lib-pin_project_lite.json
+|   |       |   |       
+|   |       |   +---pin-utils-c1c7252a957c0b90
+|   |       |   |       dep-lib-pin_utils
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-pin_utils
+|   |       |   |       lib-pin_utils.json
+|   |       |   |       
+|   |       |   +---proc-macro2-422ab01cb9b02ba1
+|   |       |   |       dep-lib-proc_macro2
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-proc_macro2
+|   |       |   |       lib-proc_macro2.json
+|   |       |   |       
+|   |       |   +---proc-macro2-4b7a3dafd5f82b84
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---proc-macro2-87a5f0ce3b8cc4ee
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---quote-01186c48c3eff39f
+|   |       |   |       dep-lib-quote
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-quote
+|   |       |   |       lib-quote.json
+|   |       |   |       
+|   |       |   +---ryu-45fa4043b7fe4cba
+|   |       |   |       dep-lib-ryu
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-ryu
+|   |       |   |       lib-ryu.json
+|   |       |   |       
+|   |       |   +---same-file-501737d81550eb39
+|   |       |   |       dep-lib-same_file
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-same_file
+|   |       |   |       lib-same_file.json
+|   |       |   |       
+|   |       |   +---scopeguard-b4d6b5f071b860bc
+|   |       |   |       dep-lib-scopeguard
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-scopeguard
+|   |       |   |       lib-scopeguard.json
+|   |       |   |       
+|   |       |   +---serde-15a02bf4066364b5
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---serde-284d27df18c093b2
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---serde-e7766568437bcaca
+|   |       |   |       dep-lib-serde
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-serde
+|   |       |   |       lib-serde.json
+|   |       |   |       
+|   |       |   +---serde_core-0ec3858a336b9c7e
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---serde_core-3b474259afde01d4
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---serde_core-d5bd42da831a28a6
+|   |       |   |       dep-lib-serde_core
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-serde_core
+|   |       |   |       lib-serde_core.json
+|   |       |   |       
+|   |       |   +---serde_derive-48c350af974dc201
+|   |       |   |       dep-lib-serde_derive
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-serde_derive
+|   |       |   |       lib-serde_derive.json
+|   |       |   |       
+|   |       |   +---serde_json-244a9d2bd5043cfe
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---serde_json-bd3b16e902b13da6
+|   |       |   |       dep-lib-serde_json
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-serde_json
+|   |       |   |       lib-serde_json.json
+|   |       |   |       
+|   |       |   +---serde_json-e4cd23a57b9d499a
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---sharded-slab-454a0a0b3ee6edfa
+|   |       |   |       dep-lib-sharded_slab
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-sharded_slab
+|   |       |   |       lib-sharded_slab.json
+|   |       |   |       
+|   |       |   +---slab-40d493d53e52e090
+|   |       |   |       dep-lib-slab
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-slab
+|   |       |   |       lib-slab.json
+|   |       |   |       
+|   |       |   +---smallvec-4bf9bd40080fe3dd
+|   |       |   |       dep-lib-smallvec
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-smallvec
+|   |       |   |       lib-smallvec.json
+|   |       |   |       
+|   |       |   +---socket2-0669a7993c1df6e4
+|   |       |   |       dep-lib-socket2
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-socket2
+|   |       |   |       lib-socket2.json
+|   |       |   |       
+|   |       |   +---strsim-08a5bf74fbd9bfdd
+|   |       |   |       dep-lib-strsim
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-strsim
+|   |       |   |       lib-strsim.json
+|   |       |   |       
+|   |       |   +---syn-09d205202f4288ea
+|   |       |   |       dep-lib-syn
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-syn
+|   |       |   |       lib-syn.json
+|   |       |   |       
+|   |       |   +---syn-72d46028627730c7
+|   |       |   |       dep-lib-syn
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-syn
+|   |       |   |       lib-syn.json
+|   |       |   |       
+|   |       |   +---thiserror-0f62ffd9e7665bda
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   +---thiserror-2cc64649ab414d57
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---thiserror-d41bfa5abe639d91
+|   |       |   |       dep-lib-thiserror
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thiserror
+|   |       |   |       lib-thiserror.json
+|   |       |   |       
+|   |       |   +---thiserror-e3c9354ca8f51730
+|   |       |   |       dep-lib-thiserror
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thiserror
+|   |       |   |       lib-thiserror.json
+|   |       |   |       
+|   |       |   +---thiserror-f07cd13621f849a3
+|   |       |   |       dep-lib-thiserror
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thiserror
+|   |       |   |       lib-thiserror.json
+|   |       |   |       
+|   |       |   +---thiserror-f5daf22a73cf0837
+|   |       |   |       dep-lib-thiserror
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thiserror
+|   |       |   |       lib-thiserror.json
+|   |       |   |       
+|   |       |   +---thiserror-impl-c3ee65de48336336
+|   |       |   |       dep-lib-thiserror_impl
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thiserror_impl
+|   |       |   |       lib-thiserror_impl.json
+|   |       |   |       
+|   |       |   +---thiserror-impl-df66a93ea8240ae0
+|   |       |   |       dep-lib-thiserror_impl
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thiserror_impl
+|   |       |   |       lib-thiserror_impl.json
+|   |       |   |       
+|   |       |   +---thread_local-a38eb02cd49de387
+|   |       |   |       dep-lib-thread_local
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-thread_local
+|   |       |   |       lib-thread_local.json
+|   |       |   |       
+|   |       |   +---tokio-016af2af0d783954
+|   |       |   |       dep-lib-tokio
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tokio
+|   |       |   |       lib-tokio.json
+|   |       |   |       
+|   |       |   +---tokio-macros-c813a4757bf89f33
+|   |       |   |       dep-lib-tokio_macros
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tokio_macros
+|   |       |   |       lib-tokio_macros.json
+|   |       |   |       
+|   |       |   +---tracing-attributes-237bfc99678f8327
+|   |       |   |       dep-lib-tracing_attributes
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tracing_attributes
+|   |       |   |       lib-tracing_attributes.json
+|   |       |   |       
+|   |       |   +---tracing-core-d506d67495e5db50
+|   |       |   |       dep-lib-tracing_core
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tracing_core
+|   |       |   |       lib-tracing_core.json
+|   |       |   |       
+|   |       |   +---tracing-e3fdaa9128268979
+|   |       |   |       dep-lib-tracing
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tracing
+|   |       |   |       lib-tracing.json
+|   |       |   |       
+|   |       |   +---tracing-log-0d7f24a34e051389
+|   |       |   |       dep-lib-tracing_log
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tracing_log
+|   |       |   |       lib-tracing_log.json
+|   |       |   |       
+|   |       |   +---tracing-subscriber-4f4dc1dc397a9b91
+|   |       |   |       dep-lib-tracing_subscriber
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-tracing_subscriber
+|   |       |   |       lib-tracing_subscriber.json
+|   |       |   |       
+|   |       |   +---ucd-trie-346fc8eada0b9edc
+|   |       |   |       dep-lib-ucd_trie
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-ucd_trie
+|   |       |   |       lib-ucd_trie.json
+|   |       |   |       
+|   |       |   +---ucd-trie-aca0d1668d6b44a1
+|   |       |   |       dep-lib-ucd_trie
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-ucd_trie
+|   |       |   |       lib-ucd_trie.json
+|   |       |   |       
+|   |       |   +---ucd-trie-f36abfbd477a024b
+|   |       |   |       dep-lib-ucd_trie
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-ucd_trie
+|   |       |   |       lib-ucd_trie.json
+|   |       |   |       
+|   |       |   +---unicode-ident-189ca15178b593cc
+|   |       |   |       dep-lib-unicode_ident
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-unicode_ident
+|   |       |   |       lib-unicode_ident.json
+|   |       |   |       
+|   |       |   +---utf8parse-9e8796421878ae72
+|   |       |   |       dep-lib-utf8parse
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-utf8parse
+|   |       |   |       lib-utf8parse.json
+|   |       |   |       
+|   |       |   +---walkdir-5287c324d577c4c1
+|   |       |   |       dep-lib-walkdir
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-walkdir
+|   |       |   |       lib-walkdir.json
+|   |       |   |       
+|   |       |   +---winapi-util-72bffe41912e1126
+|   |       |   |       dep-lib-winapi_util
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-winapi_util
+|   |       |   |       lib-winapi_util.json
+|   |       |   |       
+|   |       |   +---windows-link-6bc18ff2973bedf7
+|   |       |   |       dep-lib-windows_link
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_link
+|   |       |   |       lib-windows_link.json
+|   |       |   |       
+|   |       |   +---windows-sys-4fee3fdc9d6bb2f1
+|   |       |   |       dep-lib-windows_sys
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_sys
+|   |       |   |       lib-windows_sys.json
+|   |       |   |       
+|   |       |   +---windows-sys-84c425591fdfa559
+|   |       |   |       dep-lib-windows_sys
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_sys
+|   |       |   |       lib-windows_sys.json
+|   |       |   |       
+|   |       |   +---windows-sys-d64609fa06886b7c
+|   |       |   |       dep-lib-windows_sys
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_sys
+|   |       |   |       lib-windows_sys.json
+|   |       |   |       
+|   |       |   +---windows-sys-dfb2525682d5dd57
+|   |       |   |       dep-lib-windows_sys
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_sys
+|   |       |   |       lib-windows_sys.json
+|   |       |   |       
+|   |       |   +---windows-targets-9dd3e7c41f21dc7c
+|   |       |   |       dep-lib-windows_targets
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_targets
+|   |       |   |       lib-windows_targets.json
+|   |       |   |       
+|   |       |   +---windows-targets-f589dbe4f520c9da
+|   |       |   |       dep-lib-windows_targets
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_targets
+|   |       |   |       lib-windows_targets.json
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-0051c88a63b820ae
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-34d12bac09911094
+|   |       |   |       build-script-build-script-build
+|   |       |   |       build-script-build-script-build.json
+|   |       |   |       dep-build-script-build-script-build
+|   |       |   |       invoked.timestamp
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-633322bc8705ee8e
+|   |       |   |       dep-lib-windows_x86_64_msvc
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_x86_64_msvc
+|   |       |   |       lib-windows_x86_64_msvc.json
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-6bad1b1f1e8c9e3e
+|   |       |   |       dep-lib-windows_x86_64_msvc
+|   |       |   |       invoked.timestamp
+|   |       |   |       lib-windows_x86_64_msvc
+|   |       |   |       lib-windows_x86_64_msvc.json
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-8f1c70f04d068791
+|   |       |   |       run-build-script-build-script-build
+|   |       |   |       run-build-script-build-script-build.json
+|   |       |   |       
+|   |       |   \---windows_x86_64_msvc-e0fa5504505f8004
+|   |       |           run-build-script-build-script-build
+|   |       |           run-build-script-build-script-build.json
+|   |       |           
+|   |       +---build
+|   |       |   +---libc-1eab5a15e2441e61
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   +---libc-90e64a5161783b21
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-90e64a5161783b21.d
+|   |       |   |       build_script_build-90e64a5161783b21.exe
+|   |       |   |       build_script_build-90e64a5161783b21.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---parking_lot_core-39ace72b11582f2c
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   +---parking_lot_core-d3120e8d33c8aa2d
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-d3120e8d33c8aa2d.d
+|   |       |   |       build_script_build-d3120e8d33c8aa2d.exe
+|   |       |   |       build_script_build-d3120e8d33c8aa2d.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---proc-macro2-4b7a3dafd5f82b84
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   +---proc-macro2-87a5f0ce3b8cc4ee
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-87a5f0ce3b8cc4ee.d
+|   |       |   |       build_script_build-87a5f0ce3b8cc4ee.exe
+|   |       |   |       build_script_build-87a5f0ce3b8cc4ee.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---serde-15a02bf4066364b5
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   |           private.rs
+|   |       |   |           
+|   |       |   +---serde-284d27df18c093b2
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-284d27df18c093b2.d
+|   |       |   |       build_script_build-284d27df18c093b2.exe
+|   |       |   |       build_script_build-284d27df18c093b2.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---serde_core-0ec3858a336b9c7e
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   |           private.rs
+|   |       |   |           
+|   |       |   +---serde_core-3b474259afde01d4
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-3b474259afde01d4.d
+|   |       |   |       build_script_build-3b474259afde01d4.exe
+|   |       |   |       build_script_build-3b474259afde01d4.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---serde_json-244a9d2bd5043cfe
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-244a9d2bd5043cfe.d
+|   |       |   |       build_script_build-244a9d2bd5043cfe.exe
+|   |       |   |       build_script_build-244a9d2bd5043cfe.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---serde_json-e4cd23a57b9d499a
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   +---thiserror-0f62ffd9e7665bda
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   +---thiserror-2cc64649ab414d57
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-2cc64649ab414d57.d
+|   |       |   |       build_script_build-2cc64649ab414d57.exe
+|   |       |   |       build_script_build-2cc64649ab414d57.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-0051c88a63b820ae
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-0051c88a63b820ae.d
+|   |       |   |       build_script_build-0051c88a63b820ae.exe
+|   |       |   |       build_script_build-0051c88a63b820ae.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-34d12bac09911094
+|   |       |   |       build-script-build.exe
+|   |       |   |       build_script_build-34d12bac09911094.d
+|   |       |   |       build_script_build-34d12bac09911094.exe
+|   |       |   |       build_script_build-34d12bac09911094.pdb
+|   |       |   |       build_script_build.pdb
+|   |       |   |       
+|   |       |   +---windows_x86_64_msvc-8f1c70f04d068791
+|   |       |   |   |   invoked.timestamp
+|   |       |   |   |   output
+|   |       |   |   |   root-output
+|   |       |   |   |   stderr
+|   |       |   |   |   
+|   |       |   |   \---out
+|   |       |   \---windows_x86_64_msvc-e0fa5504505f8004
+|   |       |       |   invoked.timestamp
+|   |       |       |   output
+|   |       |       |   root-output
+|   |       |       |   stderr
+|   |       |       |   
+|   |       |       \---out
+|   |       +---deps
+|   |       |       anstream-17d3097b4cabc88b.d
+|   |       |       anstyle-84a70bfe2de908ea.d
+|   |       |       anstyle_parse-4a6461b818c3778f.d
+|   |       |       anstyle_query-a8010aa8d482968a.d
+|   |       |       anstyle_wincon-588488aaa3264f0e.d
+|   |       |       bytes-2026280b01880f04.d
+|   |       |       cfg_if-4764b5446a0ab7e6.d
+|   |       |       clap-66a6f3c19d264f37.d
+|   |       |       clap_builder-baefb4bee675e44d.d
+|   |       |       clap_derive-fcc74f2e5dc82e2a.d
+|   |       |       clap_derive-fcc74f2e5dc82e2a.dll
+|   |       |       clap_derive-fcc74f2e5dc82e2a.dll.exp
+|   |       |       clap_derive-fcc74f2e5dc82e2a.dll.lib
+|   |       |       clap_derive-fcc74f2e5dc82e2a.pdb
+|   |       |       clap_lex-81afaec31863382e.d
+|   |       |       colorchoice-bc8c9fd0ebc2b95a.d
+|   |       |       futures-e185a53d26606114.d
+|   |       |       futures_channel-9e5c316323f84ede.d
+|   |       |       futures_core-8abcf6f89e967e18.d
+|   |       |       futures_executor-34dd5ff07c945622.d
+|   |       |       futures_io-3443a20f1a6ae0ae.d
+|   |       |       futures_macro-e920ac3ad54ed315.d
+|   |       |       futures_macro-e920ac3ad54ed315.dll
+|   |       |       futures_macro-e920ac3ad54ed315.dll.exp
+|   |       |       futures_macro-e920ac3ad54ed315.dll.lib
+|   |       |       futures_macro-e920ac3ad54ed315.pdb
+|   |       |       futures_sink-5a7674bf20c5fae1.d
+|   |       |       futures_task-c3e45ef3f709d10b.d
+|   |       |       futures_util-f62d5bb8a394f7d2.d
+|   |       |       fuxyez_compiler-3b6e6ea875fe1109.d
+|   |       |       fuxyez_compiler-6521b2295ac16fc2.d
+|   |       |       fuxyez_compiler.d
+|   |       |       heck-420969f9825c8e1b.d
+|   |       |       is_terminal_polyfill-a03850f9cb675f88.d
+|   |       |       itoa-e82d52ede3ccce7c.d
+|   |       |       lazy_static-73731f1283323c75.d
+|   |       |       libanstream-17d3097b4cabc88b.rlib
+|   |       |       libanstream-17d3097b4cabc88b.rmeta
+|   |       |       libanstyle-84a70bfe2de908ea.rlib
+|   |       |       libanstyle-84a70bfe2de908ea.rmeta
+|   |       |       libanstyle_parse-4a6461b818c3778f.rlib
+|   |       |       libanstyle_parse-4a6461b818c3778f.rmeta
+|   |       |       libanstyle_query-a8010aa8d482968a.rlib
+|   |       |       libanstyle_query-a8010aa8d482968a.rmeta
+|   |       |       libanstyle_wincon-588488aaa3264f0e.rlib
+|   |       |       libanstyle_wincon-588488aaa3264f0e.rmeta
+|   |       |       libbytes-2026280b01880f04.rlib
+|   |       |       libbytes-2026280b01880f04.rmeta
+|   |       |       libc-55b33c0c0259090a.d
+|   |       |       libcfg_if-4764b5446a0ab7e6.rlib
+|   |       |       libcfg_if-4764b5446a0ab7e6.rmeta
+|   |       |       libclap-66a6f3c19d264f37.rlib
+|   |       |       libclap-66a6f3c19d264f37.rmeta
+|   |       |       libclap_builder-baefb4bee675e44d.rlib
+|   |       |       libclap_builder-baefb4bee675e44d.rmeta
+|   |       |       libclap_lex-81afaec31863382e.rlib
+|   |       |       libclap_lex-81afaec31863382e.rmeta
+|   |       |       libcolorchoice-bc8c9fd0ebc2b95a.rlib
+|   |       |       libcolorchoice-bc8c9fd0ebc2b95a.rmeta
+|   |       |       libfutures-e185a53d26606114.rlib
+|   |       |       libfutures-e185a53d26606114.rmeta
+|   |       |       libfutures_channel-9e5c316323f84ede.rlib
+|   |       |       libfutures_channel-9e5c316323f84ede.rmeta
+|   |       |       libfutures_core-8abcf6f89e967e18.rlib
+|   |       |       libfutures_core-8abcf6f89e967e18.rmeta
+|   |       |       libfutures_executor-34dd5ff07c945622.rlib
+|   |       |       libfutures_executor-34dd5ff07c945622.rmeta
+|   |       |       libfutures_io-3443a20f1a6ae0ae.rlib
+|   |       |       libfutures_io-3443a20f1a6ae0ae.rmeta
+|   |       |       libfutures_sink-5a7674bf20c5fae1.rlib
+|   |       |       libfutures_sink-5a7674bf20c5fae1.rmeta
+|   |       |       libfutures_task-c3e45ef3f709d10b.rlib
+|   |       |       libfutures_task-c3e45ef3f709d10b.rmeta
+|   |       |       libfutures_util-f62d5bb8a394f7d2.rlib
+|   |       |       libfutures_util-f62d5bb8a394f7d2.rmeta
+|   |       |       libfuxyez_compiler-3b6e6ea875fe1109.rmeta
+|   |       |       libfuxyez_compiler-6521b2295ac16fc2.rmeta
+|   |       |       libheck-420969f9825c8e1b.rlib
+|   |       |       libheck-420969f9825c8e1b.rmeta
+|   |       |       libis_terminal_polyfill-a03850f9cb675f88.rlib
+|   |       |       libis_terminal_polyfill-a03850f9cb675f88.rmeta
+|   |       |       libitoa-e82d52ede3ccce7c.rlib
+|   |       |       libitoa-e82d52ede3ccce7c.rmeta
+|   |       |       liblazy_static-73731f1283323c75.rlib
+|   |       |       liblazy_static-73731f1283323c75.rmeta
+|   |       |       liblibc-55b33c0c0259090a.rlib
+|   |       |       liblibc-55b33c0c0259090a.rmeta
+|   |       |       liblock_api-c291d8fe03581746.rlib
+|   |       |       liblock_api-c291d8fe03581746.rmeta
+|   |       |       liblog-c7349a97ce13d918.rlib
+|   |       |       liblog-c7349a97ce13d918.rmeta
+|   |       |       libmemchr-1b36ac37216fb55d.rmeta
+|   |       |       libmemchr-5963c4b4d7540ace.rlib
+|   |       |       libmemchr-5963c4b4d7540ace.rmeta
+|   |       |       libmemchr-c4b3cbf5a1cbc63d.rlib
+|   |       |       libmemchr-c4b3cbf5a1cbc63d.rmeta
+|   |       |       libmio-2aed4fb86dcd99bd.rlib
+|   |       |       libmio-2aed4fb86dcd99bd.rmeta
+|   |       |       libnotify-a34d56412d6da59a.rlib
+|   |       |       libnotify-a34d56412d6da59a.rmeta
+|   |       |       libnotify_types-2fae018212de3e97.rlib
+|   |       |       libnotify_types-2fae018212de3e97.rmeta
+|   |       |       libnu_ansi_term-4bd15b6d3e019a5f.rlib
+|   |       |       libnu_ansi_term-4bd15b6d3e019a5f.rmeta
+|   |       |       libonce_cell-d4f2bcf067b1114c.rlib
+|   |       |       libonce_cell-d4f2bcf067b1114c.rmeta
+|   |       |       libonce_cell_polyfill-5154e094ceb5dce0.rlib
+|   |       |       libonce_cell_polyfill-5154e094ceb5dce0.rmeta
+|   |       |       libparking_lot-9cb75007ea1bd1c2.rlib
+|   |       |       libparking_lot-9cb75007ea1bd1c2.rmeta
+|   |       |       libparking_lot_core-e91e48452ed94ddc.rlib
+|   |       |       libparking_lot_core-e91e48452ed94ddc.rmeta
+|   |       |       libpest-1562b8c1217b968d.rlib
+|   |       |       libpest-1562b8c1217b968d.rmeta
+|   |       |       libpest-45db52a727a57da5.rlib
+|   |       |       libpest-45db52a727a57da5.rmeta
+|   |       |       libpest-47b07a8655d469d4.rmeta
+|   |       |       libpest-e9fcef16fce9f6ee.rlib
+|   |       |       libpest-e9fcef16fce9f6ee.rmeta
+|   |       |       libpest_generator-09bfbe89ee1441c5.rlib
+|   |       |       libpest_generator-09bfbe89ee1441c5.rmeta
+|   |       |       libpest_generator-a2ea9bfaf2a02b1c.rlib
+|   |       |       libpest_generator-a2ea9bfaf2a02b1c.rmeta
+|   |       |       libpest_generator-f693ba5a52298599.rlib
+|   |       |       libpest_generator-f693ba5a52298599.rmeta
+|   |       |       libpest_meta-22a3f1f2c83be4ff.rlib
+|   |       |       libpest_meta-22a3f1f2c83be4ff.rmeta
+|   |       |       libpest_meta-44bdbe751fb8f6ae.rlib
+|   |       |       libpest_meta-44bdbe751fb8f6ae.rmeta
+|   |       |       libpest_meta-a14d0992440c7623.rlib
+|   |       |       libpest_meta-a14d0992440c7623.rmeta
+|   |       |       libpin_project_lite-69a18155656350ae.rlib
+|   |       |       libpin_project_lite-69a18155656350ae.rmeta
+|   |       |       libpin_utils-c1c7252a957c0b90.rlib
+|   |       |       libpin_utils-c1c7252a957c0b90.rmeta
+|   |       |       libproc_macro2-422ab01cb9b02ba1.rlib
+|   |       |       libproc_macro2-422ab01cb9b02ba1.rmeta
+|   |       |       libquote-01186c48c3eff39f.rlib
+|   |       |       libquote-01186c48c3eff39f.rmeta
+|   |       |       libryu-45fa4043b7fe4cba.rlib
+|   |       |       libryu-45fa4043b7fe4cba.rmeta
+|   |       |       libsame_file-501737d81550eb39.rlib
+|   |       |       libsame_file-501737d81550eb39.rmeta
+|   |       |       libscopeguard-b4d6b5f071b860bc.rlib
+|   |       |       libscopeguard-b4d6b5f071b860bc.rmeta
+|   |       |       libserde-e7766568437bcaca.rlib
+|   |       |       libserde-e7766568437bcaca.rmeta
+|   |       |       libserde_core-d5bd42da831a28a6.rlib
+|   |       |       libserde_core-d5bd42da831a28a6.rmeta
+|   |       |       libserde_json-bd3b16e902b13da6.rlib
+|   |       |       libserde_json-bd3b16e902b13da6.rmeta
+|   |       |       libsharded_slab-454a0a0b3ee6edfa.rlib
+|   |       |       libsharded_slab-454a0a0b3ee6edfa.rmeta
+|   |       |       libslab-40d493d53e52e090.rlib
+|   |       |       libslab-40d493d53e52e090.rmeta
+|   |       |       libsmallvec-4bf9bd40080fe3dd.rlib
+|   |       |       libsmallvec-4bf9bd40080fe3dd.rmeta
+|   |       |       libsocket2-0669a7993c1df6e4.rlib
+|   |       |       libsocket2-0669a7993c1df6e4.rmeta
+|   |       |       libstrsim-08a5bf74fbd9bfdd.rlib
+|   |       |       libstrsim-08a5bf74fbd9bfdd.rmeta
+|   |       |       libsyn-09d205202f4288ea.rlib
+|   |       |       libsyn-09d205202f4288ea.rmeta
+|   |       |       libsyn-72d46028627730c7.rlib
+|   |       |       libsyn-72d46028627730c7.rmeta
+|   |       |       libthiserror-d41bfa5abe639d91.rlib
+|   |       |       libthiserror-d41bfa5abe639d91.rmeta
+|   |       |       libthiserror-e3c9354ca8f51730.rlib
+|   |       |       libthiserror-e3c9354ca8f51730.rmeta
+|   |       |       libthiserror-f07cd13621f849a3.rmeta
+|   |       |       libthiserror-f5daf22a73cf0837.rlib
+|   |       |       libthiserror-f5daf22a73cf0837.rmeta
+|   |       |       libthread_local-a38eb02cd49de387.rlib
+|   |       |       libthread_local-a38eb02cd49de387.rmeta
+|   |       |       libtokio-016af2af0d783954.rlib
+|   |       |       libtokio-016af2af0d783954.rmeta
+|   |       |       libtracing-e3fdaa9128268979.rlib
+|   |       |       libtracing-e3fdaa9128268979.rmeta
+|   |       |       libtracing_core-d506d67495e5db50.rlib
+|   |       |       libtracing_core-d506d67495e5db50.rmeta
+|   |       |       libtracing_log-0d7f24a34e051389.rlib
+|   |       |       libtracing_log-0d7f24a34e051389.rmeta
+|   |       |       libtracing_subscriber-4f4dc1dc397a9b91.rlib
+|   |       |       libtracing_subscriber-4f4dc1dc397a9b91.rmeta
+|   |       |       libucd_trie-346fc8eada0b9edc.rlib
+|   |       |       libucd_trie-346fc8eada0b9edc.rmeta
+|   |       |       libucd_trie-aca0d1668d6b44a1.rmeta
+|   |       |       libucd_trie-f36abfbd477a024b.rlib
+|   |       |       libucd_trie-f36abfbd477a024b.rmeta
+|   |       |       libunicode_ident-189ca15178b593cc.rlib
+|   |       |       libunicode_ident-189ca15178b593cc.rmeta
+|   |       |       libutf8parse-9e8796421878ae72.rlib
+|   |       |       libutf8parse-9e8796421878ae72.rmeta
+|   |       |       libwalkdir-5287c324d577c4c1.rlib
+|   |       |       libwalkdir-5287c324d577c4c1.rmeta
+|   |       |       libwinapi_util-72bffe41912e1126.rlib
+|   |       |       libwinapi_util-72bffe41912e1126.rmeta
+|   |       |       libwindows_link-6bc18ff2973bedf7.rlib
+|   |       |       libwindows_link-6bc18ff2973bedf7.rmeta
+|   |       |       libwindows_sys-4fee3fdc9d6bb2f1.rlib
+|   |       |       libwindows_sys-4fee3fdc9d6bb2f1.rmeta
+|   |       |       libwindows_sys-84c425591fdfa559.rlib
+|   |       |       libwindows_sys-84c425591fdfa559.rmeta
+|   |       |       libwindows_sys-d64609fa06886b7c.rlib
+|   |       |       libwindows_sys-d64609fa06886b7c.rmeta
+|   |       |       libwindows_sys-dfb2525682d5dd57.rlib
+|   |       |       libwindows_sys-dfb2525682d5dd57.rmeta
+|   |       |       libwindows_targets-9dd3e7c41f21dc7c.rlib
+|   |       |       libwindows_targets-9dd3e7c41f21dc7c.rmeta
+|   |       |       libwindows_targets-f589dbe4f520c9da.rlib
+|   |       |       libwindows_targets-f589dbe4f520c9da.rmeta
+|   |       |       libwindows_x86_64_msvc-633322bc8705ee8e.rlib
+|   |       |       libwindows_x86_64_msvc-633322bc8705ee8e.rmeta
+|   |       |       libwindows_x86_64_msvc-6bad1b1f1e8c9e3e.rlib
+|   |       |       libwindows_x86_64_msvc-6bad1b1f1e8c9e3e.rmeta
+|   |       |       lock_api-c291d8fe03581746.d
+|   |       |       log-c7349a97ce13d918.d
+|   |       |       memchr-1b36ac37216fb55d.d
+|   |       |       memchr-5963c4b4d7540ace.d
+|   |       |       memchr-c4b3cbf5a1cbc63d.d
+|   |       |       mio-2aed4fb86dcd99bd.d
+|   |       |       notify-a34d56412d6da59a.d
+|   |       |       notify_types-2fae018212de3e97.d
+|   |       |       nu_ansi_term-4bd15b6d3e019a5f.d
+|   |       |       once_cell-d4f2bcf067b1114c.d
+|   |       |       once_cell_polyfill-5154e094ceb5dce0.d
+|   |       |       parking_lot-9cb75007ea1bd1c2.d
+|   |       |       parking_lot_core-e91e48452ed94ddc.d
+|   |       |       pest-1562b8c1217b968d.d
+|   |       |       pest-45db52a727a57da5.d
+|   |       |       pest-47b07a8655d469d4.d
+|   |       |       pest-e9fcef16fce9f6ee.d
+|   |       |       pest_derive-152dcc1f7d3c9c3c.d
+|   |       |       pest_derive-152dcc1f7d3c9c3c.dll
+|   |       |       pest_derive-152dcc1f7d3c9c3c.dll.exp
+|   |       |       pest_derive-152dcc1f7d3c9c3c.dll.lib
+|   |       |       pest_derive-152dcc1f7d3c9c3c.pdb
+|   |       |       pest_derive-4483bd9f836b69f5.d
+|   |       |       pest_derive-4483bd9f836b69f5.dll
+|   |       |       pest_derive-4483bd9f836b69f5.dll.exp
+|   |       |       pest_derive-4483bd9f836b69f5.dll.lib
+|   |       |       pest_derive-4483bd9f836b69f5.pdb
+|   |       |       pest_derive-d0be2c067bcad374.d
+|   |       |       pest_derive-d0be2c067bcad374.dll
+|   |       |       pest_derive-d0be2c067bcad374.dll.exp
+|   |       |       pest_derive-d0be2c067bcad374.dll.lib
+|   |       |       pest_derive-d0be2c067bcad374.pdb
+|   |       |       pest_generator-09bfbe89ee1441c5.d
+|   |       |       pest_generator-a2ea9bfaf2a02b1c.d
+|   |       |       pest_generator-f693ba5a52298599.d
+|   |       |       pest_meta-22a3f1f2c83be4ff.d
+|   |       |       pest_meta-44bdbe751fb8f6ae.d
+|   |       |       pest_meta-a14d0992440c7623.d
+|   |       |       pin_project_lite-69a18155656350ae.d
+|   |       |       pin_utils-c1c7252a957c0b90.d
+|   |       |       proc_macro2-422ab01cb9b02ba1.d
+|   |       |       quote-01186c48c3eff39f.d
+|   |       |       ryu-45fa4043b7fe4cba.d
+|   |       |       same_file-501737d81550eb39.d
+|   |       |       scopeguard-b4d6b5f071b860bc.d
+|   |       |       serde-e7766568437bcaca.d
+|   |       |       serde_core-d5bd42da831a28a6.d
+|   |       |       serde_derive-48c350af974dc201.d
+|   |       |       serde_derive-48c350af974dc201.dll
+|   |       |       serde_derive-48c350af974dc201.dll.exp
+|   |       |       serde_derive-48c350af974dc201.dll.lib
+|   |       |       serde_derive-48c350af974dc201.pdb
+|   |       |       serde_json-bd3b16e902b13da6.d
+|   |       |       sharded_slab-454a0a0b3ee6edfa.d
+|   |       |       slab-40d493d53e52e090.d
+|   |       |       smallvec-4bf9bd40080fe3dd.d
+|   |       |       socket2-0669a7993c1df6e4.d
+|   |       |       strsim-08a5bf74fbd9bfdd.d
+|   |       |       syn-09d205202f4288ea.d
+|   |       |       syn-72d46028627730c7.d
+|   |       |       thiserror-d41bfa5abe639d91.d
+|   |       |       thiserror-e3c9354ca8f51730.d
+|   |       |       thiserror-f07cd13621f849a3.d
+|   |       |       thiserror-f5daf22a73cf0837.d
+|   |       |       thiserror_impl-c3ee65de48336336.d
+|   |       |       thiserror_impl-c3ee65de48336336.dll
+|   |       |       thiserror_impl-c3ee65de48336336.dll.exp
+|   |       |       thiserror_impl-c3ee65de48336336.dll.lib
+|   |       |       thiserror_impl-c3ee65de48336336.pdb
+|   |       |       thiserror_impl-df66a93ea8240ae0.d
+|   |       |       thiserror_impl-df66a93ea8240ae0.dll
+|   |       |       thiserror_impl-df66a93ea8240ae0.dll.exp
+|   |       |       thiserror_impl-df66a93ea8240ae0.dll.lib
+|   |       |       thiserror_impl-df66a93ea8240ae0.pdb
+|   |       |       thread_local-a38eb02cd49de387.d
+|   |       |       tokio-016af2af0d783954.d
+|   |       |       tokio_macros-c813a4757bf89f33.d
+|   |       |       tokio_macros-c813a4757bf89f33.dll
+|   |       |       tokio_macros-c813a4757bf89f33.dll.exp
+|   |       |       tokio_macros-c813a4757bf89f33.dll.lib
+|   |       |       tokio_macros-c813a4757bf89f33.pdb
+|   |       |       tracing-e3fdaa9128268979.d
+|   |       |       tracing_attributes-237bfc99678f8327.d
+|   |       |       tracing_attributes-237bfc99678f8327.dll
+|   |       |       tracing_attributes-237bfc99678f8327.dll.exp
+|   |       |       tracing_attributes-237bfc99678f8327.dll.lib
+|   |       |       tracing_attributes-237bfc99678f8327.pdb
+|   |       |       tracing_core-d506d67495e5db50.d
+|   |       |       tracing_log-0d7f24a34e051389.d
+|   |       |       tracing_subscriber-4f4dc1dc397a9b91.d
+|   |       |       ucd_trie-346fc8eada0b9edc.d
+|   |       |       ucd_trie-aca0d1668d6b44a1.d
+|   |       |       ucd_trie-f36abfbd477a024b.d
+|   |       |       unicode_ident-189ca15178b593cc.d
+|   |       |       utf8parse-9e8796421878ae72.d
+|   |       |       walkdir-5287c324d577c4c1.d
+|   |       |       winapi_util-72bffe41912e1126.d
+|   |       |       windows_link-6bc18ff2973bedf7.d
+|   |       |       windows_sys-4fee3fdc9d6bb2f1.d
+|   |       |       windows_sys-84c425591fdfa559.d
+|   |       |       windows_sys-d64609fa06886b7c.d
+|   |       |       windows_sys-dfb2525682d5dd57.d
+|   |       |       windows_targets-9dd3e7c41f21dc7c.d
+|   |       |       windows_targets-f589dbe4f520c9da.d
+|   |       |       windows_x86_64_msvc-633322bc8705ee8e.d
+|   |       |       windows_x86_64_msvc-6bad1b1f1e8c9e3e.d
+|   |       |       
+|   |       +---examples
+|   |       \---incremental
+|   |           +---fuxyez_compiler-0b3qecw3bev8h
+|   |           |   |   s-hbh8uigal9-1c9bwvw.lock
+|   |           |   |   
+|   |           |   \---s-hbh8uigal9-1c9bwvw-3m4ykqkxuuiekh91783hse12s
+|   |           |           dep-graph.bin
+|   |           |           query-cache.bin
+|   |           |           work-products.bin
+|   |           |           
+|   |           +---fuxyez_compiler-0qjwnf9memrda
+|   |           |   |   s-hbh8tdxnjp-0a0smqg.lock
+|   |           |   |   s-hbh8vaykcw-15kh4uq.lock
+|   |           |   |   
+|   |           |   +---s-hbh8tdxnjp-0a0smqg-1q1ucoj34pe88ouoc1nqzfz51
+|   |           |   |       dep-graph.bin
+|   |           |   |       query-cache.bin
+|   |           |   |       work-products.bin
+|   |           |   |       
+|   |           |   \---s-hbh8vaykcw-15kh4uq-working
+|   |           |           dep-graph.bin
+|   |           |           dep-graph.part.bin
+|   |           |           query-cache.bin
+|   |           |           work-products.bin
+|   |           |           
+|   |           +---fuxyez_compiler-1od2l3sp4fk5u
+|   |           |   |   s-hbqt4zgiyy-191g168.lock
+|   |           |   |   
+|   |           |   \---s-hbqt4zgiyy-191g168-working
+|   |           |           dep-graph.part.bin
+|   |           |           
+|   |           +---fuxyez_compiler-3c4l7rxnocnn0
+|   |           |   |   s-hcmoh554io-01rm9pj.lock
+|   |           |   |   
+|   |           |   \---s-hcmoh554io-01rm9pj-working
+|   |           |           dep-graph.part.bin
+|   |           |           
+|   |           +---fuxyez_compiler-3g9k3mbnv8b75
+|   |           |   |   s-hbh8tiycxw-14728pi.lock
+|   |           |   |   
+|   |           |   \---s-hbh8tiycxw-14728pi-5nywvq9zbdhhjyomy11p99ii5
+|   |           |           06q604sgky7ztvssh2zos4q31.o
+|   |           |           08i8v7d84jvryg7xmwh3sv3hy.o
+|   |           |           0ajp0mfuz3oxhgu2ns5ba8wd4.o
+|   |           |           0eicmadgiyou2ah3yqw2lefdv.o
+|   |           |           0ouipnm3jq4goqz1hdoqf3brr.o
+|   |           |           0p0ngz7vu2ktv6toi0vkw53nl.o
+|   |           |           0rb0r6jkw8thznu3v9y7qbhfk.o
+|   |           |           0rzw3nntc3mw3uuplwx639zu2.o
+|   |           |           0tg8p4hblcxj6gq2gzyj1s8tw.o
+|   |           |           0tylowhj1g6jrtxb7y3jn5hm3.o
+|   |           |           10asvkxagc43zmwsvmo3aqbnk.o
+|   |           |           12qukmhfusj3m06k32y749fmb.o
+|   |           |           139dxz1ztz57sfkt5536be91h.o
+|   |           |           14agzxbgbczo9gejewdjsp4to.o
+|   |           |           154sgau5932b9jt2cv06av8fv.o
+|   |           |           1kb7vxvg87d199ajjg2w7fnc6.o
+|   |           |           1n9wbwgv6fpndkcabr5g722x2.o
+|   |           |           1qimwb61vodlne1elqq3v93ks.o
+|   |           |           1sfw0we25t489gq4ifyi0vjt1.o
+|   |           |           1solqim5ocey0zibwutad8epz.o
+|   |           |           1t1n23u408af8y183coxi9ng8.o
+|   |           |           1yqyl0bl2r4uoz6b4fqrd7v06.o
+|   |           |           28v3t035g9qz7rav6736l6p0a.o
+|   |           |           28vyv1j5t71k068jo1ii9rczu.o
+|   |           |           2ee3mhlf50w2qn1ab215nhnpy.o
+|   |           |           2q9xl0d98gqlkslt0r0nve964.o
+|   |           |           2sgq20j6iog1d14xcd3h6oslx.o
+|   |           |           2skuy89f4xikmh6f8k52yof3q.o
+|   |           |           2w497kdmyvl670vkqgft9fq9t.o
+|   |           |           330d3i0xrgfsd69v7yud9b0f9.o
+|   |           |           39owh8ljsv428slnxv0xwntn1.o
+|   |           |           3c6gl520xygu9zov06jquarcd.o
+|   |           |           3clwqwdbu4d552wd32fpxh976.o
+|   |           |           3pa1prqob85q1z1n61knnpthn.o
+|   |           |           3s7n1zqlre858nn74i6l5m5nd.o
+|   |           |           48j1rzhh69tn2x9d9t6o6bmvs.o
+|   |           |           4ea8wwm6dcsp60pj999qjun1z.o
+|   |           |           4oxne0dnibuz8mke3d9smr88a.o
+|   |           |           4pblp82hixkzvt77pz44ymcpn.o
+|   |           |           4svb34dxbtmc7qrqi3d87pqaw.o
+|   |           |           4y50ebzeb0qxkopwsv7ye4sby.o
+|   |           |           54t98rh4amitsdfmmc8lod8hr.o
+|   |           |           55cytuz2eomv4kpttbzyqo59c.o
+|   |           |           58xxazgv6c49tfedza78jvir2.o
+|   |           |           59d9bjw9v9go91iefknl4wbal.o
+|   |           |           5ba3a4aq36bg89l6nbu0x3w2z.o
+|   |           |           5eyfwzaow7im0fkpsz2b1oodk.o
+|   |           |           5iibo8vosr36z52rhi40t7x5j.o
+|   |           |           5l69677r4xw2tuxz26zqoh21z.o
+|   |           |           5m1fzoohv0f6prxm0lpjs3ycy.o
+|   |           |           5t424jlbkdm3whx8kwyfavefl.o
+|   |           |           5x2gu6cr2hg5t2y3plotdfpjv.o
+|   |           |           6009q8ciuk6pvb7uu2tgzeajo.o
+|   |           |           61gmxb28m6s538edon09jsxzj.o
+|   |           |           62xy6kdnaahm7nn0sxudz842r.o
+|   |           |           64pfp9acijlxuant1acnu1ket.o
+|   |           |           6isz70os90rcqn06o0tsgawbb.o
+|   |           |           6kf2a9sn8o9yxo42zlvrids9e.o
+|   |           |           6oxqy8ijdmbhxh91z3f5dqqvk.o
+|   |           |           6sg2y5cjajujhk66fint0331a.o
+|   |           |           6vbg9juqmv0auutk30b0lp01j.o
+|   |           |           6whhzwe4g4gaiqeuu3sab10e2.o
+|   |           |           71ey4i1x2y08b5y823xivnwg3.o
+|   |           |           737w1avvk8h4gbxjenpxurwyi.o
+|   |           |           7ae0wko5kojtlql1wwvyfmpac.o
+|   |           |           82ewierwu8mrhspug3zbgjaba.o
+|   |           |           860md7oj3xhzqt6g4asr3zcnr.o
+|   |           |           863u49rpi1pqjqjinc61gyiii.o
+|   |           |           8qm08ts0efhmqyp0sfc0usbh7.o
+|   |           |           8rcw75hmx2olq9gmhds6qi6u1.o
+|   |           |           8rxcntztvkel53ctb9p3htb8b.o
+|   |           |           8thh7mj2hmkxag84o54to9ejd.o
+|   |           |           8uzfjf9uk3ke1kgix3bkyk5e2.o
+|   |           |           8w0qlg1f7nnvv1sxpoaq6xbnj.o
+|   |           |           99kllbfdhp6g8hy5l37orwp1v.o
+|   |           |           9bepshe64zga20bhntrbfd5wb.o
+|   |           |           9fdu97hmf1hpx1m2ic6q3q53k.o
+|   |           |           9kwmf745v1l5gna9pqsfvxqr2.o
+|   |           |           9rhk6hwda84y8rv1yz6uxidcg.o
+|   |           |           a2np03s7kv7zkvxih9htqr20d.o
+|   |           |           actntbzolxt4t6rlcnwbiurlu.o
+|   |           |           ad47j974c95avmksd4o8e7gla.o
+|   |           |           afcv240wuohfmhcl9y5g6yrs0.o
+|   |           |           ajx0hkgj6x6g2rpuswh0dgks4.o
+|   |           |           as99rk187je9rz2rign3mxiar.o
+|   |           |           auedkrs1bcykm01jg9zbygdfi.o
+|   |           |           b2839g80u320zsfw4rdkoo1b0.o
+|   |           |           b5ndrmrkmyvb7o0f3vwxmmgx2.o
+|   |           |           bar7137oxngkz7oyunqhurels.o
+|   |           |           bc93pqw7bnq8f7flnm8qeuwf8.o
+|   |           |           bek8hxn5feg5lbt8k0hnejdic.o
+|   |           |           bldusa4ml1jzahsv45ic9b9av.o
+|   |           |           bwe2qhcoyxytv8xf7uilibh34.o
+|   |           |           bzppyfs5fmyciga6e4u99ora0.o
+|   |           |           c8expn6mkfwywrn4y9qe6niu9.o
+|   |           |           c8x1hucoahe87dsvyavm23o9b.o
+|   |           |           cfh62nfm3bbpoq4u2y8qx7do2.o
+|   |           |           ck5wp99oawy7e2f3ydf1n5asp.o
+|   |           |           ckrz0qgzpkcbhgq9ouu5ch8ag.o
+|   |           |           clitq7zo6wcz0lypksawb6h85.o
+|   |           |           cn0yitte7dvsi23s37pwzzc8h.o
+|   |           |           cqezuvr2y6bsxy44s4yrq56is.o
+|   |           |           crh93pcsq4iyc054cyz50acir.o
+|   |           |           crihscnlf1uv8hf6wd767qu2k.o
+|   |           |           crva7orpef49rk5gnzjm453dk.o
+|   |           |           cw5fj3rrph16o3d3uaqqhu5i1.o
+|   |           |           d3jhcb12xsvl2uosuvtamcpys.o
+|   |           |           d48m8maq1x3yksl0ln6a9d5ws.o
+|   |           |           d91u992khgbyx2zlfm76omtxg.o
+|   |           |           dep-graph.bin
+|   |           |           djs0c1m47u0zgl2a694gm6die.o
+|   |           |           dnnjepyamv1qb9orb92l78e1n.o
+|   |           |           dnslnylsdi4nxgj3uy3tiy3qy.o
+|   |           |           e2bxtz6zaijmky88poe9u3cr8.o
+|   |           |           eidps4hy6th047fnmu89f9yum.o
+|   |           |           ema3rozb55xjnm8vbykull8jy.o
+|   |           |           eq1ssjoe07133twxkrd3k1jul.o
+|   |           |           ewo9z5ke6blby4q76peylhxcm.o
+|   |           |           query-cache.bin
+|   |           |           work-products.bin
+|   |           |           
+|   |           \---fuxyez_compiler-3lot815avw2zo
+|   |               |   s-hbqo5dz6y7-1pk5ytm.lock
+|   |               |   
+|   |               \---s-hbqo5dz6y7-1pk5ytm-working
+|   |                       dep-graph.part.bin
+|   |                       
+|   \---yez_frontend
+|           grammar.pest
+|           main.rs
+|           
++---integrations
+|   |   README.md
+|   |   
+|   +---audry
+|   +---aurafs
+|   |       backend.rs
+|   |       mod.rs
+|   |       shard.rs
+|   |       
+|   +---global_voting
+|   +---ineffable_ledger
+|   +---opulence
+|   +---sentinel
+|   \---universal_access
++---stdlib
+|   |   README.md
+|   |   
+|   +---aurafs
+|   |       fuxyez_bindings.fux
+|   |       
+|   +---core
+|   |       lattice.fux
+|   |       spinon.fux
+|   |       
+|   +---io
+|   |       echo.fux
+|   |       
+|   \---oracle
++---tests
+|   |   aurafs_integration.fuxtest
+|   |   
+|   +---integration
+|   \---unit
++---tools
+|   |   README.md
+|   |   
+|   +---fuxyez-fmt
+|   +---fuxyez-lsp
+|   \---fuxyez-repl
++---yezl
+|   |   README.md
+|   |   
+|   +---cpp
+|   +---csharp
+|   +---elixir
+|   +---go
+|   +---java
+|   +---javascript
+|   +---python
+|   |       bridge.rs
+|   |       README.md
+|   |       
+|   +---rust
+|   |       bridge.rs
+|   |       README.md
+|   |       
+|   \---webassembly
+|           codegen.rs
+|           
+\---yezrt

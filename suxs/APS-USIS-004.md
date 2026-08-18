@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS USIS 004
+description: This Standard defines the SoulKey, the Bio‑Luminescent Continuity Artifact of the Universal Soul Identity System (USIS).
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑004.md
 SoulKey Continuity Artifact Standard
 Version 0.1.69 (Draft)
@@ -19,7 +63,7 @@ provenance
 
 multi‑device resonance
 
-SoulKey is the ICC‑anchored, SAGES‑aligned, AuraFS‑rooted artifact that ensures:
+SoulKey is the ICX‑anchored, SAGES‑aligned, AuraFS‑rooted artifact that ensures:
 
 One Soul → One Identity → One Continuity → One Vote
 
@@ -34,13 +78,13 @@ AUX‑USIS‑002 — BlissID Sovereign Identity Specification
 
 AUX‑USIS‑003 — SoulSync Presence & Continuity Protocol
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -53,16 +97,16 @@ GuardHash Provenance Lattice
 A physical, non‑invasive, Bio‑Luminescent Continuity Artifact that harmonizes with the wearer’s presence and anchors identity continuity.
 
 3.2 Continuity Artifact
-Any physical object that maintains ICC identity stability across transitions.
+Any physical object that maintains ICX identity stability across transitions.
 
 3.3 Bio‑Luminescent Substrate
 A safe, inert, symbolic luminescent medium that responds to presence, warmth, motion, and coherence.
 
 3.4 Resonance Signature
-The SoulKey’s unique continuity field, derived from ICC + SoulSync coupling.
+The SoulKey’s unique continuity field, derived from ICX + SoulSync coupling.
 
 3.5 Continuity Field
-The ICC identity scalar 
+The ICX identity scalar 
 Φ
 33
  expressed through physical resonance.
@@ -84,7 +128,7 @@ Color‑shifting resonance polymers
 
 Non‑invasive presence sensors
 
-4.2 Continuity Layer (ICC Anchor)
+4.2 Continuity Layer (ICX Anchor)
 Stores identity anchors
 
 Maintains 
@@ -175,7 +219,7 @@ verify presence via SoulSync
 
 verify sovereignty via BlissID
 
-maintain ICC invariants
+maintain ICX invariants
 
 6.3 Ethical Alignment
 SoulKey MUST enforce:

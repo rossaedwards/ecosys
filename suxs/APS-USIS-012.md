@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: [derive(Debug, Error)]
+description: AUX‑USIS‑012 — SoulKey Mandala Serialization Format (SKM / SKML)
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑012 — SoulKey Mandala Serialization Format (SKM / SKML)
 Canonical Specification + Rust Parser/Serializer (v1.0, Aurphyx Standard)
 The SoulKey Mandala is a 13‑fold, tridecagonal identity artifact.

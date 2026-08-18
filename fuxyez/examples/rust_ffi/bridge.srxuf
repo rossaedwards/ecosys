@@ -1,0 +1,11 @@
+[bridge]
+crate_path = "./rust_lib"
+link_type = "static"
+
+[types]
+i32 = "i32"
+u64 = "u64"
+
+[ffi]
+convention = "C"
+export_prefix = "fux_"

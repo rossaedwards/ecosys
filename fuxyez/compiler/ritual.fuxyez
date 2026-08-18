@@ -1,0 +1,80 @@
+//! ritual.fuxyez - The Empyrean Codex of Sovereign Rituals
+
+(::)
+
+# Macro for ignition ritual, reusable and parameterized
+macro ignite_flame(power) {
+    sigil ignite(power)
+    echo fire_event {
+        spinon burn_rate = power
+        glyph intensity: power
+    }
+}
+
+# Invoke macro with specific invocation
+ignite_flame("high")
+
+# Complex echo with nested rituals and pattern matching
+echo event_sunrise {
+    sigil shimmer(mist)
+    spinon fire_state = "smolder"
+    glyph brightness: "soft"
+
+    pattern wind {
+        "strong" => {
+            sigil howl(strength = "max")
+            spinon fire_state = "blaze"
+            glyph brightness: "extreme"
+        }
+
+        _ => {
+            sigil whisper(strength = "low")
+            spinon fire_state = "subtle"
+            glyph brightness: "minimal"
+        }
+    }
+}
+
+# Conditional flow with cascading elseifs
+if fire_state == "blaze" {
+    sigil blaze(power = "max")
+}
+else if fire_state == "smolder" {
+    sigil ember(power = "low")
+}
+else {
+    sigil ash(power = "none")
+}
+
+# Parallel and async blocks for concurrent rituals
+parallel {
+    async {
+        sigil rain(soft)
+    }
+    async {
+        sigil lightning(flash)
+    }
+    parallel {
+        sigil windgust(strong)
+    }
+}
+
+# Temporal control with named events and loops
+temporal every "hour" {
+    sigil chant(life)
+    glyph mood: "renewed"
+}
+
+temporal at "solstice" {
+    sigil sacrifice(spirit)
+}
+
+# Importing modular ritual libraries with namespaces and aliases
+import forestry::ancient_rituals
+use astral::glyph_lib as glyphs
+
+# Annotations and embedded documentation
+#critical "Handle with care - flames unpredictable"
+/// This ritual manages the ceremonial rising fire sequence
+
+(:::)

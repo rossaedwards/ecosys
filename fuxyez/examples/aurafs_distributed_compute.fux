@@ -1,0 +1,104 @@
+// Advanced AuraFS Example: Distributed Computation
+// Demonstrates fractal lattice distribution and parallel processing
+
+import aurafs
+
+sigil create_fractal_dataset {
+    echo "Building fractal dataset..."
+    
+    // Root lattice
+    let root = Lattice::new()
+    let root_id = root.weave("dataset_root")
+    
+    // Create child lattices (fractal branching)
+    for category in ["images", "audio", "text", "video"] {
+        let category_id = root.weave_child(root_id, category)
+        
+        // Create sub-lattices for each category
+        for i in 0..1000 {
+            let data = "{category}_item_{i}"
+            root.weave_child(category_id, data)
+        }
+    }
+    
+    echo "✓ Created fractal dataset"
+    echo "  Total nodes: {root.size()}"
+    echo "  Fractal depth: {root.depth()}"
+    
+    root
+}
+
+sigil distribute_to_aurafs(lattice: Lattice) -> String {
+    echo "Distributing lattice across AuraFS shards..."
+    
+    let shard_id = aurafs_persist(lattice)
+    
+    // Get shard statistics
+    let stats = shard_stats(shard_id)
+    
+    echo "✓ Distribution complete"
+    echo "  Shard ID: {shard_id}"
+    echo "  Total size: {stats.size} bytes"
+    echo "  Replicas: {stats.replicas}"
+    
+    shard_id
+}
+
+sigil parallel_query {
+    echo "Running parallel queries across shards..."
+    
+    // Query for specific categories
+    let queries = [
+        "lattice_id:*images*",
+        "lattice_id:*audio*",
+        "lattice_id:*text*"
+    ]
+    
+    for query in queries {
+        let results = aurafs_query(query)
+        echo "  Query '{query}': {results.len()} results"
+    }
+}
+
+sigil demonstrate_replication {
+    echo "Demonstrating dynamic replication..."
+    
+    let lattice = Lattice::new()
+    lattice.weave("critical_data")
+    
+    let shard_id = aurafs_persist(lattice)
+    
+    // Increase replication for critical data
+    echo "  Increasing replication factor to 5..."
+    aurafs_replicate(shard_id, 5)
+    
+    let stats = shard_stats(shard_id)
+    echo "  ✓ Now replicated across {stats.replicas} nodes"
+}
+
+ritual main {
+    echo "╔═══════════════════════════════════════════╗"
+    echo "║  AuraFS Distributed Compute Example      ║"
+    echo "╚═══════════════════════════════════════════╝"
+    echo ""
+    
+    // Step 1: Create fractal dataset
+    let dataset = collapse create_fractal_dataset
+    echo ""
+    
+    // Step 2: Distribute across AuraFS
+    let shard_id = collapse distribute_to_aurafs(dataset)
+    echo ""
+    
+    // Step 3: Run parallel queries
+    collapse parallel_query
+    echo ""
+    
+    // Step 4: Demonstrate replication
+    collapse demonstrate_replication
+    echo ""
+    
+    echo "╔═══════════════════════════════════════════╗"
+    echo "║  Distributed Compute Complete!            ║"
+    echo "╚═══════════════════════════════════════════╝"
+}

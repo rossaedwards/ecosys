@@ -1,0 +1,75 @@
+// Oracle-based AuraFS Queries
+// Demonstrates meta-programming with AuraFS
+
+oracle AuraFsNetwork {
+    source: "aurafs://cluster"
+    cache: true
+    ttl: 3600
+}
+
+// Schema for lattice metadata
+schema LatticeMetadata {
+    entity Lattice {
+        id: String,
+        size: i64,
+        depth: i32,
+        created_at: i64
+    }
+}
+
+// Oracle query for recent lattices
+query FindRecentLattices(hours_ago: i32) -> [Lattice] {
+    divine AuraFsNetwork {
+        filter: "created_at > {timestamp() - (hours_ago * 3600)}"
+        order_by: "created_at DESC"
+        limit: 100
+    }
+}
+
+// Oracle query for large lattices
+query FindLargeLattices(min_size: i64) -> [Lattice] {
+    divine AuraFsNetwork {
+        filter: "size > {min_size}"
+        order_by: "size DESC"
+    }
+}
+
+// Oracle query by pattern
+query SearchByPattern(pattern: String) -> [Lattice] {
+    divine AuraFsNetwork {
+        filter: "id LIKE '%{pattern}%'"
+        limit: 50
+    }
+}
+
+ritual main {
+    echo "═══════════════════════════════════════════"
+    echo "  AuraFS Oracle Query Examples"
+    echo "═══════════════════════════════════════════"
+    echo ""
+    
+    // Query 1: Recent lattices
+    echo "[Query 1] Lattices created in last 24 hours:"
+    let recent = FindRecentLattices(24)
+    echo "  Found {recent.len()} lattices"
+    for lattice in recent {
+        echo "    - {lattice.id} ({lattice.size()} nodes)"
+    }
+    echo ""
+    
+    // Query 2: Large lattices
+    echo "[Query 2] Lattices > 1000 nodes:"
+    let large = FindLargeLattices(1000)
+    echo "  Found {large.len()} large lattices"
+    echo ""
+    
+    // Query 3: Pattern search
+    echo "[Query 3] Searching for 'ml_dataset':"
+    let datasets = SearchByPattern("ml_dataset")
+    echo "  Found {datasets.len()} matching lattices"
+    echo ""
+    
+    echo "═══════════════════════════════════════════"
+    echo "  Oracle Queries Complete!"
+    echo "═══════════════════════════════════════════"
+}

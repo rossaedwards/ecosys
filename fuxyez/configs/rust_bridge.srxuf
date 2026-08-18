@@ -1,0 +1,29 @@
+# Rust FFI Bridge Configuration Template
+# Use this when creating .fuxrs files that bridge to Rust code
+
+[bridge]
+crate_path = "../rust_lib"
+link_type = "static"
+build_mode = "release"
+
+[types]
+Spinon = "Box<dyn Any>"
+Thread = "std::thread::JoinHandle<()>"
+Lattice = "Vec<Spinon>"
+Oracle = "fn() -> Result<String, Error>"
+
+[ffi]
+convention = "C"
+mangling = false
+export_prefix = "fux_"
+
+[safety]
+enable_unsafe = false
+verify_alignment = true
+check_null_pointers = true
+validate_lifetimes = true
+
+[optimization]
+lto = true
+codegen_units = 1
+opt_level = 3

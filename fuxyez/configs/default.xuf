@@ -1,0 +1,28 @@
+# Default Fuxyez Configuration
+# This config is auto-loaded when compiling .fux files without a mirrored .xuf
+
+runtime:
+  coherence: stable              # stable | chaotic | quantum
+  collapse_mode: deterministic   # deterministic | probabilistic
+  thread_pool_size: 8
+  max_recursion_depth: 1000
+
+glyphs:
+  default_visibility: private    # private | public | resonant
+  enable_living_glyphs: true
+  allow_dynamic_sigils: true
+
+oracle:
+  enable_prophecy_cache: true
+  max_cache_depth: 100
+  divination_timeout_ms: 5000
+
+security:
+  enable_sentinel_guards: true
+  allow_unsafe_collapse: false
+  verify_lattice_integrity: true
+
+optimization:
+  level: 2                       # 0=none, 1=basic, 2=aggressive, 3=quantum
+  inline_threshold: 100
+  unroll_loops: true

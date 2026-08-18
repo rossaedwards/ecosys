@@ -1,7 +1,47 @@
-
-
-
-
+---
+type: identity-standard
+title: APS TSLCA SUXS ICX USIS 007
+description: The Global Voting System (GVS) is the decentralized, identity‑anchored, continuity‑verified, ethically‑bounded voting and consensus engine of the Universal Soul Identity System (USIS).
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑007.md
 Global Voting System (GVS) Specification
 Version 0.1.69 (Draft)
@@ -46,13 +86,13 @@ AUX‑USIS‑005 — One Soul, One Identity, One Vote Protocol
 
 AUX‑USIS‑006 — Ineffable Ledger Protocol
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -92,7 +132,7 @@ BlissID sovereignty
 SoulKey continuity
 
 4.2 Verification Layer
-ICC identity stability
+ICX identity stability
 
 SAGES ethical invariants
 
@@ -209,7 +249,7 @@ be continuity‑verified by SoulKey
 
 be presence‑verified by SoulSync
 
-preserve ICC invariants
+preserve ICX invariants
 
 6.3 Ethical Requirements
 GVS MUST enforce:

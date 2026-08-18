@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS TSLCA SUXS ICX USIS 010
+description: AUX‑USIS‑010 — GuardHash Provenance Lattice Standard
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑010 — GuardHash Provenance Lattice Standard
 Version 0.1 (Draft)  
 Aurphyx Primordial Standards (APS)

@@ -1,0 +1,17 @@
+[package]
+name = "fuxyez_compiler"
+version = "0.1.0"
+edition = "2021"
+authors = ["Aurphyx Engineering"]
+
+[dependencies]
+pest = "2.7"
+pest_derive = "2.7"
+
+[[bin]]
+name = "fuxyez"
+path = "src/main.rs"
+
+[lib]
+name = "fuxyez_compiler"
+path = "src/lib.rs"

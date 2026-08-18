@@ -1,0 +1,49 @@
+[package]
+name = "fuxyez"
+version = "0.1.0"
+edition = "2025"
+authors = ["Aurphyx Engineering <dev@aurphyx.org>"]
+description = "The Fuxyez Programming Language - Where code collapses into reality"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/aurphyx/fuxyez"
+homepage = "https://fuxyez.dev"
+keywords = ["compiler", "language", "quantum", "meta", "ritual"]
+
+[workspace]
+members = [
+    "fuxyez_compiler",
+    "stdlib",
+    "tools/fuxyez-fmt",
+    "tools/fuxyez-lsp",
+    "tools/fuxyez-repl"
+]
+
+[dependencies]
+# Core dependencies for the language runtime
+
+[dev-dependencies]
+# Testing and development tools
+
+[features]
+default = ["std", "oracle", "ffi"]
+std = []           # Standard library
+oracle = []        # Oracle/prophecy system
+ffi = []           # Foreign function interface
+quantum = []       # Quantum collapse modes
+sages = []      #Symbiotic AI Guardians of Existence Security - sages_archivus_glyphs sages_archivus_storage
+
+[extensions]
+# File extension registry
+pure = { ext = ".fux", grammar = "fux_frontend/grammar.pest" }
+rust = { ext = ".fuxrs", grammar = "fux_frontend/grammar.pest", bridge = "rust" }
+python = { ext = ".fuxpy", grammar = "fux_frontend/grammar.pest", bridge = "python" }
+js = { ext = ".fuxjs", grammar = "fux_frontend/grammar.pest", bridge = "javascript" }
+meta = { ext = ".yez", grammar = "yez_frontend/grammar.pest" }
+
+[mirrors]
+# Mirrored configuration file patterns
+".fux" = ".xuf"
+".fuxrs" = ".srxuf"
+".fuxpy" = ".ypxuf"
+".fuxjs" = ".sjxuf"
+".yez" = ".zey"

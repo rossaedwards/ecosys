@@ -1,0 +1,68 @@
+// Basic AuraFS Integration Example
+// Demonstrates lattice persistence and retrieval
+
+import aurafs
+
+sigil create_persistent_lattice {
+    echo "Creating lattice..."
+    
+    // Create a lattice with numerical data
+    let lattice = Lattice::new()
+    
+    for i in 0..100 {
+        lattice.weave(i * i)  // Store squares
+    }
+    
+    echo "Lattice created with {lattice.size()} nodes"
+    
+    // Persist to AuraFS
+    echo "Persisting to AuraFS..."
+    let shard_id = aurafs_persist(lattice)
+    
+    echo "✓ Lattice persisted!"
+    echo "  Shard ID: {shard_id}"
+    echo "  Depth: {lattice.depth()}"
+    
+    shard_id
+}
+
+sigil load_and_verify(shard_id: String) {
+    echo "Loading lattice from AuraFS..."
+    
+    let loaded = aurafs_load(shard_id)
+    
+    echo "✓ Lattice loaded!"
+    echo "  Size: {loaded.size()}"
+    echo "  Depth: {loaded.depth()}"
+    
+    // Verify integrity
+    let valid = shard_verify(shard_id)
+    if valid {
+        echo "✓ Shard integrity verified"
+    } else {
+        echo "✗ Shard integrity check failed"
+    }
+    
+    // Collapse to get value
+    let value = loaded.collapse()
+    echo "  Collapsed value: {value}"
+}
+
+ritual main {
+    echo "═══════════════════════════════════════"
+    echo "  AuraFS Basic Integration Example"
+    echo "═══════════════════════════════════════"
+    echo ""
+    
+    // Create and persist
+    let shard_id = collapse create_persistent_lattice
+    echo ""
+    
+    // Load and verify
+    collapse load_and_verify(shard_id)
+    echo ""
+    
+    echo "═══════════════════════════════════════"
+    echo "  Example Complete!"
+    echo "═══════════════════════════════════════"
+}

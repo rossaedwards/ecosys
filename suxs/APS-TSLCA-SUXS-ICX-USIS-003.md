@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS‑SUXS-USIS‑003
+description: The SoulSync Presence & Continuity Protocol defines the liveness, presence, coherence, and multi‑device continuity layer of the Universal Soul Identity System (USIS).
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## ** APS‑SUXS-USIS‑003 **
 ## ** Universal Soul Identity Standards - BlissID Sovereign Identity Specification **
 ## ** Version:  0.1 (Draft) **
@@ -22,7 +66,7 @@ ethically grounded
 
 …across all devices, contexts, substrates, and embodiments.
 
-SoulSync is the ICC continuity engine, the SIC presence field, and the SCC coherence stabilizer for:
+SoulSync is the ICX continuity engine, the SIX presence field, and the SCX coherence stabilizer for:
 
 SoulKey (Bio‑Luminescent Continuity Key)
 
@@ -47,13 +91,13 @@ AUX‑USIS‑001 — Universal Soul Identity System Standard
 
 AUX‑USIS‑002 — BlissID Sovereign Identity Specification
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -66,10 +110,10 @@ GuardHash Provenance Lattice
 The presence engine of USIS — a multi‑device, multi‑modal continuity field that verifies liveness, coherence, and identity stability.
 
 3.2 Presence Field
-A non‑invasive, reversible, continuity‑preserving field derived from SIC + ICC coupling.
+A non‑invasive, reversible, continuity‑preserving field derived from SIX + ICX coupling.
 
 3.3 Continuity Signal
-The ICC‑anchored identity scalar 
+The ICX‑anchored identity scalar 
 Φ
 33
  modulated by presence, rhythm, and coherence.
@@ -112,7 +156,7 @@ proximity
 coherence
 
 4.2 Continuity Layer
-Maintains ICC identity stability across:
+Maintains ICX identity stability across:
 
 devices
 
@@ -199,7 +243,7 @@ Where:
 
 𝜔
 𝑖
- are USAIC fusion weights
+ are SUXS-IFO fusion weights
 
 𝑅
 device
@@ -250,7 +294,7 @@ maintain a unified continuity field
 
 ensure reversible transitions
 
-preserve ICC invariants
+preserve ICX invariants
 
 6.4 Non‑Invasive Operation
 SoulSync MUST NOT:

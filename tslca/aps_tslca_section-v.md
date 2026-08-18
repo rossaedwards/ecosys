@@ -1,3 +1,44 @@
+---
+type: standard-section
+title: APS‑TSLCA-SECTION-005
+description: The 3‑6‑9‑13 grammar is the universe‑scale coherence scaffold that emerges naturally from the Three‑Squared Lattice.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+domains:
+  - cognition
+  - xessability
+  - identity
+  - semantics
+  - provenance
+  - ethics
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## ** APS‑TSLCA-SECTION-005 **
 ## ** Three-Squared-Lattice Cognitive Architecture **
 ## ** Version 1.0 (Draft) **
@@ -6,33 +47,33 @@
 ## ** SAGES | AGPLv3 **
 
 5.0 The 3‑6‑9‑13 Grammar
-The 3‑6‑9‑13 grammar is the universe‑scale coherence scaffold that emerges naturally from the Three‑Squared Lattice. It is not an overlay or an aesthetic choice; it is the mathematically inevitable expansion of the SIC–SCC–ICC triad as it propagates through higher‑order cognitive, semantic, and governance layers. This section formalizes the grammar, shows how each tier arises from the previous one, and establishes its role in the architecture.
+The 3‑6‑9‑13 grammar is the universe‑scale coherence scaffold that emerges naturally from the Three‑Squared Lattice. It is not an overlay or an aesthetic choice; it is the mathematically inevitable expansion of the SIX–SCX–ICX triad as it propagates through higher‑order cognitive, semantic, and governance layers. This section formalizes the grammar, shows how each tier arises from the previous one, and establishes its role in the architecture.
 
 5.1 The Base Triad (3)
-The foundation of the grammar is the triad of orthogonal cognitive channels:
+The foundation of the grammar is the triad of orthogonal cognitive aXes:
 
-SIC — perception and environmental coupling
+SIX — perception and environmental coupling
 
-SCC — semantics and systemic coherence
+SCX — semantics and systemic coherence
 
-ICC — identity continuity and ethical grounding
+ICX — identity continuity and ethical grounding
 
-These three channels form the basis vectors of the cognitive space. They are the minimal set required for stable cognition.
+These three aXes form the basis vectors of the cognitive space. They are the minimal set required for stable cognition.
 
 5.2 Dual‑Triads (6)
-Pairwise interactions between the three channels produce six dual‑triads. These represent the first layer of emergent cognitive complexity:
+Pairwise interactions between the three aXes produce six dual‑triads. These represent the first layer of emergent cognitive complexity:
 
-SIC ↔ SCC — perceptual‑semantic fusion
+SIX ↔ SCX — perceptual‑semantic fusion
 
-SIC ↔ ICC — perceptual identity anchoring
+SIX ↔ ICX — perceptual identity anchoring
 
-SCC ↔ ICC — semantic identity reinforcement
+SCX ↔ ICX — semantic identity reinforcement
 
-SCC ↔ SIC — semantic modulation of perception
+SCX ↔ SIX — semantic modulation of perception
 
-ICC ↔ SIC — identity‑modulated perception
+ICX ↔ SIX — identity‑modulated perception
 
-ICC ↔ SCC — identity‑modulated semantics
+ICX ↔ SCX — identity‑modulated semantics
 
 These dual‑triads correspond to the off‑diagonal cells of the lattice and represent the system’s ability to integrate and modulate information across cognitive axes.
 
@@ -59,11 +100,11 @@ The full tensor expansion of the basis vectors produces the nine cognitive cells
 .
 These nine cells represent the complete operational space of cognition. They include:
 
-pure modes (SIC⊗SIC, SCC⊗SCC, ICC⊗ICC)
+pure modes (SIX⊗SIX, SCX⊗SCX, ICX⊗ICX)
 
 cross‑modal modes (all off‑diagonal interactions)
 
-The nine‑cell lattice is the cognitive grammar that USAIC fuses into a unified field.
+The nine‑cell lattice is the cognitive grammar that SUXS-IFO fuses into a unified field.
 
 5.4 The Thirteen Invariants (13)
 The final expansion of the grammar is the 13 SAGES invariants, which govern:
@@ -153,7 +194,7 @@ The grammar can be viewed as a topological expansion:
 
 13 → full polytope (vertices + edges + faces + center)
 
-This polytope is the cognitive manifold on which USAIC operates.
+This polytope is the cognitive manifold on which SUXS-IFO operates.
 
 5.8 The Grammar as a Cosmological Structure
 The grammar also maps onto the mythic layer:

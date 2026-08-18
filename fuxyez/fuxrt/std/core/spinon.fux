@@ -1,0 +1,14 @@
+# Pure Fuxyez Topological Spinon (Thesis §4.1)
+sigil neglecton_spinon(charge: f64) -> Spinon {
+    native Spinon::neglecton(charge)
+}
+
+sigil braid_spinons(spinon1: Spinon, spinon2: Spinon) {
+    native spinon1.braid(spinon2, true)
+}
+
+ritual quantum_bell_pair {
+    let s1 = neglecton_spinon(1.0);
+    let s2 = neglecton_spinon(-1.0);
+    collapse braid_spinons(s1, s2)
+}

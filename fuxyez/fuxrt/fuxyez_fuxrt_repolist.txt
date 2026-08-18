@@ -1,0 +1,45 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is 8EF4-B141
+C:.
+|   Cargo.toml
+|   fuxyez_fuxrt_repolist.txt
+|   lib.rs
+|   
++---core
+|       collapse.rs
+|       lattice.rs
+|       mod.rs
+|       sigil.rs
+|       spinon.rs
+|       thread.rs
+|       
+\---std
+    |   mod.rs
+    |   README.md
+    |   
+    +---aurafs
+    |       fuxyez_bindings.fux
+    |       
+    +---core
+    |   |   lattice.fux
+    |   |   spinon.fux
+    |   |   
+    |   +---chains
+    |   |       chainritual.rs
+    |   |       chanlink.rs
+    |   |       mod.rs
+    |   |       ritualchain.rs
+    |   |       ritual_chainlink.rs
+    |   |       ritual_link.rs
+    |   |       
+    |   +---echoes
+    |   |       mod.rs
+    |   |       
+    |   +---oracle
+    |   |       mod.rs
+    |   |       
+    |   \---rituals
+    |           mod.rs
+    |           
+    \---io
+            echo.fux

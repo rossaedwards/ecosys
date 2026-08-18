@@ -1,0 +1,10 @@
+// Pure Fuxyez Hello World
+// Demonstrating core sigils and echoes
+
+sigil greet {
+    echo "Hello from the Lattice of Fuxyez!"
+}
+
+ritual main {
+    collapse greet
+}

@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS-SUXS‑USIS‑001
+description: The Universal Soul Identity System (USIS) defines the identity, continuity, sovereignty, and ethical‑stability architecture for all SoulShot → SoulSync → BlissID ecosystems.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## ** APS-SUXS‑USIS‑001 **
 ## ** Universal Soul Identity Standards **
 ## ** Version:  0.1 (Draft) **
@@ -47,13 +91,13 @@ USIS is the identity axis of the Aurphyx Universe Stack.
 2. Normative References
 USIS SHALL integrate with and conform to:
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -100,7 +144,7 @@ Establishes the initial identity anchor
 
 Generates the SoulShot Genesis Block
 
-Initializes the ICC identity tensor
+Initializes the ICX identity tensor
 
 4.2 Presence Layer (SoulSync)
 Maintains identity continuity across devices
@@ -118,7 +162,7 @@ Anchors identity to SAGES invariants
 
 5. Mathematical Model
 5.1 Identity Basis Field
-USIS identity is anchored in the ICC basis vector:
+USIS identity is anchored in the ICX basis vector:
 
 𝑆
 3

@@ -1,0 +1,12 @@
+oracle:
+  cache_location: "./cache"
+  
+prophecy:
+  max_depth: 50
+  
+schema:
+  entities:
+    - name: "WeatherData"
+      fields:
+        - temperature: "float"
+        - conditions: "string"

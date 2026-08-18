@@ -18,7 +18,8 @@ domains:
   - semantics
   - provenance
   - ethics
-  - systems-governance
+  - systems
+  - governance
 nodes:
   - SIX⊗SIX
   - SIX⊗SCX
@@ -37,7 +38,8 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - Harmonic Integrity Field
+  - Equilibrium Manifold
 ---
 
 ## ** APS‑TSLCA-SECTION-ABSTRACT-INTRO **

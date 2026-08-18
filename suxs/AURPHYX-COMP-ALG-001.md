@@ -1,3 +1,44 @@
+---
+type: theory-standard
+title: AURPHYX COMP ALG 001
+description: This document provides the rigorous mathematical foundations underlying AuraFS's physics-informed distributed storage architecture.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+domains:
+  - cognition
+  - xessability
+  - identity
+  - semantics
+  - provenance
+  - ethics
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 Algorithm Proofs & Mathematical Foundations
 AuraFS Compliance Documentation
 Document ID: AURPHYX-COMP-ALG-001
@@ -1268,7 +1309,7 @@ k
 k
 ​
  ,ρ})
-localized eigenstates reduce the effective coupling to decoherence channels 
+localized eigenstates reduce the effective coupling to decoherence aXes 
 𝐿
 𝑘
 L 

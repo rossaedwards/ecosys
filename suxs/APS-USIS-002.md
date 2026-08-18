@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS‑USIS‑001
+description: This Standard defines BlissID, the sovereign identity signature of the Universal Soul Identity System (USIS).
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## ** APS‑USIS‑001 **
 ## ** Universal Soul Identity Standards - BlissID Sovereign Identity Specification **
 ## ** Version:  0.1 (Draft) **
@@ -24,20 +68,20 @@ AuraFS
 
 SoulSync multi‑device presence field
 
-BlissID is the ICC identity scalar that binds identity to continuity, ethics, and provenance.
+BlissID is the ICX identity scalar that binds identity to continuity, ethics, and provenance.
 
 2. Normative References
 BlissID SHALL conform to:
 
 AUX‑USIS‑001 — Universal Soul Identity System Standard
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -49,13 +93,13 @@ SoulShot Genesis Protocol
 
 3. Definitions
 3.1 BlissID
-A sovereign, non‑transferable, post‑quantum identity signature derived from SoulShot, SoulSync, and ICC continuity fields.
+A sovereign, non‑transferable, post‑quantum identity signature derived from SoulShot, SoulSync, and ICX continuity fields.
 
 3.2 Sovereign Identity
 Identity that is self‑owned, self‑anchored, and self‑verifying, independent of institutions or intermediaries.
 
 3.3 Continuity Signature
-The ICC‑derived identity scalar 
+The ICX‑derived identity scalar 
 Φ
 33
  that ensures identity remains stable across time and context.
@@ -74,14 +118,14 @@ Generates the SoulShot Genesis Block
 
 Establishes the initial identity anchor
 
-Seeds the ICC identity tensor
+Seeds the ICX identity tensor
 
 4.2 Continuity Layer (SoulSync)
 Ensures presence, liveness, and coherence
 
 Harmonizes identity across devices
 
-Maintains ICC continuity invariants
+Maintains ICX continuity invariants
 
 4.3 Sovereignty Layer (BlissID)
 Produces the sovereign identity signature
@@ -92,7 +136,7 @@ Enables One Soul → One Identity → One Vote
 
 5. Mathematical Model
 5.1 Identity Scalar
-BlissID is derived from the ICC identity scalar:
+BlissID is derived from the ICX identity scalar:
 
 Φ
 33
@@ -158,7 +202,7 @@ be unique and non‑transferable
 
 be derived from SoulShot + SoulSync
 
-be anchored to ICC continuity
+be anchored to ICX continuity
 
 be cryptographically sovereign
 

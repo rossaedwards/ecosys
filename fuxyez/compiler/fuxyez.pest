@@ -1,0 +1,87 @@
+WHITESPACE     = _{ " " | "\t" | "\r" | "\n" }
+COMMENT        = _{ "#" ~ (!"\n" ~ ANY)* }
+ritual         = { statement* }
+statement      = _{
+    annotated
+    | sigil
+    | echo
+    | oracle
+    | spinon
+    | glyph
+    | import
+    | condition
+    | logic
+    | pattern_match
+    | modifier
+    | async_block
+    | parallel_block
+    | temporal
+    | ritual_block
+    | error_diag
+    | doc_comment
+}
+
+sigil          = { "sigil" ~ ident ~ param_list? ~ context_block? }
+echo           = { "echo" ~ event ~ block }
+oracle         = { "oracle" ~ ident ~ ("->" ~ ident)? ~ context_block? }
+spinon         = { "spinon" ~ ident ~ "=" ~ expr }
+glyph          = { "glyph" ~ ident ~ ":" ~ expr }
+
+import         = { "import" ~ import_path }
+import_path    = @{ ident ~ ("::" ~ ident)* }
+
+condition      = { if_else | match_block }
+if_else        = { "if" ~ expr_or_block ~ ("else" ~ expr_or_block)? }
+match_block    = { "match" ~ expr ~ "{" ~ (pattern_arm)* ~ "}" }
+pattern_arm    = { pattern ~ "=>" ~ block }
+
+logic          = { logical_and | logical_or | logical_not }
+logical_and    = { expr_or_block ~ "and" ~ expr_or_block }
+logical_or     = { expr_or_block ~ "or" ~ expr_or_block }
+logical_not    = { "not" ~ expr_or_block }
+
+pattern_match  = { "pattern" ~ expr ~ "{" ~ (pattern_arm)* ~ "}" }
+
+modifier       = { modifier_chain }
+modifier_chain = { single_modifier ~ ( "|" ~ single_modifier )* }
+single_modifier= { "mutate" | "amplify" | "invert" | "shield" | "custom" ~ ident }
+
+async_block    = { "async" ~ block }
+parallel_block = { "parallel" ~ block }
+temporal       = { ("at" | "every" | "after" | "before") ~ expr ~ block }
+
+annotated      = { annotation+ ~ statement }
+annotation     = { "#" ~ ident ~ ("(" ~ expr_list ~ ")")? }
+
+error_diag     = { "error" ~ "(" ~ literal ~ ("," ~ expr)? ~ ")" }
+doc_comment    = { "///" ~ (!"\n" ~ ANY)* }
+
+ritual_block   = { "(::)" ~ statement* ~ "(:::)"} // open/close magic
+block          = { "{" ~ statement* ~ "}" }
+context_block  = { "[[" ~ context_stmt* ~ "]]" }
+context_stmt   = { statement | context_kv }
+context_kv     = { ident ~ "=" ~ expr }
+
+event          = { ident }
+
+expr_or_block  = { expr | block }
+expr           = _{ literal | ident | function_call | grouped }
+expr_list      = { expr ~ ("," ~ expr)* }
+
+grouped        = { "(" ~ expr ~ ")" }
+function_call  = { ident ~ "(" ~ expr_list? ~ ")" }
+
+pattern        = { "_" | literal | ident | type_pattern }
+type_pattern   = { ident ~ ":" ~ type_name }
+type_name      = @{ ident }
+
+param_list     = { "(" ~ (ident ~ ("," ~ ident)*)? ~ ")" }
+
+ident          = @{ (ASCII_ALPHA | "_" ) ~ (ASCII_ALPHANUMERIC | "_")* }
+
+literal        = { raw_string | string | char | number | boolean }
+string         = { "\"" ~ ( "\\\"" | !"\"" ~ ANY )* ~ "\"" }
+raw_string     = { "r\"" ~ ( !"\"" ~ ANY )* ~ "\"" }
+char           = { "'" ~ ( "\\'" | !"'" ~ ANY ) ~ "'" }
+number         = { "-"? ~ ASCII_DIGIT+ ~ ("." ~ ASCII_DIGIT+)? }
+boolean        = { "true" | "false" }

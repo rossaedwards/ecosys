@@ -1,0 +1,89 @@
+// AuraFS Integration Tests
+
+import aurafs
+import assert
+
+test "lattice_persistence" {
+    // Create lattice
+    let lattice = Lattice::new()
+    for i in 0..10 {
+        lattice.weave(i)
+    }
+    
+    // Persist
+    let shard_id = aurafs_persist(lattice)
+    assert::not_empty(shard_id)
+    
+    // Load
+    let loaded = aurafs_load(shard_id)
+    assert::equal(loaded.size(), 10)
+    
+    echo "✓ Lattice persistence test passed"
+}
+
+test "shard_verification" {
+    let lattice = Lattice::new()
+    lattice.weave("test_data")
+    
+    let shard_id = aurafs_persist(lattice)
+    let valid = shard_verify(shard_id)
+    
+    assert::true(valid)
+    echo "✓ Shard verification test passed"
+}
+
+test "fractal_structure_preservation" {
+    let root = Lattice::new()
+    let root_id = root.weave("root")
+    
+    for i in 0..5 {
+        let child_id = root.weave_child(root_id, "child_{i}")
+        root.weave_child(child_id, "grandchild")
+    }
+    
+    let original_depth = root.depth()
+    
+    // Persist and reload
+    let shard_id = aurafs_persist(root)
+    let loaded = aurafs_load(shard_id)
+    
+    assert::equal(loaded.depth(), original_depth)
+    assert::equal(loaded.size(), root.size())
+    
+    echo "✓ Fractal structure preservation test passed"
+}
+
+test "concurrent_access" {
+    let lattice = Lattice::new()
+    lattice.weave("shared_data")
+    
+    let shard_id = aurafs_persist(lattice)
+    
+    // Simulate concurrent loads
+    thread::spawn {
+        let loaded1 = aurafs_load(shard_id)
+        assert::not_null(loaded1)
+    }
+    
+    thread::spawn {
+        let loaded2 = aurafs_load(shard_id)
+        assert::not_null(loaded2)
+    }
+    
+    thread::join_all()
+    
+    echo "✓ Concurrent access test passed"
+}
+
+ritual main {
+    echo "Running AuraFS Integration Tests..."
+    echo ""
+    
+    run_test("lattice_persistence")
+    run_test("shard_verification")
+    run_test("fractal_structure_preservation")
+    run_test("concurrent_access")
+    
+    echo ""
+    echo "All tests passed! ✓"
+}

@@ -1,0 +1,11 @@
+# Configuration for hello_world/main.fux
+
+runtime:
+  coherence: stable
+  collapse_mode: deterministic
+
+glyphs:
+  default_visibility: public
+
+optimization:
+  level: 1

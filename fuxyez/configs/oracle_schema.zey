@@ -1,0 +1,31 @@
+# Oracle Schema and Prophecy Cache Configuration
+# For .yez meta-scripts
+
+oracle:
+  cache_location: "./oracle_cache"
+  max_cache_size_mb: 500
+  cache_ttl_seconds: 3600
+  
+prophecy:
+  max_depth: 100
+  timeout_ms: 5000
+  allow_recursive_divination: true
+  
+schema:
+  version: "1.0"
+  entities:
+    - name: "weather"
+      fields:
+        - temperature: "float"
+        - conditions: "string"
+        - forecast: "array<string>"
+    - name: "market"
+      fields:
+        - symbol: "string"
+        - price: "float"
+        - trend: "enum[up, down, stable]"
+
+query_rules:
+  max_results: 1000
+  pagination: true
+  default_ordering: "timestamp_desc"

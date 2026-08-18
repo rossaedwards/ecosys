@@ -1,0 +1,14 @@
+// Core lattice operations
+// Fundamental data structure operations
+
+sigil lattice_create {
+    // Create new lattice
+}
+
+sigil lattice_weave {
+    // Weave elements into lattice
+}
+
+sigil lattice_collapse {
+    // Collapse lattice into value
+}

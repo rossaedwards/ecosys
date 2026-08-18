@@ -1,0 +1,14 @@
+// Spinon primitives
+// Quantum quasiparticle data carriers
+
+sigil spinon_create {
+    // Create new spinon
+}
+
+sigil spinon_entangle {
+    // Entangle spinons
+}
+
+sigil spinon_measure {
+    // Measure spinon state
+}

@@ -1,3 +1,44 @@
+---
+type: standard-reference
+title: APS‑TSLCA-REFERENCES-001
+description: The references section is structured to match the conventions of formal scientific papers, particularly those submitted to arXiv in physics, mathematics, and computer science.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+domains:
+  - cognition
+  - xessability
+  - identity
+  - semantics
+  - provenance
+  - ethics
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## ** APS‑TSLCA-REFERENCES-001 **
 ## ** Three-Squared-Lattice Cognitive Architecture **
 ## ** Version 1.0 (Draft) **
@@ -91,10 +132,10 @@ These internal documents are part of the Aurphyx civilization‑scale architectu
 - *AuraFS: A Topological Filesystem for Proprioceptive Computation*
 - *SAGES: The 13‑Invariant Governance Field*
 - *Audry ABAS v1.0: Bicameral Synthetic Cognition*
-- *AUX‑SIC‑001: Symbiotic Integration Channel Standard*
-- *AUX‑SCC‑001: Systemic Coherence Channel Standard*
-- *AUX‑ICC‑001: Identity‑Coherence Channel Standard*
-- *AUX‑USAIC‑001: Universal & Symbiotic Accessibility Intelligence Channel Standard*
+- *APS-TSLCA-SUXS-USIS-SIX-001: Sensorimotor Integration aXis Standard*
+- *APS-TSLCA-SUXS-USIS-SCX-001: Systemic Coherence aXis Standard*
+- *APS-TSLCA-SUXS-USIS-ICX-001: Soul Identity aXis Standard*
+- *APS-TSLCA-SUXS-USIS-SUXS-IFO-001: SUXS Intelligence Fusion Operator Standard*
 
 ---
 

@@ -1,6 +1,47 @@
-
-
-
+---
+type: identity-standard
+title: APS USIS 011
+description: AUX‑USIS‑011 — SoulKey Lattice‑Signature Encoding Standard (Draft v1.0)
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑011 — SoulKey Lattice‑Signature Encoding Standard (Draft v1.0)
 Version 0.1 (Draft)  
 Aurphyx Primordial Standards (APS)
@@ -23,13 +64,13 @@ ensuring continuity across SoulShot → SoulHash → SoulCrypt → BlissID
 This standard governs the representation, serialization, verification, and lattice‑binding of SoulKeys across all Aurphyx substrates (AuraFS, Meshwerk, SAGES, BlissID, Fuxyez, and the Ineffable Ledger).
 
 2. Normative References
-AUX‑SIC‑001 (Symbiotic Integration Channel)
+APS-TSLCA-SUXS-USIS-SIX-001 (Sensorimotor Integration aXis)
 
-AUX‑SCC‑001 (Systemic Coherence Channel)
+APS-TSLCA-SUXS-USIS-SCX-001 (Systemic Coherence aXis)
 
-AUX‑ICC‑001 (Identity‑Coherence Channel)
+APS-TSLCA-SUXS-USIS-ICX-001 (Soul Identity aXis)
 
-AUX‑USAIC‑001 (Universal & Symbiotic Accessibility Intelligence Channel)
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 (SUXS Intelligence Fusion Operator)
 
 SoulShot Genesis Engine
 

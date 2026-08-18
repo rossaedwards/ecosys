@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS TSLCA SUXS ICX USIS 008
+description: The Opulence Governance Integration Standard defines how the Opulence (P4A) economic engine integrates with -
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 AUX‑USIS‑008.md
 Opulence Governance Integration Standard
 Version 0.1.69 (Draft)
@@ -60,13 +104,13 @@ AUX‑USIS‑006 — Ineffable Ledger Protocol
 
 AUX‑USIS‑007 — Global Voting System Specification
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -117,7 +161,7 @@ BlissID sovereignty
 SoulKey continuity
 
 4.2 Verification Layer
-ICC identity stability
+ICX identity stability
 
 SAGES ethical invariants
 
@@ -219,7 +263,7 @@ be continuity‑verified by SoulKey
 
 be presence‑verified by SoulSync
 
-preserve ICC invariants
+preserve ICX invariants
 
 6.2 Ethical Requirements
 Opulence MUST enforce:

@@ -1,0 +1,25 @@
+# Python Environment Configuration
+# For .fuxpy files that integrate with Python
+
+[python]
+version = "3.10"
+venv_path = "./venv"
+requirements_file = "requirements.txt"
+
+[imports]
+default_imports = ["numpy", "pandas", "asyncio"]
+
+[runtime]
+max_workers = 4
+event_loop = "asyncio"
+gil_handling = "release"
+
+[interop]
+spinon_type = "dict"
+lattice_type = "list"
+oracle_type = "callable"
+
+[optimization]
+use_numpy_arrays = true
+enable_jit = true
+parallel_execution = true

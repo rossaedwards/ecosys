@@ -1,0 +1,25 @@
+# JavaScript Runtime Configuration
+# For .fuxjs files that integrate with Node.js/Browser
+
+[runtime]
+environment = "node"             # node | browser | deno
+version = "18.0"
+
+[modules]
+type = "esm"                     # esm | commonjs
+resolve_extensions = [".js", ".mjs", ".fuxjs"]
+
+[event_loop]
+max_listeners = 100
+async_hooks = true
+
+[interop]
+# Fuxyez <-> JS type mapping
+spinon_type = "Object"
+lattice_type = "Array"
+oracle_type = "Promise"
+
+[optimization]
+bundle = true
+minify = false
+tree_shaking = true

@@ -1,0 +1,9 @@
+// Echo operations (output)
+
+sigil echo {
+    // Output to stdout
+}
+
+sigil echo_err {
+    // Output to stderr
+}

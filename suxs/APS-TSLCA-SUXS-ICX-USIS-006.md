@@ -1,3 +1,47 @@
+---
+type: identity-standard
+title: APS‑SUXS-USIS‑006
+description: The Global Ineffable Ledger defines the transparent, decentralized, off‑grid, identity‑anchored, ethically‑bounded ledger system that underpins -
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - GVS
+  - SoulShot
+  - BlissID
+  - GuardHash
+domains:
+  - identity
+  - provenance
+  - continuity
+  - ethics
+  - cognition
+  - xessability
+  - systems-governance
+nodes:
+  - SIX⊗SIX
+  - SIX⊗SCX
+  - SIX⊗ICX
+  - SCX⊗SIX
+  - SCX⊗SCX
+  - SCX⊗ICX
+  - ICX⊗SIX
+  - ICX⊗SCX
+  - ICX⊗ICX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - cognitive-field-tensor
+  - unified-cognitive-field
+  - SAGES-governance-field
+  - HIF
+---
 ## ** APS‑SUXS-USIS‑006 **
 ## ** Universal Soul Identity Standards - Global Ineffable Ledger **
 ## ** Version:  0.1 (Draft) **
@@ -56,13 +100,13 @@ AUX‑USIS‑004 — SoulKey Continuity Artifact Standard
 
 AUX‑USIS‑005 — One Soul, One Identity, One Vote Protocol
 
-AUX‑ICC‑001 — Identity‑Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-ICX-001 — Soul Identity aXis Standard
 
-AUX‑SCC‑001 — Systemic Coherence Channel Standard
+APS-TSLCA-SUXS-USIS-SCX-001 — Systemic Coherence aXis Standard
 
-AUX‑SIC‑001 — Symbiotic Integration Channel Standard
+APS-TSLCA-SUXS-USIS-SIX-001 — Sensorimotor Integration aXis Standard
 
-AUX‑USAIC‑001 — Universal & Symbiotic Accessibility Intelligence Channel
+APS-TSLCA-SUXS-USIS-SUXS-IFO-001 — SUXS Intelligence Fusion Operator
 
 SAGES Governance Field Specification
 
@@ -209,7 +253,7 @@ be continuity‑verified by SoulKey
 
 be presence‑verified by SoulSync
 
-preserve ICC invariants
+preserve ICX invariants
 
 6.2 Ethical Requirements
 ILP MUST enforce:

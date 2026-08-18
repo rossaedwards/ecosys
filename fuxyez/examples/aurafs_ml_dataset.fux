@@ -1,0 +1,140 @@
+// Machine Learning Dataset Management with AuraFS
+// Store and retrieve massive datasets using fractal shards
+
+import aurafs
+
+type DataPoint {
+    features: [f64],
+    label: String,
+    timestamp: i64
+}
+
+sigil create_ml_dataset(num_samples: i32) -> Lattice {
+    echo "Generating {num_samples} data points..."
+    
+    let dataset = Lattice::new()
+    
+    for i in 0..num_samples {
+        // Simulate ML data point
+        let features = [
+            random_float() * 100.0,
+            random_float() * 50.0,
+            random_float() * 25.0,
+            random_float() * 10.0
+        ]
+        
+        let label = if features[0] > 50.0 {
+            "class_A"
+        } else {
+            "class_B"
+        }
+        
+        let point = DataPoint {
+            features: features,
+            label: label,
+            timestamp: timestamp()
+        }
+        
+        dataset.weave(point)
+        
+        if i % 10000 == 0 {
+            echo "  Progress: {i}/{num_samples} points"
+        }
+    }
+    
+    echo "✓ Dataset generation complete"
+    dataset
+}
+
+sigil persist_dataset(dataset: Lattice) -> String {
+    echo "Persisting dataset to AuraFS..."
+    echo "  Dataset size: {dataset.size()} points"
+    
+    let start_time = timestamp()
+    let shard_id = aurafs_persist(dataset)
+    let end_time = timestamp()
+    
+    let duration = end_time - start_time
+    echo "✓ Persisted in {duration}ms"
+    
+    shard_id
+}
+
+sigil batch_load_dataset(shard_id: String, batch_size: i32) {
+    echo "Loading dataset in batches..."
+    
+    let full_dataset = aurafs_load(shard_id)
+    let total_points = full_dataset.size()
+    let num_batches = (total_points + batch_size - 1) / batch_size
+    
+    echo "  Total points: {total_points}"
+    echo "  Batch size: {batch_size}"
+    echo "  Number of batches: {num_batches}"
+    
+    for batch_idx in 0..num_batches {
+        let start_idx = batch_idx * batch_size
+        let end_idx = min(start_idx + batch_size, total_points)
+        
+        echo "  Processing batch {batch_idx + 1}/{num_batches}..."
+        
+        // Simulate training on batch
+        thread_sleep(100) // Simulate processing time
+    }
+    
+    echo "✓ Batch processing complete"
+}
+
+sigil dataset_analytics(shard_id: String) {
+    echo "Running analytics on dataset..."
+    
+    let dataset = aurafs_load(shard_id)
+    let stats = shard_stats(shard_id)
+    
+    echo "  Dataset Statistics:"
+    echo "    Total samples: {dataset.size()}"
+    echo "    Shard size: {stats.size} bytes"
+    echo "    Replicas: {stats.replicas}"
+    echo "    Created: {stats.created_at}"
+    
+    // Verify integrity before analytics
+    if shard_verify(shard_id) {
+        echo "  ✓ Data integrity verified"
+    } else {
+        echo "  ✗ Warning: Data integrity check failed!"
+    }
+}
+
+ritual main {
+    echo "╔══════════════════════════════════════════════╗"
+    echo "║  ML Dataset Management with AuraFS           ║"
+    echo "╚══════════════════════════════════════════════╝"
+    echo ""
+    
+    let num_samples = 100000  // 100k data points
+    let batch_size = 1000
+    
+    // Create dataset
+    echo "[1/4] Creating ML dataset..."
+    let dataset = collapse create_ml_dataset(num_samples)
+    echo ""
+    
+    // Persist to AuraFS
+    echo "[2/4] Persisting to AuraFS..."
+    let shard_id = collapse persist_dataset(dataset)
+    echo "  Shard ID: {shard_id}"
+    echo ""
+    
+    // Run analytics
+    echo "[3/4] Running analytics..."
+    collapse dataset_analytics(shard_id)
+    echo ""
+    
+    // Batch processing
+    echo "[4/4] Batch loading for training..."
+    collapse batch_load_dataset(shard_id, batch_size)
+    echo ""
+    
+    echo "╔══════════════════════════════════════════════╗"
+    echo "║  ML Dataset Management Complete!             ║"
+    echo "╚══════════════════════════════════════════════╝"
+}
