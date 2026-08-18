@@ -160,9 +160,9 @@ master:
     - id: OKF
       file: "okf.schema.json"
       type: "index_frontmatter"
-      version: "1.0.0"
+      version: "1.1.0"
       status: "ACTIVE"
-      description: "Open Knowledge Format YAML front matter contract for APS documents (ecosys-manifest and theory-standard-framework)."
+      description: "Open Knowledge Format 1.1 — YAML front matter seated on the TSLCA 3×3 lattice (SIC ⊗ SCC ⊗ ICC), USAIC fusion, SAGES overlay."
       exports:
         - "okf_schema"
         - "ecosys_manifest"

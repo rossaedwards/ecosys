@@ -30,11 +30,11 @@ Ninefold Chakra Datacore System
 
 1. OKF (Open Knowledge Format)
 
-YAML front matter contract for APS documents
+YAML front matter seated on the TSLCA 3×3 lattice (SIC ⊗ SCC ⊗ ICC)
 
-ecosys-manifest for the Tribe Welcome stack map
+ecosys-manifest occupies all nine cells via USAIC fusion
 
-theory-standard-framework for individual APS papers
+theory-standard-framework occupies one primary cell
 
 1. SCIENTIFIC_TERMINOLOGY.md
 

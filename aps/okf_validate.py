@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Validate APS Open Knowledge Format YAML examples against okf.schema.json.
+"""Validate APS Open Knowledge Format YAML examples (OKF 1.1 / TSLCA lattice).
 
-Uses only PyYAML for load, plus a small Draft-07 subset checker so the
-contract can be verified without installing jsonschema.
+Uses only PyYAML. Checks the nine-cell contract without jsonschema.
 """
 
 from __future__ import annotations
@@ -20,6 +19,31 @@ EXAMPLES = [
     ROOT / "okf.theory-standard-framework.yaml",
 ]
 
+CHANNELS = ("sic", "scc", "icc")
+CELLS = tuple(f"{row}-{col}" for row in CHANNELS for col in CHANNELS)
+MEMOREE_NODES = {
+    "temporal",
+    "relational",
+    "operational",
+    "axiomatic",
+    "state",
+    "generative",
+    "mandate",
+    "entity",
+    "lattice",
+}
+CELL_MEMOREE = {
+    "sic-sic": "temporal",
+    "sic-scc": "relational",
+    "sic-icc": "entity",
+    "scc-sic": "operational",
+    "scc-scc": "axiomatic",
+    "scc-icc": "mandate",
+    "icc-sic": "state",
+    "icc-scc": "generative",
+    "icc-icc": "lattice",
+}
+
 
 def fail(path: Path, msg: str) -> None:
     print(f"FAIL  {path.name}: {msg}", file=sys.stderr)
@@ -33,7 +57,7 @@ def require_keys(data: dict[str, Any], keys: list[str], path: Path) -> None:
 
 
 def is_slug(value: str) -> bool:
-    if not value or value[0] in "-":
+    if not value or value[0] == "-":
         return False
     return all(c.isalnum() or c == "-" for c in value) and value == value.lower()
 
@@ -43,8 +67,6 @@ def check_named_entity(item: Any, path: Path, field: str) -> None:
         fail(path, f"{field} entries must be mappings with id and name")
     if "id" not in item or "name" not in item:
         fail(path, f"{field} entry missing id/name: {item!r}")
-    if not isinstance(item["id"], str) or not isinstance(item["name"], str):
-        fail(path, f"{field} id and name must be strings")
 
 
 def check_string_list(data: dict[str, Any], key: str, path: Path) -> None:
@@ -52,13 +74,37 @@ def check_string_list(data: dict[str, Any], key: str, path: Path) -> None:
         return
     value = data[key]
     if not isinstance(value, list) or not all(isinstance(x, str) for x in value):
-        fail(path, f"{key} must be a YAML sequence of strings, not {type(value).__name__}")
+        fail(path, f"{key} must be a YAML sequence of strings")
+
+
+def validate_tsl(tsl: Any, path: Path, *, ecosys: bool) -> None:
+    if not isinstance(tsl, dict):
+        fail(path, "tsl must be a mapping")
+    require_keys(tsl, ["lattice", "cell"], path)
+    if tsl["lattice"] != "tslca":
+        fail(path, f"tsl.lattice must be tslca, got {tsl['lattice']!r}")
+    cell = tsl["cell"]
+    if ecosys:
+        if cell != "usaic":
+            fail(path, "ecosys-manifest tsl.cell must be usaic")
+    elif cell not in CELLS:
+        fail(path, f"tsl.cell must be one of the nine cells, got {cell!r}")
+    if "also" in tsl:
+        extra = tsl["also"]
+        if not isinstance(extra, list) or not all(x in CELLS for x in extra):
+            fail(path, "tsl.also must be a sequence of nine-cell ids")
+    node = tsl.get("memoree-node")
+    if node is not None and node not in MEMOREE_NODES:
+        fail(path, f"unknown memoree-node {node!r}")
+    grammar = tsl.get("grammar")
+    if grammar is not None and grammar != [3, 6, 9, 13]:
+        fail(path, f"tsl.grammar must be [3, 6, 9, 13], got {grammar!r}")
 
 
 def validate_shared(data: dict[str, Any], path: Path) -> None:
-    require_keys(data, ["okf", "type", "id", "title", "description"], path)
-    if data["okf"] != "1.0":
-        fail(path, f"okf must be '1.0', got {data['okf']!r}")
+    require_keys(data, ["okf", "type", "id", "title", "description", "tsl"], path)
+    if data["okf"] not in {"1.0", "1.1"}:
+        fail(path, f"okf must be '1.0' or '1.1', got {data['okf']!r}")
     if data["type"] not in {"ecosys-manifest", "theory-standard-framework"}:
         fail(path, f"unknown type {data['type']!r}")
     if not is_slug(str(data["id"])):
@@ -72,7 +118,6 @@ def validate_shared(data: dict[str, Any], path: Path) -> None:
     check_string_list(data, "tags", path)
     check_string_list(data, "aints", path)
     check_string_list(data, "license", path)
-    check_string_list(data, "admin-modules", path)
     if "status" in data and data["status"] not in {
         "draft",
         "active",
@@ -80,25 +125,43 @@ def validate_shared(data: dict[str, Any], path: Path) -> None:
         "deprecated",
     }:
         fail(path, f"invalid status {data['status']!r}")
+    validate_tsl(data["tsl"], path, ecosys=data["type"] == "ecosys-manifest")
+
+
+def validate_cell(cell_id: str, cell: Any, path: Path) -> None:
+    if not isinstance(cell, dict):
+        fail(path, f"cells.{cell_id} must be a mapping")
+    require_keys(cell, ["tensor", "name", "role"], path)
+    tensor = cell["tensor"]
+    expected = cell_id.split("-")
+    if tensor != expected:
+        fail(path, f"cells.{cell_id}.tensor must be {expected}, got {tensor!r}")
+    node = cell.get("memoree-node")
+    if node is not None and node != CELL_MEMOREE[cell_id]:
+        fail(
+            path,
+            f"cells.{cell_id}.memoree-node must be {CELL_MEMOREE[cell_id]}, got {node!r}",
+        )
+    holds = cell.get("holds")
+    if holds is not None and not isinstance(holds, dict):
+        fail(path, f"cells.{cell_id}.holds must be a mapping")
 
 
 def validate_ecosys(data: dict[str, Any], path: Path) -> None:
-    require_keys(
-        data,
-        ["workspaces", "theories-or-standards", "operating-systems", "cores"],
-        path,
-    )
-    for field in ("theories-or-standards", "operating-systems", "cores"):
-        items = data[field]
-        if not isinstance(items, list) or not items:
-            fail(path, f"{field} must be a non-empty YAML sequence")
-        for item in items:
-            check_named_entity(item, path, field)
-    if not isinstance(data["workspaces"], dict):
-        fail(path, "workspaces must be a mapping of github/local paths")
-    github = data["workspaces"].get("github", {})
-    if not isinstance(github, dict) or "personal" not in github or "org" not in github:
-        fail(path, "workspaces.github must include personal and org")
+    require_keys(data, ["channels", "cells"], path)
+    channels = data["channels"]
+    if set(channels) != set(CHANNELS):
+        fail(path, f"channels must be exactly {list(CHANNELS)}, got {list(channels)}")
+    cells = data["cells"]
+    if set(cells) != set(CELLS):
+        missing = [c for c in CELLS if c not in cells]
+        extra = [c for c in cells if c not in CELLS]
+        fail(path, f"cells must be the nine TSLCA cells; missing={missing} extra={extra}")
+    for cell_id in CELLS:
+        validate_cell(cell_id, cells[cell_id], path)
+    sages = data.get("sages")
+    if sages is not None and sages.get("guardians") != 13:
+        fail(path, "sages.guardians must be 13")
 
 
 def validate_theory(data: dict[str, Any], path: Path) -> None:
@@ -114,8 +177,7 @@ def validate_theory(data: dict[str, Any], path: Path) -> None:
 
 
 def validate_file(path: Path) -> None:
-    raw = path.read_text(encoding="utf-8")
-    data = yaml.safe_load(raw)
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         fail(path, "document did not parse to a mapping")
     validate_shared(data, path)
@@ -123,7 +185,10 @@ def validate_file(path: Path) -> None:
         validate_ecosys(data, path)
     else:
         validate_theory(data, path)
-    print(f"OK    {path.name}  type={data['type']}  id={data['id']}")
+    print(
+        f"OK    {path.name}  type={data['type']}  id={data['id']}  "
+        f"tsl.cell={data['tsl']['cell']}"
+    )
 
 
 def main() -> None:

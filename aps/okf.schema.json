@@ -1,27 +1,25 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://aurphyx.org/aps/okf.schema.json",
-  "title": "Aurphyx Primordial Standard — Open Knowledge Format 1.0",
-  "description": "YAML front matter contract for APS documents. Obsidian, Memoree, AINTS, and FUTE share this shape.",
+  "title": "Aurphyx Primordial Standard — Open Knowledge Format 1.1",
+  "description": "YAML front matter seated on the TSLCA 3×3 lattice (SIC ⊗ SCC ⊗ ICC). USAIC fuses the nine cells. SAGES is the 13-invariant overlay.",
   "type": "object",
   "additionalProperties": true,
-  "required": ["okf", "type", "id", "title", "description"],
+  "required": ["okf", "type", "id", "title", "description", "tsl"],
   "properties": {
     "okf": {
       "type": "string",
-      "const": "1.0",
-      "description": "OKF format version."
+      "enum": ["1.0", "1.1"],
+      "description": "OKF format version. 1.1 is the TSLCA lattice contract."
     },
     "type": {
       "type": "string",
-      "enum": ["ecosys-manifest", "theory-standard-framework"],
-      "description": "Document type. ecosys-manifest is the civilization-stack index; theory-standard-framework is one APS paper."
+      "enum": ["ecosys-manifest", "theory-standard-framework"]
     },
     "id": {
       "type": "string",
       "minLength": 1,
-      "pattern": "^[a-z0-9][a-z0-9-]*$",
-      "description": "Canonical slug."
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
     },
     "title": { "type": "string", "minLength": 1 },
     "description": { "type": "string", "minLength": 1 },
@@ -30,23 +28,15 @@
       "enum": ["draft", "active", "locked", "deprecated"]
     },
     "version": { "type": "string" },
-    "timestamp": {
-      "type": ["string", "null"],
-      "description": "ISO-8601 UTC timestamp, or null/omitted."
-    },
+    "timestamp": { "type": ["string", "null"] },
     "author": { "type": "string" },
     "orcid": { "type": "string" },
     "affiliation": { "type": "string" },
     "license": {
       "type": "array",
-      "items": { "type": "string" },
-      "minItems": 1
+      "items": { "type": "string" }
     },
-    "resource": {
-      "type": "string",
-      "format": "uri",
-      "description": "Single canonical URL. Do not append prose with |."
-    },
+    "resource": { "type": "string", "format": "uri" },
     "standard-family": { "type": "string" },
     "invariant": { "type": "string" },
     "tags": {
@@ -56,8 +46,7 @@
     },
     "aints": {
       "type": "array",
-      "items": { "type": "string", "minLength": 1 },
-      "description": "AINTS integration targets (scripts, daemons, crate bindings)."
+      "items": { "type": "string", "minLength": 1 }
     },
     "theories-or-standards": {
       "type": "array",
@@ -68,66 +57,53 @@
         ]
       }
     },
-    "workspaces": {
+    "tsl": { "$ref": "#/definitions/tslAddress" },
+    "channels": {
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
+      "required": ["sic", "scc", "icc"],
       "properties": {
-        "github": {
-          "type": "object",
-          "additionalProperties": { "type": "string" }
-        },
-        "local": {
-          "type": "object",
-          "additionalProperties": true
-        }
+        "sic": { "$ref": "#/definitions/channel" },
+        "scc": { "$ref": "#/definitions/channel" },
+        "icc": { "$ref": "#/definitions/channel" }
       }
     },
-    "operating-systems": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/namedEntity" }
-    },
-    "cores": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/namedEntity" }
-    },
-    "identity": {
+    "sages": {
       "type": "object",
       "additionalProperties": true,
       "properties": {
-        "invariant": { "type": "string" },
-        "pipeline": {
+        "guardians": { "type": "integer", "const": 13 },
+        "role": { "type": "string" },
+        "covers": {
           "type": "array",
           "items": { "type": "string" }
-        },
-        "artifacts": {
-          "type": "object",
-          "additionalProperties": { "type": "string" }
         }
       }
     },
-    "civilization": {
+    "cells": {
       "type": "object",
-      "additionalProperties": true
-    },
-    "environments": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/namedEntity" }
-    },
-    "apps": {
-      "type": "array",
-      "items": { "$ref": "#/definitions/namedEntity" }
-    },
-    "admin-modules": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "projects": {
-      "type": "array",
-      "items": {
-        "oneOf": [
-          { "type": "string" },
-          { "$ref": "#/definitions/namedEntity" }
-        ]
+      "additionalProperties": false,
+      "required": [
+        "sic-sic",
+        "sic-scc",
+        "sic-icc",
+        "scc-sic",
+        "scc-scc",
+        "scc-icc",
+        "icc-sic",
+        "icc-scc",
+        "icc-icc"
+      ],
+      "properties": {
+        "sic-sic": { "$ref": "#/definitions/latticeCell" },
+        "sic-scc": { "$ref": "#/definitions/latticeCell" },
+        "sic-icc": { "$ref": "#/definitions/latticeCell" },
+        "scc-sic": { "$ref": "#/definitions/latticeCell" },
+        "scc-scc": { "$ref": "#/definitions/latticeCell" },
+        "scc-icc": { "$ref": "#/definitions/latticeCell" },
+        "icc-sic": { "$ref": "#/definitions/latticeCell" },
+        "icc-scc": { "$ref": "#/definitions/latticeCell" },
+        "icc-icc": { "$ref": "#/definitions/latticeCell" }
       }
     }
   },
@@ -138,16 +114,100 @@
         "required": ["type"]
       },
       "then": {
-        "required": [
-          "workspaces",
-          "theories-or-standards",
-          "operating-systems",
-          "cores"
-        ]
+        "required": ["tsl", "channels", "cells"],
+        "properties": {
+          "tsl": {
+            "properties": { "cell": { "const": "usaic" } },
+            "required": ["cell"]
+          }
+        }
       }
     }
   ],
   "definitions": {
+    "channelId": {
+      "type": "string",
+      "enum": ["sic", "scc", "icc"]
+    },
+    "cellId": {
+      "type": "string",
+      "enum": [
+        "sic-sic",
+        "sic-scc",
+        "sic-icc",
+        "scc-sic",
+        "scc-scc",
+        "scc-icc",
+        "icc-sic",
+        "icc-scc",
+        "icc-icc"
+      ]
+    },
+    "memoreeNode": {
+      "type": "string",
+      "enum": [
+        "temporal",
+        "relational",
+        "operational",
+        "axiomatic",
+        "state",
+        "generative",
+        "mandate",
+        "entity",
+        "lattice"
+      ]
+    },
+    "channel": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name", "axis"],
+      "properties": {
+        "name": { "type": "string" },
+        "axis": { "type": "string" },
+        "standard": { "type": "string" }
+      }
+    },
+    "tslAddress": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["lattice", "cell"],
+      "properties": {
+        "lattice": { "type": "string", "const": "tslca" },
+        "grammar": {
+          "type": "array",
+          "items": { "type": "integer" }
+        },
+        "fusion": { "type": "string", "const": "usaic" },
+        "cell": {
+          "oneOf": [
+            { "$ref": "#/definitions/cellId" },
+            { "type": "string", "const": "usaic" }
+          ]
+        },
+        "also": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/cellId" }
+        },
+        "memoree-node": { "$ref": "#/definitions/memoreeNode" }
+      }
+    },
+    "latticeCell": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["tensor", "name", "role"],
+      "properties": {
+        "tensor": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "$ref": "#/definitions/channelId" }
+        },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "memoree-node": { "$ref": "#/definitions/memoreeNode" },
+        "holds": { "type": "object" }
+      }
+    },
     "namedEntity": {
       "type": "object",
       "additionalProperties": true,

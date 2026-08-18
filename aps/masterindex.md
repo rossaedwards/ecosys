@@ -10,9 +10,9 @@ MASTER.yaml — Root canonical registry
 
 MASTER_INDEX.md — This index
 
-okf.schema.json — Open Knowledge Format YAML front matter contract
+okf.schema.json — Open Knowledge Format 1.1 (TSLCA 3×3 lattice)
 
-okf.ecosys-manifest.yaml — Tribe Welcome machine map (do not paste onto welcome2tribe until accepted)
+okf.ecosys-manifest.yaml — Tribe Welcome seated on the nine cells (do not paste onto welcome2tribe until accepted)
 
 aps_okf_frontmatter.md — OKF spec and copy-paste examples (repo root)
 

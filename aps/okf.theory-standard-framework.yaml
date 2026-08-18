@@ -1,7 +1,8 @@
-# APS Open Knowledge Format 1.0 — theory-standard-framework
+# APS Open Knowledge Format 1.1 — theory-standard-framework
 # Canonical machine copy of Example B in /aps_okf_frontmatter.md
+# Occupies SCC⊗SCC (systemic semantic reasoning) and couples the other two channels.
 
-okf: "1.0"
+okf: "1.1"
 type: theory-standard-framework
 id: tslca
 title: Three-Squared-Lattice Cognitive Architecture
@@ -9,10 +10,24 @@ description: Three-Squared-Lattice Cognitive Architecture
 status: active
 resource: https://aurphyx.org/tslca
 standard-family: Aurphyx Primordial Standard
+tsl:
+  lattice: tslca
+  grammar: [3, 6, 9, 13]
+  fusion: usaic
+  cell: scc-scc
+  also:
+    - sic-scc
+    - icc-scc
+  memoree-node: axiomatic
 theories-or-standards:
   - tslca
   - suxs
 tags:
+  - tslca
+  - sic
+  - scc
+  - icc
+  - usaic
   - ftqc
   - tvfd
   - vim
