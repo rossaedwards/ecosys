@@ -1,9 +1,9 @@
 ---
-type: theory-standard
+type: theory-standard-framework
 title: tslca
 description: Three-Squared-Lattice Cognitive Architecture
-resource: https://aps.aurphyx.org/tslca | Aurphyx Primordial Standard - Symbiotic Universal Xessability Standards
-tags:
+resource: https://aurphyx.org/tslca | Aurphyx Primordial Standard - Symbiotic Universal Xessability Standards
+tags: ftqc; tvfd; vim; tob; aura; aurafs; meshwerk; fuxyez; sages; suxs; soulsync; memoree;
 timestamp:
-eco-sys:
+implementations: Aura; Audry; Memoree; Vibe Audio; SAGES; Fuxyez;
 ---
