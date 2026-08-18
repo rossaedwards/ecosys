@@ -28,6 +28,14 @@ BlissCore / ChaosCore specification
 
 Ninefold Chakra Datacore System
 
+1. OKF (Open Knowledge Format)
+
+YAML front matter seated on the TSLCA 3×3 lattice (SIC ⊗ SCC ⊗ ICC)
+
+ecosys-manifest occupies all nine cells via USAIC fusion
+
+theory-standard-framework occupies one primary cell
+
 1. SCIENTIFIC_TERMINOLOGY.md
 
 Unified scientific lexicon

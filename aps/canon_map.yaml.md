@@ -170,3 +170,5 @@ canon_map:
     - SCIENTIFIC_TERMINOLOGY.md
     - TECHNICAL_TERMINOLOGY.md
     - MYTHOLOGY_TERMINOLOGY.md
+    - okf.schema.json
+    - okf.ecosys-manifest.yaml

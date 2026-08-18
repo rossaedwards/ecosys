@@ -157,6 +157,20 @@ master:
         - "AURAFS_CROSS_VOLUME_SUBSTRATE_SPEC"
         - "AURAFS_NINEFOLD_DUALITY_KERNEL_SPEC"
 
+    - id: OKF
+      file: "okf.schema.json"
+      type: "index_frontmatter"
+      version: "1.1.0"
+      status: "ACTIVE"
+      description: "Open Knowledge Format 1.1 — YAML front matter seated on the TSLCA 3×3 lattice (SIC ⊗ SCC ⊗ ICC), USAIC fusion, SAGES overlay."
+      exports:
+        - "okf_schema"
+        - "ecosys_manifest"
+        - "theory_standard_framework"
+      depends_on:
+        - "MASTER.yaml"
+        - "TECHNICAL_TERMINOLOGY"
+
   # Optional: high-level dependency graph (for tools)
   dependency_graph:
     PHYSICS: []
@@ -191,3 +205,6 @@ master:
       - AURAFS_SHARD_TAXONOMY
       - AURAFS_CROSS_VOLUME_SUBSTRATE_SPEC
       - AURAFS_NINEFOLD_DUALITY_KERNEL_SPEC
+    OKF:
+      - MASTER.yaml
+      - TECHNICAL_TERMINOLOGY
