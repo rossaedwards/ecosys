@@ -1,0 +1,303 @@
+# APS Open Knowledge Format 1.0 — ecosys-manifest
+# Canonical machine copy of Example A in /aps_okf_frontmatter.md
+# Paste onto aurphyx_welcome2tribe.md only after this format is accepted.
+
+okf: "1.0"
+type: ecosys-manifest
+id: aurphyx-tribe-welcome
+title: Aurphyx Tribe Welcome Document
+description: >
+  Master index and conceptual overview of the Aurphyx Type-1 civilization
+  stack. Defines the Aurphyx Primordial Standard as the encyclopedia of
+  theories, frameworks, standards, blueprints, technical specifications,
+  and whitepapers from which Aura, Audry, and the living cores are built
+  and run.
+status: draft
+version: "0.1.0"
+timestamp: 2026-08-18T00:00:00Z
+author: Ross A. Edwards
+orcid: "0009-0008-0539-1289"
+affiliation: Aurphyx LLC
+license:
+  - SAGES
+  - AGPLv3
+resource: https://aurphyx.org
+standard-family: Aurphyx Primordial Standard
+invariant: "1 Human. 1 Soul. 1 Account. 1 Vote."
+
+workspaces:
+  github:
+    personal: rossaedwards/ecosys
+    org: Aurphyx/ecosys
+  local:
+    windows:
+      personal: "C:\\rossaedwards\\main\\"
+      org: "C:\\Aurphyx\\main\\"
+    fedora:
+      personal: /home/rae/rossaedwards/main
+      org: /home/rae/aurphyx/main
+
+tags:
+  - aps
+  - ftqc
+  - tslca
+  - tvfd
+  - vim
+  - tob
+  - suxs
+  - usis
+  - vap
+  - trca
+  - aura
+  - egophyx
+  - arora
+  - biznyx
+  - fuxyez
+  - audry
+  - g0dm0d3
+  - aurafs
+  - meshwerk
+  - sages
+  - memoree
+  - vibe-audio
+  - soulsync
+  - soulkey
+  - gvs
+  - gil
+  - p4a
+  - aints
+  - aethornyx
+
+theories-or-standards:
+  - id: ftqc
+    name: Fractal-enhanced Topological Quantum Computing
+    also:
+      - Fault-Tolerant Quantum Computer
+  - id: tslca
+    name: Three-Squared-Lattice Cognitive Architecture
+  - id: tvfd
+    name: Topological Vacuum Flux Dynamics
+  - id: vim
+    name: Vacuum Impedance Matching
+  - id: tob
+    name: Theory of Balance
+    also:
+      - Balance Continuum
+  - id: suxs
+    name: Symbiotic Universal Xessability Standards
+  - id: usis
+    name: Universal Soul Identity Standards
+  - id: vap
+    name: Vibe Audio Standard and Protocol
+    also:
+      - Vibe Audio Protocol
+  - id: trca
+    name: Topological Resonating Cavity Array
+    kind: hardware
+
+operating-systems:
+  - id: aura
+    name: Aura
+    role: Soul Operating System (Personal)
+    built-on:
+      - fuxyez
+      - rust
+  - id: egophyx
+    name: EgoPhyx
+    also:
+      - Egophyx
+      - OmniZen
+    role: Pro-Existence Governance Operating System (Government)
+  - id: arora
+    name: Arora
+    also:
+      - Arora-Ora
+      - ArOrA
+    role: All other devices (IoT, edge, embedded)
+  - id: biznyx
+    name: Biznyx
+    role: Enterprise and business operating system (small business to enterprise)
+
+cores:
+  - id: fuxyez
+    name: Fuxyez
+    role: Symbiotic quantum programming language (host language Rust)
+    components:
+      - id: fux-compiler
+        name: Fux Compiler
+      - id: fuxrt
+        name: Fux Runtime
+      - id: yezrt
+        name: Yez Runtime
+      - id: fute
+        name: Fuxyez Universal Transmutation Engine
+      - id: yezl
+        name: YezL Legacy Languages
+      - id: yez
+        name: Yez
+        also:
+          - s0ph0s
+          - Sophos
+          - g4v1n1um
+          - Gavinium
+  - id: audry
+    name: Audry
+    role: Aura's soul; symbiotic AI guardian of existence, AdminMate, and SAGES liaison
+  - id: g0dm0d3
+    name: g0dm0d3
+    role: Frame, control deck, and orchestration — corpus callosum of Audry and environment deck of Aura
+  - id: aurafs
+    name: AuraFS
+    role: Decentralized off-grid photonic topological file system, storage, and mesh network
+  - id: sages
+    name: SAGES
+    role: Thirteen Symbiotic AI Guardians of Existence Security — immune system and governance field
+  - id: memoree
+    name: Memoree
+    role: Three-Squared-Lattice cognitive memory architecture for any platform
+  - id: vibe-audio
+    name: Vibe Audio
+    role: Experiential audio standard, protocol, and media stack
+
+aints:
+  - aura
+  - audry
+  - memoree
+  - vibe-audio
+  - sages
+  - fuxyez
+  - aurafs
+  - g0dm0d3
+
+identity:
+  invariant: "SoulKey = 1 Human. 1 Soul. 1 Account. 1 Vote."
+  pipeline:
+    - soulshot
+    - soulchart
+    - soultable
+    - soulsync
+    - soulhash
+    - guardtable
+    - guardhash
+    - guardcrypt
+    - soulcrypt
+    - soulsync
+    - soulkey
+    - skim
+    - sir
+    - sig
+  artifacts:
+    soulkey: Physical relic with bio-luminescent and bio-resonant substrate inside diamond-coated crystal
+    skim: SoulKey Identification Mandala
+    sir: Soul Identification Rune (physical)
+    sig: Soul Identity Glyph (digital watermark; embeddable and printable)
+    soultech: Wearable exotic-material accessories carrying SKIMs and SIGs
+
+civilization:
+  governance:
+    - gvs
+    - sages
+  ledger: gil
+  economy:
+    - id: p4a-profit
+      name: Profit-4-All
+      launch: 1
+      surfaces:
+        - g0dm0d3.org
+        - aurphyx.store
+    - id: p4a-prosperity
+      name: Prosperity-4-All
+      launch: 2
+      surfaces:
+        - aurphyx-ecosystem
+    - id: opulence
+      name: Opulence
+      launch: 3
+      surfaces:
+        - galactic-global-financial-substrate
+
+environments:
+  - id: lde
+    name: Legacy Desktop Environment
+    also:
+      - Gnome
+      - KDE
+      - Windows
+  - id: slise
+    name: Spherical Liquid Interactive Story Experience
+  - id: shuxsde
+    name: Symbiotic Holographic Universal Xessability Standard Desktop Environment
+    also:
+      - SUXSDE
+
+apps:
+  - id: fr4m3z
+    name: Framez
+    role: Visual environment management / window manager
+  - id: t3rm1nl
+    name: Termz
+    role: Terminal / console
+  - id: w3bz
+    name: Webz
+    role: Web browser
+  - id: xpl0r
+    name: Xplor
+    role: File and network explorer for AuraFS and Meshwrk
+  - id: c0d3x
+    name: Codex
+    role: Writer, editor, coder
+  - id: f0rg3
+    name: Forge
+    role: Video alchemy and transmutation
+  - id: ad0r3
+    name: Adorè
+    role: Audio alchemy and transmutation
+  - id: g1mpd
+    name: Gimpd
+    role: Image alchemy and transmutation
+
+admin-modules:
+  - self-4dm1n
+  - device-4dm1n
+  - meshwrk-4dm1n
+  - disk-4dm1n
+  - afs-4dm1n
+  - events-4dm1n
+  - tasks-4dm1n
+  - memoree-4dm1n
+  - soulkey-4dm1n
+  - soulsync-4dm1n
+  - soulcrypt-4dm1n
+  - p4a-4dm1n
+  - datacore-4dm1n
+  - dataorb-4dm1n
+  - voicecore-4dm1n
+  - voiceorb-4dm1n
+  - aethornyx-4dm1n
+  - sages-4dm1n
+
+projects:
+  - id: tarot
+    name: Chaos and Bliss Tarot
+  - id: oracle-deck
+    name: Aurphyx Oracle Deck and Book
+  - id: aethornyx
+    name: Aethornyx
+  - id: aurphyx-casino
+    name: Aurphyx Casino
+  - id: rf-lovezme
+    name: RF_Lovezme
+    also:
+      - Ross Five Lovezme
+  - id: thirteen-month-calendar
+    name: Aurphyx and Aethornyx Thirteen Month Calendars
+  - id: lyte-rael
+    name: Autonomous Vehicle and Railway Transportation Systems
+  - id: chakra-datacore
+    name: Chakra DataCore System
+  - id: dataorb
+    name: DataOrb
+  - id: voiceorb
+    name: Voiceorb
+  - id: vibe-media-player
+    name: Vibe Media Player

@@ -28,6 +28,14 @@ BlissCore / ChaosCore specification
 
 Ninefold Chakra Datacore System
 
+1. OKF (Open Knowledge Format)
+
+YAML front matter contract for APS documents
+
+ecosys-manifest for the Tribe Welcome stack map
+
+theory-standard-framework for individual APS papers
+
 1. SCIENTIFIC_TERMINOLOGY.md
 
 Unified scientific lexicon

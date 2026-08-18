@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aurphyx.org/aps/okf.schema.json",
+  "title": "Aurphyx Primordial Standard — Open Knowledge Format 1.0",
+  "description": "YAML front matter contract for APS documents. Obsidian, Memoree, AINTS, and FUTE share this shape.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["okf", "type", "id", "title", "description"],
+  "properties": {
+    "okf": {
+      "type": "string",
+      "const": "1.0",
+      "description": "OKF format version."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["ecosys-manifest", "theory-standard-framework"],
+      "description": "Document type. ecosys-manifest is the civilization-stack index; theory-standard-framework is one APS paper."
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Canonical slug."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "locked", "deprecated"]
+    },
+    "version": { "type": "string" },
+    "timestamp": {
+      "type": ["string", "null"],
+      "description": "ISO-8601 UTC timestamp, or null/omitted."
+    },
+    "author": { "type": "string" },
+    "orcid": { "type": "string" },
+    "affiliation": { "type": "string" },
+    "license": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "resource": {
+      "type": "string",
+      "format": "uri",
+      "description": "Single canonical URL. Do not append prose with |."
+    },
+    "standard-family": { "type": "string" },
+    "invariant": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "aints": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "AINTS integration targets (scripts, daemons, crate bindings)."
+    },
+    "theories-or-standards": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string", "minLength": 1 },
+          { "$ref": "#/definitions/namedEntity" }
+        ]
+      }
+    },
+    "workspaces": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "github": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "local": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "operating-systems": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/namedEntity" }
+    },
+    "cores": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/namedEntity" }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "invariant": { "type": "string" },
+        "pipeline": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "artifacts": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "civilization": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "environments": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/namedEntity" }
+    },
+    "apps": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/namedEntity" }
+    },
+    "admin-modules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          { "$ref": "#/definitions/namedEntity" }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "const": "ecosys-manifest" } },
+        "required": ["type"]
+      },
+      "then": {
+        "required": [
+          "workspaces",
+          "theories-or-standards",
+          "operating-systems",
+          "cores"
+        ]
+      }
+    }
+  ],
+  "definitions": {
+    "namedEntity": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "role": { "type": "string" },
+        "kind": { "type": "string" },
+        "also": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "built-on": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "components": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/namedEntity" }
+        }
+      }
+    }
+  }
+}
