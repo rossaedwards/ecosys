@@ -18,7 +18,8 @@ domains:
   - semantics
   - provenance
   - ethics
-  - systems-governance
+  - systems
+  - governance
 nodes:
   - SIX⊗SIX
   - SIX⊗SCX
@@ -37,7 +38,7 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
 Audio file
 The_Three-Squared_Lattice_AI_Blueprint 1.m4a

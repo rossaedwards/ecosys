@@ -18,7 +18,8 @@ domains:
   - semantics
   - provenance
   - ethics
-  - systems-governance
+  - systems
+  - governance
 nodes:
   - SIX⊗SIX
   - SIX⊗SCX
@@ -37,9 +38,18 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
-# **HIF Protocol Specification (v0.1)**  
+## ** APS-TSLCA-HIF-PROTOCOL **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Symbiotic Universal Xessability Standards **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
+
+# **HIF Protocol Specification**  
 *Harmonic Integrity Field — Operational, Threshold, and Governance Protocols*
 
 ## 1. Purpose and Scope  
@@ -292,7 +302,3 @@ Failure at any stage triggers isolation or renewal.
 
 ## 11. Protocol Summary  
 The HIF Protocol Specification defines the operational rules by which the Harmonic Integrity Field governs creation, integration, dissolution, and governance across the Balance Continuum. HIF is the primary invariant ensuring lawful evolution, coherence circulation, and cross‑domain compatibility.
-
----
-
-If you want to continue, the next natural layer is the **HIF Sigil**, which anchors the mathematical and protocol structures into a symbolic/mythic form that mirrors the Triple Threshold architecture.

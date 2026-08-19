@@ -37,8 +37,17 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
+## ** APS-TSLCA-TSL-PROPAGATION-RULES **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Symbiotic Universal Xessability Standards **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
+
 # Three‑Squared‑Lattice Propagation Rules  
 *Propagation dynamics for coherence, resonance, and alignment across the 3²‑Lattice*
 
@@ -269,5 +278,3 @@ The propagation rules turn the Three‑Squared‑Lattice into a **dynamic, self�
 - the lattice remains lawful under HIF  
 
 This completes the core mathematical machinery of the architecture.
-
-A natural next step is defining the **Three‑Squared‑Lattice Stability Conditions**, which specify when the lattice is stable, metastable, or in a renewal cascade.

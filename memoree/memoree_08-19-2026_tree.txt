@@ -1,5 +1,5 @@
 Folder PATH listing for volume Windows
-Volume serial number is 0000008E A65A:44CA
+Volume serial number is 0000007F A65A:44CA
 C:.
 |   aps_terminology.json
 |   aurafs_backend.py
@@ -21,7 +21,7 @@ C:.
 |   invariants.json.md
 |   lmstudio_hook.py
 |   lmstudio_hook.py.md
-|   memoree_06-21-2026_tree.txt
+|   memoree_08-19-2026_tree.txt
 |   memoree_fs_server.py
 |   memoree_fs_server.py.md
 |   memoree_service.log
@@ -42,7 +42,6 @@ C:.
 |   projects.json.md
 |   QUICKSTART.md
 |   README.md
-|   requirements.txt
 |   routes.py
 |   routes.py.md
 |   schemas.py

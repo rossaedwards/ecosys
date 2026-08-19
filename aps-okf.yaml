@@ -1,0 +1,200 @@
+$id: https://aurphyx.org/schema/aps-okf/v1
+$schema: https://json-schema.org/draft/2020-12/schema
+title: APS-OKF
+description: >
+  Aurphyx Primordial Standard — Object Knowledge Frontmatter.
+  Nine-key YAML header that turns a document into a lattice-addressable object.
+  This format is APS-OKF. It is not Vibe. Vibe is reserved for VASP / Vibe Audio.
+x-version: "1.0.0"
+x-license: Apache-2.0
+x-status: stable
+x-key-order:
+  - type
+  - title
+  - description
+  - workspaces
+  - services
+  - domains
+  - nodes
+  - cores
+  - fields
+x-default-profile: aps-tslca
+x-profiles:
+  aps-tslca:
+    description: Default Aurphyx TSLCA profile. Cores locked to SIX, SCX, ICX. Full 3x3 is row-major Unicode tensor products.
+    cores:
+      - SIX
+      - SCX
+      - ICX
+    nodes-full-row-major:
+      - SIX⊗SIX
+      - SIX⊗SCX
+      - SIX⊗ICX
+      - SCX⊗SIX
+      - SCX⊗SCX
+      - SCX⊗ICX
+      - ICX⊗SIX
+      - ICX⊗SCX
+      - ICX⊗ICX
+    locked: true
+  aps-core:
+    description: Portable triad profile. Any three named cores. Node sides must be listed cores. Tensor products remain non-commutative.
+    cores:
+      minItems: 1
+      maxItems: 3
+    locked: false
+x-invariants:
+  - Every node side must be a listed core.
+  - A full 3x3 lattice is written row-major.
+  - Tensor products are ordered and non-commutative (SIX⊗SCX is not SCX⊗SIX).
+  - Extra keys are forbidden in v1 (additionalProperties false).
+  - Skip binaries. Apply only to text documents.
+  - Prepend header only. Do not rewrite document bodies.
+x-application-law: prepend-only
+x-not: Vibe
+type: object
+additionalProperties: false
+required:
+  - type
+  - title
+  - description
+  - workspaces
+  - services
+  - domains
+  - nodes
+  - cores
+  - fields
+properties:
+  type:
+    type: string
+    enum:
+      - standard-framework-foundational
+      - theory-standard
+      - protocol-spec
+      - standard-section
+      - standard-appendix
+      - implementation-note
+      - overview
+  title:
+    type: string
+    minLength: 1
+  description:
+    type: string
+    minLength: 1
+  workspaces:
+    description: Owning source repos or folders. Default Aurphyx example is rossaedwards/ecosys, aurphyx/ecosys.
+    oneOf:
+      - type: string
+        minLength: 1
+        examples:
+          - rossaedwards/ecosys, aurphyx/ecosys
+      - type: array
+        minItems: 1
+        items:
+          type: string
+          minLength: 1
+        examples:
+          - - rossaedwards/ecosys
+            - aurphyx/ecosys
+  services:
+    description: What runs or consumes this object.
+    $ref: "#/$defs/stringOrStringList"
+  domains:
+    description: Subject, company domains, folders, or repos this object governs.
+    $ref: "#/$defs/stringOrStringList"
+  nodes:
+    description: >
+      Lattice cells. TSLCA uses CORE⊗CORE with Unicode ⊗.
+      Partial lists are allowed. Full 3x3 must be row-major.
+    oneOf:
+      - type: string
+        minLength: 1
+      - type: array
+        minItems: 1
+        items:
+          type: string
+          minLength: 1
+          pattern: "^[A-Za-z0-9._-]+⊗[A-Za-z0-9._-]+$"
+  cores:
+    description: Basis triad. aps-tslca locks SIX, SCX, ICX in that order.
+    oneOf:
+      - type: string
+        minLength: 1
+      - type: array
+        minItems: 1
+        maxItems: 3
+        items:
+          type: string
+          minLength: 1
+  fields:
+    description: Regions, markets, industries, or named field tensors this object occupies.
+    $ref: "#/$defs/stringOrStringList"
+$defs:
+  stringOrStringList:
+    oneOf:
+      - type: string
+        minLength: 1
+      - type: array
+        minItems: 1
+        items:
+          type: string
+          minLength: 1
+examples:
+  - type: protocol-spec
+    title: Harmonic Integrity Thresholds
+    description: Triple-threshold gate that permits creation, integration, or renewal.
+    workspaces: rossaedwards/ecosys, aurphyx/ecosys
+    services:
+      - Audry
+      - SAGES
+    domains:
+      - systems
+      - governance
+    nodes:
+      - SCX⊗SCX
+      - ICX⊗SCX
+    cores:
+      - SCX
+      - ICX
+    fields:
+      - harmonic-integrity-field
+  - type: standard-framework-foundational
+    title: Aurphyx Primordial Standard — Object Knowledge Frontmatter
+    description: Official nine-key YAML header that turns any document into a lattice-addressable object.
+    workspaces: rossaedwards/ecosys, aurphyx/ecosys
+    services:
+      - Audry
+      - Aura
+      - AuraFS
+      - Fuxyez
+      - SAGES
+      - SoulSync
+      - GVS
+    domains:
+      - cognition
+      - xessability
+      - identity
+      - semantics
+      - provenance
+      - ethics
+      - systems
+      - governance
+    nodes:
+      - SIX⊗SIX
+      - SIX⊗SCX
+      - SIX⊗ICX
+      - SCX⊗SIX
+      - SCX⊗SCX
+      - SCX⊗ICX
+      - ICX⊗SIX
+      - ICX⊗SCX
+      - ICX⊗ICX
+    cores:
+      - SIX
+      - SCX
+      - ICX
+    fields:
+      - cognitive-field-tensor
+      - unified-cognitive-field
+      - SAGES-governance-field
+      - harmonic-integrity-field

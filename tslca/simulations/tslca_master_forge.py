@@ -5,7 +5,15 @@ Orchestrates the Three-Squared-Lattice Cognitive Architecture (TSLCA):
 - wires HIF, activation, propagation, stability, continuity, and Balance Manifold
 - exposes a single entrypoint for manuscript-grade simulations.
 
-Enhancements (v2):
+Canon (do not collapse these in engines or exports):
+  cores     SIX, SCX, ICX
+  tensor    F = sum Φ_ij (S_i ⊗ S_j)
+  fusion    U(F) = sum ω_ij Φ_ij     # SUXS-IFO
+  readout   Φ_diag = Tr(F)           # not fusion
+  HIF       cbrt(C·R·A) · Φ(C,R,A)   # not U
+  activation Ψ is a gate on HIF
+
+Enhancements (v3):
 - TSLForgeConfig dataclass for type-safe config injection
 - Structured logging with epoch telemetry (epoch_id, elapsed, steps)
 - validate() dry-run to verify all engine I/O contracts before full epochs
@@ -14,7 +22,7 @@ Enhancements (v2):
 - save_checkpoint() / load_checkpoint() for fault-tolerant long runs
 - reset_engine() / reset_all() for hot-swapping individual engines
 - probe_balance_manifold() for pre/post-run manifold health diagnostics
-- CLI entrypoint: python tslca_master_forge.py --config cfg.json --steps N --out ./out
+- CLI: python tslca_master_forge.py --config cfg.json --steps N --out ./out
 """
 
 from __future__ import annotations
@@ -45,6 +53,10 @@ logging.basicConfig(
     datefmt="%Y-%m-%dT%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
+
+CORES = ("SIX", "SCX", "ICX")
+FUSION_OPERATOR = "SUXS-IFO"
+LATTICE_SHAPE = (3, 3)
 
 
 # ---------------------------------------------------------------------------
@@ -261,6 +273,10 @@ class TSLMasterForge:
             "steps": steps,
             "elapsed_s": round(elapsed, 6),
             "manifold_pre": manifold_pre,
+            "cores": list(CORES),
+            "fusion": FUSION_OPERATOR,
+            "lattice": list(LATTICE_SHAPE),
+            "contraction": "U(F)=sum w_ij Phi_ij",
         }
         logger.info(f"epoch={epoch_id} steps={steps} elapsed={elapsed:.3f}s")
         return result

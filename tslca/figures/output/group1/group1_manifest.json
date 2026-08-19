@@ -1,0 +1,14 @@
+{
+  "group": 1,
+  "title": "Architecture & Lattice Structure",
+  "format": "png",
+  "dpi": 300,
+  "figures": [
+    {
+      "id": "1.7",
+      "name": "fig_suxs_ifo_contraction",
+      "path": "None",
+      "latex": "\\includegraphics[width=\\linewidth]{fig_suxs_ifo_contraction}"
+    }
+  ]
+}

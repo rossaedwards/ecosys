@@ -18,7 +18,8 @@ domains:
   - semantics
   - provenance
   - ethics
-  - systems-governance
+  - systems
+  - governance
 nodes:
   - SIX⊗SIX
   - SIX⊗SCX
@@ -37,19 +38,16 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
 ## ** APS‑TSLCA-SECTION-001 **
-
 ## ** Three-Squared-Lattice Cognitive Architecture **
-
-## ** Version 1.0 (Draft) **
-
+## ** Symbiotic Universal Xessability Standards **
 ## ** Aurphyx Primordial Standard **
-
 ## ** Aurphyx LLC **
-
-## ** SAGES | AGPLv3 | Pro-Existence **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 # 1. Introduction
 

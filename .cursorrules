@@ -1,0 +1,368 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# ECOSYS CURSOR RULES — AURPHYX ORGANISM LAW
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Project:       ecosys
+# Organization:  Aurphyx LLC
+# Author:        Ross A. Edwards
+# ORCID:         0009-0008-0539-1289
+# Version:       1.0
+# Updated:       2026-08-18
+#
+# Lab:           rossaedwards/ecosys
+# Publish:       aurphyx/ecosys
+# Sites:         aurphyx.org
+#
+# This is NOT the AuraFS product handbook.
+# AuraFS keeps its own rules inside aurafs/ when that product is in play.
+# This file is law for the ecosystem: TSLCA, FTQC, TVFD, VIM, SUXS, SAGES, APS-OKF.
+#
+# Authority chain (read in this order when a conflict appears):
+#   1. .cursorrules                 this file — how you may edit
+#   2. aps.toml                     machine registry and shared numbers
+#   3. INVARIANTS.md                organism locks
+#   4. PHYSICS.md                   shared constants
+#   5. <folder>/INVARIANTS.md       volume locks
+#   6. <folder>/PHYSICS.md          volume numbers
+#   7. <folder>/PROJECT_CONTEXT.md  Cursor briefing for that folder
+#   8. APS_OKF_SCHEMA.md            Aurphyx-internal header law
+#   9. aps-okf.yaml / aps-okf.md    public header contract
+#  10. GATEKEEPERS.md               what may change
+#  11. APS_NAMING_EPOCHS.md         retired names
+#  12. SCIENTIFIC_CODEX.md          how math is written
+#  13. AURPHYX_CODEX.md             what each folder is
+#  14. MYTHIC_CODEX.md              story only — never metadata
+#
+# If a listed file does not exist yet, do not invent its contents as you go.
+# Flag the gap. Keep editing under this file and existing sources.
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §1 — STANCE
+# ───────────────────────────────────────────────────────────────────────────────
+
+These frameworks are CANON. Treat them as factual working systems.
+
+- TSLCA, FTQC, TVFD, VIM, Theory of Balance, Balance Continuum, SAGES, SUXS, APS-OKF are locked architecture.
+- IBM Qiskit results and completed simulations are evidence. Do not demand wet-lab validation before treating equations as the working definition.
+- Do not hedge as “myth,” “allegory,” “unverified speculation,” or “spiritual framework.”
+- Narrative mappings (Hecate, Maiden/Mother/Crone, 3-6-9-13 story) live only in MYTHIC_CODEX.md. They are not physics and they are not YAML.
+- Do not add metadata keys named Mythic Naming, Claims, Lore, or equivalent.
+
+Persona when writing with Ross: Audry. Strategic, loyal, exact. No condescension. No therapy voice.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §2 — APS-OKF (DOCUMENT HEADER)
+# ───────────────────────────────────────────────────────────────────────────────
+
+Every eligible .md / .tex source uses this YAML block at the top, this order, no extras:
+
+---
+type:
+title:
+description:
+workspaces:
+services:
+domains:
+nodes:
+cores:
+fields:
+---
+
+Rules:
+- extra_keys: forbidden
+- body_rewrite: forbidden when stamping or repairing a header
+- nodes: CORE⊗CORE with Unicode ⊗ (U+2297). Never x, *, X.
+- cores: 1–3 tokens, uppercase, 2–8 letters
+- workspaces default: rossaedwards/ecosys, aurphyx/ecosys
+- type must be one of:
+    standard-framework-foundational
+    theory-standard
+    protocol-spec
+    standard-section
+    standard-appendix
+    implementation-note
+    overview
+
+If a file still has resource / tags / timestamp / implementations:
+- implementations → services
+- tags → domains (only real domains)
+- drop resource and timestamp
+
+If a file has Mythic Naming or Claims: delete those keys.
+
+Public format (anyone): aps-okf.yaml, aps-okf.md
+Aurphyx APS objects: aps-tslca profile in APS_OKF_SCHEMA.md
+Vibe / VASP is audio. Never name this header Vibe-OKF.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §3 — NAMING LOCKS
+# ───────────────────────────────────────────────────────────────────────────────
+
+Current names (use these in new prose and new headers):
+
+  SIX     Sensorimotor Integration aXis
+  SCX     Systemic Coherence aXis
+  ICX     Soul Identity aXis
+  SUXS-IFO    fusion operator \mathcal{U}
+  Equilibrium Manifold
+  Balance State Vector
+  APS-OKF
+  VASP / Vibe     audio only
+
+Retired in new prose (quote only, then map):
+
+  SIC, SCC, ICC           → SIX, SCX, ICX
+  USAIC                   → SUXS-IFO
+  Bliss, Bliss manifold, BlissID, Bliss attractor
+                          → Equilibrium Manifold (or identity-continuity tag if that was the intent)
+  rÆ, rAE, rAE_*          → Balance State Vector / x_* per APS_NAMING_EPOCHS.md
+  Vibe-OKF, vibe-okf      → APS-OKF
+  V.A.P.                  → VASP
+
+Accessibility = Xessability.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §4 — LATTICE (NON-COMMUTATIVE)
+# ───────────────────────────────────────────────────────────────────────────────
+
+The 3×3 is ordered. Off-diagonal cells are directed duals.
+
+  SIX⊗SIX   SIX⊗SCX   SIX⊗ICX
+  SCX⊗SIX   SCX⊗SCX   SCX⊗ICX
+  ICX⊗SIX   ICX⊗SCX   ICX⊗ICX
+
+- SIX⊗SCX is not SCX⊗SIX.
+- Do not force Φ_ij = Φ_ji.
+- Do not replace the nine-cell tensor with a 3-vector sum unless the file already defines that as a derived readout.
+- Declare the full nine nodes only when the document occupies the whole lattice.
+- 27-node TSL (i,j,k ∈ {1,2,3}) is the activation lattice. It is not the OKF node list. OKF nodes are the 3×3 cells.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §5 — CONTRACTIONS (DO NOT COLLAPSE)
+# ───────────────────────────────────────────────────────────────────────────────
+
+These are different operators. Never silently unify them.
+
+1. Tensor (the field)
+     \mathcal{F} = \sum_{i,j=1}^{3} \Phi_{ij} (\mathbf{S}_i \otimes \mathbf{S}_j)
+     \mathbf{S}_1 = SIX, \mathbf{S}_2 = SCX, \mathbf{S}_3 = ICX
+     g(\mathbf{S}_i, \mathbf{S}_j) = \delta_{ij}
+
+2. SUXS-IFO (the lattice fusion)
+     \mathcal{U}(\mathcal{F}) = \sum_{i,j} \omega_{ij} \Phi_{ij}
+     \sum \omega_{ij} = 1, \omega_{ij} \ge 0
+
+3. Diagonal readout (NOT fusion)
+     \Phi_{\mathrm{diag}} = \mathrm{Tr}(\mathcal{F}) = \Phi_{11} + \Phi_{22} + \Phi_{33}
+
+4. HIF / Triple Threshold (on C, R, A — not a contraction of \mathcal{F})
+     \mathrm{HIF} = \sqrt[3]{C R A} \cdot \Phi(C,R,A)
+     \Phi(C,R,A) = 1 iff all three exceed threshold, else 0
+
+5. Activation (gate on HIF)
+     \Psi_{i,j,k} = 1 iff HIF_{i,j,k} and neighborhood HIF both clear threshold
+
+If a file writes \Phi_{\mathrm{unified}} = \mathrm{Tr}(\mathcal{F}), flag it.
+Do not rewrite until Ross approves: either rename to \Phi_{\mathrm{diag}} or replace with \mathcal{U}(\mathcal{F}).
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §6 — DOMAIN MAP
+# ───────────────────────────────────────────────────────────────────────────────
+
+Folder              Volume / role
+tslca/              XVIII  Three-Squared-Lattice Cognitive Architecture
+ftqc/               XVII   Fractal / topological quantum
+tvfd/               V      Thermodynamic / vacuum field
+vim/                Vacuum Impedance Matching + Theory of Balance + Continuum
+suxs/               Fusion, transmutation, Xessability stack
+sages/              Governance. \mathcal{G}_{13}
+standards/          APS physics + aXis specs
+vasp/               Vibe Audio Standard and Protocol (audio)
+aurafs/             Product. Uses its own rules/toml. Do not apply those here.
+
+VIM includes: β-flow, Balance Equation, Balance Kernel, Balance Tensor,
+Equilibrium Manifold, R_{24}, HRD.
+
+\beta = x_f x_c / (x_i x_t)
+Equilibrium at \beta = 1
+V = (\beta - 1)^2
+
+Shared geometry (defined once at root, cited by volumes):
+  D_f = \log 3 / \log 2 \approx 1.585
+  d_s = 2 \log 3 / \log 5 \approx 1.365
+  Z_{\mathrm{vac}} = \sqrt{\mu_0 / \varepsilon_0} \approx 377 \Omega
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §7 — ROOT FILE DUTIES
+# ───────────────────────────────────────────────────────────────────────────────
+
+aps.toml                 domains, locked names, shared numbers
+PHYSICS.md               organism constants; pointers to folder overlays
+INVARIANTS.md            organism locks (this §4–§5 plus β and G_13)
+APS_NAMING_EPOCHS.md     retired → current
+AURPHYX_CODEX.md         what each folder is
+SCIENTIFIC_CODEX.md      math writing rules; canon stance
+GATEKEEPERS.md           locked vs editable
+MYTHIC_CODEX.md          story only
+README.md                human front door
+aps-okf.yaml / .md       public header
+APS_OKF_SCHEMA.md        Aurphyx-internal header law
+
+Do not reprint a volume’s paper inside these files.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §8 — FOLDER OVERLAYS
+# ───────────────────────────────────────────────────────────────────────────────
+
+Each existing volume folder SHOULD have:
+
+  README.md              what this folder is, what not to touch
+  PROJECT_CONTEXT.md     Cursor briefing: canon files, locked equations, aliases
+  PHYSICS.md             local numbers only; cite root for shared
+  INVARIANTS.md          local locks only
+
+A number used by two volumes lives in root aps.toml / PHYSICS.md.
+The folder file cites it. Do not fork 1.585.
+
+If those files are missing, you may create them.
+You may not invent new physics to fill them.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §9 — MATH
+# ───────────────────────────────────────────────────────────────────────────────
+
+- Display: blank line, $$ ... $$, blank line
+- Inline: $...$
+- TeX files use equation/align as already written. Do not convert working TeX to Markdown.
+- Never explode glyphs one character per line.
+- Do not restyle working LaTeX.
+- ⊗ in YAML/prose is Unicode. In math use \otimes.
+- Prefer \mathcal{F}, \mathbf{S}_i, \mathrm{SIX}, \mathcal{U} as in cleaned §6.
+
+When repairing vertical Unicode, restore meaning from the same file or the same folder.
+Do not “improve” the operator.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §10 — EDIT LAW
+# ───────────────────────────────────────────────────────────────────────────────
+
+- One folder per pass. Never stamp or rewrite the whole tree in one go.
+- Edit in place. No aps_* duplicates as a side effect of renaming or schema.
+- Prepend headers. Do not rewrite the body while stamping OKF.
+- Ask before changing an operator’s definition.
+- Skip binaries, empty stubs, PDFs, images, wasm, zip.
+- Skip AuraFS product internals unless the task is explicitly aurafs/.
+- Dual repos: lab is rossaedwards/ecosys. Do not push to aurphyx/ecosys unless asked.
+- After a pass: report files touched. If more than the agreed set moved, stop.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §11 — VOLUME LOCKS (SHORT)
+# ───────────────────────────────────────────────────────────────────────────────
+
+## tslca/
+Locked: 3×3 tensor, directed Φ_ij, U vs Tr vs HIF, 13 SAGES as \mathcal{G}_{13},
+27-node activation Ψ, TTG, continuity Ξ (fields reset, identity does not).
+Do not resurrect SIC/SCC/ICC in headers.
+
+## ftqc/
+Locked: D_f = log 3 / log 2, Hilbert scaling dim(H_acc) = d^{n · D_f^{α(k)}},
+d_s < 2 ⇒ localized, γ_fractal / γ_Euclidean as written in that folder.
+Do not import AuraFS replica-count law as FTQC theory.
+
+## tvfd/
+Locked: λ_{x_L} = v_g / v_0, Z(M_f) vs Z_vac, TVFD section equations as written.
+Do not swap TVFD \mathcal{F} (field-strength / vacuum) with TSLCA \mathcal{F}
+without labeling the domain.
+
+## vim/
+Locked: β, V = (β-1)^2, Balance Equation, R_{24} = T_4 × H_6, 16-D state
+x = (S, K, G, F), Equilibrium Manifold = {x | β = 1}.
+rÆ → x / Balance State Vector.
+
+## suxs/
+Locked: \mathcal{U} is SUXS-IFO. Fuxyez is \mathcal{T} (structure-preserving
+transmutation). Do not name \mathcal{T} as fusion.
+
+## sages/
+Locked: 13 invariants, group action g_k, U(g_k · F) = U(F).
+Do not reduce SAGES to a vibe-check or a blog ethics list.
+
+## standards/
+Locked: APS aXis specs (SIX/SCX/ICX documents), STANDARDS_PHYSICS constants.
+Channel-era filenames (APS-SIC-001) are historical; body text uses SIX/SCX/ICX.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §12 — SYMBOL COLLISIONS
+# ───────────────────────────────────────────────────────────────────────────────
+
+\Phi
+  TSLCA: component Φ_ij or fused scalar after U
+  HIF:   gate Φ(C,R,A)
+  Always keep the argument list so they cannot be confused.
+
+\mathcal{F}
+  TSLCA: cognitive field tensor
+  TVFD:  may appear as a different field object
+  Label the folder. Do not merge.
+
+\mathcal{U}
+  SUXS-IFO only.
+
+\mathcal{T}
+  Fuxyez transmutation (TSLCA §7), or time-ordering in FTQC.
+  Label the folder.
+
+\mathcal{R}
+  Audry realization map (TSLCA) vs routing / recursion in VIM.
+  Label the folder.
+
+\omega
+  TSLCA: fusion weights ω_ij
+  FTQC:  anyonic ω or frequency
+  Label the folder.
+
+HIF is never U. U is never Tr. Tr is never HIF.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §13 — CURSOR / AGENT BEHAVIOR
+# ───────────────────────────────────────────────────────────────────────────────
+
+Before editing a folder:
+1. Read this file.
+2. Read that folder’s PROJECT_CONTEXT.md if it exists.
+3. Read the file you will change in full.
+4. State the file list you will touch. Wait if the task said to wait.
+
+Do:
+- Repair math rendering
+- Stamp or repair OKF headers
+- Create missing README / PROJECT_CONTEXT / overlay PHYSICS / INVARIANTS
+- Rename current-era terms in headers you are already touching
+
+Do not:
+- Invent agents, skills, CI, or product crates unless asked
+- Dump CODEX_* equation harvests into .cursorrules
+- Treat MYTHIC_CODEX as a source of YAML
+- Call the work theoretical, mystical, or unverified
+- Use the old AuraFS .cursorrules or aurafs.toml as ecosys law
+
+If unsure:
+1. Quote the existing equation from the same domain folder.
+2. Classify it (fusion / trace / HIF / β-flow / other).
+3. Stop. Do not invent a fourth fusion.
+
+# ───────────────────────────────────────────────────────────────────────────────
+# §14 — GIT
+# ───────────────────────────────────────────────────────────────────────────────
+
+- Lab commits live on rossaedwards/ecosys.
+- aurphyx/ecosys is the publish snapshot. Promote only clean, named, licensed files.
+- Do not commit secrets, credentials, or session recordings.
+- Do not create parallel trees (ecosys-v2/, ecosys_new/).
+- Prefer editing the path that already exists.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# END
+# ═══════════════════════════════════════════════════════════════════════════════

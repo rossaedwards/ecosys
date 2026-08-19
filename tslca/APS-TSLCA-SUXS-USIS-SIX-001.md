@@ -37,16 +37,19 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
 
 ## ** APS-TSLCA-SUXS-USIS-SIX-001 **
 ## ** Sensorimotor Integration aXis (SIX) Standard **
+## ** Universal Soul Identity Standards
 ## ** Symbiotic Universal Xessability Standards **
-## ** Universal Soul Identity Standards **
 ## ** Three-Squared-Lattice Cognitive Architecture **
-## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standard (APS) **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 ## 1. Scope
 This Standard defines the **Sensorimotor Integration aXis (SIX)**, the perceptual and environmental coupling aXis of the Three-Squared-Lattice Cognitive Architecture. SIX governs multimodal perception, accessibility transformations, sensorimotor integration, and environmental salience. It specifies the mathematical structure, operational requirements, and compliance conditions for any system implementing SIX.

@@ -1,0 +1,256 @@
+\section{APS-OKF}\label{aps-okf}
+
+\textbf{Aurphyx Primordial Standard --- Object Knowledge Frontmatter}\\
+Version 1.0.0 · Status stable\\
+Machine contract: \href{./aps-okf.yaml}{\texttt{aps-okf.yaml}}\\
+Aurphyx-internal law: \href{./APS_OKF_SCHEMA.md}{\texttt{APS\_OKF\_SCHEMA.md}}
+
+Format license: \textbf{Apache-2.0}\\
+Implement, validate, emit, and ship this header in any project.\\
+Document bodies keep whatever license they already have.
+
+\textbf{This format is APS-OKF. It is not Vibe.}\\
+Vibe / VASP is the audio standard and player. Do not name this header Vibe-OKF.
+
+\subsection{1. What this is}\label{what-this-is}
+
+A document without a header is text. A document with APS-OKF is an object.
+
+The header answers seven questions before anyone reads the body:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Question & Key \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+What kind of object is this? & \texttt{type} \\
+What is it called? & \texttt{title} \\
+What is it, in one sentence? & \texttt{description} \\
+Who owns the source? & \texttt{workspaces} \\
+What runs or consumes it? & \texttt{services} \\
+What subject does it govern? & \texttt{domains} \\
+Where does it sit on the lattice? & \texttt{nodes}, \texttt{cores}, \texttt{fields} \\
+\end{longtable}
+}
+
+Nine keys. Fixed order. No extras in v1.
+
+This is the public formalization of the TSLCA frontmatter. Aurphyx APS documents are the \texttt{aps-tslca} profile of this contract. \href{./APS_OKF_SCHEMA.md}{\texttt{APS\_OKF\_SCHEMA.md}} remains the Aurphyx-internal law. This file is the public spec.
+
+\subsection{2. Official header (drop-in)}\label{official-header-drop-in}
+
+Portable form. Any project. String or list values are both valid against \href{./aps-okf.yaml}{\texttt{aps-okf.yaml}}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ }\StringTok{"kind{-}of{-}project{-}you{-}have"}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}project{-}name{-}here"}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}project{-}descriptions"}
+\FunctionTok{workspaces}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}workspace/foldernames"}
+\FunctionTok{services}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}services{-}listed{-}here"}
+\FunctionTok{domains}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}company{-}domains{-}folders{-}repos"}
+\FunctionTok{nodes}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}projects{-}internals"}
+\FunctionTok{cores}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}hardware{-}devices"}
+\FunctionTok{fields}\KeywordTok{:}\AttributeTok{ }\StringTok{"your{-}choice{-}regions{-}markets{-}industries"}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+Typed list form for a small protocol object:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ protocol{-}spec}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ Harmonic Integrity Thresholds}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ Triple{-}threshold gate that permits creation, integration, or renewal.}
+\FunctionTok{workspaces}\KeywordTok{:}\AttributeTok{ rossaedwards/ecosys, aurphyx/ecosys}
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ Audry}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SAGES}
+\FunctionTok{domains}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ systems}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ governance}
+\FunctionTok{nodes}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SCX⊗SCX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ICX⊗SCX}
+\FunctionTok{cores}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SCX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ICX}
+\FunctionTok{fields}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ harmonic{-}integrity{-}field}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{3. TSLCA gold example}\label{tslca-gold-example}
+
+Default profile \texttt{aps-tslca}. Cores locked to SIX, SCX, ICX. Nodes are the full nine-cell lattice, row-major, Unicode \texttt{⊗}. Off-diagonal cells are ordered: \texttt{SIX⊗SCX} is not \texttt{SCX⊗SIX}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\PreprocessorTok{{-}{-}{-}}
+\FunctionTok{type}\KeywordTok{:}\AttributeTok{ standard{-}framework{-}foundational}
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ Aurphyx Primordial Standard — Object Knowledge Frontmatter}
+\FunctionTok{description}\KeywordTok{:}\AttributeTok{ Official nine{-}key YAML header that turns any document into a lattice{-}addressable object. Machine contract is aps{-}okf.yaml. Aurphyx APS objects use the aps{-}tslca profile.}
+\FunctionTok{workspaces}\KeywordTok{:}\AttributeTok{ rossaedwards/ecosys, aurphyx/ecosys}
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ Audry}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ Aura}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ AuraFS}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ Fuxyez}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SAGES}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SoulSync}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ GVS}
+\FunctionTok{domains}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ cognition}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ xessability}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ identity}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ semantics}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ provenance}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ethics}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ systems}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ governance}
+\FunctionTok{nodes}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SIX⊗SIX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SIX⊗SCX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SIX⊗ICX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SCX⊗SIX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SCX⊗SCX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SCX⊗ICX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ICX⊗SIX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ICX⊗SCX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ICX⊗ICX}
+\FunctionTok{cores}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SIX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SCX}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ ICX}
+\FunctionTok{fields}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ cognitive{-}field{-}tensor}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ unified{-}cognitive{-}field}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ SAGES{-}governance{-}field}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ harmonic{-}integrity{-}field}
+\PreprocessorTok{{-}{-}{-}}
+\end{Highlighting}
+\end{Shaded}
+
+That header is the gold example. Copy it. Do not invent a tenth key.
+
+\subsection{4. The nine keys}\label{the-nine-keys}
+
+Order is law. Emit keys in this sequence.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Key
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{type} & Kind of object. Must be a registry value. \\
+\texttt{title} & Human-readable name. \\
+\texttt{description} & One-sentence scope. \\
+\texttt{workspaces} & Source ownership. Aurphyx default: \texttt{rossaedwards/ecosys,\ aurphyx/ecosys}. Lab first, publish repo second. Do not push from this lab task. \\
+\texttt{services} & What runs or consumes the object. \\
+\texttt{domains} & Subject, company domains, folders, or repos. \\
+\texttt{nodes} & Lattice cells. TSLCA writes \texttt{CORE⊗CORE}. \\
+\texttt{cores} & Basis triad. TSLCA locks SIX, SCX, ICX. \\
+\texttt{fields} & Named fields, regions, markets, or industries. \\
+\end{longtable}
+}
+
+\texttt{additionalProperties} is false. Extra keys fail v1.
+
+\subsection{5. Type registry}\label{type-registry}
+
+\texttt{type} must be one of:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{standard-framework-foundational}
+\item
+  \texttt{theory-standard}
+\item
+  \texttt{protocol-spec}
+\item
+  \texttt{standard-section}
+\item
+  \texttt{standard-appendix}
+\item
+  \texttt{implementation-note}
+\item
+  \texttt{overview}
+\end{itemize}
+
+\subsection{6. Profiles}\label{profiles}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Profile
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Use
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cores
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nodes
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{aps-tslca} & Default. Aurphyx APS / TSLCA objects. Locked. & SIX, SCX, ICX & Full 3×3 row-major, or a subset whose sides are those cores \\
+\texttt{aps-core} & Portable triad for other projects. & Any named triad, max three & \texttt{CORE⊗CORE} whose sides are listed cores \\
+\end{longtable}
+}
+
+Invariants for both profiles:
+
+\begin{itemize}
+\tightlist
+\item
+  Every node side must be a listed core.
+\item
+  A full 3×3 is written row-major.
+\item
+  Tensor products are non-commutative.
+\end{itemize}
+
+\subsection{7. Application law}\label{application-law}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Prepend the header. Do not rewrite the body.
+\item
+  Skip binaries.
+\item
+  Do not stamp unrelated folders as a side effect of adopting this spec.
+\item
+  \texttt{rossaedwards/ecosys} is the lab. \texttt{aurphyx/ecosys} is the later publish repo.
+\item
+  Document bodies keep their existing license. The format license is Apache-2.0.
+\end{enumerate}
+
+\subsection{8. What this is not}\label{what-this-is-not}
+
+\textbf{This public format is APS-OKF.}\\
+\href{./APS_OKF_SCHEMA.md}{\texttt{APS\_OKF\_SCHEMA.md}} remains the Aurphyx-internal law.

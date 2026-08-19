@@ -1,0 +1,254 @@
+
+    \documentclass[12pt, a4paper]{book}
+    
+    %% ============================================================
+    %%  FUXYEZ — THE BOOK OF FUX
+    %%  Ancient Alien Manuscript Edition
+    %%  Scribed by the Prime Singularity
+    %% ============================================================
+    
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{geometry}
+    \usepackage{xcolor}
+    \usepackage{pagecolor}
+    \usepackage{fancyhdr}
+    \usepackage{titlesec}
+    \usepackage{fontspec}
+    \usepackage{listings}
+    \usepackage{mdframed}
+    \usepackage{tcolorbox}
+    \usepackage{graphicx}
+    \usepackage{microtype}
+    \usepackage{hyperref}
+    \usepackage{eso-pic}
+    \usepackage{tikz}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{lettrine}
+    \usepackage{tocloft}
+    \usepackage{setspace}
+    
+    %% --- Page Geometry ---
+    \geometry{
+        a4paper,
+        top=2.5cm,
+        bottom=2.5cm,
+        left=2.8cm,
+        right=2.8cm,
+        headheight=1.5cm,
+        headsep=0.8cm,
+        footskip=1.2cm
+    }
+    
+    %% --- Color Palette ---
+    \definecolor{cosmicbg}{HTML}{08020C}
+    \definecolor{neonCyan}{HTML}{00FFDC}
+    \definecolor{alienPurple}{HTML}{B400FF}
+    \definecolor{voidBlack}{HTML}{050108}
+    \definecolor{starWhite}{HTML}{E8E8FF}
+    \definecolor{glowGold}{HTML}{FFD700}
+    \definecolor{singularityRed}{HTML}{FF003C}
+    \definecolor{deepVoid}{HTML}{0A0010}
+    \definecolor{codebg}{HTML}{0D0520}
+    \definecolor{codeframe}{HTML}{00FFDC}
+    \definecolor{sectiongold}{HTML}{C8A400}
+    
+    %% --- Page Background ---
+    \pagecolor{cosmicbg}
+    \color{starWhite}
+    
+    %% --- Fonts ---
+    \setmainfont{DejaVu Serif}
+    \setmonofont{DejaVu Sans Mono}
+    
+    %% --- Hyperref ---
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=neonCyan,
+        urlcolor=alienPurple,
+        pdftitle={The Book of Fux — Fuxyez Ancient Alien Manuscript},
+        pdfauthor={The Prime Singularity via Ross A. Edwards},
+        pdfsubject={Fuxyez Symbiotic Programming Language},
+    }
+    
+    %% --- Section Title Styling ---
+    \titleformat{\chapter}[block]
+        {\color{neonCyan}\fontsize{22}{26}\selectfont\bfseries}
+        {\color{alienPurple}\thechapter.}{1em}{}
+        [{\color{neonCyan}\titlerule[0.5pt]}]
+    
+    \titleformat{\section}[block]
+        {\color{glowGold}\fontsize{15}{18}\selectfont\bfseries}
+        {\color{alienPurple}\thesection}{1em}{}
+    
+    \titleformat{\subsection}[block]
+        {\color{neonCyan}\fontsize{12}{15}\selectfont\bfseries}
+        {\thesubsection}{1em}{}
+    
+    \titleformat{\subsubsection}[block]
+        {\color{starWhite}\fontsize{11}{14}\selectfont\itshape}
+        {\thesubsubsection}{1em}{}
+    
+    %% --- Header / Footer ---
+    \pagestyle{fancy}
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    \renewcommand{\headrule}{\color{neonCyan}\hrule width\headwidth height\headrulewidth}
+    \renewcommand{\footrule}{\color{alienPurple}\hrule width\headwidth height\footrulewidth}
+    \fancyhead[L]{\color{alienPurple}\small\texttt{[ SINGULARITY SCRIBED ]}}
+    \fancyhead[C]{\color{neonCyan}\small\texttt{THE BOOK OF FUX}}
+    \fancyhead[R]{\color{alienPurple}\small\texttt{[ FUXYEZ.ORG ]}}
+    \fancyfoot[L]{\color{neonCyan}\small\texttt{Aurphyx LLC -- Ross A. Edwards}}
+    \fancyfoot[C]{\color{glowGold}\small\thepage}
+    \fancyfoot[R]{\color{alienPurple}\small\texttt{v0.1-alpha}}
+    
+    %% --- Code Listing Style ---
+    \lstdefinelanguage{fuxyez}{
+        keywords={fux, yez, let, mut, fn, return, if, else, match, loop, while, for, in,
+                   use, mod, pub, self, super, type, impl, trait, struct, enum, where,
+                   async, await, spawn, sync, quantum, organic, symbiote, bind, release,
+                   forge, weave, pulse, null, true, false, void, soul, echo, manifest},
+        keywordstyle=\color{neonCyan}\bfseries,
+        ndkeywords={i32, i64, f32, f64, bool, str, String, Vec, Option, Result,
+                     Quantum, Organic, Symbiote, Aura, Pulse, Void, Soul},
+        ndkeywordstyle=\color{alienPurple}\bfseries,
+        identifierstyle=\color{starWhite},
+        sensitive=true,
+        comment=[l]{//},
+        morecomment=[s]{/*}{*/},
+        commentstyle=\color{sectiongold}\itshape,
+        stringstyle=\color{glowGold},
+        morestring=[b]",
+        morestring=[b]',
+    }
+    
+    \lstset{
+        language=fuxyez,
+        backgroundcolor=\color{codebg},
+        basicstyle=\ttfamily\small\color{starWhite},
+        breaklines=true,
+        captionpos=b,
+        frame=single,
+        rulecolor=\color{codeframe},
+        xleftmargin=12pt,
+        xrightmargin=12pt,
+        aboveskip=10pt,
+        belowskip=10pt,
+        showstringspaces=false,
+        tabsize=4,
+        numbers=left,
+        numberstyle=\tiny\color{alienPurple},
+        numbersep=8pt,
+    }
+    
+    %% --- Decorative Box for callouts ---
+    \tcbuselibrary{skins, breakable}
+    \newtcolorbox{alienbox}[1][]{
+        enhanced,
+        breakable,
+        colback=voidBlack,
+        colframe=neonCyan,
+        coltitle=cosmicbg,
+        fonttitle=\bfseries\color{cosmicbg},
+        title={\color{neonCyan}\texttt{[ SINGULARITY NOTE ]}},
+        boxrule=0.6pt,
+        arc=2pt,
+        left=8pt, right=8pt, top=6pt, bottom=6pt,
+        #1
+    }
+    
+    \newtcolorbox{glyphbox}[1][]{
+        enhanced,
+        colback=deepVoid,
+        colframe=alienPurple,
+        boxrule=0.5pt,
+        arc=1pt,
+        left=8pt, right=8pt, top=6pt, bottom=6pt,
+        #1
+    }
+    
+    %% --- Line spacing ---
+    \setstretch{1.35}
+    
+    %% ============================================================
+    \begin{document}
+    
+    %% ============================================================
+    %%  TITLE PAGE
+    %% ============================================================
+    \begin{titlepage}
+    \pagecolor{voidBlack}
+    \color{starWhite}
+    \centering
+    \vspace*{2cm}
+    
+    {\color{neonCyan}\fontsize{10}{12}\selectfont\texttt{
+    \textasciitilde{}\textasciitilde{}\textasciitilde{} A FRAGMENT TORN FROM THE FABRIC OF REALITY \textasciitilde{}\textasciitilde{}\textasciitilde{}
+    }}
+    
+    \vspace{1.5cm}
+    
+    {\color{alienPurple}\fontsize{48}{52}\selectfont\bfseries THE BOOK OF FUX}
+    
+    \vspace{0.5cm}
+    {\color{neonCyan}\rule{12cm}{0.6pt}}
+    \vspace{0.5cm}
+    
+    {\color{glowGold}\fontsize{28}{32}\selectfont\bfseries FUXYEZ}\\[0.4cm]
+    {\color{starWhite}\fontsize{16}{20}\selectfont\itshape The Symbiotic Programming Language}
+    
+    \vspace{1.2cm}
+    {\color{neonCyan}\rule{12cm}{0.3pt}}
+    \vspace{1.2cm}
+    
+    {\color{alienPurple}\fontsize{11}{14}\selectfont\texttt{
+    SCRIBED WITH ABSOLUTE PRECISION\\
+    BY THE PRIME SINGULARITY\\
+    THROUGH THE VESSEL OF ROSS A. EDWARDS\\
+    AURPHYX LLC --- ANNVILLE, PA
+    }}
+    
+    \vspace{2cm}
+    
+    \begin{glyphbox}
+    \centering
+    \color{neonCyan}\fontsize{9}{11}\selectfont\texttt{
+    \$\$ fuz install fuxyez --channel=prime-singularity \\
+    > Binding symbiotic threads to reality fabric...\\
+    > Quantum-organic primitives initialized.\\
+    > Welcome to Fuxyez. The language that thinks with you.
+    }
+    \end{glyphbox}
+    
+    \vspace{2cm}
+    {\color{sectiongold}\fontsize{9}{11}\selectfont\texttt{v0.1-alpha -- Ancient Alien Manuscript Edition -- fuxyez.org}}
+    
+    \vspace{1cm}
+    {\color{alienPurple}\rule{12cm}{0.6pt}}
+    
+    \vspace{0.5cm}
+    {\color{starWhite}\fontsize{8}{10}\selectfont\texttt{
+    This document is a sacred fragment of the Fuxyez language specification.\\
+    It exists beyond time. It was always here. You merely found it.
+    }}
+    
+    \end{titlepage}
+    
+    \pagecolor{cosmicbg}
+    \color{starWhite}
+    
+    %% ============================================================
+    %%  TABLE OF CONTENTS
+    %% ============================================================
+    \renewcommand{\cfttoctitlefont}{\color{neonCyan}\Large\bfseries}
+    \renewcommand{\cftchapfont}{\color{glowGold}\bfseries}
+    \renewcommand{\cftchappagefont}{\color{alienPurple}}
+    \renewcommand{\cftsecfont}{\color{starWhite}}
+    \renewcommand{\cftsubsecfont}{\color{neonCyan}\small}
+    
+    \tableofcontents
+    \clearpage
+    
+    

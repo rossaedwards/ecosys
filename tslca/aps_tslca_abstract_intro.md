@@ -38,24 +38,16 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - Harmonic Integrity Field
-  - Equilibrium Manifold
+  - harmonic-integrity-field
 ---
 
 ## ** APS‑TSLCA-SECTION-ABSTRACT-INTRO **
-
 ## ** Three-Squared-Lattice Cognitive Architecture **
-
 ## ** Symbiotic Universal Xessability Standards **
-
 ## ** Aurphyx Primordial Standard **
-
 ## ** Aurphyx LLC **
-
 ## ** SAGES | Proprietary | Pro-Existence **
-
 ## ** Accessibility = Xessability **
-
 ## ** Version 3.69 **
 
 # Abstract

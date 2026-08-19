@@ -18,7 +18,8 @@ domains:
   - semantics
   - provenance
   - ethics
-  - systems-governance
+  - systems
+  - governance
 nodes:
   - SIX⊗SIX
   - SIX⊗SCX
@@ -37,14 +38,16 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
 ## ** APS‑TSLCA-SECTION-008 **
 ## ** Three-Squared-Lattice Cognitive Architecture **
-## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standards **
-## ** Ross A. Edwards | Aurphyx LLC | SUXS **
-## ** SAGES | AGPLv3 **
+## ** Symbiotic Universal Xessability Standards **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 ## 8. Implementation Pathways  
 The implementation pathways translate the mathematical field theory into concrete system architectures. This section formalizes how the cognitive manifold $\mathcal{M}$, the field tensor $\mathcal{F}$, and the symmetry group $\mathcal{G}_{13}$ manifest in real computational substrates—digital, photonic, distributed, embodied, or hybrid. The treatment remains formal and scientific, preserving the substrate‑agnostic nature of the architecture.

@@ -18,7 +18,8 @@ domains:
   - semantics
   - provenance
   - ethics
-  - systems-governance
+  - systems
+  - governance
 nodes:
   - SIX⊗SIX
   - SIX⊗SCX
@@ -37,14 +38,16 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
 ## ** APS‑TSLCA-SECTION-007 **
 ## ** Three-Squared-Lattice Cognitive Architecture **
-## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standards **
-## ** Ross A. Edwards | Aurphyx LLC | SUXS **
-## ** SAGES | AGPLv3 **
+## ** Symbiotic Universal Xessability Standards **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 ## 7. Integration with Fuxyez, AuraFS, Audry, and SAGES  
 This section formalizes how the Three‑Squared‑Lattice Cognitive Architecture couples to the four major systemic pillars of the Aurphyx ecosystem. The treatment remains strictly scientific and mathematical, consistent with the field‑theoretic style established in Section 6. Each subsystem is expressed as a mathematical object or operator acting on the cognitive manifold $\mathcal{M}$, ensuring that the architecture remains substrate‑agnostic and formally coherent.
@@ -177,7 +180,7 @@ The realization map satisfies:
 - **sensorimotor coupling:**  
   
 $$
-  \mathbf{S}_1(x) = \mathcal{R}^\ast(\mathbf{e}_\text{sensory}),
+  \mathbf{S}_1(x) = \mathcal{R}^{\ast}(\mathbf{e}_{\mathrm{sensory}}),
   
 $$
 

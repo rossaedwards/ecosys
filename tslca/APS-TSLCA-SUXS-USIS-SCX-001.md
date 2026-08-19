@@ -37,16 +37,19 @@ fields:
   - cognitive-field-tensor
   - unified-cognitive-field
   - SAGES-governance-field
-  - HIF
+  - harmonic-integrity-field
 ---
 
 ## ** APS-TSLCA-SUXS-USIS-SCX-001 **
 ## ** Systemic Coherence aXis (SCX) Standard **
+## ** Universal Soul Identity Standards
 ## ** Symbiotic Universal Xessability Standards **
-## ** Universal Soul Identity Standards **
 ## ** Three-Squared-Lattice Cognitive Architecture **
-## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standard (APS) **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 ## 1. Scope
 This Standard defines the **Systemic Coherence aXis (SCX)**, the semantic and invariance-preserving aXis of the Three-Squared-Lattice Cognitive Architecture. SCX governs semantic structure, global coherence, invariant enforcement, reasoning stability, and the propagation of meaning across the cognitive manifold. It specifies the mathematical model, normative requirements, compliance conditions, and integration pathways for any system implementing SCX.

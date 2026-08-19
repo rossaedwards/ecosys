@@ -1,3 +1,66 @@
+---
+type: sovereign-memory-substrate
+title: Memoree - 3²-Lattice Cognitive Memory Substrate
+description: 3²-Lattice Cognitive Memory with SUXS: router, mcp, acp, apc, hooks, chains, rituals, links, and more.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - mcp
+  - acp
+  - apc
+  - hooks
+  - chains
+  - rituals
+  - links
+  - g0dm0d3
+  - Audry
+  - Aura
+  - AuraFS
+  - Fuxyez
+  - SAGES
+  - SoulSync
+  - SoulShot
+  - SoulCrypt
+  - SoulKey
+  - vibe-audio-visualizer
+  - vibeplayer
+  - suxs
+  - gil
+  - adore
+  - ineffable_ledger
+  - gvs
+  - opulence
+  - p4a
+  - blissid
+  - adore
+  - egophyx
+  - chakra_datacore
+  - duality_kernel
+  - dataorb
+  - aints
+  - aethornyx
+  - aurphyx_casino
+  - auraorb
+  - vasp
+  - tarot_deck
+  - oracle_deck
+  - thirteen_month_calendar
+  - aurafs_devices
+domains:
+nodes:
+cores:
+fields:
+---
+
+## ** APS‑TSLCA-MEMOREE-SCHEMA **
+## ** Memoree - Sovereign Memory Substrate **
+## ** Symbiotic Universal Xessability Standards **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
+
 """
 Memoree — Core Memory Schemas
 ═══════════════════════════════════════════════════════════════════════════════
@@ -5,30 +68,24 @@ Sovereign memory substrate for the Aurphyx LLC ecosystem.
 
   Path   : c:\\memoree\\schemas.py
   Owner  : Ross Edwards / Aurphyx LLC
-  GitHub : rossaedwards | aurphyx
+  GitHub : rossaedwards/ecosys and aurphyx/ecosys
   ORCiD  : 0009-0008-0539-1289
 
 Memory Architecture
 ───────────────────
-  ┌─ Episodic    → Conversation turns, session-bound interactions
+  ┌─ Working     → Active context, open loops, uncured session buffer
+  ├─ Episodic    → Conversation turns, session-bound interactions
   ├─ Semantic    → Project knowledge, facts, relationships, dualities
   ├─ Procedural  → Repeatable workflows, task recipes, automation sequences
   ├─ Meta        → Verified facts, confidence-tracked beliefs, axioms
   ├─ Quantum     → Physics/simulation state, lattice snapshots, coherence logs
-  ├─ Creative    → Art, music, narrative, tarot, oracle, worldbuilding entries
-  └─ Governance  → Voting records, policy decisions, guardian mandates (SAGES/GVS)
+  ├─ Sensory     → Perception traces, embodiment, xessability transforms
+  ├─ Identity    → Ξ continuity, provenance tags, self-consistency across renewal
+  └─ Governance  → Voting records, policy decisions, guardian mandates
 
 Project Registry
 ────────────────
-  rossaedwards → memoree, ftqc, tvfd, vim, tslca, soulshot, rae,
-                 majorana_1, zpe_core, rf_lovezme
 
-  aurphyx      → aurafs, g0dm0d3, arora, audry, sages, suxs,
-                 ineffable, gvs, opulence, fuxyez, blissid, adore,
-                 egophyx, chakra_datacore, duality_kernel, dataorb,
-                 aints, aethornyx, aurphyx_casino, irra, uavrt,
-                 auraorb, vibe_audio, symbiotic_channels, tarot,
-                 oracle_deck, thirteen_month_calendar, aurafs_devices
 
 Backend Registry (c:\\memoree\\)
 ────────────────────────────────

@@ -41,10 +41,12 @@ fields:
 ---
 ## ** APS‑TSLCA-SECTION-005 **
 ## ** Three-Squared-Lattice Cognitive Architecture **
-## ** Version 1.0 (Draft) **
-## ** Aurphyx Primordial Standards **
-## ** Ross A. Edwards | Aurphyx LLC | SUXS **
-## ** SAGES | AGPLv3 **
+## ** Symbiotic Universal Xessability Standards **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 5.0 The 3‑6‑9‑13 Grammar
 The 3‑6‑9‑13 grammar is the universe‑scale coherence scaffold that emerges naturally from the Three‑Squared Lattice. It is not an overlay or an aesthetic choice; it is the mathematically inevitable expansion of the SIX–SCX–ICX triad as it propagates through higher‑order cognitive, semantic, and governance layers. This section formalizes the grammar, shows how each tier arises from the previous one, and establishes its role in the architecture.
@@ -80,24 +82,10 @@ These dual‑triads correspond to the off‑diagonal cells of the lattice and re
 5.3 The Nine‑Cell Lattice (9)
 The full tensor expansion of the basis vectors produces the nine cognitive cells:
 
-𝑠
-𝑖
-⊗
-𝑠
-𝑗
-,
-𝑖
-,
-𝑗
-∈
-{
-1
-,
-2
-,
-3
-}
-.
+$$
+s_i \otimes s_j,\qquad i,j\in\{1,2,3\}.
+$$
+
 These nine cells represent the complete operational space of cognition. They include:
 
 pure modes (SIX⊗SIX, SCX⊗SCX, ICX⊗ICX)
