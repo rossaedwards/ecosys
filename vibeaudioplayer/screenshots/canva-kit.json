@@ -1,0 +1,35 @@
+{
+  "url": "http://127.0.0.1:8080/brand",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Vibe Audio Player",
+      "hasCanvas": false,
+      "bodyTextLen": 8017,
+      "bodyTextHash": "e557b59d9db083e5c1ae575974dedce6fa8d2b5a581600b8309ca3d7cb2203ab",
+      "bodyTextPrefix": "CANVA BUSINESS KIT VASP Visualizer Zip Short VASP summary Vibe A",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/canva-kit.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Vibe Audio Player",
+      "hasCanvas": false,
+      "bodyTextLen": 8017,
+      "bodyTextHash": "e557b59d9db083e5c1ae575974dedce6fa8d2b5a581600b8309ca3d7cb2203ab",
+      "bodyTextPrefix": "CANVA BUSINESS KIT VASP Visualizer Zip Short VASP summary Vibe A",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/canva-kit-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "verdictFile": "/workspace/screenshots/canva-kit.json"
+}

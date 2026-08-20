@@ -1,0 +1,304 @@
+## VASP Project Summary
+
+```markdown
+# Vibe Audio Standard and Protocol (VASP)
+
+## Overview
+
+**Vibe Audio Standard and Protocol (VASP), Version 3.69** is an Aurphyx metadata standard for describing the experiential identity of audio.
+
+Traditional music metadata records bibliographic facts such as title, artist, album, genre, and identifiers. VASP expands that model by describing how audio is structured, feels, appears, moves, fits a situation, and connects to cultural lineage.
+
+VASP organizes audio metadata as a complete **nine-pillar profile**. It is designed to support music analysis, visualizers, recommendation systems, live performance environments, creative tools, audio applications, and future Aurphyx ecosystem integrations.
+
+## Core Principle
+
+A complete VASP profile contains:
+
+- `VAP_VERSION`
+- `IDENTITY`
+- `PILLARS`
+
+`IDENTITY` includes at minimum:
+
+- `TITLE`
+- `ARTIST`
+
+`PILLARS` always contains all nine canonical pillar objects:
+
+```json
+[
+  "STRUCTURAL",
+  "TONAL",
+  "TIMBRAL",
+  "LINGUISTIC",
+  "AFFECTIVE",
+  "CONTEXTUAL",
+  "PHOTOMETRIC",
+  "KINETIC",
+  "GENEALOGICAL"
+]
+```
+
+Inner metadata fields may be populated, unknown, pending, or unavailable depending on available source material and analysis confidence.
+
+## The Nine Pillars
+
+| # | Pillar | Archetype | Purpose |
+|---:|---|---|---|
+| 1 | `STRUCTURAL` | The Skeleton | Tempo, time signature, rhythmic behavior, arrangement, and percussive DNA |
+| 2 | `TONAL` | The Flesh | Key, harmony, melody, dissonance, pitch, and tuning |
+| 3 | `TIMBRAL` | The Skin | Spectral balance, fidelity, spatial character, production aesthetic, and texture |
+| 4 | `LINGUISTIC` | The Voice | Lyrics, semantic content, vocal style, language, and explicit-content classification |
+| 5 | `AFFECTIVE` | The Heart | Valence, arousal, dominance, emotional complexity, and tension movement |
+| 6 | `CONTEXTUAL` | The Scene | Scenario, setting, activity, intent, time of day, weather, and environmental match |
+| 7 | `PHOTOMETRIC` | The Eye | Color palette, visual texture, brightness, lighting behavior, and synchronization output |
+| 8 | `KINETIC` | The Body | Entrainment, movement response, energy expenditure, and physical activity metadata |
+| 9 | `GENEALOGICAL` | The Roots | Era, sampling lineage, genre tree, cultural context, and tribe alignment |
+
+## VASP Visualizer
+
+The VASP Visualizer is an Android-first creative application that transforms audio activity and VASP metadata into an interactive visual scene.
+
+The application combines two layers:
+
+1. **Live audio layer**
+   - Waveform
+   - Frequency spectrum
+   - Amplitude
+   - Beat pulse
+   - Energy response
+
+2. **VASP metadata layer**
+   - Visual palette
+   - Scene intensity
+   - Motion character
+   - Particle density
+   - Geometry
+   - Texture
+   - Contextual preset behavior
+
+The `PHOTOMETRIC` pillar is the primary controller for color, lighting, fades, and visual texture. Other pillars contribute creative influences to motion, geometry, density, energy, and scene behavior.
+
+VASP visual mappings are creative metadata mappings. They are not medical, psychological, biometric, or scientific diagnoses.
+
+## Aurphyx Context
+
+VASP belongs to the Aurphyx ecosystem and aligns with:
+
+- Symbiotic Universal Xessability Standards
+- Three-Squared-Lattice Cognitive Architecture
+- Aurphyx Primordial Standard
+- Aurphyx LLC
+- SAGES | Proprietary | Pro-Existence
+- Accessibility = Xessability
+
+## Initial Android Goal
+
+The first VASP Visualizer release should provide:
+
+- A premium real-time mobile audio visualizer
+- A built-in Version 3.69 VASP demo profile
+- A nine-pillar metadata inspector
+- Visual scene controls
+- Animated waveform, spectrum, particles, orb, or mandala geometry
+- Settings for color intensity, motion, particles, spectrum, and beat pulse
+- A foundation for future real-time analysis and VASP JSON import/export
+```
+
+## Grok Build Prompt
+
+```text
+Build an Android-first mobile app named **VASP Visualizer**.
+
+VASP means **Vibe Audio Standard and Protocol**, Version 3.69. It is a nine-pillar audio metadata system that describes the experiential identity of music.
+
+The app is a premium real-time music visualizer with a futuristic Aurphyx-inspired visual style. Make it feel cinematic, dark, responsive, polished, and touch-first for Android phones.
+
+Visual direction:
+- Near-black background
+- Deep-space gradients
+- Neon indigo, violet, teal, electric blue, and subtle amber accents
+- Glassmorphism cards with soft glow
+- Smooth animated motion
+- No logos, copyrighted artwork, or artist imagery
+
+Create a working interactive Android/mobile app prototype.
+
+## Main Screen
+
+Create a full-screen visualizer screen with:
+
+- Large animated central orb, mandala, or energy field
+- Animated waveform
+- Frequency spectrum bars
+- Soft reactive particle field
+- Beat pulse animation
+- Background aurora gradient
+- Play/pause button
+- Audio-reactivity slider or intensity control
+- Bottom now-playing card
+
+The now-playing card should show:
+
+- Track title: `Night Drive Protocol`
+- Artist: `Aurphyx Demo`
+- BPM: `128`
+- Key: `A Minor`
+- Mood: `Focused / High Energy`
+- Active scene: `Night Drive`
+
+Use simulated audio energy so the visualizer visibly reacts even if microphone or device-audio access is unavailable.
+
+## VASP Profile Sheet
+
+Add a bottom sheet called **VASP Profile**.
+
+It must display all nine pillars as selectable cards or tabs:
+
+1. Structural — The Skeleton
+2. Tonal — The Flesh
+3. Timbral — The Skin
+4. Linguistic — The Voice
+5. Affective — The Heart
+6. Contextual — The Scene
+7. Photometric — The Eye
+8. Kinetic — The Body
+9. Genealogical — The Roots
+
+Selecting a pillar should open a compact detail panel.
+
+Use this built-in demo profile:
+
+- Structural:
+  - 128 BPM
+  - 4/4 time
+  - Machine-lock groove
+  - Strong kick pulse
+
+- Tonal:
+  - A Minor
+  - Moderate dissonance
+  - Dark melodic contour
+
+- Timbral:
+  - Bright and airy
+  - Hi-fi
+  - Wide stereo image
+  - Glassy electronic texture
+
+- Linguistic:
+  - Instrumental
+  - No lyrics
+  - Clean content tier
+
+- Affective:
+  - Low-to-neutral valence
+  - High arousal
+  - Focused, nocturnal, energetic
+
+- Contextual:
+  - Night drive
+  - Late night
+  - Solo listening
+  - City lights / rain atmosphere
+
+- Photometric:
+  - Primary color: `#4B0082`
+  - Secondary color: `#008080`
+  - Cool palette temperature
+  - Smooth visual fades
+  - Indigo and teal light behavior
+
+- Kinetic:
+  - High movement energy
+  - Strong beat entrainment
+  - MET score: 6
+  - Head-nod and forward-drive response
+
+- Genealogical:
+  - Electronic
+  - Synthwave-inspired
+  - Contemporary
+  - Digital nocturnal aesthetic
+
+## Visual Mapping
+
+Use the Photometric pillar as the main scene controller:
+
+- Primary Hex controls dominant orb and background color
+- Secondary Hex controls particles, waveform, and spectrum highlights
+- Palette temperature controls cool vs warm mood
+- Brightness and fade values control visual intensity and transitions
+
+Use other pillars as creative influences:
+
+- Structural controls pulse speed, waveform timing, and spectrum motion
+- Tonal controls geometry style and subtle harmonic color shifting
+- Timbral controls particle density, blur, grain, and edge sharpness
+- Affective controls contrast, intensity, and movement energy
+- Contextual controls the current scene preset and ambient background behavior
+- Kinetic controls impact scale and beat response
+- Genealogical controls optional theme accents
+
+These are creative visual mappings only. Do not present them as medical, psychological, biometric, or scientific diagnoses.
+
+## Settings Screen
+
+Create a settings screen with:
+
+- Color intensity slider
+- Motion intensity slider
+- Particle effects toggle
+- Spectrum bars toggle
+- Beat pulse toggle
+- Reduced motion toggle
+- Reset to demo profile button
+
+## Technical Requirements
+
+- Design for Android phone screens first
+- Use clean reusable UI components
+- Use a responsive portrait layout
+- Keep animations smooth and performant
+- Use simulated audio activity for the initial prototype
+- Structure the data model around:
+
+```json
+{
+  "VAP_VERSION": "3.69",
+  "IDENTITY": {
+    "TITLE": "Night Drive Protocol",
+    "ARTIST": "Aurphyx Demo"
+  },
+  "PILLARS": {
+    "STRUCTURAL": {},
+    "TONAL": {},
+    "TIMBRAL": {},
+    "LINGUISTIC": {},
+    "AFFECTIVE": {},
+    "CONTEXTUAL": {},
+    "PHOTOMETRIC": {},
+    "KINETIC": {},
+    "GENEALOGICAL": {}
+  }
+}
+```
+
+- Do not require sign-in, accounts, backend services, payments, or cloud storage
+- Build the visualizer so future versions can add:
+  - Local audio file selection
+  - Real microphone/device audio analysis
+  - VASP JSON import/export
+  - User-created visual presets
+  - GPU shader visual effects
+  - Android media-session integration
+
+Success criteria:
+
+- The app opens directly into a beautiful animated visualizer
+- The visualizer visibly responds to simulated music.
+- The VASP Profile sheet shows all nine pillars
+- The user can change visual settings and see immediate effects
+- The design feels polished enough for an Android prototype demo
+```

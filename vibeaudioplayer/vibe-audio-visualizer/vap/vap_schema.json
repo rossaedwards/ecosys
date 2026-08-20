@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vibe Audio Protocol (V.A.P.)",
+  "description": "Universal Metadata Standard for Experiential Audio
+Identity",
+  "type": "object",
+  "required": ["VAP_VERSION", "IDENTITY", "PILLARS"],
+  "properties": {
+    "VAP_VERSION": {
+      "type": "string",
+      "const": "3.1"
+    },
+    "IDENTITY": {
+      "type": "object",
+      "properties": {
+        "TITLE": { "type": "string" },
+        "ARTIST": { "type": "string" },
+        "ISRC": { "type": "string" },
+        "SOURCE_DNA": { "type": "string" }
+      },
+      "required": ["TITLE", "ARTIST"]
+    },
+    "PILLARS": {
+      "type": "object",
+      "description": "The 9-Dimensional Holographic Identity",
+      "properties": {
+        "STRUCTURAL": {
+          "description": "Pillar 1: Skeleton (Time/Rhythm)",
+          "type": "object",
+          "properties": {
+            "BPM_RAW": { "type": "number" },
+            "GROOVE_QUANTIZATION": { "type": "string" }
+          }
+        },
+        "TONAL": {
+          "description": "Pillar 2: Flesh (Harmony/Pitch)",
+          "type": "object",
+          "properties": {
+            "KEY": { "type": "string" },
+            "DISSONANCE_RATING": { "type": "number", "minimum": 0,
+"maximum": 1 }
+          }
+        },
+        "TIMBRAL": {
+          "description": "Pillar 3: Skin (Texture/Physics)",
+          "type": "object",
+          "properties": {
+            "SPECTRAL_PHYSICS": { "type": "string" },
+```
+
+```
+            "FIDELITY": { "type": "string" }
+          }
+        },
+        "LINGUISTIC": {
+          "description": "Pillar 4: Voice (Semantics)",
+          "type": "object",
+          "properties": {
+            "SEMANTIC_CONTENT": { "type": "object" },
+            "EXPLICIT_TIER": { "type": "string", "enum": ["CLEAN",
+"MILD", "EXPLICIT", "SEVERE"] }
+          }
+        },
+        "AFFECTIVE": {
+          "description": "Pillar 5: Heart (Emotion)",
+          "type": "object",
+          "properties": {
+            "VALENCE": { "type": "number", "minimum": -1, "maximum": 1
+},
+            "AROUSAL": { "type": "number", "minimum": 0, "maximum": 1
+}
+          }
+        },
+        "CONTEXTUAL": {
+          "description": "Pillar 6: Scene (Scenario)",
+          "type": "object",
+          "properties": {
+            "SCENARIO_ENGINE": { "type": "object" },
+            "INTENT_VECTORS": { "type": "object" }
+          }
+        },
+        "PHOTOMETRIC": {
+          "description": "Pillar 7: Eye (Light/Color)",
+          "type": "object",
+          "properties": {
+            "PRIMARY_HEX": { "type": "string", "pattern":
+"^#[0-9a-fA-F]{6}$" },
+            "PALETTE_TEMP": { "type": "string" }
+          }
+        },
+        "KINETIC": {
+          "description": "Pillar 8: Body (Bio-Entrainment)",
+          "type": "object",
+          "properties": {
+            "TARGET_HR_ZONE": { "type": "string" },
+            "MET_SCORE": { "type": "number" }
+          }
+        },
+        "GENEALOGICAL": {
+```
+
+```
+          "description": "Pillar 9: Roots (Tribe)",
+          "type": "object",
+          "properties": {
+            "TRIBE_ALIGNMENT": { "type": "object" }
+          }
+        }
+      },
+      "required": ["STRUCTURAL", "AFFECTIVE", "PHOTOMETRIC",
+"KINETIC"]
+    }
+  }
+}
+```
