@@ -35,6 +35,7 @@ UI: Vite 8 + React 19 (`package.json` name still `vibeaudio`). Desktop: Tauri.
 | Piece | Where | Truth |
 | --- | --- | --- |
 | Schema 3.69 | `../vasp/VASP_Official Schema.md`, `schema/` | Required nine pillars |
+| Tribe voter copy | [`../vasp/VibeTribe_Pillarz.md`](../vasp/VibeTribe_Pillarz.md) | 9×13 questions; overlay, not extra schema keys |
 | Scoring reference | `VASP_Scoring Engine.py.md` | Python `generate_vap_profile` |
 | Spotify mapper | `vasp_sdk-api_streaming.md` | `VapEngine::transform_spotify` (legacy input) |
 | Golden fixtures | Cannibal / Céline / Stuca under `../vasp/` and copies here | Hand-authored, complete |
@@ -63,3 +64,4 @@ Same invariant as VAP: readable chrome, high contrast, no assumption that a dens
 - [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md)
 - [../vibeaudioplayer/](../vibeaudioplayer/)
 - [../vasp/](../vasp/)
+- [Vibe Tribe Pillarz](../vasp/VibeTribe_Pillarz.md) — VASP 3.69 voter copy (canon)

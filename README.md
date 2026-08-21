@@ -33,26 +33,16 @@
   [![X](https://img.shields.io/badge/X-@Aurphyx-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Aurphyx)
   [![Website](https://img.shields.io/badge/Web-aurphyx.com-7B2FBE?style=flat-square&logo=googlechrome&logoColor=white)](https://aurphyx.com)
 
-  <br/>
-
-  <!-- ── Row 3: Status ── -->
-  [![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen?style=flat-square)](https://github.com/rossaedwards/main)
-  [![Figures](https://img.shields.io/badge/Figures-22%20PNG%20Verified-success?style=flat-square)](https://github.com/rossaedwards/main/tree/main/tvfd/figures)
-  [![Fixed Point](https://img.shields.io/badge/λ*-0.72%20Fixed%20Point%20Locked-FFD700?style=flat-square)](https://github.com/rossaedwards/main/blob/main/tvfd/tvfd_section-iv.md)
-  [![Status](https://img.shields.io/badge/Status-Pre--Experimental%20|%20Simulations%20Complete-orange?style=flat-square)](https://github.com/rossaedwards/main)
-  [![Projects](https://img.shields.io/badge/Active%20Projects-18-blueviolet?style=flat-square)](https://github.com/Aurphyx)
-
-</div>
-
+ <br/>
 ---
 
 | | |
 |---|---|
 | **Author** | Ross A. Edwards |
-| **Affiliation** | Aurphyx LLC, Erie, PA |
+| **Affiliation** | Aurphyx LLC
 | **Email** | [ross@aurphyx.org](mailto:ross@aurphyx.org) |
 | **ORCiD** | [0009-0008-0539-1289](https://orcid.org/0009-0008-0539-1289) |
-| **GitHub Personal** | [github.com/rossaedwards](https://github.com/rossaedwards) |
+| **GitHub** | [github.com/rossaedwards](https://github.com/rossaedwards) |
 | **GitHub Org** | [github.com/Aurphyx](https://github.com/Aurphyx) |
 
 ---

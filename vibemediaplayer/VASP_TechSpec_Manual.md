@@ -1,4 +1,4 @@
-# 
+---
 
     type: standard-metadata-software-service
     
@@ -6,7 +6,7 @@
     
     workspaces: rossaedwards/ecosys, aurphyx/ecosys
     
-    services: 
+    services: vap-serv, vibeaudioplayer, vmp
     
     domains: 
     
@@ -15,10 +15,12 @@
     cores: 
     
     fields: 
-
+---
 ## ** APS‑TSLCA-SUXS-VASP-TECHMAN **
 
 ## ** VASP Technical Specification and Manual **
+
+## ** Vibe Audio Standard and Protocol **
 
 ## ** Symbiotic Universal Xessability Standards **
 
@@ -34,11 +36,9 @@
 
 ## ** Version 3.69 **
 
-## ** Date: October 28, 2025 **
-
 ## **1. Introduction**
 
-The Vibe Audio Protocol (V.A.P.) is a universal metadata standard designed to capture the holographic identity of audio assets. Unlike legacy standards (ID3) which focus on bibliographic data, V.A.P. focuses on **Experiential Data** —quantifying the structural, emotional, and environmental properties of sound. 
+The Vibe Audio Standard & Protocol (V.A.P.) is a universal metadata standard designed to capture the holographic identity of audio assets. Unlike legacy standards (ID3) which focus on bibliographic data, V.A.P. focuses on **Experiential Data** —quantifying the structural, emotional, and environmental properties of sound. 
 
 This document defines the **9-Pillar Taxonomy** and the **Logic Architecture** required to implement V.A.P. in software systems. It uses TSLCA.
 

@@ -158,9 +158,9 @@ g0dm0d3 DE, Audry 4dm1n, SoulShot/SoulKey hardware, GVS, Opulence/P4A in the APK
 
 | Folder | SUMZ file | Heat |
 |---|---|---|
-| `vibeaudioplayer/` | yes | **P1** |
-| `vibeplayer/` | yes | **P1** |
-| `fuxyez/` | yes | **P1** |
+| `vibeaudioplayer/` | yes | **P1** | Android-iOS-RaspPi-IoT-Edge
+| `vibeplayer/` | yes | **P1** | "Vibe Media Player" | Windows/Linux/macOS
+| `fuxyez/` | yes | **P1** | 
 | `aurafs/` | yes | P2 (narrow) |
 | `vasp/` | yes | protocol lock |
 | `tslca/` | yes | orb law |

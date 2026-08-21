@@ -53,6 +53,7 @@ Reference engine (not yet a `vap-analyze` CLI in this tree):
 - `../vasp/vasp_sdk-api_streaming.md` — `VapEngine::transform_spotify`
 - `../vasp/VASP_Official Schema.md`
 - `../vasp/VASP_Context_Simulation.md`
+- `../vasp/VibeTribe_Pillarz.md` — VASP 3.69 Tribe voter copy (9×13 questions; not a schema change)
 
 ## Auth status (2026-08-21)
 
@@ -90,3 +91,4 @@ High-contrast Framez chrome. Prefer OpenDyslexic / readable type where the shell
 - [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md)
 - [../vibeplayer/](../vibeplayer/) — native player
 - [../vasp/](../vasp/) — protocol
+- [Vibe Tribe Pillarz](../vasp/VibeTribe_Pillarz.md) — VASP 3.69 voter copy (canon)
