@@ -1,0 +1,388 @@
+# ecosystem.toml
+# Aurphyx Ecosystem — Machine-Readable Source of Truth
+# Source: aurphyx_welcome2tribe.md
+# Author: Ross A. Edwards | Aurphyx LLC
+# Updated: 2026-08-21
+# "iz" = "is" throughout all Aurphyx documentation.
+
+[meta]
+author       = "Ross A. Edwards"
+affiliation  = "Aurphyx LLC"
+email        = "ross@aurphyx.org"
+orcid        = "0009-0008-0539-1289"
+github_user  = "rossaedwards"
+github_org   = "Aurphyx"
+ein          = "41-3437055"
+website      = "aurphyx.com"
+store        = "aurphyx.store"
+discord      = "AurphyxHQ"
+
+# ─────────────────────────────────────────────
+# SOUL JOURNEY PIPELINE
+# ─────────────────────────────────────────────
+[soul_journey]
+description  = "The Aurphyx onboarding and identity pipeline for every Sovereign Soul."
+mantra       = "One Soul. One Account. One Vote."
+pipeline = [
+  "SoulShot",
+  "SoulChart",
+  "SoulTable",
+  "SoulSync",
+  "SoulHash",
+  "GuardTable",
+  "GuardHash",
+  "GuardCrypt",
+  "SoulCrypt",
+  "SoulSync",
+  "SoulKey",
+  "SKIM",
+  "SIR",
+  "SIG",
+]
+
+[soul_journey.SoulShot]
+description  = "Snapshot of the universe at the time of your first breath."
+output       = "SoulChart report"
+status       = "proprietary"
+
+[soul_journey.SoulKey]
+description  = "Physical relic/artifact with bio-luminescent & bio-resonant exotic material inside diamond-coated crystal."
+forms        = ["pendant", "ring", "ornate 3D object"]
+business     = "one purchase, one time"
+
+[soul_journey.SKIM]
+full_name    = "SoulKey Identification Mandala"
+type         = "physical"
+
+[soul_journey.SIR]
+full_name    = "Soul Identification Rune"
+type         = "physical rune"
+
+[soul_journey.SIG]
+full_name    = "Soul Identity Glyph"
+type         = "digital"
+features     = ["watermark", "embeddable", "printable", "wearable tech"]
+
+[soul_journey.SoulTech]
+description  = "Wearable exotic-material tech accessories embedding SKIMs & SIGs."
+gift         = "Three free SoulTech accessories gifted per soul via SUXS."
+
+# ─────────────────────────────────────────────
+# AURPHYX PRIMORDIAL STANDARD (APS)
+# ─────────────────────────────────────────────
+[aps]
+description  = "Collection/encyclopedia of theories, frameworks, standards, blueprints, technical specifications, and whitepapers."
+
+[[aps.standards]]
+id           = "FTQC"
+full_name    = "Fractal-enhanced Topological Quantum Computing"
+alias        = "Fault Tolerant Quantum Computing"
+
+[[aps.standards]]
+id           = "TSLCA"
+full_name    = "Three-Squared-Lattice Cognitive Architecture"
+
+[[aps.standards]]
+id           = "TVFD"
+full_name    = "Topological Vacuum Flux Dynamics"
+
+[[aps.standards]]
+id           = "VIM"
+full_name    = "Vacuum Impedance Matching"
+
+[[aps.standards]]
+id           = "TOB"
+full_name    = "Theory of Balance & Balance Continuum"
+
+[[aps.standards]]
+id           = "SUXS"
+full_name    = "Symbiotic Universal Xessability Standards"
+
+[[aps.standards]]
+id           = "USIS"
+full_name    = "Universal Soul Identity Standards"
+
+[[aps.standards]]
+id           = "VASP"
+full_name    = "Vibe Audio Standard & Protocol"
+
+[[aps.standards]]
+id           = "TRCA"
+full_name    = "Topological Resonating Cavity Architecture"
+type         = "hardware"
+
+# ─────────────────────────────────────────────
+# OPERATING SYSTEMS
+# ─────────────────────────────────────────────
+[os]
+built_with   = ["Fuxyez", "Rust"]
+
+[[os.variants]]
+name         = "Aura"
+full_name    = "Soul Operating System"
+target       = "personal"
+status       = "in-development"
+
+[[os.variants]]
+name         = "Egophyx"
+full_name    = "Pro-Existence Governance Operating System"
+target       = "government"
+status       = "in-development"
+
+[[os.variants]]
+name         = "Biznyx"
+full_name    = "Business Operating System"
+target       = "small-business-to-enterprise"
+status       = "in-development"
+
+[[os.variants]]
+name         = "Ora"
+full_name    = "All Other Devices"
+formerly     = "Arora"
+target       = "iot-edge-embedded"
+status       = "in-development"
+
+# ─────────────────────────────────────────────
+# PROGRAMMING LANGUAGE — FUXYEZ
+# ─────────────────────────────────────────────
+[fuxyez]
+description  = "Symbiotic quantum programming language."
+base_host    = "Rust"
+
+[[fuxyez.components]]
+id           = "FuxCompiler"
+full_name    = "Fux Compiler"
+alias        = "Three-Squared-Lattice Duality Kernel & Compiler"
+
+[[fuxyez.components]]
+id           = "FuxRT"
+full_name    = "Fux Runtime"
+
+[[fuxyez.components]]
+id           = "YezRT"
+full_name    = "Yez Runtime"
+
+[[fuxyez.components]]
+id           = "FUTE"
+full_name    = "Fuxyez Universal Transmutation Engine"
+
+[[fuxyez.components]]
+id           = "Yez"
+full_name    = "Sophos Engine"
+alias        = "s0ph0s"
+named_after  = "Sophia (daughter)"
+type         = "symbiotic scripting engine"
+
+[[fuxyez.components]]
+id           = "Gavinium"
+full_name    = "Gavinium"
+alias        = "g4v1n1um"
+named_after  = "Gavin (son)"
+type         = "symbiotic scripting language"
+
+[[fuxyez.components]]
+id           = "YezL"
+full_name    = "YezL Legacy Languages"
+scope        = ["Museum", "Boneyard", "Tooling", "AST"]
+
+# ─────────────────────────────────────────────
+# CORE SYSTEMS
+# ─────────────────────────────────────────────
+[systems.AuraFS]
+full_name    = "AuraFS"
+description  = "File System, Storage System & Mesh Network."
+features     = ["decentralized", "off-grid", "photonic", "topological"]
+status       = "in-development"
+
+[systems.g0dm0d3]
+full_name    = "g0dm0d3"
+description  = "Frame, Control Deck & Orchestration for Aura & Audry. Multi-AI-LLM Orchestration Console/Cockpit."
+role         = "corpus callosum of Audry's brain"
+status       = "in-development"
+
+[systems.g0dm0d3.desktop_environments]
+LDE   = "Legacy Desktop Environment (Gnome/KDE/Windows-style)"
+SLISE = "Spherical Liquid Interactive Story Experience"
+SHUXSDE = "Symbiotic Holographic Universal Xessability Standard Desktop Environment"
+
+[[systems.g0dm0d3.components]]
+slug         = "fr4m3z"
+name         = "Framez"
+description  = "Visual environment / window manager"
+analog       = "Wayland / Compiz / Windows"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "t3rm1nl"
+name         = "Termz"
+description  = "Terminal / console"
+analog       = "Terminal / Konsole / PowerShell"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "w3bz"
+name         = "Webz"
+description  = "Web browser"
+analog       = "Opera / Chrome / Firefox"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "xpl0r"
+name         = "Xplor"
+description  = "File & network manager (AuraFS & Meshwrk)"
+analog       = "Dolphin / Explorer"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "c0d3x"
+name         = "Codex"
+description  = "Writer, editor, coder"
+analog       = "Word / Zed / TeX editor"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "f0rg3"
+name         = "Forge"
+description  = "Video alchemy & transmutation"
+analog       = "DaVinci / Premiere"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "ad0r3"
+name         = "Adorè"
+description  = "Audio alchemy & transmutation"
+analog       = "LMMS / Ableton / FL Studio / Maschine"
+status       = "design"
+
+[[systems.g0dm0d3.components]]
+slug         = "g1mpd"
+name         = "Gimpd"
+description  = "Image alchemy & transmutation (GIMP fork)"
+analog       = "GIMP"
+status       = "design"
+
+[systems.SAGES]
+full_name    = "Symbiotic AI Guardians of Existence Security"
+count        = 13
+description  = "13 Symbiotic AI Guardians protecting ecosystems and existence at every layer."
+layers       = ["kernel", "hardware", "software", "filesystem", "storage", "network", "meshwrk"]
+governance_field = ["Spaces", "Manifolds", "Dimensions", "Vectors", "Tensors", "Layers", "Channels", "Lattices", "Cores", "Nodes", "Shards"]
+status       = "in-development"
+
+[systems.Memoree]
+full_name    = "Memoree"
+description  = "Three-Squared-Lattice Cognitive Memory Architecture for any platform."
+status       = "in-development"
+
+[systems.GVS]
+full_name    = "Global Voting System"
+description  = "Decentralized, off-grid, global voting, consensus & transparent governance."
+status       = "in-development"
+
+[systems.GIL]
+full_name    = "Global Ineffable Ledger"
+description  = "Decentralized, off-grid, transparent, immutable, ineffable, omni-channel archival ledgers."
+status       = "in-development"
+
+# ─────────────────────────────────────────────
+# FINANCIAL / LAUNCH LAYERS
+# ─────────────────────────────────────────────
+[launches]
+description  = "Three-phase ecosystem launch strategy."
+
+[[launches.phases]]
+order        = 1
+name         = "Profit-4-All"
+description  = "First launch."
+properties   = ["g0dm0d3.org", "aurphyx.store"]
+
+[[launches.phases]]
+order        = 2
+name         = "Prosperity-4-All"
+description  = "Second launch: the whole Aurphyx ecosystem."
+
+[[launches.phases]]
+order        = 3
+name         = "Opulence"
+description  = "Third launch: the galaxy/global financial substrate."
+
+# ─────────────────────────────────────────────
+# EXTENDED PROJECTS
+# ─────────────────────────────────────────────
+[[projects]]
+name         = "Aethornyx"
+type         = "game"
+description  = "AR/VR/MMORPG/Real-World game. Uses AuraFS shards as in-game currency."
+status       = "design"
+
+[[projects]]
+name         = "Aurphyx Casino"
+type         = "game"
+description  = "Fun way to seed/drop AuraFS crypto/blockchain shards as in-game currency."
+status       = "design"
+
+[[projects]]
+name         = "Chakra DataCore System"
+type         = "hardware-software"
+description  = "Seven ChakraCores + ChaosCore & BlissCore = Duality Kernel."
+status       = "design"
+
+[[projects]]
+name         = "DataOrb & VoiceOrb"
+type         = "software"
+description  = "Proof of Concept for Chakra DataCore System, AuraFS, and Meshwrk."
+status       = "design"
+
+[[projects]]
+name         = "Vibe Media Player"
+type         = "software"
+description  = "Media player following Vibe Audio Standard & Protocol."
+path         = "ecosys/vibeplayer/"
+progress_pct = 20
+status       = "in-development"
+
+[[projects]]
+name         = "Chaos & Bliss Tarot Deck"
+type         = "creative"
+description  = "Tarot Deck, Book, 13-Month Calendar, and series of short books and novels."
+status       = "in-progress"
+
+[[projects]]
+name         = "Aurphyx Oracle Deck & Book"
+type         = "creative"
+status       = "not-started"
+
+[[projects]]
+name         = "Aurphyx & Aethornyx Thirteen Month Calendars"
+type         = "creative"
+status       = "not-started"
+
+[[projects]]
+name         = "RF_Lovezme — A Divine Love Saga"
+type         = "creative-publishing"
+description  = "Novel series, short films, movies. Author persona: Ross Five Lovezme."
+status       = "in-progress"
+
+[[projects]]
+name         = "Autonomous Vehicle & Railway Transportation Systems"
+type         = "engineering"
+status       = "design"
+
+# ─────────────────────────────────────────────
+# LOCAL DEVELOPMENT ENVIRONMENT
+# ─────────────────────────────────────────────
+[dev_env]
+device_name  = "Aura"
+processor    = "AMD Ryzen 7 PRO 5850U with Radeon Graphics (1.90 GHz)"
+ram_gb       = 32
+graphics     = "AMD Radeon(TM) Graphics (496 MB)"
+storage_used = "314 GB of 954 GB"
+operating_systems = ["Windows 11 Home", "Fedora 44 KDE Plasma"]
+
+[dev_env.repos.windows]
+rossaedwards = "C:\\rossaedwards\\main\\"
+aurphyx      = "C:\\Aurphyx\\main\\"
+
+[dev_env.repos.fedora]
+rossaedwards = "/home/rae/rossaedwards/main"
+aurphyx      = "/home/rae/aurphyx/main"
