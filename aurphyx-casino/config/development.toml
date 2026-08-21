@@ -1,0 +1,36 @@
+bind_address = "0.0.0.0:8080"
+database_url = "postgresql://aurphyx:changeme@localhost:5432/aurphyx_casino"
+redis_url = "redis://localhost:6379"
+jwt_secret = "dev-secret-change-in-production"
+
+[blockchain]
+ethereum_rpc = "http://localhost:8545"
+solana_rpc = "http://localhost:8899"
+polygon_rpc = "https://polygon-rpc.com"
+ineffable_ledger_url = "http://localhost:8081"
+
+[casino]
+house_edge = 0.02
+min_bet = 1000
+max_bet = 1_000_000_000
+jackpot_contribution_rate = 0.01
+
+[sportsbook]
+ml_model_path = "python/ml/models"
+odds_update_interval_secs = 60
+max_liability = 10_000_000_000
+
+[shardenomics]
+token_address = ""
+bonus_multiplier = 1.5
+staking_apy = 0.12
+
+[meshtastic]
+enabled = false
+channel = 0
+
+[sages]
+api_url = ""
+api_key = ""
+enabled = false
+

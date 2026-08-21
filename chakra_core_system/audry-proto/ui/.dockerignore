@@ -1,0 +1,22 @@
+# Ignore node_modules (we mount it separately in docker-compose)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignore build artifacts
+build
+dist
+
+# Ignore Git
+.git
+.gitignore
+
+# Ignore Docker-related files
+Dockerfile
+*.dockerignore
+
+# Ignore OS cruft
+.DS_Store
+Thumbs.db
+.vscode
+.idea

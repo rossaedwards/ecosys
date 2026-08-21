@@ -1,0 +1,16 @@
+# Aurphyx LLC — Public Encryption Key
+# Purpose: Secure communication, vulnerability reports, and encrypted correspondence.
+# Last Updated: 2026-04-08
+
+# Owner: Ross A. Edwards (R.F. Lovezme | FollowFive | Fived | RossFive)
+# Organization: Aurphyx LLC
+# Contact: owner@aurphyx.com
+# Contact: admin@aurphyx.com
+
+# Notes:
+# This key is provided for encrypted communication with Aurphyx LLC.
+# For responsible disclosure, see /.well-known/security.txt.
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+[PLACEHOLDER — INSERT YOUR PUBLIC KEY HERE]
+-----END PGP PUBLIC KEY BLOCK-----

@@ -1,0 +1,87 @@
+[workspace]
+members = [
+    ".",
+    "sdk/rust",
+    "cli",
+]
+resolver = "2"
+
+[package]
+name = "aurphyx-casino"
+version = "0.1.0"
+edition = "2021"
+authors = ["Aurphyx Team"]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# Web framework
+axum = { version = "0.7", features = ["macros", "ws", "multipart"] }
+tokio = { version = "1", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+redis = { version = "0.24", features = ["tokio-comp"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Cryptography
+sha2 = "0.10"
+sha3 = "0.10"
+ed25519-dalek = "2.0"
+rand = "0.8"
+
+# Blockchain
+ethers = "2.0"
+solana-client = "1.18"
+web3 = "0.19"
+
+# Configuration
+config = "0.14"
+dotenv = "0.15"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging & Observability
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+prometheus = "0.13"
+
+# Time
+chrono = { version = "0.4", features = ["serde", "clock"] }
+
+# UUID
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# Async HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+# Async trait
+async-trait = "0.1"
+
+# Hex encoding
+hex = "0.4"
+
+# TOML parsing
+toml = "0.8"
+
+# WebSocket
+tokio-tungstenite = "0.21"
+
+# GraphQL
+async-graphql = "5.0"
+async-graphql-axum = "5.0"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockito = "1.0"
+
+[[bin]]
+name = "aurphyx-casino"
+path = "src/main.rs"
+

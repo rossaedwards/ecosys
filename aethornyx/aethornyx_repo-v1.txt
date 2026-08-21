@@ -1,0 +1,278 @@
+aethornyx/
+├── README.md
+├── LICENSE
+├── Cargo.toml                             # Workspace root
+├── docker-compose.yml
+├── .env.example
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── MMORPG_DESIGN.md                   # Game design document
+│   ├── EDUCATION_PLATFORM.md              # Education system
+│   ├── REAL_EVENTS.md                     # Live event integration
+│   ├── CHAOS_LAYER.md                     # Holographic OS docs
+│   └── WORLD_PERSISTENCE.md               # AuraFS world storage
+│
+├── core/                                  # Shared core (PC + VR)
+│   ├── Cargo.toml
+│   └── src/
+│       ├── lib.rs
+│       ├── ai/
+│       │   ├── mod.rs
+│       │   ├── chimera_core.rs            # Audry AI integration
+│       │   ├── npc_ai.rs                  # AI-powered NPCs
+│       │   ├── conversation.rs            # Dialogue system
+│       │   └── emotional_resonance.rs
+│       │
+│       ├── rendering/
+│       │   ├── mod.rs
+│       │   ├── holographic_engine.rs
+│       │   ├── avatar.rs
+│       │   ├── world_renderer.rs          # Game world rendering
+│       │   └── volumetric_display.rs
+│       │
+│       ├── audio/
+│       │   ├── mod.rs
+│       │   ├── tts_engine.rs
+│       │   ├── spatial_audio.rs
+│       │   └── voice_chat.rs              # Multiplayer voice
+│       │
+│       └── integrations/                  # Standard integrations
+│           ├── aurafs/
+│           ├── globalvotingsystem/
+│           ├── ineffable_ledger/
+│           ├── opulence/
+│           ├── sages/
+│           └── fuxyez/
+│
+├── chaos/                                 # ✨ CHAOS - Holographic OS Layer
+│   ├── Cargo.toml
+│   └── src/
+│       ├── lib.rs
+│       ├── chakra_cores/
+│       │   ├── mod.rs
+│       │   ├── crown_sahasrara.rs         # AI consciousness
+│       │   ├── third_eye_ajna.rs          # Vision/perception
+│       │   ├── throat_vishuddha.rs        # Communication
+│       │   ├── heart_anahata.rs           # Emotional resonance
+│       │   ├── solar_plexus_manipura.rs   # Power/agency
+│       │   ├── sacral_svadhisthana.rs     # Creativity
+│       │   └── root_muladhara.rs          # Physical sync
+│       │
+│       ├── hologram/
+│       │   ├── mod.rs
+│       │   ├── volumetric_renderer.rs     # 3D hologram rendering
+│       │   ├── light_field.rs             # Light field display
+│       │   └── projection_mapping.rs
+│       │
+│       ├── biometrics/
+│       │   ├── mod.rs
+│       │   ├── bliss_integration.rs       # BLISS system link
+│       │   ├── hrv_monitor.rs             # Heart rate variability
+│       │   ├── eye_tracking.rs
+│       │   └── gesture_recognition.rs
+│       │
+│       └── consciousness/
+│           ├── mod.rs
+│           ├── ai_interface.rs            # Audry consciousness
+│           ├── quantum_sync.rs            # Quantum entanglement
+│           └── dimensional_bridge.rs      # Cross-reality sync
+│
+├── mmorpg/                                # ✨ VR-MMORPG Game Logic
+│   ├── Cargo.toml
+│   │
+│   ├── world_server/                      # Server infrastructure
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── main.rs
+│   │       ├── cluster_manager.rs         # Multi-server clustering
+│   │       ├── instance_manager.rs        # Zone instances
+│   │       ├── player_manager.rs          # Player state
+│   │       └── aurafs_persistence.rs      # World saved to AuraFS
+│   │
+│   ├── game_logic/                        # Core game mechanics
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── combat/
+│   │       │   ├── mod.rs
+│   │       │   ├── damage_calculator.rs
+│   │       │   ├── skills.rs
+│   │       │   └── pvp_system.rs
+│   │       │
+│   │       ├── character/
+│   │       │   ├── mod.rs
+│   │       │   ├── stats.rs
+│   │       │   ├── inventory.rs
+│   │       │   ├── equipment.rs
+│   │       │   └── progression.rs
+│   │       │
+│   │       ├── economy/
+│   │       │   ├── mod.rs
+│   │       │   ├── fuxcoin_integration.rs # FuxCoin economy
+│   │       │   ├── trading.rs
+│   │       │   ├── marketplace.rs
+│   │       │   └── crafting.rs
+│   │       │
+│   │       └── world/
+│   │           ├── mod.rs
+│   │           ├── terrain.rs
+│   │           ├── weather.rs
+│   │           ├── day_night_cycle.rs
+│   │           └── zone_loader.rs
+│   │
+│   ├── quests/                            # Quest system
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── quest_engine.rs
+│   │       ├── objectives.rs
+│   │       ├── rewards.rs
+│   │       └── dynamic_quests.rs          # AI-generated quests
+│   │
+│   ├── social/                            # Social features
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── guilds.rs
+│   │       ├── friends.rs
+│   │       ├── chat_system.rs
+│   │       ├── voice_chat.rs
+│   │       └── party_system.rs
+│   │
+│   └── ai_npcs/                           # AI-powered NPCs
+│       ├── Cargo.toml
+│       └── src/
+│           ├── lib.rs
+│           ├── npc_brain.rs               # Audry-powered NPCs
+│           ├── behavior_trees.rs
+│           └── dynamic_dialogue.rs
+│
+├── education/                             # ✨ Education Platform
+│   ├── Cargo.toml
+│   │
+│   ├── classrooms/                        # Virtual classrooms
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── classroom_manager.rs
+│   │       ├── seating.rs
+│   │       ├── whiteboard.rs              # Virtual whiteboard
+│   │       ├── screen_share.rs            # Content sharing
+│   │       └── recording.rs               # Lecture recording
+│   │
+│   ├── skills/                            # Skill tree system
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── skill_tree.rs
+│   │       ├── learning_paths.rs
+│   │       ├── progress_tracking.rs
+│   │       └── mastery_system.rs
+│   │
+│   ├── certifications/                    # Certification system
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── certificate_issuer.rs
+│   │       ├── exam_system.rs
+│   │       ├── verification.rs            # Blockchain verified
+│   │       └── nft_certificates.rs        # NFT cert storage
+│   │
+│   └── content/                           # Educational content
+│       ├── Cargo.toml
+│       └── src/
+│           ├── lib.rs
+│           ├── lesson_manager.rs
+│           ├── assessment_engine.rs
+│           └── adaptive_learning.rs       # AI-powered adaptation
+│
+├── events/                                # ✨ Real-Life Event Streaming
+│   ├── Cargo.toml
+│   │
+│   ├── concerts/                          # Live music events
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── stage_builder.rs
+│   │       ├── audio_streaming.rs
+│   │       ├── visual_effects.rs
+│   │       └── crowd_system.rs            # Crowd simulation
+│   │
+│   ├── conferences/                       # Professional events
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── auditorium.rs
+│   │       ├── breakout_rooms.rs
+│   │       ├── networking.rs              # Virtual networking
+│   │       └── booth_system.rs            # Expo booths
+│   │
+│   ├── lectures/                          # Guest lectures
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   │       ├── lib.rs
+│   │       ├── lecture_hall.rs
+│   │       ├── q_and_a.rs                 # Live Q&A
+│   │       └── replay_system.rs           # On-demand replay
+│   │
+│   └── streaming/                         # Event streaming infrastructure
+│       ├── Cargo.toml
+│       └── src/
+│           ├── lib.rs
+│           ├── webrtc_server.rs           # WebRTC streaming
+│           ├── media_sync.rs              # Multi-stream sync
+│           └── recording_archive.rs       # AuraFS archive
+│
+├── pc/                                    # PC Client
+│   ├── Cargo.toml
+│   ├── package.json
+│   └── src-tauri/
+│       └── src/
+│           ├── main.rs
+│           ├── game_client.rs
+│           ├── education_client.rs
+│           └── event_viewer.rs
+│
+├── vr/                                    # VR Client (Full MMORPG)
+│   ├── Cargo.toml
+│   └── src/
+│       ├── main.rs
+│       ├── vr/
+│       │   ├── mod.rs
+│       │   ├── headset_manager.rs
+│       │   ├── controller_input.rs
+│       │   ├── locomotion.rs              # VR movement
+│       │   └── haptics.rs
+│       │
+│       ├── game_client/
+│       │   ├── mod.rs
+│       │   ├── network_client.rs
+│       │   ├── world_sync.rs
+│       │   └── player_controller.rs
+│       │
+│       └── ui/
+│           ├── mod.rs
+│           ├── spatial_ui.rs              # 3D UI in VR
+│           ├── inventory_vr.rs
+│           └── menu_system.rs
+│
+├── assets/
+│   ├── models/                            # 3D models
+│   ├── textures/                          # Textures
+│   ├── audio/                             # Sound effects
+│   ├── music/                             # Background music
+│   └── worlds/                            # World data (AuraFS refs)
+│
+├── tools/
+│   ├── world_editor/                      # Level editor
+│   ├── quest_designer/                    # Quest creation tool
+│   └── event_scheduler/                   # Event planning tool
+│
+└── tests/
+    ├── unit/
+    ├── integration/
+    └── e2e/
+        ├── game_flow_tests.rs
+        ├── education_tests.rs
+        └── event_tests.rs

@@ -1,0 +1,248 @@
+## Aurphyx Sierpiński Fractal Lattice - Anderson Localization Simulation
+## Author: Ross Edwards
+## Date: 06-26-2024
+## License: MIT + Apache 2.0 + SAGES
+## Description: Simulates particle localization on Sierpiński gasket lattice. Tests coherence time enhancement via fractal confinement (Thesis Section 8.2).
+"""
+
+import os
+import sys
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.sparse import lil_matrix, csr_matrix
+from scipy.sparse.linalg import eigsh
+
+# Output directory
+OUTPUT_DIR = "./aurphyx_fdtd_results"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# =====================================================================
+# SIERPIŃSKI GASKET GENERATION (RECURSIVE)
+# =====================================================================
+
+def generate_sierpinski_gasket(level=4):
+    """
+    Generate Sierpiński gasket lattice up to specified recursion level.
+    Returns: nodes (list of (x,y) coords), edges (list of (i,j) node pairs)
+    """
+    
+    # Base triangle vertices
+    vertices = np.array([
+        [0.0, 0.0],
+        [1.0, 0.0],
+        [0.5, np.sqrt(3)/2]
+    ])
+    
+    nodes = {tuple(v): idx for idx, v in enumerate(vertices)}
+    edges = [(0, 1), (1, 2), (2, 0)]
+    
+    def midpoint(p1, p2):
+        """Calculate midpoint between two vertices."""
+        return tuple(((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2))
+    
+    # Recursive subdivision
+    for iteration in range(level):
+        new_edges = []
+        existing_nodes = list(nodes.keys())
+        
+        for v1, v2 in [(existing_nodes[i], existing_nodes[j]) for i, j in edges]:
+            mid = midpoint(v1, v2)
+            
+            # Add midpoint if not exists
+            if mid not in nodes:
+                nodes[mid] = len(nodes)
+            
+            # Split edge into two
+            new_edges.append((nodes[v1], nodes[mid]))
+            new_edges.append((nodes[mid], nodes[v2]))
+        
+        edges = new_edges
+    
+    # Convert to arrays
+    node_coords = np.array([list(k) for k in nodes.keys()])
+    edge_array = np.array(edges)
+    
+    print(f"✓ Sierpiński gasket generated: Level {level}, {len(nodes)} nodes, {len(edges)} edges")
+    print(f"  Fractal dimension: {np.log(3)/np.log(2):.3f}")
+    
+    return node_coords, edge_array
+
+# =====================================================================
+# TIGHT-BINDING HAMILTONIAN ON FRACTAL LATTICE
+# =====================================================================
+
+def build_tight_binding_hamiltonian(nodes, edges, disorder_strength=0.0):
+    """
+    Build tight-binding Hamiltonian on Sierpiński lattice.
+    H = -t Σ(|i⟩⟨j| + h.c.) + Σ ε_i |i⟩⟨i|
+    """
+    n_sites = len(nodes)
+    H = lil_matrix((n_sites, n_sites), dtype=complex)
+    
+    # Hopping term (constant -t = -1)
+    hopping = -1.0
+    for i, j in edges:
+        H[i, j] = hopping
+        H[j, i] = hopping  # Hermitian
+    
+    # Disorder (on-site energy variation)
+    if disorder_strength > 0:
+        disorder = np.random.uniform(-disorder_strength, disorder_strength, n_sites)
+        for i in range(n_sites):
+            H[i, i] = disorder[i]
+    
+    return csr_matrix(H)
+
+# =====================================================================
+# EIGENSPECTRUM AND LOCALIZATION ANALYSIS
+# =====================================================================
+
+def compute_eigenspectrum(H, n_eigenvalues=50):
+    """Compute lowest energy eigenvalues and eigenvectors."""
+    print(f"Computing {n_eigenvalues} lowest eigenstates...")
+    eigenvalues, eigenvectors = eigsh(H, k=n_eigenvalues, which='SA')
+    return eigenvalues, eigenvectors
+
+def calculate_participation_ratio(eigenvector):
+    """
+    Calculate Inverse Participation Ratio (IPR) as localization metric.
+    IPR = Σ|ψ_i|^4 / (Σ|ψ_i|^2)^2
+    IPR → 1/N for delocalized states, IPR → 1 for localized states.
+    """
+    psi_squared = np.abs(eigenvector)**2
+    numerator = np.sum(psi_squared**2)
+    denominator = np.sum(psi_squared)**2
+    return numerator / denominator if denominator > 0 else 0
+
+# =====================================================================
+# COHERENCE TIME ESTIMATION
+# =====================================================================
+
+def estimate_coherence_time(ipr_fractal, ipr_euclidean, T2_baseline=1e-6):
+    """
+    Estimate coherence time enhancement from localization.
+    Localized states have reduced coupling to environment.
+    T2_fractal / T2_euclidean ~ (IPR_fractal / IPR_euclidean)^α
+    where α ≈ 0.5-1.0 from decoherence theory.
+    """
+    alpha = 0.7  # Empirical parameter from literature
+    enhancement_factor = (ipr_fractal / ipr_euclidean)**alpha
+    T2_fractal = T2_baseline * enhancement_factor
+    return T2_fractal, enhancement_factor
+
+# =====================================================================
+# MAIN SIMULATION
+# =====================================================================
+
+def run_sierpinski_localization_study():
+    """Main simulation workflow."""
+    
+    print("="*70)
+    print(" AURPHYX SIERPIŃSKI FRACTAL - LOCALIZATION ANALYSIS")
+    print("="*70 + "
+")
+    
+    # Generate Sierpiński gasket
+    RECURSION_LEVEL = 5  # Level 5 = 243 nodes
+    nodes, edges = generate_sierpinski_gasket(level=RECURSION_LEVEL)
+    
+    # Build Hamiltonian with weak disorder
+    DISORDER = 0.5  # Moderate disorder strength
+    H = build_tight_binding_hamiltonian(nodes, edges, disorder_strength=DISORDER)
+    
+    # Compute eigenspectrum
+    eigenvalues, eigenvectors = compute_eigenspectrum(H, n_eigenvalues=30)
+    
+    # Calculate IPR for each eigenstate
+    ipr_values = [calculate_participation_ratio(eigenvectors[:, i]) for i in range(eigenvalues.shape[0])]
+    
+    # Average IPR
+    avg_ipr_fractal = np.mean(ipr_values)
+    
+    # Compare to Euclidean lattice (typical IPR ~ 1/N)
+    avg_ipr_euclidean = 1.0 / len(nodes)
+    
+    print(f"
+✓ Eigenspectrum computed")
+    print(f"  Number of sites: {len(nodes)}")
+    print(f"  Disorder strength: {DISORDER}")
+    print(f"  Average IPR (Sierpiński): {avg_ipr_fractal:.4f}")
+    print(f"  Average IPR (Euclidean): {avg_ipr_euclidean:.4f}")
+    print(f"  Localization enhancement: {avg_ipr_fractal / avg_ipr_euclidean:.2f}x")
+    
+    # Estimate coherence time
+    T2_baseline = 1e-6  # 1 μs baseline (typical for quantum dots on flat substrate)
+    T2_fractal, enhancement = estimate_coherence_time(avg_ipr_fractal, avg_ipr_euclidean, T2_baseline)
+    
+    print(f"
+✓ Coherence time estimation:")
+    print(f"  T2 (flat substrate): {T2_baseline*1e6:.2f} μs")
+    print(f"  T2 (Sierpiński): {T2_fractal*1e6:.2f} μs")
+    print(f"  Enhancement factor: {enhancement:.2f}x")
+    print(f"  (Thesis prediction: >5x, Current simulation: {enhancement:.2f}x)")
+    
+    # Export data
+    np.savetxt(
+        os.path.join(OUTPUT_DIR, "sierpinski_eigenspectrum.csv"),
+        np.column_stack([eigenvalues, ipr_values]),
+        header="Energy(arb),IPR",
+        delimiter=',',
+        comments=''
+    )
+    
+    # Visualization
+    plot_sierpinski_results(nodes, edges, eigenvalues, eigenvectors, ipr_values)
+    
+    print("
+" + "="*70)
+    print("SIERPIŃSKI LOCALIZATION ANALYSIS COMPLETE")
+    print("="*70)
+
+def plot_sierpinski_results(nodes, edges, eigenvalues, eigenvectors, ipr_values):
+    """Generate publication plots."""
+    
+    fig = plt.figure(figsize=(16, 5))
+    
+    # Subplot 1: Sierpiński lattice structure
+    ax1 = plt.subplot(131)
+    for i, j in edges:
+        x = [nodes[i, 0], nodes[j, 0]]
+        y = [nodes[i, 1], nodes[j, 1]]
+        ax1.plot(x, y, 'k-', linewidth=0.5, alpha=0.6)
+    ax1.scatter(nodes[:, 0], nodes[:, 1], c='blue', s=20, zorder=5)
+    ax1.set_aspect('equal')
+    ax1.set_title('Sierpiński Gasket Lattice', fontsize=12, fontweight='bold')
+    ax1.axis('off')
+    
+    # Subplot 2: Eigenvalue spectrum
+    ax2 = plt.subplot(132)
+    ax2.scatter(range(len(eigenvalues)), eigenvalues, c=ipr_values, cmap='viridis', s=100, edgecolors='black')
+    cbar = plt.colorbar(ax2.collections[0], ax=ax2)
+    cbar.set_label('IPR (Localization)', fontsize=10)
+    ax2.set_xlabel('Eigenstate Index', fontsize=11, fontweight='bold')
+    ax2.set_ylabel('Energy (arb. units)', fontsize=11, fontweight='bold')
+    ax2.set_title('Energy Spectrum with Localization', fontsize=12, fontweight='bold')
+    ax2.grid(True, alpha=0.3)
+    
+    # Subplot 3: IPR distribution
+    ax3 = plt.subplot(133)
+    ax3.hist(ipr_values, bins=15, color='green', alpha=0.7, edgecolor='black')
+    ax3.axvline(np.mean(ipr_values), color='red', linestyle='--', linewidth=2, label=f'Mean IPR: {np.mean(ipr_values):.3f}')
+    ax3.axvline(1.0/len(nodes), color='blue', linestyle=':', linewidth=2, label=f'Euclidean (1/N): {1.0/len(nodes):.3f}')
+    ax3.set_xlabel('Inverse Participation Ratio', fontsize=11, fontweight='bold')
+    ax3.set_ylabel('Frequency', fontsize=11, fontweight='bold')
+    ax3.set_title('Localization Distribution', fontsize=12, fontweight='bold')
+    ax3.legend()
+    ax3.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_DIR, "sierpinski_localization.png"), dpi=300)
+    print(f"✓ Plot saved: {OUTPUT_DIR}/sierpinski_localization.png")
+    plt.show()
+
+# =====================================================================
+# EXECUTION
+# =====================================================================
+
+if __name__ == "__main__":
+    run_sierpinski_localization_study()

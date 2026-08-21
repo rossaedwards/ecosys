@@ -1,0 +1,369 @@
+Aurphyx Flower of Life Lattice - FDTD Photonic Band Gap Simulation
+Author: Ross A. Edwards
+License: MIT + Apache 2.0 + SAGES
+Description: Simulates photonic band structure of hexagonal Flower of Life 
+             lattice etched in fused silica. Validates band gap predictions 
+             from thesis Section 8.1.
+"""
+
+import os
+import sys
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.constants import c as speed_of_light
+
+# Lumerical Python API path (adjust to your installation)
+sys.path.append("C:\\Program Files\\Lumerical\\v241\\api\\python\\")
+import lumapi
+
+# =====================================================================
+# SIMULATION PARAMETERS
+# =====================================================================
+
+# Lattice geometry
+CIRCLE_RADIUS = 250e-9          # 250 nm circle radius
+LATTICE_CONSTANT = 2 * CIRCLE_RADIUS  # a = 2r (500 nm)
+ETCH_DEPTH = 300e-9             # 300 nm depth for photonic band gap
+
+# Material properties
+N_SILICA = 1.46                 # Refractive index of fused silica
+N_AIR = 1.0                     # Air refractive index
+
+# Simulation domain
+DOMAIN_SIZE_X = 10e-6           # 10 μm
+DOMAIN_SIZE_Y = 10e-6
+DOMAIN_SIZE_Z = 2e-6
+
+# Wavelength sweep
+WAVELENGTH_START = 400e-9       # 400 nm
+WAVELENGTH_STOP = 1600e-9       # 1600 nm
+WAVELENGTH_POINTS = 200
+
+# Mesh settings
+MESH_ACCURACY = 4               # Lumerical mesh accuracy (1-8)
+MESH_REFINEMENT = 50e-9         # 50 nm override mesh at features
+
+# Output directory
+OUTPUT_DIR = "./aurphyx_fdtd_results"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# =====================================================================
+# FLOWER OF LIFE GEOMETRY GENERATION
+# =====================================================================
+
+def generate_flower_of_life_coords(center=(0, 0), radius=CIRCLE_RADIUS):
+    """
+    Generate circle center coordinates for Flower of Life pattern.
+    Returns list of (x, y) tuples for 19 circles (1 center + 6 ring1 + 12 ring2).
+    """
+    coords = [center]  # Center circle
+    
+    # First ring (6 circles at 60° intervals)
+    for i in range(6):
+        angle = i * np.pi / 3  # 0°, 60°, 120°, 180°, 240°, 300°
+        x = center[0] + 2 * radius * np.cos(angle)
+        y = center[1] + 2 * radius * np.sin(angle)
+        coords.append((x, y))
+    
+    # Second ring (12 circles - two at each 60° spoke, offset)
+    for i in range(6):
+        angle = i * np.pi / 3
+        # Outer position on spoke
+        x_outer = center[0] + 4 * radius * np.cos(angle)
+        y_outer = center[1] + 4 * radius * np.sin(angle)
+        coords.append((x_outer, y_outer))
+        
+        # Intermediate position (between spokes)
+        angle_mid = angle + np.pi / 6
+        x_mid = center[0] + 2 * np.sqrt(3) * radius * np.cos(angle_mid)
+        y_mid = center[1] + 2 * np.sqrt(3) * radius * np.sin(angle_mid)
+        coords.append((x_mid, y_mid))
+    
+    return coords
+
+# =====================================================================
+# LUMERICAL FDTD SETUP
+# =====================================================================
+
+def setup_fdtd_simulation():
+    """Initialize Lumerical FDTD session and configure simulation region."""
+    
+    print("[1/6] Initializing Lumerical FDTD session...")
+    fdtd = lumapi.FDTD()
+    
+    # Clear any existing simulation objects
+    fdtd.switchtolayout()
+    fdtd.selectall()
+    fdtd.delete()
+    
+    # Add FDTD simulation region
+    print("[2/6] Setting up FDTD region...")
+    fdtd.addfdtd(
+        x=0, y=0, z=0,
+        x_span=DOMAIN_SIZE_X,
+        y_span=DOMAIN_SIZE_Y,
+        z_span=DOMAIN_SIZE_Z,
+        mesh_accuracy=MESH_ACCURACY,
+        simulation_time=1000e-15,  # 1 ps (sufficient for steady-state)
+        pml_layers=20,
+        pml_profile=3  # Steep-angle polynomial PML
+    )
+    
+    # Set global source properties
+    fdtd.setglobalsource("wavelength start", WAVELENGTH_START)
+    fdtd.setglobalsource("wavelength stop", WAVELENGTH_STOP)
+    
+    # Add substrate (fused silica slab)
+    print("[3/6] Adding fused silica substrate...")
+    fdtd.addrect(
+        name="silica_substrate",
+        x=0, y=0, z=-ETCH_DEPTH/2,
+        x_span=DOMAIN_SIZE_X,
+        y_span=DOMAIN_SIZE_Y,
+        z_span=ETCH_DEPTH * 3,  # Thick substrate
+        material="SiO2 (Glass) - Palik"
+    )
+    
+    return fdtd
+
+def add_flower_of_life_lattice(fdtd):
+    """Etch Flower of Life pattern into substrate."""
+    
+    print("[4/6] Etching Flower of Life pattern (19 circles)...")
+    coords = generate_flower_of_life_coords()
+    
+    for idx, (x, y) in enumerate(coords):
+        fdtd.addcircle(
+            name=f"circle_{idx}",
+            x=x, y=y, z=0,
+            radius=CIRCLE_RADIUS,
+            z_span=ETCH_DEPTH,
+            material="etch",  # Air-filled etch
+            override_mesh_order_from_material_database=True,
+            mesh_order=2  # High priority for mesh refinement
+        )
+        
+        # Add mesh refinement override at each circle
+        fdtd.addmesh(
+            name=f"mesh_circle_{idx}",
+            x=x, y=y, z=0,
+            x_span=2.5 * CIRCLE_RADIUS,
+            y_span=2.5 * CIRCLE_RADIUS,
+            z_span=ETCH_DEPTH * 1.5,
+            dx=MESH_REFINEMENT,
+            dy=MESH_REFINEMENT,
+            dz=MESH_REFINEMENT / 2
+        )
+
+def add_source_and_monitors(fdtd):
+    """Add plane wave source and transmission/field monitors."""
+    
+    print("[5/6] Configuring source and monitors...")
+    
+    # Plane wave source (normally incident from top)
+    fdtd.addplane(
+        name="source",
+        injection_axis="z-axis",
+        direction="Backward",  # Inject from +z toward -z
+        x=0, y=0, z=ETCH_DEPTH * 2,
+        x_span=DOMAIN_SIZE_X * 0.8,
+        y_span=DOMAIN_SIZE_Y * 0.8,
+        wavelength_start=WAVELENGTH_START,
+        wavelength_stop=WAVELENGTH_STOP
+    )
+    
+    # Transmission monitor (below lattice)
+    fdtd.addpower(
+        name="transmission",
+        monitor_type="2D Z-normal",
+        x=0, y=0, z=-ETCH_DEPTH * 2,
+        x_span=DOMAIN_SIZE_X * 0.9,
+        y_span=DOMAIN_SIZE_Y * 0.9,
+        output_Px=True,
+        output_Py=True,
+        output_Pz=True
+    )
+    
+    # Reflection monitor (above lattice)
+    fdtd.addpower(
+        name="reflection",
+        monitor_type="2D Z-normal",
+        x=0, y=0, z=ETCH_DEPTH * 2.5,
+        x_span=DOMAIN_SIZE_X * 0.9,
+        y_span=DOMAIN_SIZE_Y * 0.9
+    )
+    
+    # Field profile monitor (at lattice center)
+    fdtd.addprofile(
+        name="fields_xy",
+        monitor_type="2D Z-normal",
+        x=0, y=0, z=0,
+        x_span=DOMAIN_SIZE_X,
+        y_span=DOMAIN_SIZE_Y,
+        output_Hx=True, output_Hy=True, output_Hz=True,
+        output_Ex=True, output_Ey=True, output_Ez=True
+    )
+
+# =====================================================================
+# RUN SIMULATION AND EXTRACT RESULTS
+# =====================================================================
+
+def run_and_analyze(fdtd):
+    """Run simulation and extract band structure data."""
+    
+    print("[6/6] Running FDTD simulation (this may take 10-30 minutes)...")
+    
+    # Save simulation file
+    sim_file = os.path.join(OUTPUT_DIR, "flower_of_life_bandstructure.fsp")
+    fdtd.save(sim_file)
+    print(f"Simulation file saved: {sim_file}")
+    
+    # Run simulation
+    fdtd.run()
+    print("✓ Simulation complete!")
+    
+    # Extract transmission data
+    print("
+Extracting results...")
+    T = fdtd.getresult("transmission", "T")
+    wavelengths = T['lambda'] * 1e9  # Convert to nm
+    transmission = T['T']
+    
+    # Extract reflection data
+    R = fdtd.getresult("reflection", "R")
+    reflection = R['R']
+    
+    # Calculate absorption (A = 1 - T - R)
+    absorption = 1 - transmission - reflection
+    
+    # Extract field profile at resonance wavelength (find transmission minimum)
+    min_idx = np.argmin(transmission)
+    resonance_wavelength = wavelengths[min_idx]
+    
+    fdtd.setglobalsource("wavelength start", resonance_wavelength * 1e-9)
+    fdtd.setglobalsource("wavelength stop", resonance_wavelength * 1e-9)
+    
+    print(f"Resonance wavelength (transmission minimum): {resonance_wavelength:.1f} nm")
+    
+    # Export data
+    np.savetxt(
+        os.path.join(OUTPUT_DIR, "transmission_spectrum.csv"),
+        np.column_stack([wavelengths, transmission, reflection, absorption]),
+        header="Wavelength(nm),Transmission,Reflection,Absorption",
+        delimiter=',',
+        comments=''
+    )
+    
+    return wavelengths, transmission, reflection, absorption
+
+# =====================================================================
+# PLOTTING AND ANALYSIS
+# =====================================================================
+
+def plot_results(wavelengths, transmission, reflection, absorption):
+    """Generate publication-quality plots."""
+    
+    print("
+Generating plots...")
+    
+    # Convert wavelength to frequency (normalized units 2πc/a)
+    freq_normalized = (2 * np.pi * speed_of_light) / (wavelengths * 1e-9 * LATTICE_CONSTANT)
+    
+    # Create figure with two subplots
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
+    
+    # Plot 1: Transmission/Reflection vs Wavelength
+    ax1.plot(wavelengths, transmission, 'b-', linewidth=2, label='Transmission')
+    ax1.plot(wavelengths, reflection, 'r--', linewidth=2, label='Reflection')
+    ax1.fill_between(wavelengths, 0, transmission, alpha=0.3, color='blue')
+    ax1.axhline(0.1, color='gray', linestyle=':', alpha=0.5, label='Band Gap Threshold')
+    
+    ax1.set_xlabel('Wavelength (nm)', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Normalized Power', fontsize=12, fontweight='bold')
+    ax1.set_title('Flower of Life Photonic Band Structure', fontsize=14, fontweight='bold')
+    ax1.legend(loc='upper right', framealpha=0.9)
+    ax1.grid(True, alpha=0.3)
+    ax1.set_xlim(wavelengths[0], wavelengths[-1])
+    ax1.set_ylim(0, 1)
+    
+    # Identify photonic band gap (regions where T < 0.1)
+    band_gaps = np.where(transmission < 0.1)[0]
+    if len(band_gaps) > 0:
+        # Find continuous regions
+        gap_start = wavelengths[band_gaps[0]]
+        gap_end = wavelengths[band_gaps[-1]]
+        ax1.axvspan(gap_start, gap_end, alpha=0.2, color='red', label=f'Band Gap: {gap_start:.0f}-{gap_end:.0f} nm')
+    
+    # Plot 2: Normalized Frequency vs Transmission
+    ax2.plot(freq_normalized, transmission, 'g-', linewidth=2)
+    ax2.fill_between(freq_normalized, 0, transmission, alpha=0.3, color='green')
+    ax2.axhline(0.1, color='gray', linestyle=':', alpha=0.5)
+    
+    ax2.set_xlabel('Normalized Frequency (2πc/a)', fontsize=12, fontweight='bold')
+    ax2.set_ylabel('Transmission', fontsize=12, fontweight='bold')
+    ax2.set_title('Photonic Band Gap (Normalized Units)', fontsize=14, fontweight='bold')
+    ax2.grid(True, alpha=0.3)
+    ax2.set_xlim(freq_normalized[-1], freq_normalized[0])  # Reverse for increasing frequency
+    ax2.set_ylim(0, 1)
+    
+    # Annotate predicted band gap region (ω = 2.5π - 3.1π from thesis)
+    ax2.axvspan(2.5 * np.pi, 3.1 * np.pi, alpha=0.15, color='orange', label='Predicted Gap (Thesis)')
+    ax2.legend(loc='upper left', framealpha=0.9)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_DIR, "photonic_bandstructure.png"), dpi=300)
+    print(f"✓ Plot saved: {OUTPUT_DIR}/photonic_bandstructure.png")
+    
+    plt.show()
+
+# =====================================================================
+# MAIN EXECUTION
+# =====================================================================
+
+if __name__ == "__main__":
+    print("="*70)
+    print(" AURPHYX FLOWER OF LIFE - PHOTONIC BAND STRUCTURE SIMULATION")
+    print("="*70)
+    print(f"Lattice constant: {LATTICE_CONSTANT*1e9:.1f} nm")
+    print(f"Circle radius: {CIRCLE_RADIUS*1e9:.1f} nm")
+    print(f"Etch depth: {ETCH_DEPTH*1e9:.1f} nm")
+    print(f"Wavelength range: {WAVELENGTH_START*1e9:.0f}-{WAVELENGTH_STOP*1e9:.0f} nm")
+    print("="*70 + "
+")
+    
+    try:
+        # Initialize simulation
+        fdtd = setup_fdtd_simulation()
+        
+        # Build geometry
+        add_flower_of_life_lattice(fdtd)
+        add_source_and_monitors(fdtd)
+        
+        # Run and analyze
+        wavelengths, transmission, reflection, absorption = run_and_analyze(fdtd)
+        
+        # Generate plots
+        plot_results(wavelengths, transmission, reflection, absorption)
+        
+        print("
+" + "="*70)
+        print("SIMULATION COMPLETE - AURPHYX BANDSTRUCTURE VALIDATED")
+        print("="*70)
+        print(f"
+Results directory: {OUTPUT_DIR}")
+        print("Next steps:")
+        print("1. Analyze transmission_spectrum.csv for band gap identification")
+        print("2. Compare predicted gap (ω=2.5π-3.1π) with simulation results")
+        print("3. Proceed to cymatic modulation integration (Script 2)")
+        
+    except Exception as e:
+        print(f"
+❌ ERROR: {e}")
+        print("Check Lumerical installation path and license activation.")
+    
+    finally:
+        # Close Lumerical session
+        try:
+            fdtd.close()
+        except:
+            pass

@@ -1,0 +1,131 @@
+bliss/
+├── README.md
+├── LICENSE
+├── Cargo.toml
+├── docker-compose.yml
+├── .env.example
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── BIOMETRIC_FUSION.md                # Multi-biometric fusion
+│   ├── SOUL_COHERENCE.md                  # Coherence scoring
+│   ├── BLISSID_INTEGRATION.md             # BlissID enhancement
+│   └── SECURITY_MODEL.md
+│
+├── src/                                   # Rust core
+│   ├── lib.rs
+│   ├── main.rs                            # BLISS daemon
+│   │
+│   ├── biometric/
+│   │   ├── mod.rs
+│   │   ├── fingerprint.rs                 # Fingerprint scanning
+│   │   ├── face_recognition.rs            # Face ID
+│   │   ├── iris_scanner.rs                # Iris recognition
+│   │   ├── voice_print.rs                 # Voice biometrics
+│   │   ├── gait_analysis.rs               # Walking pattern
+│   │   └── behavioral_biometrics.rs       # Typing/mouse patterns
+│   │
+│   ├── fusion/
+│   │   ├── mod.rs
+│   │   ├── multi_modal_fusion.rs          # Combine biometrics
+│   │   ├── score_calculator.rs            # Confidence scoring
+│   │   ├── liveness_detection.rs          # Anti-spoofing
+│   │   └── adaptive_thresholds.rs         # Dynamic thresholds
+│   │
+│   ├── soul/
+│   │   ├── mod.rs
+│   │   ├── coherence_engine.rs            # Heart coherence
+│   │   ├── hrv_analyzer.rs                # HRV analysis
+│   │   ├── resonance_detector.rs          # Schumann resonance
+│   │   ├── emotional_state.rs             # Emotion detection
+│   │   └── soul_signature.rs              # Unique soul ID
+│   │
+│   ├── blissid/
+│   │   ├── mod.rs
+│   │   ├── identity_manager.rs            # BlissID integration
+│   │   ├── registration.rs                # New identity
+│   │   ├── verification.rs                # Identity check
+│   │   └── soul_binding.rs                # Bind biometrics to soul
+│   │
+│   ├── authentication/
+│   │   ├── mod.rs
+│   │   ├── auth_engine.rs                 # Main auth logic
+│   │   ├── continuous_auth.rs             # Continuous verification
+│   │   ├── risk_assessment.rs             # Risk-based auth
+│   │   └── session_manager.rs
+│   │
+│   ├── crypto/
+│   │   ├── mod.rs
+│   │   ├── quantum_signatures.rs          # Dilithium5
+│   │   ├── biometric_encryption.rs        # Encrypt with bio data
+│   │   └── template_protection.rs         # Secure bio templates
+│   │
+│   ├── hardware/
+│   │   ├── mod.rs
+│   │   ├── sensor_manager.rs              # Sensor abstraction
+│   │   ├── camera.rs                      # Camera interface
+│   │   ├── fingerprint_scanner.rs
+│   │   ├── iris_scanner.rs
+│   │   └── hrv_sensor.rs
+│   │
+│   ├── integrations/                      # Ecosystem integrations
+│   │   ├── aurafs/
+│   │   │   └── secure_storage.rs          # Store bio templates
+│   │   ├── fuxwallet/
+│   │   │   └── wallet_unlock.rs           # Wallet biometric auth
+│   │   ├── audryos/
+│   │   │   └── os_authentication.rs       # OS-level auth
+│   │   ├── aethornyx/
+│   │   │   └── avatar_mapping.rs          # Bio → avatar
+│   │   ├── gvs/
+│   │   │   └── voter_verification.rs      # One soul, one vote
+│   │   └── chaos/
+│   │       └── consciousness_auth.rs      # Holographic auth
+│   │
+│   ├── api.rs                             # REST API
+│   ├── models.rs
+│   └── utils.rs
+│
+├── sdk/                                   # Client SDKs
+│   ├── rust/
+│   │   └── src/
+│   │       └── lib.rs
+│   ├── python/
+│   │   └── bliss_sdk.py
+│   ├── javascript/
+│   │   └── bliss.ts
+│   └── mobile/
+│       ├── android/
+│       └── ios/
+│
+├── daemon/                                # BLISS daemon
+│   └── src/
+│       ├── main.rs
+│       ├── sensor_monitor.rs
+│       └── auth_service.rs
+│
+├── web/                                   # Admin dashboard
+│   ├── package.json
+│   └── src/
+│       ├── components/
+│       │   ├── BiometricEnrollment.tsx
+│       │   ├── CoherenceMonitor.tsx
+│       │   └── SecurityDashboard.tsx
+│       └── pages/
+│
+├── hardware_drivers/                      # Sensor drivers
+│   ├── fingerprint/
+│   ├── iris/
+│   ├── hrv/
+│   └── camera/
+│
+├── tests/
+│   ├── biometric_tests/
+│   ├── fusion_tests/
+│   ├── soul_tests/
+│   └── integration/
+│
+└── config/
+    ├── sensors.toml                       # Sensor configuration
+    ├── thresholds.toml                    # Auth thresholds
+    └── fusion.toml                        # Fusion algorithms

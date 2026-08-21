@@ -1,0 +1,4 @@
+{
+  "shard1": { "path": "shard1.flac", "description": "First audio shard" },
+  "shard2": { "path": "shard2.flac", "description": "Second audio shard" }
+}

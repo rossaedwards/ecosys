@@ -1,0 +1,129 @@
+gvs/
+├── README.md
+├── LICENSE
+├── Cargo.toml                             # Rust workspace
+├── requirements.txt                       # EXISTING: Python deps
+├── Dockerfile                             # EXISTING
+├── docker-compose.yml
+├── .env.example
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── VOTING_MODES.md                    # Voting system variants
+│   ├── PRIVACY.md                         # ZK-proof privacy layer
+│   └── API.md
+│
+├── src/                                   # Rust backend
+│   ├── lib.rs
+│   ├── main.rs
+│   ├── server.rs
+│   │
+│   ├── voting/
+│   │   ├── mod.rs
+│   │   ├── engine.rs                      # Core voting logic
+│   │   ├── modes.rs                       # Multi-choice, quadratic, ranked
+│   │   ├── weighted.rs                    # Soul-weighted voting
+│   │   └── tallying.rs                    # Vote counting
+│   │
+│   ├── privacy/
+│   │   ├── mod.rs
+│   │   ├── zk_proofs.rs                   # Zero-knowledge proofs
+│   │   ├── anonymous_voting.rs            # Anonymous ballot
+│   │   └── audit_with_privacy.rs          # Auditable anonymity
+│   │
+│   ├── identity/
+│   │   ├── mod.rs
+│   │   ├── blissid_client.rs              # Links to /afs/governance
+│   │   ├── verification.rs                # Identity verification
+│   │   └── soulsync_client.rs             # Soul coherence scoring
+│   │
+│   ├── ballot/
+│   │   ├── mod.rs
+│   │   ├── ballot_generation.rs           # Generate ballots
+│   │   ├── ballot_casting.rs              # Cast votes
+│   │   └── ballot_verification.rs         # Verify ballots
+│   │
+│   ├── federation/
+│   │   ├── mod.rs
+│   │   ├── api_gateway.rs                 # External voting system API
+│   │   ├── protocol_adapter.rs            # Protocol adapters
+│   │   └── cross_system_sync.rs           # Multi-system sync
+│   │
+│   ├── integration/
+│   │   ├── mod.rs
+│   │   ├── governance_bridge.rs           # Links to /afs/governance
+│   │   ├── ledger_bridge.rs               # Links to ineffable
+│   │   └── opulence_bridge.rs             # Links to opulence
+│   │
+│   ├── models.rs
+│   ├── api.rs                             # REST API
+│   └── utils.rs
+│
+├── app/                                   # EXISTING: Python FastAPI app
+│   ├── main.py                            # EXISTING: Main entry
+│   │
+│   ├── api/                               # EXISTING: API layer
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   └── middleware.py
+│   │
+│   ├── core/                              # EXISTING: Core logic
+│   │   ├── __init__.py
+│   │   ├── voting_logic.py
+│   │   └── authentication.py
+│   │
+│   └── services/                          # EXISTING: Service layer
+│       ├── __init__.py
+│       ├── ballot_service.py
+│       └── tally_service.py
+│
+├── votingengine.py                        # EXISTING: Voting engine
+│
+├── python/                                # Additional Python tools
+│   ├── __init__.py
+│   ├── sdk_client.py                      # Python SDK
+│   ├── zk_proof_generator.py              # ZK proof utilities
+│   └── simulation.py                      # Voting simulation
+│
+├── web/                                   # EXISTING: Frontend
+│   ├── index.html                         # EXISTING
+│   ├── gvs.txt                            # EXISTING
+│   ├── gvs.xml                            # EXISTING
+│   ├── package.json
+│   └── src/
+│       ├── components/
+│       │   ├── VotingBooth.tsx            # Voting interface
+│       │   ├── BallotDisplay.tsx          # Ballot visualization
+│       │   ├── ResultsDashboard.tsx       # Results display
+│       │   └── IdentityVerifier.tsx       # Identity verification UI
+│       ├── pages/
+│       │   ├── Vote.tsx
+│       │   ├── Results.tsx
+│       │   └── Admin.tsx
+│       └── utils/
+│           └── api.ts
+│
+├── sdk/                                   # Client SDKs
+│   ├── rust/
+│   │   └── client.rs
+│   ├── python/
+│   │   └── gvs_client.py
+│   ├── javascript/
+│   │   └── client.ts
+│   └── mobile/
+│       └── (React Native or Flutter)
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+│
+├── scripts/
+│   ├── setup.sh
+│   ├── run_election.sh
+│   └── simulate_voters.py
+│
+└── config/
+    ├── voting_modes.toml                  # Voting system configs
+    ├── privacy_settings.toml              # Privacy parameters
+    └── federation.toml                    # Federation settings

@@ -1,0 +1,8 @@
+Flask==2.3.3
+soundfile==0.12.1
+numpy==1.26.4
+gunicorn==21.2.0
+torch==2.2.0
+torchaudio==2.2.0
+torchvision==0.15.1
+transformers==4.37.2

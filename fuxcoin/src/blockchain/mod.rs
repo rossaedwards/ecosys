@@ -1,0 +1,2 @@
+//! Blockchain
+pub struct Block;

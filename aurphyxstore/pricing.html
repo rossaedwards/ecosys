@@ -1,0 +1,100 @@
+<section id="pricing" style="font-family:sans-serif; padding:2rem; max-width:1100px; margin:auto;">
+  <h1 style="text-align:center; font-size:2.5rem;">g0dm0d3 Pricing Codex</h1>
+  <p style="text-align:center; font-size:1.2rem;">Choose your path. Unlock your modules. Ascend your build.</p>
+  
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin-top:2rem;">
+    
+    <!-- Community -->
+    <div style="border:1px solid #ccc; border-radius:8px; padding:1rem;">
+      <h3>Community Edition</h3>
+      <p><strong>Free</strong> • 1 seat</p>
+      <ul>
+        <li>Non‑commercial eval</li>
+        <li>Core UI shell, sample modules</li>
+        <li>Community forum support</li>
+      </ul>
+      <button onclick="selectTier('Community')" style="padding:0.5rem 1rem; background:#ccc; border:none; border-radius:4px;">Start Free</button>
+    </div>
+
+    <!-- Solo -->
+    <div style="border:1px solid #ccc; border-radius:8px; padding:1rem;">
+      <h3>Solo Creator</h3>
+      <p>$29/mo or $199/yr • 1 seat</p>
+      <ul>
+        <li>Full core + commercial rights</li>
+        <li>1 production key, 1 staging key</li>
+        <li>Email support (5 biz days)</li>
+      </ul>
+      <button onclick="selectTier('Solo Creator')" style="padding:0.5rem 1rem; background:#007acc; color:#fff; border:none; border-radius:4px;">Upgrade</button>
+    </div>
+
+    <!-- Indie -->
+    <div style="border:1px solid #ccc; border-radius:8px; padding:1rem;">
+      <h3>Indie Studio</h3>
+      <p>$99/mo or $999/yr • 5 seats</p>
+      <ul>
+        <li>Up to 3 products</li>
+        <li>CI/CD templates</li>
+        <li>Quarterly architecture review</li>
+      </ul>
+      <button onclick="selectTier('Indie Studio')" style="padding:0.5rem 1rem; background:#007acc; color:#fff; border:none; border-radius:4px;">Upgrade</button>
+    </div>
+
+    <!-- Pro -->
+    <div style="border:1px solid #ccc; border-radius:8px; padding:1rem;">
+      <h3>Pro Team</h3>
+      <p>$299/mo or $2,999/yr • 20 seats</p>
+      <ul>
+        <li>Advanced modules (analytics, A/B kit)</li>
+        <li>SSO-ready, secrets mgmt</li>
+        <li>Priority 24–48h support</li>
+      </ul>
+      <button onclick="selectTier('Pro Team')" style="padding:0.5rem 1rem; background:#007acc; color:#fff; border:none; border-radius:4px;">Upgrade</button>
+    </div>
+
+    <!-- Enterprise -->
+    <div style="border:1px solid #ccc; border-radius:8px; padding:1rem;">
+      <h3>Enterprise</h3>
+      <p>From $15,000/yr • Unlimited</p>
+      <ul>
+        <li>On‑prem or air‑gapped deploy</li>
+        <li>Custom modules & audits</li>
+        <li>99.9% SLA, 4h critical support</li>
+      </ul>
+      <button onclick="selectTier('Enterprise')" style="padding:0.5rem 1rem; background:#ff9800; color:#fff; border:none; border-radius:4px;">Talk to Sales</button>
+    </div>
+
+    <!-- OEM -->
+    <div style="border:1px solid #ccc; border-radius:8px; padding:1rem;">
+      <h3>OEM / Launcher License</h3>
+      <p>From $50,000 + royalties</p>
+      <ul>
+        <li>White‑label rights</li>
+        <li>Source escrow & OEM toolchain</li>
+        <li>Cert lab, TAM support</li>
+      </ul>
+      <button onclick="selectTier('OEM / Launcher')" style="padding:0.5rem 1rem; background:#ff9800; color:#fff; border:none; border-radius:4px;">Talk to Sales</button>
+    </div>
+
+    <!-- Founders Lifetime -->
+    <div style="border:2px solid gold; border-radius:8px; padding:1rem; background:linear-gradient(to bottom,#fff8e1,#fff3e0);">
+      <h3>Founders Lifetime Dev Mode</h3>
+      <p>$1,499 one‑time • 1 seat (100 total)</p>
+      <ul>
+        <li>Lifetime updates</li>
+        <li>All modules, private betas</li>
+        <li>3 commercial product licenses</li>
+      </ul>
+      <button onclick="selectTier('Founders Lifetime')" style="padding:0.5rem 1rem; background:gold; border:none; border-radius:4px;">Claim Yours</button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function selectTier(tier) {
+    // This is where you’d integrate with your signup/onboarding
+    alert(`You selected: ${tier} — redirecting to signup…`);
+    window.location.href = 'signup.html?tier=' + encodeURIComponent(tier);
+  }
+</script>

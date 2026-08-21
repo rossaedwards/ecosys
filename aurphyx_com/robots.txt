@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /private/
+Disallow: /forge-internal/
+
+Sitemap: https://aurphyx.com/sitemap.xml

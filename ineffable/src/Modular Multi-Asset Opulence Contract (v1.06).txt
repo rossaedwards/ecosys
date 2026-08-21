@@ -1,0 +1,41 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+interface IERC20 { function transferFrom(address, address, uint) external returns (bool); function transfer(address, uint) external returns (bool); }
+
+contract Opulence {
+    struct Entity {
+        bool registered;
+        uint256 ethicalScore;
+        uint256 liquidity;
+    }
+    mapping(address => Entity) public entities;
+    address public owner;
+    uint256 public redistributionRate = 5; // 5%
+
+    event Registered(address indexed entity, uint256 ethicalScore);
+    event Redistribution(address indexed from, address indexed to, uint256 amount);
+
+    modifier onlyOwner() { require(msg.sender == owner, "Not owner"); _; }
+
+    constructor() { owner = msg.sender; }
+
+    function registerEntity(uint256 score, uint256 liquidity) external {
+        require(!entities[msg.sender].registered, "Already registered");
+        entities[msg.sender] = Entity(true, score, liquidity);
+        emit Registered(msg.sender, score);
+    }
+
+    function redistribute(address[] calldata addrs) external onlyOwner {
+        uint256 totalLiquidity;
+        uint256 totalScore;
+        for(uint256 i=0; i<addrs.length; i++){
+            totalLiquidity += entities[addrs[i]].liquidity;
+            totalScore += entities[addrs[i]].ethicalScore;
+        }
+        for(uint256 i=0; i<addrs.length; i++){
+            uint256 gain = (totalLiquidity * redistributionRate / 100) * (entities[addrs[i]].ethicalScore / totalScore);
+            entities[addrs[i]].liquidity += gain;
+            emit Redistribution(owner, addrs[i], gain);
+        }
+    }
+}

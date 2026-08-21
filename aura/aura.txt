@@ -1,0 +1,177 @@
+aura/
+├── README.md
+├── LICENSE
+├── Cargo.toml                                    # Rust kernel workspace
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── ARORA_KERNEL.md                           # Custom kernel based on Linux/Redox
+│   ├── QUANTUM_NATIVE_RUNTIME.md                 # [Feature #80] Unified runtime
+│   ├── CYMATIC_HARDWARE_DRIVERS.md               # [Feature #76] Kernel-level audio
+│   ├── SAGES_KERNEL_HOOKS.md                     # [Feature #79] All 13 Sentinels
+│   ├── WAYLAND_ADE_DESKTOP.md                    # [Feature #87] Compositor
+│   └── LIVE_USB_DEMO.md                          # [Feature #86] Bootable showcase
+│
+├── kernel/                                       # Arora kernel (Rust)
+│   ├── Cargo.toml
+│   ├── build.rs
+│   ├── linker.ld
+│   │
+│   ├── src/
+│   │   ├── main.rs                               # Kernel entry point
+│   │   ├── boot/
+│   │   │   ├── mod.rs
+│   │   │   ├── multiboot.rs
+│   │   │   └── uefi.rs
+│   │   │
+│   │   ├── memory/
+│   │   │   ├── mod.rs
+│   │   │   ├── paging.rs
+│   │   │   ├── heap.rs
+│   │   │   ├── fractal_memory_model.rs           # [Feature #81] Fuxyez integration
+│   │   │   └── quantum_memory_allocator.rs       # [Feature #80] Qubit-aware malloc
+│   │   │
+│   │   ├── scheduler/
+│   │   │   ├── mod.rs
+│   │   │   ├── quantum_classical_hybrid.rs       # [Feature #78] Barrier solution
+│   │   │   ├── process.rs
+│   │   │   ├── thread.rs
+│   │   │   └── preemption.rs
+│   │   │
+│   │   ├── drivers/
+│   │   │   ├── mod.rs
+│   │   │   ├── aurafs_fuse.rs                    # [Feature #77] Native driver
+│   │   │   ├── cymatic_alsa.rs                   # [Feature #76] Piezo + ALSA
+│   │   │   ├── quantum_hardware.rs               # Majorana-1, ZPE device drivers
+│   │   │   ├── dataorb_photonic.rs               # Photonic network interface
+│   │   │   ├── block.rs
+│   │   │   ├── network.rs
+│   │   │   └── gpu.rs
+│   │   │
+│   │   ├── security/
+│   │   │   ├── mod.rs
+│   │   │   ├── sages_hooks.rs                    # [Feature #79] All 13 Sentinels
+│   │   │   ├── valkryx_syscall_validation.rs
+│   │   │   ├── teslyrax_rng.rs
+│   │   │   ├── cryptanyx_anomaly.rs
+│   │   │   └── mandatory_access_control.rs       # SELinux-style
+│   │   │
+│   │   ├── quantum/                              # [NEW] Module
+│   │   │   ├── mod.rs
+│   │   │   ├── unified_runtime.rs                # [Feature #80] All projects native
+│   │   │   ├── qubit_scheduler.rs                # Quantum job scheduling
+│   │   │   ├── decoherence_monitor.rs            # Real-time system-wide monitoring
+│   │   │   ├── error_correction_layer.rs         # Kernel-level QEC
+│   │   │   └── topological_routing.rs            # Route quantum ops through Majorana-1
+│   │   │
+│   │   ├── syscalls/
+│   │   │   ├── mod.rs
+│   │   │   ├── quantum_syscalls.rs               # [NEW] Native qubit operations
+│   │   │   ├── file_syscalls.rs
+│   │   │   ├── network_syscalls.rs
+│   │   │   └── process_syscalls.rs
+│   │   │
+│   │   ├── interrupts/
+│   │   │   ├── mod.rs
+│   │   │   ├── idt.rs
+│   │   │   └── apic.rs
+│   │   │
+│   │   └── utils/
+│   │       ├── mod.rs
+│   │       └── serial.rs
+│   │
+│   └── tests/
+│       ├── boot_test.rs
+│       └── memory_test.rs
+│
+├── userspace/                                    # System services (Rust)
+│   ├── Cargo.toml
+│   ├── init/
+│   │   └── systemd_alternative.rs                # Custom init system
+│   │
+│   ├── services/
+│   │   ├── aurafs_daemon.rs                      # [Feature #77] Mount service
+│   │   ├── sages_sentinel_daemon.rs              # [Feature #79] Background monitoring
+│   │   ├── quantum_runtime_daemon.rs             # [Feature #80] Job scheduler
+│   │   ├── cymatic_driver_service.rs             # [Feature #76] Audio hardware
+│   │   └── network_manager.rs
+│   │
+│   └── shell/
+│       └── arora_shell.rs                        # Bash-like shell with quantum primitives
+│
+├── desktop/                                      # ADE (Arora Desktop Environment)
+│   ├── Cargo.toml
+│   ├── compositor/
+│   │   ├── wayland_compositor.rs                 # [Feature #87] Custom Wayland
+│   │   ├── sentinel_overlay.rs                   # [Feature #87] Real-time security viz
+│   │   └── quantum_task_manager.rs               # Show qubit usage
+│   │
+│   ├── window_manager/
+│   │   ├── tiling.rs
+│   │   └── floating.rs
+│   │
+│   ├── panel/
+│   │   ├── top_bar.rs
+│   │   └── dock.rs
+│   │
+│   ├── file_manager/
+│   │   └── aurafs_explorer.rs                    # Native AuraFS integration
+│   │
+│   ├── terminal/
+│   │   └── quantum_terminal.rs                   # Show qubit state inline
+│   │
+│   └── apps/
+│       ├── text_editor.rs
+│       ├── quantum_debugger.rs                   # [Feature #84] Fuxyez integration
+│       └── settings.rs
+│
+├── live_usb/                                     # [NEW] Feature #86
+│   ├── build_iso.sh
+│   ├── squashfs_root/
+│   ├── bootloader/
+│   │   ├── grub.cfg
+│   │   └── syslinux.cfg
+│   │
+│   └── persistence/
+│       └── live_persistence_setup.sh
+│
+├── packages/                                     # Package manager
+│   ├── pkgbuild/
+│   │   ├── aurafs.pkgbuild
+│   │   ├── audry.pkgbuild
+│   │   ├── majorana-1-tools.pkgbuild
+│   │   └── sages.pkgbuild
+│   │
+│   └── repo/
+│       └── aurphyx_repo.db
+│
+├── integration/
+│   ├── aurafs_native_driver.rs                   # [Feature #77]
+│   ├── cymatic_kernel_driver.c                   # [Feature #76] C driver for ALSA
+│   ├── sages_kernel_hooks.rs                     # [Feature #79]
+│   ├── quantum_runtime_integration.rs            # [Feature #80]
+│   └── fuxyez_compiler_backend.rs                # [Feature #81] Native compilation
+│
+├── tests/
+│   ├── kernel_tests/
+│   │   ├── test_scheduler.rs
+│   │   ├── test_quantum_syscalls.rs              # [NEW]
+│   │   └── test_sages_hooks.rs                   # [NEW]
+│   │
+│   ├── userspace_tests/
+│   │   └── test_aurafs_mount.rs
+│   │
+│   └── integration_tests/
+│       ├── test_quantum_native_runtime.rs        # [NEW]
+│       └── test_sentinel_overlay.rs              # [NEW]
+│
+├── scripts/
+│   ├── build_kernel.sh
+│   ├── build_iso.sh                              # [Feature #86] Live USB
+│   └── deploy_vm.sh
+│
+└── config/
+    ├── kernel_config.toml
+    ├── sages_hooks_config.toml                   # [Feature #79]
+    ├── quantum_runtime_config.toml               # [Feature #80]
+    └── desktop_config.toml

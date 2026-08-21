@@ -1,0 +1,10 @@
+# Aurphyx LLC — Security Contact Information (Fallback Copy)
+# This file mirrors the canonical version located at /.well-known/security.txt
+
+Contact: mailto:admin@aurphyx.com
+Contact: mailto:security@aurphyx.com
+Encryption: https://aurphyx.com/pgp.txt
+Preferred-Languages: en
+Canonical: https://aurphyx.com/.well-known/security.txt
+Policy: https://aurphyx.com/business-compliance.html
+Hiring: https://aurphyx.com/about.html

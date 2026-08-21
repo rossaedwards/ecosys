@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Aurphyx LLC</title>
+    <meta name="description" content="Aurphyx Privacy Policy - How we collect, use, and protect your personal information through sovereign computing.">
+        
+    <!-- App Icons and Manifest -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- OpenDyslexic Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@0.2.1/OpenDyslexic.min.css">
+    
+    <!-- Global Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           GLOBAL SPA & THEME VARIABLES (Matched exactly to index.html)
+           ========================================================= */
+        :root { 
+            --bg-main: #232946; 
+            --bg-section: #22223b; 
+            --text-color: #f2f2f2; 
+            --text-muted: #a0aabf;
+            --accent: #8be9fd; 
+            --accent-hover: #2dd4bf;
+            --card-bg: linear-gradient(135deg, #232946 0%, rgba(57, 62, 70, 0.5) 100%);
+            --border-color: rgba(139, 233, 253, 0.15);
+            --badge-bg: rgba(0, 0, 0, 0.2);
+        }
+        
+        body.light-mode { 
+            --bg-main: #f8f9fa; 
+            --bg-section: #ffffff; 
+            --text-color: #22223b; 
+            --text-muted: #4a5568;
+            --accent: #667eea; 
+            --accent-hover: #5a67d8;
+            --card-bg: #f1f5f9;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --badge-bg: #ffffff;
+        }
+        
+        body.dyslexic-font * { 
+            font-family: "OpenDyslexic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important; 
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body { 
+            font-family: 'Inter', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background: linear-gradient(135deg, var(--bg-main) 0%, #121629 100%); 
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.light-mode {
+            background: var(--bg-main);
+        }
+
+        /* =========================================================
+           HEADER & NAVIGATION
+           ========================================================= */
+        header { 
+            background: rgba(20, 20, 34, 0.97); 
+            backdrop-filter: blur(10px); 
+            position: fixed; top: 0; left: 0; right: 0; 
+            z-index: 2000; 
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5); 
+        }
+        
+        body.light-mode header {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            max-width: 1400px; margin: 0 auto; padding: 1rem 20px; 
+        }
+        
+        .logo { 
+            font-size: 1.8rem; font-weight: bold; 
+            background: linear-gradient(45deg, #FF007F, #00F0FF); 
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
+            text-decoration: none; cursor: pointer;
+        }
+        
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { color: #f2f2f2; text-decoration: none; font-weight: 500; cursor: pointer; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #00F0FF; }
+        
+        body.light-mode .nav-links a { color: #22223b; }
+        body.light-mode .nav-links a:hover, body.light-mode .nav-links a.active { color: var(--accent); }
+
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            display: none; position: absolute; 
+            background: rgba(20, 20, 34, 0.98); min-width: 160px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 6px; 
+            top: 100%; left: 50%; transform: translateX(-50%); z-index: 2000; 
+        }
+        body.light-mode .dropdown-content { background: #ffffff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .dropdown-content a { display: block; padding: 10px 15px; color: #f2f2f2; }
+        body.light-mode .dropdown-content a { color: #22223b; }
+        .dropdown-content a:hover { background: rgba(255,255,255,0.1); }
+        body.light-mode .dropdown-content a:hover { background: #f8f9fa; }
+        .dropdown:hover .dropdown-content { display: block; }
+        
+        .header-controls { display: flex; gap: 8px; }
+        .control-btn { 
+            background: rgba(255,255,255,0.1); color: #f2f2f2; 
+            border: none; width: 42px; height: 42px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.2rem; cursor: pointer; transition: all 0.3s;
+        }
+        body.light-mode .control-btn { background: #f1f5f9; color: #22223b; }
+        .control-btn:hover { background: #00F0FF; color: #232946; }
+        body.light-mode .control-btn:hover { background: var(--accent); color: #fff; }
+        
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 25px; height: 3px; background: var(--text-color); }
+
+        /* =========================================================
+           DOCUMENT STYLES
+           ========================================================= */
+        main#content { 
+            flex: 1;
+            padding-top: 100px; 
+            padding-bottom: 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .document-container {
+            background: var(--bg-section);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        .doc-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-color); letter-spacing: -0.5px; }
+        h2 { color: var(--accent); font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h3 { color: var(--text-color); font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        h4 { color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem; margin-bottom: 0.5rem; }
+        
+        p { margin-bottom: 1rem; text-align: justify; color: var(--text-color); }
+        ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; color: var(--text-color); }
+        li { margin-bottom: 0.5rem; }
+
+        .last-updated { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Callout Badges */
+        .highlight {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .important {
+            background: rgba(255, 85, 85, 0.1);
+            border-left: 4px solid #ff5555;
+            color: var(--text-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .contact-info {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display:none; flex-direction:column; position:fixed; top:74px; left:0; width:100%; background:rgba(20,20,34,0.98); padding:2rem 0; gap:1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.5); z-index: 1500; }
+            body.light-mode .nav-links { background: #ffffff; }
+            .nav-links.active { display:flex; }
+            .hamburger { display:flex; }
+            .document-container { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+        footer { background:#121629; color:#fafaff; text-align:center; padding:3rem 20px; margin-top: auto; }
+        body.light-mode footer { background:#e9ecef; color:#22223b; }
+        .sitemap a { color:#bdc3c7; margin:0 10px; text-decoration:none; transition: color 0.3s;}
+        .sitemap a:hover { color: var(--accent); }
+        .footer-orcid { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 1rem; color: #8e97a6; text-decoration: none;}
+        .footer-orcid:hover { color: #fff; }
+        body.light-mode .footer-orcid:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AURPHYX LLC</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#technologies">Technologies</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="business-compliance.html">Compliance</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" style="cursor:pointer; color:#00F0FF;">Legal ▾</a>
+                    <div class="dropdown-content">
+                        <a href="privacy-policy.html" style="color:var(--accent);">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-controls">
+                <button id="font-toggle" class="control-btn" title="Toggle Dyslexia-Friendly Font">A</button>
+                <button id="theme-toggle" class="control-btn" title="Toggle Dark/Light Mode"><span id="theme-icon">🌙</span></button>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="content">
+        <div class="document-container">
+            <div class="doc-header">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: April 2026</p>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Aurphyx LLC fundamentally believes in Data Sovereignty.</strong> Unlike legacy technology corporations, our operating systems, mesh networks, and AI platforms are engineered to keep your data exclusively under your jurisdiction. This Privacy Policy outlines what minimal information we collect, how it is secured, and your absolute rights to your digital identity.</p>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>1.1 Information You Provide Directly</h3>
+            <p>We collect information that you explicitly provide when interacting with our public-facing web infrastructure, acquiring hardware, or creating an optional gateway account. This may include:</p>
+            <ul>
+                <li><strong>Contact Data:</strong> Name, email address, and physical address (if requesting hardware shipping).</li>
+                <li><strong>Account Credentials:</strong> Hashes and cryptographic keys used for authentication.</li>
+                <li><strong>Communications:</strong> Records of support requests, bug reports, and correspondence with our teams.</li>
+            </ul>
+
+            <h3>1.2 Sovereign Telemetry (Opt-In Only)</h3>
+            <p>By default, systems like AuraOS, AuraFS, and g0dm0d3 operate in a zero-telemetry, offline-first state. However, if you explicitly opt-in to help improve the network, we may collect:</p>
+            <ul>
+                <li><strong>Diagnostic Logs:</strong> Crash reports, anonymized system performance metrics, and mesh-routing efficiency data.</li>
+                <li><strong>Anonymized Interaction Data:</strong> Non-personally identifiable metrics regarding AI multimodal usage to refine Audry's neural response times.</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the strictly necessary data we collect to:</p>
+            <ul>
+                <li>Provision, secure, and authenticate your access to Aurphyx services.</li>
+                <li>Process transactions and fulfill hardware/software orders.</li>
+                <li>Respond to your technical support inquiries and provide critical security updates.</li>
+                <li>Prevent fraudulent activity and maintain the integrity of the mesh network.</li>
+            </ul>
+
+            <h2>3. Data Sovereignty and Storage (AuraFS)</h2>
+            <p>The Aurphyx ecosystem utilizes <strong>AuraFS</strong>—a fractal-sharded, distributed filesystem. This means your personal files, AI models, and local operating system states are <em>not</em> stored in a centralized corporate database. They are encrypted and stored locally on your bare metal, or sharded securely across your own designated mesh nodes.</p>
+            <p>Aurphyx LLC does not possess the cryptographic keys to decrypt, harvest, or monetize the contents of your sovereign data drives.</p>
+
+            <h2>4. Information Sharing and Disclosure</h2>
+            <p>We have a strict zero-harvesting policy. We do not sell, rent, or trade your personal information to advertisers or data brokers. We only share information under the following circumstances:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> With trusted third-party vendors who assist us in operating our legal business (e.g., payment processors like Stripe or PayPal), strictly bound by confidentiality agreements.</li>
+                <li><strong>Legal Requirements:</strong> If compelled by a legally binding court order or subpoena, we will comply. However, our decentralized architecture means we often mathematically cannot provide data we do not hold the keys to.</li>
+                <li><strong>Protection of Rights:</strong> To protect the rights, property, or safety of Aurphyx LLC, our users, or the public.</li>
+            </ul>
+
+            <h2>5. Your Rights and Choices</h2>
+            <p>Subject to your local jurisdiction (including GDPR, CCPA, and COPPA), you possess the right to:</p>
+            <ul>
+                <li><strong>Access and Export:</strong> Request a copy of the personal data held on our central servers.</li>
+                <li><strong>Correction and Deletion:</strong> Request the modification or permanent deletion of your data ("Right to be Forgotten").</li>
+                <li><strong>Opt-Out:</strong> Withdraw consent for any optional telemetry or marketing communications at any time.</li>
+            </ul>
+
+            <h2>6. Compliance and Certifications</h2>
+            <p>Aurphyx is committed to maintaining rigorous compliance with applicable privacy laws globally, including but not limited to:</p>
+            <ul>
+                <li>General Data Protection Regulation (GDPR)</li>
+                <li>California Consumer Privacy Act (CCPA)</li>
+                <li>Children's Online Privacy Protection Act (COPPA)</li>
+                <li>CAN-SPAM Act</li>
+            </ul>
+
+            <h2>7. Contact Information</h2>
+
+            <div class="contact-info">
+                <h3>Privacy Inquiries</h3>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your rights, or our data practices, please contact our Privacy Officer:</p>
+                
+                <p>
+                    <strong>Privacy Officer:</strong> privacy@aurphyx.net<br>
+                    <strong>General Information:</strong> info@aurphyx.net<br>
+                    <strong>Business Inquiries:</strong> admin@aurphyx.net
+                </p>
+                
+                <p style="margin-top: 1rem;">
+                    <strong>Mailing Address:</strong><br>
+                    Aurphyx LLC Privacy Officer<br>
+                    502 W 7TH ST, STE 100<br>
+                    ERIE, PA 16502-1333<br>
+                    United States
+                </p>
+            </div>
+
+            <div class="important">
+                <p><strong>Effective Date:</strong> This Privacy Policy was originally enacted on August 24, 2025. It is reviewed annually and updated as necessary to reflect advancements in our technology, changes in applicable laws, or industry standards. Your continued use of the Aurphyx ecosystem constitutes acknowledgment of these terms.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="sitemap">
+            <a href="privacy-policy.html">Privacy Policy</a> • 
+            <a href="terms-of-service.html">Terms of Service</a> • 
+            <a href="business-compliance.html">Compliance</a> • 
+            <a href="explorer.html">Explorer</a>
+        </div>
+        <a href="https://orcid.org/0009-0008-0539-1289" class="footer-orcid" target="_blank" rel="noopener noreferrer">
+            <svg class="orcid-icon" viewBox="0 0 512 512" style="fill:currentColor; width:16px; height:16px;">
+                <path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84v207.5zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/>
+            </svg>
+            ORCID: 0009-0008-0539-1289
+        </a>
+        <div style="margin-top:1rem; font-size:0.9rem; color: #8e97a6;">© 2026 Aurphyx LLC • All Rights Reserved • Erie, PA, United States</div>
+    </footer>
+
+    <script>
+        /* =========================================================
+           THEME TOGGLES & MOBILE MENU LOGIC
+           ========================================================= */
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const fontToggle = document.getElementById('font-toggle');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        function setTheme(isLight) {
+            document.body.classList.toggle('light-mode', isLight);
+            themeIcon.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+        function setFont(isDyslexic) {
+            document.body.classList.toggle('dyslexic-font', isDyslexic);
+            localStorage.setItem('font', isDyslexic ? 'dyslexic' : 'standard');
+        }
+
+        // Check local storage so preferences carry over from index.html
+        if (localStorage.getItem('theme') === 'light') setTheme(true);
+        if (localStorage.getItem('font') === 'dyslexic') setFont(true);
+
+        themeToggle.addEventListener('click', () => setTheme(!document.body.classList.contains('light-mode')));
+        fontToggle.addEventListener('click', () => setFont(!document.body.classList.contains('dyslexic-font')));
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+    </script>
+</body>
+</html>

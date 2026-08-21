@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  shard-server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: shard-server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./shard-server:/app
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    container_name: audry-ui
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped
+env_file:
+services:
+  shard-server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: shard-server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./shard-server:/app
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    container_name: audry-ui
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui:/app
+      - /app/node_modules
+    env_file:
+      - .env
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped

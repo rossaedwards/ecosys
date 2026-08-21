@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Compliance - Aurphyx</title>
+    <meta name="description" content="Aurphyx Business Compliance - Our commitment to regulatory compliance, industry standards, and ethical business practices">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        h3 {
+            color: #495057;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h4 {
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .compliance-badge {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 500;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .important {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .cert-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            text-align: center;
+        }
+        
+        .cert-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cert-status {
+            font-size: 0.9rem;
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 2rem;
+            transition: background 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: #5a67d8;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .compliance-table th,
+        .compliance-table td {
+            border: 1px solid #dee2e6;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        .compliance-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .compliance-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .status-active {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-pending {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .status-planned {
+            color: #6c757d;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .certification-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">AURPHYX</div>
+            <h1>Business Compliance</h1>
+            <p class="last-updated">Last Updated: August 24, 2025</p>
+        </div>
+
+        <div class="highlight">
+            <p><strong>Aurphyx is committed to maintaining the highest standards of business compliance, regulatory adherence, and ethical practices.</strong> This document outlines our compliance framework, certifications, and ongoing commitments to legal and industry standards.</p>
+        </div>
+
+        <h2>1. Regulatory Compliance Framework</h2>
+
+        <h3>1.1 Data Protection and Privacy</h3>
+        <p>Aurphyx maintains strict compliance with international data protection regulations to ensure the privacy and security of all client and user data.</p>
+
+        <div class="certification-grid">
+            <div class="cert-card">
+                <h4>GDPR Compliance</h4>
+                <p class="cert-status">✓ Active</p>
+                <p>General Data Protection Regulation compliance for EU data subjects</p>
+            </div>
+            <div class="cert-card">
+                <h4>CCPA Compliance</h4>
+                <p class="cert-status">✓ Active</p>
+                <p>California Consumer Privacy Act compliance for California residents</p>
+            </div>
+            <div class="cert-card">
+                <h4>COPPA Compliance</h4>
+                <p class="cert-status">✓ Active</p>
+                <p>Children's Online Privacy Protection Act compliance</p>
+            </div>
+        </div>
+
+        <h3>1.2 Information Security Standards</h3>
+        <p>Our information security practices align with industry-recognized standards and frameworks:</p>
+
+        <table class="compliance-table">
+            <thead>
+                <tr>
+                    <th>Standard/Framework</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Review Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ISO 27001 Framework</td>
+                    <td class="status-active">Implemented</td>
+                    <td>Information Security Management System</td>
+                    <td>Quarterly</td>
+                </tr>
+                <tr>
+                    <td>NIST Cybersecurity Framework</td>
+                    <td class="status-active">Implemented</td>
+                    <td>Risk management and security controls</td>
+                    <td>Semi-annually</td>
+                </tr>
+                <tr>
+                    <td>SOC 2 Type II</td>
+                    <td class="status-pending">In Progress</td>
+                    <td>Security, availability, and confidentiality</td>
+                    <td>Annual</td>
+                </tr>
+                <tr>
+                    <td>OWASP Top 10</td>
+                    <td class="status-active">Implemented</td>
+                    <td>Web application security standards</td>
+                    <td>Continuous</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Industry Standards and Certifications</h2>
+
+        <h3>2.1 Software Development Standards</h3>
+        <p>Aurphyx adheres to established software development methodologies and quality standards:</p>
+
+        <ul>
+            <li><strong>ISO 9001:2015</strong> - Quality Management Systems compliance</li>
+            <li><strong>Agile Development Practices</strong> - Scrum and Kanban methodologies</li>
+            <li><strong>DevOps Best Practices</strong> - Continuous integration and deployment</li>
+            <li><strong>Clean Code Principles</strong> - Maintainable and scalable code standards</li>
+            <li><strong>Accessibility Standards</strong> - WCAG 2.1 AA compliance for web applications</li>
+        </ul>
+
+        <h3>2.2 Cloud Security and Operations</h3>
+        <div class="certification-grid">
+            <div class="cert-card">
+                <h4>Cloud Security Alliance</h4>
+                <p class="cert-status">✓ Member</p>
+                <p>Cloud security best practices and standards</p>
+            </div>
+            <div class="cert-card">
+                <h4>AWS Well-Architected</h4>
+                <p class="cert-status">✓ Certified</p>
+                <p>Cloud architecture best practices</p>
+            </div>
+            <div class="cert-card">
+                <h4>DevSecOps Practices</h4>
+                <p class="cert-status">✓ Implemented</p>
+                <p>Security integrated into development lifecycle</p>
+            </div>
+        </div>
+
+        <h2>3. Legal and Contractual Compliance</h2>
+
+        <h3>3.1 Business Registration and Licensing</h3>
+        <div class="compliance-badge">
+            ✓ Aurphyx is a legally registered business entity in good standing with all required licenses and permits for technology services operations.
+        </div>
+
+        <h3>3.2 Professional Services Compliance</h3>
+        <ul>
+            <li><strong>Professional Liability Insurance</strong> - Coverage for technology services</li>
+            <li><strong>General Liability Insurance</strong> - Business operations protection</li>
+            <li><strong>Cyber Liability Insurance</strong> - Data breach and cyber incident coverage</li>
+            <li><strong>Workers' Compensation</strong> - Employee protection and compliance</li>
+            <li><strong>Business License</strong> - Current and valid for technology services</li>
+        </ul>
+
+        <h3>3.3 Intellectual Property Protection</h3>
+        <p>We maintain strict policies regarding intellectual property protection:</p>
+        <ul>
+            <li>Trademark registrations for Aurphyx brand assets</li>
+            <li>Copyright protection for proprietary software and content</li>
+            <li>Trade secret protection for proprietary methodologies</li>
+            <li>Client intellectual property confidentiality agreements</li>
+            <li>Open source license compliance for all third-party components</li>
+        </ul>
+
+        <h2>4. Financial and Tax Compliance</h2>
+
+        <h3>4.1 Tax Compliance</h3>
+        <div class="compliance-badge">
+            ✓ Aurphyx maintains current tax registrations and complies with all federal, state, and local tax obligations.
+        </div>
+
+        <ul>
+            <li><strong>Federal Tax ID (EIN)</strong> - Current and active</li>
+            <li><strong>State Tax Registration</strong> - Sales tax and income tax compliance</li>
+            <li><strong>Local Business Taxes</strong> - Municipal tax obligations current</li>
+            <li><strong>Quarterly Tax Filings</strong> - Timely submission of all required returns</li>
+            <li><strong>Annual Financial Reporting</strong> - Comprehensive business financial statements</li>
+        </ul>
+
+        <h3>4.2 Financial Institution Relationships</h3>
+        <p>We maintain relationships with reputable financial institutions and service providers:</p>
+        <ul>
+            <li>Business banking accounts with FDIC-insured institutions</li>
+            <li>Payment processing through PCI DSS compliant providers</li>
+            <li>Professional accounting and bookkeeping services</li>
+            <li>Regular financial audits and reviews</li>
+        </ul>
+
+        <h2>5. Employment and Labor Compliance</h2>
+
+        <h3>5.1 Equal Opportunity Employment</h3>
+        <p>Aurphyx is committed to equal opportunity employment practices and maintains compliance with all applicable employment laws:</p>
+
+        <ul>
+            <li><strong>Equal Employment Opportunity (EEO)</strong> - Non-discrimination policies</li>
+            <li><strong>Americans with Disabilities Act (ADA)</strong> - Accommodation policies</li>
+            <li><strong>Fair Labor Standards Act (FLSA)</strong> - Wage and hour compliance</li>
+            <li><strong>Family and Medical Leave Act (FMLA)</strong> - Leave policies</li>
+            <li><strong>Occupational Safety and Health Act (OSHA)</strong> - Workplace safety standards</li>
+        </ul>
+
+        <h3>5.2 Employee Rights and Benefits</h3>
+        <div class="compliance-badge">
+            ✓ All employees receive comprehensive benefits packages and rights protection in accordance with applicable labor laws.
+        </div>
+
+        <h2>6. Environmental and Social Responsibility</h2>
+
+        <h3>6.1 Environmental Commitment</h3>
+        <p>Aurphyx is committed to environmental responsibility and sustainable business practices:</p>
+
+        <ul>
+            <li><strong>Carbon Neutral Operations</strong> - Offset programs for business operations</li>
+            <li><strong>Green Technology Practices</strong> - Sustainable IT infrastructure choices</li>
+            <li><strong>Paperless Operations</strong> - Digital-first business processes</li>
+            <li><strong>Renewable Energy</strong> - Support for clean energy initiatives</li>
+            <li><strong>Waste Reduction</strong> - Minimizing environmental impact</li>
+        </ul>
+
+        <h3>6.2 Corporate Social Responsibility</h3>
+        <p>We actively contribute to our community and industry through:</p>
+        <ul>
+            <li>Pro bono technology services for nonprofit organizations</li>
+            <li>Open source software contributions</li>
+            <li>Technology education and mentorship programs</li>
+            <li>Local community technology initiatives</li>
+            <li>Diversity and inclusion in technology advocacy</li>
+        </ul>
+
+        <h2>7. Vendor and Partnership Compliance</h2>
+
+        <h3>7.1 Third-Party Due Diligence</h3>
+        <p>All vendors and partners undergo comprehensive compliance vetting:</p>
+
+        <table class="compliance-table">
+            <thead>
+                <tr>
+                    <th>Compliance Area</th>
+                    <th>Verification Process</th>
+                    <th>Review Frequency</th>
+                    <th>Documentation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Security Standards</td>
+                    <td>Security questionnaire and audit</td>
+                    <td>Annual</td>
+                    <td>Security certificates</td>
+                </tr>
+                <tr>
+                    <td>Privacy Compliance</td>
+                    <td>Privacy policy and DPA review</td>
+                    <td>Annual</td>
+                    <td>Privacy certifications</td>
+                </tr>
+                <tr>
+                    <td>Business Registration</td>
+                    <td>Legal entity verification</td>
+                    <td>Bi-annual</td>
+                    <td>Business licenses</td>
+                </tr>
+                <tr>
+                    <td>Insurance Coverage</td>
+                    <td>Certificate of insurance review</td>
+                    <td>Annual</td>
+                    <td>Insurance policies</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>8. Incident Response and Business Continuity</h2>
+
+        <h3>8.1 Incident Response Plan</h3>
+        <p>Aurphyx maintains comprehensive incident response procedures:</p>
+        <ul>
+            <li><strong>Security Incident Response</strong> - 24/7 monitoring and response team</li>
+            <li><strong>Data Breach Protocol</strong> - Regulatory notification procedures</li>
+            <li><strong>Business Continuity Plan</strong> - Service continuation strategies</li>
+            <li><strong>Disaster Recovery</strong> - Data backup and recovery procedures</li>
+            <li><strong>Communication Plans</strong> - Client and stakeholder notification protocols</li>
+        </ul>
+
+        <h3>8.2 Regular Testing and Updates</h3>
+        <div class="compliance-badge">
+            ✓ All incident response and business continuity plans are tested quarterly and updated annually.
+        </div>
+
+        <h2>9. Training and Awareness</h2>
+
+        <h3>9.1 Employee Training Programs</h3>
+        <p>All Aurphyx team members participate in regular compliance and security training:</p>
+        <ul>
+            <li><strong>Security Awareness Training</strong> - Monthly security education sessions</li>
+            <li><strong>Privacy Protection Training</strong> - Quarterly data protection updates</li>
+            <li><strong>Compliance Updates</strong> - Regular regulatory compliance briefings</li>
+            <li><strong>Professional Development</strong> - Industry certification support</li>
+            <li><strong>Ethics Training</strong> - Annual business ethics and conduct review</li>
+        </ul>
+
+        <h2>10. Audit and Monitoring</h2>
+
+        <h3>10.1 Internal Auditing</h3>
+        <p>We conduct regular internal audits to ensure ongoing compliance:</p>
+        <ul>
+            <li><strong>Quarterly Compliance Reviews</strong> - Comprehensive policy adherence checks</li>
+            <li><strong>Security Assessments</strong> - Monthly security posture evaluations</li>
+            <li><strong>Process Audits</strong> - Semi-annual operational procedure reviews</li>
+            <li><strong>Documentation Reviews</strong> - Continuous policy and procedure updates</li>
+        </ul>
+
+        <h3>10.2 External Auditing</h3>
+        <div class="compliance-badge">
+            ✓ Aurphyx engages independent third-party auditors for annual compliance verification and certification maintenance.
+        </div>
+
+        <h2>11. Regulatory Reporting and Documentation</h2>
+
+        <h3>11.1 Record Keeping</h3>
+        <p>We maintain comprehensive records in accordance with regulatory requirements:</p>
+        <ul>
+            <li>Financial records retained for 7 years minimum</li>
+            <li>Employee records maintained per federal and state requirements</li>
+            <li>Security logs and incident reports archived for 5 years</li>
+            <li>Compliance documentation updated and version controlled</li>
+            <li>Client data handling records maintained per contractual obligations</li>
+        </ul>
+
+        <h3>11.2 Regulatory Reporting</h3>
+        <p>Timely submission of all required regulatory reports and filings:</p>
+        <ul>
+            <li>Tax returns and financial statements</li>
+            <li>Employment and labor compliance reports</li>
+            <li>Industry-specific regulatory filings</li>
+            <li>Data breach notifications when required</li>
+            <li>Insurance and license renewals</li>
+        </ul>
+
+        <h2>12. Contact Information for Compliance Matters</h2>
+
+        <div class="contact-info">
+            <h3>Compliance and Legal Inquiries</h3>
+            <p>For questions regarding our compliance practices, regulatory matters, or legal documentation:</p>
+            
+            <p><strong>Compliance Officer:</strong> compliance@aurphyx.net<br>
+            <strong>Legal Department:</strong> legal@aurphyx.net<br>
+            <strong>Privacy Officer:</strong> privacy@aurphyx.net<br>
+            <strong>Security Team:</strong> security@aurphyx.net</p>
+            
+            <p><strong>Business Address:</strong><br>
+            Aurphyx Compliance Department<br>
+            [Your Business Address]<br>
+            [City, State, ZIP Code]</p>
+            
+            <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM [Your Timezone]<br>
+            <strong>Emergency Contact:</strong> Available 24/7 for security incidents</p>
+            
+            <p>We respond to compliance inquiries within 3 business days and security incidents within 4 hours.</p>
+        </div>
+
+        <div class="important">
+            <p><strong>Compliance Commitment:</strong> This Business Compliance document represents Aurphyx's ongoing commitment to legal, regulatory, and ethical business practices. We continuously monitor regulatory changes and update our compliance framework accordingly.</p>
+        </div>
+
+        <div class="warning">
+            <p><strong>Document Updates:</strong> This compliance document is reviewed quarterly and updated as needed to reflect current regulations, business practices, and industry standards. The most current version is always available on our website.</p>
+        </div>
+
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>

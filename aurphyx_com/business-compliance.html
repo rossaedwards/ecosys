@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Compliance — Aurphyx LLC</title>
+    <meta name="description" content="Aurphyx Business Compliance - Our commitment to regulatory compliance, industry standards, and ethical business practices">
+        
+    <!-- App Icons and Manifest -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- OpenDyslexic Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@0.2.1/OpenDyslexic.min.css">
+    
+    <!-- Global Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           GLOBAL SPA & THEME VARIABLES (Matched exactly to index.html)
+           ========================================================= */
+        :root { 
+            --bg-main: #232946; 
+            --bg-section: #22223b; 
+            --text-color: #f2f2f2; 
+            --text-muted: #a0aabf;
+            --accent: #8be9fd; 
+            --accent-hover: #2dd4bf;
+            --card-bg: linear-gradient(135deg, #232946 0%, rgba(57, 62, 70, 0.5) 100%);
+            --border-color: rgba(139, 233, 253, 0.15);
+            --badge-bg: rgba(0, 0, 0, 0.2);
+        }
+        
+        body.light-mode { 
+            --bg-main: #f8f9fa; 
+            --bg-section: #ffffff; 
+            --text-color: #22223b; 
+            --text-muted: #4a5568;
+            --accent: #667eea; 
+            --accent-hover: #5a67d8;
+            --card-bg: #f1f5f9;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --badge-bg: #ffffff;
+        }
+        
+        body.dyslexic-font * { 
+            font-family: "OpenDyslexic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important; 
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body { 
+            font-family: 'Inter', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background: linear-gradient(135deg, var(--bg-main) 0%, #121629 100%); 
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.light-mode {
+            background: var(--bg-main);
+        }
+
+        /* =========================================================
+           HEADER & NAVIGATION
+           ========================================================= */
+        header { 
+            background: rgba(20, 20, 34, 0.97); 
+            backdrop-filter: blur(10px); 
+            position: fixed; top: 0; left: 0; right: 0; 
+            z-index: 2000; 
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5); 
+        }
+        
+        body.light-mode header {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            max-width: 1400px; margin: 0 auto; padding: 1rem 20px; 
+        }
+        
+        .logo { 
+            font-size: 1.8rem; font-weight: bold; 
+            background: linear-gradient(45deg, #FF007F, #00F0FF); 
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
+            text-decoration: none; cursor: pointer;
+        }
+        
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { color: #f2f2f2; text-decoration: none; font-weight: 500; cursor: pointer; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #00F0FF; }
+        
+        body.light-mode .nav-links a { color: #22223b; }
+        body.light-mode .nav-links a:hover, body.light-mode .nav-links a.active { color: var(--accent); }
+
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            display: none; position: absolute; 
+            background: rgba(20, 20, 34, 0.98); min-width: 160px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 6px; 
+            top: 100%; left: 50%; transform: translateX(-50%); z-index: 2000; 
+        }
+        body.light-mode .dropdown-content { background: #ffffff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .dropdown-content a { display: block; padding: 10px 15px; color: #f2f2f2; }
+        body.light-mode .dropdown-content a { color: #22223b; }
+        .dropdown-content a:hover { background: rgba(255,255,255,0.1); }
+        body.light-mode .dropdown-content a:hover { background: #f8f9fa; }
+        .dropdown:hover .dropdown-content { display: block; }
+        
+        .header-controls { display: flex; gap: 8px; }
+        .control-btn { 
+            background: rgba(255,255,255,0.1); color: #f2f2f2; 
+            border: none; width: 42px; height: 42px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.2rem; cursor: pointer; transition: all 0.3s;
+        }
+        body.light-mode .control-btn { background: #f1f5f9; color: #22223b; }
+        .control-btn:hover { background: #00F0FF; color: #232946; }
+        body.light-mode .control-btn:hover { background: var(--accent); color: #fff; }
+        
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 25px; height: 3px; background: var(--text-color); }
+
+        /* =========================================================
+           COMPLIANCE DOCUMENT STYLES
+           ========================================================= */
+        main#content { 
+            flex: 1;
+            padding-top: 100px; 
+            padding-bottom: 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .compliance-container {
+            background: var(--bg-section);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        .doc-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-color); letter-spacing: -0.5px; }
+        h2 { color: var(--accent); font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h3 { color: var(--text-color); font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        h4 { color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem; margin-bottom: 0.5rem; }
+        
+        p { margin-bottom: 1rem; text-align: justify; color: var(--text-color); }
+        ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; color: var(--text-color); }
+        li { margin-bottom: 0.5rem; }
+
+        .last-updated { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Status & Callout Badges */
+        .highlight {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .compliance-badge {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid #28a745;
+            color: #28a745;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-weight: 600;
+        }
+        body:not(.light-mode) .compliance-badge { color: #50fa7b; }
+
+        .warning {
+            background: rgba(255, 184, 108, 0.1);
+            border-left: 4px solid #ffb86c;
+            color: var(--text-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .important {
+            background: rgba(255, 85, 85, 0.1);
+            border-left: 4px solid #ff5555;
+            color: var(--text-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Grids and Tables */
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .cert-card {
+            background: var(--badge-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            border: 1px solid var(--border-color);
+        }
+        
+        .cert-card h4 { color: var(--text-color); margin-top: 0; }
+        
+        .cert-status { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: #28a745; font-weight: 700; margin-bottom: 0.5rem;}
+        body:not(.light-mode) .cert-status { color: #50fa7b; }
+
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--badge-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .compliance-table th, .compliance-table td {
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            text-align: left;
+            color: var(--text-color);
+        }
+
+        .compliance-table th {
+            background: var(--card-bg);
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .status-active { color: #28a745; font-weight: 600; }
+        body:not(.light-mode) .status-active { color: #50fa7b; }
+        .status-pending { color: #ffb86c; font-weight: 600; }
+
+        /* Contact Block */
+        .contact-info {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display:none; flex-direction:column; position:fixed; top:74px; left:0; width:100%; background:rgba(20,20,34,0.98); padding:2rem 0; gap:1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.5); z-index: 1500; }
+            body.light-mode .nav-links { background: #ffffff; }
+            .nav-links.active { display:flex; }
+            .hamburger { display:flex; }
+            .compliance-container { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+        footer { background:#121629; color:#fafaff; text-align:center; padding:3rem 20px; margin-top: auto; }
+        body.light-mode footer { background:#e9ecef; color:#22223b; }
+        .sitemap a { color:#bdc3c7; margin:0 10px; text-decoration:none; transition: color 0.3s;}
+        .sitemap a:hover { color: var(--accent); }
+        .footer-orcid { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 1rem; color: #8e97a6; text-decoration: none;}
+        .footer-orcid:hover { color: #fff; }
+        body.light-mode .footer-orcid:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AURPHYX LLC</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#technologies">Technologies</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="business-compliance.html" class="active">Compliance</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" style="cursor:pointer;">Legal ▾</a>
+                    <div class="dropdown-content">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-controls">
+                <button id="font-toggle" class="control-btn" title="Toggle Dyslexia-Friendly Font">A</button>
+                <button id="theme-toggle" class="control-btn" title="Toggle Dark/Light Mode"><span id="theme-icon">🌙</span></button>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="content">
+        <div class="compliance-container">
+            <div class="doc-header">
+                <h1>Business Compliance</h1>
+                <p class="last-updated">Last Updated: April 2026</p>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Aurphyx LLC is committed to maintaining the highest standards of business compliance, regulatory adherence, and ethical practices.</strong> This document outlines our compliance framework, certifications, and ongoing commitments to legal and industry standards.</p>
+            </div>
+
+            <h2>1. Regulatory Compliance Framework</h2>
+
+            <h3>1.1 Data Protection and Privacy</h3>
+            <p>Aurphyx maintains strict compliance with international data protection regulations to ensure the privacy and security of all client and user data, aligning with our ethos of true data sovereignty.</p>
+
+            <div class="certification-grid">
+                <div class="cert-card">
+                    <p class="cert-status">✓ ACTIVE</p>
+                    <h4>GDPR Compliance</h4>
+                    <p style="margin-bottom:0; font-size:0.9rem;">General Data Protection Regulation standards for EU data subjects</p>
+                </div>
+                <div class="cert-card">
+                    <p class="cert-status">✓ ACTIVE</p>
+                    <h4>CCPA Compliance</h4>
+                    <p style="margin-bottom:0; font-size:0.9rem;">California Consumer Privacy Act requirements</p>
+                </div>
+                <div class="cert-card">
+                    <p class="cert-status">✓ ACTIVE</p>
+                    <h4>COPPA Compliance</h4>
+                    <p style="margin-bottom:0; font-size:0.9rem;">Children's Online Privacy Protection Act adherence</p>
+                </div>
+            </div>
+
+            <h3>1.2 Information Security Standards</h3>
+            <p>Our information security practices align with industry-recognized frameworks designed for high-level resilience and off-grid reliability:</p>
+
+            <div style="overflow-x: auto;">
+                <table class="compliance-table">
+                    <thead>
+                        <tr>
+                            <th>Standard / Framework</th>
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Review Cycle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ISO 27001 Framework</td>
+                            <td class="status-active">Implemented</td>
+                            <td>Information Security Management System</td>
+                            <td>Quarterly</td>
+                        </tr>
+                        <tr>
+                            <td>NIST Cybersecurity Framework</td>
+                            <td class="status-active">Implemented</td>
+                            <td>Risk management and deep-stack security controls</td>
+                            <td>Semi-annually</td>
+                        </tr>
+                        <tr>
+                            <td>SOC 2 Type II</td>
+                            <td class="status-pending">In Progress</td>
+                            <td>Security, availability, and confidentiality audit readiness</td>
+                            <td>Annual</td>
+                        </tr>
+                        <tr>
+                            <td>OWASP Top 10</td>
+                            <td class="status-active">Implemented</td>
+                            <td>Web and API application security standards</td>
+                            <td>Continuous</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>2. Industry Standards and Certifications</h2>
+
+            <h3>2.1 Software & Infrastructure Development</h3>
+            <p>Aurphyx builds sovereign infrastructure from the bare metal up, adhering to rigorous engineering methodologies:</p>
+            <ul>
+                <li><strong>ISO 9001:2015</strong> - Quality Management Systems adherence.</li>
+                <li><strong>Decentralized Agile Practices</strong> - Distributed, secure engineering workflows.</li>
+                <li><strong>Zero-Trust Architecture (ZTA)</strong> - By default, integrated into the AuraOS kernel.</li>
+                <li><strong>Clean Code & Open Source Principles</strong> - Maintainable, transparent, and scalable code standards.</li>
+                <li><strong>Accessibility Standards</strong> - WCAG 2.1 AA compliance across all web and UI applications.</li>
+            </ul>
+
+            <h2>3. Legal and Contractual Compliance</h2>
+
+            <h3>3.1 Business Registration</h3>
+            <div class="compliance-badge">
+                ✓ Aurphyx LLC is a legally registered and recognized Limited Liability Company in the United States, operating in full compliance with state and federal regulations.
+            </div>
+
+            <h3>3.2 Intellectual Property Protection</h3>
+            <p>We maintain strict policies regarding the protection of both proprietary technology and user sovereignty:</p>
+            <ul>
+                <li>Trademark registrations for Aurphyx, AuraOS, and related ecosystem brand assets.</li>
+                <li>Copyright protection for proprietary microkernel and AI logic architectures.</li>
+                <li>Strict client IP confidentiality and zero-knowledge data retention policies.</li>
+                <li>Comprehensive Open Source license compliance for all third-party dependencies used within the Shard Mesh.</li>
+            </ul>
+
+            <h2>4. Environmental and Social Responsibility</h2>
+
+            <h3>4.1 Corporate Social Responsibility</h3>
+            <p>Aurphyx is not a standard corporate entity. We are actively contributing to a more sovereign, decentralized future through:</p>
+            <ul>
+                <li>Developing open, censorship-resistant infrastructure for the public good.</li>
+                <li>Aggressive anti-gatekeeping initiatives in enterprise technology and AI.</li>
+                <li>Advocacy for absolute data ownership and digital human rights.</li>
+            </ul>
+
+            <h2>5. Command & Control Contact</h2>
+
+            <div class="contact-info">
+                <h3>Compliance and Legal Inquiries</h3>
+                <p>For questions regarding our compliance practices, regulatory matters, certifications, or legal documentation:</p>
+                
+                <p>
+                    <strong>Direct Operations:</strong> owner@aurphyx.com<br>
+                    <strong>Legal Department:</strong> legal@aurphyx.com<br>
+                    <strong>Privacy Officer:</strong> privacy@aurphyx.com<br>
+                    <strong>General Info:</strong> info@aurphyx.com
+                </p>
+                
+                <p style="margin-top: 1rem;">
+                    <strong>Registered Headquarters:</strong><br>
+                    Aurphyx LLC<br>
+                    Erie, PA 16502<br>
+                    United States
+                </p>
+            </div>
+
+            <div class="important">
+                <p><strong>Compliance Commitment:</strong> This document represents Aurphyx's ongoing commitment to legal, regulatory, and ethical business practices. In a rapidly evolving technological landscape, we continuously monitor regulatory changes and update our compliance framework accordingly to protect the ecosystem and our users.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="sitemap">
+            <a href="privacy-policy.html">Privacy Policy</a> • 
+            <a href="terms-of-service.html">Terms of Service</a> • 
+            <a href="business-compliance.html">Compliance</a> • 
+            <a href="explorer.html">Explorer</a>
+        </div>
+        <a href="https://orcid.org/0009-0008-0539-1289" class="footer-orcid" target="_blank" rel="noopener noreferrer">
+            <svg class="orcid-icon" viewBox="0 0 512 512" style="fill:currentColor; width:16px; height:16px;">
+                <path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84v207.5zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/>
+            </svg>
+            ORCID: 0009-0008-0539-1289
+        </a>
+        <div style="margin-top:1rem; font-size:0.9rem; color: #8e97a6;">© 2026 Aurphyx LLC • All Rights Reserved • Erie, PA, United States</div>
+    </footer>
+
+    <script>
+        /* =========================================================
+           THEME TOGGLES & MOBILE MENU LOGIC
+           ========================================================= */
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const fontToggle = document.getElementById('font-toggle');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        function setTheme(isLight) {
+            document.body.classList.toggle('light-mode', isLight);
+            themeIcon.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+        function setFont(isDyslexic) {
+            document.body.classList.toggle('dyslexic-font', isDyslexic);
+            localStorage.setItem('font', isDyslexic ? 'dyslexic' : 'standard');
+        }
+
+        // Check local storage so preferences carry over from index.html
+        if (localStorage.getItem('theme') === 'light') setTheme(true);
+        if (localStorage.getItem('font') === 'dyslexic') setFont(true);
+
+        themeToggle.addEventListener('click', () => setTheme(!document.body.classList.contains('light-mode')));
+        fontToggle.addEventListener('click', () => setFont(!document.body.classList.contains('dyslexic-font')));
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Aurphyx LLC — Security Contact Information
+# Last Updated: 2026-04-07
+
+Contact: mailto:admin@aurphyx.com
+Contact: mailto:security@aurphyx.com
+Encryption: https://aurphyx.com/pgp.txt
+Preferred-Languages: en
+Canonical: https://aurphyx.com/.well-known/security.txt
+Policy: https://aurphyx.com/business-compliance.html
+Hiring: https://aurphyx.com/about.html
+
+# Notes:
+# Aurphyx LLC maintains a sovereign computing infrastructure.
+# Responsible disclosure is appreciated and encouraged.

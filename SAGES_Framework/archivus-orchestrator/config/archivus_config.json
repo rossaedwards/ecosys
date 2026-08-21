@@ -1,0 +1,4 @@
+{
+  \"log_level\": \"info\",
+  \"consensus_threshold\": 0.66
+}

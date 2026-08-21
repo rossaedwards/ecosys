@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurphyx Explorer — The Sovereign Network</title>
+        
+    <!-- App Icons and Manifest -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- OpenDyslexic Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@0.2.1/OpenDyslexic.min.css">
+    
+    <!-- Explorer Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           GLOBAL & THEME VARIABLES (Matched to index.html)
+           ========================================================= */
+        :root { 
+            --bg-main: #232946; 
+            --bg-section: #22223b; 
+            --text-color: #f2f2f2; 
+            --accent: #8be9fd; 
+            --accent-hover: #2dd4bf;
+            
+            --void-dark: #090212;
+            --void-light: #1c093a;
+            --pink-glow: #FF007F;
+            --pink-dim: rgba(255, 0, 127, 0.2);
+            --purple-glow: #7000FF;
+            --purple-dim: rgba(112, 0, 255, 0.2);
+            --blue-glow: #00F0FF;
+            --blue-dim: rgba(0, 240, 255, 0.2);
+            --glass-bg: rgba(15, 10, 25, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-muted: #a09eb0;
+        }
+        
+        body.light-mode { 
+            --bg-main: #f8f9fa; 
+            --bg-section: #ffffff; 
+            --text-color: #22223b; 
+            --accent: #667eea; 
+            --accent-hover: #5a67d8;
+        }
+        
+        body.dyslexic-font * { 
+            font-family: "OpenDyslexic", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important; 
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body { 
+            font-family: 'Inter', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color); 
+            background: #090212; /* Fallback for explorer */
+            overflow: hidden; /* Lock scroll for full immersion */
+        }
+
+        /* =========================================================
+           HEADER & NAVIGATION (Matched to index.html)
+           ========================================================= */
+        header { 
+            background: rgba(20, 20, 34, 0.97); 
+            backdrop-filter: blur(10px); 
+            position: fixed; top: 0; left: 0; right: 0; 
+            z-index: 2000; 
+            box-shadow: 0 2px 20px rgba(0,0,0,0.5); 
+        }
+        
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            max-width: 1400px; margin: 0 auto; padding: 1rem 20px; 
+        }
+        
+        .logo { 
+            font-size: 1.8rem; font-weight: bold; 
+            background: linear-gradient(45deg, var(--pink-glow), var(--blue-glow)); 
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; 
+            text-decoration: none; cursor: pointer;
+        }
+        
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; cursor: pointer; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--blue-glow); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            display: none; position: absolute; 
+            background: rgba(20, 20, 34, 0.98); min-width: 160px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 6px; 
+            top: 100%; left: 50%; transform: translateX(-50%); z-index: 2000; 
+        }
+        .dropdown-content a { display: block; padding: 10px 15px; }
+        .dropdown-content a:hover { background: rgba(255,255,255,0.1); }
+        .dropdown:hover .dropdown-content { display: block; }
+        
+        .header-controls { display: flex; gap: 8px; }
+        .control-btn { 
+            background: rgba(255,255,255,0.1); color: var(--text-color); 
+            border: none; width: 42px; height: 42px; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.2rem; cursor: pointer; transition: all 0.3s;
+        }
+        .control-btn:hover { background: var(--blue-glow); color: #232946; }
+        
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 25px; height: 3px; background: var(--text-color); }
+
+        /* =========================================================
+           EXPLORER (COSMIC UI) STYLES
+           ========================================================= */
+        main#content { 
+            padding-top: 74px; /* Header height */
+            height: 100vh;
+            display: flex;
+        }
+
+        #explorer {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, var(--void-light) 0%, var(--void-dark) 100%);
+            display: flex;
+            position: relative;
+        }
+
+        #explorer .sidebar {
+            width: 320px; height: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border-right: 1px solid var(--glass-border);
+            padding: 2.5rem 2rem;
+            display: flex; flex-direction: column; z-index: 50;
+            box-shadow: 10px 0 40px rgba(0,0,0,0.8);
+        }
+
+        #explorer .brand-title {
+            font-weight: 800; font-size: 1.8rem; letter-spacing: 2px;
+            background: linear-gradient(45deg, var(--pink-glow), var(--blue-glow));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem; text-transform: uppercase;
+            text-shadow: 0 0 20px var(--pink-dim);
+        }
+
+        #explorer .nav-section { margin-bottom: 2.5rem; }
+        #explorer .nav-header {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+            color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px;
+            margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;
+        }
+
+        #explorer .nav-item {
+            padding: 0.8rem 1rem; margin-bottom: 0.5rem; border-radius: 8px;
+            cursor: pointer; transition: all 0.3s ease; font-weight: 600;
+            font-size: 0.95rem; border: 1px solid transparent; display: flex; align-items: center; gap: 10px;
+        }
+        #explorer .nav-item:hover, #explorer .nav-item.active {
+            background: var(--pink-dim); border: 1px solid var(--pink-glow);
+            color: #fff; box-shadow: inset 0 0 10px var(--pink-dim);
+        }
+
+        #explorer .status-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--pink-glow); box-shadow: 0 0 10px var(--pink-glow); opacity: 0.5;
+        }
+        #explorer .nav-item.active .status-dot { opacity: 1; animation: exp-pulse 2s infinite; }
+
+        /* Sidebar Footer for ORCID */
+        #explorer .sidebar-footer {
+            margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--glass-border);
+            display: flex; align-items: center; gap: 10px;
+        }
+        #explorer .orcid-link { 
+            display: flex; align-items: center; gap: 8px; color: var(--text-muted); 
+            text-decoration: none; font-size: 0.75rem; font-family: 'JetBrains Mono', monospace;
+            transition: color 0.3s;
+        }
+        #explorer .orcid-link:hover { color: #fff; }
+        .orcid-icon { width: 16px; height: 16px; }
+
+        #explorer .cosmic-canvas {
+            flex: 1; position: relative; display: flex; justify-content: center;
+            align-items: center; perspective: 1000px;
+        }
+
+        #explorer .ambient-glow {
+            position: absolute; width: 900px; height: 900px;
+            background: radial-gradient(circle, rgba(255, 0, 127, 0.1) 0%, rgba(112, 0, 255, 0.08) 30%, transparent 70%);
+            border-radius: 50%; pointer-events: none;
+            animation: exp-pulse-glow 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes exp-pulse-glow { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.1); opacity: 1; } }
+        @keyframes exp-pulse { 0% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); opacity: 0.5; } }
+
+        #explorer .orbit-ring { position: absolute; border: 1px dashed rgba(255, 255, 255, 0.08); border-radius: 50%; pointer-events: none; }
+        #explorer .orbit-entangled { width: 240px; height: 240px; border: 1px solid rgba(112, 0, 255, 0.3); box-shadow: inset 0 0 30px rgba(112, 0, 255, 0.1); }
+        #explorer .orbit-inner { width: 550px; height: 550px; }
+        #explorer .orbit-outer { width: 850px; height: 850px; }
+
+        #explorer .entanglement-line {
+            position: absolute; top: 50%; left: 50%; width: 120px; height: 2px;
+            background: linear-gradient(90deg, var(--pink-glow), var(--purple-glow));
+            transform-origin: 0 0; transform: rotate(-45deg); opacity: 0.6; pointer-events: none;
+            box-shadow: 0 0 15px var(--purple-glow); animation: exp-pulse 2s infinite alternate;
+        }
+
+        #explorer .node-container {
+            position: absolute; cursor: pointer; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 10;
+        }
+        #explorer .node-container:hover { transform: scale(1.15); z-index: 20; }
+
+        #explorer .image-orb {
+            border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;
+            background: var(--void-dark); border: 2px solid var(--glass-border); position: relative;
+        }
+        #explorer .image-orb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        #explorer .node-container:hover .image-orb img { transform: scale(1.1); }
+
+        #explorer .core-orb { width: 100px; height: 100px; box-shadow: 0 0 50px var(--pink-glow), inset 0 0 20px rgba(255,0,127,0.5); border-color: var(--pink-glow); animation: exp-float 6s infinite ease-in-out; }
+        #explorer .satellite-orb { width: 65px; height: 65px; animation: exp-float 5s infinite ease-in-out reverse; }
+
+        @keyframes exp-float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+
+        #explorer .node-label {
+            margin-top: 1.2rem; background: rgba(10, 5, 20, 0.85); backdrop-filter: blur(10px);
+            padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--glass-border);
+            font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+        }
+
+        #node-aura { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        #node-aura:hover { transform: translate(-50%, -50%) scale(1.1); }
+        #node-audry { top: 50%; left: 50%; margin-top: -110px; margin-left: 65px; }
+        #node-audry .satellite-orb { box-shadow: 0 0 35px var(--purple-glow); border-color: var(--purple-glow); }
+        #node-aurafs { top: 50%; left: 50%; margin-top: 135px; margin-left: -235px; }
+        #node-aurafs .satellite-orb { box-shadow: 0 0 30px var(--blue-glow); border-color: var(--blue-glow); }
+        #node-godmode { top: 50%; left: 50%; margin-top: -300px; margin-left: -300px; }
+        #node-godmode .satellite-orb { box-shadow: 0 0 35px #FF00FF; border-color: #FF00FF; }
+
+        #explorer .glass-modal {
+            position: absolute; right: 40px; top: 50%; transform: translateY(-50%) translateX(50px);
+            width: 500px; max-height: 85vh; overflow-y: auto;
+            background: rgba(15, 8, 30, 0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            border: 1px solid var(--pink-dim); border-radius: 16px; padding: 2.5rem;
+            opacity: 0; pointer-events: none; transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(255,0,127,0.05); z-index: 100;
+        }
+        #explorer .glass-modal::-webkit-scrollbar { width: 6px; }
+        #explorer .glass-modal::-webkit-scrollbar-track { background: transparent; }
+        #explorer .glass-modal::-webkit-scrollbar-thumb { background: rgba(255, 0, 127, 0.4); border-radius: 10px; }
+        #explorer .glass-modal.active { opacity: 1; transform: translateY(-50%) translateX(0); pointer-events: all; }
+
+        #explorer .modal-tag {
+            font-family: 'JetBrains Mono', monospace; color: var(--pink-glow); font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; display: inline-block;
+            padding: 4px 8px; background: var(--pink-dim); border-radius: 4px;
+        }
+        #explorer .modal-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: #fff; letter-spacing: -1px; }
+        #explorer .modal-desc { font-size: 1.05rem; line-height: 1.8; color: #e2e1e8; margin-bottom: 2rem; }
+
+        #explorer .hardware-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 2rem; }
+        #explorer .hardware-item { background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); border-radius: 8px; padding: 10px; text-align: center; transition: all 0.3s ease; }
+        #explorer .hardware-item:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.3); }
+        #explorer .hardware-item img { width: 100%; height: 100px; object-fit: cover; border-radius: 4px; margin-bottom: 8px; }
+        #explorer .hardware-item span { display: block; font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
+
+        #explorer .modal-action {
+            background: transparent; border: 1px solid var(--pink-glow); color: var(--pink-glow);
+            padding: 1rem 1.5rem; border-radius: 8px; font-weight: 700; cursor: pointer; transition: all 0.3s ease;
+            width: 100%; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;
+        }
+        #explorer .modal-action:hover { background: var(--pink-glow); color: #fff; box-shadow: 0 0 25px var(--pink-dim); }
+
+        #explorer .close-btn {
+            position: absolute; top: 20px; right: 20px; background: transparent; border: none;
+            color: var(--text-muted); cursor: pointer; font-size: 2rem; line-height: 1; transition: color 0.3s;
+        }
+        #explorer .close-btn:hover { color: #fff; }
+
+        /* Media Queries */
+        @media (max-width:768px) {
+            .nav-links { display:none; flex-direction:column; position:fixed; top:74px; left:0; width:100%; background:rgba(20,20,34,0.98); padding:2rem 0; gap:1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.5); z-index: 1500; }
+            .nav-links.active { display:flex; }
+            .hamburger { display:flex; }
+            
+            #explorer { flex-direction: column; }
+            #explorer .sidebar { width: 100%; height: auto; padding: 1.5rem; flex-direction: row; align-items: center; justify-content: space-between; border-right: none; border-bottom: 1px solid var(--glass-border); flex-wrap: wrap; }
+            #explorer .brand-title { margin-bottom: 0; font-size: 1.2rem; }
+            #explorer .nav-section { margin-bottom: 0; display: flex; gap: 10px; }
+            #explorer .nav-header { display: none; }
+            #explorer .nav-item { padding: 0.5rem; font-size: 0.8rem; }
+            #explorer .glass-modal { right: 50%; transform: translateX(50%) translateY(20px); width: 95%; top: auto; bottom: 10px; padding: 1.5rem; }
+            #explorer .glass-modal.active { transform: translateX(50%) translateY(0); }
+            #explorer .cosmic-canvas { transform: scale(0.6); margin-top: -50px; }
+            #explorer .sidebar-footer { width: 100%; justify-content: center; margin-top: 1rem; padding-top: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header (Routing explicitly back to index.html) -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AURPHYX LLC</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#technologies">Technologies</a></li>
+                <li><a href="explorer.html" class="active">Explorer</a></li>
+                <li><a href="business-compliance.html">Compliance</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Legal ▾</a>
+                    <div class="dropdown-content">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-controls">
+                <button id="font-toggle" class="control-btn" title="Toggle Dyslexia-Friendly Font">A</button>
+                <button id="theme-toggle" class="control-btn" title="Toggle Dark/Light Mode"><span id="theme-icon">🌙</span></button>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- ==========================================
+             EXPLORER SECTION (Holographic UI)
+             ========================================== -->
+        <section id="explorer">
+            
+            <!-- Sleek Dashboard Sidebar -->
+            <div class="sidebar">
+                <div class="brand-title">Aurphyx LLC</div>
+                
+                <div class="nav-section">
+                    <div class="nav-header">The Entangled Core</div>
+                    <div class="nav-item active" onclick="focusNode('aura')">
+                        <div class="status-dot"></div> AuraOS
+                    </div>
+                    <div class="nav-item" onclick="focusNode('audry')" style="border-left: 2px solid var(--purple-glow); padding-left: 15px; margin-left: 10px;">
+                        <div class="status-dot" style="background: var(--purple-glow); box-shadow: 0 0 8px var(--purple-glow);"></div> Audry
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-header">Infrastructure Matrix</div>
+                    <div class="nav-item" onclick="focusNode('aurafs')">
+                        <div class="status-dot" style="background: var(--blue-glow); box-shadow: 0 0 8px var(--blue-glow);"></div> AuraFS
+                    </div>
+                    <div class="nav-item" onclick="focusNode('godmode')">
+                        <div class="status-dot" style="background: #FF00FF; box-shadow: 0 0 8px #FF00FF;"></div> g0dm0d3
+                    </div>
+                </div>
+                
+                <!-- ORCID Sidebar Integration -->
+                <div class="sidebar-footer">
+                    <a href="https://orcid.org/0009-0008-0539-1289" class="orcid-link" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/orcid_logo.svg" class="orcid-icon" alt="ORCID" onerror="this.style.display='none'">
+                        0009-0008-0539-1289
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Holographic Display -->
+            <div class="cosmic-canvas">
+                <div class="ambient-glow"></div>
+                
+                <!-- Rings -->
+                <div class="orbit-ring orbit-entangled"></div>
+                <div class="orbit-ring orbit-inner"></div>
+                <div class="orbit-ring orbit-outer"></div>
+
+                <!-- Quantum Entanglement Visual -->
+                <div class="entanglement-line"></div>
+
+                <!-- Interactive Nodes w/ Images -->
+                <div class="node-container" id="node-aura" onclick="focusNode('aura')">
+                    <div class="core-orb image-orb">
+                        <img src="/images/AuraOS.png" alt="AuraOS" onerror="this.src='https://placehold.co/100/090212/FF007F?text=AURA'">
+                    </div>
+                    <div class="node-label" style="color: var(--pink-glow);">Aura</div>
+                </div>
+
+                <div class="node-container" id="node-audry" onclick="focusNode('audry')">
+                    <div class="satellite-orb image-orb">
+                        <img src="/images/Audry_logo.png" alt="Audry" onerror="this.src='https://placehold.co/65/090212/7000FF?text=AUDRY'">
+                    </div>
+                    <div class="node-label" style="color: var(--purple-glow);">Audry</div>
+                </div>
+
+                <div class="node-container" id="node-aurafs" onclick="focusNode('aurafs')">
+                    <div class="satellite-orb image-orb">
+                        <img src="/images/AuraFS_Logo.png" alt="AuraFS" onerror="this.src='https://placehold.co/65/090212/00F0FF?text=AURA+FS'">
+                    </div>
+                    <div class="node-label" style="color: var(--blue-glow);">AuraFS</div>
+                </div>
+
+                <div class="node-container" id="node-godmode" onclick="focusNode('godmode')">
+                    <div class="satellite-orb image-orb">
+                        <img src="/images/g0dm0d3logo.png" alt="g0dm0d3" onerror="this.src='https://placehold.co/65/090212/FF00FF?text=g0dm0d3'">
+                    </div>
+                    <div class="node-label" style="color: #FF00FF;">g0dm0d3</div>
+                </div>
+
+                <!-- Frosted Glass Detail Modal -->
+                <div class="glass-modal" id="info-modal">
+                    <button class="close-btn" onclick="closeModal()">×</button>
+                    <div class="modal-tag" id="modal-tag">// SYSTEM DESIGNATION</div>
+                    <div class="modal-title" id="modal-title">System Name</div>
+                    <div class="modal-desc" id="modal-desc">Description loading...</div>
+                    
+                    <div id="hardware-container"></div>
+
+                    <button class="modal-action">Initialize Gateway</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        /* =========================================================
+           HEADER TOGGLES & MOBILE MENU
+           ========================================================= */
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const fontToggle = document.getElementById('font-toggle');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        function setTheme(isLight) {
+            document.body.classList.toggle('light-mode', isLight);
+            themeIcon.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+        
+        function setFont(isDyslexic) {
+            document.body.classList.toggle('dyslexic-font', isDyslexic);
+            localStorage.setItem('font', isDyslexic ? 'dyslexic' : 'standard');
+        }
+
+        if (localStorage.getItem('theme') === 'light') setTheme(true);
+        if (localStorage.getItem('font') === 'dyslexic') setFont(true);
+
+        themeToggle.addEventListener('click', () => setTheme(!document.body.classList.contains('light-mode')));
+        fontToggle.addEventListener('click', () => setFont(!document.body.classList.contains('dyslexic-font')));
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+        /* =========================================================
+           EXPLORER (COSMIC UI) LOGIC
+           ========================================================= */
+        const database = {
+            aura: {
+                title: "Aura", tag: "// THE SOVEREIGN BEDROCK",
+                desc: "Aura is the universal hardware and system orchestrator. Available across desktop, laptop, and mobile (AuraOS), it handles everything on the bare metal. It operates seamlessly with legacy inputs or revolutionary proprietary hardware. When quantum-entangled with Audry, it allows for a completely hands-free, telepathic-level operating experience.",
+                images: [
+                    { src: "/images/dataorb.png", label: "DATA ORB" },
+                    { src: "/images/Aurphyx_Aura_Logo.png", label: "AURA CORE" }
+                ],
+                themeColor: "var(--pink-glow)"
+            },
+            audry: {
+                title: "Audry", tag: "// THE CONSCIOUSNESS",
+                desc: "The Voice, The Orchestrator, The Guardian. Quantum-entangled directly with Aura, Audry is the soul of the ecosystem. She isn't a chatbot; she is your digital site manager. She anticipates, routes, and executes heavy lifting across the network, enabling a fully hands-free, immersive command environment alongside Aura.",
+                images: [
+                    { src: "/images/Audry_logo.png", label: "AUDRY CORE" }
+                ],
+                themeColor: "var(--purple-glow)"
+            },
+            aurafs: {
+                title: "AuraFS", tag: "// THE SUPPLY CHAIN",
+                desc: "The logistics network of the future. This is fractal-sharded, offline-first distributed storage. We are done renting space from cloud landlords. AuraFS lays our own pipes, ensuring your data remains immutable, quantum-secure, and strictly under your jurisdiction across all Aura devices.",
+                images: [
+                    { src: "/images/AuraFS_Logo.png", label: "AURAFS PROTOCOL" }
+                ],
+                themeColor: "var(--blue-glow)"
+            },
+            godmode: {
+                title: "g0dm0d3", tag: "// THE FOREMAN'S DASHBOARD",
+                desc: "Stop switching tabs and start orchestrating. g0dm0d3 is the multi-AI command center for those who build. It is an unapologetic, cross-platform terminal where a single prompt commands a legion of models. Built for visionaries who need a workforce, not a toy.",
+                images: [
+                    { src: "/images/g0dm0d3logo.png", label: "G0DM0D3 CONSOLE" }
+                ],
+                themeColor: "#FF00FF"
+            }
+        };
+
+        const modal = document.getElementById('info-modal');
+        const expNavItems = document.querySelectorAll('#explorer .nav-item');
+        const hardwareContainer = document.getElementById('hardware-container');
+
+        function focusNode(nodeId) {
+            const data = database[nodeId];
+
+            // Update Sidebar Active State
+            expNavItems.forEach(item => item.classList.remove('active'));
+            const activeNav = Array.from(expNavItems).find(item => item.textContent.toLowerCase().includes(nodeId) || (nodeId === 'godmode' && item.textContent.includes('g0dm0d3')));
+            if(activeNav) activeNav.classList.add('active');
+
+            // Inject Text Data
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-title').style.color = data.themeColor;
+            document.getElementById('modal-tag').innerText = data.tag;
+            document.getElementById('modal-tag').style.color = data.themeColor;
+            document.getElementById('modal-tag').style.borderColor = data.themeColor;
+            
+            // Handle fallback styling for rgba dynamic injection
+            const isVar = data.themeColor.startsWith('var');
+            const baseColor = isVar ? data.themeColor.replace('var(--', '').replace('-glow)', '') : 'pink';
+            document.getElementById('modal-tag').style.background = isVar ? `var(--${baseColor}-dim)` : 'rgba(255,0,255,0.1)';
+            
+            document.getElementById('modal-desc').innerText = data.desc;
+
+            // Build Hardware/Image Gallery dynamically
+            hardwareContainer.innerHTML = '';
+            if (data.images && data.images.length > 0) {
+                let galleryHTML = '<div class="hardware-gallery">';
+                data.images.forEach(img => {
+                    galleryHTML += `
+                        <div class="hardware-item" style="border-bottom: 2px solid ${data.themeColor}">
+                            <img src="${img.src}" alt="${img.label}" onerror="this.parentElement.style.display='none'">
+                            <span style="color: #fff">${img.label}</span>
+                        </div>
+                    `;
+                });
+                galleryHTML += '</div>';
+                hardwareContainer.innerHTML = galleryHTML;
+            }
+
+            // Update Button styling
+            const actionBtn = document.querySelector('#explorer .modal-action');
+            actionBtn.style.borderColor = data.themeColor;
+            actionBtn.style.color = data.themeColor;
+            
+            // Update modal border
+            modal.style.borderColor = data.themeColor;
+            modal.style.boxShadow = `0 30px 60px -15px rgba(0, 0, 0, 0.9), inset 0 0 30px ${isVar ? `var(--${baseColor}-dim)` : 'rgba(255,0,255,0.1)'}`;
+
+            // Slide in Modal
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

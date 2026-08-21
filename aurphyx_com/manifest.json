@@ -1,0 +1,48 @@
+{
+  "name": "Aurphyx LLC",
+  "short_name": "Aurphyx",
+  "description": "Sovereign Infrastructure, Fractal Storage, & AI Orchestration",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090212",
+  "theme_color": "#FF007F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/aurphyx.webp",
+      "sizes": "500x500",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/Aurafs.webp",
+      "sizes": "500x500",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/Audry.webp",
+      "sizes": "500x500",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/g0dm0d3.webp",
+      "sizes": "500x500",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/aura.webp",
+      "sizes": "500x500",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/dataorb.webp",
+      "sizes": "500x500",
+      "type": "image/webp"
+    }
+  ]
+}

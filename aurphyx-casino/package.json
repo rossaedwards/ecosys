@@ -1,0 +1,27 @@
+{
+  "name": "aurphyx-casino",
+  "version": "0.1.0",
+  "description": "Aurphyx Casino - Provably Fair Multi-Chain Casino & Sportsbook",
+  "private": true,
+  "workspaces": [
+    "web",
+    "mobile",
+    "contracts",
+    "sdk/javascript"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=web",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+

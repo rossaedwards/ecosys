@@ -1,0 +1,40 @@
+/*  
+   Aurphyx LLC — Sovereign, Transparent, Decentralized, Quantum-Ready Infrastructures
+   humans.txt  
+   Last Updated: 2026-04-08
+*/
+
+Organization: Aurphyx LLC
+Legal Structure: U.S. Limited Liability Company
+Domain: https://aurphyx.com
+Mission: Engineering sovereign, decentralized, AI‑integrated computing ecosystems for long‑term digital independence.
+
+Founder & Principal Architect:
+  Ross A. Edwards (R.F. Lovezme | FollowFive | Fived | RossFive)
+  Architect of the Aurphyx Sovereign Infrastructure Stack.
+
+Core Competencies:
+  • Sovereign Operating Systems (Aura)
+  • Fractal‑Lattice Distributed Storage & Mesh Network (AuraFS)
+  • Multimodal AI Orchestration (Audry)
+  • Cross‑System Command Environments (g0dm0d3)
+
+Philosophy:
+  Aurphyx builds infrastructure that endures.  
+  We reject digital landlordism, centralized chokepoints, and disposable software.  
+  We design systems that are sovereign, resilient, and mathematically grounded.
+
+Locations:
+  Global Operations  
+  Erie, Pennsylvania • United States
+
+Contact:
+  General: info@aurphyx.com
+  Administration: admin@aurphyx.com
+  Research & Architecture: ross@aurphyx.org
+
+Acknowledgments:
+  This infrastructure is built with intention, precision, and respect for the craft.  
+  Every component is designed to be reproducible, transparent, and sovereign.
+
+— End of humans.txt —

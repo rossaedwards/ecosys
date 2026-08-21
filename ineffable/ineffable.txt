@@ -1,0 +1,132 @@
+ineffable/
+├── README.md
+├── LICENSE
+├── Cargo.toml                             # Rust workspace
+├── pyproject.toml                         # Python tools
+├── docker-compose.yml
+├── Dockerfile
+├── .env.example
+│
+├── docs/
+│   ├── ARCHITECTURE.md                    # Ledger architecture
+│   ├── CONSENSUS.md                       # Archivus consensus spec
+│   ├── SHARDING.md                        # Quantum sharding design
+│   └── API.md                             # API documentation
+│
+├── src/                                   # Rust core
+│   ├── lib.rs                             # Module root
+│   ├── main.rs                            # Node binary
+│   ├── engine.rs                          # Core engine
+│   │
+│   ├── blockchain/
+│   │   ├── mod.rs                         # Blockchain module root
+│   │   ├── block.rs                       # Block structure
+│   │   ├── merkle_dag.rs                  # Merkle DAG implementation
+│   │   ├── chain.rs                       # Chain management
+│   │   └── validation.rs                  # Block validation
+│   │
+│   ├── consensus/
+│   │   ├── mod.rs                         # Consensus module root
+│   │   ├── archivus.rs                    # Archivus BFT consensus
+│   │   ├── validator.rs                   # Validator logic
+│   │   ├── voting.rs                      # Consensus voting
+│   │   └── finality.rs                    # Transaction finality
+│   │
+│   ├── storage/
+│   │   ├── mod.rs                         # Storage module root
+│   │   ├── shard_storage.rs               # Sharded storage
+│   │   ├── erasure_coding.rs              # Reed-Solomon encoding
+│   │   ├── replication.rs                 # Data replication
+│   │   └── content_addressing.rs          # Content-addressed storage
+│   │
+│   ├── network/
+│   │   ├── mod.rs                         # Network module root
+│   │   ├── p2p.rs                         # Peer-to-peer networking
+│   │   ├── discovery.rs                   # Peer discovery
+│   │   ├── gossip.rs                      # Gossip protocol
+│   │   └── rpc.rs                         # RPC interface
+│   │
+│   ├── audit/
+│   │   ├── mod.rs                         # Audit module root
+│   │   ├── event_log.rs                   # Aurphyx append-only log
+│   │   ├── trail_validator.rs             # Audit Trail Validation
+│   │   ├── replay_tool.rs                 # Replay tool (CLI)
+│   │   └── cryptographic_proof.rs         # Hash chain proofs
+│   │
+│   ├── quantum/
+│   │   ├── mod.rs                         # Quantum module root
+│   │   ├── sharding.rs                    # Quantum sharding spec
+│   │   ├── voting_circuit.rs              # Consensus quantum circuit
+│   │   └── entanglement.rs                # Quantum entanglement proof
+│   │
+│   ├── api/
+│   │   ├── mod.rs                         # API module root
+│   │   ├── rest_api.rs                    # REST API (Axum)
+│   │   ├── gateway.rs                     # aurphyx_api_gateway.rs
+│   │   ├── graphql.rs                     # GraphQL interface
+│   │   └── websocket.rs                   # WebSocket real-time
+│   │
+│   ├── integration/                       # Aurphyx standard integration hub
+│   │   ├── mod.rs
+│   │   ├── governance_client.rs           # Links to /afs/governance
+│   │   ├── opulence_client.rs             # Links to opulence
+│   │   └── gvs_client.rs                  # Links to Global Voting System
+│   │
+│   ├── unified_handler.rs                 # Unified event handler
+│   ├── models.rs                          # Data structures
+│   └── utils.rs
+│
+├── mods/                                  # Modules directory (preserve existing)
+│
+├── python/                                # Python tools
+│   ├── __init__.py
+│   ├── economic_engine.py                 # Economic modeling
+│   ├── qtec.py                            # Quantum tech
+│   ├── example_test.py                    # Tests
+│   ├── fastapi_event_listener.py          # FastAPI listener
+│   └── ledger_client.py                   # Python client SDK
+│
+├── notebooks/
+│   ├── Ledger Block Creation Simulator.ipynb
+│   └── quantum_analysis.ipynb
+│
+├── web/
+│   ├── index.html
+│   ├── ineffable.txt
+│   ├── ineffable.xml
+│   ├── package.json
+│   └── src/
+│       ├── components/
+│       │   ├── BlockExplorer.tsx
+│       │   ├── NetworkVisualizer.tsx
+│       │   └── ConsensusMonitor.tsx
+│       └── pages/
+│           ├── Explorer.tsx
+│           └── Validators.tsx
+│
+├── quantum/
+│   ├── Consensus Quantum Voting Circuit.qasm
+│   ├── Quantum Sharding Spec.md
+│   └── quantum_simulator.py
+│
+├── cli/
+│   ├── replay_tool_cli.rs
+│   └── node_cli.rs
+│
+├── daemon/
+│   ├── git_snapshot_daemon.rs
+│   └── sync_daemon.rs
+│
+├── go/
+│   ├── unified_handler_go.go
+│   └── go.mod
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+│
+└── config/
+    ├── genesis.toml
+    ├── validators.toml
+    └── network.toml

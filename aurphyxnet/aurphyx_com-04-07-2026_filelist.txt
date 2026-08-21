@@ -1,0 +1,39 @@
+Folder PATH listing for volume Windows
+Volume serial number is A65A-44CA
+C:.
+|   401.html
+|   403.html
+|   404.html
+|   500.html
+|   about.html
+|   aurphyx_com-04-07-2026_filelist.txt
+|   business-compliance.html
+|   explorer.html
+|   favicon.ico
+|   humans.txt
+|   index.html
+|   maintenance.html
+|   manifest.json
+|   pgp.txt
+|   privacy-policy.html
+|   robots.txt
+|   security.txt
+|   sitemap.xml
+|   terms-of-service.html
+|   
++---.well-known
+|       security.txt
+|       
+\---images
+        Audry_logo.png
+        AuraFS_Logo.png
+        AuraOS.png
+        Aurphyx_Aura_Logo.png
+        aurphyx_flowerbanner.jpg
+        balance-icon.jpeg
+        dataorb.png
+        g0dm0d3logo.png
+        orcid_logo.svg
+        rae_icon.png
+        Ross_2025.jpeg
+        
