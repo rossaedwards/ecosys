@@ -1,13 +1,15 @@
 # Vibe Media Player
 
-**Paradigm-shifting experiential media** — not another ID3 browser.
+**Aurphyx LLC** · native / desktop host for [VASP 3.69](../vasp/README.md)
 
-VMP treats every track as a **9-dimensional V.A.P. identity** (Structural → Genealogical), with a modular WinAmp/VLC shell, multi-format fidelity, and **Vinyl Vibez** (Mixxx-class DJ surface). Host-agnostic packaging rides **v01d (FUTE)**.
+Experiential player, not another ID3 browser. Every open file is a 9-pillar V.A.P. identity. Modular WinAmp / VLC-style shell, multi-format decode, **Vinyl Vibez** (Mixxx-class DJ surface), packaging via **v01d (FUTE)**.
+
+The browser / Framez product is **[Vibe Audio Player](../vibeaudioplayer/README.md)**.
 
 ```
 Rust engine  →  decode · EQ · tags · playlist · context
      ↕ IPC
-React shell  →  vertical pillar tabs · floating modules · File menu · Vinyl Vibez
+React shell  →  pillar tabs · floating modules · File menu · Vinyl Vibez
      ↕
 v01d         →  symbiotic packs (standalone / guest / WASM / VinylVibez)
 ```
@@ -16,17 +18,19 @@ v01d         →  symbiotic packs (standalone / guest / WASM / VinylVibez)
 
 | Old players | Vibe Media Player |
 |-------------|-------------------|
-| Title / artist / album | **Experiential** How/Why metadata (Thayer, MET, photometric, tribe…) |
-| Fixed chrome | **Dockable modules** you drag like WinAmp — faster |
-| Tags as afterthought | **VAP editor** first-class on every open file |
-| One surface | **Player** + **Vinyl Vibez → Mixxx** |
-| Host-locked | **v01d** symbiotic packaging |
+| Title / artist / album | Experiential How/Why metadata (Thayer, MET, photometric, tribe) |
+| Fixed chrome | Dockable modules |
+| Tags as afterthought | VAP editor first-class; `.vap.json` sidecar |
+| One surface | Player + Vinyl Vibez |
+| Host-locked | v01d symbiotic packaging |
+
+Filename (`Artist - Song Title` or `Artist_Album_SongTitle`) and ID3 are **identity**. Key, valence, MET, and lighting come from DSP + scoring or stay `unknown`.
 
 ## Formats
 
-MP3 · M4A/AAC · FLAC · Ogg Vorbis · Opus · WAV · AIFF · MP4/M4V · CAF  
+MP3 · M4A/AAC · FLAC · Ogg Vorbis · Opus · WAV · AIFF · MP4/M4V · CAF
 
-VAP always as `.vap.json` sidecar; native embed via ID3 / Vorbis / MP4 freeform (`vmp-audio` + lofty).
+VAP as `.vap.json` sidecar; native embed via ID3 / Vorbis / MP4 freeform (`vmp-audio` + lofty).
 
 ## Quick start
 
@@ -46,64 +50,62 @@ cargo run -p vmp-cli -- v01d
 npm install
 npm run dev
 
-# Desktop (needs WebKitGTK + ALSA headers — see apps/vmp-tauri/README.md)
+# Desktop (WebKitGTK + ALSA on Linux — see apps/vmp-tauri/README.md)
 npm run tauri:dev
 ```
 
 ### System audio (cpal / ALSA)
 
-With `alsa-lib-devel` installed, playback is **on by default**:
-
 ```bash
-cargo run -p vmp-cli -- version          # shows cpal ENABLED + device counts
-cargo run -p vmp-cli -- devices          # list inputs/outputs
-cargo run -p vmp-cli -- play track.flac  # hardware output
+cargo run -p vmp-cli -- version          # cpal + device counts
+cargo run -p vmp-cli -- devices
+cargo run -p vmp-cli -- play track.flac
 ```
 
 ## File menu
 
-Open File · Open Many Files · Open Folder · Open Disc · Open Recent Media · Stream ·  
-Convert/Export · Create / Save / Edit Playlist · Open Network Device · Save & Quit · Quit
+Open File · Open Many Files · Open Folder · Open Disc · Open Recent Media · Stream · Convert/Export · Create / Save / Edit Playlist · Open Network Device · Save & Quit · Quit
 
 ## Layout
 
 | Path | Role |
 |------|------|
-| `crates/vmp-vap` | V.A.P. v3.1 types, scoring, context engine |
+| `crates/vmp-vap` | V.A.P. types, scoring, context engine |
 | `crates/vmp-dsp` | Multi-mode EQ, analysis math |
 | `crates/vmp-audio` | Symphonia decode, lofty tags, PlayerEngine |
 | `crates/vmp-core` | Session, File menu, modules, Vinyl state |
 | `crates/vmp-v01d` | Bridge to FUTE |
 | `crates/vmp-cli` | `vmp` binary |
-| `fute/` | **v01d** packaging engine (`fute/wip` = experimental tree) |
+| `crates/vmp-viz` | Visualizer transmute |
+| `crates/vmp-vinyl` | Vinyl Vibez decks |
+| `fute/` | v01d packaging engine |
 | `apps/vmp-tauri` | Desktop shell |
 | `src/` | Modular React UI |
+| `schema/` | Protocol schema copies |
+
+Canonical protocol docs: [`../vasp/`](../vasp/). Product docs: [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md), [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md).
 
 ## Vinyl Vibez
 
-**Original plan:** *literally transmute [Mixxx](https://github.com/mixxxdj/mixxx) (C++) into the Vibe Audio stack* with **v01d / FUTE**, not invent a toy DJ skin.
+Plan: transmute [Mixxx](https://github.com/mixxxdj/mixxx) (C++) with **v01d / FUTE**, not a toy DJ skin.
 
 ```
 Mixxx C++  --v01d lang-->  crates/vmp-vinyl (GPL symbiont)  -->  VMP SymbioticMode::VinylVibez
 ```
 
-- Spec: [`docs/VINYL_VIBEZ_MIXXX_TRANSMUTE.md`](docs/VINYL_VIBEZ_MIXXX_TRANSMUTE.md)  
-- Scaffold: `crates/vmp-vinyl` (decks/mixer API; Mixxx algorithms land via FUTE)  
-- UI toggle **VINYL VIBEZ** hosts that symbiont  
+- Spec: [`docs/VINYL_VIBEZ_MIXXX_TRANSMUTE.md`](docs/VINYL_VIBEZ_MIXXX_TRANSMUTE.md)
+- Live touch + brand booths: [`docs/VINYL_VIBEZ_LIVE_TOUCH_AND_BRAND_DECKS.md`](docs/VINYL_VIBEZ_LIVE_TOUCH_AND_BRAND_DECKS.md)
 
 ```bash
-# After cloning Mixxx beside the monorepo:
 cargo run -p fute --bin v01d --features clang-ast -- lang ../mixxx/src/engine/enginebuffer.h \
   -o crates/vmp-vinyl/transmute_raw/enginebuffer.rs --from cpp
 
-# Dual-deck engine demo
 cargo run -p vmp-cli -- vinyl trackA.flac trackB.flac --xfade 0.5 --seconds 5
 ```
 
-**Live touch + brand booths** (Pioneer/Numark/Serato/Traktor-class kits, finger platters, Skinz):  
-[`docs/VINYL_VIBEZ_LIVE_TOUCH_AND_BRAND_DECKS.md`](docs/VINYL_VIBEZ_LIVE_TOUCH_AND_BRAND_DECKS.md)  
+## Streaming note
 
-Drop big vinyl images into: `skins/decks/vibe_default/assets/`
+`vasp_sdk-api_streaming.md` documents `VapEngine::transform_spotify`. That path fed `/v1/tracks` + `/v1/audio-features` into scoring for the golden set. New Spotify apps no longer get audio-features; TIDAL catalog + local DSP is the replacement input. TIDAL OAuth belongs to **Vibe Audio Player** (same Aurphyx client is reusable if a desktop redirect is added).
 
 ## License
 
