@@ -21,6 +21,7 @@ Native-capable host that decodes real files, writes `.vap.json` sidecars, embeds
 4. Context engine (`GYM_PEAK`, `NIGHT_DRIVE`) requires numeric BPM, arousal, MET — see `VASP_Context_Simulation.md`.
 5. Mixxx-derived Vinyl code stays a GPL symbiont; do not relicense Mixxx algorithms as MIT.
 6. No secrets in git. `.env.example` is demo-only.
+7. Tribe votes follow [`../vasp/VibeTribe_Pillarz.md`](../vasp/VibeTribe_Pillarz.md). Overlay first. Do not extra-key official `PILLARS`.
 
 ## Workspace
 
@@ -38,6 +39,7 @@ UI: Vite 8 + React 19 (`package.json` name still `vibeaudio`). Desktop: Tauri.
 | Tribe voter copy | [`../vasp/VibeTribe_Pillarz.md`](../vasp/VibeTribe_Pillarz.md) | 9×13 questions; overlay, not extra schema keys |
 | Scoring reference | `VASP_Scoring Engine.py.md` | Python `generate_vap_profile` |
 | Spotify mapper | `vasp_sdk-api_streaming.md` | `VapEngine::transform_spotify` (legacy input) |
+| Tribe voter copy | `../vasp/VibeTribe_Pillarz.md` | 9 × 13 questions; overlay only this pass |
 | Golden fixtures | Cannibal / Céline / Stuca under `../vasp/` and copies here | Hand-authored, complete |
 | Runtime types | `crates/vmp-vap` | Must not silently stay on 3.1 flat fields |
 | DSP | `crates/vmp-dsp` + planned `vap-analyze` | Numbers for scoring |
