@@ -22,6 +22,7 @@ A web player that plays local and catalog audio **and** emits a complete, honest
 5. Artist biography never fills Linguistic, Affective, Photometric, Kinetic, or Tonal.
 6. Grok transmute is user-initiated (Refresh), cached, and must not invent key, valence, or genre.
 7. Secrets stay in `.env.local`. Never commit TIDAL or Google credentials.
+8. Tribe answers land in a **Tribe overlay** first. Do not extra-key official `PILLARS` from a vote. Canon: [`../vasp/VibeTribe_Pillarz.md`](../vasp/VibeTribe_Pillarz.md).
 
 ## Architecture (as built)
 
@@ -53,6 +54,7 @@ Reference engine (not yet a `vap-analyze` CLI in this tree):
 - `../vasp/vasp_sdk-api_streaming.md` — `VapEngine::transform_spotify`
 - `../vasp/VASP_Official Schema.md`
 - `../vasp/VASP_Context_Simulation.md`
+- `../vasp/VibeTribe_Pillarz.md` — 9 × 13 voter copy (overlay only this pass)
 
 ## Auth status (2026-08-21)
 
@@ -75,6 +77,7 @@ Fix direction: identity from name/ID3 → catalog facts only where evidenced →
 - ID3 parse and Essentia / GetSongBPM not wired as first-class `known` sources.
 - YouTube Music / TIDAL Loved auto-pin depends on completed OAuth + scopes.
 - Windows 11 launch not yet verified by the owner after clone.
+- VASP 3×3 Tribe UI not built this pass.
 
 ## File naming convention
 
