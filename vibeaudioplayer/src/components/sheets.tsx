@@ -9,6 +9,7 @@ export function BottomSheet({
   eyebrow,
   children,
   height = "tall",
+  onTitleClick,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -16,6 +17,7 @@ export function BottomSheet({
   eyebrow?: string;
   children: ReactNode;
   height?: "tall" | "mid";
+  onTitleClick?: () => void;
 }) {
   return (
     <Drawer.Root open={open} onOpenChange={onOpenChange}>
@@ -34,7 +36,10 @@ export function BottomSheet({
             {eyebrow ? (
               <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-accent">{eyebrow}</p>
             ) : null}
-            <Drawer.Title className="font-display text-xl font-semibold tracking-tight text-fg">
+            <Drawer.Title
+              className="font-display text-xl font-semibold tracking-tight text-fg"
+              onClick={onTitleClick}
+            >
               {title}
             </Drawer.Title>
           </div>

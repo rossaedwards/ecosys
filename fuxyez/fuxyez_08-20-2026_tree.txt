@@ -1,0 +1,722 @@
+Folder PATH listing for volume Windows
+Volume serial number is 000000E1 A65A:44CA
+C:.
+|   Book_of_Fux.md
+|   Book_of_Fux_Alien_Manuscript.pdf
+|   Book_of_Fux_Alien_Manuscript.tex
+|   book_of_fux_body.tex
+|   book_of_fux_preamble.log
+|   book_of_fux_preamble.tex
+|   fuxyez.code-workspace
+|   fuxyez.tex
+|   fuxyez.toml
+|   fuxyez_01-14-2026_repolist.txt
+|   fuxyez_02-25-2026-repolist.txt
+|   fuxyez_05-17-2026_filelist.txt
+|   fux_frame.png
+|   index.html
+|   repo_structure.txt
+|   vol_i_theory-of-balance_section_01_.md
+|   yez_frame.png
+|   
++---compiler
+|   |   Aurphyx_CI_Pipeline.txt
+|   |   Cargo.lock
+|   |   Cargo.toml
+|   |   fuxyez.pest
+|   |   README.md
+|   |   ritual.fuxyez
+|   |   
+|   |   |   config
+|   |   |   description
+|   |   |   FETCH_HEAD
+|   |   |   HEAD
+|   |   |   
+|   |   +---hooks
+|   |   |       applypatch-msg.sample
+|   |   |       commit-msg.sample
+|   |   |       fsmonitor-watchman.sample
+|   |   |       post-update.sample
+|   |   |       pre-applypatch.sample
+|   |   |       pre-commit.sample
+|   |   |       pre-merge-commit.sample
+|   |   |       pre-push.sample
+|   |   |       pre-rebase.sample
+|   |   |       pre-receive.sample
+|   |   |       prepare-commit-msg.sample
+|   |   |       push-to-checkout.sample
+|   |   |       sendemail-validate.sample
+|   |   |       update.sample
+|   |   |       
+|   |   \---info
+|   |           exclude
+|   |           
+|   +---fux_frontend
+|   |       grammar.pest
+|   |       main.rs
+|   |       
+|   +---src
+|   |       ast.rs
+|   |       audry.rs
+|   |       diagnostics.rs
+|   |       executor.rs
+|   |       generator.rs
+|   |       lexer.rs
+|   |       lib.rs
+|   |       main.rs
+|   |       optimizer.rs
+|   |       parser.rs
+|   |       quantum.rs
+|   |       runtime_hooks.rs
+|   |       sages.rs
+|   |       sentinel_core.rs
+|   |       symbiotic_core.rs
+|   |       uir.rs
+|   |       
+|   |   |   .rustc_info.json
+|   |   |   CACHEDIR.TAG
+|   |   |   
+|   |   +---debug
+|   |   |   |   .cargo-lock
+|   |   |   |   
+|   |   |   +---.fingerprint
+|   |   |   |   +---fuxyez_compiler-1446d9ae9b15720d
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       output-test-lib-fuxyez_compiler
+|   |   |   |   |       
+|   |   |   |   +---fuxyez_compiler-1c177215801659d8
+|   |   |   |   +---fuxyez_compiler-b2ffa54f3b32d54a
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       output-lib-fuxyez_compiler
+|   |   |   |   |       
+|   |   |   |   +---fuxyez_compiler-fe85a1f4018853a2
+|   |   |   |   +---memchr-e5bef3e03a73fc56
+|   |   |   |   |       dep-lib-memchr
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-memchr
+|   |   |   |   |       lib-memchr.json
+|   |   |   |   |       
+|   |   |   |   +---memchr-e7a6eebbf45ab694
+|   |   |   |   |       dep-lib-memchr
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-memchr
+|   |   |   |   |       lib-memchr.json
+|   |   |   |   |       
+|   |   |   |   +---pest-63ce993f11733f61
+|   |   |   |   |       dep-lib-pest
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-pest
+|   |   |   |   |       lib-pest.json
+|   |   |   |   |       
+|   |   |   |   +---pest-fd2fda8e07e02ece
+|   |   |   |   |       dep-lib-pest
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-pest
+|   |   |   |   |       lib-pest.json
+|   |   |   |   |       
+|   |   |   |   +---pest_derive-527f52692e30ac88
+|   |   |   |   |       dep-lib-pest_derive
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-pest_derive
+|   |   |   |   |       lib-pest_derive.json
+|   |   |   |   |       
+|   |   |   |   +---pest_generator-868d6399768d8db0
+|   |   |   |   |       dep-lib-pest_generator
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-pest_generator
+|   |   |   |   |       lib-pest_generator.json
+|   |   |   |   |       
+|   |   |   |   +---pest_meta-e98a27a604770e61
+|   |   |   |   |       dep-lib-pest_meta
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-pest_meta
+|   |   |   |   |       lib-pest_meta.json
+|   |   |   |   |       
+|   |   |   |   +---proc-macro2-9c946418728e23e6
+|   |   |   |   |       dep-lib-proc_macro2
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-proc_macro2
+|   |   |   |   |       lib-proc_macro2.json
+|   |   |   |   |       
+|   |   |   |   +---proc-macro2-a4e24027c5709eb1
+|   |   |   |   |       run-build-script-build-script-build
+|   |   |   |   |       run-build-script-build-script-build.json
+|   |   |   |   |       
+|   |   |   |   +---proc-macro2-a887de8b55af5f27
+|   |   |   |   |       build-script-build-script-build
+|   |   |   |   |       build-script-build-script-build.json
+|   |   |   |   |       dep-build-script-build-script-build
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       
+|   |   |   |   +---quote-f73a121dcaca3085
+|   |   |   |   |       dep-lib-quote
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-quote
+|   |   |   |   |       lib-quote.json
+|   |   |   |   |       
+|   |   |   |   +---syn-444ed6860bd8955b
+|   |   |   |   |       dep-lib-syn
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-syn
+|   |   |   |   |       lib-syn.json
+|   |   |   |   |       
+|   |   |   |   +---thiserror-1a187d669654f1a3
+|   |   |   |   |       build-script-build-script-build
+|   |   |   |   |       build-script-build-script-build.json
+|   |   |   |   |       dep-build-script-build-script-build
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       
+|   |   |   |   +---thiserror-35449bcdd3b0d7b5
+|   |   |   |   |       dep-lib-thiserror
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-thiserror
+|   |   |   |   |       lib-thiserror.json
+|   |   |   |   |       
+|   |   |   |   +---thiserror-57425361b4313a7e
+|   |   |   |   |       dep-lib-thiserror
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-thiserror
+|   |   |   |   |       lib-thiserror.json
+|   |   |   |   |       
+|   |   |   |   +---thiserror-b866b44ebf6ab9e7
+|   |   |   |   |       run-build-script-build-script-build
+|   |   |   |   |       run-build-script-build-script-build.json
+|   |   |   |   |       
+|   |   |   |   +---thiserror-impl-382bccc15d3adf6a
+|   |   |   |   |       dep-lib-thiserror_impl
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-thiserror_impl
+|   |   |   |   |       lib-thiserror_impl.json
+|   |   |   |   |       
+|   |   |   |   +---ucd-trie-d05d3734c7abcd2f
+|   |   |   |   |       dep-lib-ucd_trie
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-ucd_trie
+|   |   |   |   |       lib-ucd_trie.json
+|   |   |   |   |       
+|   |   |   |   +---ucd-trie-d97528e782cdeeeb
+|   |   |   |   |       dep-lib-ucd_trie
+|   |   |   |   |       invoked.timestamp
+|   |   |   |   |       lib-ucd_trie
+|   |   |   |   |       lib-ucd_trie.json
+|   |   |   |   |       
+|   |   |   |   \---unicode-ident-e387d2cff2124b5f
+|   |   |   |           dep-lib-unicode_ident
+|   |   |   |           invoked.timestamp
+|   |   |   |           lib-unicode_ident
+|   |   |   |           lib-unicode_ident.json
+|   |   |   |           
+|   |   |   +---build
+|   |   |   |   +---proc-macro2-a4e24027c5709eb1
+|   |   |   |   |   |   invoked.timestamp
+|   |   |   |   |   |   output
+|   |   |   |   |   |   root-output
+|   |   |   |   |   |   stderr
+|   |   |   |   |   |   
+|   |   |   |   |   \---out
+|   |   |   |   +---proc-macro2-a887de8b55af5f27
+|   |   |   |   |       build-script-build.exe
+|   |   |   |   |       build_script_build-a887de8b55af5f27.d
+|   |   |   |   |       build_script_build-a887de8b55af5f27.exe
+|   |   |   |   |       build_script_build-a887de8b55af5f27.pdb
+|   |   |   |   |       build_script_build.pdb
+|   |   |   |   |       
+|   |   |   |   +---thiserror-1a187d669654f1a3
+|   |   |   |   |       build-script-build.exe
+|   |   |   |   |       build_script_build-1a187d669654f1a3.d
+|   |   |   |   |       build_script_build-1a187d669654f1a3.exe
+|   |   |   |   |       build_script_build-1a187d669654f1a3.pdb
+|   |   |   |   |       build_script_build.pdb
+|   |   |   |   |       
+|   |   |   |   \---thiserror-b866b44ebf6ab9e7
+|   |   |   |       |   invoked.timestamp
+|   |   |   |       |   output
+|   |   |   |       |   root-output
+|   |   |   |       |   stderr
+|   |   |   |       |   
+|   |   |   |       \---out
+|   |   |   +---deps
+|   |   |   |       libmemchr-e5bef3e03a73fc56.rlib
+|   |   |   |       libmemchr-e5bef3e03a73fc56.rmeta
+|   |   |   |       libmemchr-e7a6eebbf45ab694.rmeta
+|   |   |   |       libpest-63ce993f11733f61.rlib
+|   |   |   |       libpest-63ce993f11733f61.rmeta
+|   |   |   |       libpest-fd2fda8e07e02ece.rmeta
+|   |   |   |       libpest_generator-868d6399768d8db0.rlib
+|   |   |   |       libpest_generator-868d6399768d8db0.rmeta
+|   |   |   |       libpest_meta-e98a27a604770e61.rlib
+|   |   |   |       libpest_meta-e98a27a604770e61.rmeta
+|   |   |   |       libproc_macro2-9c946418728e23e6.rlib
+|   |   |   |       libproc_macro2-9c946418728e23e6.rmeta
+|   |   |   |       libquote-f73a121dcaca3085.rlib
+|   |   |   |       libquote-f73a121dcaca3085.rmeta
+|   |   |   |       libsyn-444ed6860bd8955b.rlib
+|   |   |   |       libsyn-444ed6860bd8955b.rmeta
+|   |   |   |       libthiserror-35449bcdd3b0d7b5.rlib
+|   |   |   |       libthiserror-35449bcdd3b0d7b5.rmeta
+|   |   |   |       libthiserror-57425361b4313a7e.rmeta
+|   |   |   |       libucd_trie-d05d3734c7abcd2f.rlib
+|   |   |   |       libucd_trie-d05d3734c7abcd2f.rmeta
+|   |   |   |       libucd_trie-d97528e782cdeeeb.rmeta
+|   |   |   |       libunicode_ident-e387d2cff2124b5f.rlib
+|   |   |   |       libunicode_ident-e387d2cff2124b5f.rmeta
+|   |   |   |       memchr-e5bef3e03a73fc56.d
+|   |   |   |       memchr-e7a6eebbf45ab694.d
+|   |   |   |       pest-63ce993f11733f61.d
+|   |   |   |       pest-fd2fda8e07e02ece.d
+|   |   |   |       pest_derive-527f52692e30ac88.d
+|   |   |   |       pest_derive-527f52692e30ac88.dll
+|   |   |   |       pest_derive-527f52692e30ac88.dll.exp
+|   |   |   |       pest_derive-527f52692e30ac88.dll.lib
+|   |   |   |       pest_derive-527f52692e30ac88.pdb
+|   |   |   |       pest_generator-868d6399768d8db0.d
+|   |   |   |       pest_meta-e98a27a604770e61.d
+|   |   |   |       proc_macro2-9c946418728e23e6.d
+|   |   |   |       quote-f73a121dcaca3085.d
+|   |   |   |       syn-444ed6860bd8955b.d
+|   |   |   |       thiserror-35449bcdd3b0d7b5.d
+|   |   |   |       thiserror-57425361b4313a7e.d
+|   |   |   |       thiserror_impl-382bccc15d3adf6a.d
+|   |   |   |       thiserror_impl-382bccc15d3adf6a.dll
+|   |   |   |       thiserror_impl-382bccc15d3adf6a.dll.exp
+|   |   |   |       thiserror_impl-382bccc15d3adf6a.dll.lib
+|   |   |   |       thiserror_impl-382bccc15d3adf6a.pdb
+|   |   |   |       ucd_trie-d05d3734c7abcd2f.d
+|   |   |   |       ucd_trie-d97528e782cdeeeb.d
+|   |   |   |       unicode_ident-e387d2cff2124b5f.d
+|   |   |   |       
+|   |   |   +---examples
+|   |   |   \---incremental
+|   |   |       +---fuxyez_compiler-04pgw9p6dd2iw
+|   |   |       |   |   s-hlcwbarki6-0vrj9e2.lock
+|   |   |       |   |   
+|   |   |       |   \---s-hlcwbarki6-0vrj9e2-working
+|   |   |       |           dep-graph.part.bin
+|   |   |       |           
+|   |   |       \---fuxyez_compiler-0w3si89zf37ps
+|   |   |           |   s-hjrjj8o23k-094g87q.lock
+|   |   |           |   
+|   |   |           \---s-hjrjj8o23k-094g87q-working
+|   |   |                   dep-graph.part.bin
+|   |   |                   
+|   |   +---flycheck0
+|   |   |       stderr
+|   |   |       stdout
+|   |   |       
+|   |   +---flycheck1
+|   |   |       stderr
+|   |   |       stdout
+|   |   |       
+|   |   \---flycheck5
+|   |           stderr
+|   |           stdout
+|   |           
+|   \---yez_frontend
+|           grammar.pest
+|           main.rs
+|           
++---configs
+|       default.xuf
+|       js_runtime.sjxuf
+|       oracle_schema.zey
+|       python_env.ypxuf
+|       README.md
+|       rust_bridge.srxuf
+|       
++---docs
+|       CONTRIBUTING.md
+|       EXTENSION_GUIDE.md
+|       GETTING_STARTED.md
+|       ROADMAP.md
+|       
++---examples
+|   |   aurafs_basic.fux
+|   |   aurafs_distributed_compute.fux
+|   |   aurafs_ml_dataset.fux
+|   |   aurafs_oracle.yez
+|   |   README.md
+|   |   
+|   +---hello_world
+|   |       main.fux
+|   |       main.xuf
+|   |       
+|   +---oracle_query
+|   |       prophecy.yez
+|   |       prophecy.zey
+|   |       
+|   +---python_script
+|   |       data_process.fuxpy
+|   |       data_process.ypxuf
+|   |       
+|   \---rust_ffi
+|       |   bridge.fuxrs
+|       |   bridge.srxuf
+|       |   
+|       \---rust_lib
+|           |   Cargo.toml
+|           |   
+|           \---src
+|                   lib.rs
+|                   
++---fute
+|   |   Cargo.toml
+|   |   LICENSE
+|   |   mod.rs
+|   |   README.md
+|   |   
+|   +---docs
+|   |       ARCHITECTURE.md
+|   |       CLI_REFERENCE.md
+|   |       EXAMPLES.md
+|   |       LANGUAGE_PLUGINS.md
+|   |       SYMBIOTIC_MODES.md
+|   |       
+|   +---examples
+|   |       multi_language.rs
+|   |       python_to_rust.rs
+|   |       rust_to_fuxyez.rs
+|   |       symbiotic_transform.rs
+|   |       
+|   \---src
+|       |   lib.rs
+|       |   main.rs
+|       |   
+|       +---ast
+|       |       mod.rs
+|       |       parser.rs
+|       |       traversal.rs
+|       |       universal.rs
+|       |       
+|       +---cli
+|       |   |   args.rs
+|       |   |   banner.rs
+|       |   |   mod.rs
+|       |   |   
+|       |   \---commands
+|       |           build.rs
+|       |           collapse.rs
+|       |           divine.rs
+|       |           export.rs
+|       |           harmonize.rs
+|       |           invoke.rs
+|       |           mod.rs
+|       |           new.rs
+|       |           publish.rs
+|       |           purge.rs
+|       |           search.rs
+|       |           transmute.rs
+|       |           weave.rs
+|       |           
+|       +---codegen
+|       |       fuxyez.rs
+|       |       mod.rs
+|       |       
+|       +---core
+|       |       context.rs
+|       |       engine.rs
+|       |       mod.rs
+|       |       pipeline.rs
+|       |       registry.rs
+|       |       transformer.rs
+|       |       types.rs
+|       |       
+|       +---languages
+|       |   |   mod.rs
+|       |   |   traits.rs
+|       |   |   
+|       |   +---csharp
+|       |   |       f_ast.rs
+|       |   |       generator.rs
+|       |   |       mod.rs
+|       |   |       parser.rs
+|       |   |       
+|       |   +---javascript
+|       |   |       f_ast.rs
+|       |   |       mod.rs
+|       |   |       
+|       |   +---python
+|       |   |       f_ast.rs
+|       |   |       generator.rs
+|       |   |       mod.rs
+|       |   |       parser.rs
+|       |   |       
+|       |   +---rust
+|       |   |       f_ast.rs
+|       |   |       generator.rs
+|       |   |       mod.rs
+|       |   |       parser.rs
+|       |   |       
+|       |   \---wasm
+|       |           f_ast.rs
+|       |           generator.rs
+|       |           mod.rs
+|       |           
+|       +---patterns
+|       |       analytics.rs
+|       |       cache.rs
+|       |       detector.rs
+|       |       ext.rs
+|       |       library.rs
+|       |       matcher.rs
+|       |       mod.rs
+|       |       rules.rs
+|       |       test_utils.rs
+|       |       
+|       +---transformer
+|       |   |   diagnostics.rs
+|       |   |   effect.rs
+|       |   |   mir_utils.rs
+|       |   |   mod.rs
+|       |   |   optimizer.rs
+|       |   |   plugin.rs
+|       |   |   quantum.rs
+|       |   |   semantic.rs
+|       |   |   symbiotic.rs
+|       |   |   
+|       |   \---passes
+|       |           dead_code_elim.rs
+|       |           entanglement_map.rs
+|       |           quantum_fuse.rs
+|       |           
+|       \---utils
+|               config.rs
+|               logger.rs
+|               mod.rs
+|               
++---fuxrt
+|   |   Cargo.toml
+|   |   fuxyez_fuxrt_repolist.txt
+|   |   lib.rs
+|   |   
+|   +---core
+|   |       collapse.rs
+|   |       lattice.rs
+|   |       mod.rs
+|   |       oracle.rs
+|   |       sigil.rs
+|   |       spinon.rs
+|   |       thread.rs
+|   |       
+|   +---stdlib
+|   |   |   mod.rs
+|   |   |   README.md
+|   |   |   
+|   |   +---aurafs
+|   |   |       fuxyez_bindings.fux
+|   |   |       mod.rs
+|   |   |       
+|   |   +---core
+|   |   |   |   collapse.rs
+|   |   |   |   echo.fux
+|   |   |   |   lattice.fux
+|   |   |   |   lattice.rs
+|   |   |   |   mod.rs
+|   |   |   |   oracle.rs
+|   |   |   |   sigil.rs
+|   |   |   |   spinon.fux
+|   |   |   |   spinon.rs
+|   |   |   |   std.rs
+|   |   |   |   thread.rs
+|   |   |   |   
+|   |   |   +---chains
+|   |   |   |       chainritual.rs
+|   |   |   |       chanlink.rs
+|   |   |   |       mod.rs
+|   |   |   |       ritualchain.rs
+|   |   |   |       ritual_chainlink.rs
+|   |   |   |       ritual_link.rs
+|   |   |   |       
+|   |   |   +---echoes
+|   |   |   |       cymatic_monitor.rs
+|   |   |   |       lattice_echo.rs
+|   |   |   |       mod.rs
+|   |   |   |       neglecton_echo.rs
+|   |   |   |       quantum_trace.rs
+|   |   |   |       
+|   |   |   +---oracle
+|   |   |   |       aurafs_oracle.rs
+|   |   |   |       cymatic_oracle.rs
+|   |   |   |       hilbert_predictor.rs
+|   |   |   |       mod.rs
+|   |   |   |       neglecton_compiler.rs
+|   |   |   |       prophecy_cache.rs
+|   |   |   |       quantum_db.rs
+|   |   |   |       rae_diviner.rs
+|   |   |   |       
+|   |   |   \---rituals
+|   |   |           collapse_ritual.rs
+|   |   |           cymatic_ritual.rs
+|   |   |           lattice_ceremony.rs
+|   |   |           mod.rs
+|   |   |           neglecton_ceremony.rs
+|   |   |           quantum_ritual.rs
+|   |   |           rae_invocation.rs
+|   |   |           
+|   |   \---io
+|   |           fux.rs
+|   |           mod.rs
+|   |           
+|       |   .rustc_info.json
+|       |   
+|       +---flycheck0
+|       |       stderr
+|       |       stdout
+|       |       
+|       +---flycheck5
+|       |       stderr
+|       |       stdout
+|       |       
+|       \---flycheck6
+|               stderr
+|               stdout
+|               
++---governance
+|       api.rs
+|       audit_log.rs
+|       blissid_manager.rs
+|       Cargo.toml
+|       consensus_integration.rs
+|       fastapi.rs
+|       identity_verifier.rs
+|       lib.rs
+|       main.rs
+|       mod.rs
+|       models.rs
+|       policy_enforcer.rs
+|       proposal_manager.rs
+|       server.rs
+|       soulsync_engine.rs
+|       transaction_type.rs
+|       voting_engine.rs
+|       
++---integrations
+|   |   README.md
+|   |   
+|   \---aurafs
+|           backend.rs
+|           mod.rs
+|           shard.rs
+|           
++---stdlib
+|   |   README.md
+|   |   
+|   +---aurafs
+|   |       fuxyez_bindings.fux
+|   |       
+|   +---core
+|   |       lattice.fux
+|   |       spinon.fux
+|   |       
+|   \---io
+|           echo.fux
+|           
++---tests
+|       aurafs_integration.fuxtest
+|       
++---tools
+|       README.md
+|       
++---yez
+|   |   readme.md
+|   |   
+|   +---core
+|   +---gavinium
+|   |       readme.md
+|   |       
+|   +---sophos
+|   |       readme.md
+|   |       
+|   \---stdlib
++---yezl
+|   |   README.md
+|   |   
+|   +---c
+|   +---cpp
+|   +---csharp
+|   +---dart
+|   +---elixir
+|   +---go
+|   +---java
+|   +---javascript
+|   +---kotlin
+|   +---php
+|   +---python
+|   |       bridge.rs
+|   |       README.md
+|   |       
+|   +---ruby
+|   +---rust
+|   |       bridge.rs
+|   |       README.md
+|   |       
+|   +---swift
+|   +---typescript
+|   +---wasm
+|   |       codegen.rs
+|   |       
+|   \---zig
+\---yezrt
+    |   README.md
+    |   
+    +---chains
+    +---links
+    +---rituals
+    \---stdlib
+        |   mod.rs
+        |   README.md
+        |   
+        +---aurafs
+        |       fuxyez_bindings.fux
+        |       mod.rs
+        |       
+        +---core
+        |   |   collapse.rs
+        |   |   echo.fux
+        |   |   lattice.fux
+        |   |   lattice.rs
+        |   |   mod.rs
+        |   |   oracle.rs
+        |   |   sigil.rs
+        |   |   spinon.fux
+        |   |   spinon.rs
+        |   |   std.rs
+        |   |   thread.rs
+        |   |   
+        |   +---chains
+        |   |       chainritual.rs
+        |   |       chanlink.rs
+        |   |       mod.rs
+        |   |       ritualchain.rs
+        |   |       ritual_chainlink.rs
+        |   |       ritual_link.rs
+        |   |       
+        |   +---echoes
+        |   |       cymatic_monitor.rs
+        |   |       lattice_echo.rs
+        |   |       mod.rs
+        |   |       neglecton_echo.rs
+        |   |       quantum_trace.rs
+        |   |       
+        |   +---oracle
+        |   |       aurafs_oracle.rs
+        |   |       cymatic_oracle.rs
+        |   |       hilbert_predictor.rs
+        |   |       mod.rs
+        |   |       neglecton_compiler.rs
+        |   |       prophecy_cache.rs
+        |   |       quantum_db.rs
+        |   |       rae_diviner.rs
+        |   |       
+        |   \---rituals
+        |           collapse_ritual.rs
+        |           cymatic_ritual.rs
+        |           lattice_ceremony.rs
+        |           mod.rs
+        |           neglecton_ceremony.rs
+        |           quantum_ritual.rs
+        |           rae_invocation.rs
+        |           
+        \---io
+                fux.rs
+                mod.rs
+                

@@ -11,6 +11,12 @@ export type FrameSample = {
   beat: boolean;
   beatPulse: number;
   timeSec: number;
+  /** Pillar 7.1: sub-bass / kick / mids / highs */
+  chromEnergy: [number, number, number, number];
+  /** Pillar 3: spectral centroid in Hz */
+  centroidHz: number;
+  /** Pillar 3: high-band / low-band ratio (THD-like 0–1) */
+  saturation: number;
 };
 
 type DemoHandle = {
@@ -295,6 +301,13 @@ export class VibeAudioEngine {
     }
     this.beatPulse *= 0.86;
 
+    const sampleRate = this.ctx?.sampleRate ?? 44100;
+    const fftSize = this.analyser?.fftSize ?? FFT;
+    const chromEnergy = chromaticBands(this.freq, sampleRate, fftSize);
+    const centroidHz = spectralCentroid(this.freq, sampleRate, fftSize);
+    const low = Math.max(1e-5, chromEnergy[0] + chromEnergy[1]);
+    const saturation = clamp01(chromEnergy[3] / low);
+
     return {
       freq: this.freq,
       time: this.time,
@@ -306,6 +319,9 @@ export class VibeAudioEngine {
       beat,
       beatPulse: this.beatPulse,
       timeSec: now,
+      chromEnergy,
+      centroidHz,
+      saturation,
     };
   }
 
@@ -317,6 +333,44 @@ export class VibeAudioEngine {
       /* ignore */
     }
   }
+}
+
+const CHROM_LOW = [40, 60, 250, 2000];
+const CHROM_HIGH = [60, 250, 2000, 20000];
+
+function chromaticBands(
+  freq: Uint8Array,
+  sampleRate: number,
+  fftSize: number,
+): [number, number, number, number] {
+  const binHz = sampleRate / fftSize;
+  const out: [number, number, number, number] = [0, 0, 0, 0];
+  for (let b = 0; b < 4; b++) {
+    const i0 = Math.max(0, Math.floor(CHROM_LOW[b]! / binHz));
+    const i1 = Math.min(freq.length - 1, Math.floor(CHROM_HIGH[b]! / binHz));
+    let energy = 0;
+    let n = 0;
+    for (let i = i0; i <= i1; i++) {
+      const v = (freq[i] ?? 0) / 255;
+      energy += v * v;
+      n++;
+    }
+    const rms = n ? Math.sqrt(energy / n) : 0;
+    out[b] = 1 - Math.exp(-rms * 4);
+  }
+  return out;
+}
+
+function spectralCentroid(freq: Uint8Array, sampleRate: number, fftSize: number): number {
+  const binHz = sampleRate / fftSize;
+  let num = 0;
+  let den = 0;
+  for (let i = 0; i < freq.length; i++) {
+    const m = (freq[i] ?? 0) / 255;
+    num += m * i * binHz;
+    den += m;
+  }
+  return den > 1e-6 ? num / den : 200;
 }
 
 function bandMean(data: Uint8Array, from: number, to: number) {

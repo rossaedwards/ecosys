@@ -16,7 +16,7 @@ import {
 } from "@/lib/vasp/catalog";
 import type { PillarKey, VisualMapping, VisualSettings } from "@/lib/vasp/types";
 
-export type SheetName = "none" | "library" | "vasp" | "settings";
+export type SheetName = "none" | "library" | "vasp" | "settings" | "about";
 export type RepeatMode = "off" | "all" | "one";
 
 const DEFAULT_SETTINGS: VisualSettings = {

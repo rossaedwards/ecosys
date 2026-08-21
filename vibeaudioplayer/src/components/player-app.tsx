@@ -1,7 +1,10 @@
 import { useEffect } from "react";
+import { AboutSheet } from "@/components/about-sheet";
 import { LibrarySheet } from "@/components/library-sheet";
+import { LoadingSplash } from "@/components/loading-splash";
 import { NowPlayingCard } from "@/components/now-playing";
 import { SettingsSheet } from "@/components/settings-sheet";
+import { TabBar } from "@/components/tab-bar";
 import { VaspSheet } from "@/components/vasp-sheet";
 import { VisualizerCanvas } from "@/components/visualizer-canvas";
 import { engine } from "@/lib/audio/engine";
@@ -74,9 +77,12 @@ export function PlayerApp() {
         </div>
       </header>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 px-3 pb-[max(3.75rem,calc(env(safe-area-inset-bottom)+2.25rem))]">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 px-3 pb-[max(5.75rem,calc(env(safe-area-inset-bottom)+4.5rem))]">
         <NowPlayingCard />
       </div>
+
+      <TabBar />
+      <LoadingSplash />
 
       {dropActive ? (
         <div className="absolute inset-0 z-30 grid place-items-center bg-bg/70 backdrop-blur-sm">
@@ -96,6 +102,7 @@ export function PlayerApp() {
       <LibrarySheet />
       <VaspSheet />
       <SettingsSheet />
+      <AboutSheet />
     </div>
   );
 }

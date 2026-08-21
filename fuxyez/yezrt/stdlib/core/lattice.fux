@@ -1,0 +1,13 @@
+# Pure Fuxyez Flower of Life Lattice (Thesis §3.1)
+sigil flower_of_life(n_rings: i32) -> Lattice {
+    native core::lattice::Lattice::flower_of_life(n_rings)
+}
+
+sigil weave_quantum(lattice: Lattice, spinon: Spinon) -> String {
+    native lattice.rae_encode(spinon)
+}
+
+ritual aurphyx_lattice_main {
+    let crystal = flower_of_life(19);
+    collapse weave_quantum(crystal, Spinon::new())
+}

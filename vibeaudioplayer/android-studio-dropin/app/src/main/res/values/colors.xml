@@ -1,0 +1,10 @@
+<resources>
+    <color name="vibe_void">#FF07060C</color>
+    <color name="vibe_surface">#FF12101A</color>
+    <color name="vibe_fg">#FFF3F1F8</color>
+    <color name="vibe_muted">#FFB7B0C7</color>
+    <color name="vibe_accent">#FF2EE6C8</color>
+    <color name="vibe_primary">#FF7C6CFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

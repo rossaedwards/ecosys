@@ -7,9 +7,9 @@ const VAPCardGenerator = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // === YOUR KEYS ===
-  const YOUTUBE_API_KEY = "AIzaSyBY0BsYq5_3ppe4cVZqtDODVk1HVpjfAew";
-  const spotifyToken = "BQAVg53hmnF2iqFvR2HdveGBQEj5E5NVhOPJizOlRCOOmjA9p_uE4H5WYg1H-b0AnQNTBdXvsCRxuKzU7WQAWQdaHsBLSBG0SMwcMXNcdwlJw1-g8uwlMfL1jIGFTI63CBOo2JCXVaw"; // ← Add your Spotify token here later if you want
+  // Keys live in env — never commit them. Rotate any key that was previously inlined here.
+  const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY ?? "";
+  const spotifyToken = import.meta.env.VITE_SPOTIFY_TOKEN ?? "";
 
   const analyzeUrl = async () => {
     if (!url) return;

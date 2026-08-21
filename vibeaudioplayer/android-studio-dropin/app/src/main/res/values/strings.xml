@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Vibe Audio Player</string>
+    <string name="permission_title">Local audio access</string>
+    <string name="permission_body">Vibe Audio Player reads music already on this phone so you can open MP3, WAV, FLAC, OGG, and M4A files. Nothing is uploaded. Demos work without this permission.</string>
+    <string name="permission_continue">Continue</string>
+    <string name="permission_skip">Play demos only</string>
+    <string name="tab_orb">Orb</string>
+    <string name="tab_library">Library</string>
+    <string name="tab_vasp">VASP</string>
+    <string name="tab_scene">Scene</string>
+    <string name="tab_about">About</string>
+    <string name="unsupported">Format not supported</string>
+    <string name="playback_channel">Now playing</string>
+</resources>

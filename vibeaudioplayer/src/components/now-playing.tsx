@@ -1,12 +1,9 @@
 import type { ReactNode } from "react";
 import {
-  Hexagon,
-  Library,
   Pause,
   Play,
   Repeat,
   Repeat1,
-  Settings2,
   Shuffle,
   SkipBack,
   SkipForward,
@@ -26,7 +23,6 @@ export function NowPlayingCard() {
   const next = usePlayer((s) => s.next);
   const prev = usePlayer((s) => s.prev);
   const seek = usePlayer((s) => s.seek);
-  const setSheet = usePlayer((s) => s.setSheet);
   const shuffle = usePlayer((s) => s.shuffle);
   const setShuffle = usePlayer((s) => s.setShuffle);
   const repeat = usePlayer((s) => s.repeat);
@@ -129,11 +125,6 @@ export function NowPlayingCard() {
         </IconBtn>
       </div>
 
-      <div className="mt-2 grid grid-cols-3 gap-1.5">
-        <NavBtn onClick={() => setSheet("library")} icon={<Library className="size-4" />} label="Library" />
-        <NavBtn onClick={() => setSheet("vasp")} icon={<Hexagon className="size-4" />} label="VASP" />
-        <NavBtn onClick={() => setSheet("settings")} icon={<Settings2 className="size-4" />} label="Scene" />
-      </div>
       <p className="sr-only">Active mapping palette {mapping.primary} {mapping.secondary}</p>
     </section>
   );
@@ -173,23 +164,4 @@ function IconBtn({
   );
 }
 
-function NavBtn({
-  onClick,
-  icon,
-  label,
-}: {
-  onClick: () => void;
-  icon: ReactNode;
-  label: string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="flex h-11 items-center justify-center gap-1.5 rounded-2xl bg-white/4 text-xs font-medium text-fg shadow-border hover:bg-white/8"
-    >
-      {icon}
-      {label}
-    </button>
-  );
-}
+
