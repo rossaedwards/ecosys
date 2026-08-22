@@ -1,6 +1,7 @@
 # ecosystem.toml
-# Aurphyx Ecosystem — Machine-Readable Source of Truth
-# Source: aurphyx_welcome2tribe.md
+# Aurphyx Ecosystem — Machine-Readable Product Registry
+# Source of truth (human): aurphyx_welcome2tribe.md
+# Shared physics numbers are NOT here. Those belong in PHYSICS.md / future aps.toml.
 # Author: Ross A. Edwards | Aurphyx LLC
 # Updated: 2026-08-21
 # "iz" = "is" throughout all Aurphyx documentation.
@@ -16,6 +17,17 @@ ein          = "41-3437055"
 website      = "aurphyx.com"
 store        = "aurphyx.store"
 discord      = "AurphyxHQ"
+
+# ─────────────────────────────────────────────
+# ORGANISM — TYPE-1 CIVILIZATION STACK
+# ─────────────────────────────────────────────
+[organism]
+name         = "Type-1 Civilization Stack"
+description  = "rossaedwards/ecosys and aurphyx/ecosys are not two products. Together they are one organism."
+lab          = "rossaedwards/ecosys"
+publish      = "aurphyx/ecosys"
+edit_law     = ".cursorrules"
+human_map    = "aurphyx_welcome2tribe.md"
 
 # ─────────────────────────────────────────────
 # SOUL JOURNEY PIPELINE
@@ -115,7 +127,8 @@ type         = "hardware"
 # OPERATING SYSTEMS
 # ─────────────────────────────────────────────
 [os]
-built_with   = ["Fuxyez", "Rust"]
+built_with   = ["Fuxyez", "AuraFS", "Audry", "SAGES", "Chakra-Datacore-System", "g0dm0d3", "GVS", "GIL", "OPE/P4A", "Memoree"]
+base_host    = "Rust"
 
 [[os.variants]]
 name         = "Aura"
@@ -136,9 +149,8 @@ target       = "small-business-to-enterprise"
 status       = "in-development"
 
 [[os.variants]]
-name         = "Ora"
+name         = "Arora"
 full_name    = "All Other Devices"
-formerly     = "Arora"
 target       = "iot-edge-embedded"
 status       = "in-development"
 
@@ -196,14 +208,27 @@ status       = "in-development"
 
 [systems.g0dm0d3]
 full_name    = "g0dm0d3"
-description  = "Frame, Control Deck & Orchestration for Aura & Audry. Multi-AI-LLM Orchestration Console/Cockpit."
+description  = "Frame, Control Deck & Orchestration for Aura & Audry."
 role         = "corpus callosum of Audry's brain"
 status       = "in-development"
+pair_with    = "Memoree"
+
+[systems.g0dm0d3-ktrl]
+full_name    = "g0dm0d3-ktrl"
+description  = "Control deck / Plasma-class shell. Path: g0dm0d3-ktrl/"
+pair_with    = "Memoree"
+status       = "in-development"
+
+[systems.g0dm0d3-core]
+full_name    = "g0dm0d3-core"
+description  = "Could be the public open-source implementation of g0dm0d3-ktrl. Open to change."
+pair_with    = "Memoree"
+status       = "design"
 
 [systems.g0dm0d3.desktop_environments]
-LDE   = "Legacy Desktop Environment (Gnome/KDE/Windows-style)"
-SLISE = "Spherical Liquid Interactive Story Experience"
-SHUXSDE = "Symbiotic Holographic Universal Xessability Standard Desktop Environment"
+LDE        = "Legacy Desktop Environment (Gnome/KDE/Windows/macOS)"
+SLIDE      = "Spherical Liquid Interactive Desktop Experience"
+"Aura-HDE" = "Aura Holographic Desktop Environment"
 
 [[systems.g0dm0d3.components]]
 slug         = "fr4m3z"
@@ -229,14 +254,14 @@ status       = "design"
 [[systems.g0dm0d3.components]]
 slug         = "xpl0r"
 name         = "Xplor"
-description  = "File & network manager (AuraFS & Meshwrk)"
+description  = "File and meshwrk browser-explorer (AuraFS & Meshwrk)"
 analog       = "Dolphin / Explorer"
 status       = "design"
 
 [[systems.g0dm0d3.components]]
 slug         = "c0d3x"
 name         = "Codex"
-description  = "Writer, editor, coder"
+description  = "Writer, editor, IDE"
 analog       = "Word / Zed / TeX editor"
 status       = "design"
 
@@ -251,7 +276,7 @@ status       = "design"
 slug         = "ad0r3"
 name         = "Adorè"
 description  = "Audio alchemy & transmutation"
-analog       = "LMMS / Ableton / FL Studio / Maschine"
+analog       = "Ardour / LMMS / Ableton / FL Studio / Maschine"
 status       = "design"
 
 [[systems.g0dm0d3.components]]
@@ -271,7 +296,9 @@ status       = "in-development"
 
 [systems.Memoree]
 full_name    = "Memoree"
-description  = "Three-Squared-Lattice Cognitive Memory Architecture for any platform."
+description  = "Three-Squared-Lattice Cognitive Memory Architecture for anyone."
+pair_with    = ["g0dm0d3-core", "g0dm0d3-ktrl"]
+note         = "Must be installed together with g0dm0d3-core or g0dm0d3-ktrl. You cannot use one without the other."
 status       = "in-development"
 
 [systems.GVS]
@@ -336,9 +363,23 @@ status       = "design"
 [[projects]]
 name         = "Vibe Media Player"
 type         = "software"
-description  = "Media player following Vibe Audio Standard & Protocol."
-path         = "ecosys/vibeplayer/"
+description  = "Main Rust-based desktop media player. VASP web player lives inside this tree."
+path         = "vibemediaplayer/"
 progress_pct = 20
+status       = "in-development"
+
+[[projects]]
+name         = "Vibe Audio Player"
+type         = "software"
+description  = "Android, iOS, Raspberry Pi, IoT. VASP web player lives inside this tree."
+path         = "vibeaudioplayer/"
+status       = "in-development"
+
+[[projects]]
+name         = "vap-serv"
+type         = "software"
+description  = "SaaS for streaming platforms and music services."
+path         = "vap-serv/"
 status       = "in-development"
 
 [[projects]]
@@ -373,15 +414,17 @@ status       = "design"
 # ─────────────────────────────────────────────
 [dev_env]
 device_name  = "Aura"
-processor    = "AMD Ryzen 7 PRO 5850U with Radeon Graphics (1.90 GHz)"
+processor    = "AMD Ryzen 7 PRO 5850U with Radeon Graphics (1.90 GHz / 4.2 GHz)"
 ram_gb       = 32
 graphics     = "AMD Radeon(TM) Graphics (496 MB)"
 storage_used = "314 GB of 954 GB"
 operating_systems = ["Windows 11 Home", "Fedora 44 KDE Plasma"]
+ntfs_share   = "D:"
+ntfs_note    = "Before switching OSes, update D: with any changes."
 
 [dev_env.repos.windows]
-rossaedwards = "C:\\rossaedwards\\main\\"
-aurphyx      = "C:\\Aurphyx\\main\\"
+rossaedwards = "C:\\rossaedwards\\ecosys"
+aurphyx      = "C:\\aurphyx\\ecosys"
 
 [dev_env.repos.fedora]
 rossaedwards = "/home/rae/rossaedwards/main"

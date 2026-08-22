@@ -12,8 +12,18 @@ cores:
   - SCX
 fields:
 ---
+## ** APS-FTQC-001 **
+## ** Fractal-enhanced Topological Quantum Computing **
+## ** Symbiotic Universal Xessability Standards **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 3.69 **
 
 # FTQC — SUMZ / SUGGZ
+
+**Combine (2026-08-22):** Public spine is `ms.tex` (A). Harvested B=`prx_manuscript.tex` and C=`manuscript.tex` into that file. Lab sources B and C were not deleted. Locked: $\alpha(k)=\log(1+k\eta)/\log D_f$, $n=12$ advantage $10^{8.3}$, $\gamma_{\mathrm{FTQC}}=0.063$ vs $\gamma_{19}=0.63$.
 
 **Folder:** `ftqc/`  
 **Role:** Volume XVII. Fault-tolerant / fractal topological quantum computing. TeX manuscript, figures, `bib_consolidator.py`.

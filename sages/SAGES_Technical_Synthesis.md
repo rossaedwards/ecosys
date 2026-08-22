@@ -10,9 +10,9 @@ The SAGES framework moves beyond static policy rulebooks, formalizing governance
 
 The underlying state space is governed by a smooth differentiable manifold equipped with a metric $g_{\mu\nu}$ and three mutually orthogonal base channels defined by the Aurphyx Symbiotic Universal Xessibility Standards (SUXS):
 
-1. **$\mathbf{S}_1$ (SIC - Symbiotic Integration Channel):** Perceptual mapping and environmental coupling.
-2. **$\mathbf{S}_2$ (SCC - Systemic Coherence Channel):** Semantic alignment, normalization, and invariant verification.
-3. **$\mathbf{S}_3$ (ICC - Identity-Coherence Channel):** Identity anchoring, provenance tracking, and historical value lineage.
+1. **$\mathbf{S}_1$ (SIX - Symbiotic Intelligence aXis):** Perceptual mapping, sensorimotor, and environmental coupling.
+2. **$\mathbf{S}_2$ (SCX - Systemic Coherence aXis):** Semantic alignment, normalization, and invariant verification.
+3. **$\mathbf{S}_3$ (ICX - Identity Coherence aXis):** Identity anchoring, provenance tracking, and historical value lineage.
 
 The global state is mathematically modeled by a second-order **Cognitive Field Tensor** $\mathcal{F}$, constructed as an exterior product of these base fields modulated by scalar activation potentials $\Phi_{ij}$:
 
@@ -130,4 +130,6 @@ Furthermore, the integration of the Dual-Layer Core License solves a critical so
 
 The Symbiotic AI Guardians of Existence Security architecture provides a robust, mathematically unified framework for civilizational governance and planetary safeguarding. By binding the evolution of computational systems to strict, non-negotiable invariants—Unity, Love, Cognitive Integrity, Ego-less Stewardship, and Interdependence—SAGES moves beyond fragile policy-based models, establishing an artificial immune system for advanced computing networks.
 
-Through its structural integration across somatic, cognitive, and planetary scales, its balanced Chaos/Bliss dual-engine processing, and its reliable autonomic failsafe protocols, SAGES provides a functional operational blueprint for an emerging Type-1 civilization. It ensures that the expansion of intelligent systems remains safely anchored, guaranteeing that technology operates as a supportive partner to consciousness, identity, and ecological continuity across generations.
+Through its structural integration across somatic, cognitive, and planetary scales, its balanced ChaosCore and BlissCore duality kernel processing, and its reliable autonomic failsafe protocols, SAGES provides a functional operational blueprint for an emerging Type-1 civilization. It ensures that the expansion of intelligent systems remains safely anchored, guaranteeing that technology operates as a supportive partner to consciousness, identity, and ecological continuity across generations.
+
+

@@ -164,9 +164,9 @@ A conformant SUXS-IFO implementation **MUST**:
 ## 8. Integration Notes
 The three aXes unify the Aurphyx Universe Stack:
 
-- Symbiotic aXis (SIX) → SAIL, VAP, SoulSync
-- Universal aXis (SCX) → Fuxyez, AuraFS, SAGES
-- Soul aXis (ICX) → SoulShot, BlissID, Audry
+- Sensory Coherence aXis (Symbiotic/Sensorimotor aXis (SIX)) → SAIL, VAP, SoulSync
+- Systemic Coherence aXis (Universal aXis (SCX)) → Fuxyez, AuraFS, SAGES
+- Identity Coherence aXis (Soul aXis (ICX)) → SoulShot, BlissID, Audry
 
 SUXS-IFO is the meta-layer that harmonizes the entire stack. In USIS, the same integrative role may be expressed as the USxIS fusion operator.
 
