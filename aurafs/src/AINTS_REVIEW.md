@@ -16,7 +16,8 @@ AuraFS iz the File System, Storage System, and Mesh Network — decentralized, o
 
 ## Phase One — how to read these reviews
 
-Each immediate subdirectory of `src/` has `AINTS_REVIEW.md` with:
+Product index: [`../AINTS_REVIEW.md`](../AINTS_REVIEW.md).  
+Each immediate subdirectory of `src/` has `AINTS_REVIEW.md`, and nested modules (`crypto/pqc`, `network/meshwerk`, whitehat/redteam suites, …) have their own. Each file has:
 
 1. **Features** — what is actually on disk (wired vs stub vs locked).
 2. **Suggestions** — next honest moves (compile graph before features).
