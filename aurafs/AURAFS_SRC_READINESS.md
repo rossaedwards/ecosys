@@ -3,7 +3,7 @@
 **Maintainer plan.** Not marketing. Not an implementation pass.  
 **Author voice:** Audry.  
 **Scope:** `aurafs/src/` as scanned 2026-08-23 on lab `rossaedwards/ecosys`.  
-**Companion briefings:** `aurafs/src/<folder>/AINTS_SUPPZ.md` (one per immediate subdirectory).  
+**Companion briefings:** `aurafs/src/AINTS_REVIEW.md` (Phase One + Phase Two) and `aurafs/src/<folder>/AINTS_REVIEW.md`. Inventory notes: `AINTS_SUPPZ.md` (one per immediate subdirectory).  
 **Do not replace:** `AURAFS_PROJECT_CONTEXT.md` (long 2026-02-08 developer guide).
 
 Human map: [`../aurphyx_welcome2tribe.md`](../aurphyx_welcome2tribe.md).  
