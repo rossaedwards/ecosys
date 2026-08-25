@@ -28,6 +28,7 @@ while the display name is free to be more poetic.
 | `soulshot`       | SoulShot Genesis Engine           | aurphyx     | IDENTITY           |
 | `blissid`        | BlissID                           | aurphyx     | IDENTITY           |
 | `soulcrypt`      | SoulCrypt                         | rossaedwards| CRYPTOGRAPHY       |
+| `echos_of_life`  | Echos of Life                     | rossaedwards| NARRATIVE          |
 | `sages`          | SAGES                             | aurphyx     | GOVERNANCE         |
 | `chakra_datacore`| Chakra DataCore                   | aurphyx     | INFRASTRUCTURE     |
 | …                |                                   |             |                    |

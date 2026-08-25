@@ -1,0 +1,142 @@
+# ecosystem_manifest.yaml
+# ─────────────────────────────────────────────────────────────────────────
+# This file is the SOURCE OF TRUTH for what "keeping every project in sync"
+# actually means, expressed as data instead of something you have to
+# remember. devops/scripts/ecosystem_check.py reads this file. If you add
+# a new project, or decide a project needs a new required doc, you edit
+# THIS FILE — you never have to touch the Python script.
+#
+# Two kinds of entries:
+#   canon        -> the root-level meta-documentation set at C:\rossaedwards\ecosys\
+#                    (AGENTS.md, MASTER_INDEX.md, HANDOFF.md, etc). This is the
+#                    shared "canon" describing the whole ecosystem, not any one
+#                    subproject.
+#   projects[]   -> each subproject folder (aurafs, memoree, fuxyez, ...) and
+#                    its OWN small local doc set.
+#
+# IMPORTANT FINDING FROM THE 2026-08-25 AUDIT:
+# The big list of files you described as living "at memoree\" (AGENTS.md,
+# AI-SYNC.md, CLAUDE.md, ecosystem.toml, HANDOFF.md, INTERFACES.md,
+# INVARIANTS.md, MASTER_INDEX.md, MASTER.yaml, PHYSICS.md/.yaml,
+# task-claim.md, welcome2tribe.md, TRIBE.AGENT.md, .agent-lock.md, etc.)
+# actually live at the ECOSYS ROOT, not inside memoree\. The memoree\ folder
+# itself has its own, much smaller, much more technical file set (routes.py,
+# schemas.py, memory_engine.py, config.yaml, the hermes_*.md docs, and its
+# own PROJECT_CONTEXT.md / README.md / SUMZ-SUGGZ.md). Both halves are real
+# and both need to stay internally consistent — they're just two different
+# layers. This manifest keeps them as two separate, honestly-labeled things
+# instead of quietly merging them, because that mismatch is exactly the kind
+# of drift this tool exists to catch.
+
+canon:
+  path: "."
+  description: >
+    Root-level meta-documentation for the whole Aurphyx ecosystem. Describes
+    all subprojects; is not itself a subproject.
+  required_files:
+    - .agent-lock.md
+    - AGENTS.md
+    - AI-SYNC.md
+    - aps-okf.md
+    - aps-okf.yaml
+    - AURPHYX_TERMINOLOGY.md
+    - CLAUDE.md
+    - ecosystem.toml
+    - HANDOFF.md
+    - INTERFACES.md
+    - INVARIANTS.md
+    - MASTER_INDEX.md
+    - MASTER.yaml
+    - MYTHOLOGY_TERMINOLOGY.md
+    - PHYSICS.md
+    - PHYSICS.yaml
+    - PROJECT_CONTEXT.md
+    - README.md
+    - SCIENTIFIC_TERMINOLOGY.md
+    - SUMZ-SUGGZ.md
+    - task-claim.md
+    - TECHNICAL_TERMINOLOGY.md
+    - welcome2tribe.md
+    - TRIBE.AGENT.md
+  # Files that describe the SAME "temp, still-drafting" material and should
+  # graduate together rather than live half-finished at root forever.
+  optional_staging_files:
+    - memoree_README.md          # destined to become memoree/README.md content
+    - AURPHYX_IDEA_ARENA.md
+    - AURPHYX_Q13_STACK_MATRIX.md
+    - FUXYEZ_Q13_SUGGZ.md
+  # Groups of files that must change together in the same commit. If a PR
+  # touches one file in a group but not the others, the validator warns
+  # (or fails, with --strict).
+  change_groups:
+    - name: canon-index
+      files: [MASTER_INDEX.md, MASTER.yaml]
+      reason: >
+        MASTER.yaml is declared the authoritative schema; MASTER_INDEX.md is
+        its human-readable map. They drift the moment only one is edited.
+        (MASTER_INDEX.md is currently flagged
+        "!!--NEEDS-TO-BE-UPDATED-AND-ALIGNED--!!" and references files that
+        do not exist in the repo, e.g. AURAFS_SHARD_TAXONOMY.md — this group
+        exists so that doesn't happen again once it's fixed.)
+    - name: handoff-pair
+      files: [HANDOFF.md, task-claim.md]
+      reason: >
+        Claiming/handing off a task should be reflected in both places, or
+        the next agent (human or AI) reads a stale handoff.
+
+projects:
+  - name: aurafs
+    path: "aurafs"
+    description: "AuraFS — Rust filesystem/mesh substrate. Has its own CI already (fmt/clippy/test/build/docker)."
+    required_files:
+      - README.md
+      - CHANGELOG.md
+      - AURAFS_PROJECT_CONTEXT.md
+      - SUMZ-SUGGZ.md
+      - Cargo.toml
+    change_groups:
+      - name: physics-invariants
+        files: ["compliance/PHYSICS_INVARIANTS.json"]
+        reason: "Already enforced by .github/workflows/physics_audit.yml — listed here for visibility, not re-enforced."
+
+  - name: memoree
+    path: "memoree"
+    description: "Memoree — FastAPI sovereign memory daemon, Hermes Agent integration, Qdrant-backed. Tunnel: https://memoree.aurphyx.org -> 127.0.0.1:7042."
+    required_files:
+      - README.md
+      - PROJECT_CONTEXT.md
+      - SUMZ-SUGGZ.md
+      - QUICKSTART.md
+      - config.yaml
+      - memoree_service.py
+      - routes.py
+      - schemas.py
+    change_groups:
+      - name: interface-contract
+        files: [schemas.py, routes.py]
+        reason: >
+          The root INTERFACES.md "change protocol" says changing the Record
+          shape requires updating "schema.json" and the n8n workflow in the
+          same task, plus a CHANGELOG.md entry and HANDOFF.md note. The real
+          file is schemas.py (not schema.json) — INTERFACES.md is stale on
+          this point. Until an n8n workflow actually exists and is checked
+          in (see devops/n8n/), this group only enforces schemas.py+routes.py
+          moving together; add the workflow file here once it's real.
+
+  - name: fuxyez
+    path: "fuxyez"
+    description: >
+      Fuxyez — the language. fuxyez.toml is the LANGUAGE's own manifest
+      (file extensions, mirrors, features) — it is not a Cargo workspace
+      file despite the [workspace] table, because Cargo only reads that
+      table from a file literally named Cargo.toml. The real Rust build
+      units are the four crates below; there is currently no single command
+      that builds all of Fuxyez at once.
+    required_files:
+      - fuxyez.toml
+      - SUMZ-SUGGZ.md
+    rust_crates:
+      - compiler
+      - fute
+      - fuxrt
+      - governance

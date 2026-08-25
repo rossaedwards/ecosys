@@ -1,3 +1,4 @@
+!!--NEEDS-TO-BE-UPDATED-AND-ALIGNED--!!
 # ═══════════════════════════════════════════════════════════════════════════════
 # ECOSYS CURSOR RULES — AURPHYX ORGANISM LAW
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -102,10 +103,10 @@ Vibe / VASP is audio. Never name this header Vibe-OKF.
 
 Current names (use these in new prose and new headers):
 
-  SIX     Sensorimotor Integration aXis
+  SIX     Somatic Intelligence aXis
   SCX     Systemic Coherence aXis
-  ICX     Soul Identity aXis
-  SUXS-IFO    fusion operator \mathcal{U}
+  ICX     Identity Coherence aXis
+  SUXS-IFO    Symbiotic Universal Xessability Standards Intelligence Fusion Operator — fusion operator \mathcal{U}
   Equilibrium Manifold
   Balance State Vector
   APS-OKF
@@ -115,6 +116,9 @@ Retired in new prose (quote only, then map):
 
   SIC, SCC, ICC           → SIX, SCX, ICX
   USAIC                   → SUXS-IFO
+  SUXS-FO                 → SUXS-IFO
+  "Sensorimotor Integration aXis" → SIX / Somatic Intelligence aXis
+  "Soul Identity aXis"    → ICX / Identity Coherence aXis
   Bliss, Bliss manifold, BlissID, Bliss attractor
                           → Equilibrium Manifold (or identity-continuity tag if that was the intent)
   rÆ, rAE, rAE_*          → Balance State Vector / x_* per APS_NAMING_EPOCHS.md

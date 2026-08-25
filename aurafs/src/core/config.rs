@@ -20,7 +20,10 @@ pub mod defaults {
     
     pub const MAX_SHARD_SIZE_BYTES: usize = 100 * 1024 * 1024; // 100MB
     pub const MAX_BIOMETRIC_SIZE_BYTES: usize = 1024 * 1024; // 1MB
-    pub const DEFAULT_REPLICATION_FACTOR: u64 = 3;
+    /// Default replica count for a single local node via AuraFS η (`physics::calculate_replicas`).
+    pub fn default_replication_factor() -> u64 {
+        crate::physics::calculate_replicas(1) as u64
+    }
     pub const DEFAULT_TIMEOUT_SECS: u64 = 30;
     pub const CRYPTO_TIMEOUT_SECS: u64 = 5;
     pub const MAX_RETRIES: usize = 3;
@@ -94,7 +97,7 @@ impl Default for ShardConfig {
     fn default() -> Self {
         Self {
             max_size_bytes: defaults::MAX_SHARD_SIZE_BYTES,
-            default_replication_factor: defaults::DEFAULT_REPLICATION_FACTOR,
+            default_replication_factor: defaults::default_replication_factor(),
             max_replication_factor: 1000,
             max_children_per_shard: defaults::MAX_CHILDREN_PER_SHARD,
             verify_checksums: true,
@@ -103,7 +106,7 @@ impl Default for ShardConfig {
     }
 }
 
-/// Identity/BlissID configuration
+/// Identity configuration (legacy BlissID records; SoulKey/SIG comes later)
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IdentityConfig {
     /// Maximum biometric data size (bytes)

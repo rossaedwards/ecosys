@@ -433,6 +433,17 @@
       ],
       "status": "active",
       "owner": "aurphyx"
+    },
+    "echos_of_life": {
+      "description": "Echos of Life \u2014 Colleen Marie Olson memoir companion (Clara). Voice capture, chapter synthesis, family recall. Room stays primary on device; Memoree is the fail-open recall sidecar.",
+      "active_volumes": [],
+      "active_axioms": [],
+      "active_dualities": [
+        "memory/forgetting",
+        "spoken/written"
+      ],
+      "status": "active",
+      "owner": "rossaedwards"
     }
   },
   "global_settings": {

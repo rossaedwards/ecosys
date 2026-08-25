@@ -1,0 +1,98 @@
+%% ============================================================
+%%  APS ARTIFACT TEMPLATE
+%%  Example skeleton for a stylized "artifact edition" manuscript,
+%%  using aps-artifact-theme.sty. Copy this file into the target
+%%  volume (tslca/, ftqc/, etc.), rename it, fill in the macros
+%%  below, add frame art with \SetArtifactFrames if you have it,
+%%  and start writing chapters with \artifactchapter / \artifactendsection.
+%%
+%%  This file has NO Fuxyez-specific content — it's the generic base.
+%%  Compile with XeLaTeX (fontspec requires it).
+%% ============================================================
+
+\documentclass[12pt, a4paper]{book}
+
+%% Path is relative to wherever you copy this file to. From e.g.
+%% ftqc/aps_ftqc_skrypt.tex or tslca/tslca_skrypt.tex, that's "../".
+\usepackage{../aps-artifact-theme}
+
+%% --- Optional: override theme fonts/colors here, AFTER the \usepackage line ---
+% \setmainfont{Your Serif Font}
+% \setmonofont{Your Mono Font}
+% \definecolor{artifactAccentA}{HTML}{XXXXXX}   % re-theme the primary accent
+% \definecolor{artifactAccentB}{HTML}{XXXXXX}   % re-theme the secondary accent
+
+%% --- Optional: frame art for odd/even pages (omit for a plain background) ---
+% \SetArtifactFrames{path/to/odd_frame.png}{path/to/even_frame.png}
+
+%% --- Header / footer labels (all optional, blank if unset) ---
+\SetArtifactHeaderLeft{[ EXAMPLE LABEL ]}
+\SetArtifactHeaderCenter{ARTIFACT TEMPLATE}
+\SetArtifactHeaderRight{[ EXAMPLE.ORG ]}
+\SetArtifactFooterLeft{Aurphyx LLC -- Ross A. Edwards}
+\SetArtifactFooterRight{v0.0.1}
+
+%% --- Title page content (all optional, blank if unset) ---
+\artifacttitle{EXAMPLE ARTIFACT TITLE}
+\artifactsubtitle{A one-line subtitle for the work}
+\SetArtifactEyebrow{~~~ optional eyebrow line above the title ~~~}
+\SetArtifactTagline{OPTIONAL TAGLINE LINE\\ACROSS ONE OR MORE LINES}
+\SetArtifactByline{SCRIBED BY [ AUTHOR ]\\AURPHYX LLC}
+\SetArtifactEdition{v0.0.1 -- Example Edition -- example.org}
+\SetArtifactClosingNote{This document is an example. Replace this note.}
+
+%% --- Chapter/section banner numbering ---
+\SetArtifactProtocolLabel{EXAMPLE PROTOCOL}
+\SetArtifactTotalSections{2}
+
+\begin{document}
+
+\artifacttitlepage
+\artifacttoc
+
+%% Optional CLI-mockup box on the title page — call this INSIDE
+%% \artifacttitlepage's flow is not supported (titlepage macro is
+%% self-contained); instead, add one as its own chapter opener or
+%% inline within a chapter body via \ArtifactCLIBox{...} wherever
+%% you want the terminal-mockup look, e.g.:
+%%
+%%   \ArtifactCLIBox{
+%%   \$\$ example install thing --flag=value \\
+%%   > Doing the thing... \\
+%%   > Done.
+%%   }
+
+\artifactchapter{First Example Chapter}
+
+This is body text. Use standard LaTeX sectioning
+(\texttt{\textbackslash section}, \texttt{\textbackslash subsection}) inside
+an \texttt{\textbackslash artifactchapter} block — the theme already styled
+those commands, no extra markup needed here.
+
+\begin{artifactnote}{EXAMPLE NOTE}
+This is a callout box, for asides or flagged content.
+\end{artifactnote}
+
+\begin{artifactglyphbox}
+This is the plainer terminal/banner box, useful for quoted fragments
+or short emphasized text blocks.
+\end{artifactglyphbox}
+
+\begin{lstlisting}
+// Code listings inherit the theme's dark background and line numbers.
+// Call \lstdefinelanguage{yourlang}{...} before \begin{document} and
+// \lstset{language=yourlang} to get keyword highlighting.
+fn example() -> Result {
+    return ok;
+}
+\end{lstlisting}
+
+\artifactendsection
+
+\artifactchapter{Second Example Chapter}
+
+More body content here.
+
+\artifactendsection
+
+\end{document}

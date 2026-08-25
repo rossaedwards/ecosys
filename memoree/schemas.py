@@ -554,7 +554,7 @@ class CreativeMemory(AurphyxBase):
     Creative and narrative memory for art, music, gaming, and divination projects.
 
     Scope: adore, aethornyx, rf_lovezme, tarot, oracle_deck, fuxyez,
-           thirteen_month_calendar, aurphyx_casino.
+           thirteen_month_calendar, aurphyx_casino, echos_of_life.
 
     `soul_id_ref` links to a BlissID / SoulHash when the work is
     soul-anchored. `aurafs_shard_ref` is set by the storage backend

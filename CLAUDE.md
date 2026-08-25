@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `rossaedwards/ecosys` is the **lab** monorepo half of the **Aurphyx "Type-1 Civilization Stack"** — a dual-monorepo (paired with the publish snapshot `aurphyx/ecosys`) containing ~10-15 independent, polyglot sub-projects (Rust crates, a Tauri/React desktop app, a Python FastAPI service, a custom compiler) plus a very large body of canon physics/architecture documentation (TSLCA, FTQC, SUXS, SAGES, TVFD, VIM, USIS, VASP). It is not one buildable product — treat each top-level folder as its own project with its own toolchain, and treat the documentation tree as governed canon, not free-form prose.
 
-Human map: [`aurphyx_welcome2tribe.md`](aurphyx_welcome2tribe.md). Machine product registry: [`ecosystem.toml`](ecosystem.toml). Edit law: [`.cursorrules`](.cursorrules). Cursor/agent briefing: [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
+Human map: [`welcome2tribe.md`](welcome2tribe.md). Machine product registry: [`ecosystem.toml`](ecosystem.toml). Edit law: [`.cursorrules`](.cursorrules). Cursor/agent briefing: [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
 
 ## Source-of-truth / authority chain
 
 When editing anything under this repo — especially `.md`/`.tex` documentation — resolve conflicts in this order (per `.cursorrules`):
 
 1. `.cursorrules` — how you may edit, APS-OKF header format, lattice/contraction rules
-2. `ecosystem.toml` — machine product registry (must match `aurphyx_welcome2tribe.md`)
+2. `ecosystem.toml` — machine product registry (must match `welcome2tribe.md`)
 3. `PHYSICS.md` / `INVARIANTS.md` — organism-level shared constants and locks
 4. `<folder>/PROJECT_CONTEXT.md`, `<folder>/INVARIANTS.md`, `<folder>/PHYSICS.md` — volume-local overlays
 5. `aps-okf.yaml` / `aps-okf.md` — public document header contract
@@ -46,7 +46,7 @@ SAGES (`sages/`, `SAGES_Framework/`) is a 13-guardian governance/security layer 
 
 SAGES scales via a fractal grammar — respect these numbers when reasoning about or extending SAGES/TSLCA structures:
 
-- **3** — the foundational cognitive vectors/cores: **SIX** (Sensorimotor Integration aXis), **SCX** (Systemic Coherence aXis), **ICX** (Soul Identity aXis)
+- **3** — the foundational cognitive vectors/cores: **SIX** (Somatic Intelligence aXis), **SCX** (Systemic Coherence aXis), **ICX** (Identity Coherence aXis)
 - **6** — the dual-triad expansion layer (paired/hemispheric processing)
 - **9** — the 3×3 enforcement matrix / TSLCA lattice (`SIX⊗SIX` … `ICX⊗ICX`, 9 directed off-diagonal nodes — `SIX⊗SCX ≠ SCX⊗SIX`, never force symmetry)
 - **13** — the outer meta-governance field: the 13 SAGES guardian cores under `SAGES_Framework/` (e.g. `sages-core/rust/{archivus,bliss_engine,chaos_engine,cryptanyx,nullivar,nunclex,ophiuchus,praelum,prophetyx,umbryx,valkryx}` plus `orricshade-core` and `vyrelix-core`)
@@ -112,7 +112,7 @@ There is one GitHub Actions workflow, `.github/workflows/mdbook.yml`, which buil
 
 ## `docs/` vs `docz/`
 
-- `docz/` — years of archived source documents copied from the wider Aurphyx tree; contains duplicates and Bliss-era titles. **Not** canon, not VASP protocol truth. Do not implement anything from it without cross-checking current names in `aurphyx_welcome2tribe.md`.
+- `docz/` — years of archived source documents copied from the wider Aurphyx tree; contains duplicates and Bliss-era titles. **Not** canon, not VASP protocol truth. Do not implement anything from it without cross-checking current names in `welcome2tribe.md`.
 - `docs/` — catch-all assets, misc notes, historical copies. Also not protocol truth.
 
 ## Editing rules for documentation (`.cursorrules` §10, §13)

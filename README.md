@@ -1,7 +1,7 @@
 ---
 type: overview
 title: Aurphyx ecosys
-description: Human front door for the Type-1 Civilization stack. Dual-monorepos rossaedwards/ecosys and aurphyx/ecosys are one organism. Welcome map is aurphyx_welcome2tribe.md.
+description: Human front door for the Type-1 Civilization stack. Dual-monorepos rossaedwards/ecosys and aurphyx/ecosys are one organism. Welcome map is welcome2tribe.md.
 workspaces: rossaedwards/ecosys, aurphyx/ecosys
 services:
   - Aura
@@ -51,7 +51,7 @@ fields:
 
   <br/><br/>
 
-# AURPHYX LLC
+# AURPHYX LLC !!--NEEDS-TO-BE-UPDATED-AND-ALIGNED--!!
 
 ### *Where Fractal Geometry Meets the Quantum Frontier*
 
@@ -97,13 +97,13 @@ fields:
 
 Glossary: **iz** = is.
 
-[`rossaedwards/ecosys`](https://github.com/rossaedwards/ecosys) (lab) and [`aurphyx/ecosys`](https://github.com/aurphyx/ecosys) (publish) are a dual-monorepo. They are not two products. Together they are one organism: the Type-1 Civilization stack. Human map: [`aurphyx_welcome2tribe.md`](aurphyx_welcome2tribe.md). Machine names: [`ecosystem.toml`](ecosystem.toml). Cursor briefing: [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md). Edit law: `.cursorrules`.
+[`rossaedwards/ecosys`](https://github.com/rossaedwards/ecosys) (lab) and [`aurphyx/ecosys`](https://github.com/aurphyx/ecosys) (publish) are a dual-monorepo. They are not two products. Together they are one organism: the Type-1 Civilization stack. Human map: [`welcome2tribe.md`](welcome2tribe.md). Machine names: [`ecosystem.toml`](ecosystem.toml). Cursor briefing: [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md). Edit law: `.cursorrules`.
 
 Any sovereign soul deserves the best.
 
 ## Soul journey
 
-SoulShot → SoulChart → SoulTable → SoulSync → SoulHash → GuardTable → GuardHash → GuardCrypt → SoulCrypt → SoulSync → SoulKey → SKIM → SIR → SIG.
+SoulShot → SoulChart → SoulTable → SoulSync → SoulHash → GuardChart → GuardTable → GuardHash → GuardCrypt → SoulCrypt → SoulSync → SoulKey → SKIM → SIR → SIG → BlissID.
 
 **SoulKey** = 1 Human. 1 Soul. 1 Account. 1 Vote.
 
@@ -187,7 +187,7 @@ All still need to be designed and built.
 | Product | Path | Role |
 |---|---|---|
 | Vibe Media Player | [`vibemediaplayer/`](vibemediaplayer/) | Rust desktop host |
-| Vibe Audio Player | [`vibeaudioplayer/`](vibeaudioplayer/) | Android, iOS, Raspberry Pi, IoT |
+| Vibe Audio Player | [`vibeaudioplayer/`](vibeaudioplayer/) | Android, iOS, Raspberry Pi, IoT — Android Studio / Google AI Studio project at `C:\aurphyx\vibeaudioplayer\` |
 | vap-serv | [`vap-serv/`](vap-serv/) | SaaS for streaming platforms |
 | VASP protocol | [`vasp/`](vasp/) | 3.69 canon |
 

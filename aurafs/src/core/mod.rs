@@ -14,7 +14,7 @@
 //! - **Resilience**: Circuit breakers, rate limiters, retry logic
 //! - **Observability**: Distributed tracing, metrics
 //! - **Cryptography**: Quantum-safe operations
-//! - **Identity**: BlissID management with persistence
+//! - **Identity**: BlissID management with persistence (legacy in-tree name; SoulKey/SIG is a later identity pass)
 //! - **Network**: Orchestration and peer management
 //! - **Data Structures**: Merkle trees, shards
 
@@ -101,6 +101,28 @@ pub type Result<T> = std::result::Result<T, CoreError>;
 
 /// Soul-aware result for operations requiring identity verification.
 pub type SoulResult<T> = std::result::Result<T, CoreError>;
+
+/// Product lattice geometry hint for Void→Aura collapse.
+/// Not a TSLCA nine-cell and not FTQC Hilbert scaling.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CollapseGeometry {
+    /// Sierpiński (file / index).
+    Sierpinski,
+    /// Kagome (compute).
+    Kagome,
+    /// Triangular (network).
+    Triangular,
+    /// Bethe (deep storage).
+    Bethe,
+    /// Flower of life (archival).
+    FlowerOfLife,
+}
+
+/// Observe local conditions and pick a storage geometry.
+/// Replica counts still go through `physics::calculate_replicas` (AuraFS η, not FTQC).
+pub async fn observe_and_collapse(_layer: impl std::fmt::Debug) -> CollapseGeometry {
+    CollapseGeometry::Sierpinski
+}
 
 /// Marker trait for AuraFS-aware types.
 pub trait AuraFSComponent {
@@ -259,5 +281,14 @@ mod tests {
     fn test_result_type() {
         let ok: Result<i32> = Ok(42);
         assert_eq!(ok.unwrap(), 42);
+    }
+
+    #[test]
+    fn test_shard_id_round_trip() {
+        let data = b"core-shard-round-trip";
+        let id = ShardId::new(data).expect("shard id");
+        let again = ShardId::new_from_checksum(id.as_str()).expect("checksum id");
+        assert_eq!(id, again);
+        assert!(id.is_valid());
     }
 }
