@@ -1,6 +1,6 @@
 # ecosystem.toml
 # Aurphyx Ecosystem — Machine-Readable Product Registry
-# Source of truth (human): aurphyx_welcome2tribe.md
+# Source of truth (human): welcome2tribe.md
 # Shared physics numbers are NOT here. Those belong in PHYSICS.md / future aps.toml.
 # Author: Ross A. Edwards | Aurphyx LLC
 # Updated: 2026-08-21
@@ -13,7 +13,6 @@ email        = "ross@aurphyx.org"
 orcid        = "0009-0008-0539-1289"
 github_user  = "rossaedwards"
 github_org   = "Aurphyx"
-ein          = "41-3437055"
 website      = "aurphyx.com"
 store        = "aurphyx.store"
 discord      = "AurphyxHQ"
@@ -27,7 +26,7 @@ description  = "rossaedwards/ecosys and aurphyx/ecosys are not two products. Tog
 lab          = "rossaedwards/ecosys"
 publish      = "aurphyx/ecosys"
 edit_law     = ".cursorrules"
-human_map    = "aurphyx_welcome2tribe.md"
+human_map    = "welcome2tribe.md"
 
 # ─────────────────────────────────────────────
 # SOUL JOURNEY PIPELINE
@@ -41,6 +40,7 @@ pipeline = [
   "SoulTable",
   "SoulSync",
   "SoulHash",
+  "GuardChart",
   "GuardTable",
   "GuardHash",
   "GuardCrypt",
@@ -50,6 +50,7 @@ pipeline = [
   "SKIM",
   "SIR",
   "SIG",
+  "BlissID",
 ]
 
 [soul_journey.SoulShot]
@@ -373,6 +374,7 @@ name         = "Vibe Audio Player"
 type         = "software"
 description  = "Android, iOS, Raspberry Pi, IoT. VASP web player lives inside this tree."
 path         = "vibeaudioplayer/"
+android_studio_project = "C:\\aurphyx\\vibeaudioplayer\\"
 status       = "in-development"
 
 [[projects]]

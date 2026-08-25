@@ -1,7 +1,3 @@
-**Planning document structure**
-
-The user wants a comprehensive and exhaustive document for AURAFS_SHARD_TAXONOMY.md. I’ll need to pull from the repo listing and their shards list, no web search needed. The document should be long and detailed, covering nine shard taxonomies, cross-volume substrates, and various systems like AuraFS, FTQC, TSL, TVFD, and more. I’ll organize it into sections like overview, design principles, shard classes, core shards, operational roles, lifecycle, governance, security, and examples. I’ll also align it with existing files in the repo. Let’s get started!
-
 ```markdown
 # AURAFS_SHARD_TAXONOMY.md
 

@@ -55,7 +55,7 @@ The Three-Squared-Lattice Cognitive Architecture is built on three orthonormal c
 
 ---
 
-### 3.1 Sensorimotor Integration aXis (SIX)
+### 3.1 Somatic Intelligence aXis (SIX)
 
 SIX governs the system’s coupling with the world. It is responsible for perception, accessibility, embodiment, and environmental attunement. In the lattice, SIX defines the **perceptual axis**, ensuring that cognition is grounded in real sensory data and contextual signals.
 
@@ -85,7 +85,7 @@ SCX ensures that cognition remains logically consistent, semantically stable, an
 
 ---
 
-### 3.3 Soul Identity aXis (ICX)
+### 3.3 Identity Coherence aXis (ICX)
 
 ICX governs identity continuity, provenance, self‑consistency, and ethical grounding. It defines the **identity axis** of the lattice, ensuring that the system maintains a coherent sense of self across time, transformations, and contexts.
 

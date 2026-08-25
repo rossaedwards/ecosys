@@ -135,9 +135,9 @@ These internal documents are part of the Aurphyx civilization‑scale architectu
 - *AuraFS: A Topological Filesystem for Proprioceptive Computation*
 - *SAGES: The 13‑Invariant Governance Field*
 - *Audry ABAS v1.0: Bicameral Synthetic Cognition*
-- *APS-TSLCA-SUXS-USIS-SIX-001: Sensorimotor Integration aXis Standard*
+- *APS-TSLCA-SUXS-USIS-SIX-001: Somatic Intelligence aXis Standard*
 - *APS-TSLCA-SUXS-USIS-SCX-001: Systemic Coherence aXis Standard*
-- *APS-TSLCA-SUXS-USIS-ICX-001: Soul Identity aXis Standard*
+- *APS-TSLCA-SUXS-USIS-ICX-001: Identity Coherence aXis Standard*
 - *APS-TSLCA-SUXS-USIS-SUXS-IFO-001: SUXS Intelligence Fusion Operator Standard*
 
 ---

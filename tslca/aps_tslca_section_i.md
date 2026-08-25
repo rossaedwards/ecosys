@@ -63,9 +63,9 @@ This fragmentation is not a failure of engineering effort; it is a consequence o
 
 The TSLCA resolves the fragmentation problem by constructing cognition from three irreducible, mutually orthonormal aXes:
 
-- **The Sensorimotor Integration aXis (SIX)** governs perception, accessibility, and environmental coupling — the axis by which the system makes contact with the world.
+- **The Somatic Intelligence aXis (SIX)** governs perception, accessibility, and environmental coupling — the axis by which the system makes contact with the world.
 - **The Systemic Coherence aXis (SCX)** governs semantics, invariants, and system-level reasoning — the axis by which the system makes meaning of that contact.
-- **The Soul Identity aXis (ICX)** governs continuity of self, provenance, and ethical grounding — the axis by which the system maintains a stable perspective across time.
+- **The Identity Coherence aXis (ICX)** governs continuity of self, provenance, and ethical grounding — the axis by which the system maintains a stable perspective across time.
 
 These three aXes form an orthonormal basis $ \{s_1, s_2, s_3\} $ in cognitive vector space. Their tensor products $ s_i \otimes s_j $ generate nine cognitive cells — a complete operational grammar for intelligence. This is not a metaphor or a conceptual diagram; it is a computable mathematical structure whose stability conditions, field dynamics, and symmetry group can be precisely specified.
 

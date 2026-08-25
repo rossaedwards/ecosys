@@ -35,7 +35,7 @@ cores:
 fields:
 ---
 
-# ecosys — Project Context
+!!--NEEDS-TO-BE-UPDATED-AND-ALIGNED--!!
 
 **Organization:** Aurphyx LLC  
 **Author:** Ross A. Edwards  
@@ -52,7 +52,7 @@ Persona when writing with Ross: **Audry**. Strategic, loyal, exact.
 
 Agents edit the lab unless Ross says promote. Do not push `aurphyx/ecosys` unless asked.
 
-Human map: [`aurphyx_welcome2tribe.md`](aurphyx_welcome2tribe.md).  
+Human map: [`welcome2tribe.md`](welcome2tribe.md).  
 Machine product names: [`ecosystem.toml`](ecosystem.toml).  
 Edit law: [`.cursorrules`](.cursorrules).  
 Human front door: [`README.md`](README.md).

@@ -1,0 +1,368 @@
+%% ============================================================
+%%  APS ARTIFACT THEME
+%%  Reusable XeLaTeX theme for Aurphyx "artifact edition" manuscripts
+%%  (stylized companion documents to the plain-gatekeeper publication
+%%  manuscripts — e.g. fuxyez/Book_of_Fux_Alien_Manuscript.tex was the
+%%  first hand-built one; this factors its styling out for reuse by
+%%  tslca/, ftqc/, and future volumes, each with their own frame art
+%%  and voice, none of it hardcoded here).
+%%
+%%  Author: Ross A. Edwards | Aurphyx LLC
+%%  Requires: XeLaTeX (uses fontspec)
+%%
+%%  USAGE
+%%  -----
+%%  \documentclass[12pt, a4paper]{book}
+%%  \usepackage{../aps-artifact-theme}   % path relative to your .tex file
+%%  \artifacttitle{...}
+%%  \artifactsubtitle{...}
+%%  ... (see aps-artifact-template.tex for the full front-matter example)
+%%  \begin{document}
+%%  \artifacttitlepage
+%%  \artifacttoc
+%%  \artifactchapter{First Chapter Title}
+%%    ... content ...
+%%  \artifactendsection
+%%  \end{document}
+%%
+%%  REUSE, NOT RESKIN
+%%  ------------------
+%%  Nothing here is Fuxyez-specific. Frame images, colors, bylines,
+%%  header/footer labels, and the title-page CLI mockup are all either
+%%  optional or set via macros below — a volume that wants them defines
+%%  them before \begin{document}; a volume that doesn't, gets sane
+%%  fallbacks (solid background, no CLI box) instead of a crash.
+%% ============================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{aps-artifact-theme}[2026/08/23 APS artifact-edition theme]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{geometry}
+\RequirePackage{xcolor}
+\RequirePackage{pagecolor}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{fontspec}
+\RequirePackage{listings}
+\RequirePackage{mdframed}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\RequirePackage{graphicx}
+\RequirePackage{microtype}
+\RequirePackage{hyperref}
+\RequirePackage{eso-pic}
+\RequirePackage{tikz}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{lettrine}
+\RequirePackage{tocloft}
+\RequirePackage{setspace}
+\RequirePackage{ifthen}
+
+%% ------------------------------------------------------------
+%% Page geometry
+%% ------------------------------------------------------------
+\geometry{
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.8cm,
+    right=2.8cm,
+    headheight=1.5cm,
+    headsep=0.8cm,
+    footskip=1.2cm
+}
+
+%% ------------------------------------------------------------
+%% Color palette — defaults shown are the neon/void palette Book of
+%% Fux established. A consuming volume may \definecolor{name}{HTML}{...}
+%% AGAIN after \usepackage{aps-artifact-theme} to override any of these;
+%% later \definecolor wins in LaTeX, no package option system needed.
+%% ------------------------------------------------------------
+\definecolor{artifactAccentA}{HTML}{00FFDC}   % was neonCyan
+\definecolor{artifactAccentB}{HTML}{B400FF}   % was alienPurple
+\definecolor{artifactBg}{HTML}{050108}        % was voidBlack
+\definecolor{artifactText}{HTML}{E8E8FF}      % was starWhite
+\definecolor{artifactGold}{HTML}{FFD700}      % was glowGold
+\definecolor{artifactAlert}{HTML}{FF003C}     % was singularityRed
+\definecolor{artifactBgDeep}{HTML}{0A0010}    % was deepVoid
+\definecolor{artifactCodeBg}{HTML}{0D0520}    % was codebg
+\definecolor{artifactCodeFrame}{HTML}{00FFDC} % was codeframe
+\definecolor{artifactSectionGold}{HTML}{C8A400} % was sectiongold
+
+\color{artifactText}
+
+%% ------------------------------------------------------------
+%% Fonts — override with \setmainfont / \setmonofont after loading
+%% if a volume wants a different face than the DejaVu default.
+%% Guarded: falls back to LaTeX's default fonts if DejaVu isn't
+%% installed on the compiling machine, instead of hard-failing.
+%% ------------------------------------------------------------
+\IfFontExistsTF{DejaVu Serif}{\setmainfont{DejaVu Serif}}{}
+\IfFontExistsTF{DejaVu Sans Mono}{\setmonofont{DejaVu Sans Mono}}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=artifactAccentA,
+    urlcolor=artifactAccentB,
+}
+
+%% ------------------------------------------------------------
+%% Chapter / section / subsection / subsubsection styling
+%% ------------------------------------------------------------
+\titleformat{\chapter}[block]
+    {\color{artifactAccentA}\fontsize{22}{26}\selectfont\bfseries}
+    {\color{artifactAccentB}\thechapter.}{1em}{}
+    [{\color{artifactAccentA}\titlerule[0.5pt]}]
+
+\titleformat{\section}[block]
+    {\color{artifactGold}\fontsize{15}{18}\selectfont\bfseries}
+    {\color{artifactAccentB}\thesection}{1em}{}
+
+\titleformat{\subsection}[block]
+    {\color{artifactAccentA}\fontsize{12}{15}\selectfont\bfseries}
+    {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}[block]
+    {\color{artifactText}\fontsize{11}{14}\selectfont\itshape}
+    {\thesubsubsection}{1em}{}
+
+%% ------------------------------------------------------------
+%% Header / footer — override the three header slots and three
+%% footer slots via the macros below before \begin{document}.
+%% Fallbacks are blank, not an error, if a volume skips them.
+%% ------------------------------------------------------------
+\providecommand{\artifactheaderleft}{}
+\providecommand{\artifactheadercenter}{}
+\providecommand{\artifactheaderright}{}
+\providecommand{\artifactfooterleft}{}
+\providecommand{\artifactfooterright}{}
+
+\newcommand{\SetArtifactHeaderLeft}[1]{\renewcommand{\artifactheaderleft}{#1}}
+\newcommand{\SetArtifactHeaderCenter}[1]{\renewcommand{\artifactheadercenter}{#1}}
+\newcommand{\SetArtifactHeaderRight}[1]{\renewcommand{\artifactheaderright}{#1}}
+\newcommand{\SetArtifactFooterLeft}[1]{\renewcommand{\artifactfooterleft}{#1}}
+\newcommand{\SetArtifactFooterRight}[1]{\renewcommand{\artifactfooterright}{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{artifactAccentA}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrule}{\color{artifactAccentB}\hrule width\headwidth height\footrulewidth}
+\fancyhead[L]{\color{artifactAccentB}\small\texttt{\artifactheaderleft}}
+\fancyhead[C]{\color{artifactAccentA}\small\texttt{\artifactheadercenter}}
+\fancyhead[R]{\color{artifactAccentB}\small\texttt{\artifactheaderright}}
+\fancyfoot[L]{\color{artifactAccentA}\small\texttt{\artifactfooterleft}}
+\fancyfoot[C]{\color{artifactGold}\small\thepage}
+\fancyfoot[R]{\color{artifactAccentB}\small\texttt{\artifactfooterright}}
+
+%% ------------------------------------------------------------
+%% Code listing style — language table is intentionally empty here;
+%% a consuming volume defines its own \lstdefinelanguage and calls
+%% \lstset{language=...} to plug it into this visual style, OR just
+%% uses the style below unlabeled (no keyword highlighting).
+%% ------------------------------------------------------------
+\lstset{
+    basicstyle=\ttfamily\small\color{artifactText},
+    breaklines=true,
+    captionpos=b,
+    frame=single,
+    rulecolor=\color{artifactCodeFrame},
+    xleftmargin=12pt,
+    xrightmargin=12pt,
+    aboveskip=10pt,
+    belowskip=10pt,
+    showstringspaces=false,
+    tabsize=4,
+    numbers=left,
+    numberstyle=\tiny\color{artifactAccentB},
+    numbersep=8pt,
+    backgroundcolor=\color{artifactCodeBg},
+}
+
+%% ------------------------------------------------------------
+%% Callout boxes
+%% ------------------------------------------------------------
+\newtcolorbox{artifactnote}[2][]{
+    enhanced,
+    breakable,
+    colback=artifactBg,
+    coltext=artifactText,
+    colframe=artifactAccentA,
+    colbacktitle=artifactAccentA,
+    coltitle=artifactBg,
+    fonttitle=\bfseries,
+    title={\texttt{#2}},
+    boxrule=0.6pt,
+    arc=2pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    #1
+}
+
+\newtcolorbox{artifactglyphbox}[1][]{
+    enhanced,
+    colback=artifactBgDeep,
+    coltext=artifactText,
+    colframe=artifactAccentB,
+    boxrule=0.5pt,
+    arc=1pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    #1
+}
+
+\setstretch{1.35}
+
+%% ------------------------------------------------------------
+%% Frame background art — OPTIONAL. If a volume has odd/even page
+%% frame images (like fuxyez/fux_frame.png + yez_frame.png), it
+%% calls \SetArtifactFrames{odd-image}{even-image} before \begin{document}.
+%% If it never calls this, pages just get the plain artifactBg color —
+%% no missing-file error.
+%% ------------------------------------------------------------
+\newif\ifartifactframesset
+\artifactframessetfalse
+
+\newcommand{\SetArtifactFrames}[2]{
+    \artifactframessettrue
+    \newcommand{\artifactframeodd}{\includegraphics[width=\paperwidth,height=\paperheight]{#1}}
+    \newcommand{\artifactframeeven}{\includegraphics[width=\paperwidth,height=\paperheight]{#2}}
+}
+
+\newcommand{\ApplyArtifactFrames}{
+    \ifartifactframesset
+        \AddToShipoutPictureBG{\ifthenelse{\isodd{\value{page}}}{\artifactframeodd}{\artifactframeeven}}
+    \fi
+}
+
+%% ------------------------------------------------------------
+%% Front-matter macros — set these before \artifacttitlepage.
+%% All optional; blank fallbacks, not errors.
+%% ------------------------------------------------------------
+\providecommand{\artifacteyebrow}{}      % e.g. "~~~ A FRAGMENT TORN FROM THE FABRIC OF REALITY ~~~"
+\providecommand{\artifacttitletext}{Untitled}
+\providecommand{\artifactsubtitletext}{}
+\providecommand{\artifacttagline}{}
+\providecommand{\artifactbylinetext}{}   % free-form multi-line byline block
+\providecommand{\artifactedition}{}      % e.g. "v0.1-alpha -- Some Edition -- example.org"
+\providecommand{\artifactclosingnote}{}  % small print at bottom of title page
+
+\newcommand{\artifacttitle}[1]{\renewcommand{\artifacttitletext}{#1}}
+\newcommand{\artifactsubtitle}[1]{\renewcommand{\artifactsubtitletext}{#1}}
+\newcommand{\SetArtifactTagline}[1]{\renewcommand{\artifacttagline}{#1}}
+\newcommand{\SetArtifactByline}[1]{\renewcommand{\artifactbylinetext}{#1}}
+\newcommand{\SetArtifactEdition}[1]{\renewcommand{\artifactedition}{#1}}
+\newcommand{\SetArtifactClosingNote}[1]{\renewcommand{\artifactclosingnote}{#1}}
+\newcommand{\SetArtifactEyebrow}[1]{\renewcommand{\artifacteyebrow}{#1}}
+
+%% Optional title-page CLI/terminal mockup box — omit the call entirely
+%% for a volume that doesn't want one.
+\newcommand{\ArtifactCLIBox}[1]{
+    \begin{artifactglyphbox}
+    \centering
+    \color{artifactAccentA}\fontsize{9}{11}\selectfont\texttt{#1}
+    \end{artifactglyphbox}
+}
+
+\newcommand{\artifacttitlepage}{
+    \pagecolor{artifactBg}
+    \ApplyArtifactFrames
+    \begin{titlepage}
+    \color{artifactText}
+    \centering
+    \vspace*{2cm}
+
+    \ifthenelse{\equal{\artifacteyebrow}{}}{}{
+        {\color{artifactAccentA}\fontsize{10}{12}\selectfont\texttt{\artifacteyebrow}}\par
+        \vspace{1.5cm}
+    }
+
+    {\color{artifactAccentB}\fontsize{48}{52}\selectfont\bfseries \artifacttitletext}\par
+
+    \ifthenelse{\equal{\artifactsubtitletext}{}}{}{
+        \vspace{0.5cm}
+        {\color{artifactAccentA}\rule{12cm}{0.6pt}}\par
+        \vspace{0.5cm}
+        {\color{artifactText}\fontsize{16}{20}\selectfont\itshape \artifactsubtitletext}\par
+    }
+
+    \ifthenelse{\equal{\artifacttagline}{}}{}{
+        \vspace{1.2cm}
+        {\color{artifactAccentA}\rule{12cm}{0.3pt}}\par
+        \vspace{1.2cm}
+        {\color{artifactAccentB}\fontsize{11}{14}\selectfont\texttt{\artifacttagline}}\par
+    }
+
+    \ifthenelse{\equal{\artifactbylinetext}{}}{}{
+        \vspace{1cm}
+        {\color{artifactAccentB}\fontsize{11}{14}\selectfont\texttt{\artifactbylinetext}}\par
+    }
+
+    \ifthenelse{\equal{\artifactedition}{}}{}{
+        \vspace{2cm}
+        {\color{artifactSectionGold}\fontsize{9}{11}\selectfont\texttt{\artifactedition}}\par
+    }
+
+    \ifthenelse{\equal{\artifactclosingnote}{}}{}{
+        \vspace{1cm}
+        {\color{artifactAccentB}\rule{12cm}{0.6pt}}\par
+        \vspace{0.5cm}
+        {\color{artifactText}\fontsize{8}{10}\selectfont\texttt{\artifactclosingnote}}\par
+    }
+
+    \end{titlepage}
+    \pagecolor{artifactBg}
+    \color{artifactText}
+}
+
+%% ------------------------------------------------------------
+%% Table of contents styling
+%% ------------------------------------------------------------
+\newcommand{\artifacttoc}{
+    \renewcommand{\cfttoctitlefont}{\color{artifactAccentA}\Large\bfseries}
+    \renewcommand{\cftchapfont}{\color{artifactGold}\bfseries}
+    \renewcommand{\cftchappagefont}{\color{artifactAccentB}}
+    \renewcommand{\cftsecfont}{\color{artifactText}}
+    \renewcommand{\cftsubsecfont}{\color{artifactAccentA}\small}
+    \tableofcontents
+    \clearpage
+}
+
+%% ------------------------------------------------------------
+%% Chapter ("section") pattern — unnumbered \chapter* with an
+%% auto-incrementing "SECTION NN OF TOTAL" protocol banner and a
+%% matching closing tag. Set \SetArtifactProtocolLabel and
+%% \SetArtifactTotalSections before use; both have fallbacks.
+%% ------------------------------------------------------------
+\newcounter{artifactsection}
+\providecommand{\artifactprotocollabel}{PROTOCOL}
+\providecommand{\artifacttotalsections}{?}
+
+\newcommand{\SetArtifactProtocolLabel}[1]{\renewcommand{\artifactprotocollabel}{#1}}
+\newcommand{\SetArtifactTotalSections}[1]{\renewcommand{\artifacttotalsections}{#1}}
+
+\newcommand{\artifactchapter}[1]{
+    \stepcounter{artifactsection}
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+    \markboth{#1}{#1}
+    \begin{artifactglyphbox}
+    \centering
+    \color{artifactAccentA}\fontsize{8}{10}\selectfont\texttt{
+    [ \artifactprotocollabel\ -- SECTION \arabic{artifactsection} OF \artifacttotalsections\ -- #1 ]
+    }
+    \end{artifactglyphbox}
+    \vspace{0.3cm}
+}
+
+\newcommand{\artifactendsection}{
+    \vspace{1cm}
+    \begin{center}
+    \color{artifactAccentB}\texttt{--- end of section \arabic{artifactsection} ---}
+    \end{center}
+    \clearpage
+}
+
+\endinput

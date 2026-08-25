@@ -1,0 +1,5 @@
+# devops/ tooling dependencies only. This is NOT the memoree/ or aurafs/
+# runtime requirements — those stay wherever those projects already declare
+# them. Install with:
+#   pip install -r devops/requirements.txt
+pyyaml>=6.0

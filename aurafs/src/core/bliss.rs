@@ -3,6 +3,9 @@
 //! ✨ f0rg3d with Ineffable l0v3 by Aurphyx Quantum Division ✨
 //! Complete lifecycle with crypto, ZK proofs, soul verification, and enterprise features.
 //! ═══════════════════════════════════════════════════════════════════
+//!
+//! Legacy in-tree identity name: BlissID. New APIs use SoulKey → SKIM → SIR → SIG.
+//! Do not silently rename these types; an identity PR owns that migration.
 
 #![warn(missing_docs)]
 
