@@ -302,7 +302,7 @@ class VASPScoringEngine:
         met_score = self.calculate_kinetic_met(bpm)
 
         vap_object = {
-            "VAP_VERSION": self.version,
+            "VASP_VERSION": self.version,
             "IDENTITY": {
                 "TITLE": self._get(raw_data, "title") or self._get(raw_data, "TITLE") or "unknown",
                 "ARTIST": self._get(raw_data, "artist") or self._get(raw_data, "ARTIST") or "unknown",

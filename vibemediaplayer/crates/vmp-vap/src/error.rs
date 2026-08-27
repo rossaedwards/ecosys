@@ -12,7 +12,7 @@ pub enum VapError {
     #[error("JSON error: {0}")]
     Json(#[from] serde_json::Error),
 
-    #[error("unsupported VAP_VERSION '{0}' (expected 3.1)")]
+    #[error("unsupported VASP_VERSION '{0}' (expected 3.69)")]
     VersionMismatch(String),
 
     #[error("missing required field: {0}")]

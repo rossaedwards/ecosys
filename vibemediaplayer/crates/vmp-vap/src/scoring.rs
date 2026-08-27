@@ -1,4 +1,4 @@
-//! Reference scoring from V.A.P. Logic Architecture / Scoring Engine.
+//! Reference scoring from VASP Logic Architecture / Scoring Engine.
 
 use crate::types::{ThayerResult, VapObject};
 use serde_json::json;
@@ -17,7 +17,7 @@ impl Default for VapScoringEngine {
 impl VapScoringEngine {
     pub fn new() -> Self {
         Self {
-            version: crate::VAP_VERSION.to_string(),
+            version: crate::VASP_VERSION.to_string(),
         }
     }
 
@@ -127,7 +127,7 @@ impl VapScoringEngine {
         let hr_hi = (bpm + 10.0) as i64;
 
         VapObject {
-            vap_version: self.version.clone(),
+            vasp_version: self.version.clone(),
             identity: crate::types::Identity {
                 title: title.into(),
                 artist: artist.into(),

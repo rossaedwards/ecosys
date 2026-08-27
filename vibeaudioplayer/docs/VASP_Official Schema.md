@@ -4,9 +4,9 @@
   "title": "Vibe Audio Standard and Protocol v3.69",
   "description": "Universal Metadata Standard for Experiential Audio Identity",
   "type": "object",
-  "required": ["VAP_VERSION", "IDENTITY", "PILLARS"],
+  "required": ["VASP_VERSION", "IDENTITY", "PILLARS"],
   "properties": {
-    "VAP_VERSION": {
+    "VASP_VERSION": {
       "type": "string",
       "const": "3.69"
     },

@@ -590,7 +590,7 @@ def analyze(filepath: str) -> dict:
     visual_noise       = min(saturation, 0.6)
 
     vap_object = {
-        "VAP_VERSION": "3.1",
+        "VASP_VERSION": "3.1",
         "IDENTITY": {
             "TITLE":      os.path.basename(filepath),
             "ARTIST":     "Unknown",
@@ -764,7 +764,7 @@ First, the header — clean interface contract before the implementation.
 #define VAP_LOAD_FROM_ID3      1   /* Loaded from embedded ID3v2 TXXX frame */
 #define VAP_LOAD_FROM_VORBIS   2   /* Loaded from Vorbis COMMENT block      */
 #define VAP_LOAD_DEFAULTS      3   /* No VAP data found; safe defaults used  */
-#define VAP_LOAD_ERR_VERSION  -1   /* VAP_VERSION mismatch (not "3.1")      */
+#define VAP_LOAD_ERR_VERSION  -1   /* VASP_VERSION mismatch (not "3.1")      */
 #define VAP_LOAD_ERR_CORRUPT  -2   /* JSON found but failed structural check */
 
 /* ── Public API ────────────────────────────────────────────────────────── */
@@ -927,8 +927,8 @@ static void hex_to_rgb(const char *hex, float *r, float *g, float *b) {
 
 static int populate_from_json(vap_runtime_t *vap, const char *json) {
 
-    /* ── VALIDATE: VAP_VERSION must be "3.1" per schema const ──────── */
-    const char *ver_pos = json_find_key(json, "VAP_VERSION");
+    /* ── VALIDATE: VASP_VERSION must be "3.1" per schema const ──────── */
+    const char *ver_pos = json_find_key(json, "VASP_VERSION");
     if (!ver_pos) return VAP_LOAD_ERR_CORRUPT;
 
     char ver_str[^3_16];
@@ -1013,7 +1013,7 @@ static int populate_from_json(vap_runtime_t *vap, const char *json) {
     else                                             vap->explicit_tier = 0;
 
     /* ── PILLAR 5: AFFECTIVE — Thayer Coordinates ───────────────────── */
-    /* REQUIRED per schema; validated above via VAP_VERSION check       */
+    /* REQUIRED per schema; validated above via VASP_VERSION check       */
     vap->affective.valence = json_read_float(
         json_find_key(json, "VALENCE"), 0.0f);
     /* Clamp to spec range [-1.0, +1.0] */
@@ -1584,7 +1584,7 @@ static int Open(vlc_object_t *obj) {
 | `load_from_id3`             | Walks raw ID3v2 frame bytes, finds `TXXX` + description `"VAP_OBJECT"`                   | §3.1 ID3v2 TXXX      |
 | `load_from_vorbis`          | Scans OGG/Vorbis comment packet for `VAP_OBJECT=` field                                  | §3.1 Vorbis Comment  |
 | `vap_loader_apply_defaults` | Fills all 9 pillars with safe neutral values — Aurphyx violet/gold brand colors baked in | §3.2 backward compat |
-| Version guard               | Rejects anything not `"3.1"` via `VAP_VERSION` const check                               | §3.1 schema          |
+| Version guard               | Rejects anything not `"3.1"` via `VASP_VERSION` const check                               | §3.1 schema          |
 | `hex_to_rgb()`              | Converts `PRIMARY_HEX`/`SECONDARY_HEX` `#RRGGBB` → float RGB for GLSL uniforms           | §7.1 Pillar 7        |
 
 ***
@@ -3273,7 +3273,7 @@ static void test_version_guard(void) {
     vap_runtime_init(&vap);
 
     const char *bad_version =
-        "{\"VAP_VERSION\":\"2.0\","
+        "{\"VASP_VERSION\":\"2.0\","
         "\"IDENTITY\":{\"TITLE\":\"Test\",\"ARTIST\":\"X\"},"
         "\"PILLARS\":{\"STRUCTURAL\":{\"BPM_RAW\":120},"
         "\"AFFECTIVE\":{\"VALENCE\":0.5,\"AROUSAL\":0.5},"
@@ -3281,7 +3281,7 @@ static void test_version_guard(void) {
         "\"KINETIC\":{\"MET_SCORE\":3.0}}}";
 
     int r = vap_loader_parse_json(&vap, bad_version);
-    TEST("Rejects VAP_VERSION 2.0", r == VAP_LOAD_ERR_VERSION);
+    TEST("Rejects VASP_VERSION 2.0", r == VAP_LOAD_ERR_VERSION);
 }
 
 /* ── Test 2: Valid v3.1 JSON parses all required fields ─────────────── */
@@ -3292,7 +3292,7 @@ static void test_valid_json(void) {
 
     const char *json =
         "{"
-        "  \"VAP_VERSION\": \"3.1\","
+        "  \"VASP_VERSION\": \"3.1\","
         "  \"IDENTITY\": {"
         "    \"TITLE\": \"Underneath It All\","
         "    \"ARTIST\": \"No Doubt\","
@@ -3427,7 +3427,7 @@ static void test_clamp_valence(void) {
     vap_runtime_init(&vap);
 
     const char *json =
-        "{\"VAP_VERSION\":\"3.1\","
+        "{\"VASP_VERSION\":\"3.1\","
         "\"IDENTITY\":{\"TITLE\":\"T\",\"ARTIST\":\"A\"},"
         "\"PILLARS\":{"
         "\"STRUCTURAL\":{\"BPM_RAW\":120},"

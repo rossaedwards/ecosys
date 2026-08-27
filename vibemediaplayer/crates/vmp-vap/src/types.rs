@@ -1,4 +1,4 @@
-//! V.A.P. v3.1 serde types — flexible enough for nested golden-set and flat engine JSON.
+//! VASP v3.69 serde types — flexible enough for nested golden-set and flat engine JSON.
 
 use crate::error::{VapError, VapResult};
 use serde::{Deserialize, Serialize};
@@ -89,8 +89,8 @@ impl NumOrStr {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VapObject {
-    #[serde(rename = "VAP_VERSION")]
-    pub vap_version: String,
+    #[serde(rename = "VASP_VERSION")]
+    pub vasp_version: String,
     #[serde(rename = "IDENTITY")]
     pub identity: Identity,
     #[serde(rename = "PILLARS")]
@@ -153,8 +153,8 @@ impl VapObject {
     }
 
     pub fn validate_version(&self) -> VapResult<()> {
-        if self.vap_version != crate::VAP_VERSION {
-            return Err(VapError::VersionMismatch(self.vap_version.clone()));
+        if self.vasp_version != crate::VASP_VERSION {
+            return Err(VapError::VersionMismatch(self.vasp_version.clone()));
         }
         Ok(())
     }
@@ -162,7 +162,7 @@ impl VapObject {
     /// Neutral defaults when no VAP sidecar/embed exists (spec §3.2).
     pub fn defaults(artist: &str, title: &str) -> Self {
         Self {
-            vap_version: crate::VAP_VERSION.to_string(),
+            vasp_version: crate::VASP_VERSION.to_string(),
             identity: Identity {
                 title: title.to_string(),
                 artist: artist.to_string(),

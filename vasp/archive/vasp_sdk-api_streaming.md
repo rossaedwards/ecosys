@@ -14,7 +14,7 @@
     
     fields: 
 
-## ** APS‑TSLCA-SUXS-VASP-DEV-TESTS **
+## ** APS-VASP-DEV-TESTS **
 
 ## ** Vibe Audio Protocol Development Ideas **
 
@@ -317,14 +317,3 @@ impl VapEngine {
 }
 
 ------------------------------
-
-## 📊 Mapping Paradigm Checklist
-
-When pulling real datasets from your API setups inside Spotify or Tidal, ensure your translation layers handle the raw object transformations like this:
-
-* Pillar 1 (Structural): Map Spotify's tempo parameter or Tidal's track.bpm variable directly into bpm_raw.
-* Pillar 3 (Timbral): Use conditional blocks during object construction. If the source pipeline is Tidal, inject "Lossless_FLAC_24bit" to dynamically flag high audio asset parameters; for Spotify, fall back to compressed values.
-* Pillar 5 (Affective): Warning! Spotify's valence value ranges strictly from 0.0 to 1.0 (where higher is happier). Your protocol explicitly enforces a minimum value constraint of -1.0. The engine above applies the standard normalization algorithm (Valence * 2) - 1 to scale incoming data points seamlessly into your system.
-* Pillar 7 (Photometric): Neither platform returns a tracking color hexadecimal natively. To make your validation framework pass, feed the track.album.images URL down into an independent k-means color quantization cluster inside your code, then inject the resultant dominating visual palette hex directly into primary_hex.
-
-Would you like to build out the JSON Schema validation wrapper next to explicitly test your rust output variants against the draft-07 standard, or implement a mock testing set for testing Tidal's FLAC structural tracks?

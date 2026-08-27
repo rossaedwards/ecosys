@@ -240,7 +240,7 @@ fn read_embedded_vap(path: &Path) -> Result<Option<VapObject>, TagError> {
         }
         if let Some(item) = tag.get(&ItemKey::Comment) {
             if let Some(text) = item.value().text() {
-                if text.contains("VAP_VERSION") {
+                if text.contains("VASP_VERSION") {
                     if let Ok(v) = VapObject::from_str(text) {
                         return Ok(Some(v));
                     }
@@ -252,7 +252,7 @@ fn read_embedded_vap(path: &Path) -> Result<Option<VapObject>, TagError> {
             let key = format!("{:?}", item.key());
             if key.contains("VAP") || key.contains("Unknown") {
                 if let Some(text) = item.value().text() {
-                    if text.contains("VAP_VERSION") {
+                    if text.contains("VASP_VERSION") {
                         if let Ok(v) = VapObject::from_str(text) {
                             return Ok(Some(v));
                         }

@@ -15,11 +15,9 @@ fields:
 
 # Vibe Audio Standard and Protocol (VASP)
 
-**Aurphyx LLC** · **Version 3.69** · **Accessibility = Xessability**
+The Protocol is for SaaS, IoT, Network, Streaming, SDK.
 
-This folder is the VASP volume: a 9-pillar metadata standard for the holographic identity of an audio file. ID3 captures bibliographic data (who / what). VASP captures experiential data (who / what / where / when / why). It uses Three-Squared-Lattice Cognitive Architecture (TSLCA). Retired name: V.A.P. → VASP.
-
-Canonical source of truth: [`VASP_Intro_Specs.md`](VASP_Intro_Specs.md).
+This folder is the VASP volume: a 9-pillar metadata standard for the holographic identity of an audio file. ID3 captures bibliographic data (who / what). VASP captures experiential data (who / what / where / when / why). It uses Three-Squared-Lattice Cognitive Architecture (TSLCA). Retired name: V.A.P. → VASP. 
 
 A complete VASP profile always includes `VAP_VERSION`, `IDENTITY` (`TITLE` and `ARTIST` required), and all nine pillar keys.
 
@@ -64,27 +62,12 @@ Filenames with spaces are the real names. Do not rename them.
 
 ## What not to touch
 
-- Any PDF in this folder. Legacy V.A.P. print materials stay as-is.
-- Filenames.
-- Existing APS headers on sibling Markdown files (except a title value when that title is inaccurate for that document).
-- [`VASP_Intro_Specs.md`](VASP_Intro_Specs.md) body, except an obvious typo or truncated sentence.
-
 Player, visualizer, and packaging code live outside this folder (`vibeplayer/`, `vap-serv/`, `vibeaudio/`). Do not treat those trees as the protocol definition.
 
-## Historical, not active
-
-These Markdown files are in the folder but are **not** the v3.69 contract:
-
-| File | Status |
-| --- | --- |
-| [`vasp_sdk-api_streaming.md`](vasp_sdk-api_streaming.md) | Streaming/SDK notes still labeled **v3.3**. |
-| [`vibe_audio_visualizer.md`](vibe_audio_visualizer.md) | Visualizer dump still labeled **v3.1**; some examples require only a subset of pillars. |
-
-Quote those as historical. Do not implement new work against them.
 
 ## Extracting the scoring engine
 
-[`VASP_Scoring Engine.py.md`](VASP_Scoring%20Engine.py.md) is a Markdown wrapper around one Python fence. The fenced body is valid Python. `generate_vap_profile()` emits all nine pillar keys. TONAL, LINGUISTIC, CONTEXTUAL, and GENEALOGICAL heuristics are deterministic: they use `raw_data` when present and emit `null`, `[]`, or `"unknown"` for missing catalog facts (samples, release date, cultural era, tribe alignment). They do not invent those facts.
+[`VASP_Scoring Engine.py.md`](VASP_Scoring%20Engine.py.md) is a Markdown wrapper around one Python fence. The fenced body is valid Python. `generate_vasp_profile()` emits all nine pillar keys. TONAL, LINGUISTIC, CONTEXTUAL, and GENEALOGICAL heuristics are deterministic: they use `raw_data` when present and emit `null`, `[]`, or `"unknown"` for missing catalog facts (samples, release date, cultural era, tribe alignment). They do not invent those facts.
 
 ## Folder overlays
 

@@ -1,6 +1,6 @@
 ```json
 {
-  "VAP_VERSION": "3.69",
+  "VASP_VERSION": "3.69",
   "IDENTITY": {
     "ARTIST": "Cannibal Corpse",
     "TITLE": "Inhumane Harvest",

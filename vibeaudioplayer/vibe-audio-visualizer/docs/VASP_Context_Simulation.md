@@ -129,7 +129,7 @@ class VAPContextEngine:
 # --- TEST DATA ---
 # Track 1: High Energy (Matches Gym)
 track_a = {
-    "VAP_VERSION": "3.69",
+    "VASP_VERSION": "3.69",
     "IDENTITY": {"TITLE": "Work", "ARTIST": "Bear Grillz"},
     "PILLARS": {
         "STRUCTURAL": {
@@ -279,7 +279,7 @@ track_a = {
 
 # Track 2: Low Energy (Clashes with Gym)
 track_b = {
-    "VAP_VERSION": "3.69",
+    "VASP_VERSION": "3.69",
     "IDENTITY": {"TITLE": "Dreams", "ARTIST": "The Cranberries"},
     "PILLARS": {
         "STRUCTURAL": {

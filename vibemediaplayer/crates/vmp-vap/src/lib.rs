@@ -1,4 +1,4 @@
-//! Vibe Audio Protocol (V.A.P.) v3.1 — types, loader, scoring, context.
+//! Vibe Audio Standard and Protocol (VASP) v3.69 — types, loader, scoring, context.
 //!
 //! Captures experiential (How/Why) identity across nine TSLCA pillars.
 //! Compatible with nested golden-set payloads and flat scoring-engine outputs.
@@ -16,7 +16,7 @@ pub use scoring::VapScoringEngine;
 pub use types::*;
 
 /// Protocol version constant.
-pub const VAP_VERSION: &str = "3.1";
+pub const VASP_VERSION: &str = "3.69";
 
 /// Ordered pillar identifiers for UI tabs (Firefox/Opera-style vertical rail).
 pub const PILLAR_TABS: &[(PillarId, &str, &str)] = &[
@@ -44,7 +44,7 @@ mod tests {
     #[test]
     fn loads_cannibal_corpse_fixture() {
         let vap = VapObject::from_path(&fixture_path()).expect("load fixture");
-        assert_eq!(vap.vap_version, "3.1");
+        assert_eq!(vap.vasp_version, "3.69");
         assert_eq!(vap.identity.artist, "Cannibal Corpse");
         assert_eq!(vap.identity.title, "Inhumane Harvest");
         assert!(vap.pillars.structural.is_some());
@@ -84,7 +84,7 @@ mod tests {
         let d = VapObject::defaults("Unknown", "Untitled");
         let s = serde_json::to_string_pretty(&d).unwrap();
         let back: VapObject = serde_json::from_str(&s).unwrap();
-        assert_eq!(back.vap_version, VAP_VERSION);
+        assert_eq!(back.vasp_version, VASP_VERSION);
     }
 
     #[test]

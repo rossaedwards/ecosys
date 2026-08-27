@@ -5,8 +5,7 @@ import math
 
 class VASPScoringEngine:
     """
-    Reference Implementation of the Vibe Audio Standard and Protocol v3.69
-    Logic Architecture.
+    Reference Implementation of VASP Logic Architecture.
     This engine converts raw audio analysis data into standardized
     Vibe Audio Metadata.
     """
@@ -430,6 +429,6 @@ mock_audio_analysis = {
 # Run Engine
 engine = VASPScoringEngine()
 vap_profile = engine.generate_vap_profile(mock_audio_analysis)
-print("--- Vibe Audio v3.69 Generated Metadata ---")
+print("--- Vibe Audio Generated Metadata ---")
 print(vap_profile)
 ```

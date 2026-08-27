@@ -1,14 +1,14 @@
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Vibe Audio Standard and Protocol v3.69",
+  "title": "Vibe Audio Standard & Protocol",
   "description": "Universal Metadata Standard for Experiential Audio Identity",
   "type": "object",
-  "required": ["VAP_VERSION", "IDENTITY", "PILLARS"],
+  "required": ["VASP_VERSION", "IDENTITY", "PILLARS"],
   "properties": {
-    "VAP_VERSION": {
+    "VASP_VERSION": {
       "type": "string",
-      "const": "3.69"
+      "default": "3.69"
     },
     "IDENTITY": {
       "type": "object",
