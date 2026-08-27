@@ -5,7 +5,7 @@
 **Author**: Ross A. Edwards  
 **ORCID**: 0009-0008-0539-1289  
 **Version**: 0.4.0-phase2-hardening  
-**Technology Readiness Level**: TRL-4 (Lab-Validated)  
+**Technology Readiness Level**: TRL-3 (Awaiting Lab-Validation)  
 **Last Updated**: February 8, 2026
 
 ---
@@ -61,6 +61,7 @@ To create the world's first storage system where physical principles, not just s
 ### Mission
 
 Build a production-ready distributed filesystem that:
+
 1. Survives quantum computing threats through post-quantum cryptography
 2. Achieves 16× efficiency improvements via fractal geometry
 3. Operates across heterogeneous network topologies (datacenter to off-grid)
@@ -128,6 +129,7 @@ Build a production-ready distributed filesystem that:
 **Problem**: Single-transport systems fail catastrophically during infrastructure outages.
 
 **Solution**: Three concurrent transport layers with automatic failover:
+
 - **Titan-Libp2p** (Primary): High-bandwidth datacenter networking
 - **GhostLink-LoRaWAN** (Secondary): Low-power mesh for edge/IoT
 - **Starlink-HighOrbit** (Tertiary): Orbital backhaul for global coverage
@@ -151,6 +153,7 @@ AuraFS is governed by five immutable physics constants. These are not software p
 **Physical Meaning**: Dimensionality scaling factor for Hilbert space in fractal geometry. Governs how replica requirements grow sub-linearly with network size.
 
 **Theorem 2.1** (`ALGORITHM_PROOFS.md`):
+
 ```
 dim(H_acc) = d^(n·D_f^α(k))
 where α(k) = log(1 + k·η) / log(D_f)
@@ -183,12 +186,15 @@ where α(k) = log(1 + k·η) / log(D_f)
 **Physical Meaning**: Effective dimensionality for diffusion processes on Sierpiński gasket. Critical threshold: d_s < 2 guarantees all states are localized (no mobility edge).
 
 **Proposition 2.1** (`ALGORITHM_PROOFS.md`):
+
 ```
 ρ(E) ∝ E^(d_s/2 - 1)
 ```
+
 Density of states diverges as E→0, creating trap states that hold data coherently.
 
 **Decoherence Detection**: If measured d_s drifts outside [1.32, 1.42], the system enters decoherence recovery mode:
+
 1. Freeze writes (transition to `CoherenceState::DecoherenceExempt`)
 2. Alert holographic logger with CRITICAL severity
 3. Trigger autoheal daemon to rebalance fractal lattice
@@ -203,10 +209,12 @@ Density of states diverges as E→0, creating trap states that hold data coheren
 **Physical Meaning**: Complete TM (transverse magnetic) band gap in C₆ᵥ hexagonal photonic crystal lattice. Forbidden frequency band where electromagnetic waves cannot propagate.
 
 **Routing Implications**: 
+
 - **Band Gap**: 21% (unusable for routing due to wave prohibition)
 - **Usable Capacity**: 79% (1.0 - PBG)
 
 **Experimental Validation**: Plane-wave expansion (PWE) simulation confirms 21% complete TM gap at:
+
 - Dielectric contrast: ε = 12
 - Rod radius to lattice constant ratio: r/a = 0.2
 - C₆ᵥ (hexagonal) symmetry
@@ -227,16 +235,16 @@ Density of states diverges as E→0, creating trap states that hold data coheren
 
 These values are computed from the five primary constants and are NOT directly configurable:
 
-| Constant | Formula | Value | Purpose |
-|----------|---------|-------|---------|
-| Fractal Density (D_f) | log(3)/log(2) | 1.585 | Hausdorff dimension of Sierpiński gasket |
-| Fidelity Improvement | T₂(fractal)/T₂(transmon) | 16 | Coherence extension factor |
-| Decoherence Suppression | γ_eff/γ₀ | 0.0625 (1/16) | Anderson localization effectiveness |
-| Usable Routing Capacity | 1.0 - PBG | 0.79 (79%) | Available network bandwidth |
-| Fractal QEC Overhead | Prop. 2.3 at p_phys=10⁻³ | 89 qubits | Quantum error correction cost |
-| Euclidean QEC Overhead | Surface code baseline | 1458 qubits | Comparison benchmark |
-| QEC Reduction Factor | Euclidean/Fractal | 16.4 | Efficiency gain from fractal geometry |
-| Spectral Walk Dimension (d_w) | log(5)/log(2) | 2.32 | Anomalous diffusion exponent |
+| Constant                      | Formula                  | Value         | Purpose                                  |
+| ----------------------------- | ------------------------ | ------------- | ---------------------------------------- |
+| Fractal Density (D_f)         | log(3)/log(2)            | 1.585         | Hausdorff dimension of Sierpiński gasket |
+| Fidelity Improvement          | T₂(fractal)/T₂(transmon) | 16            | Coherence extension factor               |
+| Decoherence Suppression       | γ_eff/γ₀                 | 0.0625 (1/16) | Anderson localization effectiveness      |
+| Usable Routing Capacity       | 1.0 - PBG                | 0.79 (79%)    | Available network bandwidth              |
+| Fractal QEC Overhead          | Prop. 2.3 at p_phys=10⁻³ | 89 qubits     | Quantum error correction cost            |
+| Euclidean QEC Overhead        | Surface code baseline    | 1458 qubits   | Comparison benchmark                     |
+| QEC Reduction Factor          | Euclidean/Fractal        | 16.4          | Efficiency gain from fractal geometry    |
+| Spectral Walk Dimension (d_w) | log(5)/log(2)            | 2.32          | Anomalous diffusion exponent             |
 
 ### Physics Violation Handling
 
@@ -276,6 +284,7 @@ AuraFS organizes nodes into a seven-zone fractal topology inspired by energy vor
 ```
 
 **Zones**:
+
 1. **Root**: Physical infrastructure (bare metal, block devices)
 2. **Sacral**: Shard storage layer (Void/Trap/Aura lifecycle)
 3. **Solar Plexus**: Compute and compression engines
@@ -311,6 +320,7 @@ READ DATA
 #### State 1: Void-Shard
 
 **Properties**:
+
 - Mutable
 - Not yet entered fractal lattice
 - No topology protection
@@ -323,6 +333,7 @@ READ DATA
 #### State 2: Trap-State
 
 **Properties**:
+
 - Localized via Anderson mechanism
 - Held within coherence window (T₂)
 - Mutable with atomic semantics
@@ -339,6 +350,7 @@ READ DATA
 #### State 3: Aura-Shard
 
 **Properties**:
+
 - Immutable (copy-on-write for modifications)
 - Topologically protected (Merkle root cryptographically signed)
 - Fractally replicated across `compute_replicas(N)` nodes
@@ -363,6 +375,7 @@ AuraFS operates simultaneously across three transport layers with automatic fail
 **Use Cases**: Primary storage operations, inter-datacenter replication
 
 **Key Features**:
+
 - Peer discovery via Kademlia DHT
 - Gossipsub for efficient broadcast (replica coordination)
 - QUIC transport for low-latency, encrypted streams
@@ -377,6 +390,7 @@ AuraFS operates simultaneously across three transport layers with automatic fail
 **Use Cases**: Edge telemetry, disaster recovery mesh, remote site sync
 
 **Key Features**:
+
 - Meshtastic firmware bridge for commercial LoRa radios
 - Store-and-forward routing for intermittent connectivity
 - Ultra-low power (years on battery for sensor nodes)
@@ -393,6 +407,7 @@ AuraFS operates simultaneously across three transport layers with automatic fail
 **Use Cases**: Intercontinental replication, regional disaster recovery, remote site connectivity
 
 **Key Features**:
+
 - Automatic failover when terrestrial links fail
 - Latency-tolerant bulk synchronization
 - Geographic diversity (satellite constellation always visible)
@@ -414,6 +429,7 @@ Nodes self-organize into four dynamic roles:
 4. **Observer**: Read-only monitoring nodes for analytics
 
 **Role Assignment**: Based on:
+
 - Network connectivity (bandwidth, latency, reliability)
 - Geographic diversity
 - Historical uptime and Byzantine fault score
@@ -425,14 +441,14 @@ Nodes self-organize into four dynamic roles:
 // Pseudocode: Photonic-aware routing
 fn route_shard(shard: &AuraShard, topology: &FractalTopology) -> Vec<NodeId> {
     let target_replicas = compute_replicas(topology.active_nodes());
-    
+
     // Constrain by photonic band gap
     let usable_capacity = (1.0 - INVARIANTS.photonic_band_gap) * topology.total_bandwidth();
-    
+
     // Fractal distance metric (not Euclidean)
     let destinations = topology.nearest_by_fractal_distance(shard.id(), target_replicas)
         .filter(|node| node.available_bandwidth() < usable_capacity);
-    
+
     destinations.collect()
 }
 ```
@@ -444,6 +460,7 @@ fn route_shard(shard: &AuraShard, topology: &FractalTopology) -> Vec<NodeId> {
 The `src/fuse/` module exposes AuraFS as a POSIX-compliant filesystem via FUSE (Filesystem in Userspace).
 
 **Operations**:
+
 - Standard POSIX: `open`, `read`, `write`, `close`, `mkdir`, `unlink`, etc.
 - Extended attributes: `getxattr`, `setxattr` for shard metadata
 - Lock operations: `flock`, `fcntl` with coherence-aware timeout enforcement
@@ -451,21 +468,22 @@ The `src/fuse/` module exposes AuraFS as a POSIX-compliant filesystem via FUSE (
 **Critical Constraint**: All lock-holding operations must complete within `lock_acquisition_timeout_us = 100 μs` to stay within coherence window limits.
 
 **Implementation**:
+
 ```rust
 // Simplified FUSE write operation
 fn write(&mut self, req: &Request, ino: u64, fh: u64, 
          offset: i64, data: &[u8]) -> Result<u32, c_int> {
-    
+
     let deadline = Instant::now() + Duration::from_micros(
         INVARIANTS.lock_acquisition_timeout_us
     );
-    
+
     let guard = self.inode_table.try_lock_until(ino, deadline)
         .map_err(|_| libc::EAGAIN)?;
-    
+
     // Perform write within coherence window
     guard.write_at(offset, data)?;
-    
+
     Ok(data.len() as u32)
 }
 ```
@@ -477,10 +495,12 @@ fn write(&mut self, req: &Request, ino: u64, fh: u64,
 ### Prerequisites
 
 **Operating Systems**:
+
 - **Development**: Windows 11 (PowerShell 7+) or Linux (any modern distro)
 - **Production**: Linux (Debian 12, Fedora 39+), Docker, Kubernetes
 
 **Rust Toolchain**:
+
 ```powershell
 # Install Rust via rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -494,6 +514,7 @@ rustc --version  # Should be ≥ 1.82.0
 ```
 
 **Required Tools**:
+
 ```bash
 # Formatter and linter
 rustup component add rustfmt clippy
@@ -514,6 +535,7 @@ cargo install cargo-watch
 ```
 
 **Optional but Recommended**:
+
 ```bash
 # Flamegraph profiling
 cargo install flamegraph
@@ -548,11 +570,13 @@ cargo doc --no-deps --open
 ### IDE Setup (Cursor)
 
 If using Cursor IDE, the `.cursorrules` file will automatically configure:
+
 - Physics invariant enforcement
 - TRL-4 file locking awareness
 - Code generation patterns aligned with project standards
 
 **Recommended Cursor Settings**:
+
 - Enable Rust language server (rust-analyzer)
 - Enable inline error checking
 - Set tab width to 4 spaces (matches rustfmt)
@@ -723,23 +747,27 @@ aurafs/
 ### Adding a New Feature
 
 1. **Check TRL Lock Status**:
+   
    ```bash
    # Determine if your target file is TRL-4 locked
    grep -A 50 "\[modules.validated\]" aurafs.toml
    ```
 
 2. **Create Feature Branch**:
+   
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 3. **Implement Feature**:
+   
    - Follow `.cursorrules` standards
    - Use `physics::INVARIANTS` for any physics constants
    - Write unit tests alongside implementation
    - Document all `pub` items with `///` comments
 
 4. **Run Local Validation**:
+   
    ```bash
    cargo fmt      # Format code
    cargo clippy   # Lint
@@ -748,11 +776,13 @@ aurafs/
    ```
 
 5. **Submit Pull Request**:
+   
    - Include `CHANGELOG.md` entry under `[Unreleased]`
    - Link to relevant compliance documents if applicable
    - Request review from CODEOWNERS (automatically assigned)
 
 6. **CI Validation**:
+   
    - Physics audit checks for magic number violations
    - Full test suite runs on Ubuntu and Windows
    - Coverage thresholds enforced (see `aurafs.toml [ci.coverage]`)
@@ -762,16 +792,18 @@ aurafs/
 **WARNING**: This is a governance-gated operation requiring Byzantine quorum.
 
 1. **Propose Change**:
+   
    - Document scientific justification (new experimental data, peer-reviewed paper, etc.)
    - Submit proposal to Aurphyx LLC board
    - Await min_quorum=13 approval (Byzantine 3f+1 tolerance)
 
 2. **Update Files**:
+   
    ```toml
    # aurafs.toml [physics]
    hilbert_scaling_bias = 5.35  # Updated from 5.3
    ```
-
+   
    ```json
    // compliance/PHYSICS_INVARIANTS.json
    {
@@ -782,19 +814,21 @@ aurafs/
    ```
 
 3. **Commit with Override Tag**:
+   
    ```bash
    git commit -m "physics(invariants): update hilbert_scaling_bias to 5.35
-
+   
    PHYSICS OVERRIDE
-
+   
    Board vote: 15/19 approval (min_quorum=13 met)
    Justification: New Qiskit validation shows 5.35 optimal at n=7 qubits
    Experimental data: VALIDATION_REPORT.md §1.2 (updated 2026-02-08)
-
+   
    Refs: compliance/ALGORITHM_PROOFS.md Theorem 2.1"
    ```
 
 4. **CI Verification**:
+   
    - `.github/workflows/physics_audit.yml` validates override tag
    - Golden-file tests confirm constants match across files
    - Full regression test suite runs
@@ -804,6 +838,7 @@ aurafs/
 If spectral dimension drifts out of range during production:
 
 1. **Automatic Detection**:
+   
    ```rust
    // src/physics/spectral_monitor.rs
    if (measured_d_s - INVARIANTS.spectral_dimension).abs() > 0.05 {
@@ -814,17 +849,20 @@ If spectral dimension drifts out of range during production:
    ```
 
 2. **System Response**:
+   
    - Freeze writes (existing reads continue)
    - Holographic logger records CRITICAL event with full topology snapshot
    - Autoheal daemon rebalances fractal lattice topology
    - Metrics dashboard alerts on-call engineer
 
 3. **Human Investigation**:
+   
    - Check `/var/log/aurafs/holographic.log` for full context
    - Analyze topology changes in last 5 minutes (new nodes joined/left?)
    - Verify no malicious Byzantine actors injecting false measurements
 
 4. **Recovery**:
+   
    - Autoheal completes redistribution (typically 30–60 seconds)
    - Spectral dimension returns to [1.32, 1.42] range
    - System resumes `CoherenceState::Strict` mode
@@ -849,6 +887,7 @@ cargo bench --bench replica_computation -- --baseline before
 ```
 
 **Critical Benchmarks**:
+
 - `compute_replicas()`: Target <10 ns per call (hot path)
 - Merkle proof verification: Target <100 μs (within T₂ constraints)
 - FUSE write operation: Target <80 μs (leaves margin for lock acquisition)
@@ -876,6 +915,7 @@ cargo bench --bench replica_computation -- --baseline before
 Located in `#[cfg(test)] mod tests` blocks within each source file.
 
 **Example** (`src/physics/invariants.rs`):
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -896,6 +936,7 @@ mod tests {
 ```
 
 **Run**:
+
 ```bash
 cargo test --lib
 ```
@@ -905,22 +946,23 @@ cargo test --lib
 Located in `tests/` directory. Test interactions between modules.
 
 **Example** (`tests/integration/test_shard_lifecycle.rs`):
+
 ```rust
 #[tokio::test]
 async fn test_void_to_aura_lifecycle() {
     // Create Void-Shard
     let mut shard = Shard::new_void(b"test data".to_vec());
     assert_eq!(shard.state(), ShardState::Void);
-    
+
     // Fractal replicate → Trap-State
     let topology = Topology::new_test(100); // 100 nodes
     shard.fractal_replicate(&topology).await?;
     assert_eq!(shard.state(), ShardState::Trap);
-    
+
     // Verify replica count
     let expected_replicas = compute_replicas(100);
     assert_eq!(shard.replica_count(), expected_replicas);
-    
+
     // Promote to Aura-Shard
     shard.promote_to_aura(&signing_key).await?;
     assert_eq!(shard.state(), ShardState::Aura);
@@ -929,6 +971,7 @@ async fn test_void_to_aura_lifecycle() {
 ```
 
 **Run**:
+
 ```bash
 cargo test --test test_shard_lifecycle
 ```
@@ -938,13 +981,14 @@ cargo test --test test_shard_lifecycle
 Validate runtime constants against `compliance/PHYSICS_INVARIANTS.json`.
 
 **Example** (`tests/physics/test_invariants.rs`):
+
 ```rust
 #[test]
 fn test_invariant_golden_file() {
     let json: PhysicsInvariantsJson = serde_json::from_str(
         include_str!("../../compliance/PHYSICS_INVARIANTS.json")
     ).unwrap();
-    
+
     // Check all five constants
     assert_eq!(INVARIANTS.hilbert_scaling_bias, json.hilbert_scaling_bias);
     assert_eq!(INVARIANTS.coherence_window_us, json.coherence_window_us);
@@ -955,6 +999,7 @@ fn test_invariant_golden_file() {
 ```
 
 **Run**:
+
 ```bash
 cargo test --test test_invariants
 ```
@@ -963,16 +1008,17 @@ cargo test --test test_invariants
 
 From `aurafs.toml [ci.coverage]`:
 
-| Module | Minimum | Why |
-|--------|---------|-----|
-| `src/physics/` | 90% | Core physics engine must be bulletproof |
-| `src/core/` | 80% | Storage primitives are high-risk |
-| `src/crypto/pqc/` | 85% | Cryptographic correctness is critical |
-| `src/fuse/` | 70% | FUSE layer has many edge cases |
-| `src/network/` | 60% | Network code has inherent flakiness |
-| Overall | 70% | Project-wide minimum |
+| Module            | Minimum | Why                                     |
+| ----------------- | ------- | --------------------------------------- |
+| `src/physics/`    | 90%     | Core physics engine must be bulletproof |
+| `src/core/`       | 80%     | Storage primitives are high-risk        |
+| `src/crypto/pqc/` | 85%     | Cryptographic correctness is critical   |
+| `src/fuse/`       | 70%     | FUSE layer has many edge cases          |
+| `src/network/`    | 60%     | Network code has inherent flakiness     |
+| Overall           | 70%     | Project-wide minimum                    |
 
 **Measure Coverage**:
+
 ```bash
 # Using cargo-llvm-cov
 cargo llvm-cov --all-features --workspace --lcov --output-path lcov.info
@@ -986,12 +1032,13 @@ cargo tarpaulin --out Html --output-dir coverage/
 
 `.github/workflows/ci.yml` runs on:
 
-| OS | Rust | Target |
-|----|------|--------|
+| OS           | Rust   | Target                   |
+| ------------ | ------ | ------------------------ |
 | Ubuntu 22.04 | stable | x86_64-unknown-linux-gnu |
-| Windows 11 | stable | x86_64-pc-windows-msvc |
+| Windows 11   | stable | x86_64-pc-windows-msvc   |
 
 **Test stages**:
+
 1. Format check (`cargo fmt --check`)
 2. Lint (`cargo clippy -- -D warnings`)
 3. Build (`cargo build --release`)
@@ -1005,23 +1052,25 @@ cargo tarpaulin --out Html --output-dir coverage/
 
 ### Post-Quantum Cryptography Status
 
-| Primitive | Algorithm | NIST Standard | Status |
-|-----------|-----------|---------------|--------|
-| Signatures | Dilithium-5 | FIPS 204 (ML-DSA-87) | ✅ Implemented |
-| Key Encapsulation | Kyber-1024 | FIPS 203 (ML-KEM-1024) | 🚧 In Progress (R1) |
-| Hashing | SHA3-256 | FIPS 202 | ✅ Implemented |
-| Symmetric | AES-256-GCM | FIPS 197 | ✅ Implemented |
+| Primitive         | Algorithm   | NIST Standard          | Status              |
+| ----------------- | ----------- | ---------------------- | ------------------- |
+| Signatures        | Dilithium-5 | FIPS 204 (ML-DSA-87)   | ✅ Implemented       |
+| Key Encapsulation | Kyber-1024  | FIPS 203 (ML-KEM-1024) | 🚧 In Progress (R1) |
+| Hashing           | SHA3-256    | FIPS 202               | ✅ Implemented       |
+| Symmetric         | AES-256-GCM | FIPS 197               | ✅ Implemented       |
 
 ### Security Audit Recommendations
 
 From `compliance/SECURITY_AUDIT.md`:
 
 **CRITICAL (must be resolved before v1.0):**
+
 - **R1**: Complete Kyber-1024 integration (remove X25519 hybrid placeholder)
 - **R2**: Verify Dilithium constant-time implementation
 - **R3**: Document key management policy (rotation, revocation, escrow)
 
 **IMPORTANT (should be resolved before production):**
+
 - **R4**: HSM support for key storage (FIPS 140-3 Level 3 modules)
 - **R5**: Third-party cryptographic audit (Trail of Bits / NCC Group)
 - **R6**: Hybrid signatures (Dilithium-5 + Ed25519 dual-signing)
@@ -1029,12 +1078,14 @@ From `compliance/SECURITY_AUDIT.md`:
 ### Threat Model
 
 **In Scope**:
+
 - Classical adversary with unlimited compute
 - Quantum adversary with fault-tolerant quantum computer (Shor's algorithm)
 - Byzantine adversary controlling up to f=(n-1)/3 nodes
 - Side-channel attacks (timing, power analysis, EM radiation)
 
 **Out of Scope**:
+
 - Physical access to servers (assumes secure datacenter)
 - Social engineering (assumes proper key hygiene)
 - Supply chain attacks on hardware (assumes trusted boot)
@@ -1052,13 +1103,13 @@ See `docs/key_management.md` for full policy.
 
 ### Compliance Artifacts
 
-| Document | Purpose | Owner |
-|----------|---------|-------|
-| `PHYSICS_INVARIANTS.json` | CI validation bounds | Ross Edwards |
-| `ALGORITHM_PROOFS.md` | Mathematical foundations | Ross Edwards |
-| `SECURITY_AUDIT.md` | PQC implementation status | Security team |
-| `DARPA_TRL_VALIDATION.md` | Experimental protocols | Ross Edwards |
-| `VALIDATION_REPORT.md` | Lab validation results | Ross Edwards |
+| Document                  | Purpose                   | Owner         |
+| ------------------------- | ------------------------- | ------------- |
+| `PHYSICS_INVARIANTS.json` | CI validation bounds      | Ross Edwards  |
+| `ALGORITHM_PROOFS.md`     | Mathematical foundations  | Ross Edwards  |
+| `SECURITY_AUDIT.md`       | PQC implementation status | Security team |
+| `DARPA_TRL_VALIDATION.md` | Experimental protocols    | Ross Edwards  |
+| `VALIDATION_REPORT.md`    | Lab validation results    | Ross Edwards  |
 
 These documents are version-controlled and peer-reviewed. Changes require sign-off from CODEOWNERS.
 
@@ -1131,6 +1182,7 @@ spec:
 ```
 
 **Deploy**:
+
 ```bash
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
@@ -1158,6 +1210,7 @@ Before deploying v0.4.0 to production:
 ### Who Can Contribute
 
 AuraFS is open-source (MIT & Apache-2.0 dual-licensed). Contributions welcome from:
+
 - Academic researchers (physics, cryptography, distributed systems)
 - Open-source developers
 - Industry practitioners
@@ -1166,6 +1219,7 @@ AuraFS is open-source (MIT & Apache-2.0 dual-licensed). Contributions welcome fr
 ### Contribution Types
 
 **Code Contributions**:
+
 - Bug fixes
 - Performance optimizations
 - New features (e.g., additional transport layers)
@@ -1173,6 +1227,7 @@ AuraFS is open-source (MIT & Apache-2.0 dual-licensed). Contributions welcome fr
 - Documentation enhancements
 
 **Non-Code Contributions**:
+
 - Peer review of mathematical proofs (`compliance/ALGORITHM_PROOFS.md`)
 - Security audit recommendations
 - Experimental validation (e.g., Qiskit simulations)
@@ -1182,16 +1237,19 @@ AuraFS is open-source (MIT & Apache-2.0 dual-licensed). Contributions welcome fr
 ### Contribution Workflow
 
 1. **Read Governance Documents**:
+   
    - `.cursorrules` (development standards)
    - `aurafs.toml` (configuration and physics constants)
    - `CONTRIBUTING.md` (if exists)
 
 2. **Open Issue or Discussion**:
+   
    - For bugs: Provide minimal reproducible example
    - For features: Discuss design approach first
    - For physics changes: Requires governance proposal
 
 3. **Fork Repository**:
+   
    ```bash
    git clone https://github.com/YOUR_USERNAME/aurafs.git
    cd aurafs
@@ -1199,26 +1257,31 @@ AuraFS is open-source (MIT & Apache-2.0 dual-licensed). Contributions welcome fr
    ```
 
 4. **Create Branch**:
+   
    ```bash
    git checkout -b feature/your-contribution
    ```
 
 5. **Implement Changes**:
+   
    - Follow `.cursorrules` standards
    - Write tests for new code
    - Update `CHANGELOG.md`
 
 6. **Submit Pull Request**:
+   
    - Clearly describe what changed and why
    - Link to related issues
    - Request review from relevant CODEOWNERS
 
 7. **Address Review Feedback**:
+   
    - Respond to comments promptly
    - Make requested changes
    - Re-request review after updates
 
 8. **Merge**:
+   
    - CI must be green (all tests passing, no clippy warnings)
    - At least 1 approval from CODEOWNERS
    - `PHYSICS OVERRIDE` tag if modifying constants
@@ -1228,6 +1291,7 @@ AuraFS is open-source (MIT & Apache-2.0 dual-licensed). Contributions welcome fr
 AuraFS follows the [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
 **Summary**:
+
 - Be respectful and inclusive
 - Focus on what's best for the project
 - Accept constructive criticism gracefully

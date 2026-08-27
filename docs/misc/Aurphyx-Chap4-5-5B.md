@@ -1,9 +1,3 @@
-# Fractal-Enhanced Topologies for Quantum Computing
-## arXiv/PRX Quantum Submission Draft
-**Chapters 4, 5, and 5B Complete**
-
----
-
 # Chapter 4: Topological Vacuum Flux Dynamics (TVFD)
 
 ## 4.1 Introduction: Beyond Conventional Photonic Crystals
@@ -986,7 +980,3 @@ This framework is **testable** (holonomy measurements, EP detection) and **gener
 - Citation formatting (BibTeX bibliography).
 
 **Total length:** ~18,000 words (20–25 journal pages).
-
-**Recommended submission target:** PRX Quantum (multidisciplinary quantum tech) or Nature Physics (if experimental validation strong).
-
----

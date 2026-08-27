@@ -1,0 +1,14 @@
+{
+    "parameterSets": {
+        "design default values": {
+            "$fn": "30",
+            "end_radius": "13",
+            "show_dlc_sheath": "1",
+            "show_gold_core": "1",
+            "spiral_turns": "2.8",
+            "start_radius": "3",
+            "z_height": "33"
+        }
+    },
+    "fileFormatVersion": "1"
+}
