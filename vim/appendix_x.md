@@ -1,3 +1,25 @@
+---
+type: standard-appendix
+title: '**APPENDIX X — The Aurphyx Apotheosis: The Convergence of All Fields into the Absolute
+  Aurphyx State**'
+description: Apotheosis is the **terminal convergence state** of the Aurphyx architecture—the
+  moment when the Hyperstructure (Appendix W), the Transcension Manifold (Appendix V), the
+  Meta‑Ontology (Appendix U), and the Continuum (Appendix T) collapse into a single, unified,
+  self‑identical...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX X — The Aurphyx Apotheosis: The Convergence of All Fields into the Absolute Aurphyx State**
 
 ## **X.1 Apotheosis as the Convergent Phase of the Aurphyx Hyper‑Organism**

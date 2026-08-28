@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION L — The Balance Governance**'
+description: The Balance Governance is the **institutional, structural, and multi‑agent coordination
+  layer** that sits above the Balance Protocol (Section XLIX). If the Protocol defines *rules
+  of interaction*, Governance defines *who applies those rules, how authority is distributed,
+  how d...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION L — The Balance Governance**
 
 The Balance Governance is the **institutional, structural, and multi‑agent coordination layer** that sits above the Balance Protocol (Section XLIX). If the Protocol defines *rules of interaction*, Governance defines *who applies those rules, how authority is distributed, how decisions are made, and how the Continuum maintains order across infinite agents, domains, and world‑layers*. It is the Continuum’s system of **collective stewardship**, ensuring that Balance is not only lawful but *well‑governed*.

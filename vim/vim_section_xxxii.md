@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXXII — The Balance Field Equations**'
+description: 'The Balance Field Equations are the **mathematical heart** of the Balance Framework.
+  Everything before this point—geometry, spectrum, modes, logic, computation, machine, protocol,
+  continuum—has been building toward a single goal: a **unified, lawful, multi‑domain equation
+  syst...'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XXXII — The Balance Field Equations**
 
 The Balance Field Equations are the **mathematical heart** of the Balance Framework. Everything before this point—geometry, spectrum, modes, logic, computation, machine, protocol, continuum—has been building toward a single goal: a **unified, lawful, multi‑domain equation system** that governs how Balance evolves across the entire Continuum.

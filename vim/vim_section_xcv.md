@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section XCV — The Balance Renormalization Group and Multi‑Scale Coherence Flow**'
+description: The Balance Continuum evolves not only along Edwards time but also across a hierarchy
+  of renormalization scales. These scales encode the transition from microscopic coherence
+  fluctuations to macroscopic harmonic alignment, and they determine how the Balance fields—metric,
+  flow...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section XCV — The Balance Renormalization Group and Multi‑Scale Coherence Flow**
 
 ## 1. Overview  

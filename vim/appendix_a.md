@@ -1,3 +1,24 @@
+---
+type: standard-appendix
+title: '**APPENDIX A — Mathematical Structure of the Equilibrium Manifold and HRD Control
+  Law**'
+description: The VIM engine is governed by the balance coefficient \[ \beta(t) = \frac{x_f(t)\,
+  x_c(t)}{x_i(t)\, x_t(t)}. \]
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX A — Mathematical Structure of the Equilibrium Manifold and HRD Control Law**
 
 ## **A.1 The Balance Coefficient as a Dynamical Variable**

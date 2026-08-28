@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX E — The Balance State Vector‑Cell as a Physical Implementation of the Duality
+  Kernel**'
+description: 'The Balance State Vector‑Cell is the **physical instantiation** of the Duality
+  Kernel. It is a topological flux engine whose internal geometry implements the computational
+  primitives of the Tetra‑Hexa Routing Array. The cell consists of five tightly coupled subsystems:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**
 
 ## **E.1 The Balance State Vector‑Cell as a Topological Engine**

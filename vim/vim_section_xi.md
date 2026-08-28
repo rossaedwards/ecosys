@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XI — The Balance Flow**'
+description: The Balance Flow is the **vector‑field expression** of Balance dynamics. If the
+  Balance Tensor (Section X) describes *how imbalance is shaped*, the Balance Flow describes
+  *how imbalance moves*. It is the field of forces, fluxes, divergences, curls, and trajectories
+  that govern...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XI — The Balance Flow**
 
 The Balance Flow is the **vector‑field expression** of Balance dynamics. If the Balance Tensor (Section X) describes *how imbalance is shaped*, the Balance Flow describes *how imbalance moves*. It is the field of forces, fluxes, divergences, curls, and trajectories that govern the evolution of the Balance State Vector Field through the Balance Geometry.  

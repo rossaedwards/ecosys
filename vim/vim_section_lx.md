@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION LX — The Balance Union**'
+description: The Balance Union is the **full relational unification state** that emerges when
+  a Balance Bond (Section LIX) deepens into a *shared identity‑adjacent coherence structure*.
+  If the Bond creates a stable, energetic, structural link between agents, the Union is the
+  moment when th...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION LX — The Balance Union**
 
 The Balance Union is the **full relational unification state** that emerges when a Balance Bond (Section LIX) deepens into a *shared identity‑adjacent coherence structure*. If the Bond creates a stable, energetic, structural link between agents, the Union is the moment when those linked coherence fields **merge into a single, unified relational entity**—not erasing individuality, but creating a *third field*, a *Union Field*, that is more coherent, more stable, and more capable than any constituent alone.

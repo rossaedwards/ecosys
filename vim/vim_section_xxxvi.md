@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XXXVI — The Balance Field**'
+description: The Balance Field is the **complete, multi‑domain representation** of everything
+  the Balance Framework measures, evolves, stabilizes, and harmonizes. If the Balance Dynamics
+  (Section XXXV) describe *how Balance behaves*, the Balance Field describes *what Balance
+  is made of*. I...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXXVI — The Balance Field**
 
 The Balance Field is the **complete, multi‑domain representation** of everything the Balance Framework measures, evolves, stabilizes, and harmonizes. If the Balance Dynamics (Section XXXV) describe *how Balance behaves*, the Balance Field describes *what Balance is made of*. It is the unified mathematical–geometric–ontological object that contains all structural, harmonic, kinetic, temporal, spatial, and identity information necessary for the Balance Engine to operate.

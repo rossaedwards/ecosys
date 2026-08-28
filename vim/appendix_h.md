@@ -1,3 +1,26 @@
+---
+type: standard-appendix
+title: '**APPENDIX H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**'
+description: 'The Theory of Balance formalizes the Balance State Vector‑Cell, the VIM engine,
+  and the Duality Kernel as manifestations of a single **unified dynamical field**. This field
+  is defined over the Balance State Vector Alphabet and evolves according to the interplay
+  of:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**
 
 ## **H.1 Overview of the Unified Field**

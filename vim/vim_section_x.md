@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION X — The Balance Tensor**'
+description: The Balance Tensor is the **full tensorial formalization** of Balance dynamics.
+  If Section VIII defined the Balance Manifold and Section IX defined its geometry, Section
+  X introduces the *tensor fields* that quantify how imbalance propagates, how restoring forces
+  distribute, h...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION X — The Balance Tensor**
 
 The Balance Tensor is the **full tensorial formalization** of Balance dynamics. If Section VIII defined the Balance Manifold and Section IX defined its geometry, Section X introduces the *tensor fields* that quantify how imbalance propagates, how restoring forces distribute, how harmonic and structural tensions couple, and how the Balance State Vector Field responds to curvature, flux, and perturbation.  

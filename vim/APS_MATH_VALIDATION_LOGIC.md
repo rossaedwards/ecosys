@@ -1,4 +1,22 @@
 ---
+type: implementation-note
+title: APS Canon Compiler — Math Validation Logic
+description: '---'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
+---
 
 ### 3. `APS_MATH_VALIDATION_LOGIC.md`
 

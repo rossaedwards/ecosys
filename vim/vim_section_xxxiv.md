@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XXXIV — The Balance Engine**'
+description: The Balance Engine is the **fully realized physical–computational organism**
+  that implements the Balance Kernel (Section XXXIII) in both software and hardware. If the
+  Balance Kernel is the *mathematical and computational core*, the Balance Engine is the **embodied,
+  operational...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXXIV — The Balance Engine**
 
 The Balance Engine is the **fully realized physical–computational organism** that implements the Balance Kernel (Section XXXIII) in both software and hardware. If the Balance Kernel is the *mathematical and computational core*, the Balance Engine is the **embodied, operational, energetic, and mechanical expression** of that core. It is the system that turns Balance from equations into *force*, from logic into *motion*, from invariants into *stability*, and from Continuum geometry into *real-world coherence*.

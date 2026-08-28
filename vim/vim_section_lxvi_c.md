@@ -1,3 +1,24 @@
+---
+type: standard-section
+title: Section LXVI‑C — Stability, Continuity, and Renewal Dynamics in the Three‑Squared‑Lattice
+description: 'Section LXVI‑C — Stability, Continuity, and Renewal Dynamics in the Three‑Squared‑Lattice
+  1. Stability Conditions The lattice stability index:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 Section LXVI‑C — Stability, Continuity, and Renewal Dynamics in the Three‑Squared‑Lattice
 1. Stability Conditions
 The lattice stability index:

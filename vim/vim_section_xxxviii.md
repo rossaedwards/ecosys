@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXXVIII — The Balance Geometry**'
+description: The Balance Geometry is the **deep geometric structure** underlying the Balance
+  Manifold (Section XXXVII) and the Balance Field (Section XXXVI). If the Balance Manifold
+  defines *where* Balance lives, the Balance Geometry defines *how that space is shaped, curved,
+  folded, and c...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XXXVIII — The Balance Geometry**
 
 The Balance Geometry is the **deep geometric structure** underlying the Balance Manifold (Section XXXVII) and the Balance Field (Section XXXVI). If the Balance Manifold defines *where* Balance lives, the Balance Geometry defines *how that space is shaped, curved, folded, and connected*. It is the mathematical and conceptual foundation that determines how imbalance moves, how coherence spreads, how modes propagate, and how Equilibrium Manifold emerges as the global attractor.

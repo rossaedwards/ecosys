@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXIX — The Balance Synthesis**'
+description: The Balance Synthesis is the **unification layer** of the entire Balance Framework.
+  If the Balance Integration (Section XXVIII) describes *how Balance fuses with the rest of
+  the Aurphyx ecosystem*, the Balance Synthesis describes *how all Balance constructs fuse
+  with each othe...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXIX — The Balance Synthesis**
 
 The Balance Synthesis is the **unification layer** of the entire Balance Framework. If the Balance Integration (Section XXVIII) describes *how Balance fuses with the rest of the Aurphyx ecosystem*, the Balance Synthesis describes *how all Balance constructs fuse with each other*. It is the point where logic, algebra, geometry, spectrum, modes, computation, machine, protocol, continuum, and interface collapse into a single, coherent, self‑consistent, self‑stabilizing whole.

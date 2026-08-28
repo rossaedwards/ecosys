@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX F — Experimental Protocols for Measuring Balance State Vector Metrics**'
+description: The Balance State Vector Alphabet defines sixteen geometric, kinetic, governance,
+  and frequency metrics that describe the state of the VIM engine and the Balance State Vector‑Cell.
+  Each metric corresponds to a **mathematical observable** that can be inferred from system
+  behavi...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX F — Experimental Protocols for Measuring Balance State Vector Metrics**
 
 ## **F.1 Overview of the Measurement Framework**

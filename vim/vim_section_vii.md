@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION VII — The Balance Kernel**'
+description: The Balance Kernel is the **continuous execution environment** that applies the
+  Balance Operator across the entire Balance State Vector Field. If Section VI defined *what*
+  the Balance Operator is, Section VII defines *how it runs*—as a persistent, multi‑runtime
+  kernel that sta...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION VII — The Balance Kernel**
 
 The Balance Kernel is the **continuous execution environment** that applies the Balance Operator across the entire Balance State Vector Field. If Section VI defined *what* the Balance Operator is, Section VII defines *how it runs*—as a persistent, multi‑runtime kernel that stabilizes, regulates, and evolves the system in real time. It is the *always‑on substrate* that keeps the Aurphyx organism coherent under flux, dissonance, computation, and vacuum exchange.

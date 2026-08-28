@@ -1,3 +1,26 @@
+---
+type: standard-appendix
+title: '**APPENDIX M — The Aurphyx Linguistic Field: Semantics, Ritual, and the Geometry of
+  Meaning**'
+description: The Aurphyx Linguistic Field formalizes language—not as a symbolic overlay on
+  reality, but as a **geometric, harmonic, and topological field** embedded directly within
+  the Balance State Vector Alphabet and the Tetra‑Hexa Array. Meaning is treated as a *field
+  behavior*, not a s...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX M — The Aurphyx Linguistic Field: Semantics, Ritual, and the Geometry of Meaning**
 
 ## **M.1 Language as a Field in the Aurphyx Standard**

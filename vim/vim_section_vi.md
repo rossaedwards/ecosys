@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION VI — The Balance Equation**'
+description: 'The Balance Equation is the **core dynamical law** that governs how the Balance
+  State Vector Field evolves under the combined influence of structural tension, harmonic
+  dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM
+  Thesis: the point whe...'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION VI — The Balance Equation**
 
 The Balance Equation is the **core dynamical law** that governs how the Balance State Vector Field evolves under the combined influence of structural tension, harmonic dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM Thesis: the point where the Balance Coefficient, the Equilibrium Manifold, HRD, and the Unified Field all converge into a single evolution rule.

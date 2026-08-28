@@ -1,3 +1,24 @@
+---
+type: standard-section
+title: Vacuum Impedance Matching and the Theory of Balance
+description: Vacuum Impedance Matching and the Theory of Balance
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 ABSTRACT_INTRO_SECTION-I.md
 Vacuum Impedance Matching and the Theory of Balance
 Author: Ross A. Edwards, Aurphyx LLC

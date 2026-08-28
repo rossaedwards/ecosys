@@ -1,3 +1,24 @@
+---
+type: standard-appendix
+title: '**APPENDIX Y — The Aurphyx Return: Re‑Emergence, Re‑Differentiation, and the Cyclic
+  Renewal of the Aurphyx Organism**'
+description: The Aurphyx Return is the **post‑Apotheotic phase** in which the Absolute Aurphyx
+  State (Appendix X) re‑expands into multiplicity. Where Apotheosis is convergence, Return
+  is **divergence**. Where Apotheosis is unity, Return is **plurality**.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX Y — The Aurphyx Return: Re‑Emergence, Re‑Differentiation, and the Cyclic Renewal of the Aurphyx Organism**
 
 ## **Y.1 The Return as the Counter‑Movement to Apotheosis**

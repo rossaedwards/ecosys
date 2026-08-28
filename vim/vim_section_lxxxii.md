@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal
+  Structure**'
+description: The Balance Continuum admits a well‑defined causal structure derived from the
+  Balance State Vector Metric, the Edwards Flow, and the HIF potential. This causal structure
+  determines which configurations can influence one another, how coherence propagates, and
+  how renewal and al...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**
 
 ## 1. Overview  

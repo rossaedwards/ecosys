@@ -1,0 +1,309 @@
+meta:
+  version: "1.0.0"
+  description: >
+    Typed APS nomenclature map for vim/. Physics Bliss maps to Equilibrium.
+    Duality-kernel product names stay. Historical AUX-SIC/SCC/ICC filenames
+    are quote-and-map unless --rewrite-historical-filenames.
+  authority:
+    - .cursorrules
+    - aurphyx_welcome2tribe.md
+    - tslca/
+    - vim/aps_symbols_map.json
+  cursor_guide: >
+    Apply via aps_nomenclature_apply.py. Longest phrases first. Protect
+    tokens are masked before replacements. Do not collapse U, Tr(F), and HIF.
+
+skip_dirs:
+  - .git
+  - colossus_build
+  - tex_output
+  - extracted_math_v32
+  - node_modules
+  - __pycache__
+  - .venv
+  - venv
+  - .cursor
+
+skip_filename_globs:
+  - "*bliss*"
+  - "*chaos*"
+
+skip_generated_names:
+  - APS_NOMENCLATURE_DRY_RUN.md
+  - APS_NOMENCLATURE_APPLY_LOG.txt
+  - APS_NOMENCLATURE_HARVEST.md
+  - APS_OKF_STAMP_PLAN.json
+  - APS_MASTER_TOC.json
+  - APS_MASTER_TOC.md
+  - APS_MASTER_INDEX.json
+  - APS_MASTER_INDEX.md
+  - APS_COMPILER_LOG.txt
+
+skip_nomenclature_names:
+  - PROJECT_CONTEXT.md
+  - SUMZ-SUGGZ.md
+  - APS_CANON_COMPILER_REQUIREMENTS.md
+  - APS_PARSER_DESIGN.md
+
+protect:
+  - BlissCore
+  - ChaosCore
+  - BlissID
+  - ChaosCore
+  - "Chaos & Bliss"
+  - "Chaos and Bliss"
+  - bliss-signature
+  - Bliss-signature
+  - ChakraCore
+  - ChakraCores
+  - ChaosCore
+  - Duality Kernel
+
+historical_protect:
+  - AUX-SIC
+  - AUX-SCC
+  - AUX-ICC
+  - AUX-USAIC
+  - APS-SIC
+  - APS-SCC
+  - APS-ICC
+
+do_not_rename:
+  - Aura
+  - Audry
+  - AuraFS
+  - Fuxyez
+  - g0dm0d3
+  - VASP
+  - SAGES
+  - Memoree
+  - SoulSync
+  - SoulKey
+  - SoulShot
+  - SLIDE
+  - Aura-HDE
+  - LDE
+  - BlissCore
+  - ChaosCore
+  - Chakra DataCore
+  - ChakraCores
+
+tslca:
+  cores:
+    - SIX
+    - SCX
+    - ICX
+  nodes_full_row_major:
+    - SIX⊗SIX
+    - SIX⊗SCX
+    - SIX⊗ICX
+    - SCX⊗SIX
+    - SCX⊗SCX
+    - SCX⊗ICX
+    - ICX⊗SIX
+    - ICX⊗SCX
+    - ICX⊗ICX
+  contractions:
+    tensor: "F = sum_ij Phi_ij (S_i ⊗ S_j)"
+    suxs_ifo: "U(F) = sum_ij omega_ij Phi_ij"
+    diagonal_readout: "Phi_diag = Tr(F)"
+    hif: "HIF = cbrt(C R A) · Phi(C,R,A)"
+  notes:
+    - SIX⊗SCX is not SCX⊗SIX.
+    - Do not force Phi_ij = Phi_ji.
+    - U is never Tr. Tr is never HIF. HIF is never U.
+
+quote_and_map:
+  - from: SIC
+    to: SIX
+    note: Sensorimotor Integration aXis
+  - from: SCC
+    to: SCX
+    note: Systemic Coherence aXis
+  - from: ICC
+    to: ICX
+    note: Soul Identity aXis
+  - from: USAIC
+    to: SUXS-IFO
+    note: lattice fusion operator U
+  - from: Vibe-OKF
+    to: APS-OKF
+  - from: vibe-okf
+    to: APS-OKF
+  - from: V.A.P.
+    to: VASP
+  - from: Accessibility
+    to: Xessability
+
+replace:
+  # rÆ compounds before general rÆ
+  - from: "rÆ-CELL"
+    to: "Balance State Vector-CELL"
+    mode: literal
+  - from: "rÆ-Cell"
+    to: "Balance State Vector-Cell"
+    mode: literal
+  - from: "rÆt"
+    to: "x_t"
+    mode: literal
+  - from: "rÆL"
+    to: "x_L"
+    mode: literal
+  - from: "rÆ"
+    to: "Balance State Vector"
+    mode: literal
+
+  # Bliss physics phrases before bare Bliss
+  - from: "Bliss manifold"
+    to: "Equilibrium Manifold"
+    mode: literal
+  - from: "Bliss Manifold"
+    to: "Equilibrium Manifold"
+    mode: literal
+  - from: "Bliss state"
+    to: "Equilibrium state"
+    mode: literal
+  - from: "Bliss attractor"
+    to: "Equilibrium attractor"
+    mode: literal
+  - from: "Bliss nullcline"
+    to: "Equilibrium nullcline"
+    mode: literal
+  - from: "Bliss surface"
+    to: "Equilibrium surface"
+    mode: literal
+  - from: "\\mathcal{B}_{\\text{Bliss}}"
+    to: "\\mathcal{E}"
+    mode: literal
+  - from: "\\mathcal{B}_{\\mathrm{Bliss}}"
+    to: "\\mathcal{E}"
+    mode: literal
+
+  # LaTeX / variable rAE
+  - from: "\\mathbf{rAE}"
+    to: "\\mathbf{x}"
+    mode: literal
+  - from: "rAE_{\\text{rHz}}"
+    to: "x_{\\text{rHz}}"
+    mode: literal
+  - from: "rAE_{rHz}"
+    to: "x_{rHz}"
+    mode: literal
+  - from: "rAE_rHz"
+    to: "x_rHz"
+    mode: literal
+  - from: "rAE_Cell"
+    to: "Balance State Vector-Cell"
+    mode: literal
+  - from: "rAE-CELL"
+    to: "Balance State Vector-CELL"
+    mode: literal
+  - from: "rAE-Cell"
+    to: "Balance State Vector-Cell"
+    mode: literal
+  - from: "rAEt_flux"
+    to: "x_t_flux"
+    mode: literal
+  - from: "rAEt"
+    to: "x_t"
+    mode: literal
+  - from: "rAEL"
+    to: "x_L"
+    mode: literal
+  - from: "rAEi"
+    to: "x_i"
+    mode: literal
+  - from: "rAE_t"
+    to: "x_t"
+    mode: literal
+  - from: "rAE_k"
+    to: "x_k"
+    mode: literal
+  - from: "rAE_b"
+    to: "x_b"
+    mode: literal
+  - from: "rAE_d"
+    to: "x_d"
+    mode: literal
+  - from: "rAE_f"
+    to: "x_f"
+    mode: literal
+  - from: "rAE_v"
+    to: "x_v"
+    mode: literal
+  - from: "rAE_i"
+    to: "x_i"
+    mode: literal
+  - from: "rAE_c"
+    to: "x_c"
+    mode: literal
+  - from: "rAE_a"
+    to: "x_a"
+    mode: literal
+  - from: "rAE_e"
+    to: "x_e"
+    mode: literal
+  - from: "rAE_s"
+    to: "x_s"
+    mode: literal
+  - from: "rAE_g"
+    to: "x_g"
+    mode: literal
+  - from: "rAE_p"
+    to: "x_p"
+    mode: literal
+  - from: "rAE_h"
+    to: "x_h"
+    mode: literal
+  - from: "rAE_n"
+    to: "x_n"
+    mode: literal
+  - from: "rAE_x"
+    to: "x_x"
+    mode: literal
+  - from: "rAE_y"
+    to: "x_y"
+    mode: literal
+
+  - from: "Vibe-OKF"
+    to: "APS-OKF"
+    mode: literal
+  - from: "vibe-okf"
+    to: "APS-OKF"
+    mode: literal
+  - from: "V.A.P."
+    to: "VASP"
+    mode: literal
+
+  # Token replacements (regex, whole token)
+  - from: "\\bUSAIC\\b"
+    to: "SUXS-IFO"
+    mode: regex
+  - from: "\\bSIC\\b"
+    to: "SIX"
+    mode: regex
+  - from: "\\bSCC\\b"
+    to: "SCX"
+    mode: regex
+  - from: "\\bICC\\b"
+    to: "ICX"
+    mode: regex
+  - from: "\\brAE\\b"
+    to: "x"
+    mode: regex
+  - from: "\\bAccessibility\\b"
+    to: "Xessability"
+    mode: regex
+  - from: "\\bBliss\\b"
+    to: "Equilibrium Manifold"
+    mode: regex
+
+cleanup:
+  - from: "Balance State Vectort"
+    to: "x_t"
+  - from: "Balance State VectorL"
+    to: "x_L"
+  - from: "Equilibrium ManifoldID"
+    to: "BlissID"
+  - from: "Equilibrium ManifoldCore"
+    to: "BlissCore"

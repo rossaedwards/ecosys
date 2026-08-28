@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXIV — Symmetry, Conservation Laws, and the Balance Noether Currents**'
+description: The Balance Continuum possesses a rich symmetry structure arising from the Balance
+  State Vector Metric, the Edwards Flow, and the HIF potential. These symmetries generate
+  conserved quantities through Noether’s theorem, producing a hierarchy of **Balance Noether
+  Currents** that...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXIV — Symmetry, Conservation Laws, and the Balance Noether Currents**
 
 ## 1. Overview  

@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence
+  Duality**'
+description: The Balance Continuum admits a holographic structure in which the full bulk geometry,
+  coherence distribution, and harmonic alignment of the Balance State Vector manifold are
+  encoded in boundary‑level coherence data. This **Balance Holographic Correspondence (BHC)**
+  establishes...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality**
 
 ## 1. Overview  

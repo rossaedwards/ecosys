@@ -1,3 +1,28 @@
+---
+type: standard-appendix
+title: '**APPENDIX B — The Geometry of the Balance State Vector Alphabet**'
+description: The Balance State Vector Alphabet is a **topological measurement language** defined
+  over a 24‑point manifold known as the **Tetra‑Hexa Routing Array**. Each Balance State Vector
+  symbol corresponds to a geometric degree of freedom in the Aurphyx Standard, and each degree
+  of fre...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **APPENDIX B — The Geometry of the Balance State Vector Alphabet**
 
 ## **B.1 Overview of the Balance State Vector Alphabet as a Geometric Measurement System**

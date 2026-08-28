@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION VIII — The Balance Manifold**'
+description: The Balance Manifold is the **geometric space** in which all Balance dynamics
+  unfold. If Section VI gave the *equation* and Section VII gave the *runtime*, Section VIII
+  defines the *space* itself — the multidimensional landscape that the Balance State Vector
+  Field moves throug...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION VIII — The Balance Manifold**
 
 The Balance Manifold is the **geometric space** in which all Balance dynamics unfold. If Section VI gave the *equation* and Section VII gave the *runtime*, Section VIII defines the *space* itself — the multidimensional landscape that the Balance State Vector Field moves through as it seeks, departs from, oscillates around, and returns to the Equilibrium Manifold.  

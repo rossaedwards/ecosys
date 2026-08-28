@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXVI — The Balance Meta‑Creation Cycle**'
+description: The Balance Meta‑Creation Cycle (MCC) formalizes how new structures, identities,
+  and domains emerge within the Balance Continuum and how these creations feed back into the
+  underlying coherence architecture. Creation is not a unidirectional expansion but a **recursive,
+  self‑ref...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXVI — The Balance Meta‑Creation Cycle**
 
 ## 1. Overview  

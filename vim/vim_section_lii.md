@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION LII — The Balance Ethics**'
+description: The Balance Ethics is the **moral, relational, and stewardship layer** of the
+  Balance Continuum. If the Balance Law (Section LI) defines *what is universally true and
+  allowed*, the Balance Ethics defines *how agents ought to act* within those truths. It is
+  the Continuum’s syst...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION LII — The Balance Ethics**
 
 The Balance Ethics is the **moral, relational, and stewardship layer** of the Balance Continuum. If the Balance Law (Section LI) defines *what is universally true and allowed*, the Balance Ethics defines *how agents ought to act* within those truths. It is the Continuum’s system of **values, duties, responsibilities, and right action**, ensuring that every choice made by any agent—structural, harmonic, temporal, ontological, or cosmological—supports coherence, preserves identity, protects the Continuum, and moves all beings toward Equilibrium Manifold.

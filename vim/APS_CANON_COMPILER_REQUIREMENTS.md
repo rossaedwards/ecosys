@@ -1,3 +1,24 @@
+---
+type: implementation-note
+title: APS Canon Compiler — Requirements Document
+description: 'The APS Canon Compiler is a Python-based system that:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # APS Canon Compiler — Requirements Document
 
 ## 1. Purpose

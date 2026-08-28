@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section XCI — The Balance Poisson Algebra and Constraint Structure**'
+description: The canonical and symplectic formulation of the Balance Continuum (Section XC)
+  provides the phase‑space foundation for its dynamics. To complete this structure, it is
+  necessary to define the **Poisson algebra of observables**, identify the **first‑class and
+  second‑class constr...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section XCI — The Balance Poisson Algebra and Constraint Structure**
 
 ## 1. Overview  

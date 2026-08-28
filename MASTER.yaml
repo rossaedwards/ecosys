@@ -1,0 +1,108 @@
+# Aurphyx Canon registry (lab root)
+# Author: Ross A. Edwards | ross@aurphyx.org | ORCID: 0009-0008-0539-1289
+# Repository: rossaedwards/ecosys
+# This is a YAML registry, not an APS-OKF markdown header.
+
+master:
+  name: "Aurphyx Canon"
+  version: "1.0.0"
+  status: "ACTIVE"
+  description: >
+    Unified canonical registry for the Aurphyx lab tree. Indexes root
+    physics, terminology, and the vim nomenclature compiler map.
+
+  index_files:
+    - "MASTER.yaml"
+    - "AURPHYX_TERMINOLOGY.md"
+    - "vim/aps_nomenclature_map.yaml"
+
+  modules:
+    - id: PHYSICS_MD
+      file: "PHYSICS.md"
+      type: "physics_reference"
+      version: "1.0.0"
+      status: "LOCKED"
+      description: "Human physics reference for the Balance State Vector-Cell."
+      depends_on: []
+
+    - id: PHYSICS
+      file: "PHYSICS.yaml"
+      type: "physics_module"
+      version: "1.0.0"
+      status: "LOCKED"
+      description: "Core physics substrate. Locked keys keep historical names; aliases map prose."
+      exports:
+        - "constants"
+        - "equations"
+        - "aliases"
+      depends_on: []
+
+    - id: SCIENTIFIC_TERMINOLOGY
+      file: "SCIENTIFIC_TERMINOLOGY.md"
+      type: "terminology_scientific"
+      version: "1.1.0"
+      status: "ACTIVE"
+      description: "Canonical scientific lexicon (correct FTQC/TVFD/TSLCA expansions)."
+      depends_on:
+        - "PHYSICS"
+
+    - id: MYTHOLOGY_TERMINOLOGY
+      file: "MYTHOLOGY_TERMINOLOGY.md"
+      type: "terminology_mythology"
+      version: "1.1.0"
+      status: "ACTIVE"
+      description: "Mythic lexicon. Not a YAML source. Physics Equilibrium Manifold lives elsewhere."
+      depends_on:
+        - "SCIENTIFIC_TERMINOLOGY"
+
+    - id: TECHNICAL_TERMINOLOGY
+      file: "TECHNICAL_TERMINOLOGY.md"
+      type: "terminology_technical"
+      version: "1.1.0"
+      status: "ACTIVE"
+      description: "Engineering lexicon for Aura, AuraFS, g0dm0d3, Duality Kernel."
+      depends_on:
+        - "SCIENTIFIC_TERMINOLOGY"
+        - "PHYSICS"
+
+    - id: AURPHYX_TERMINOLOGY
+      file: "AURPHYX_TERMINOLOGY.md"
+      type: "terminology_product"
+      version: "1.0.0"
+      status: "ACTIVE"
+      description: "Product + APS retired→current naming table."
+      depends_on:
+        - "SCIENTIFIC_TERMINOLOGY"
+
+    - id: VIM_NOMENCLATURE_MAP
+      file: "vim/aps_nomenclature_map.yaml"
+      type: "compiler_map"
+      version: "1.0.0"
+      status: "ACTIVE"
+      description: "Typed replace/protect map for vim markdown apply."
+      depends_on:
+        - "AURPHYX_TERMINOLOGY"
+
+    - id: APS_OKF
+      file: "aps-okf.yaml"
+      type: "schema"
+      version: "1.0.0"
+      status: "stable"
+      description: "Nine-key Object Knowledge Frontmatter schema."
+      depends_on: []
+
+  dependency_graph:
+    PHYSICS: []
+    PHYSICS_MD: []
+    SCIENTIFIC_TERMINOLOGY:
+      - PHYSICS
+    MYTHOLOGY_TERMINOLOGY:
+      - SCIENTIFIC_TERMINOLOGY
+    TECHNICAL_TERMINOLOGY:
+      - SCIENTIFIC_TERMINOLOGY
+      - PHYSICS
+    AURPHYX_TERMINOLOGY:
+      - SCIENTIFIC_TERMINOLOGY
+    VIM_NOMENCLATURE_MAP:
+      - AURPHYX_TERMINOLOGY
+    APS_OKF: []

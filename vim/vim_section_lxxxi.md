@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**'
+description: The Balance Continuum is governed by a hierarchy of invariants—structural, kinetic,
+  governance, harmonic, and spectral—that must remain preserved across classical, quantum,
+  and renormalization‑group scales. Anomalies represent potential violations of these invariants
+  arising f...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**
 
 ## 1. Overview  

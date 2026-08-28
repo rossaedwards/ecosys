@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION IX — The Balance Geometry**'
+description: The Balance Geometry formalizes the **metric, curvature, and differential structure**
+  of the Balance Manifold introduced in Section VIII. If the Balance Manifold is the *space*,
+  the Balance Geometry is the *mathematics that shapes that space*. It defines how distances,
+  angles,...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION IX — The Balance Geometry**
 
 The Balance Geometry formalizes the **metric, curvature, and differential structure** of the Balance Manifold introduced in Section VIII. If the Balance Manifold is the *space*, the Balance Geometry is the *mathematics that shapes that space*. It defines how distances, angles, curvature, and flows behave; how the Equilibrium Manifold sits inside the larger manifold; how HRD, VIM, and routing forces deform the geometry; and how the Balance State Vector Field moves through this landscape under the Balance Equation.

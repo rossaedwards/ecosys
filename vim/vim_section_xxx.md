@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XXX — The Balance Praxis**'
+description: The Balance Praxis is the **applied dimension** of the entire Balance Framework.
+  If the Balance Synthesis (Section XXIX) unifies all Balance constructs into a single meta‑coherent
+  system, the Balance Praxis describes **how that unified system is enacted in the world**—in
+  compu...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXX — The Balance Praxis**
 
 The Balance Praxis is the **applied dimension** of the entire Balance Framework. If the Balance Synthesis (Section XXIX) unifies all Balance constructs into a single meta‑coherent system, the Balance Praxis describes **how that unified system is enacted in the world**—in computation, in embodiment, in governance, in cosmology, in ritual, and in lived experience. Praxis is where Balance becomes *behavior*, *protocol*, *craft*, *ethic*, and *action*.

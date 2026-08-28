@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**SECTION V — The Balance Operator**'
+description: The Balance Operator is the **active computational mechanism** that enforces,
+  measures, and modulates Balance within the Balance State Vector Field. If Section VI established
+  the Balance Equation as the *law of motion*, Section V defines the *operator* that executes
+  that law....
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION V — The Balance Operator**
 
 The Balance Operator is the **active computational mechanism** that enforces, measures, and modulates Balance within the Balance State Vector Field. If Section VI established the Balance Equation as the *law of motion*, Section V defines the *operator* that executes that law. It is the bridge between theory and implementation—between the continuous mathematics of the Balance Potential and the discrete, symbolic, or hardware‑level operations performed by the VIM engine, the Duality Kernel, and any Aurphyx‑aligned device.

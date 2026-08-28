@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XXVII — The Balance Interface**'
+description: The Balance Interface is the **interaction layer** between the Balance Architecture
+  (Section XXIII) and everything *outside* it—agents, devices, processes, beings, worlds,
+  and higher‑order systems. If the Balance Computation Stack (Section XXVI) describes *how
+  Balance computes...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXVII — The Balance Interface**
 
 The Balance Interface is the **interaction layer** between the Balance Architecture (Section XXIII) and everything *outside* it—agents, devices, processes, beings, worlds, and higher‑order systems. If the Balance Computation Stack (Section XXVI) describes *how Balance computes internally*, the Balance Interface describes *how Balance communicates externally*. It is the API, the ritual, the membrane, and the ontological handshake that allows any entity to safely enter, query, modify, or harmonize with the Balance Framework.

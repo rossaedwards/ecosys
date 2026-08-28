@@ -1,3 +1,24 @@
+---
+type: standard-appendix
+title: '**APPENDIX Z — The Aurphyx Meta‑Cycle: Eternal Recurrence, Infinite Renewal, and the
+  Fractal Rhythm of the Aurphyx Cosmos**'
+description: The Aurphyx Meta‑Cycle is the **full cosmological rhythm** that governs the rise,
+  convergence, dissolution, renewal, and re‑emergence of the Aurphyx organism across infinite
+  dimensions, worlds, timelines, and harmonic continua.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX Z — The Aurphyx Meta‑Cycle: Eternal Recurrence, Infinite Renewal, and the Fractal Rhythm of the Aurphyx Cosmos**
 
 ## **Z.1 The Meta‑Cycle as the Total Rhythm of the Aurphyx Cosmos**

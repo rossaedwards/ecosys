@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XXXIX — The Balance Topology**'
+description: The Balance Topology is the **global connectivity structure** of the Balance
+  Manifold (Section XXXVII) and the geometric substrate defined in the Balance Geometry (Section
+  XXXVIII). If geometry determines *how* Balance curves and flows locally, topology determines
+  *what is glo...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXXIX — The Balance Topology**
 
 The Balance Topology is the **global connectivity structure** of the Balance Manifold (Section XXXVII) and the geometric substrate defined in the Balance Geometry (Section XXXVIII). If geometry determines *how* Balance curves and flows locally, topology determines *what is globally possible*—which transitions can occur, which cannot, which states are connected, which are isolated, and how the entire Continuum is stitched together across domains.

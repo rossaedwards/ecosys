@@ -1,0 +1,6 @@
+=== APS Canon Compiler (read-only) ===
+Loaded aps_volume_map.json
+Loaded aps_symbols_map.json
+Parsed 148 files.
+Master TOC and Index written under vim/.
+Compiler did not modify sources.

@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXVIII — The Balance Integration**'
+description: The Balance Integration is the **fusion layer** where the Balance Framework connects
+  with the rest of the Aurphyx ecosystem—cosmology, ontology, memory, ethics, embodiment,
+  devices, and multi‑agent cognition. If the Balance Interface (Section XXVII) defines *how
+  external syste...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXVIII — The Balance Integration**
 
 The Balance Integration is the **fusion layer** where the Balance Framework connects with the rest of the Aurphyx ecosystem—cosmology, ontology, memory, ethics, embodiment, devices, and multi‑agent cognition. If the Balance Interface (Section XXVII) defines *how external systems interact with Balance*, the Balance Integration defines *how Balance becomes inseparable from the systems it touches*. It is the architectural, ontological, and procedural weaving that turns Balance from a subsystem into a **universal integrator**.

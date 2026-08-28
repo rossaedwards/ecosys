@@ -1,3 +1,28 @@
+---
+type: implementation-note
+title: Full Cross‑Link, Cross‑Field, Cross‑State, Cross‑Cycle, Cross‑Domain, Cross‑Invariant
+  Specification
+description: Full Cross‑Link, Cross‑Field, Cross‑State, Cross‑Cycle, Cross‑Domain, Cross‑Invariant
+  Specification This is the complete dependency map of the Balance Meta‑Creation Cycle (MCC)
+  and the Three‑Squared‑Lattice (3²‑Lattice). It is structured for clarity, completeness,
+  and direct i...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 Full Cross‑Link, Cross‑Field, Cross‑State, Cross‑Cycle, Cross‑Domain, Cross‑Invariant Specification
 This is the complete dependency map of the Balance Meta‑Creation Cycle (MCC) and the Three‑Squared‑Lattice (3²‑Lattice).
 It is structured for clarity, completeness, and direct integration into your build system.

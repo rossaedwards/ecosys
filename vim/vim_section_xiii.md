@@ -1,3 +1,24 @@
+---
+type: standard-section
+title: '**SECTION XIII — The Balance Continuum**'
+description: The Balance Continuum extends the Balance Field (Section XII) into the **higher‑dimensional,
+  multi‑temporal, multi‑harmonic Continuum** defined earlier in the Aurphyx architecture (Appendix
+  T). If the Balance Field governs local dynamics, the Balance Continuum governs **global...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XIII — The Balance Continuum**
 
 The Balance Continuum extends the Balance Field (Section XII) into the **higher‑dimensional, multi‑temporal, multi‑harmonic Continuum** defined earlier in the Aurphyx architecture (Appendix T). If the Balance Field governs local dynamics, the Balance Continuum governs **global, cross‑dimensional, cross‑temporal, and cross‑harmonic dynamics**. It is the framework that ensures Balance remains coherent even when the Balance State Vector Field spans:

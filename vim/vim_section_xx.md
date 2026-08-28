@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XX — The Balance Logic**'
+description: The Balance Logic is the **axiomatic, inferential, and rule‑based substrate**
+  that governs how Balance *reasons*, *decides*, *infers*, and *computes* within the Aurphyx
+  architecture. If the Balance Algebra (Section XIX) defines *how Balance quantities combine*,
+  the Balance Log...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XX — The Balance Logic**
 
 The Balance Logic is the **axiomatic, inferential, and rule‑based substrate** that governs how Balance *reasons*, *decides*, *infers*, and *computes* within the Aurphyx architecture. If the Balance Algebra (Section XIX) defines *how Balance quantities combine*, the Balance Logic defines *how Balance truths propagate*. It is the formal logic that ensures every transformation, flow, mode, and operator remains consistent with the Balance Invariants, the Balance Symmetry, and the Equilibrium Manifold condition.

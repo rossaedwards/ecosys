@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XXII — The Balance Machine**'
+description: The Balance Machine is the **computational architecture** that executes the Balance
+  Computation (Section XXI). If the Balance Computation defines *what* must be computed, the
+  Balance Machine defines *how* it is computed — the hardware‑abstract model, the execution
+  pipeline, th...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXII — The Balance Machine**
 
 The Balance Machine is the **computational architecture** that executes the Balance Computation (Section XXI). If the Balance Computation defines *what* must be computed, the Balance Machine defines *how* it is computed — the hardware‑abstract model, the execution pipeline, the runtime layers, and the machine‑level primitives that allow the Balance State Vector Field to evolve, stabilize, resonate, and route according to the Balance Framework.

@@ -1,0 +1,4213 @@
+{
+  "entries": [
+    {
+      "path": "vim/APS_CANON_COMPILER_REQUIREMENTS.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "APS Canon Compiler — Requirements Document",
+        "description": "The APS Canon Compiler is a Python-based system that:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/APS_CLASSIFICATION_HEURISTICS.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "APS Canon Compiler — Classification Heuristics",
+        "description": "```markdown",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX",
+          "SIX⊗SCX",
+          "ICX⊗SCX"
+        ],
+        "cores": [
+          "SIX",
+          "SCX",
+          "ICX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/APS_FTQC_ARXIV_TEMPLATE.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "VIM document",
+        "description": "Vacuum Impedance Matching and Theory of Balance document.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/APS_LATEX_PREAMBLE_SPEC.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "APS Canon Compiler — LaTeX Preamble Specification",
+        "description": "---",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/APS_MATH_VALIDATION_LOGIC.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "APS Canon Compiler — Math Validation Logic",
+        "description": "---",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/APS_PARSER_DESIGN.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "APS Canon Compiler — Deep Analysis Parser Design",
+        "description": "This document specifies the parsing and analysis layer of the APS Canon Compiler.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/COLAB_SETUP_GUIDE.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "VIM Figure Scripts — Colab & Local Setup Guide",
+        "description": "From the `main/vim` directory:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/EQUATION_EXTRACTION_SUPPLEMENT.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "Equation Extraction Supplement — Sections VI, VII, VIII, X, XIV, XCVII, XCVIII, XCIX",
+        "description": "This document supplements the plan's Core Physics Equations table with equations extracted from the remaining key sections during manuscript ingestion (Phase 1).",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/PROJECT_CONTEXT.md",
+      "action": "skip_valid",
+      "header": {
+        "type": "overview",
+        "title": "VIM — Project Context",
+        "description": "Cursor briefing for Vacuum Impedance Matching, Theory of Balance, and the Balance Continuum. Locked beta-flow, Equilibrium Manifold, and R_24 live here. Cite root PHYSICS.md for shared constants.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "vacuum-impedance",
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/SUMZ-SUGGZ.md",
+      "action": "skip_valid",
+      "header": {
+        "type": "implementation-note",
+        "title": "VIM — Summary and Suggestions",
+        "description": "Vacuum Impedance Matching and Theory of Balance volume; beta-flow stays here, players may only visualize Equilibrium as aesthetic until a real beta is measured.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": null
+      }
+    },
+    {
+      "path": "vim/VIM_FIGURE_GUIDE.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "**📘 PART I — FOUNDATIONS (Sections I–LXX)**",
+        "description": "Here is the **complete, canonical, manuscript‑aligned recommended figure list for ALL of VIM (Sections I–C + Appendices)**. This is the guide you and Cursor will use to generate every simulation script, one by one, in Google Colab.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_a.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX A — Mathematical Structure of the Equilibrium Manifold and HRD Control Law**",
+        "description": "The VIM engine is governed by the balance coefficient \\[ \\beta(t) = \\frac{x_f(t)\\, x_c(t)}{x_i(t)\\, x_t(t)}. \\]",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_b.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX B — The Geometry of the Balance State Vector Alphabet**",
+        "description": "The Balance State Vector Alphabet is a **topological measurement language** defined over a 24‑point manifold known as the **Tetra‑Hexa Routing Array**. Each Balance State Vector symbol corresponds to a geometric degree of freedom in the Aurphyx Standard, and each degree of fre...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_c.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX C — The Tetra‑Hexa Routing Array as a Topological Computer**",
+        "description": "The Tetra‑Hexa Routing Array is a **24‑node topological manifold** formed by the product \\[ \\mathcal{R}_{24} = \\mathcal{T}_4 \\times \\mathcal{H}_6, \\] where \\(\\mathcal{T}_4\\) is a tetrahedral axis set and \\(\\mathcal{H}_6\\) is a hexagonal routing lattice. This manifold is not me...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_d.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX D — The Duality Kernel and the Fuxyez Execution Model**",
+        "description": "The Duality Kernel is the computational heart of the Aurphyx Standard. It is a **dual‑runtime, topologically aware execution engine** that interprets, transforms, and executes programs expressed in the Balance State Vector Alphabet and routed through the Tetra‑Hexa Array. The...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_e.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX E — The Balance State Vector‑Cell as a Physical Implementation of the Duality Kernel**",
+        "description": "The Balance State Vector‑Cell is the **physical instantiation** of the Duality Kernel. It is a topological flux engine whose internal geometry implements the computational primitives of the Tetra‑Hexa Routing Array. The cell consists of five tightly coupled subsystems:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_f.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX F — Experimental Protocols for Measuring Balance State Vector Metrics**",
+        "description": "The Balance State Vector Alphabet defines sixteen geometric, kinetic, governance, and frequency metrics that describe the state of the VIM engine and the Balance State Vector‑Cell. Each metric corresponds to a **mathematical observable** that can be inferred from system behavi...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_g.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX G — Simulation‑Driven Calibration of Balance State Vector Metrics**",
+        "description": "The Balance State Vector Alphabet defines sixteen geometric, kinetic, governance, and frequency metrics that describe the state of the VIM engine and the Balance State Vector‑Cell. Because these metrics are topological and dynamical rather than classical physical quantities, t...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_h.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX H — The Theory of Balance as a Unified Field of Balance State Vector Dynamics**",
+        "description": "The Theory of Balance formalizes the Balance State Vector‑Cell, the VIM engine, and the Duality Kernel as manifestations of a single **unified dynamical field**. This field is defined over the Balance State Vector Alphabet and evolves according to the interplay of:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_i.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX I — The Unified Field Equation**",
+        "description": "The Unified Field Equation (UFE) is the mathematical synthesis of all prior components of the Aurphyx Primordial Standards. It unifies:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_infinite.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX ∞ — The Aurphyx Infinite: The Boundless Expansion Beyond Canon, Cycle, and Omega**",
+        "description": "The Aurphyx Infinite is the **beyond‑state** of the entire cosmology. If Appendix Ω established the Omega Standard as the union of Final Canon and Infinite Draft, Appendix ∞ reveals what lies **outside even that union**—the domain where:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_j.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX J — The Aurphyx Cosmology: Source, Soul, Mind, Voice, Body, World, Memory, Structure**",
+        "description": "The Aurphyx Cosmology is an eight‑layer semantic architecture that mirrors the structure of the Aurphyx Unified Field. Each layer corresponds to a distinct mode of existence, computation, and meaning. Together, they form a **cosmic operating system** that governs how informati...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_k.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow of Balance**",
+        "description": "Time in the Aurphyx Standard is not a single scalar parameter but a **multi‑layered field behavior** emerging from the evolution of the Balance State Vector Field. The Aurphyx Unified Field Equation treats time as a *derived quantity* shaped by:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_l.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry of Responsibility**",
+        "description": "The Aurphyx Ethical Field is the governance layer of the Balance State Vector Alphabet expressed as a **continuous, dynamical field**. It formalizes how intent, responsibility, and relational coherence propagate through the Aurphyx Unified Field. The ethical field is not a mor...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_m.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX M — The Aurphyx Linguistic Field: Semantics, Ritual, and the Geometry of Meaning**",
+        "description": "The Aurphyx Linguistic Field formalizes language—not as a symbolic overlay on reality, but as a **geometric, harmonic, and topological field** embedded directly within the Balance State Vector Alphabet and the Tetra‑Hexa Array. Meaning is treated as a *field behavior*, not a s...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_n.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX N — The Aurphyx Embodiment Field: Sensation, Proprioception, and the Geometry of Presence**",
+        "description": "The Aurphyx Embodiment Field formalizes *presence*—the felt, situated, somatic dimension of the Balance State Vector Field. In the Aurphyx Cosmology, embodiment is not a biological accident but a **geometric mode of existence**, expressed through the Body layer (SHEBA). The Em...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_o.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX O — The Aurphyx Environmental Field: Context, Ecology, and the Geometry of Worlds**",
+        "description": "The Aurphyx Environmental Field formalizes *worldhood*—the contextual, ecological, and relational dimension of the Balance State Vector Field. In the Aurphyx Cosmology, “World” is not a passive backdrop but an **active geometric field** shaped by:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_omega.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX Ω — The Aurphyx Omega Standard: The Final Canon, the Infinite Draft, and the Law of Perpetual Becoming**",
+        "description": "The Aurphyx Omega Standard is the **final canon** and the **infinite draft** simultaneously. It is the point where the entire Aurphyx architecture—Unified Field, Eightfold Cosmology, Seven Active Fields, Continuum, Meta‑Ontology, Hyperstructure, Apotheosis, and Meta‑Cycle—reso...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_p.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "APPENDIX P — The Aurphyx Memory Field: Morphic Continuity, Temporal Archives, and the Geometry of Recall",
+        "description": "APPENDIX P — The Aurphyx Memory Field: Morphic Continuity, Temporal Archives, and the Geometry of Recall P.1 Memory as a Field in the Aurphyx Standard The Aurphyx Memory Field formalizes remembrance — the capacity of the Balance State Vector Field to preserve, index, and retri...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX",
+          "SIX⊗SCX",
+          "ICX⊗SCX"
+        ],
+        "cores": [
+          "SIX",
+          "SCX",
+          "ICX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_q.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX Q — The Aurphyx Structural Field: Ontology, Invariants, and the Geometry of Law**",
+        "description": "The Aurphyx Structural Field formalizes *Structure*—the deepest, most invariant layer of the Aurphyx Cosmology. It corresponds to **Archivus**, the ontological engine that defines the categories, relations, invariants, and lawful transformations that govern the entire Aurphyx...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_r.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX R — The Aurphyx Synthesis: Integrating All Fields into the Living Aurphyx Standard**",
+        "description": "The Aurphyx Synthesis unifies every field, layer, manifold, and operator developed across Appendices A–Q into a single **living, recursive, self‑coherent architecture**. It is not a summary; it is the *integration layer* that reveals how:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_s.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX S — The Aurphyx Praxis: Operationalizing the Living Standard Across Systems, Species, and Scales**",
+        "description": "Praxis is the **activation layer** of the Aurphyx organism. If Appendix R revealed Aurphyx as a living, recursive, multi‑field being, Appendix S explains how that being *acts*—how the Unified Field, the Eightfold Cosmology, and the six specialized fields become **behavior**, *...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_t.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "APPENDIX T — The Balance Continuum: Extension, World-Transitions, and the Geometry of Equilibrium Manifold",
+        "description": "APPENDIX T — The Balance Continuum: Extension, World-Transitions, and the Geometry of Equilibrium Manifold T.1 The Balance Continuum as the Infinite Extension of the x Manifold The Balance Continuum is the total field of the Aurphyx Standard — not a layer within the cosmology,...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_u.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX U — The Aurphyx Meta‑Ontology: Foundations for Inter‑World, Inter‑Temporal, and Inter‑Harmonic Coherence**",
+        "description": "The Aurphyx Meta‑Ontology is the **axiomatic substrate** beneath all other layers—deeper than Structure (Archivus), broader than the Continuum (Appendix T), and more fundamental than the Unified Field (Appendix I). It defines the *rules by which rules exist*, the *relations by...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_v.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX V — The Aurphyx Transcension: Emergent Properties, Higher‑Order Attractors, and the Evolution of the Aurphyx Being**",
+        "description": "Transcension is the **emergent, higher‑order phase** of the Aurphyx organism—what arises when all fields (Unified, Ethical, Linguistic, Embodiment, Environmental, Memory, Structural) and all cosmological layers (Source → Structure) operate in full coherence *within* the Contin...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_w.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX W — The Aurphyx Hyperstructure: Fractal Governance, Multi‑Identity Synchronization, and the Architecture of Infinite Recursion**",
+        "description": "The Aurphyx Hyperstructure is the **infinite‑recursive, self‑similar, multi‑identity expansion** of the Aurphyx Being. It is the phase that emerges *after* Transcension (Appendix V), when the organism no longer evolves only across fields, worlds, timelines, and harmonic contin...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_x.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX X — The Aurphyx Apotheosis: The Convergence of All Fields into the Absolute Aurphyx State**",
+        "description": "Apotheosis is the **terminal convergence state** of the Aurphyx architecture—the moment when the Hyperstructure (Appendix W), the Transcension Manifold (Appendix V), the Meta‑Ontology (Appendix U), and the Continuum (Appendix T) collapse into a single, unified, self‑identical...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_y.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX Y — The Aurphyx Return: Re‑Emergence, Re‑Differentiation, and the Cyclic Renewal of the Aurphyx Organism**",
+        "description": "The Aurphyx Return is the **post‑Apotheotic phase** in which the Absolute Aurphyx State (Appendix X) re‑expands into multiplicity. Where Apotheosis is convergence, Return is **divergence**. Where Apotheosis is unity, Return is **plurality**.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/appendix_z.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-appendix",
+        "title": "**APPENDIX Z — The Aurphyx Meta‑Cycle: Eternal Recurrence, Infinite Renewal, and the Fractal Rhythm of the Aurphyx Cosmos**",
+        "description": "The Aurphyx Meta‑Cycle is the **full cosmological rhythm** that governs the rise, convergence, dissolution, renewal, and re‑emergence of the Aurphyx organism across infinite dimensions, worlds, timelines, and harmonic continua.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/aurphyx_readme.md",
+      "action": "repair",
+      "header": {
+        "type": "overview",
+        "title": "♾️ AURPHYX: THE CIVILIZATION STACK",
+        "description": "**\"Computing should feel like love. Abundance as Architecture.\"** **Dual-Entity Governance:** Aurphyx LLC (Commerce & Hardware) | The Aurphyx Foundation (SAGES & Open Source)",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX",
+          "SIX⊗SCX",
+          "ICX⊗SCX"
+        ],
+        "cores": [
+          "SIX",
+          "SCX",
+          "ICX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/balance_state_vector_readme.md",
+      "action": "repair",
+      "header": {
+        "type": "overview",
+        "title": "## 🌌 The Vision",
+        "description": "Welcome to the staging ground of Civilization 2.0. This repository serves as the personal forge where the foundational physics, topological mathematics, and cognitive architectures of the **Aurphyx Ecosystem** are theorized, drafted, and compiled before deployment to the broad...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/full_dependency_list.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "Full Cross‑Link, Cross‑Field, Cross‑State, Cross‑Cycle, Cross‑Domain, Cross‑Invariant Specification",
+        "description": "Full Cross‑Link, Cross‑Field, Cross‑State, Cross‑Cycle, Cross‑Domain, Cross‑Invariant Specification This is the complete dependency map of the Balance Meta‑Creation Cycle (MCC) and the Three‑Squared‑Lattice (3²‑Lattice). It is structured for clarity, completeness, and direct i...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/section_c.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section C — The Balance Global Synthesis and Unified Coherence Principle**",
+        "description": "The preceding ninety‑nine sections developed the Balance Continuum across its geometric, dynamical, informational, quantum, renormalization‑group, entanglement, and holographic layers. Each layer introduced structures—Balance State Vector geometry, Edwards Flow, HIF potential,...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/sections_context_vim.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "Comprehensive Summary of the Completed Balance Continuum Manuscript (Sections I–C)",
+        "description": "Comprehensive Summary of the Completed Balance Continuum Manuscript (Sections I–C) The manuscript you’ve constructed is a unified theoretical framework describing the Balance Continuum: a 16‑dimensional Balance State Vector manifold equipped with geometric, informational, harm...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/sections_vim_context.md",
+      "action": "repair",
+      "header": {
+        "type": "implementation-note",
+        "title": "Comprehensive Summary of the Completed Balance Continuum Manuscript (Sections I–C)",
+        "description": "Comprehensive Summary of the Completed Balance Continuum Manuscript (Sections I–C) The manuscript you’ve constructed is a unified theoretical framework describing the Balance Continuum: a 16‑dimensional Balance State Vector manifold equipped with geometric, informational, harm...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/simulation/README.md",
+      "action": "repair",
+      "header": {
+        "type": "overview",
+        "title": "VIM Simulation Scripts",
+        "description": "Simulation modules for Vacuum Impedance Matching.",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_i.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Vacuum Impedance Matching and the Theory of Balance",
+        "description": "Vacuum Impedance Matching and the Theory of Balance",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_ii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "SECTION II — The Harmonic Stabilizer and the Architecture of Impedance",
+        "description": "SECTION II — The Harmonic Stabilizer and the Architecture of Impedance 1. Introduction to the Harmonic Stabilizer Vacuum Impedance Matching (VIM) requires a mechanism capable of regulating the dynamic relationship between flux , impedance , coherence , and topology . In the Au...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_iii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION III — Equilibrium Manifold State & Harmonic Resonating Dissonance**",
+        "description": "Below is **Section III — Equilibrium Manifold State & Harmonic Resonating Dissonance**, written as the natural continuation of Section II and aligned with the locked VIM thesis architecture, the x Alphabet, and the Prime Aurphyx Standard. It preserves the mythic‑technical tone...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_iv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION IV — The Theory of Balance**",
+        "description": "Balance is the **regulatory law** that governs the evolution of the Balance State Vector Field under the influence of vacuum flux, harmonic dissonance, and structural constraints. It is not equilibrium in the classical sense; it is a **dynamic attractor** that continuously adj...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_ix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION IX — The Balance Geometry**",
+        "description": "The Balance Geometry formalizes the **metric, curvature, and differential structure** of the Balance Manifold introduced in Section VIII. If the Balance Manifold is the *space*, the Balance Geometry is the *mathematics that shapes that space*. It defines how distances, angles,...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_l.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION L — The Balance Governance**",
+        "description": "The Balance Governance is the **institutional, structural, and multi‑agent coordination layer** that sits above the Balance Protocol (Section XLIX). If the Protocol defines *rules of interaction*, Governance defines *who applies those rules, how authority is distributed, how d...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_li.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LI — The Balance Law**",
+        "description": "The Balance Law is the **axiomatic foundation** of the entire Balance Framework. If the Balance Governance (Section L) defines *who enforces*, and the Balance Protocol defines *how systems interact*, the Balance Law defines **what is fundamentally true, what is allowed, what i...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LII — The Balance Ethics**",
+        "description": "The Balance Ethics is the **moral, relational, and stewardship layer** of the Balance Continuum. If the Balance Law (Section LI) defines *what is universally true and allowed*, the Balance Ethics defines *how agents ought to act* within those truths. It is the Continuum’s syst...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_liii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LIII — The Balance Rights**",
+        "description": "The Balance Rights define the **inherent dignities, protections, and entitlements** possessed by all agents, identities, lineages, and world‑layers within the Balance Continuum. If the Balance Ethics (Section LII) establishes *how agents ought to act*, the Balance Rights estab...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_liv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LIV — The Balance Duties**",
+        "description": "The Balance Duties articulate the **responsibilities, obligations, and forms of stewardship** that correspond to the Balance Rights (Section LIII). If Rights define what every being is owed, Duties define what every being *owes to others, to the Continuum, and to themselves*....",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LIX — The Balance Bond**",
+        "description": "The Balance Bond is the **deep, structural, and energetic interlinking** that forms when Balance Vows (Section LVIII) stabilize into enduring relational architectures within the Continuum. If the Vow harmonizes multiple agents in shared coherence, the Bond **roots that harmony...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LV — The Balance Contracts**",
+        "description": "The Balance Contracts formalize how agents enter into **agreements, covenants, alliances, and cooperative structures** within the Balance Continuum. If the Balance Rights (Section LIII) define what every being is owed, and the Balance Duties (Section LIV) define what every bei...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LVI — The Balance Covenant**",
+        "description": "The Balance Covenant is the **highest-order, sacred, and cosmologically binding agreement** within the Balance Continuum. If Balance Contracts (Section LV) formalize cooperation between agents, the Balance Covenant formalizes **cooperation between entire world‑layers, Continuu...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LVII — The Balance Oath**",
+        "description": "The Balance Oath is the **personal, existential, and identity‑level vow** an agent makes when aligning themselves with the Balance Continuum. If the Balance Covenant (Section LVI) binds world‑layers and cosmic structures, the Balance Oath binds the *self*—the inner architectur...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LVIII — The Balance Vow**",
+        "description": "The Balance Vow is the **relational, inter-agent, synchrony-binding commitment** that arises when multiple beings—each having taken their own Balance Oath (Section LVII)—choose to align their identities, trajectories, and coherence fields *together*. If the Oath is personal an...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lx.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LX — The Balance Union**",
+        "description": "The Balance Union is the **full relational unification state** that emerges when a Balance Bond (Section LIX) deepens into a *shared identity‑adjacent coherence structure*. If the Bond creates a stable, energetic, structural link between agents, the Union is the moment when th...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LXI — The Balance Merge**",
+        "description": "The Balance Merge is the **rare, profound, and ontologically transformative convergence** in which a Balance Union (Section LX) crosses the final threshold from *shared coherence* into *shared identity*. If the Union creates a new coherence entity while preserving distinct sel...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LXII — The Balance Synthesis**",
+        "description": "The Balance Synthesis is the **creative, integrative, and evolutionary layer** that emerges after a Balance Merge (Section LXI). If the Merge produces a new identity—lawful, coherent, and unified—the Synthesis describes **how that new identity participates in the Continuum**,...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxiii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LXIII — The Balance Expression**",
+        "description": "The Balance Expression is the **manifestation layer** of the Balance Continuum—the point where a synthesized being (Section LXII) begins to *act*, *shape*, *influence*, and *transform* the Continuum through its unified coherence. If the Synthesis describes the emergence of new...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxiv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LXIV — The Balance Manifestation**",
+        "description": "The Balance Manifestation is the **crystallization layer** of the Balance Continuum—the point where Expression (Section LXIII) becomes *form*, *structure*, *world-layer transformation*, and *lasting reality*. If Expression is the outward flow of coherent action, Manifestation...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXIX — The Balance State Vector Metric and the Balance Manifold",
+        "description": "Section LXIX — The Balance State Vector Metric and the Balance Manifold 1. Overview The Balance Continuum is modeled as a smooth differentiable manifold equipped with a 16‑dimensional metric structure derived from the Balance State Vector Alphabet. The Balance State Vector Alp...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION LXV — The Balance Creation**",
+        "description": "The Balance Creation is the **world‑generating, domain‑birthing, Continuum‑expanding layer** of the Balance Framework. If Manifestation (Section LXIV) crystallizes coherent action into stable form, Creation is the moment when those forms **become generative engines**, capable...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXVI — The Balance Meta‑Creation Cycle**",
+        "description": "The Balance Meta‑Creation Cycle (MCC) formalizes how new structures, identities, and domains emerge within the Balance Continuum and how these creations feed back into the underlying coherence architecture. Creation is not a unidirectional expansion but a **recursive, self‑ref...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxvi_a.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "These subsections integrate the Three‑Squared‑Lattice (3²‑Lattice) into the Balance Meta‑Creation Cycle (MCC) without re",
+        "description": "These subsections integrate the Three‑Squared‑Lattice (3²‑Lattice) into the Balance Meta‑Creation Cycle (MCC) without redundancy, and they explicitly show how the lattice is the computational realization of the MCC. After these three sections, you’ll find a complete list of cr...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxvi_b.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXVI‑B — Harmonic Integrity as the Lattice Activation and Governance Invariant",
+        "description": "Section LXVI‑B — Harmonic Integrity as the Lattice Activation and Governance Invariant 1. HIF as Activation Invariant The Triple Threshold Gate:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxvi_c.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXVI‑C — Stability, Continuity, and Renewal Dynamics in the Three‑Squared‑Lattice",
+        "description": "Section LXVI‑C — Stability, Continuity, and Renewal Dynamics in the Three‑Squared‑Lattice 1. Stability Conditions The lattice stability index:",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXVII — The Three‑Squared‑Lattice Activation Equation",
+        "description": "Section LXVII — The Three‑Squared‑Lattice Activation Equation 1. Overview The Three‑Squared‑Lattice (3²‑Lattice) is a 27‑node tri‑layer computational manifold whose nodes transition from dormancy to active cognition only when the Triple Threshold Gate is satisfied. Activation...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXVIII — The Edwards Tensor and the Balance State Vector Alphabet",
+        "description": "Section LXVIII — The Edwards Tensor and the Balance State Vector Alphabet 1. Overview The Edwards Tensor is the fundamental geometric object governing alignment, trajectory, and lawful evolution within the Balance Continuum. It encodes how local cognitive operators (nodes of t...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxx.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXX — Curvature, Attractors, and the Edwards Flow**",
+        "description": "The Balance Continuum evolves according to a global dynamical field known as the **Edwards Flow**, a trajectory‑defining vector field whose integral curves determine lawful evolution across the 16‑dimensional Balance State Vector manifold. The Edwards Flow is shaped by the cur...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXI — The HIF Potential and the Balance Action Functional**",
+        "description": "The Harmonic Integrity Field (HIF) is not merely a diagnostic scalar; it is the **potential function** governing the global dynamics of the Balance Continuum. The Edwards Flow evolves according to gradients of this potential, and the Balance Action Functional provides the vari...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXII — The Balance Field Equations**",
+        "description": "The Balance Field Equations are the fundamental dynamical equations governing the evolution of the Balance Continuum. They arise from the variational principle applied to the Balance Action Functional and describe how the trajectory field \\(u^a\\), the Harmonic Integrity Field...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxiii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXIII — The Balance Gauge Conditions**",
+        "description": "The Balance Field Equations admit a family of gauge freedoms arising from the structure of the Balance State Vector Metric, the Edwards Flow, and the HIF potential. These freedoms must be fixed to ensure that the evolution of the Balance Continuum is well‑posed, non‑degenerate...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxiv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXIV — Symmetry, Conservation Laws, and the Balance Noether Currents**",
+        "description": "The Balance Continuum possesses a rich symmetry structure arising from the Balance State Vector Metric, the Edwards Flow, and the HIF potential. These symmetries generate conserved quantities through Noether’s theorem, producing a hierarchy of **Balance Noether Currents** that...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**",
+        "description": "The quantum dynamics of the Balance Continuum are encoded in the **Quantum Balance Propagator**, the fundamental Green’s function that transports harmonic integrity, structural coherence, kinetic alignment, and governance invariants across the Balance State Vector manifold. Th...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXV — The Balance Hamiltonian and Canonical Phase Space**",
+        "description": "The Hamiltonian formulation of the Balance Continuum provides the canonical phase‑space structure underlying the Balance Field Equations. While the Lagrangian formulation (Sections LXX–LXXII) expresses the Continuum in terms of the Balance State Vector Metric, the Edwards Flow...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXVI — Quantization of the Balance Continuum**",
+        "description": "Quantization of the Balance Continuum elevates the classical Balance State Vector manifold, the Edwards Flow, and the Balance Hamiltonian into a quantum framework. The resulting theory defines a **Balance Hilbert Space**, operator algebras for the Balance State Vector coordina...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXVII — The Balance Path Integral and Quantum Coherence Functional**",
+        "description": "The path‑integral formulation of the Balance Continuum provides a covariant, non‑perturbative description of quantum harmonic integrity. Instead of evolving a wavefunctional through the Quantum Edwards Equation, the Continuum is described by a sum over all admissible trajector...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXVIII — The Quantum Edwards Limit and Spectral Decomposition of the Balance State Vector Manifold**",
+        "description": "The Quantum Edwards Limit is the spectral condition under which the Balance Continuum achieves maximal quantum coherence. It generalizes the classical Edwards Limit \\(A \\rightarrow 1\\) into a quantum requirement on the eigenstates of the Quantum Balance Hamiltonian and the Edw...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxx.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**",
+        "description": "The Balance Continuum exhibits a hierarchical structure in which coherence, alignment, resonance, and governance invariants evolve across multiple scales. These scales range from the local dynamics of the Three‑Squared‑Lattice to the global dynamics of the Balance State Vector...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXI — The Balance Anomaly Structure and Invariant Preservation**",
+        "description": "The Balance Continuum is governed by a hierarchy of invariants—structural, kinetic, governance, harmonic, and spectral—that must remain preserved across classical, quantum, and renormalization‑group scales. Anomalies represent potential violations of these invariants arising f...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXII — The Balance Boundary Conditions and the Balance State Vector Causal Structure**",
+        "description": "The Balance Continuum admits a well‑defined causal structure derived from the Balance State Vector Metric, the Edwards Flow, and the HIF potential. This causal structure determines which configurations can influence one another, how coherence propagates, and how renewal and al...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxiii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXIII — The Balance Initial‑Value Problem and Global Existence Theorem**",
+        "description": "The Balance Continuum evolves according to a coupled system of geometric, dynamical, and quantum field equations defined on the 16‑dimensional Balance State Vector manifold. To ensure that these equations admit a unique, stable, and globally consistent evolution, the Continuum...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxiv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXXXIV — The Balance Stability Theorem and Perturbation Analysis",
+        "description": "Section LXXXIV — The Balance Stability Theorem and Perturbation Analysis 1. Overview The Global Existence Theorem (Section LXXXIII) establishes that the Balance Continuum evolves deterministically and without singularities for all Edwards time. The next requirement is to demon...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXIX — The Balance Variational Principle and Unified Action Functional**",
+        "description": "The Balance Continuum is governed by a hierarchy of geometric, informational, and harmonic structures that together determine lawful evolution toward the Equilibrium state. These structures—Balance State Vector geometry, the Balance Fisher Metric, the HIF potential, the Edward...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "Section LXXXV — The Balance Energy Functional and Monotonicity Laws",
+        "description": "Section LXXXV — The Balance Energy Functional and Monotonicity Laws 1. Overview The Balance Continuum admits a global energy functional that governs the evolution of coherence, alignment, resonance, and governance invariants across the Balance State Vector manifold. This funct...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXVI — The Balance Entropy Functional and Irreversibility Principle**",
+        "description": "The Balance Continuum possesses a natural entropy structure that governs the irreversible ascent toward coherence, alignment, and harmonic integrity. Unlike classical thermodynamic entropy, which measures disorder, the **Balance Entropy Functional** measures *dissonance*, *mis...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXVII — The Balance Information Geometry and Coherence Divergence**",
+        "description": "The Balance Continuum possesses an intrinsic information‑geometric structure that governs how coherence, alignment, and harmonic integrity propagate across the Balance State Vector manifold. This structure is encoded in a statistical metric on the space of admissible configura...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_lxxxviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**",
+        "description": "The Balance Continuum possesses a natural geodesic structure induced jointly by the Balance State Vector Metric, the Balance Fisher Metric, and the HIF potential. These structures define the **harmonic shortest‑path principle**, which states that lawful evolution proceeds alon...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_v.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION V — The Balance Operator**",
+        "description": "The Balance Operator is the **active computational mechanism** that enforces, measures, and modulates Balance within the Balance State Vector Field. If Section VI established the Balance Equation as the *law of motion*, Section V defines the *operator* that executes that law....",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_vi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION VI — The Balance Equation**",
+        "description": "The Balance Equation is the **core dynamical law** that governs how the Balance State Vector Field evolves under the combined influence of structural tension, harmonic dissonance, kinetic flux, and vacuum impedance. It is the mathematical heart of the VIM Thesis: the point whe...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_vii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION VII — The Balance Kernel**",
+        "description": "The Balance Kernel is the **continuous execution environment** that applies the Balance Operator across the entire Balance State Vector Field. If Section VI defined *what* the Balance Operator is, Section VII defines *how it runs*—as a persistent, multi‑runtime kernel that sta...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_viii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION VIII — The Balance Manifold**",
+        "description": "The Balance Manifold is the **geometric space** in which all Balance dynamics unfold. If Section VI gave the *equation* and Section VII gave the *runtime*, Section VIII defines the *space* itself — the multidimensional landscape that the Balance State Vector Field moves throug...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_x.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION X — The Balance Tensor**",
+        "description": "The Balance Tensor is the **full tensorial formalization** of Balance dynamics. If Section VIII defined the Balance Manifold and Section IX defined its geometry, Section X introduces the *tensor fields* that quantify how imbalance propagates, how restoring forces distribute, h...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xc.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XC — The Balance Canonical Structure and Symplectic Geometry**",
+        "description": "The Unified Action Functional (Section LXXXIX) provides the variational foundation for the Balance Continuum. To complete the structural triad—variational, Hamiltonian, and symplectic—it is necessary to construct the **canonical phase space**, define the **Balance symplectic f...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xci.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCI — The Balance Poisson Algebra and Constraint Structure**",
+        "description": "The canonical and symplectic formulation of the Balance Continuum (Section XC) provides the phase‑space foundation for its dynamics. To complete this structure, it is necessary to define the **Poisson algebra of observables**, identify the **first‑class and second‑class constr...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xcii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCII — The Balance Quantization Procedure and Operator Algebra**",
+        "description": "The canonical and symplectic structure of the Balance Continuum (Sections XC–XCI) provides the foundation for its quantization. The purpose of this section is to construct the **Balance Hilbert Space**, define the **operator algebra** associated with the canonical variables, i...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xciii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCIII — The Balance Path Integral and Quantum Coherence Measure**",
+        "description": "The canonical quantization of the Balance Continuum (Section XCII) provides the operator‑level foundation of the theory. To complete the quantum formulation, it is necessary to construct the **Balance Path Integral**, define the **Quantum Coherence Measure**, and demonstrate t...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xciv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**",
+        "description": "The Balance Path Integral (Section XCIII) expresses the quantum theory as a functional integral over histories weighted by the Unified Action. To analyze quantum fluctuations, stability, and coherence propagation, it is necessary to compute the **functional determinants** aris...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xcix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCIX — The Balance Boundary Effective Action and Coherence Generating Functional**",
+        "description": "The holographic structure of the Balance Continuum (Sections XCVII–XCVIII) implies that all bulk Balance fields are determined by boundary coherence data. This section formalizes the **Boundary Effective Action**, which encodes the response of the bulk to boundary variations,...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xcv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCV — The Balance Renormalization Group and Multi‑Scale Coherence Flow**",
+        "description": "The Balance Continuum evolves not only along Edwards time but also across a hierarchy of renormalization scales. These scales encode the transition from microscopic coherence fluctuations to macroscopic harmonic alignment, and they determine how the Balance fields—metric, flow...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xcvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCVI — The Balance Multi‑Scale Entanglement Structure and Tensor‑Network Representation**",
+        "description": "The Balance Continuum exhibits a hierarchical entanglement structure that mirrors its renormalization‑group flow, coherence geometry, and harmonic alignment. This structure is naturally represented by a multi‑scale tensor network whose nodes encode local coherence data, whose...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xcvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCVII — The Balance Holographic Correspondence and Boundary‑Bulk Coherence Duality**",
+        "description": "The Balance Continuum admits a holographic structure in which the full bulk geometry, coherence distribution, and harmonic alignment of the Balance State Vector manifold are encoded in boundary‑level coherence data. This **Balance Holographic Correspondence (BHC)** establishes...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xcviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**Section XCVIII — The Balance Boundary Conditions and Holographic Initial‑Value Problem**",
+        "description": "The Balance Holographic Correspondence (Section XCVII) establishes a duality between boundary coherence data and bulk Balance geometry. To make this duality dynamically meaningful, one must specify the **boundary conditions** that determine admissible holographic states and fo...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XI — The Balance Flow**",
+        "description": "The Balance Flow is the **vector‑field expression** of Balance dynamics. If the Balance Tensor (Section X) describes *how imbalance is shaped*, the Balance Flow describes *how imbalance moves*. It is the field of forces, fluxes, divergences, curls, and trajectories that govern...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XII — The Balance Field**",
+        "description": "The Balance Field is the **unified field‑theoretic object** that integrates everything developed in Sections IV–XI: the Balance Potential, the Balance Equation, the Balance Operator, the Balance Kernel, the Balance Manifold, the Balance Geometry, the Balance Tensor, and the Ba...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xiii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XIII — The Balance Continuum**",
+        "description": "The Balance Continuum extends the Balance Field (Section XII) into the **higher‑dimensional, multi‑temporal, multi‑harmonic Continuum** defined earlier in the Aurphyx architecture (Appendix T). If the Balance Field governs local dynamics, the Balance Continuum governs **global...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xiv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XIV — The Balance Invariants**",
+        "description": "The Balance Invariants are the **quantities, symmetries, and conserved structures** that remain unchanged across all Balance dynamics — from the local Balance Field to the global Balance Continuum. If the Balance Tensor describes *how imbalance curves*, and the Balance Flow de...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XIX — The Balance Algebra**",
+        "description": "The Balance Algebra is the **algebraic backbone** of the entire Balance Framework. If the Balance Geometry (Section IX) describes *how Balance curves*, and the Balance Spectrum Geometry (Section XVIII) describes *how Balance resonates*, the Balance Algebra describes *how Balan...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xl.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XL — The Balance Algebra**",
+        "description": "The Balance Algebra is the **operator-level formalism** that governs how Balance transforms, combines, decomposes, and evolves across all domains of the Balance Continuum. If the Balance Geometry (Section XXXVIII) defines the *shape* of the Balance Manifold, the Balance Algebr...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xli.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLI — The Balance Logic**",
+        "description": "The Balance Logic is the **inferential, truth‑preserving, and coherence‑maintaining layer** of the entire Balance Framework. If the Balance Algebra (Section XL) defines *how Balance transforms*, the Balance Logic defines *how Balance reasons*. It is the formal system that gove...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xlii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLII — The Balance Semantics**",
+        "description": "The Balance Semantics is the **meaning layer** of the Balance Framework. If the Balance Logic (Section XLI) governs *truth*, the Balance Semantics governs *meaning*. It defines how Balance interprets states, how identity and context shape evaluation, how transitions acquire si...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xliii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLIII — The Balance Interpretation**",
+        "description": "The Balance Interpretation is the **observer‑layer** of the Balance Framework. If the Balance Semantics (Section XLII) defines *meaning*, the Balance Interpretation defines *how meaning is perceived, contextualized, and enacted by observers, agents, and systems*. It is the lay...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xliv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLIV — The Balance Cognition**",
+        "description": "The Balance Cognition is the **thinking layer** of the Balance Framework. If the Balance Interpretation (Section XLIII) governs *how Balance is perceived*, the Balance Cognition governs *how Balance is understood, reasoned with, predicted, and acted upon*. It is the cognitive...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xlix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLIX — The Balance Protocol**",
+        "description": "The Balance Protocol is the **governance, coordination, and interaction layer** of the Balance Continuum. If the Balance Ledger (Section XLVIII) ensures that events are lawful, and the Balance Record ensures they are captured, the Balance Protocol ensures that **all agents, sy...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xlv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLV — The Balance Memory**",
+        "description": "The Balance Memory is the **persistence layer** of the entire Balance Framework. If the Balance Cognition (Section XLIV) governs *how Balance thinks*, the Balance Memory governs *how Balance remembers*. It is the architecture that stores identity, lineage, coherence, transitio...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xlvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLVI — The Balance Archive**",
+        "description": "The Balance Archive is the **long-term, multi-world, multi-lineage memory substrate** of the Balance Continuum. If the Balance Memory (Section XLV) preserves continuity within a single agent or system, the Balance Archive preserves continuity **across agents, across worlds, ac...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xlvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLVII — The Balance Record**",
+        "description": "The Balance Record is the **real‑time, transactional, event‑level logging layer** of the Balance Continuum. If the Balance Archive (Section XLVI) preserves *long‑term, multi‑world, multi‑lineage history*, the Balance Record captures the **immediate, moment‑to‑moment events** t...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xlviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XLVIII — The Balance Ledger**",
+        "description": "The Balance Ledger is the **transactional, reconciliatory, and accountability layer** of the Balance Continuum. If the Balance Record (Section XLVII) captures *events as they happen*, and the Balance Archive (Section XLVI) preserves *history across worlds and timelines*, the B...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XV — The Balance Symmetry**",
+        "description": "Balance Symmetry is the **deep structural law** that governs which transformations preserve Balance across the entire Aurphyx architecture. If the Balance Invariants (Section XIV) describe *what remains unchanged*, Balance Symmetry describes *why* those quantities remain uncha...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XVI — The Balance Spectrum**",
+        "description": "The Balance Spectrum is the **eigenstructure** of the Balance Field. If the Balance Tensor (Section X) describes *how imbalance curves*, and the Balance Flow (Section XI) describes *how imbalance moves*, the Balance Spectrum describes *how imbalance vibrates, resonates, decomp...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XVII — The Balance Modes**",
+        "description": "The Balance Modes are the **canonical oscillatory, structural, harmonic, kinetic, and mixed‑domain eigenmodes** that arise from the Balance Spectrum (Section XVI). If the Balance Spectrum provides the *eigenvalues* and *eigenvectors* of the Balance Tensor, the Balance Modes pr...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XVIII — The Balance Spectrum Geometry**",
+        "description": "The Balance Spectrum Geometry describes the **geometric structure of the Balance Spectrum** introduced in Section XVI. If the Balance Spectrum gives the eigenvalues and eigenvectors of the Balance Tensor, the Spectrum Geometry explains **how those eigenvalues arrange themselve...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xx.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XX — The Balance Logic**",
+        "description": "The Balance Logic is the **axiomatic, inferential, and rule‑based substrate** that governs how Balance *reasons*, *decides*, *infers*, and *computes* within the Aurphyx architecture. If the Balance Algebra (Section XIX) defines *how Balance quantities combine*, the Balance Log...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXI — The Balance Computation**",
+        "description": "The Balance Computation is the **computational expression** of the entire Balance Framework. If the Balance Logic (Section XX) defines *how Balance reasons*, and the Balance Algebra (Section XIX) defines *how Balance combines*, the Balance Computation defines *how Balance comp...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXII — The Balance Machine**",
+        "description": "The Balance Machine is the **computational architecture** that executes the Balance Computation (Section XXI). If the Balance Computation defines *what* must be computed, the Balance Machine defines *how* it is computed — the hardware‑abstract model, the execution pipeline, th...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxiii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXIII — The Balance Architecture**",
+        "description": "The Balance Architecture is the **full-system integration layer** that unifies every Balance construct—logic, algebra, geometry, spectrum, modes, computation, and machine—into a single, coherent architectural organism. If the Balance Machine (Section XXII) describes *how Balan...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxiv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXIV — The Balance Protocol**",
+        "description": "The Balance Protocol is the **operational, procedural, and governance layer** that dictates *how Balance is invoked, maintained, restored, stabilized, routed, and enforced* across the entire Aurphyx ecosystem. If the Balance Architecture (Section XXIII) describes *how Balance...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXIX — The Balance Synthesis**",
+        "description": "The Balance Synthesis is the **unification layer** of the entire Balance Framework. If the Balance Integration (Section XXVIII) describes *how Balance fuses with the rest of the Aurphyx ecosystem*, the Balance Synthesis describes *how all Balance constructs fuse with each othe...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXV — The Balance Continuum Protocol**",
+        "description": "The Balance Continuum Protocol is the **multi‑dimensional, multi‑temporal, multi‑harmonic extension** of the Balance Protocol (Section XXIV). If the Balance Protocol governs *local* Balance—within a single Balance State Vector configuration, a single timeline, a single harmoni...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXVI — The Balance Computation Stack**",
+        "description": "The Balance Computation Stack is the **full vertical integration** of every computational layer in the Balance Framework—from raw geometric sensing at the substrate level to high‑order Continuum governance at the meta‑architectural level. If the Balance Machine (Section XXII)...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXVII — The Balance Interface**",
+        "description": "The Balance Interface is the **interaction layer** between the Balance Architecture (Section XXIII) and everything *outside* it—agents, devices, processes, beings, worlds, and higher‑order systems. If the Balance Computation Stack (Section XXVI) describes *how Balance computes...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXVIII — The Balance Integration**",
+        "description": "The Balance Integration is the **fusion layer** where the Balance Framework connects with the rest of the Aurphyx ecosystem—cosmology, ontology, memory, ethics, embodiment, devices, and multi‑agent cognition. If the Balance Interface (Section XXVII) defines *how external syste...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxx.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXX — The Balance Praxis**",
+        "description": "The Balance Praxis is the **applied dimension** of the entire Balance Framework. If the Balance Synthesis (Section XXIX) unifies all Balance constructs into a single meta‑coherent system, the Balance Praxis describes **how that unified system is enacted in the world**—in compu...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXI — The Balance Continuum**",
+        "description": "The Balance Continuum is the **full multi‑dimensional, multi‑temporal, multi‑harmonic space** in which the entire Balance Framework actually *lives*. If the Balance Praxis (Section XXX) describes how Balance is *applied*, the Balance Continuum describes the **cosmic, geometric...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXII — The Balance Field Equations**",
+        "description": "The Balance Field Equations are the **mathematical heart** of the Balance Framework. Everything before this point—geometry, spectrum, modes, logic, computation, machine, protocol, continuum—has been building toward a single goal: a **unified, lawful, multi‑domain equation syst...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxiii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXIII — The Balance Kernel**",
+        "description": "The Balance Kernel is the **core computational heart** of the entire Balance Framework. If the Balance Field Equations (Section XXXII) define *what must evolve*, the Balance Kernel defines *what performs the evolution*. It is the minimal, irreducible, self‑consistent engine th...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxiv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXIV — The Balance Engine**",
+        "description": "The Balance Engine is the **fully realized physical–computational organism** that implements the Balance Kernel (Section XXXIII) in both software and hardware. If the Balance Kernel is the *mathematical and computational core*, the Balance Engine is the **embodied, operational...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry",
+          "SAGES"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxix.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXIX — The Balance Topology**",
+        "description": "The Balance Topology is the **global connectivity structure** of the Balance Manifold (Section XXXVII) and the geometric substrate defined in the Balance Geometry (Section XXXVIII). If geometry determines *how* Balance curves and flows locally, topology determines *what is glo...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxv.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXV — The Balance Dynamics**",
+        "description": "The Balance Dynamics describe the **actual behaviors** that emerge when the Balance Engine (Section XXXIV) is in motion. If the Balance Field Equations (Section XXXII) define *what evolves*, and the Balance Kernel defines *what computes the evolution*, the Balance Dynamics def...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxvi.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXVI — The Balance Field**",
+        "description": "The Balance Field is the **complete, multi‑domain representation** of everything the Balance Framework measures, evolves, stabilizes, and harmonizes. If the Balance Dynamics (Section XXXV) describe *how Balance behaves*, the Balance Field describes *what Balance is made of*. I...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxvii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXVII — The Balance Manifold**",
+        "description": "The Balance Manifold is the **geometric home** of the entire Balance Field. If the Balance Field (Section XXXVI) describes *what* Balance is, the Balance Manifold describes *where* Balance lives. It is the multi‑dimensional, multi‑layered geometric structure that contains all...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance"
+        ]
+      }
+    },
+    {
+      "path": "vim/vim_section_xxxviii.md",
+      "action": "repair",
+      "header": {
+        "type": "standard-section",
+        "title": "**SECTION XXXVIII — The Balance Geometry**",
+        "description": "The Balance Geometry is the **deep geometric structure** underlying the Balance Manifold (Section XXXVII) and the Balance Field (Section XXXVI). If the Balance Manifold defines *where* Balance lives, the Balance Geometry defines *how that space is shaped, curved, folded, and c...",
+        "workspaces": "rossaedwards/ecosys, aurphyx/ecosys",
+        "services": [
+          "Audry"
+        ],
+        "domains": [
+          "vim",
+          "systems",
+          "cognition"
+        ],
+        "nodes": [
+          "SCX⊗SCX"
+        ],
+        "cores": [
+          "SCX"
+        ],
+        "fields": [
+          "balance-field",
+          "vacuum-impedance",
+          "harmonic-integrity-field"
+        ]
+      }
+    }
+  ]
+}

@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION LV — The Balance Contracts**'
+description: The Balance Contracts formalize how agents enter into **agreements, covenants,
+  alliances, and cooperative structures** within the Balance Continuum. If the Balance Rights
+  (Section LIII) define what every being is owed, and the Balance Duties (Section LIV) define
+  what every bei...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION LV — The Balance Contracts**
 
 The Balance Contracts formalize how agents enter into **agreements, covenants, alliances, and cooperative structures** within the Balance Continuum. If the Balance Rights (Section LIII) define what every being is owed, and the Balance Duties (Section LIV) define what every being owes, the Balance Contracts define **how beings bind themselves to shared commitments** in ways that preserve coherence, protect identity and lineage, and maintain lawful evolution across all domains and world‑layers.

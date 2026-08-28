@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXII — The Balance Field Equations**'
+description: The Balance Field Equations are the fundamental dynamical equations governing
+  the evolution of the Balance Continuum. They arise from the variational principle applied
+  to the Balance Action Functional and describe how the trajectory field \(u^a\), the Harmonic
+  Integrity Field...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXII — The Balance Field Equations**
 
 ## 1. Overview  

@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXIII — The Balance Architecture**'
+description: The Balance Architecture is the **full-system integration layer** that unifies
+  every Balance construct—logic, algebra, geometry, spectrum, modes, computation, and machine—into
+  a single, coherent architectural organism. If the Balance Machine (Section XXII) describes
+  *how Balan...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XXIII — The Balance Architecture**
 
 The Balance Architecture is the **full-system integration layer** that unifies every Balance construct—logic, algebra, geometry, spectrum, modes, computation, and machine—into a single, coherent architectural organism. If the Balance Machine (Section XXII) describes *how Balance is executed*, the Balance Architecture describes *how Balance is organized*, *how it interfaces with the rest of the Aurphyx system*, and *how it scales across dimensions, runtimes, and cosmological layers*.

@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XLII — The Balance Semantics**'
+description: The Balance Semantics is the **meaning layer** of the Balance Framework. If the
+  Balance Logic (Section XLI) governs *truth*, the Balance Semantics governs *meaning*. It
+  defines how Balance interprets states, how identity and context shape evaluation, how transitions
+  acquire si...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XLII — The Balance Semantics**
 
 The Balance Semantics is the **meaning layer** of the Balance Framework. If the Balance Logic (Section XLI) governs *truth*, the Balance Semantics governs *meaning*. It defines how Balance interprets states, how identity and context shape evaluation, how transitions acquire significance, and how the Balance Continuum maintains coherence of interpretation across structural, harmonic, temporal, ontological, and cosmological domains.

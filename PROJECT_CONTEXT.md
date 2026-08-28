@@ -107,6 +107,8 @@ Quote retired terms, then map: SIC/SCC/ICC → SIX/SCX/ICX; rÆ → Balance Stat
 
 Product titles that contain “Bliss” (Chaos & Bliss tarot; Chakra Duality Kernel **ChaosCore** / **BlissCore**) stay as welcome product names. Physics “Bliss manifold” → **Equilibrium Manifold**. Do not put Mythic Naming or Claims keys in YAML.
 
+Machine map and vim two-phase writers: [`vim/aps_nomenclature_map.yaml`](vim/aps_nomenclature_map.yaml), [`vim/aps_nomenclature_apply.py`](vim/aps_nomenclature_apply.py) (`--dry-run` then `--apply`), [`vim/aps_okf_stamp.py`](vim/aps_okf_stamp.py) (`--plan` then `--stamp`). Root table: [`AURPHYX_TERMINOLOGY.md`](AURPHYX_TERMINOLOGY.md). Volume briefing: [`vim/PROJECT_CONTEXT.md`](vim/PROJECT_CONTEXT.md).
+
 ## Folder overlays
 
 Each volume should have README, PROJECT_CONTEXT, PHYSICS, INVARIANTS. Many still lack them. Do not invent physics to fill gaps.

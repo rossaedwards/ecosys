@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**'
+description: The quantum dynamics of the Balance Continuum are encoded in the **Quantum Balance
+  Propagator**, the fundamental Green’s function that transports harmonic integrity, structural
+  coherence, kinetic alignment, and governance invariants across the Balance State Vector
+  manifold. Th...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXIX — The Quantum Balance Propagator and Non‑Local Coherence Kernel**
 
 ## 1. Overview  

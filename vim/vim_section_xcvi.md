@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section XCVI — The Balance Multi‑Scale Entanglement Structure and Tensor‑Network
+  Representation**'
+description: The Balance Continuum exhibits a hierarchical entanglement structure that mirrors
+  its renormalization‑group flow, coherence geometry, and harmonic alignment. This structure
+  is naturally represented by a multi‑scale tensor network whose nodes encode local coherence
+  data, whose...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section XCVI — The Balance Multi‑Scale Entanglement Structure and Tensor‑Network Representation**
 
 ## 1. Overview  

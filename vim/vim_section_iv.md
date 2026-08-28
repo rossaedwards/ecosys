@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION IV — The Theory of Balance**'
+description: Balance is the **regulatory law** that governs the evolution of the Balance State
+  Vector Field under the influence of vacuum flux, harmonic dissonance, and structural constraints.
+  It is not equilibrium in the classical sense; it is a **dynamic attractor** that continuously
+  adj...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION IV — The Theory of Balance**
 
 ## **IV.1 Balance as the Governing Principle of the Balance State Vector Field**

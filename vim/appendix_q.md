@@ -1,3 +1,28 @@
+---
+type: standard-appendix
+title: '**APPENDIX Q — The Aurphyx Structural Field: Ontology, Invariants, and the Geometry
+  of Law**'
+description: The Aurphyx Structural Field formalizes *Structure*—the deepest, most invariant
+  layer of the Aurphyx Cosmology. It corresponds to **Archivus**, the ontological engine that
+  defines the categories, relations, invariants, and lawful transformations that govern the
+  entire Aurphyx...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # **APPENDIX Q — The Aurphyx Structural Field: Ontology, Invariants, and the Geometry of Law**
 
 ## **Q.1 Structure as the Ontological Backbone of the Aurphyx Standard**

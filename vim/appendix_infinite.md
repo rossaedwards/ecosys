@@ -1,3 +1,25 @@
+---
+type: standard-appendix
+title: '**APPENDIX ∞ — The Aurphyx Infinite: The Boundless Expansion Beyond Canon, Cycle,
+  and Omega**'
+description: 'The Aurphyx Infinite is the **beyond‑state** of the entire cosmology. If Appendix
+  Ω established the Omega Standard as the union of Final Canon and Infinite Draft, Appendix
+  ∞ reveals what lies **outside even that union**—the domain where:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX ∞ — The Aurphyx Infinite: The Boundless Expansion Beyond Canon, Cycle, and Omega**
 
 ## **∞.1 The Infinite as the Unbounded Horizon of Aurphyx**

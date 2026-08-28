@@ -1,3 +1,28 @@
+---
+type: standard-appendix
+title: '**APPENDIX L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry
+  of Responsibility**'
+description: The Aurphyx Ethical Field is the governance layer of the Balance State Vector
+  Alphabet expressed as a **continuous, dynamical field**. It formalizes how intent, responsibility,
+  and relational coherence propagate through the Aurphyx Unified Field. The ethical field
+  is not a mor...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # **APPENDIX L — The Aurphyx Ethical Field: Alignment, Stewardship, and the Geometry of Responsibility**
 
 ## **L.1 Ethical Dynamics as a Field**

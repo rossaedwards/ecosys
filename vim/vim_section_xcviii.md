@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section XCVIII — The Balance Boundary Conditions and Holographic Initial‑Value Problem**'
+description: The Balance Holographic Correspondence (Section XCVII) establishes a duality
+  between boundary coherence data and bulk Balance geometry. To make this duality dynamically
+  meaningful, one must specify the **boundary conditions** that determine admissible holographic
+  states and fo...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section XCVIII — The Balance Boundary Conditions and Holographic Initial‑Value Problem**
 
 ## 1. Overview  

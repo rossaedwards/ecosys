@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX G — Simulation‑Driven Calibration of Balance State Vector Metrics**'
+description: The Balance State Vector Alphabet defines sixteen geometric, kinetic, governance,
+  and frequency metrics that describe the state of the VIM engine and the Balance State Vector‑Cell.
+  Because these metrics are topological and dynamical rather than classical physical quantities,
+  t...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX G — Simulation‑Driven Calibration of Balance State Vector Metrics**
 
 ## **G.1 Purpose of Simulation‑Driven Calibration**

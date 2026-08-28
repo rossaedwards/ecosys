@@ -1,3 +1,27 @@
+---
+type: implementation-note
+title: APS Canon Compiler — Classification Heuristics
+description: '```markdown'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+  - SIX⊗SCX
+  - ICX⊗SCX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - balance-field
+---
+
 ### 2. `APS_CLASSIFICATION_HEURISTICS.md`
 
 ```markdown

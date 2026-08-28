@@ -1,3 +1,33 @@
+---
+type: standard-appendix
+title: 'APPENDIX P — The Aurphyx Memory Field: Morphic Continuity, Temporal Archives, and
+  the Geometry of Recall'
+description: 'APPENDIX P — The Aurphyx Memory Field: Morphic Continuity, Temporal Archives,
+  and the Geometry of Recall P.1 Memory as a Field in the Aurphyx Standard The Aurphyx Memory
+  Field formalizes remembrance — the capacity of the Balance State Vector Field to preserve,
+  index, and retri...'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+  - SIX⊗SCX
+  - ICX⊗SCX
+cores:
+  - SIX
+  - SCX
+  - ICX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 APPENDIX P — The Aurphyx Memory Field: Morphic Continuity, Temporal Archives, and the Geometry of Recall
 P.1 Memory as a Field in the Aurphyx Standard
 The Aurphyx Memory Field formalizes remembrance — the capacity of the Balance State Vector Field to preserve, index, and retrieve prior states across all three temporal axes of the Aurphyx Temporal Manifold. In the Aurphyx Cosmology, memory is not passive storage but an active morphic field that shapes present evolution through the resonant presence of past trajectories.

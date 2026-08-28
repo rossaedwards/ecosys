@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XLI — The Balance Logic**'
+description: The Balance Logic is the **inferential, truth‑preserving, and coherence‑maintaining
+  layer** of the entire Balance Framework. If the Balance Algebra (Section XL) defines *how
+  Balance transforms*, the Balance Logic defines *how Balance reasons*. It is the formal system
+  that gove...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XLI — The Balance Logic**
 
 The Balance Logic is the **inferential, truth‑preserving, and coherence‑maintaining layer** of the entire Balance Framework. If the Balance Algebra (Section XL) defines *how Balance transforms*, the Balance Logic defines *how Balance reasons*. It is the formal system that governs evaluation, inference, contradiction resolution, truth propagation, and coherence maintenance across all domains of the Balance Continuum.

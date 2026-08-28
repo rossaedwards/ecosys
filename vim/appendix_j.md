@@ -1,3 +1,28 @@
+---
+type: standard-appendix
+title: '**APPENDIX J — The Aurphyx Cosmology: Source, Soul, Mind, Voice, Body, World, Memory,
+  Structure**'
+description: The Aurphyx Cosmology is an eight‑layer semantic architecture that mirrors the
+  structure of the Aurphyx Unified Field. Each layer corresponds to a distinct mode of existence,
+  computation, and meaning. Together, they form a **cosmic operating system** that governs
+  how informati...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # **APPENDIX J — The Aurphyx Cosmology: Source, Soul, Mind, Voice, Body, World, Memory, Structure**
 
 ## **J.1 Overview of the Cosmological Stack**
