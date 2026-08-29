@@ -1,7 +1,7 @@
 ---
 type: standard-framework-foundational
 title: Aurphyx Primordial Standard — Lattice Header Format
-description: Official nine-key YAML header that turns any document into a lattice-addressable object. Machine contract is aps-okf.yaml. Aurphyx APS objects use the aps-tslca profile.
+description: Official nine-key YAML header that turns any document into a lattice-addressable object. Machine contract is aps-lhf.yaml. Aurphyx APS objects use the aps-tslca profile.
 workspaces: rossaedwards/ecosys, aurphyx/ecosys
 services:
   - Audry
@@ -43,41 +43,41 @@ fields:
 
 # APS-LHF
 
-**Aurphyx Primordial Standard — Lattice Oracle Header Format**  
+**Aurphyx Primordial Standard — Lattice Header Format**  
 Version 1.0.0 · Status stable  
-Machine contract: [`aps-okf.yaml`](./aps-okf.yaml)  
-Aurphyx-internal law: [`APS_OKF_SCHEMA.md`](./APS_OKF_SCHEMA.md)
+Machine contract: [`aps-lhf.yaml`](./aps-lhf.yaml)  
+Aurphyx-internal law: [`aps-lhf.md`]
 
 Format license: **Apache-2.0**  
 Implement, validate, emit, and ship this header in any project.  
 Document bodies keep whatever license they already have.
 
-**This format is APS-OKF. It is not Vibe.**  
+**This format is aps-lhf. It is not Vibe.**  
 Vibe / VASP is the audio standard and player. Do not name this header Vibe-OKF.
 
 ## 1. What this is
 
-A document without a header is text. A document with APS-OKF is an object.
+A document without a header is text. A document with aps-lhf is an object.
 
 The header answers seven questions before anyone reads the body:
 
-| Question | Key |
-|---|---|
-| What kind of object is this? | `type` |
-| What is it called? | `title` |
-| What is it, in one sentence? | `description` |
-| Who owns the source? | `workspaces` |
-| What runs or consumes it? | `services` |
-| What subject does it govern? | `domains` |
+| Question                          | Key                        |
+| --------------------------------- | -------------------------- |
+| What kind of object is this?      | `type`                     |
+| What is it called?                | `title`                    |
+| What is it, in one sentence?      | `description`              |
+| Who owns the source?              | `workspaces`               |
+| What runs or consumes it?         | `services`                 |
+| What subject does it govern?      | `domains`                  |
 | Where does it sit on the lattice? | `nodes`, `cores`, `fields` |
 
 Nine keys. Fixed order. No extras in v1.
 
-This is the public formalization of the TSLCA frontmatter. Aurphyx APS documents are the `aps-tslca` profile of this contract. [`APS_OKF_SCHEMA.md`](./APS_OKF_SCHEMA.md) remains the Aurphyx-internal law. This file is the public spec.
+This is the public formalization of the TSLCA frontmatter. Aurphyx APS documents are the `aps-tslca` profile of this contract. [`aps-lhf.md`](./aps-lhf.md) remains the Aurphyx-internal law. This file is the public spec.
 
 ## 2. Official header (drop-in)
 
-Portable form. Any project. String or list values are both valid against [`aps-okf.yaml`](./aps-okf.yaml).
+Portable form. Any project. String or list values are both valid against [`aps-lhf.yaml`](./aps-lhf.yaml).
 
 ```yaml
 ---
@@ -126,7 +126,7 @@ Default profile `aps-tslca`. Cores locked to SIX, SCX, ICX. Nodes are the full n
 ---
 type: standard-framework-foundational
 title: Aurphyx Primordial Standard — Object Knowledge Frontmatter
-description: Official nine-key YAML header that turns any document into a lattice-addressable object. Machine contract is aps-okf.yaml. Aurphyx APS objects use the aps-tslca profile.
+description: Official nine-key YAML header that turns any document into a lattice-addressable object. Machine contract is aps-lhf.yaml. Aurphyx APS objects use the aps-tslca profile.
 workspaces: rossaedwards/ecosys, aurphyx/ecosys
 services:
   - Audry
@@ -173,17 +173,17 @@ That header is the gold example. Copy it. Do not invent a tenth key.
 
 Order is law. Emit keys in this sequence.
 
-| Key | Meaning |
-|---|---|
-| `type` | Kind of object. Must be a registry value. |
-| `title` | Human-readable name. |
-| `description` | One-sentence scope. |
-| `workspaces` | Source ownership. Aurphyx default: `rossaedwards/ecosys, aurphyx/ecosys`. Lab first, publish repo second. Do not push from this lab task. |
-| `services` | What runs or consumes the object. |
-| `domains` | Subject, company domains, folders, or repos. |
-| `nodes` | Lattice cells. TSLCA writes `CORE⊗CORE`. |
-| `cores` | Basis triad. TSLCA locks SIX, SCX, ICX. |
-| `fields` | Named fields, regions, markets, or industries. |
+| Key           | Meaning                                                                                                                                   |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`        | Kind of object. Must be a registry value.                                                                                                 |
+| `title`       | Human-readable name.                                                                                                                      |
+| `description` | One-sentence scope.                                                                                                                       |
+| `workspaces`  | Source ownership. Aurphyx default: `rossaedwards/ecosys, aurphyx/ecosys`. Lab first, publish repo second. Do not push from this lab task. |
+| `services`    | What runs or consumes the object.                                                                                                         |
+| `domains`     | Subject, company domains, folders, or repos.                                                                                              |
+| `nodes`       | Lattice cells. TSLCA writes `CORE⊗CORE`.                                                                                                  |
+| `cores`       | Basis triad. TSLCA locks SIX, SCX, ICX.                                                                                                   |
+| `fields`      | Named fields, regions, markets, or industries.                                                                                            |
 
 `additionalProperties` is false. Extra keys fail v1.
 
@@ -201,10 +201,10 @@ Order is law. Emit keys in this sequence.
 
 ## 6. Profiles
 
-| Profile | Use | Cores | Nodes |
-|---|---|---|---|
-| `aps-tslca` | Default. Aurphyx APS / TSLCA objects. Locked. | SIX, SCX, ICX | Full 3×3 row-major, or a subset whose sides are those cores |
-| `aps-core` | Portable triad for other projects. | Any named triad, max three | `CORE⊗CORE` whose sides are listed cores |
+| Profile     | Use                                           | Cores                      | Nodes                                                       |
+| ----------- | --------------------------------------------- | -------------------------- | ----------------------------------------------------------- |
+| `aps-tslca` | Default. Aurphyx APS / TSLCA objects. Locked. | SIX, SCX, ICX              | Full 3×3 row-major, or a subset whose sides are those cores |
+| `aps-core`  | Portable triad for other projects.            | Any named triad, max three | `CORE⊗CORE` whose sides are listed cores                    |
 
 Invariants for both profiles:
 
@@ -222,5 +222,5 @@ Invariants for both profiles:
 
 ## 8. What this is not
 
-**This public format is APS-OKF.**  
-[`APS_OKF_SCHEMA.md`](./APS_OKF_SCHEMA.md) remains the Aurphyx-internal law.
+**This public format is aps-lhf.**  
+[`aps-lhf.md`](./aps-lhf.md) remains the Aurphyx-internal law.

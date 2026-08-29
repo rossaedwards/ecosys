@@ -1,0 +1,51 @@
+Folder PATH listing for volume Windows
+Volume serial number is 00000058 A65A:44CA
+C:.
+|   CMakeLists.txt
+|   README.md
+|   requirements.txt
+|   vibemediaplayer_visualizer08-28-2026_tree.txt
+|   
++---build
++---docs
+|       VASP_Context_Simulation.md
+|       VASP_ExecSum_ProjContext.md
+|       VASP_Intro_Specs.md
+|       VASP_Logic Architecture.md
+|       VASP_Official Schema.md
+|       VASP_README.md
+|       VASP_Scoring Engine.py.md
+|       vasp_sdk-api_streaming.md
+|       VASP_TechSpec_Manual.md
+|       VASP_Test_Cannibal Corpse.md
+|       vibe_audio_visualizer.md
+|       
++---shaders
+|       post_bloom.frag
+|       vibe.frag
+|       vibe.vert
+|       
++---src
+|       dsp_engine.c
+|       dsp_engine.h
+|       gl_renderer.c
+|       gl_renderer.h
+|       vap_loader.c
+|       vap_loader.h
+|       vap_runtime.c
+|       vap_runtime.h
+|       vibe_visualizer.c
+|       
++---tests
+|       test_dsp_engine.c
+|       test_vap_loader.c
+|       
++---tools
+|       vap_tagger.py
+|       
+\---vap
+        vap_affective.h
+        vap_kinetic.h
+        vap_photometric.h
+        vap_schema.json
+        

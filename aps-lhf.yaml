@@ -1,10 +1,10 @@
-$id: https://aurphyx.org/schema/aps-okf/v1
+$id: https://aurphyx.org/schema/aps-lhf/v1
 $schema: https://json-schema.org/draft/2020-12/schema
-title: APS-OKF
+title: APS-LHF
 description: >
-  Aurphyx Primordial Standard — Object Knowledge Frontmatter.
+  Aurphyx Primordial Standard — Lattice Header Frontmatter.
   Nine-key YAML header that turns a document into a lattice-addressable object.
-  This format is APS-OKF. It is not Vibe. Vibe is reserved for VASP / Vibe Audio.
+  This format is APS-LHF. It is not Vibe. Vibe is reserved for VASP / Vibe Audio.
 x-version: "1.0.0"
 x-license: Apache-2.0
 x-status: stable
