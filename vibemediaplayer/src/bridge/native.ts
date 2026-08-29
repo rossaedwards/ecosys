@@ -145,6 +145,21 @@ export async function nativePickFile(): Promise<string | null> {
   }
 }
 
+export async function nativePickFolder(): Promise<string | null> {
+  if (!isNative()) return null;
+  try {
+    const selected = await invoke<string | string[] | null>('plugin:dialog|open', {
+      directory: true,
+      multiple: false,
+    });
+    if (typeof selected === 'string') return selected;
+    if (Array.isArray(selected) && selected[0]) return selected[0];
+    return null;
+  } catch {
+    return window.prompt('Native path to a folder:') || null;
+  }
+}
+
 export async function nativeVersion(): Promise<unknown | null> {
   if (!isNative()) return null;
   return invoke('vmp_version');

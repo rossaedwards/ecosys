@@ -23,8 +23,10 @@ import {
 import {
   isNative,
   nativeOpenFile,
+  nativeOpenFolder,
   nativePause,
   nativePickFile,
+  nativePickFolder,
   nativePlay,
   nativeSaveVap,
   nativeSeek,
@@ -260,8 +262,28 @@ export default function VmpApp() {
   }, []);
 
   useEffect(() => {
+    if (!current) return;
+
+    // Native-sourced entries (from Open File or the folder browser) carry
+    // their absolute path in objectUrl and have no browser File object —
+    // load the real decoded status + VASP data via the native engine
+    // instead of feeding a path string to the HTML5 <audio> element.
+    if (!current.file && isNative()) {
+      void nativeOpenFile(current.objectUrl).then((res) => {
+        if (!res) return;
+        setNativePath(current.objectUrl);
+        setVap(res.vap as VapObject);
+        setCanEmbed(res.can_embed);
+        setDuration(res.status.duration_sec);
+        setProgress(0);
+        setNativeBackend(res.status.backend);
+        if (playing) void nativePlay();
+      });
+      return;
+    }
+
     const a = audioRef.current;
-    if (!a || !current) return;
+    if (!a) return;
     a.src = current.objectUrl;
     a.load();
     setVap(defaultVapForEntry(current));
@@ -282,6 +304,35 @@ export default function VmpApp() {
     else a.pause();
   }, [playing, volume]);
 
+  /** Native track browser: pick a folder, list its media files via the
+   * real scan_folder engine, and queue them (real metadata loads lazily
+   * per-track when selected — see the currentId effect above). */
+  const openNativeFolder = async () => {
+    const dir = await nativePickFolder();
+    if (!dir) return;
+    const paths = await nativeOpenFolder(dir);
+    if (!paths || paths.length === 0) {
+      setStatus('No supported media found in folder');
+      return;
+    }
+    const entries: PlaylistEntry[] = paths.map((path) => {
+      const name = path.split(/[/\\]/).pop() || path;
+      return {
+        id: path,
+        name,
+        title: name.replace(/\.[^.]+$/, ''),
+        artist: 'Local file',
+        format: formatLabel(name),
+        objectUrl: path,
+      };
+    });
+    setPlaylist((p) => [...p, ...entries]);
+    setCurrentId(entries[0].id);
+    setPlaying(false);
+    entries.forEach((e) => pushRecent(e.name));
+    setStatus(`Loaded ${entries.length} file(s) from ${dir}`);
+  };
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
@@ -295,7 +346,8 @@ export default function VmpApp() {
       }
       if (e.ctrlKey && e.key.toLowerCase() === 'f') {
         e.preventDefault();
-        folderRef.current?.click();
+        if (isNative()) void openNativeFolder();
+        else folderRef.current?.click();
       }
       if (e.code === 'Space') {
         e.preventDefault();
@@ -398,7 +450,8 @@ export default function VmpApp() {
         manyRef.current?.click();
         break;
       case 'open_folder':
-        folderRef.current?.click();
+        if (isNative()) void openNativeFolder();
+        else folderRef.current?.click();
         break;
       case 'open_disc':
         setStatus('Open Disc — CDDA backend staged for native (Phase 1.5)');
