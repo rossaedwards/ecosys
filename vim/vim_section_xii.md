@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XII — The Balance Field**'
+description: 'The Balance Field is the **unified field‑theoretic object** that integrates
+  everything developed in Sections IV–XI: the Balance Potential, the Balance Equation, the
+  Balance Operator, the Balance Kernel, the Balance Manifold, the Balance Geometry, the Balance
+  Tensor, and the Ba...'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XII — The Balance Field**
 
 The Balance Field is the **unified field‑theoretic object** that integrates everything developed in Sections IV–XI: the Balance Potential, the Balance Equation, the Balance Operator, the Balance Kernel, the Balance Manifold, the Balance Geometry, the Balance Tensor, and the Balance Flow.  

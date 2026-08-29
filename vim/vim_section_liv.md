@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION LIV — The Balance Duties**'
+description: The Balance Duties articulate the **responsibilities, obligations, and forms
+  of stewardship** that correspond to the Balance Rights (Section LIII). If Rights define
+  what every being is owed, Duties define what every being *owes to others, to the Continuum,
+  and to themselves*....
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION LIV — The Balance Duties**
 
 The Balance Duties articulate the **responsibilities, obligations, and forms of stewardship** that correspond to the Balance Rights (Section LIII). If Rights define what every being is owed, Duties define what every being *owes to others, to the Continuum, and to themselves*. Duties are not imposed by authority—they arise naturally from the Balance Law (Section LI), the Balance Ethics (Section LII), and the intrinsic structure of coherence, identity, and lineage.

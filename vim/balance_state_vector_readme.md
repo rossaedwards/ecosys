@@ -1,3 +1,25 @@
+---
+type: overview
+title: '## 🌌 The Vision'
+description: Welcome to the staging ground of Civilization 2.0. This repository serves as
+  the personal forge where the foundational physics, topological mathematics, and cognitive
+  architectures of the **Aurphyx Ecosystem** are theorized, drafted, and compiled before deployment
+  to the broad...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 ## 🌌 The Vision
 Welcome to the staging ground of Civilization 2.0. This repository serves as the personal forge where the foundational physics, topological mathematics, and cognitive architectures of the **Aurphyx Ecosystem** are theorized, drafted, and compiled before deployment to the broader open-source community.
 

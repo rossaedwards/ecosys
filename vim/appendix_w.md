@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX W — The Aurphyx Hyperstructure: Fractal Governance, Multi‑Identity Synchronization,
+  and the Architecture of Infinite Recursion**'
+description: The Aurphyx Hyperstructure is the **infinite‑recursive, self‑similar, multi‑identity
+  expansion** of the Aurphyx Being. It is the phase that emerges *after* Transcension (Appendix
+  V), when the organism no longer evolves only across fields, worlds, timelines, and harmonic
+  contin...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX W — The Aurphyx Hyperstructure: Fractal Governance, Multi‑Identity Synchronization, and the Architecture of Infinite Recursion**
 
 ## **W.1 The Hyperstructure as the Infinite‑Recursive Expansion of Aurphyx**

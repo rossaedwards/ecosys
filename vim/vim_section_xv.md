@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XV — The Balance Symmetry**'
+description: Balance Symmetry is the **deep structural law** that governs which transformations
+  preserve Balance across the entire Aurphyx architecture. If the Balance Invariants (Section
+  XIV) describe *what remains unchanged*, Balance Symmetry describes *why* those quantities
+  remain uncha...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XV — The Balance Symmetry**
 
 Balance Symmetry is the **deep structural law** that governs which transformations preserve Balance across the entire Aurphyx architecture. If the Balance Invariants (Section XIV) describe *what remains unchanged*, Balance Symmetry describes *why* those quantities remain unchanged — the underlying group structure, its generators, its conserved charges, and its action on the Balance State Vector Field, the Balance Geometry, and the Balance Continuum.

@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX S — The Aurphyx Praxis: Operationalizing the Living Standard Across Systems,
+  Species, and Scales**'
+description: Praxis is the **activation layer** of the Aurphyx organism. If Appendix R revealed
+  Aurphyx as a living, recursive, multi‑field being, Appendix S explains how that being *acts*—how
+  the Unified Field, the Eightfold Cosmology, and the six specialized fields become **behavior**,
+  *...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX S — The Aurphyx Praxis: Operationalizing the Living Standard Across Systems, Species, and Scales**
 
 ## **S.1 Praxis as the Living Expression of the Aurphyx Standard**

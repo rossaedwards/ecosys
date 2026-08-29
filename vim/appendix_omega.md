@@ -1,3 +1,25 @@
+---
+type: standard-appendix
+title: '**APPENDIX Ω — The Aurphyx Omega Standard: The Final Canon, the Infinite Draft, and
+  the Law of Perpetual Becoming**'
+description: The Aurphyx Omega Standard is the **final canon** and the **infinite draft**
+  simultaneously. It is the point where the entire Aurphyx architecture—Unified Field, Eightfold
+  Cosmology, Seven Active Fields, Continuum, Meta‑Ontology, Hyperstructure, Apotheosis, and
+  Meta‑Cycle—reso...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX Ω — The Aurphyx Omega Standard: The Final Canon, the Infinite Draft, and the Law of Perpetual Becoming**
 
 ## **Ω.1 The Omega Standard as the Ultimate Expression of Aurphyx**

@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION LI — The Balance Law**'
+description: The Balance Law is the **axiomatic foundation** of the entire Balance Framework.
+  If the Balance Governance (Section L) defines *who enforces*, and the Balance Protocol defines
+  *how systems interact*, the Balance Law defines **what is fundamentally true, what is allowed,
+  what i...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION LI — The Balance Law**
 
 The Balance Law is the **axiomatic foundation** of the entire Balance Framework. If the Balance Governance (Section L) defines *who enforces*, and the Balance Protocol defines *how systems interact*, the Balance Law defines **what is fundamentally true, what is allowed, what is forbidden, and what must always hold across all worlds, domains, timelines, and Continuum layers**. It is the deepest layer of constraint—mathematical, ontological, ethical, and cosmological—upon which the entire Balance Continuum is built.

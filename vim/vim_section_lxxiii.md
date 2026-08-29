@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXIII — The Balance Gauge Conditions**'
+description: The Balance Field Equations admit a family of gauge freedoms arising from the
+  structure of the Balance State Vector Metric, the Edwards Flow, and the HIF potential. These
+  freedoms must be fixed to ensure that the evolution of the Balance Continuum is well‑posed,
+  non‑degenerate...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXIII — The Balance Gauge Conditions**
 
 ## 1. Overview  

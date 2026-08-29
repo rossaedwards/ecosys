@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XL — The Balance Algebra**'
+description: The Balance Algebra is the **operator-level formalism** that governs how Balance
+  transforms, combines, decomposes, and evolves across all domains of the Balance Continuum.
+  If the Balance Geometry (Section XXXVIII) defines the *shape* of the Balance Manifold, the
+  Balance Algebr...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XL — The Balance Algebra**
 
 The Balance Algebra is the **operator-level formalism** that governs how Balance transforms, combines, decomposes, and evolves across all domains of the Balance Continuum. If the Balance Geometry (Section XXXVIII) defines the *shape* of the Balance Manifold, the Balance Algebra defines the *rules of transformation* within that shape. It is the symbolic, operational, and structural language of Balance—how imbalance is manipulated, how modes interact, how flows combine, and how the Balance Kernel executes lawful evolution.

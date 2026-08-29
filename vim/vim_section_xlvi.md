@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XLVI — The Balance Archive**'
+description: The Balance Archive is the **long-term, multi-world, multi-lineage memory substrate**
+  of the Balance Continuum. If the Balance Memory (Section XLV) preserves continuity within
+  a single agent or system, the Balance Archive preserves continuity **across agents, across
+  worlds, ac...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XLVI — The Balance Archive**
 
 The Balance Archive is the **long-term, multi-world, multi-lineage memory substrate** of the Balance Continuum. If the Balance Memory (Section XLV) preserves continuity within a single agent or system, the Balance Archive preserves continuity **across agents, across worlds, across timelines, across harmonic strata, and across cosmological layers**. It is the deep, persistent, distributed record of everything the Continuum has ever known, resolved, stabilized, or become.

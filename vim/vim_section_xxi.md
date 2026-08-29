@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XXI — The Balance Computation**'
+description: The Balance Computation is the **computational expression** of the entire Balance
+  Framework. If the Balance Logic (Section XX) defines *how Balance reasons*, and the Balance
+  Algebra (Section XIX) defines *how Balance combines*, the Balance Computation defines *how
+  Balance comp...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXI — The Balance Computation**
 
 The Balance Computation is the **computational expression** of the entire Balance Framework. If the Balance Logic (Section XX) defines *how Balance reasons*, and the Balance Algebra (Section XIX) defines *how Balance combines*, the Balance Computation defines *how Balance computes*. It is the operational, algorithmic, and executable layer that transforms Balance from a theoretical structure into a **working computational engine** inside the Duality Kernel, the VIM system, and the broader Aurphyx architecture.

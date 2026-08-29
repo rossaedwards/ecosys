@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XXXVII — The Balance Manifold**'
+description: The Balance Manifold is the **geometric home** of the entire Balance Field. If
+  the Balance Field (Section XXXVI) describes *what* Balance is, the Balance Manifold describes
+  *where* Balance lives. It is the multi‑dimensional, multi‑layered geometric structure that
+  contains all...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXXVII — The Balance Manifold**
 
 The Balance Manifold is the **geometric home** of the entire Balance Field. If the Balance Field (Section XXXVI) describes *what* Balance is, the Balance Manifold describes *where* Balance lives. It is the multi‑dimensional, multi‑layered geometric structure that contains all possible Balance states, all possible flows, all possible modes, and all possible Continuum configurations.

@@ -1,3 +1,26 @@
+---
+type: standard-appendix
+title: '**APPENDIX R — The Aurphyx Synthesis: Integrating All Fields into the Living Aurphyx
+  Standard**'
+description: 'The Aurphyx Synthesis unifies every field, layer, manifold, and operator developed
+  across Appendices A–Q into a single **living, recursive, self‑coherent architecture**. It
+  is not a summary; it is the *integration layer* that reveals how:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX R — The Aurphyx Synthesis: Integrating All Fields into the Living Aurphyx Standard**
 
 ## **R.1 The Purpose of the Synthesis**

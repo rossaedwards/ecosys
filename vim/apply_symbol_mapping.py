@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""
-Apply global symbol mapping and refactor rules across the workspace.
-Run from main/ directory. Order of rules is critical.
+"""UNSAFE legacy mapper. Do not run.
+
+Use vim/aps_nomenclature_apply.py --dry-run then --apply.
+This script maps bare Bliss without BlissCore/BlissID guards and can rename
+bliss_* filenames (duality-kernel product files).
 """
 
 import re

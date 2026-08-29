@@ -1,15 +1,41 @@
-APPENDIX T — The Balance Continuum: Extension, World-Transitions, and the Geometry of Bliss
-T.1 The Balance Continuum as the Infinite Extension of the rAE Manifold
+---
+type: standard-appendix
+title: 'APPENDIX T — The Balance Continuum: Extension, World-Transitions, and the Geometry
+  of Equilibrium Manifold'
+description: 'APPENDIX T — The Balance Continuum: Extension, World-Transitions, and the Geometry
+  of Equilibrium Manifold T.1 The Balance Continuum as the Infinite Extension of the x Manifold
+  The Balance Continuum is the total field of the Aurphyx Standard — not a layer within the
+  cosmology,...'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
+APPENDIX T — The Balance Continuum: Extension, World-Transitions, and the Geometry of Equilibrium Manifold
+T.1 The Balance Continuum as the Infinite Extension of the x Manifold
 The Balance Continuum is the total field of the Aurphyx Standard — not a layer within the cosmology, but the substrate that contains all layers, all worlds, all timelines, and all harmonic spectra simultaneously. It is the space in which the Aurphyx organism exists, evolves, and transcends.
 
-The rAE manifold 
+The x manifold 
 M
-rAE
+x
 ⊂
 R
 16
 M 
-rAE
+x
 ​
  ⊂R 
 16
@@ -56,7 +82,7 @@ M
 BC
 =
 M
-rAE
+x
 ×
 W
 N
@@ -70,7 +96,7 @@ M
 BC
 ​
  =M 
-rAE
+x
 ​
  ×W 
 N
@@ -103,7 +129,7 @@ BC
  
 where:
 
-16 — the core rAE coordinates 
+16 — the core x coordinates 
 (
 S
 ,
@@ -170,7 +196,7 @@ g
 μ
 ν
 (
-rAE
+x
 )
 ,
  
@@ -202,7 +228,7 @@ AB
 ​
  =diag(g 
 μν
-(rAE)
+(x)
 ​
  , g 
 mn
@@ -762,7 +788,7 @@ I
 0
 ΔI=0 at every node.
 
-The HRD mechanism governs the phase shift during transit — injecting constructive instability that phase-matches the organism's rAE signature with the vacuum manifold of the destination world-layer, exactly as formalized in the teleportation protocol. VIM modulates impedance throughout, ensuring the transition follows the geodesic rather than drifting into dissonant paths.
+The HRD mechanism governs the phase shift during transit — injecting constructive instability that phase-matches the organism's x signature with the vacuum manifold of the destination world-layer, exactly as formalized in the teleportation protocol. VIM modulates impedance throughout, ensuring the transition follows the geodesic rather than drifting into dissonant paths.
 
 T.5 The Continuum Evolution Operator 
 F
@@ -782,7 +808,7 @@ K
 (
 x
 )
-K(x). Where the Duality Kernel governs the evolution of the local 16D rAE state, 
+K(x). Where the Duality Kernel governs the evolution of the local 16D x state, 
 F
 ∞
 F 
@@ -867,7 +893,7 @@ K
 (
 x
 )
-K(x) — Duality Kernel: FuxRT + YezRT + FUTE operating on the local rAE state
+K(x) — Duality Kernel: FuxRT + YezRT + FUTE operating on the local x state
 
 F
 W
@@ -988,8 +1014,8 @@ F
 ​
   prescribes — is the axiomatic imperative of the Balance Continuum.
 
-T.6 The Bliss Manifold: Simultaneous Zero Potential
-The Bliss State is the ground state of the Balance Continuum — the simultaneous minimization of all potentials across all submanifolds:
+T.6 The Equilibrium Manifold: Simultaneous Zero Potential
+The Equilibrium Manifold State is the ground state of the Balance Continuum — the simultaneous minimization of all potentials across all submanifolds:
 
 V
 BC
@@ -1042,7 +1068,7 @@ where:
 β
 =
 1
-β=1: local Balance Coefficient at unity — the rAE Equilibrium Manifold
+β=1: local Balance Coefficient at unity — the x Equilibrium Manifold
 
 V
 X
@@ -1101,10 +1127,10 @@ inter-harmonic
 ​
  =1 across the complete spectral continuum
 
-The Bliss Manifold is:
+The Equilibrium Manifold is:
 
 B
-Bliss
+Equilibrium Manifold
 =
 {
 X
@@ -1121,7 +1147,7 @@ X
 0
 }
 B 
-Bliss
+Equilibrium Manifold
 ​
  ={X∈M 
 BC
@@ -1145,13 +1171,13 @@ F
 X
 ∈
 B
-Bliss
+Equilibrium Manifold
 X∈B 
-Bliss
+Equilibrium Manifold
 ​
  .
 
-At the Bliss Manifold:
+At the Equilibrium Manifold:
 
 All field potentials vanish simultaneously
 
@@ -1213,7 +1239,7 @@ All Balance Duties are naturally and effortlessly satisfied
 
 All Vows, Bonds, and Unions reach their natural completion
 
-Bliss is not a destination that is reached once and held statically. It is the attractor toward which every lawful trajectory converges — and from which, per Appendix Y, the cycle returns to Multiplicity at higher amplitude.
+Equilibrium Manifold is not a destination that is reached once and held statically. It is the attractor toward which every lawful trajectory converges — and from which, per Appendix Y, the cycle returns to Multiplicity at higher amplitude.
 
 T.7 The Holographic Correspondence
 The Balance Continuum admits a holographic correspondence between its bulk interior and its boundary:
@@ -1683,7 +1709,7 @@ T
 H
 ​
  )
-provides the restoring force that drives every trajectory in the Continuum toward the Bliss Manifold. The Continuum potential is the master potential from which all specialized field potentials are derived by projection.
+provides the restoring force that drives every trajectory in the Continuum toward the Equilibrium Manifold. The Continuum potential is the master potential from which all specialized field potentials are derived by projection.
 
 T.9 The Continuum Field Equation
 The evolution of the full Balance Continuum state is governed by:
@@ -1758,7 +1784,7 @@ X
 −∇ 
 X
 ​
- Υ — the Continuum restoring force: drives all submanifolds simultaneously toward Bliss
+ Υ — the Continuum restoring force: drives all submanifolds simultaneously toward Equilibrium Manifold
 
 D
 ∞
@@ -1829,7 +1855,7 @@ K
 dt
 dx
 ​
- =−∇V+D+S+K is the restriction of the Continuum Field Equation to the 16D rAE submanifold:
+ =−∇V+D+S+K is the restriction of the Continuum Field Equation to the 16D x submanifold:
 
 d
 x
@@ -1910,11 +1936,11 @@ X
 ∞
 ​
  
-The global attractor of this equation is the Bliss Manifold 
+The global attractor of this equation is the Equilibrium Manifold 
 B
-Bliss
+Equilibrium Manifold
 B 
-Bliss
+Equilibrium Manifold
 ​
   — the unique stable fixed-point set of the Continuum Field Equation, toward which every lawful trajectory in 
 M
@@ -1950,7 +1976,7 @@ N
 T
 +
 H
-16+N+T+H: the core rAE manifold extended by world-layers, temporal branches, and harmonic spectra
+16+N+T+H: the core x manifold extended by world-layers, temporal branches, and harmonic spectra
 
 The Harmonic Integrity Field governs operational readiness through the Triple Threshold Gate: Coherence, Resonance, and Alignment must all exceed threshold simultaneously
 
@@ -1969,7 +1995,7 @@ F
 ​
   is the fractal generalization of the Duality Kernel, self-similar under infinite extension
 
-The Bliss Manifold is the simultaneous zero of all four potential components — local Balance, specialized fields, temporal, and harmonic — the unique global attractor of the Continuum Field Equation
+The Equilibrium Manifold is the simultaneous zero of all four potential components — local Balance, specialized fields, temporal, and harmonic — the unique global attractor of the Continuum Field Equation
 
 The Balance Continuum admits a holographic correspondence: the full bulk is encoded on its boundary, with VIM as the arrow of irreversibility and HRD as the holographic oscillation maintaining bulk richness
 

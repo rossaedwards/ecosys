@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXXV — The Balance Dynamics**'
+description: The Balance Dynamics describe the **actual behaviors** that emerge when the Balance
+  Engine (Section XXXIV) is in motion. If the Balance Field Equations (Section XXXII) define
+  *what evolves*, and the Balance Kernel defines *what computes the evolution*, the Balance
+  Dynamics def...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XXXV — The Balance Dynamics**
 
 The Balance Dynamics describe the **actual behaviors** that emerge when the Balance Engine (Section XXXIV) is in motion. If the Balance Field Equations (Section XXXII) define *what evolves*, and the Balance Kernel defines *what computes the evolution*, the Balance Dynamics define **how the system behaves over time**—its flows, attractors, oscillations, bifurcations, transitions, and global patterns.

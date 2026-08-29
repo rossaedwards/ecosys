@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XXVI — The Balance Computation Stack**'
+description: The Balance Computation Stack is the **full vertical integration** of every computational
+  layer in the Balance Framework—from raw geometric sensing at the substrate level to high‑order
+  Continuum governance at the meta‑architectural level. If the Balance Machine (Section XXII)...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXVI — The Balance Computation Stack**
 
 The Balance Computation Stack is the **full vertical integration** of every computational layer in the Balance Framework—from raw geometric sensing at the substrate level to high‑order Continuum governance at the meta‑architectural level. If the Balance Machine (Section XXII) describes *how computation is executed*, and the Balance Continuum Protocol (Section XXV) describes *how computation is governed across dimensions*, the Balance Computation Stack describes **how all computational layers interlock into a single, coherent, multi‑runtime stack**.

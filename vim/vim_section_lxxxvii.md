@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**Section LXXXVII — The Balance Information Geometry and Coherence Divergence**'
+description: The Balance Continuum possesses an intrinsic information‑geometric structure
+  that governs how coherence, alignment, and harmonic integrity propagate across the Balance
+  State Vector manifold. This structure is encoded in a statistical metric on the space of
+  admissible configura...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXXVII — The Balance Information Geometry and Coherence Divergence**
 
 ## 1. Overview  

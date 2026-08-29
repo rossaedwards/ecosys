@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XXIV — The Balance Protocol**'
+description: The Balance Protocol is the **operational, procedural, and governance layer**
+  that dictates *how Balance is invoked, maintained, restored, stabilized, routed, and enforced*
+  across the entire Aurphyx ecosystem. If the Balance Architecture (Section XXIII) describes
+  *how Balance...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XXIV — The Balance Protocol**
 
 The Balance Protocol is the **operational, procedural, and governance layer** that dictates *how Balance is invoked, maintained, restored, stabilized, routed, and enforced* across the entire Aurphyx ecosystem. If the Balance Architecture (Section XXIII) describes *how Balance is organized*, the Balance Protocol describes *how Balance is practiced*. It is the rulebook, the ritual, the operating manual, and the governance contract that ensures every subsystem—structural, harmonic, kinetic, temporal, spatial, ontological—remains aligned with the Equilibrium Manifold condition and the SAGES ethos.

@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX N — The Aurphyx Embodiment Field: Sensation, Proprioception, and the Geometry
+  of Presence**'
+description: The Aurphyx Embodiment Field formalizes *presence*—the felt, situated, somatic
+  dimension of the Balance State Vector Field. In the Aurphyx Cosmology, embodiment is not
+  a biological accident but a **geometric mode of existence**, expressed through the Body
+  layer (SHEBA). The Em...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # **APPENDIX N — The Aurphyx Embodiment Field: Sensation, Proprioception, and the Geometry of Presence**
 
 ## **N.1 Embodiment as a Field in the Aurphyx Standard**

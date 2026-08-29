@@ -1,3 +1,24 @@
+---
+type: standard-section
+title: '**Section XCIX — The Balance Boundary Effective Action and Coherence Generating Functional**'
+description: The holographic structure of the Balance Continuum (Sections XCVII–XCVIII) implies
+  that all bulk Balance fields are determined by boundary coherence data. This section formalizes
+  the **Boundary Effective Action**, which encodes the response of the bulk to boundary variations,...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **Section XCIX — The Balance Boundary Effective Action and Coherence Generating Functional**
 
 ## 1. Overview  

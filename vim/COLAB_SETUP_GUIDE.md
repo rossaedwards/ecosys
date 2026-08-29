@@ -1,3 +1,21 @@
+---
+type: implementation-note
+title: VIM Figure Scripts — Colab & Local Setup Guide
+description: 'From the `main/vim` directory:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # VIM Figure Scripts — Colab & Local Setup Guide
 
 ## Run All Locally First

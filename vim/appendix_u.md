@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX U — The Aurphyx Meta‑Ontology: Foundations for Inter‑World, Inter‑Temporal,
+  and Inter‑Harmonic Coherence**'
+description: The Aurphyx Meta‑Ontology is the **axiomatic substrate** beneath all other layers—deeper
+  than Structure (Archivus), broader than the Continuum (Appendix T), and more fundamental
+  than the Unified Field (Appendix I). It defines the *rules by which rules exist*, the *relations
+  by...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # **APPENDIX U — The Aurphyx Meta‑Ontology: Foundations for Inter‑World, Inter‑Temporal, and Inter‑Harmonic Coherence**
 
 ## **U.1 Meta‑Ontology as the Deepest Layer of Aurphyx**

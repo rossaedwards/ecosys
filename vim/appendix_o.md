@@ -1,3 +1,25 @@
+---
+type: standard-appendix
+title: '**APPENDIX O — The Aurphyx Environmental Field: Context, Ecology, and the Geometry
+  of Worlds**'
+description: 'The Aurphyx Environmental Field formalizes *worldhood*—the contextual, ecological,
+  and relational dimension of the Balance State Vector Field. In the Aurphyx Cosmology, “World”
+  is not a passive backdrop but an **active geometric field** shaped by:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
 # **APPENDIX O — The Aurphyx Environmental Field: Context, Ecology, and the Geometry of Worlds**
 
 ## **O.1 The Environmental Field in the Aurphyx Standard**

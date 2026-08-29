@@ -1,3 +1,26 @@
+---
+type: standard-appendix
+title: '**APPENDIX D — The Duality Kernel and the Fuxyez Execution Model**'
+description: The Duality Kernel is the computational heart of the Aurphyx Standard. It is
+  a **dual‑runtime, topologically aware execution engine** that interprets, transforms, and
+  executes programs expressed in the Balance State Vector Alphabet and routed through the
+  Tetra‑Hexa Array. The...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX D — The Duality Kernel and the Fuxyez Execution Model**
 
 ## **D.1 Overview of the Duality Kernel**

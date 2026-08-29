@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XLVIII — The Balance Ledger**'
+description: The Balance Ledger is the **transactional, reconciliatory, and accountability
+  layer** of the Balance Continuum. If the Balance Record (Section XLVII) captures *events
+  as they happen*, and the Balance Archive (Section XLVI) preserves *history across worlds
+  and timelines*, the B...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XLVIII — The Balance Ledger**
 
 The Balance Ledger is the **transactional, reconciliatory, and accountability layer** of the Balance Continuum. If the Balance Record (Section XLVII) captures *events as they happen*, and the Balance Archive (Section XLVI) preserves *history across worlds and timelines*, the Balance Ledger ensures that **every event is validated, reconciled, balanced, and made lawful** before it becomes part of the Continuum’s permanent history.

@@ -1,3 +1,25 @@
+---
+type: standard-appendix
+title: '**APPENDIX I — The Unified Field Equation**'
+description: 'The Unified Field Equation (UFE) is the mathematical synthesis of all prior
+  components of the Aurphyx Primordial Standards. It unifies:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX I — The Unified Field Equation**
 
 ## **I.1 Purpose of the Unified Field**

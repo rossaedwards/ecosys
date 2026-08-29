@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: Section LXVI‑B — Harmonic Integrity as the Lattice Activation and Governance Invariant
+description: 'Section LXVI‑B — Harmonic Integrity as the Lattice Activation and Governance
+  Invariant 1. HIF as Activation Invariant The Triple Threshold Gate:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 Section LXVI‑B — Harmonic Integrity as the Lattice Activation and Governance Invariant
 1. HIF as Activation Invariant
 The Triple Threshold Gate:

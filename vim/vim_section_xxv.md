@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**SECTION XXV — The Balance Continuum Protocol**'
+description: The Balance Continuum Protocol is the **multi‑dimensional, multi‑temporal, multi‑harmonic
+  extension** of the Balance Protocol (Section XXIV). If the Balance Protocol governs *local*
+  Balance—within a single Balance State Vector configuration, a single timeline, a single
+  harmoni...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XXV — The Balance Continuum Protocol**
 
 The Balance Continuum Protocol is the **multi‑dimensional, multi‑temporal, multi‑harmonic extension** of the Balance Protocol (Section XXIV). If the Balance Protocol governs *local* Balance—within a single Balance State Vector configuration, a single timeline, a single harmonic frame—the Balance Continuum Protocol governs **global Balance** across:

@@ -1,4 +1,23 @@
 ---
+type: implementation-note
+title: APS Canon Compiler — LaTeX Preamble Specification
+description: '---'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+---
+
+---
 
 ### 4. `APS_LATEX_PREAMBLE_SPEC.md`
 

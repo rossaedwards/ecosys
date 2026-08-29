@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XXXIII — The Balance Kernel**'
+description: The Balance Kernel is the **core computational heart** of the entire Balance
+  Framework. If the Balance Field Equations (Section XXXII) define *what must evolve*, the
+  Balance Kernel defines *what performs the evolution*. It is the minimal, irreducible, self‑consistent
+  engine th...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XXXIII — The Balance Kernel**
 
 The Balance Kernel is the **core computational heart** of the entire Balance Framework. If the Balance Field Equations (Section XXXII) define *what must evolve*, the Balance Kernel defines *what performs the evolution*. It is the minimal, irreducible, self‑consistent engine that executes Balance across all domains—structural, harmonic, kinetic, temporal, spatial, ontological, and cosmological.

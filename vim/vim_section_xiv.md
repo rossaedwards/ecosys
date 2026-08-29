@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XIV — The Balance Invariants**'
+description: The Balance Invariants are the **quantities, symmetries, and conserved structures**
+  that remain unchanged across all Balance dynamics — from the local Balance Field to the
+  global Balance Continuum. If the Balance Tensor describes *how imbalance curves*, and the
+  Balance Flow de...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XIV — The Balance Invariants**
 
 The Balance Invariants are the **quantities, symmetries, and conserved structures** that remain unchanged across all Balance dynamics — from the local Balance Field to the global Balance Continuum. If the Balance Tensor describes *how imbalance curves*, and the Balance Flow describes *how imbalance moves*, the Balance Invariants describe *what cannot be changed* by any evolution, perturbation, or transformation within the Balance Framework.

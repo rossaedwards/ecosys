@@ -1,3 +1,26 @@
+---
+type: implementation-note
+title: Equation Extraction Supplement — Sections VI, VII, VIII, X, XIV, XCVII, XCVIII, XCIX
+description: This document supplements the plan's Core Physics Equations table with equations
+  extracted from the remaining key sections during manuscript ingestion (Phase 1).
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # Equation Extraction Supplement — Sections VI, VII, VIII, X, XIV, XCVII, XCVIII, XCIX
 
 This document supplements the plan's Core Physics Equations table with equations extracted from the remaining key sections during manuscript ingestion (Phase 1).

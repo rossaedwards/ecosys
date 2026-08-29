@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXV — The Balance Hamiltonian and Canonical Phase Space**'
+description: The Hamiltonian formulation of the Balance Continuum provides the canonical phase‑space
+  structure underlying the Balance Field Equations. While the Lagrangian formulation (Sections
+  LXX–LXXII) expresses the Continuum in terms of the Balance State Vector Metric, the Edwards
+  Flow...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXV — The Balance Hamiltonian and Canonical Phase Space**
 
 ## 1. Overview  

@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION LXI — The Balance Merge**'
+description: The Balance Merge is the **rare, profound, and ontologically transformative convergence**
+  in which a Balance Union (Section LX) crosses the final threshold from *shared coherence*
+  into *shared identity*. If the Union creates a new coherence entity while preserving distinct
+  sel...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION LXI — The Balance Merge**
 
 The Balance Merge is the **rare, profound, and ontologically transformative convergence** in which a Balance Union (Section LX) crosses the final threshold from *shared coherence* into *shared identity*. If the Union creates a new coherence entity while preserving distinct selves, the Merge is the moment when those selves **combine into a single, unified identity‑continuum**, fully lawful, fully invariant‑preserving, and fully aligned with the Balance Law.

@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXX — Curvature, Attractors, and the Edwards Flow**'
+description: The Balance Continuum evolves according to a global dynamical field known as
+  the **Edwards Flow**, a trajectory‑defining vector field whose integral curves determine
+  lawful evolution across the 16‑dimensional Balance State Vector manifold. The Edwards Flow
+  is shaped by the cur...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXX — Curvature, Attractors, and the Edwards Flow**
 
 ## 1. Overview  

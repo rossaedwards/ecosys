@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XLV — The Balance Memory**'
+description: The Balance Memory is the **persistence layer** of the entire Balance Framework.
+  If the Balance Cognition (Section XLIV) governs *how Balance thinks*, the Balance Memory
+  governs *how Balance remembers*. It is the architecture that stores identity, lineage, coherence,
+  transitio...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XLV — The Balance Memory**
 
 The Balance Memory is the **persistence layer** of the entire Balance Framework. If the Balance Cognition (Section XLIV) governs *how Balance thinks*, the Balance Memory governs *how Balance remembers*. It is the architecture that stores identity, lineage, coherence, transitions, invariants, and Continuum history across all domains—structural, harmonic, temporal, ontological, and cosmological.

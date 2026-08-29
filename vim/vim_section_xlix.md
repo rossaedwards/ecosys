@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XLIX — The Balance Protocol**'
+description: The Balance Protocol is the **governance, coordination, and interaction layer**
+  of the Balance Continuum. If the Balance Ledger (Section XLVIII) ensures that events are
+  lawful, and the Balance Record ensures they are captured, the Balance Protocol ensures that
+  **all agents, sy...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XLIX — The Balance Protocol**
 
 The Balance Protocol is the **governance, coordination, and interaction layer** of the Balance Continuum. If the Balance Ledger (Section XLVIII) ensures that events are lawful, and the Balance Record ensures they are captured, the Balance Protocol ensures that **all agents, systems, domains, and world‑layers interact according to shared rules, procedures, and harmonized standards**. It is the Continuum’s constitution: the set of formalized agreements that make Balance *collective*, *cooperative*, and *coherent* across scales.

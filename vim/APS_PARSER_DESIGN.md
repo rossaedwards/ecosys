@@ -1,3 +1,24 @@
+---
+type: implementation-note
+title: APS Canon Compiler — Deep Analysis Parser Design
+description: This document specifies the parsing and analysis layer of the APS Canon Compiler.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - harmonic-integrity-field
+---
+
 # APS Canon Compiler — Deep Analysis Parser Design
 
 ## 1. Purpose

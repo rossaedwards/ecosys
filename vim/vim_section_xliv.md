@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XLIV — The Balance Cognition**'
+description: The Balance Cognition is the **thinking layer** of the Balance Framework. If
+  the Balance Interpretation (Section XLIII) governs *how Balance is perceived*, the Balance
+  Cognition governs *how Balance is understood, reasoned with, predicted, and acted upon*.
+  It is the cognitive...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XLIV — The Balance Cognition**
 
 The Balance Cognition is the **thinking layer** of the Balance Framework. If the Balance Interpretation (Section XLIII) governs *how Balance is perceived*, the Balance Cognition governs *how Balance is understood, reasoned with, predicted, and acted upon*. It is the cognitive architecture that allows agents—biological, artificial, collective, or cosmological—to *think in Balance*, *think with Balance*, and *think as Balance*.

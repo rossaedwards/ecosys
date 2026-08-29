@@ -1,3 +1,27 @@
+---
+type: implementation-note
+title: '**📘 PART I — FOUNDATIONS (Sections I–LXX)**'
+description: Here is the **complete, canonical, manuscript‑aligned recommended figure list
+  for ALL of VIM (Sections I–C + Appendices)**. This is the guide you and Cursor will use
+  to generate every simulation script, one by one, in Google Colab.
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 Here is the **complete, canonical, manuscript‑aligned recommended figure list for ALL of VIM (Sections I–C + Appendices)**.  
 This is the guide you and Cursor will use to generate every simulation script, one by one, in Google Colab.
 

@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXVII — The Balance Path Integral and Quantum Coherence Functional**'
+description: The path‑integral formulation of the Balance Continuum provides a covariant,
+  non‑perturbative description of quantum harmonic integrity. Instead of evolving a wavefunctional
+  through the Quantum Edwards Equation, the Continuum is described by a sum over all admissible
+  trajector...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXVII — The Balance Path Integral and Quantum Coherence Functional**
 
 ## 1. Overview  

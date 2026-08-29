@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**'
+description: The Balance Continuum possesses a natural geodesic structure induced jointly
+  by the Balance State Vector Metric, the Balance Fisher Metric, and the HIF potential. These
+  structures define the **harmonic shortest‑path principle**, which states that lawful evolution
+  proceeds alon...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXXVIII — The Balance Geodesic Structure and Harmonic Shortest‑Path Principle**
 
 ## 1. Overview  

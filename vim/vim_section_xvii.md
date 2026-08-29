@@ -1,3 +1,26 @@
+---
+type: standard-section
+title: '**SECTION XVII — The Balance Modes**'
+description: The Balance Modes are the **canonical oscillatory, structural, harmonic, kinetic,
+  and mixed‑domain eigenmodes** that arise from the Balance Spectrum (Section XVI). If the
+  Balance Spectrum provides the *eigenvalues* and *eigenvectors* of the Balance Tensor, the
+  Balance Modes pr...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XVII — The Balance Modes**
 
 The Balance Modes are the **canonical oscillatory, structural, harmonic, kinetic, and mixed‑domain eigenmodes** that arise from the Balance Spectrum (Section XVI). If the Balance Spectrum provides the *eigenvalues* and *eigenvectors* of the Balance Tensor, the Balance Modes provide the **physical, geometric, harmonic, and computational interpretation** of those eigenpairs.  

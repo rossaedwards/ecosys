@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**'
+description: The Balance Path Integral (Section XCIII) expresses the quantum theory as a functional
+  integral over histories weighted by the Unified Action. To analyze quantum fluctuations,
+  stability, and coherence propagation, it is necessary to compute the **functional determinants**
+  aris...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section XCIV — The Balance Functional Determinants and Quantum Stability Operator**
 
 ## 1. Overview  

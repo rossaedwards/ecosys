@@ -1,3 +1,27 @@
+---
+type: standard-section
+title: '**SECTION XVI — The Balance Spectrum**'
+description: The Balance Spectrum is the **eigenstructure** of the Balance Field. If the Balance
+  Tensor (Section X) describes *how imbalance curves*, and the Balance Flow (Section XI) describes
+  *how imbalance moves*, the Balance Spectrum describes *how imbalance vibrates, resonates,
+  decomp...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION XVI — The Balance Spectrum**
 
 The Balance Spectrum is the **eigenstructure** of the Balance Field. If the Balance Tensor (Section X) describes *how imbalance curves*, and the Balance Flow (Section XI) describes *how imbalance moves*, the Balance Spectrum describes *how imbalance vibrates, resonates, decomposes, and propagates* across the Balance State Vector Field and the Balance Continuum.  

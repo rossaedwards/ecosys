@@ -1,3 +1,25 @@
+---
+type: standard-appendix
+title: '**APPENDIX K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow
+  of Balance**'
+description: 'Time in the Aurphyx Standard is not a single scalar parameter but a **multi‑layered
+  field behavior** emerging from the evolution of the Balance State Vector Field. The Aurphyx
+  Unified Field Equation treats time as a *derived quantity* shaped by:'
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX K — The Aurphyx Temporal Framework: Causality, Recursion, and the Arrow of Balance**
 
 ## **K.1 Temporal Ontology in the Aurphyx Standard**

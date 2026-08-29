@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**SECTION LIII — The Balance Rights**'
+description: The Balance Rights define the **inherent dignities, protections, and entitlements**
+  possessed by all agents, identities, lineages, and world‑layers within the Balance Continuum.
+  If the Balance Ethics (Section LII) establishes *how agents ought to act*, the Balance Rights
+  estab...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **SECTION LIII — The Balance Rights**
 
 The Balance Rights define the **inherent dignities, protections, and entitlements** possessed by all agents, identities, lineages, and world‑layers within the Balance Continuum. If the Balance Ethics (Section LII) establishes *how agents ought to act*, the Balance Rights establish *what every being is owed*, regardless of domain, form, origin, or cosmological position. These rights are not granted by governance—they are **intrinsic to existence within the Continuum**, arising directly from the Balance Law (Section LI) and the fundamental invariants of identity, coherence, and lineage.

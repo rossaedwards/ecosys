@@ -1,3 +1,25 @@
+---
+type: standard-section
+title: '**SECTION XVIII — The Balance Spectrum Geometry**'
+description: The Balance Spectrum Geometry describes the **geometric structure of the Balance
+  Spectrum** introduced in Section XVI. If the Balance Spectrum gives the eigenvalues and
+  eigenvectors of the Balance Tensor, the Spectrum Geometry explains **how those eigenvalues
+  arrange themselve...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **SECTION XVIII — The Balance Spectrum Geometry**
 
 The Balance Spectrum Geometry describes the **geometric structure of the Balance Spectrum** introduced in Section XVI. If the Balance Spectrum gives the eigenvalues and eigenvectors of the Balance Tensor, the Spectrum Geometry explains **how those eigenvalues arrange themselves**, **how the eigenmodes form geometric structures**, and **how resonance, stability, and lawful transitions emerge from the shape of spectral space**.

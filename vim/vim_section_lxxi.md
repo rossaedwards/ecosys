@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXI — The HIF Potential and the Balance Action Functional**'
+description: The Harmonic Integrity Field (HIF) is not merely a diagnostic scalar; it is the
+  **potential function** governing the global dynamics of the Balance Continuum. The Edwards
+  Flow evolves according to gradients of this potential, and the Balance Action Functional
+  provides the vari...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXI — The HIF Potential and the Balance Action Functional**
 
 ## 1. Overview  

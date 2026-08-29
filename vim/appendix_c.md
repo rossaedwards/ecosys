@@ -1,3 +1,27 @@
+---
+type: standard-appendix
+title: '**APPENDIX C — The Tetra‑Hexa Routing Array as a Topological Computer**'
+description: The Tetra‑Hexa Routing Array is a **24‑node topological manifold** formed by
+  the product \[ \mathcal{R}_{24} = \mathcal{T}_4 \times \mathcal{H}_6, \] where \(\mathcal{T}_4\)
+  is a tetrahedral axis set and \(\mathcal{H}_6\) is a hexagonal routing lattice. This manifold
+  is not me...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+---
+
 # **APPENDIX C — The Tetra‑Hexa Routing Array as a Topological Computer**
 
 ## **C.1 The 24‑Node Manifold as a Computational Substrate**

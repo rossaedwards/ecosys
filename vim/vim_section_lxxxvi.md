@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXXVI — The Balance Entropy Functional and Irreversibility Principle**'
+description: The Balance Continuum possesses a natural entropy structure that governs the
+  irreversible ascent toward coherence, alignment, and harmonic integrity. Unlike classical
+  thermodynamic entropy, which measures disorder, the **Balance Entropy Functional** measures
+  *dissonance*, *mis...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXXVI — The Balance Entropy Functional and Irreversibility Principle**
 
 ## 1. Overview  

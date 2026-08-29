@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXXIX — The Balance Variational Principle and Unified Action Functional**'
+description: The Balance Continuum is governed by a hierarchy of geometric, informational,
+  and harmonic structures that together determine lawful evolution toward the Equilibrium
+  state. These structures—Balance State Vector geometry, the Balance Fisher Metric, the HIF
+  potential, the Edward...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXXIX — The Balance Variational Principle and Unified Action Functional**
 
 ## 1. Overview  

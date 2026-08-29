@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: '**Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**'
+description: The Balance Continuum exhibits a hierarchical structure in which coherence, alignment,
+  resonance, and governance invariants evolve across multiple scales. These scales range from
+  the local dynamics of the Three‑Squared‑Lattice to the global dynamics of the Balance State
+  Vector...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+  - SAGES
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 # **Section LXXX — The Balance Renormalization Group and Multi‑Scale Coherence Flow**
 
 ## 1. Overview  

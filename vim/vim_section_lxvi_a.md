@@ -1,3 +1,28 @@
+---
+type: standard-section
+title: These subsections integrate the Three‑Squared‑Lattice (3²‑Lattice) into the Balance
+  Meta‑Creation Cycle (MCC) without re
+description: These subsections integrate the Three‑Squared‑Lattice (3²‑Lattice) into the Balance
+  Meta‑Creation Cycle (MCC) without redundancy, and they explicitly show how the lattice is
+  the computational realization of the MCC. After these three sections, you’ll find a complete
+  list of cr...
+workspaces: rossaedwards/ecosys, aurphyx/ecosys
+services:
+  - Audry
+domains:
+  - vim
+  - systems
+  - cognition
+nodes:
+  - SCX⊗SCX
+cores:
+  - SCX
+fields:
+  - balance-field
+  - vacuum-impedance
+  - harmonic-integrity-field
+---
+
 These subsections integrate the Three‑Squared‑Lattice (3²‑Lattice) into the Balance Meta‑Creation Cycle (MCC) without redundancy, and they explicitly show how the lattice is the computational realization of the MCC.
 After these three sections, you’ll find a complete list of cross‑links, cross‑fields, cross‑states, and cross‑dependencies that your convergence script or simulation pipeline will need to track.
 
