@@ -5,6 +5,7 @@ use parking_lot::Mutex;
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
+use std::sync::mpsc::{sync_channel, Receiver, SyncSender};
 use std::sync::Arc;
 use thiserror::Error;
 use vmp_dsp::{EqMode, EqStateSnapshot, GraphicEq};
@@ -43,6 +44,11 @@ pub struct Shared {
     pub ended: AtomicBool,
     pub out_sample_rate: AtomicU64,
     pub out_channels: AtomicU64,
+    /// Rendered-PCM tap for external consumers (e.g. a live visualizer).
+    /// Fed the exact interleaved, post-EQ/volume output buffer each render
+    /// call. Non-blocking on the audio thread: a full/absent receiver just
+    /// means the caller isn't keeping up, never stalls playback.
+    pub pcm_tap: Mutex<Option<SyncSender<Vec<f32>>>>,
 }
 
 /// Holds the cpal output stream. Stream types are marked !Send on some platforms;
@@ -80,6 +86,7 @@ impl PlayerEngine {
             volume: Mutex::new(0.75),
             eq: Mutex::new(GraphicEq::new_10(48000.0)),
             ended: AtomicBool::new(false),
+            pcm_tap: Mutex::new(None),
             out_sample_rate: AtomicU64::new(48000),
             out_channels: AtomicU64::new(2),
         });
@@ -216,6 +223,17 @@ impl PlayerEngine {
     pub fn render_soft(&self, out: &mut [f32], out_channels: usize) {
         render_frames(&self.shared, out, out_channels);
     }
+
+    /// Subscribe to the live rendered-PCM tap (interleaved, post-EQ/volume,
+    /// at `status().sample_rate`/`channels` — the output device's negotiated
+    /// format, not the source track's). Replaces any previous subscriber.
+    /// The audio thread never blocks on this: a receiver that isn't drained
+    /// just stops getting buffers once its bounded capacity fills.
+    pub fn subscribe_pcm(&self, capacity: usize) -> Receiver<Vec<f32>> {
+        let (tx, rx) = sync_channel(capacity.max(1));
+        *self.shared.pcm_tap.lock() = Some(tx);
+        rx
+    }
 }
 
 /// Fill an output buffer from shared state (device callback or software pull).
@@ -275,6 +293,11 @@ pub fn render_frames(shared: &Shared, out: &mut [f32], out_channels: usize) {
         src_pos += step;
     }
     shared.frame.store(src_pos.max(0.0) as u64, Ordering::Relaxed);
+
+    if let Some(tap) = shared.pcm_tap.lock().as_ref() {
+        // try_send: a full or dropped receiver must never stall the audio callback.
+        let _ = tap.try_send(out.to_vec());
+    }
 }
 
 #[cfg(feature = "playback")]
@@ -384,6 +407,46 @@ mod tests {
         );
         let st = eng.status();
         assert!(st.position_sec > 0.0, "playhead should advance");
+        eng.stop();
+    }
+
+    #[test]
+    fn pcm_tap_receives_rendered_buffers() {
+        let dir = std::env::temp_dir().join("vmp_player_test");
+        let _ = std::fs::create_dir_all(&dir);
+        let wav = dir.join("t_tap.wav");
+        let ok = Command::new("ffmpeg")
+            .args([
+                "-y",
+                "-f",
+                "lavfi",
+                "-i",
+                "sine=frequency=440:duration=0.5",
+                "-ar",
+                "44100",
+                wav.to_str().unwrap(),
+            ])
+            .stdout(std::process::Stdio::null())
+            .stderr(std::process::Stdio::null())
+            .status()
+            .map(|s| s.success())
+            .unwrap_or(false);
+        if !ok {
+            return;
+        }
+
+        let eng = PlayerEngine::new();
+        eng.load(&wav).unwrap();
+        eng.pause();
+        let rx = eng.subscribe_pcm(8);
+        eng.play();
+
+        let mut buf = vec![0.0f32; 4096];
+        eng.render_soft(&mut buf, 2);
+
+        let tapped = rx.try_recv().expect("tap should receive a buffer after render_soft");
+        assert_eq!(tapped.len(), buf.len());
+        assert!(tapped.iter().any(|s| s.abs() > 0.0001));
         eng.stop();
     }
 
