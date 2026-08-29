@@ -1,0 +1,13 @@
+[package]
+name = "vap-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rustfft = "6"
+dasp = { version = "0.11", features = ["signal"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+id3 = "1"
+cpal = "0.15"
+anyhow = "1"

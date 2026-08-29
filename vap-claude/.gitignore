@@ -1,0 +1,6 @@
+/target/
+**/target/
+
+# Local reference copy of vibemediaplayer/visualizer (already tracked at repo
+# root as vibemediaplayer/visualizer/); not re-committed from here.
+/vibemediaplayer/

@@ -1,0 +1,12 @@
+[package]
+name = "vibe-visualizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+vap-core = { path = "../vap-core" }
+glium = "0.34"
+glutin = "0.31"
+winit = "0.29"
+image = "0.24"
+anyhow = "1"

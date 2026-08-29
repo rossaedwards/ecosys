@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "vibe-visualizer",
+    "vap-core",
+]
+resolver = "2"
