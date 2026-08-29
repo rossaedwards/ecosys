@@ -17,6 +17,8 @@ interface Props {
   onResize?: (id: string, w: number, h: number) => void;
   onFocus: (id: string) => void;
   onClose: (id: string) => void;
+  /** Extra buttons rendered in the header before the close button. */
+  headerActions?: ReactNode;
   children: ReactNode;
 }
 
@@ -28,6 +30,7 @@ export function FloatingModule({
   onResize,
   onFocus,
   onClose,
+  headerActions,
   children,
 }: Props) {
   const drag = useRef<{ dx: number; dy: number } | null>(null);
@@ -76,6 +79,7 @@ export function FloatingModule({
       >
         <span>{title}</span>
         <div className="mod-actions">
+          {headerActions}
           <button type="button" title="Close module" onClick={() => onClose(mod.id)}>
             ×
           </button>

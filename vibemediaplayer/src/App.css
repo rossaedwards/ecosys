@@ -745,40 +745,16 @@ body {
   font-size: 9px;
 }
 
-.viz-mock {
+.auraphyx-canvas {
+  width: 100%;
   height: 100%;
   min-height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 10px;
-  color: var(--vmp-muted);
-}
-.viz-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 3px;
-  height: 64px;
-}
-.viz-bars i {
-  width: 6px;
-  height: 20%;
-  background: linear-gradient(to top, var(--vmp-violet), var(--vmp-teal));
-  border-radius: 2px;
   display: block;
+  border-radius: var(--radius-sm);
+  background: #000;
 }
-.viz-mock.on .viz-bars i {
-  animation: barPulse 0.6s ease-in-out infinite alternate;
-}
-@keyframes barPulse {
-  from {
-    height: 15%;
-  }
-  to {
-    height: 90%;
-  }
+.mod-actions button.active {
+  color: var(--vmp-teal);
 }
 
 .format-hint {

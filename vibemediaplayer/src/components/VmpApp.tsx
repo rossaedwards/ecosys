@@ -6,6 +6,10 @@ import { DeviceMatrixPanel } from './DeviceMatrix';
 import { FileMenuBar } from './FileMenu';
 import { FloatingModule, type ModulePos } from './FloatingModule';
 import { VinylVibez } from './VinylVibez';
+import { AuraphyxCanvas } from '../auraphyx/AuraphyxCanvas';
+// Note: useLiveSpectrum (Web Audio AnalyserNode) is no longer used here —
+// Auraphyx replaced the CSS-bar visualizer that consumed it — but the hook
+// itself is left in ../hooks/useLiveSpectrum.ts as a possibly-reusable utility.
 import { CANNIBAL_CORPSE_FIXTURE } from '../vap/fixture';
 import type { DeviceInfo, EqMode, PillarId, VapObject } from '../vap/types';
 import { PILLAR_TABS } from '../vap/types';
@@ -31,7 +35,6 @@ import {
   nativeToggle,
   nativeVersion,
 } from '../bridge/native';
-import { useLiveSpectrum } from '../hooks/useLiveSpectrum';
 
 type AppMode = 'player' | 'vinyl';
 
@@ -132,6 +135,9 @@ export default function VmpApp() {
   const [eqMode, setEqMode] = useState<EqMode>('graphic10');
   const [eqGains, setEqGains] = useState<number[]>([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const [skin, setSkin] = useState('soul_cosmic');
+  const [auraphyxBloom, setAuraphyxBloom] = useState(true);
+  const [auraphyxGlitch, setAuraphyxGlitch] = useState(false);
+  const [auraphyxLattice, setAuraphyxLattice] = useState(true);
   const [selectedIn, setSelectedIn] = useState('default_in');
   const [selectedOut, setSelectedOut] = useState('default_out');
   const [sampleRate, setSampleRate] = useState(48000);
@@ -162,7 +168,6 @@ export default function VmpApp() {
   const [canEmbed, setCanEmbed] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const spectrum = useLiveSpectrum(audioRef, playing && !isNative(), 32);
   const fileRef = useRef<HTMLInputElement>(null);
   const manyRef = useRef<HTMLInputElement>(null);
   const folderRef = useRef<HTMLInputElement>(null);
@@ -750,33 +755,47 @@ export default function VmpApp() {
 
           <FloatingModule
             mod={mod('viz')}
-            title="Visualizer"
+            title="Auraphyx"
             onMove={moveMod}
             onResize={resizeMod}
             onFocus={focusMod}
             onClose={(id) => setModVisible(id, false)}
+            headerActions={
+              <>
+                <button
+                  type="button"
+                  title="Toggle bloom"
+                  className={auraphyxBloom ? 'active' : ''}
+                  onClick={() => setAuraphyxBloom((v) => !v)}
+                >
+                  B
+                </button>
+                <button
+                  type="button"
+                  title="Toggle glitch"
+                  className={auraphyxGlitch ? 'active' : ''}
+                  onClick={() => setAuraphyxGlitch((v) => !v)}
+                >
+                  G
+                </button>
+                <button
+                  type="button"
+                  title="Toggle Auraphyx lattice"
+                  className={auraphyxLattice ? 'active' : ''}
+                  onClick={() => setAuraphyxLattice((v) => !v)}
+                >
+                  L
+                </button>
+              </>
+            }
           >
-            <div className={`viz-mock ${playing ? 'on' : ''}`}>
-              <div className="viz-bars live">
-                {(spectrum.some((v) => v > 0.02)
-                  ? spectrum
-                  : Array.from({ length: 32 }, (_, i) =>
-                      playing ? 0.2 + 0.5 * Math.abs(Math.sin(Date.now() / 200 + i)) : 0.05,
-                    )
-                ).map((v, i) => (
-                  <i
-                    key={i}
-                    style={{
-                      height: `${Math.max(4, v * 100)}%`,
-                      animation: 'none',
-                    }}
-                  />
-                ))}
-              </div>
-              <span>
-                {isNative() ? 'Native meters · VAP field' : 'Live WebAudio spectrum · VAP Phase 3 GL'}
-              </span>
-            </div>
+            <AuraphyxCanvas
+              toggles={{
+                bloomEnabled: auraphyxBloom,
+                visualNoise: auraphyxGlitch,
+                auraphyxEnabled: auraphyxLattice,
+              }}
+            />
           </FloatingModule>
 
           <FloatingModule

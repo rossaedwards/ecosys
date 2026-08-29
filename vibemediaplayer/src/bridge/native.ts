@@ -149,3 +149,45 @@ export async function nativeVersion(): Promise<unknown | null> {
   if (!isNative()) return null;
   return invoke('vmp_version');
 }
+
+type TauriInternals = {
+  transformCallback: (callback: (payload: unknown) => void, once?: boolean) => number;
+};
+
+function internals(): TauriInternals | null {
+  if (typeof window === 'undefined') return null;
+  return (window as unknown as { __TAURI_INTERNALS__?: TauriInternals }).__TAURI_INTERNALS__ ?? null;
+}
+
+/**
+ * Subscribe to a backend `app.emit(event, payload)`. Hand-rolled against the
+ * documented Tauri v2 core IPC protocol (`plugin:event|listen` /
+ * `plugin:event|unlisten` + `__TAURI_INTERNALS__.transformCallback`) rather
+ * than `@tauri-apps/api/event`, matching this bridge's no-npm-Tauri-deps
+ * pattern. Returns an unsubscribe function; a no-op in the browser build.
+ */
+export async function nativeListen<T>(
+  event: string,
+  handler: (payload: T) => void,
+): Promise<() => void> {
+  if (!isNative()) return () => {};
+  const t = internals();
+  if (!t) return () => {};
+
+  const handlerId = t.transformCallback((raw: unknown) => {
+    handler((raw as { payload: T }).payload);
+  });
+
+  const unlistenId = await invoke<number>('plugin:event|listen', {
+    event,
+    windowLabel: null,
+    handler: handlerId,
+  });
+
+  let unsubscribed = false;
+  return () => {
+    if (unsubscribed) return;
+    unsubscribed = true;
+    invoke('plugin:event|unlisten', { event, eventId: unlistenId }).catch(() => {});
+  };
+}
