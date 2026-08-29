@@ -53,6 +53,7 @@ Active protocol version is **3.69**. Schema is JSON Schema Draft-07 with this UR
 | [`VASP_Official Schema.md`](VASP_Official%20Schema.md) | Draft-07 schema. `VAP_VERSION` const `"3.69"`. All nine pillars required. |
 | [`VASP_Logic Architecture.md`](VASP_Logic%20Architecture.md) | Phase I DSP / Phase II NLP & ML / Phase III I/O scoring. Sections 1–9 = pillars 1–9. |
 | [`VASP_Scoring Engine.py.md`](VASP_Scoring%20Engine.py.md) | Reference engine (`VASPScoringEngine`). Extract the Python fence to run. |
+| [`android/`](android/) | Android Gradle library (`:vasp`) for the Google AI Studio Vibe Audio Player. Nested 3.69 types, scoring engine, flattened `PlayerVaspProfile` readout. |
 | [`VASP_Context_Simulation.md`](VASP_Context_Simulation.md) | Contextual override simulation. Complete 9-pillar example tracks. |
 | [`VASP_Test_Cannibal Corpse.md`](VASP_Test_Cannibal%20Corpse.md) | Authored complete 9-pillar fixture (Cannibal Corpse — *Inhumane Harvest*). |
 | [`VASP_TechSpec_Manual.md`](VASP_TechSpec_Manual.md) | Technical specification and implementation notes. |

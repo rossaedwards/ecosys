@@ -18,20 +18,18 @@
 # This file is law for the ecosystem: TSLCA, FTQC, TVFD, VIM, SUXS, SAGES, APS-OKF.
 #
 # Authority chain (read in this order when a conflict appears):
-#   1. .cursorrules                 this file — how you may edit
-#   2. aps.toml                     machine registry and shared numbers
-#   3. INVARIANTS.md                organism locks
-#   4. PHYSICS.md                   shared constants
-#   5. <folder>/INVARIANTS.md       volume locks
-#   6. <folder>/PHYSICS.md          volume numbers
-#   7. <folder>/PROJECT_CONTEXT.md  Cursor briefing for that folder
-#   8. APS_OKF_SCHEMA.md            Aurphyx-internal header law
-#   9. aps-okf.yaml / aps-okf.md    public header contract
-#  10. GATEKEEPERS.md               what may change
-#  11. APS_NAMING_EPOCHS.md         retired names
-#  12. SCIENTIFIC_CODEX.md          how math is written
-#  13. AURPHYX_CODEX.md             what each folder is
-#  14. MYTHIC_CODEX.md              story only — never metadata
+#  1. .cursorrules                  this file — how you may edit
+#  2. ecosystem.toml                ecosystem manifest and registry
+#  3. welcome2tribe.md              welcome to the tribe
+#  4. INVARIANTS.md                 invariants of the ecosystem
+#  5. PHYSICS.md                    physics of the ecosystem
+#  6. aps-okf.md                    Aurphyx aps-okf 
+#  7. aps-okf.yaml                  Aurphyx okf header yaml
+#  8. GATEKEEPERS.md                guide for academic and domain peers
+#  9. APS_NAMING_EPOCHS.md          retired names
+#  10. SCIENTIFIC_CODEX.md          Scientific Terminology
+#  11. AURPHYX_CODEX.md             Aurphyx Terminology
+#  12. MYTHIC_CODEX.md              Creative R.F. Lovezme Terminology
 #
 # If a listed file does not exist yet, do not invent its contents as you go.
 # Flag the gap. Keep editing under this file and existing sources.

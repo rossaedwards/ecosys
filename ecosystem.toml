@@ -1,6 +1,6 @@
 # ecosystem.toml
 # Aurphyx Ecosystem — Machine-Readable Product Registry
-# Source of truth (human): aurphyx_welcome2tribe.md
+# Source of truth (human): welcome2tribe.md
 # Shared physics numbers are NOT here. Those belong in PHYSICS.md / future aps.toml.
 # Author: Ross A. Edwards | Aurphyx LLC
 # Updated: 2026-08-21
@@ -120,7 +120,7 @@ full_name    = "Vibe Audio Standard & Protocol"
 
 [[aps.standards]]
 id           = "TRCA"
-full_name    = "Topological Resonating Cavity Architecture"
+full_name    = "Topological Resonating Control Architecture"
 type         = "hardware"
 
 # ─────────────────────────────────────────────
@@ -149,7 +149,7 @@ target       = "small-business-to-enterprise"
 status       = "in-development"
 
 [[os.variants]]
-name         = "Arora"
+name         = "Ora"
 full_name    = "All Other Devices"
 target       = "iot-edge-embedded"
 status       = "in-development"

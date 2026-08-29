@@ -1,6 +1,6 @@
 ---
 type: standard-framework-foundational
-title: Aurphyx Primordial Standard — Object Knowledge Frontmatter
+title: Aurphyx Primordial Standard — Lattice Header Format
 description: Official nine-key YAML header that turns any document into a lattice-addressable object. Machine contract is aps-okf.yaml. Aurphyx APS objects use the aps-tslca profile.
 workspaces: rossaedwards/ecosys, aurphyx/ecosys
 services:
@@ -41,9 +41,9 @@ fields:
   - harmonic-integrity-field
 ---
 
-# APS-OKF
+# APS-LHF
 
-**Aurphyx Primordial Standard — Object Knowledge Frontmatter**  
+**Aurphyx Primordial Standard — Lattice Oracle Header Format**  
 Version 1.0.0 · Status stable  
 Machine contract: [`aps-okf.yaml`](./aps-okf.yaml)  
 Aurphyx-internal law: [`APS_OKF_SCHEMA.md`](./APS_OKF_SCHEMA.md)

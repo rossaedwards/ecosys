@@ -41,7 +41,7 @@ Aurphyx Primordial Standard iz a the collection or encyclopedia of theories, fra
 
 -Vibe Audio Standard and Protocol
 
--Topological Resonating Cavity Architecture
+-Topological Resonating Control Architecture
 --
 Aura iz the Operating System
 -Aura: Soul Operating System (Personal)
@@ -90,7 +90,7 @@ g0dm0d3 uses the following to provide the soul a desktop environment within the 
 -xpl0r - file and meshwrk browser-explorer | AuraFS  Meshwrk (file browser. similar to Dolphin, Explorer) - (Xplor)
 -c0d3x - writer, editor, ide (similar to Word, Zed, TeX editor) - (Codex)
 -f0rg3 - video alchemy  transmutation (video editing, creating, transmutation) - (Forge)
--ad0r3 - audio alchemy  transmutation (similar to ardour, lmms, ableton, maschine, flstudio) - (Adorè)
+-v1b3z - audio alchemy  transmutation (similar to ardour, lmms, ableton, maschine, flstudio) - (Vibez)
 -g1mpd - image alchemy  transmutation (fork of gIMP) - (Gimpd)
 --
 Audry iz Aura's administration system (devices/memoree/hardware/settings/configs/nodes/shards/events/tasks/fields/tensors/dimensions) - All these core-4dmin modules need to be designed and built:
