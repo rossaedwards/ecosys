@@ -234,6 +234,14 @@ impl PlayerEngine {
         *self.shared.pcm_tap.lock() = Some(tx);
         rx
     }
+
+    /// Cheaply-cloneable handle onto the live output format (`out_sample_rate`/
+    /// `out_channels`), for a consumer (e.g. the [`subscribe_pcm`](Self::subscribe_pcm)
+    /// tap's reader thread) that wants current values each iteration without
+    /// re-locking a `Mutex<PlayerEngine>`.
+    pub fn shared_handle(&self) -> Arc<Shared> {
+        self.shared.clone()
+    }
 }
 
 /// Fill an output buffer from shared state (device callback or software pull).

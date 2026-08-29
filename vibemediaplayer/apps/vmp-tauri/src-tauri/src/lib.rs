@@ -3,21 +3,26 @@
 use parking_lot::Mutex;
 use serde::Serialize;
 use std::path::PathBuf;
-use tauri::State;
+use std::sync::atomic::Ordering;
+use std::sync::Arc;
+use tauri::{Emitter, Manager, State};
 use vmp_audio::{
     list_devices, load_media_tags, probe_media, save_vap_for_media, scan_folder, DeviceInventory,
     MediaTagBundle, PlayerEngine, PlayerStatus, SaveReport, OPEN_DIALOG_FILTER,
 };
 use vmp_core::{AppMode, FileMenuAction, ModuleLayout};
-use vmp_dsp::{EqMode, EqStateSnapshot};
+use vmp_dsp::{AudioAnalyzer, EqMode, EqStateSnapshot};
 use vmp_v01d::{binding_for_vinyl_vibez, info as v01d_info, V01dInfo};
 use vmp_vap::VapObject;
+use vmp_viz::{AuraphyxEngine, VapRuntime};
 
 pub struct AppState {
     pub player: Mutex<PlayerEngine>,
     pub last_vap: Mutex<Option<VapObject>>,
     pub media_path: Mutex<Option<PathBuf>>,
     pub app_mode: Mutex<AppMode>,
+    pub vap_runtime: Arc<Mutex<VapRuntime>>,
+    pub auraphyx: Arc<Mutex<AuraphyxEngine>>,
 }
 
 impl Default for AppState {
@@ -27,8 +32,67 @@ impl Default for AppState {
             last_vap: Mutex::new(None),
             media_path: Mutex::new(None),
             app_mode: Mutex::new(AppMode::Player),
+            vap_runtime: Arc::new(Mutex::new(VapRuntime::init())),
+            auraphyx: Arc::new(Mutex::new(AuraphyxEngine::new())),
         }
     }
+}
+
+/// Event name the Auraphyx analysis thread emits `vmp_viz::ShaderUniforms`
+/// JSON on. Frontend: `listen('auraphyx-frame', ...)`.
+const AURAPHYX_EVENT: &str = "auraphyx-frame";
+
+/// Spawn the background PCM -> FFT -> VapRuntime/Auraphyx -> event pipeline.
+/// One thread for the app's lifetime; reads live output format off the
+/// player's `Shared` handle each iteration rather than re-locking the player.
+fn spawn_auraphyx_pipeline(app: &tauri::App) {
+    let state = app.state::<AppState>();
+    let rx = state.player.lock().subscribe_pcm(64);
+    let shared = state.player.lock().shared_handle();
+    let vap_runtime = state.vap_runtime.clone();
+    let auraphyx = state.auraphyx.clone();
+    let app_handle = app.handle().clone();
+
+    std::thread::spawn(move || {
+        let mut analyzer = AudioAnalyzer::new();
+        // Throttle emits independently of PCM arrival rate.
+        const EMIT_INTERVAL: std::time::Duration = std::time::Duration::from_millis(1000 / 60);
+        let mut last_emit = std::time::Instant::now();
+        let mut last_tick = std::time::Instant::now();
+
+        while let Ok(pcm) = rx.recv() {
+            let now = std::time::Instant::now();
+            let dt = now.duration_since(last_tick).as_secs_f32().max(1e-4);
+            last_tick = now;
+
+            let sample_rate = shared.out_sample_rate.load(Ordering::Relaxed) as u32;
+            let channels = shared.out_channels.load(Ordering::Relaxed) as usize;
+            if sample_rate == 0 || channels == 0 {
+                continue;
+            }
+
+            let Some(frame) = analyzer.process(&pcm, channels, dt) else {
+                continue;
+            };
+
+            let uniforms = {
+                let mut rt = vap_runtime.lock();
+                rt.apply_analysis_frame(&frame, sample_rate, dt);
+                let chrom = rt.photometric.chrom_energy;
+                let aura_frame = if channels == 2 {
+                    auraphyx.lock().process(&pcm, &chrom, dt)
+                } else {
+                    vmp_viz::AuraphyxFrame::default()
+                };
+                rt.shader_uniforms(&aura_frame)
+            };
+
+            if now.duration_since(last_emit) >= EMIT_INTERVAL {
+                last_emit = now;
+                let _ = app_handle.emit(AURAPHYX_EVENT, &uniforms);
+            }
+        }
+    });
 }
 
 #[derive(Serialize)]
@@ -230,6 +294,10 @@ pub fn run() {
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_fs::init())
         .manage(AppState::default())
+        .setup(|app| {
+            spawn_auraphyx_pipeline(app);
+            Ok(())
+        })
         .invoke_handler(tauri::generate_handler![
             vmp_version,
             file_menu_items,

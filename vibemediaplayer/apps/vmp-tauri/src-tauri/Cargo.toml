@@ -25,6 +25,7 @@ vmp-vap = { path = "../../../crates/vmp-vap" }
 vmp-dsp = { path = "../../../crates/vmp-dsp" }
 vmp-core = { path = "../../../crates/vmp-core" }
 vmp-v01d = { path = "../../../crates/vmp-v01d" }
+vmp-viz = { path = "../../../crates/vmp-viz" }
 
 [features]
 default = []
