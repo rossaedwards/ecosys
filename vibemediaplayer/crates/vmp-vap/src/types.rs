@@ -169,6 +169,16 @@ impl VapObject {
                 isrc: None,
                 source_dna: Some("defaults".into()),
             },
+            // Field names/types below are matched exactly against
+            // `vasp/VASP_Official_Schema.json` — see that file before
+            // changing any key here. A handful of prior keys/types had
+            // drifted (e.g. `KEY` vs schema's `KEY_SIGNATURE`,
+            // `SPECTRAL_CENTROID` as a Hz number vs the schema's string
+            // label) and silently round-tripped since pillars are loose
+            // JSON, never validated. `KICK_ATTACK_MS` and
+            // `KINETIC.ENERGY.ENTRAINMENT_FACTOR` were dropped: neither
+            // has a defined home in the schema and nothing in this crate
+            // reads them back out.
             pillars: Pillars {
                 structural: Some(serde_json::json!({
                     "TEMPORAL_DYNAMICS": {
@@ -178,34 +188,45 @@ impl VapObject {
                         "TIME_SIGNATURE": "4/4"
                     },
                     "PERCUSSIVE_DNA": {
-                        "KICK_TRANSIENT": "Punch (Thud)",
-                        "KICK_ATTACK_MS": 20.0,
+                        "KICK_TRANSIENT": {
+                            "ATTACK": "Soft",
+                            "DECAY": "Short",
+                            "PROFILE": "Punch (Thud)"
+                        },
                         "SYNCOPATION_INDEX": 0.2
                     }
                 })),
                 tonal: Some(serde_json::json!({
                     "HARMONIC_PROFILE": {
-                        "KEY": "C Major",
+                        "KEY_SIGNATURE": "C Major",
                         "CHORD_COMPLEXITY": "triadic",
                         "DISSONANCE_RATING": 0.1
                     },
-                    "TUNING": { "REFERENCE_PITCH_HZ": 440, "MICROTONALITY": false }
+                    "TUNING_STANDARD": { "REFERENCE_PITCH": 440, "MICROTONALITY": false }
                 })),
                 timbral: Some(serde_json::json!({
                     "SPECTRAL_PHYSICS": {
-                        "FREQ_BALANCE": "balanced",
-                        "SPECTRAL_CENTROID_HZ": 1000.0,
-                        "SATURATION_INDEX": 0.15
+                        "FREQUENCY_BALANCE": {
+                            "SUB_DOMINANT": "balanced",
+                            "MID_FORWARD": "balanced",
+                            "AIR_BRILLIANCE": "balanced"
+                        },
+                        "SPECTRAL_CENTROID": "Warm/Body",
+                        "SPECTRAL_SATURATION": 0.15
                     },
                     "PRODUCTION_AESTHETIC": {
-                        "FIDELITY": "hi-fi",
+                        "FIDELITY_SCORE": "hi-fi",
                         "DYNAMIC_RANGE_LRA": 10.0,
                         "SPATIAL_WIDTH": "stereo"
                     }
                 })),
                 linguistic: Some(serde_json::json!({
-                    "SEMANTIC_CONTENT": { "EXPLICIT_TIER": "CLEAN", "TOPIC": "unknown" },
-                    "LANGUAGE": { "PRIMARY": "und" }
+                    "SEMANTIC_CONTENT": {
+                        "EXPLICIT_FILTER": "Clean",
+                        "TOPIC_CLUSTERS": [],
+                        "NARRATIVE_ARC": "unknown"
+                    },
+                    "LANGUAGE_PROFILE": { "PRIMARY_LANGUAGE": "und" }
                 })),
                 affective: Some(serde_json::json!({
                     "THAYER_COORDINATES": {
@@ -215,13 +236,13 @@ impl VapObject {
                     }
                 })),
                 contextual: Some(serde_json::json!({
-                    "SCENARIO_ENGINE": { "MACRO": "any", "MICRO": "listening" }
+                    "SCENARIO_ENGINE": { "MACRO_SETTING": "any", "MICRO_ACTIVITY": "listening" }
                 })),
                 photometric: Some(serde_json::json!({
                     "CHROMATIC_MAP": {
                         "PRIMARY_HEX": "#4B0082",
                         "SECONDARY_HEX": "#1a1a2e",
-                        "PALETTE_TEMP": "cool"
+                        "PALETTE_TEMPERATURE": "cool"
                     },
                     "LUMEN_DYNAMICS": {
                         "BRIGHTNESS_FLOOR": 0.05,
@@ -231,8 +252,8 @@ impl VapObject {
                     },
                     "VISUAL_TEXTURE": {
                         "FOG_DENSITY": 0.2,
-                        "LASER_COMPATIBLE": false,
-                        "VISUAL_NOISE": 0.0
+                        "LASER_COMPATIBILITY": false,
+                        "VISUAL_NOISE": "Clean"
                     }
                 })),
                 kinetic: Some(serde_json::json!({
@@ -240,11 +261,11 @@ impl VapObject {
                         "TARGET_HR_ZONE": "100-120",
                         "HRV_IMPACT": "neutral"
                     },
-                    "ENERGY": { "MET_SCORE": 3.0, "ENTRAINMENT_FACTOR": 40.0 }
+                    "ENERGY_EXPENDITURE": { "MET_SCORE": 3.0 }
                 })),
                 genealogical: Some(serde_json::json!({
                     "ERA_ANCHORING": { "CULTURAL_ERA": "unknown", "TIMELESSNESS_SCORE": 0.5 },
-                    "TRIBE_ALIGNMENT": { "SUBCULTURE": "general", "AUTHENTICITY_SCORE": 0.5 }
+                    "TRIBE_ALIGNMENT": { "SUBCULTURE_ID": "general", "AUTHENTICITY_SCORE": 0.5 }
                 })),
             },
         }
@@ -275,7 +296,8 @@ impl VapObject {
 
     pub fn met_score(&self) -> Option<f64> {
         let k = self.pillars.kinetic.as_ref()?;
-        k.pointer("/ENERGY/MET_SCORE")
+        k.pointer("/ENERGY_EXPENDITURE/MET_SCORE")
+            .or_else(|| k.pointer("/ENERGY/MET_SCORE")) // pre-3.69-cleanup documents
             .or_else(|| k.get("MET_SCORE"))
             .and_then(|v| v.as_f64())
     }
@@ -290,8 +312,9 @@ impl VapObject {
 
     pub fn palette_temp(&self) -> Option<String> {
         let p = self.pillars.photometric.as_ref()?;
-        p.pointer("/CHROMATIC_MAP/PALETTE_TEMP")
-            .or_else(|| p.get("PALETTE_TEMP"))
+        p.pointer("/CHROMATIC_MAP/PALETTE_TEMPERATURE")
+            .or_else(|| p.pointer("/CHROMATIC_MAP/PALETTE_TEMP")) // pre-3.69-cleanup documents
+            .or_else(|| p.get("PALETTE_TEMPERATURE"))
             .and_then(|v| v.as_str().map(|s| s.to_string()).or_else(|| {
                 v.as_f64().map(|n| n.to_string())
             }))

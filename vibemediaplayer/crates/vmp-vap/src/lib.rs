@@ -87,6 +87,46 @@ mod tests {
         assert_eq!(back.vasp_version, VASP_VERSION);
     }
 
+    /// Regression test for the field-name drift against
+    /// `vasp/VASP_Official_Schema.json` (KEY -> KEY_SIGNATURE,
+    /// FREQ_BALANCE -> FREQUENCY_BALANCE, PALETTE_TEMP -> PALETTE_TEMPERATURE,
+    /// SATURATION_INDEX -> SPECTRAL_SATURATION, TUNING -> TUNING_STANDARD).
+    #[test]
+    fn defaults_use_schema_field_names() {
+        let d = VapObject::defaults("Unknown", "Untitled");
+        let tonal = d.pillars.tonal.as_ref().unwrap();
+        assert!(tonal.pointer("/HARMONIC_PROFILE/KEY_SIGNATURE").is_some());
+        assert!(tonal.pointer("/HARMONIC_PROFILE/KEY").is_none());
+        assert!(tonal.get("TUNING_STANDARD").is_some());
+        assert!(tonal.get("TUNING").is_none());
+
+        let timbral = d.pillars.timbral.as_ref().unwrap();
+        assert!(timbral
+            .pointer("/SPECTRAL_PHYSICS/FREQUENCY_BALANCE")
+            .is_some());
+        assert!(timbral
+            .pointer("/SPECTRAL_PHYSICS/SPECTRAL_SATURATION")
+            .is_some());
+        assert!(timbral.pointer("/SPECTRAL_PHYSICS/SATURATION_INDEX").is_none());
+
+        let photometric = d.pillars.photometric.as_ref().unwrap();
+        assert!(photometric
+            .pointer("/CHROMATIC_MAP/PALETTE_TEMPERATURE")
+            .is_some());
+        assert!(photometric.pointer("/CHROMATIC_MAP/PALETTE_TEMP").is_none());
+
+        let kinetic = d.pillars.kinetic.as_ref().unwrap();
+        assert!(kinetic
+            .pointer("/ENERGY_EXPENDITURE/MET_SCORE")
+            .is_some());
+        assert_eq!(d.met_score(), Some(3.0));
+
+        let genealogical = d.pillars.genealogical.as_ref().unwrap();
+        assert!(genealogical
+            .pointer("/TRIBE_ALIGNMENT/SUBCULTURE_ID")
+            .is_some());
+    }
+
     #[test]
     fn thayer_quadrant() {
         let eng = VapScoringEngine::new();

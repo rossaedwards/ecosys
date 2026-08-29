@@ -108,7 +108,7 @@ pub struct OpenResult {
 fn vmp_version() -> serde_json::Value {
     serde_json::json!({
         "product": "Vibe Media Player",
-        "vap": "3.1",
+        "vap": vmp_vap::VASP_VERSION,
         "v01d": v01d_info(),
         "filter": OPEN_DIALOG_FILTER,
     })

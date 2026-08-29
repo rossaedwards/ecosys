@@ -350,8 +350,9 @@ impl PlayerSession {
         });
         let bpm = bundle.vap.bpm();
         let key = bundle.vap.pillars.tonal.as_ref().and_then(|t| {
-            t.pointer("/HARMONIC_PROFILE/KEY")
-                .or_else(|| t.get("KEY"))
+            t.pointer("/HARMONIC_PROFILE/KEY_SIGNATURE")
+                .or_else(|| t.pointer("/HARMONIC_PROFILE/KEY")) // pre-3.69-cleanup documents
+                .or_else(|| t.get("KEY_SIGNATURE"))
                 .and_then(|v| v.as_str())
                 .map(|s| s.to_string())
         });

@@ -119,6 +119,13 @@ impl VapScoringEngine {
         artist: &str,
     ) -> VapObject {
         let kick = self.kick_profile(attack_ms);
+        let (kick_attack, kick_decay) = if kick.starts_with("Sharp") {
+            ("Sharp", "Short")
+        } else if kick.starts_with("Punch") {
+            ("Soft", "Short")
+        } else {
+            ("Soft", "Long")
+        };
         let spectral = self.spectral_color(centroid_hz);
         let thayer = self.thayer_coordinates(key_mode, sentiment_score, rms_amplitude);
         let hex = self.photometric_hex(dominant_freq_hz);
@@ -126,6 +133,8 @@ impl VapScoringEngine {
         let hr_lo = (bpm - 20.0).max(0.0) as i64;
         let hr_hi = (bpm + 10.0) as i64;
 
+        // Field names match `vasp/VASP_Official_Schema.json` exactly — see
+        // the equivalent note in `types.rs::VapObject::defaults()`.
         VapObject {
             vasp_version: self.version.clone(),
             identity: crate::types::Identity {
@@ -137,19 +146,19 @@ impl VapScoringEngine {
             pillars: crate::types::Pillars {
                 structural: Some(json!({
                     "PERCUSSIVE_DNA": {
-                        "KICK_TRANSIENT": kick,
-                        "KICK_ATTACK_MS": attack_ms
+                        "KICK_TRANSIENT": {
+                            "ATTACK": kick_attack,
+                            "DECAY": kick_decay,
+                            "PROFILE": kick
+                        }
                     },
                     "TEMPORAL_DYNAMICS": { "BPM_RAW": bpm }
                 })),
                 tonal: Some(json!({
-                    "HARMONIC_PROFILE": { "KEY": key_mode }
+                    "HARMONIC_PROFILE": { "KEY_SIGNATURE": key_mode }
                 })),
                 timbral: Some(json!({
-                    "SPECTRAL_PHYSICS": {
-                        "CLASS": spectral,
-                        "SPECTRAL_CENTROID_HZ": centroid_hz
-                    }
+                    "SPECTRAL_PHYSICS": { "SPECTRAL_CENTROID": spectral }
                 })),
                 linguistic: None,
                 affective: Some(json!({
@@ -164,7 +173,7 @@ impl VapScoringEngine {
                     "CHROMATIC_MAP": { "PRIMARY_HEX": hex }
                 })),
                 kinetic: Some(json!({
-                    "ENERGY": { "MET_SCORE": met },
+                    "ENERGY_EXPENDITURE": { "MET_SCORE": met },
                     "BIOMETRIC_ENTRAINMENT": {
                         "TARGET_HR_ZONE": format!("{hr_lo}-{hr_hi}")
                     }
