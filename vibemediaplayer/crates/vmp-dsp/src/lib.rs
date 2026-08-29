@@ -2,9 +2,11 @@
 
 mod eq;
 mod analysis;
+mod fft;
 
 pub use analysis::*;
 pub use eq::*;
+pub use fft::*;
 
 /// Standard 10-band graphic EQ center frequencies (Hz), matching `vmp.html` prototype.
 pub const GRAPHIC_10_BANDS_HZ: [f32; 10] =

@@ -31,6 +31,10 @@ pub struct VapRuntime {
     pub photometric: Photometric,
     pub entrainment_factor: f32,
     pub met_score: f32,
+    // Live DSP outputs (from `vmp_dsp::AudioAnalyzer`)
+    pub rms: f32,
+    pub beat_onset: bool,
+    pub beat_phase: f32,
     // Bookkeeping
     pub phase_time: f32,
     pub frame_count: u32,
@@ -58,6 +62,9 @@ impl Default for VapRuntime {
             photometric: Photometric::default(),
             entrainment_factor: 50.0,
             met_score: 3.0,
+            rms: 0.0,
+            beat_onset: false,
+            beat_phase: 0.0,
             phase_time: 0.0,
             frame_count: 0,
             vap_loaded: false,
@@ -142,11 +149,24 @@ impl VapRuntime {
         // Pillar 7 — chromatic band energies
         let bands = chromatic_band_energies(fft_mag, sr);
         let alpha_band = clampf(dt / 0.08, 0.0, 1.0);
-        for b in 0..4 {
-            self.photometric.chrom_energy[b] =
-                ema(self.photometric.chrom_energy[b], bands[b], alpha_band);
+        for (energy, band) in self.photometric.chrom_energy.iter_mut().zip(bands) {
+            *energy = ema(*energy, band, alpha_band);
         }
         let _ = &VAP_CHROMATIC_MAP; // keep map linked for shader consumers
+    }
+
+    /// Apply a full [`vmp_dsp::AnalysisFrame`]: runs [`Self::update_dsp`] on its
+    /// magnitude spectrum and records the live rms/beat outputs alongside it.
+    pub fn apply_analysis_frame(
+        &mut self,
+        frame: &vmp_dsp::AnalysisFrame,
+        sample_rate: u32,
+        dt: f32,
+    ) {
+        self.update_dsp(&frame.magnitudes, sample_rate, dt);
+        self.rms = frame.rms;
+        self.beat_onset = frame.beat_onset;
+        self.beat_phase = frame.beat_phase;
     }
 
     /// Snapshot for UI / WebGL uniforms.
@@ -170,8 +190,10 @@ impl VapRuntime {
         }
     }
 
-    /// Shader uniform bundle (names match vibe.frag).
-    pub fn shader_uniforms(&self) -> ShaderUniforms {
+    /// Shader uniform bundle (names match vibe.frag). `auraphyx` carries the
+    /// Phase-7 TSL lattice extension; pass [`crate::AuraphyxFrame::default()`]
+    /// (all-zero) to render the base Chladni field with the lattice inert.
+    pub fn shader_uniforms(&self, auraphyx: &crate::AuraphyxFrame) -> ShaderUniforms {
         ShaderUniforms {
             centroid: self.spectral_centroid_hz,
             saturation: self.saturation_index,
@@ -191,6 +213,12 @@ impl VapRuntime {
             chrom_energy: self.photometric.chrom_energy,
             entrainment: self.entrainment_factor,
             time: self.phase_time,
+            tsl_x: auraphyx.tsl_x,
+            tsl_y: auraphyx.tsl_y,
+            tsl_z: auraphyx.tsl_z,
+            phase_align: auraphyx.phase_align,
+            lattice_rot: auraphyx.lattice_rot,
+            auraphyx_mode: 1.0,
         }
     }
 }
@@ -215,6 +243,13 @@ pub struct ShaderUniforms {
     pub chrom_energy: [f32; 4],
     pub entrainment: f32,
     pub time: f32,
+    // Phase 7 — Auraphyx TSL lattice extension.
+    pub tsl_x: f32,
+    pub tsl_y: f32,
+    pub tsl_z: f32,
+    pub phase_align: f32,
+    pub lattice_rot: f32,
+    pub auraphyx_mode: f32,
 }
 
 #[inline]

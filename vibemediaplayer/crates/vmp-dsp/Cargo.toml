@@ -8,5 +8,6 @@ authors.workspace = true
 
 [dependencies]
 serde = { workspace = true }
+rustfft = "6"
 
 [dev-dependencies]

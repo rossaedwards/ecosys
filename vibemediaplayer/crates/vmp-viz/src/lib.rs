@@ -8,9 +8,11 @@
 //! The FUTE language pipeline (`v01d lang --from c --to rust`) produces structural
 //! scaffolding; this crate is the polished, compile-ready symbiont integrated into VMP.
 
+mod auraphyx;
 mod photometric;
 mod runtime;
 
+pub use auraphyx::*;
 pub use photometric::*;
 pub use runtime::*;
 
