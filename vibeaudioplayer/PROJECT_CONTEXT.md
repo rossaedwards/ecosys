@@ -54,11 +54,7 @@ Reference engine (not yet a `vap-analyze` CLI in this tree):
 - `../vasp/vasp_sdk-api_streaming.md` — `VapEngine::transform_spotify`
 - `../vasp/VASP_Official Schema.md`
 - `../vasp/VASP_Context_Simulation.md`
-<<<<<<< HEAD
-- `../vasp/VibeTribe_Pillarz.md` — VASP 3.69 Tribe voter copy (9×13 questions; not a schema change)
-=======
 - `../vasp/VibeTribe_Pillarz.md` — 9 × 13 voter copy (overlay only this pass)
->>>>>>> 3ea22aae07b7f55896acfbbf1789a76796f18981
 
 ## Auth status (2026-08-21)
 

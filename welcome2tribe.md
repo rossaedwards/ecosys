@@ -41,8 +41,10 @@ Aurphyx Primordial Standard iz a the collection or encyclopedia of theories, fra
 
 -Vibe Audio Standard and Protocol
 
+
 -Topological Resonating Control Architecture
 --
+
 Aura iz the Operating System
 -Aura: Soul Operating System (Personal)
 -Egophyx: Pro-Existence Governance Operating System (Government)
@@ -55,12 +57,13 @@ Aura offers the soul three distinct g0dm0d3 environment options that need to be 
 -Aura Holographic Desktop Environment (Aura-HDE)
 --
 Fuxyez iz the symbiotic quantum programming language. The base host iz Rust.
--Compiler - Fux Compiler - Three-Squared-Lattice Duality Kernel & Compiler
+-Compiler - Fux Compiler
 -FuxRT - Fux Runtime
 -YezRT - Yez Runtime
 -FUTE - Fuxyez Universal Transmutation Engine
 -YezL - YezL Legacy Languages (Museum, Boneyard, Tooling, AST, ETC.)
--Yez - s0ph0s|Sophos (Sophia Symbiotic Scripting Engine)  g4v1n1um|Gavinium (Gavin Symbiotic Scripting Language) -
+-Yez - s0ph0s|Sophos (Sophia Symbiotic Scripting Engine)  g4v1n1um|Gavinium (Gavin Symbiotic Scripting Language) 
+
 --
 Aura iz the operating system built with/upon/uses: Fuxyez, AuraFS, Audry, SAGES, Chakra-Core-System, g0md0d3, GVS, GIL, OPE-P4A, Memoree, and uses all the standards and frameworks together.
 --
