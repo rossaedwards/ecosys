@@ -131,4 +131,4 @@ There is one GitHub Actions workflow, `.github/workflows/mdbook.yml`, which buil
 - `rossaedwards/ecosys` (this repo) is the lab — agents edit here.
 - `aurphyx/ecosys` is the publish snapshot — do not push to it unless explicitly asked; only clean, named, licensed files get promoted.
 - Do not create parallel trees (`ecosys-v2/`, `ecosys_new/`); prefer editing the path that already exists.
-- Windows lab path: `C:\rossaedwards\ecosys`. Fedora lab path: `/home/rae/rossaedwards/main`. A shared NTFS partition `D:` is updated before switching OS — not something Claude needs to manage, but explains why some content may reference both OSes.
+- Windows lab path: `C:\rossaedwards\ecosys`. Omarchy Linux lab path: `/home/rae/rossaedwards/ecosys`. A shared NTFS partition `D:` is updated before switching OS — not something Claude needs to manage, but explains why some content may reference both OSes.

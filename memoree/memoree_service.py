@@ -1,5 +1,15 @@
+## ** APS-TSLCA-MEMOREE-SERVICE **
+## ** Memoree - Sovereign Memory Substrate **
+## ** Symbiotic Universal Xessability Standards **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 4.0 **
+
 """
-Memoree — Main Daemon Entry Point
+Memoree — Main Daemon Entry Point (TSLCA 9-Cell Lattice & Cloudflare Edge)
 ═══════════════════════════════════════════════════════════════════════════════
 Sovereign memory substrate for the Aurphyx LLC ecosystem.
 
@@ -8,23 +18,17 @@ Sovereign memory substrate for the Aurphyx LLC ecosystem.
   GitHub  : rossaedwards | aurphyx
   ORCiD   : 0009-0008-0539-1289
   Port    : 127.0.0.1:7042
+  Edge    : https://memoree.aurphyx.com
+  Tunnel  : 5b13dbbe-9a8d-4d0e-b4d3-08ba18fda966
   Protocol: HTTP/1.1/v1 + SSE streaming (StreamingResponse)
-  MCP     : JSON-RPC 2.0 over HTTP (LM Studio compatible)
-
-Lifespan
-─────────
-  startup  → MemoryEngine init, heartbeat stub, startup banner
-  shutdown → graceful flush + log drain
-
-Disabled
-─────────
-  HeartbeatLoop   → heartbeat.py  [awaiting integration]
+  MCP     : JSON-RPC 2.0 over HTTP (Claude / Cursor / Hermes / LM Studio)
 ═══════════════════════════════════════════════════════════════════════════════
 f0rg3d in l0v3 by Ross Edwards
 """
 
 from __future__ import annotations
 
+import asyncio
 import logging
 import os
 import sys
@@ -39,9 +43,8 @@ from fastapi.middleware.gzip import GZipMiddleware
 # Guarantee c:\memoree\ is always on the import path regardless of CWD
 sys.path.insert(0, str(Path(__file__).parent))
 
+from heartbeat import HeartbeatLoop
 from routes import router
-
-# from heartbeat import HeartbeatLoop   # [DISABLED] awaiting integration
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Logging
@@ -68,31 +71,29 @@ log = logging.getLogger("memoree")
 async def lifespan(app: FastAPI):
     """
     Startup → yield → shutdown lifecycle manager.
-
-    On startup:
-      • Logs the daemon banner with port, MCP endpoint, and SSE stream URL.
-      • HeartbeatLoop stub is preserved — uncomment to re-enable.
-
-    On shutdown:
-      • Logs graceful shutdown signal.
-      • Add flush/cleanup hooks here as backends are integrated.
     """
-    log.info("═" * 60)
-    log.info("  Memoree Daemon — Sovereign Memory Substrate")
-    log.info("  Owner   : Ross Edwards / Aurphyx LLC")
-    log.info("  Binding : http://127.0.0.1:7042")
-    log.info("  Health  : http://127.0.0.1:7042/health")
-    log.info("  MCP     : http://127.0.0.1:7042/mcp")
-    log.info("  Stream  : http://127.0.0.1:7042/stream/context")
-    log.info("  Docs    : http://127.0.0.1:7042/docs")
-    log.info("═" * 60)
+    log.info("=" * 65)
+    log.info("  Memoree v4.0.0 Daemon - Sovereign Memory Substrate")
+    log.info("  Architecture : Three-Squared-Lattice Cognitive Architecture (TSLCA)")
+    log.info("  Owner        : Ross Edwards / Aurphyx LLC")
+    log.info("  Local Binding: http://127.0.0.1:7042")
+    log.info("  Cloudflare   : https://memoree.aurphyx.com")
+    log.info("  Health       : http://127.0.0.1:7042/health")
+    log.info("  Lattice API  : http://127.0.0.1:7042/lattice")
+    log.info("  MCP Endpoint : http://127.0.0.1:7042/mcp")
+    log.info("  Stream       : http://127.0.0.1:7042/stream/context")
+    log.info("  OpenAPI Docs : http://127.0.0.1:7042/docs")
+    log.info("=" * 65)
 
-    # heartbeat = HeartbeatLoop()          # [DISABLED]
-    # asyncio.create_task(heartbeat.run()) # [DISABLED]
+    heartbeat = HeartbeatLoop()
+    heartbeat_task = asyncio.create_task(heartbeat.run())
 
     yield
 
-    log.info("Memoree shutting down — backends flushed.")
+    heartbeat.stop()
+    heartbeat_task.cancel()
+    log.info("Memoree shutting down - backends flushed & heartbeat stopped.")
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -103,17 +104,18 @@ app = FastAPI(
     title="Memoree",
     description=(
         "Sovereign Memory Substrate for the Aurphyx LLC ecosystem. "
-        "Provides episodic, semantic, procedural, meta, quantum, creative, "
-        "and governance memory layers with SSE streaming and MCP/JSON-RPC "
-        "for LM Studio compatibility."
+        "Provides non-commutative 9-cell TSLCA memory layers (Sensory, Working, "
+        "Episodic, Semantic, Meta, Quantum, Identity, Procedural, Governance) "
+        "gated by the Harmonic Integrity Field (HIF) with SSE streaming and "
+        "MCP JSON-RPC 2.0 interface for Claude, Cursor, Hermes, and Gemini."
     ),
-    version="0.1.0",
+    version="4.0.0",
     contact={
         "name": "Ross Edwards / Aurphyx LLC",
         "url": "https://github.com/rossaedwards",
         "email": "ross@aurphyx.com",
     },
-    license_info={"name": "Proprietary — Aurphyx LLC"},
+    license_info={"name": "Proprietary — Aurphyx LLC / SAGES Pro-Existence"},
     lifespan=lifespan,
     docs_url="/docs",
     redoc_url="/redoc",
@@ -122,7 +124,6 @@ app = FastAPI(
 
 # ── Middleware ────────────────────────────────────────────────────────────────
 
-# Local-only — allow 127.0.0.1 loopback clients (LM Studio, hooks, etc.)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -130,14 +131,14 @@ app.add_middleware(
         "http://127.0.0.1:7042",
         "http://localhost",
         "http://localhost:7042",
+        "https://memoree.aurphyx.com",
+        "http://memoree.aurphyx.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Compress large context payloads — SSE streams and /context/active responses
-# can be substantial; GZip at threshold 1 KB.
 app.add_middleware(GZipMiddleware, minimum_size=1024)
 
 # ── Routers ───────────────────────────────────────────────────────────────────
@@ -154,10 +155,6 @@ if __name__ == "__main__":
         "memoree_service:app",
         host="127.0.0.1",
         port=7042,
-        reload=False,
         log_level="info",
-        access_log=True,
-        # HTTP/1.1 only — SSE requires persistent connections; HTTP/2 push
-        # is not needed at localhost and adds TLS complexity for no gain.
-        http="h11",
+        reload=False,
     )

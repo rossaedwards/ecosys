@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoree v4.0 — Sovereign Cognitive Substrate & Multi-Model Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dashboard/style.css">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <div class="logo-mark">Ξ</div>
+      <div class="logo-text">
+        <span class="brand-title">MEMOREE</span>
+        <span class="version-badge">v4.0.0 TSLCA</span>
+      </div>
+    </div>
+    
+    <div class="nav-center">
+      <div class="status-pill status-healthy" id="daemon-status-pill">
+        <span class="pulse-dot"></span>
+        <span id="daemon-status-text">DAEMON: HEALTHY</span>
+      </div>
+      <a href="https://memoree.aurphyx.com" target="_blank" class="tunnel-pill" title="Cloudflare Zero Trust Tunnel">
+        <span class="tunnel-icon">⚡</span>
+        <span>memoree.aurphyx.com</span>
+      </a>
+    </div>
+
+    <div class="nav-right">
+      <a href="http://localhost:6333/dashboard" target="_blank" class="btn btn-qdrant" id="btn-qdrant-dashboard" title="Open local Qdrant Vector DB Web Console">
+        <span class="qdrant-icon">💠</span>
+        <span>Qdrant Dashboard</span>
+      </a>
+      <a href="/docs" target="_blank" class="btn btn-secondary">
+        <span>API Docs</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="dashboard-grid">
+    <!-- Row 1: System Highlights & Trace -->
+    <section class="stat-banner glass-card">
+      <div class="stat-item">
+        <span class="stat-label">COGNITIVE FIELD TRACE</span>
+        <span class="stat-value text-gradient-cyan" id="stat-field-trace">9.00</span>
+        <span class="stat-sub">Tr(ℱ) = SIX⊗SIX + SCX⊗SCX + ICX⊗ICX</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">ACTIVE MEMORIES</span>
+        <span class="stat-value text-gradient-purple" id="stat-total-memories">--</span>
+        <span class="stat-sub">Across 9 Qdrant Collections</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">HARMONIC INTEGRITY (HIF)</span>
+        <span class="stat-value text-gradient-green" id="stat-hif-score">0.88</span>
+        <span class="stat-sub">Gate: Permitted (H ≥ 0.65)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">UPTIME</span>
+        <span class="stat-value text-mono" id="stat-uptime">--</span>
+        <span class="stat-sub">Port 127.0.0.1:7042</span>
+      </div>
+    </section>
+
+    <!-- Row 2: 3x3 TSLCA Cognitive Field Tensor -->
+    <section class="lattice-section glass-card">
+      <div class="section-header">
+        <div class="section-title-group">
+          <h2>Three-Squared-Lattice Cognitive Architecture (TSLCA)</h2>
+          <p class="section-desc">Non-commutative 3×3 tensor manifold governing memory, consciousness, and resonance.</p>
+        </div>
+        <button class="btn btn-sm btn-outline" id="btn-refresh-lattice">↻ Refresh Field</button>
+      </div>
+
+      <div class="tensor-grid" id="tensor-grid">
+        <!-- 3x3 Grid Cells injected by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Row 3: Model & Platform Hooks Matrix -->
+    <section class="hooks-section glass-card">
+      <div class="section-header">
+        <div class="section-title-group">
+          <h2>Model & Platform Hooks Matrix</h2>
+          <p class="section-desc">Unified multi-model routing with automatic 9-cell context pre-fetching and turn archiving.</p>
+        </div>
+        <button class="btn btn-sm btn-outline" id="btn-test-all-hooks">⚡ Test All Probes</button>
+      </div>
+
+      <div class="hooks-grid" id="hooks-grid">
+        <!-- Injected by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Row 4: HIF & Triple Threshold Gate (TTG) Inspector -->
+    <section class="hif-section glass-card">
+      <div class="section-header">
+        <div class="section-title-group">
+          <h2>Harmonic Integrity Field (HIF) & Gate Inspector</h2>
+          <p class="section-desc">HIF(x,t) = (C · R · A)<sup>1/3</sup> · Φ(C,R,A) — Mathematical gating for memory persistence.</p>
+        </div>
+      </div>
+
+      <div class="hif-dashboard-flex">
+        <div class="hif-controls">
+          <div class="slider-group">
+            <div class="slider-header">
+              <label>Coherence (C):</label>
+              <span class="slider-val" id="val-coherence">0.85</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.01" value="0.85" id="slider-coherence">
+          </div>
+          <div class="slider-group">
+            <div class="slider-header">
+              <label>Resonance (R):</label>
+              <span class="slider-val" id="val-resonance">0.90</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.01" value="0.90" id="slider-resonance">
+          </div>
+          <div class="slider-group">
+            <div class="slider-header">
+              <label>Alignment (A):</label>
+              <span class="slider-val" id="val-alignment">0.88</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.01" value="0.88" id="slider-alignment">
+          </div>
+        </div>
+
+        <div class="hif-meter-box">
+          <div class="hif-gauge">
+            <span class="gauge-score" id="computed-hif-val">0.88</span>
+            <span class="gauge-sub">Computed HIF</span>
+          </div>
+          <div class="gate-status-list">
+            <div class="gate-row gate-passed" id="gate-create-row">
+              <span class="gate-tag">H_create (0.65)</span>
+              <span class="gate-desc">Create / Ingest Gate: PERMITTED</span>
+            </div>
+            <div class="gate-row gate-passed" id="gate-integrate-row">
+              <span class="gate-tag">H_integrate (0.55)</span>
+              <span class="gate-desc">Recall / Context Gate: PERMITTED</span>
+            </div>
+            <div class="gate-row gate-passed" id="gate-renew-row">
+              <span class="gate-tag">H_renew (0.35)</span>
+              <span class="gate-desc">Dissolution Gate: STABLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 5: Rituals, Chains, Links & Forkz (RCL) Studio -->
+    <section class="rcl-section glass-card">
+      <div class="section-header">
+        <div class="section-title-group">
+          <h2>Rituals, Chains, Links & Forkz (RCL) Studio</h2>
+          <p class="section-desc">g0dm0d3-ktrl Multi-agent orchestration and quantum reality branching engine.</p>
+        </div>
+        <div class="rcl-tabs">
+          <button class="tab-btn active" data-tab="links">Links (L1)</button>
+          <button class="tab-btn" data-tab="chains">Chains (L2)</button>
+          <button class="tab-btn" data-tab="rituals">Rituals (L3)</button>
+          <button class="tab-btn" data-tab="forks">Forkz (L4)</button>
+        </div>
+      </div>
+
+      <div class="rcl-content" id="rcl-content">
+        <!-- Injected by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Row 6: Memory Recall & Quick Ingestion -->
+    <section class="quick-ingest-section glass-card">
+      <div class="section-header">
+        <div class="section-title-group">
+          <h2>Semantic Recall & Quick Memory Ingestion</h2>
+          <p class="section-desc">Test nearest-neighbor recall or write instant memory records into the 9 TSL collections.</p>
+        </div>
+      </div>
+
+      <div class="ingest-flex">
+        <div class="query-box">
+          <h3>Semantic Memory Query</h3>
+          <div class="input-group">
+            <input type="text" id="query-input" placeholder="Query semantic/episodic memory (e.g. 'FTQC topological phase')...">
+            <button class="btn btn-primary" id="btn-run-query">Search</button>
+          </div>
+          <div class="results-list" id="query-results">
+            <p class="placeholder-text">Search results will appear here.</p>
+          </div>
+        </div>
+
+        <div class="write-box">
+          <h3>Quick Memory Ingestion</h3>
+          <form id="ingest-form">
+            <div class="form-row">
+              <select id="ingest-type">
+                <option value="episodic">Episodic (SIX⊗ICX)</option>
+                <option value="semantic">Semantic (SCX⊗SIX)</option>
+                <option value="meta">Meta / Fact (SCX⊗SCX)</option>
+                <option value="sensory">Sensory (SIX⊗SIX)</option>
+                <option value="working">Working (SIX⊗SCX)</option>
+                <option value="quantum">Quantum (SCX⊗ICX)</option>
+                <option value="identity">Identity (ICX⊗SIX)</option>
+                <option value="procedural">Procedural (ICX⊗SCX)</option>
+                <option value="governance">Governance (ICX⊗ICX)</option>
+              </select>
+              <input type="text" id="ingest-project" value="memoree" placeholder="Project">
+            </div>
+            <textarea id="ingest-content" placeholder="Memory payload content..." rows="3"></textarea>
+            <button type="submit" class="btn btn-accent">Save into Lattice</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Auth Key Modal -->
+  <div class="modal-overlay" id="auth-modal" style="display: none;">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <h3 id="modal-provider-title">Configure Provider Credentials</h3>
+        <button class="modal-close" id="btn-close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-hint">API keys are saved securely to <code>~/.memoree/credentials.json</code> on your machine.</p>
+        <div class="form-group">
+          <label>API Key:</label>
+          <input type="password" id="modal-api-key" placeholder="Enter API key...">
+        </div>
+        <div class="form-group">
+          <label>Base URL (Optional):</label>
+          <input type="text" id="modal-base-url" placeholder="Default endpoint">
+        </div>
+        <div class="form-group">
+          <label>Default Model (Optional):</label>
+          <input type="text" id="modal-model" placeholder="Default model">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-modal-cancel">Cancel</button>
+        <button class="btn btn-primary" id="btn-modal-save">Save Credentials</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/dashboard/app.js"></script>
+</body>
+</html>

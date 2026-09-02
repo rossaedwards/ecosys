@@ -8,14 +8,14 @@
 
 use crate::prelude::*;
 use crate::{
-    fuse::{node::Inode, inode_cache::InodeCache},
+    fuse::{inode_cache::InodeCache, node::Inode},
     network::{Orchestrator, SecureTunnel},
     shard::ShardId,
-    storage::shard_store::ShardStore,
+    storage::shard::ShardStore,
 };
 use std::{
-    sync::Arc,
     collections::HashMap,
+    sync::Arc,
     time::{Duration, Instant},
 };
 use tokio::{
@@ -82,12 +82,17 @@ impl FuseSession {
 
     /// Read shard data with strict T2 Coherence Window enforcement.
     /// [Theorem 2.1: Passive Coherence]
-    pub async fn read_shard(&self, shard_id: &ShardId, offset: u64, size: usize) -> Result<Vec<u8>> {
+    pub async fn read_shard(
+        &self,
+        shard_id: &ShardId,
+        offset: u64,
+        size: usize,
+    ) -> Result<Vec<u8>> {
         let start = Instant::now();
 
         let stream_guard = self.get_shard_stream(shard_id).await?;
         let end = (offset + size as u64).min(stream_guard.buffer.len() as u64);
-        
+
         let data = if offset < stream_guard.buffer.len() as u64 {
             stream_guard.buffer[offset as usize..end as usize].to_vec()
         } else {
@@ -97,11 +102,14 @@ impl FuseSession {
         // Enforce the 1600μs Heartbeat
         let elapsed = start.elapsed().as_micros() as u64;
         if elapsed > INVARIANTS.coherence_window_us {
-            let error = PhysicsViolationError::StabilityTimeout { 
-                elapsed, 
-                limit: INVARIANTS.coherence_window_us 
+            let error = PhysicsViolationError::StabilityTimeout {
+                elapsed,
+                limit: INVARIANTS.coherence_window_us,
             };
-            let _ = self.coherency_tx.send(CoherencyEvent::PhysicsViolation(error.clone())).await;
+            let _ = self
+                .coherency_tx
+                .send(CoherencyEvent::PhysicsViolation(error.clone()))
+                .await;
             return Err(RafsError::PhysicsViolation(error));
         }
 
@@ -117,7 +125,10 @@ impl FuseSession {
 
         // 2. Request from mesh via Secure Tunnel (Kyber-1024 Encrypted)
         // This is where Meshwerk 2.0 logic is invoked
-        let mesh_data = self.tunnel.request_shard(shard_id).await
+        let mesh_data = self
+            .tunnel
+            .request_shard(shard_id)
+            .await
             .map_err(|e| RafsError::NetworkError(e.to_string()))?;
 
         Ok(mesh_data)
@@ -126,7 +137,7 @@ impl FuseSession {
     /// Private helper to get/create streams
     async fn get_shard_stream(&self, shard_id: &ShardId) -> Result<ShardStream> {
         let mut streams = self.shard_streams.write().await;
-        
+
         if let Some(stream) = streams.get_mut(shard_id) {
             stream.last_access = Instant::now();
             return Ok(stream.clone());
@@ -148,7 +159,7 @@ impl FuseSession {
     /// Main loop for S.A.G.E.S. Coherence Monitoring
     pub fn start_monitor(self: Arc<Self>) {
         let mut rx = self.coherency_tx.clone(); // In reality, use a dedicated receiver
-        
+
         tokio::spawn(async move {
             let mut interval = interval(Duration::from_micros(INVARIANTS.coherence_window_us));
             loop {
@@ -161,10 +172,13 @@ impl FuseSession {
     async fn maintain_lattice_stability(&self) {
         let mut streams = self.shard_streams.write().await;
         let cutoff = Instant::now() - Duration::from_secs(60);
-        
+
         // Evict decoherent or inactive streams
         streams.retain(|_, stream| stream.last_access > cutoff);
-        
-        debug!("[S.A.G.E.S.] Session {}: Lattice maintenance complete.", self.session_id);
+
+        debug!(
+            "[S.A.G.E.S.] Session {}: Lattice maintenance complete.",
+            self.session_id
+        );
     }
 }

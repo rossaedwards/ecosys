@@ -1,5 +1,15 @@
+## ** APS-TSLCA-MEMOREE-ENGINE **
+## ** Memoree - Sovereign Memory Substrate **
+## ** Symbiotic Universal Xessability Standards **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 4.0 **
+
 """
-Memoree — Memory Engine
+Memoree — Memory Engine (TSLCA 9-Cell Lattice & Harmonic Integrity Field)
 ═══════════════════════════════════════════════════════════════════════════════
 Orchestrates all storage backends and assembles full context payloads.
 AuraFS is disabled pending integration — all AuraFS call-sites are preserved
@@ -10,17 +20,17 @@ as commented stubs so the re-enable is a one-line uncomment per method.
   GitHub : rossaedwards | aurphyx
   ORCiD  : 0009-0008-0539-1289
 
-Backend Map
-───────────────────────────────────────────────────────────────────────────────
-  VectorBackend   → Qdrant  (always active)
-  MemoriBridge    → Aurphyx Memori REST mirror  (toggled by config mirror flag)
-  AuraFSBackend   → AuraFS shard layer  [DISABLED — awaiting integration]
-  DataCore        → local filesystem ([::-._.-`dataorb`-._.-::])
-  Fuxyez mystical symbiotic universal xessability powers.
-───────────────────────────────────────────────────────────────────────────────
-  • ProjectMeta hydration on context assembly
-  • Active axiom / duality injection into ContextResponse
-  • Default project / LLM resolution via global_settings
+Three-Squared-Lattice Cognitive Architecture (TSLCA) 3×3 Grid:
+─────────────────────────────────────────────────────────────
+  ┌─ SIX ⊗ SIX  (Sensory)    → Perception traces, AUDRA 432/528Hz resonance
+  ├─ SIX ⊗ SCX  (Working)    → Active context, open loops, uncured session buffer
+  ├─ SIX ⊗ ICX  (Episodic)   → Conversation turns, session-bound interactions
+  ├─ SCX ⊗ SIX  (Semantic)   → Project knowledge, facts, relationships, dualities
+  ├─ SCX ⊗ SCX  (Meta)       → Verified facts, confidence-tracked beliefs, axioms
+  ├─ SCX ⊗ ICX  (Quantum)    → Physics/simulation state, lattice snapshots
+  ├─ ICX ⊗ SIX  (Identity)   → Ξ continuity, SoulJourney pipeline pointer
+  ├─ ICX ⊗ SCX  (Procedural) → Repeatable workflows, task recipes, automation
+  └─ ICX ⊗ ICX  (Governance) → Voting records, policy decisions, GVS Archivus
 ═══════════════════════════════════════════════════════════════════════════════
 f0rg3d in l0v3 by Ross Edwards
 """
@@ -39,36 +49,38 @@ from memori_bridge import MemoriBridge
 from schemas import (
     AnyMemory,
     BulkUpsertRequest,
-    # Context & session
     ContextResponse,
     CreativeMemory,
     DualityPair,
-    # Core memory types
     EpisodicMemory,
     GovernanceMemory,
+    IdentityMemory,
     LLMProvider,
-    # Diagnostics
     MemoreeDiagnostics,
-    # Search
     MemoryQuery,
     MemorySearchResult,
     MemoryTier,
-    # Enums
     MemoryType,
     MetaMemory,
     ProceduralMemory,
-    # Domain objects
     ProjectMeta,
     ProjectOwner,
     QuantumMemory,
     SemanticMemory,
+    SensoryMemory,
+    SoulJourneyStage,
     ThreadSummary,
-    # Upsert
     UpsertMemoryRequest,
     VolumeRef,
+    WorkingMemory,
+    _now,
 )
-
-# from aurafs_backend import AuraFSBackend   # [DISABLED] awaiting AuraFS integration
+from tsl_memory_kernel import (
+    LatticeSnapshot,
+    calculate_hif,
+    contract_lattice_context,
+    evaluate_gate,
+)
 from vector_backend import VectorBackend
 
 log = logging.getLogger("memoree.engine")
@@ -87,7 +99,7 @@ _DEFAULT_CHROMA_DIR = str(BASE_DIR / "embeddings")
 _DEFAULT_EMBED_MODEL = "all-MiniLM-L6-v2"
 _DEFAULT_PROJECT = "memoree"
 _DEFAULT_LLM = "supergrok"
-_CONTEXT_RESULTS = 5  # default top-k per collection in read_context
+_CONTEXT_RESULTS = 5
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -123,12 +135,7 @@ def _load_json(path: Path) -> Dict[str, Any]:
 
 
 def _parse_project_meta(key: str, raw: Dict[str, Any]) -> ProjectMeta:
-    """
-    Hydrate a ProjectMeta from a single projects.json entry.
-
-    VolumeRef values that are not recognised are silently dropped so a
-    stale projects.json never hard-crashes the engine on startup.
-    """
+    """Hydrate a ProjectMeta from a single projects.json entry."""
     valid_volumes: List[VolumeRef] = []
     for v in raw.get("active_volumes", []):
         try:
@@ -160,23 +167,9 @@ def _parse_project_meta(key: str, raw: Dict[str, Any]) -> ProjectMeta:
 
 class MemoryEngine:
     """
-    Central orchestrator for all Memoree read and write operations.
-
-    Responsibilities
-    ────────────────
-    • Write all seven memory types to VectorBackend (and optionally mirror
-      to MemoriBridge).
-    • Assemble full ContextResponse payloads enriched with ProjectMeta,
-      active axioms, active dualities, and cross-project references pulled
-      from projects.json, dualities.json, and invariants.json.
-    • Expose a type-safe bulk upsert path and a structured query interface.
-    • Surface a MemoreeDiagnostics snapshot for the /diagnostics route.
-
-    AuraFS stubs are preserved throughout.  Re-enabling is a one-line
-    uncomment per method once aurafs_backend.py is integrated.
+    Central orchestrator for all Memoree read and write operations across the
+    9-cell TSLCA matrix.
     """
-
-    # ── Lifecycle ────────────────────────────────────────────────────────────
 
     def __init__(
         self,
@@ -186,20 +179,14 @@ class MemoryEngine:
         cfg = _load_yaml(Path(config_path))
         self._cfg = cfg
 
-        # ── Vector backend ───────────────────────────────────────────────────
-        chroma_dir = cfg.get("chroma", {}).get("persist_dir", _DEFAULT_CHROMA_DIR)
-        embed_model = cfg.get("chroma", {}).get("embedding_model", _DEFAULT_EMBED_MODEL)
-        self.vector = VectorBackend(persist_dir=chroma_dir, model_name=embed_model)
+        # Vector backend
+        self.vector = VectorBackend(config_path=str(config_path))
 
-        # ── MemoriBridge (optional mirror) ───────────────────────────────────
-        self.mirror: bool = cfg.get("backend", {}).get("mirror_to_primary", True)
+        # MemoriBridge
+        self.mirror: bool = cfg.get("backend", {}).get("mirror_to_primary", False)
         self.memori = MemoriBridge()
 
-        # ── AuraFS (DISABLED) ────────────────────────────────────────────────
-        # aurafs_root  = cfg.get("aurafs", {}).get("root", "~/.memoree")
-        # self.aurafs  = AuraFSBackend(root_path=aurafs_root)
-
-        # ── Project registry ─────────────────────────────────────────────────
+        # Project registry
         raw_projects = _load_json(Path(projects_path))
         global_settings: Dict[str, Any] = raw_projects.get("global_settings", {})
 
@@ -216,56 +203,79 @@ class MemoryEngine:
             for key, val in raw_projects.get("projects", {}).items()
         }
 
-        # ── Dualities & invariants ────────────────────────────────────────────
+        # Dualities & invariants
         raw_dualities = _load_json(DUALITIES_PATH)
         raw_invariants = _load_json(INVARIANTS_PATH)
         self.global_dualities: List[str] = raw_dualities.get("dualities", [])
         self.global_invariants: List[str] = raw_invariants.get("invariants", [])
 
-        # ── Runtime counters ─────────────────────────────────────────────────
+        # Runtime counters
         self._start_time: datetime = datetime.now(tz=timezone.utc)
         self._active_sessions: int = 0
+        self._working_buffer: List[WorkingMemory] = []
 
         log.info(
-            "[MemoryEngine] Initialized — %d projects loaded | AuraFS disabled | mirror=%s",
+            "[MemoryEngine] Initialized v4.0 — %d projects loaded | 9 TSL collections ready",
             len(self.projects),
-            self.mirror,
         )
 
-    # ── Internal helpers ──────────────────────────────────────────────────────
-
     def _project_meta(self, project: str) -> Optional[ProjectMeta]:
-        """Return ProjectMeta for the given key, or None if not registered."""
-        meta = self.projects.get(project)
-        if meta is None:
-            log.debug("Project key '%s' not found in projects.json", project)
-        return meta
+        return self.projects.get(project)
 
     def _resolve_llm(self, llm: str | LLMProvider) -> LLMProvider:
-        """Coerce a raw string or LLMProvider into a validated LLMProvider."""
         try:
             return LLMProvider(llm) if isinstance(llm, str) else llm
         except ValueError:
-            log.warning("Unknown LLM provider '%s' — falling back to UNKNOWN", llm)
             return LLMProvider.UNKNOWN
 
     def _mirror_guard(self, fn_name: str) -> bool:
-        """Returns True (and logs) only when mirroring is active."""
         if self.mirror:
             log.debug("[mirror] %s → MemoriBridge", fn_name)
         return self.mirror
 
-    # ── Write: Core Memory Types ──────────────────────────────────────────────
+    # ── Write: 9-Cell TSLCA Memory Operations ─────────────────────────────────
+
+    def write_sensory(self, mem: SensoryMemory) -> str:
+        """Persist a SensoryMemory (SIX ⊗ SIX — perception & resonance)."""
+        mem.touch()
+        self.vector.upsert(
+            collection="sensory",
+            doc_id=mem.id,
+            text=f"Sensory ({mem.modality}): {mem.content}",
+            metadata={
+                "project": mem.project,
+                "session_id": mem.session_id or "",
+                "modality": mem.modality,
+                "dominant_freq_hz": str(mem.dominant_frequency_hz or ""),
+                "geometry": mem.sacred_geometry_pattern or "",
+                "resonance_score": str(mem.resonance_score),
+                "blessed_by_mama_bear": str(mem.blessed_by_mama_bear),
+                "timestamp": mem.timestamp.isoformat(),
+            },
+        )
+        return mem.id
+
+    def write_working(self, mem: WorkingMemory) -> str:
+        """Persist a WorkingMemory (SIX ⊗ SCX — active session buffer)."""
+        mem.touch()
+        self._working_buffer.append(mem)
+        self.vector.upsert(
+            collection="working",
+            doc_id=mem.id,
+            text=f"Working Focus: {mem.active_focus or 'general'}\n{mem.content}",
+            metadata={
+                "project": mem.project,
+                "session_id": mem.session_id,
+                "open_loops": str(mem.open_loops),
+                "cured": str(mem.cured),
+                "timestamp": mem.timestamp.isoformat(),
+            },
+        )
+        return mem.id
 
     def write_event(self, mem: EpisodicMemory) -> str:
-        """
-        Persist an EpisodicMemory (single conversation turn).
-
-        Vector index key: collection='episodic'
-        Metadata stored: session_id, project, role, llm, turn_index, timestamp
-        """
+        """Persist an EpisodicMemory (SIX ⊗ ICX — conversation turn)."""
         mem.touch()
-        # self.aurafs.write_episodic(mem)   # [DISABLED]
         self.vector.upsert(
             collection="episodic",
             doc_id=mem.id,
@@ -274,7 +284,7 @@ class MemoryEngine:
                 "session_id": mem.session_id,
                 "project": mem.project,
                 "role": mem.role,
-                "llm": mem.llm,
+                "llm": str(mem.llm),
                 "turn_index": str(mem.turn_index),
                 "intent": mem.intent or "",
                 "timestamp": mem.timestamp.isoformat(),
@@ -286,23 +296,11 @@ class MemoryEngine:
                 content=mem.content,
                 llm=mem.llm,
             )
-        log.debug(
-            "[write_event] %s  project=%s  session=%s",
-            mem.id,
-            mem.project,
-            mem.session_id,
-        )
         return mem.id
 
     def embed_document(self, mem: SemanticMemory) -> str:
-        """
-        Persist a SemanticMemory (project knowledge unit).
-
-        The vectorised text prefixes project/category/tags for richer
-        nearest-neighbour retrieval at context assembly time.
-        """
+        """Persist a SemanticMemory (SCX ⊗ SIX — project knowledge)."""
         mem.touch()
-        # self.aurafs.write_semantic(mem)   # [DISABLED]
         full_text = (
             f"Project: {mem.project}\n"
             f"Category: {mem.category}\n"
@@ -330,71 +328,11 @@ class MemoryEngine:
                 tags=mem.tags,
                 relationships=mem.relationships,
             )
-        log.debug(
-            "[embed_document] %s  project=%s  category=%s",
-            mem.id,
-            mem.project,
-            mem.category,
-        )
-        return mem.id
-
-    def store_workflow(self, mem: ProceduralMemory) -> str:
-        """
-        Persist a ProceduralMemory (repeatable workflow / automation recipe).
-
-        Steps are numbered and concatenated for full-text semantic search.
-        Pre/postconditions and required tools are included in metadata.
-        """
-        mem.touch()
-        # self.aurafs.write_procedural(mem)   # [DISABLED]
-        steps_text = "\n".join(f"{i + 1}. {s}" for i, s in enumerate(mem.steps))
-        pre_text = (
-            "\n".join(f"• {p}" for p in mem.preconditions) if mem.preconditions else ""
-        )
-        post_text = (
-            "\n".join(f"• {p}" for p in mem.postconditions)
-            if mem.postconditions
-            else ""
-        )
-        full_text = (
-            f"Task: {mem.task}\n\n"
-            f"Steps:\n{steps_text}"
-            + (f"\n\nPreconditions:\n{pre_text}" if pre_text else "")
-            + (f"\n\nPostconditions:\n{post_text}" if post_text else "")
-        )
-        self.vector.upsert(
-            collection="procedural",
-            doc_id=mem.id,
-            text=full_text,
-            metadata={
-                "project": mem.project,
-                "task": mem.task,
-                "frequency": str(mem.frequency),
-                "success_rate": str(mem.success_rate),
-                "tools": str(mem.tools_required),
-            },
-        )
-        if self._mirror_guard("store_workflow"):
-            self.memori.mirror_procedural(
-                task=mem.task,
-                steps=mem.steps,
-                frequency=mem.frequency,
-                success_rate=mem.success_rate,
-            )
-        log.debug(
-            "[store_workflow] %s  project=%s  task=%s", mem.id, mem.project, mem.task
-        )
         return mem.id
 
     def store_fact(self, mem: MetaMemory) -> str:
-        """
-        Persist a MetaMemory (verified fact / cross-session invariant).
-
-        Deprecated records are still written — they form the audit trail
-        and are filtered at query time via `include_deprecated=False`.
-        """
+        """Persist a MetaMemory (SCX ⊗ SCX — verified invariant/fact)."""
         mem.touch()
-        # self.aurafs.write_meta(mem)   # [DISABLED]
         self.vector.upsert(
             collection="meta",
             doc_id=mem.id,
@@ -404,6 +342,7 @@ class MemoryEngine:
                 "verified": str(mem.verified),
                 "confidence": str(mem.confidence),
                 "deprecated": str(mem.deprecated),
+                "superseded_by": mem.superseded_by or "",
                 "timestamp": mem.timestamp.isoformat(),
             },
         )
@@ -414,23 +353,11 @@ class MemoryEngine:
                 sources=mem.sources,
                 verified=mem.verified,
             )
-        log.debug(
-            "[store_fact] %s  project=%s  verified=%s",
-            mem.id,
-            mem.project,
-            mem.verified,
-        )
         return mem.id
 
     def store_quantum(self, mem: QuantumMemory) -> str:
-        """
-        Persist a QuantumMemory (physics / simulation state snapshot).
-
-        Observable, coherence state, and lattice type are all stored in
-        metadata for structured filtering independent of vector similarity.
-        """
+        """Persist a QuantumMemory (SCX ⊗ ICX — simulation & physics state)."""
         mem.touch()
-        # self.aurafs.write_quantum(mem)   # [DISABLED]
         param_text = "\n".join(f"  {k}: {v}" for k, v in mem.parameters.items())
         full_text = (
             f"Project: {mem.project}\n"
@@ -458,31 +385,83 @@ class MemoryEngine:
                 "timestamp": mem.timestamp.isoformat(),
             },
         )
-        # MemoriBridge does not yet support quantum mirroring — stub reserved
-        log.debug(
-            "[store_quantum] %s  project=%s  state=%s",
-            mem.id,
-            mem.project,
-            mem.coherence_state,
+        return mem.id
+
+    def write_identity(self, mem: IdentityMemory) -> str:
+        """Persist an IdentityMemory (ICX ⊗ SIX — SoulJourney pipeline state)."""
+        mem.touch()
+        full_text = (
+            f"BlissID: {mem.bliss_id}\n"
+            f"SoulHash: {mem.soul_hash}\n"
+            f"Stage: {mem.souljourney_stage}\n"
+            f"Content: {mem.content}"
+        )
+        self.vector.upsert(
+            collection="identity",
+            doc_id=mem.id,
+            text=full_text,
+            metadata={
+                "project": mem.project,
+                "bliss_id": mem.bliss_id,
+                "soul_hash": mem.soul_hash,
+                "stage": str(mem.souljourney_stage),
+                "immutable": str(mem.immutable),
+                "timestamp": mem.timestamp.isoformat(),
+            },
+        )
+        return mem.id
+
+    def store_workflow(self, mem: ProceduralMemory) -> str:
+        """Persist a ProceduralMemory (ICX ⊗ SCX — repeatable workflow)."""
+        mem.touch()
+        steps_text = "\n".join(f"{i + 1}. {s}" for i, s in enumerate(mem.steps))
+        full_text = f"Task: {mem.task}\n\nSteps:\n{steps_text}"
+        self.vector.upsert(
+            collection="procedural",
+            doc_id=mem.id,
+            text=full_text,
+            metadata={
+                "project": mem.project,
+                "task": mem.task,
+                "frequency": str(mem.frequency),
+                "success_rate": str(mem.success_rate),
+                "tools": str(mem.tools_required),
+                "timestamp": mem.timestamp.isoformat(),
+            },
+        )
+        if self._mirror_guard("store_workflow"):
+            self.memori.mirror_procedural(
+                task=mem.task,
+                steps=mem.steps,
+                frequency=mem.frequency,
+                success_rate=mem.success_rate,
+            )
+        return mem.id
+
+    def store_governance(self, mem: GovernanceMemory) -> str:
+        """Persist a GovernanceMemory (ICX ⊗ ICX — voting, mandate, Archivus)."""
+        mem.touch()
+        full_text = f"Title: {mem.title}\nProject: {mem.project}\nType: {mem.record_type}\n\n{mem.content}"
+        self.vector.upsert(
+            collection="governance",
+            doc_id=mem.id,
+            text=full_text,
+            metadata={
+                "project": mem.project,
+                "record_type": mem.record_type,
+                "outcome": mem.outcome or "",
+                "immutable": str(mem.immutable),
+                "ledger_hash": mem.ledger_hash or "",
+                "archivus_block_ref": mem.archivus_block_ref or "",
+                "timestamp": mem.timestamp.isoformat(),
+            },
         )
         return mem.id
 
     def store_creative(self, mem: CreativeMemory) -> str:
-        """
-        Persist a CreativeMemory (art, music, narrative, divination entry).
-
-        Title, universe, and medium are prepended to the content vector
-        so creative search operates on both context and raw content.
-        """
+        """Persist a CreativeMemory (media / narrative entry)."""
         mem.touch()
-        # self.aurafs.write_creative(mem)   # [DISABLED]
-        full_text = (
-            (f"Title: {mem.title}\n" if mem.title else "")
-            + f"Medium: {mem.medium}\n"
-            + (f"Universe: {mem.universe}\n" if mem.universe else "")
-            + f"Project: {mem.project}\n\n"
-            + mem.content
-        )
+        full_text = f"Title: {mem.title or 'Untitled'}\nMedium: {mem.medium}\n\n{mem.content}"
         self.vector.upsert(
             collection="creative",
             doc_id=mem.id,
@@ -496,62 +475,12 @@ class MemoryEngine:
                 "timestamp": mem.timestamp.isoformat(),
             },
         )
-        log.debug(
-            "[store_creative] %s  project=%s  medium=%s",
-            mem.id,
-            mem.project,
-            mem.medium,
-        )
         return mem.id
 
-    def store_governance(self, mem: GovernanceMemory) -> str:
-        """
-        Persist a GovernanceMemory (vote, policy, mandate, ledger entry).
-
-        Immutable records (ILS-archived) are written once and must never
-        be called again with the same ID — the backend will reject the
-        overwrite if the record already exists with immutable=True.
-        """
-        mem.touch()
-        # self.aurafs.write_governance(mem)   # [DISABLED]
-        full_text = (
-            f"Title: {mem.title}\n"
-            f"Project: {mem.project}\n"
-            f"Type: {mem.record_type}\n\n"
-            f"{mem.content}"
-        )
-        self.vector.upsert(
-            collection="governance",
-            doc_id=mem.id,
-            text=full_text,
-            metadata={
-                "project": mem.project,
-                "record_type": mem.record_type,
-                "outcome": mem.outcome or "",
-                "immutable": str(mem.immutable),
-                "ledger_hash": mem.ledger_hash or "",
-                "timestamp": mem.timestamp.isoformat(),
-            },
-        )
-        log.debug(
-            "[store_governance] %s  project=%s  type=%s  immutable=%s",
-            mem.id,
-            mem.project,
-            mem.record_type,
-            mem.immutable,
-        )
-        return mem.id
-
-    # ── Generic Upsert ────────────────────────────────────────────────────────
+    # ── Generic Upsert Dispatch ───────────────────────────────────────────────
 
     def upsert(self, request: UpsertMemoryRequest) -> str:
-        """
-        Route a generic UpsertMemoryRequest to the correct typed write method.
-
-        `request.extra` is unpacked and merged with the core fields so callers
-        can pass specialised fields (e.g. `qubit_count` for QuantumMemory)
-        without a separate endpoint per memory class.
-        """
+        """Route a generic UpsertMemoryRequest to the correct typed write method."""
         base = {
             "project": request.project,
             "content": request.content,
@@ -563,13 +492,16 @@ class MemoryEngine:
         mt = MemoryType(request.memory_type)
 
         dispatch: Dict[MemoryType, Any] = {
+            MemoryType.SENSORY: (SensoryMemory, self.write_sensory),
+            MemoryType.WORKING: (WorkingMemory, self.write_working),
             MemoryType.EPISODIC: (EpisodicMemory, self.write_event),
             MemoryType.SEMANTIC: (SemanticMemory, self.embed_document),
-            MemoryType.PROCEDURAL: (ProceduralMemory, self.store_workflow),
             MemoryType.META: (MetaMemory, self.store_fact),
             MemoryType.QUANTUM: (QuantumMemory, self.store_quantum),
-            MemoryType.CREATIVE: (CreativeMemory, self.store_creative),
+            MemoryType.IDENTITY: (IdentityMemory, self.write_identity),
+            MemoryType.PROCEDURAL: (ProceduralMemory, self.store_workflow),
             MemoryType.GOVERNANCE: (GovernanceMemory, self.store_governance),
+            MemoryType.CREATIVE: (CreativeMemory, self.store_creative),
         }
 
         if mt not in dispatch:
@@ -580,20 +512,13 @@ class MemoryEngine:
             mem = schema_cls(**base)
         except Exception as exc:
             raise ValueError(
-                f"Schema validation failed for {mt} — check 'extra' fields: {exc}"
+                f"Schema validation failed for {mt}: {exc}"
             ) from exc
 
         return write_fn(mem)
 
     def bulk_upsert(self, request: BulkUpsertRequest) -> Dict[str, Any]:
-        """
-        Batch upsert with optional dry-run validation.
-
-        Returns a result dict with keys:
-            written  → list of memory IDs successfully written
-            errors   → list of (index, error_message) tuples
-            dry_run  → bool echoing the request flag
-        """
+        """Batch upsert with dry-run support."""
         written: List[str] = []
         errors: List[tuple] = []
 
@@ -603,39 +528,13 @@ class MemoryEngine:
                     mem_id = self.upsert(rec)
                     written.append(mem_id)
                 else:
-                    # Validate only — instantiate the schema but don't write
-                    self.upsert.__func__  # ensure method is reachable
-                    base = {
-                        "project": rec.project,
-                        "content": rec.content,
-                        "tags": rec.tags,
-                        **rec.extra,
-                    }
-                    schema_cls = {
-                        MemoryType.EPISODIC: EpisodicMemory,
-                        MemoryType.SEMANTIC: SemanticMemory,
-                        MemoryType.PROCEDURAL: ProceduralMemory,
-                        MemoryType.META: MetaMemory,
-                        MemoryType.QUANTUM: QuantumMemory,
-                        MemoryType.CREATIVE: CreativeMemory,
-                        MemoryType.GOVERNANCE: GovernanceMemory,
-                    }[MemoryType(rec.memory_type)]
-                    schema_cls(**base)
                     written.append(f"dry_run_valid_{i}")
             except Exception as exc:
                 errors.append((i, str(exc)))
-                log.warning("[bulk_upsert] record[%d] failed: %s", i, exc)
 
-        log.info(
-            "[bulk_upsert] project=%s  written=%d  errors=%d  dry_run=%s",
-            request.project,
-            len(written),
-            len(errors),
-            request.dry_run,
-        )
         return {"written": written, "errors": errors, "dry_run": request.dry_run}
 
-    # ── Read: Context Assembly ────────────────────────────────────────────────
+    # ── Read: Context Assembly with SUXS-IFO Contraction ──────────────────────
 
     def read_context(
         self,
@@ -645,59 +544,42 @@ class MemoryEngine:
         top_k: int = _CONTEXT_RESULTS,
     ) -> ContextResponse:
         """
-        Assemble a full ContextResponse for the given project.
-
-        Layers assembled in order:
-          1. Vector queries across all seven collections (episodic → governance)
-          2. ProjectMeta hydrated from projects.json
-          3. Active axioms, dualities, and volumes from ProjectMeta
-          4. DualityPair objects parsed from active_dualities strings
-          5. Related projects identified by shared domain/duality overlap
-          6. Global invariants from invariants.json
-
-        The resulting payload is ready for direct injection into any
-        LLM system-prompt hook (perplexity_hook, supergrok_hook, etc.).
+        Assemble and contract full 9-cell TSLCA context payload for the project.
         """
         self._active_sessions += 1
 
-        # ── Vector recall ────────────────────────────────────────────────────
-        def _query(collection: str) -> List[Dict[str, Any]]:
+        def _query(col: str) -> List[Dict[str, Any]]:
             try:
-                return self.vector.query(
-                    collection, query_text=project, n_results=top_k
-                )
+                return self.vector.query(col, query_text=project, n_results=top_k)
             except Exception as exc:
-                log.warning(
-                    "[read_context] vector query failed for '%s': %s", collection, exc
-                )
+                log.warning("[read_context] query failed for '%s': %s", col, exc)
                 return []
 
+        sensory_raw = _query("sensory")
+        working_raw = _query("working")
         episodic_raw = _query("episodic")
         semantic_raw = _query("semantic")
-        procedural_raw = _query("procedural")
         meta_raw = _query("meta")
         quantum_raw = _query("quantum")
-        creative_raw = _query("creative")
+        identity_raw = _query("identity")
+        procedural_raw = _query("procedural")
         governance_raw = _query("governance")
+        creative_raw = _query("creative")
 
-        # ── Project metadata ─────────────────────────────────────────────────
         meta = self._project_meta(project)
-
         active_volumes: List[str] = (
             [str(v) for v in meta.active_volumes] if meta else []
         )
         active_axioms: List[str] = list(meta.active_axioms) if meta else []
         active_dualities: List[str] = list(meta.active_dualities) if meta else []
 
-        # ── DualityPair objects ──────────────────────────────────────────────
         duality_pairs: List[DualityPair] = []
         for ds in active_dualities:
             try:
                 duality_pairs.append(DualityPair.from_string(ds))
-            except ValueError as exc:
-                log.debug("[read_context] duality parse skip: %s", exc)
+            except ValueError:
+                pass
 
-        # ── Related projects (shared duality or domain) ───────────────────────
         related_projects: List[str] = [
             key
             for key, pm in self.projects.items()
@@ -705,13 +587,16 @@ class MemoryEngine:
         ]
 
         total = (
-            len(episodic_raw)
+            len(sensory_raw)
+            + len(working_raw)
+            + len(episodic_raw)
             + len(semantic_raw)
-            + len(procedural_raw)
             + len(meta_raw)
             + len(quantum_raw)
-            + len(creative_raw)
+            + len(identity_raw)
+            + len(procedural_raw)
             + len(governance_raw)
+            + len(creative_raw)
         )
 
         self._active_sessions = max(0, self._active_sessions - 1)
@@ -721,46 +606,43 @@ class MemoryEngine:
             project_meta=meta,
             llm=self._resolve_llm(llm),
             session_id=session_id,
-            # Memory layers
+            # 9 TSLCA memory layers
+            sensory=sensory_raw,
+            working=working_raw,
             episodic=episodic_raw,
             semantic=semantic_raw,
-            procedural=procedural_raw,
             meta=meta_raw,
             quantum=quantum_raw,
-            creative=creative_raw,
+            identity=identity_raw,
+            procedural=procedural_raw,
             governance=governance_raw,
-            # Active invariants
+            creative=creative_raw,
+            # Invariants
             active_volumes=active_volumes,
             active_axioms=active_axioms,
             active_dualities=active_dualities,
             invariants=self.global_invariants,
             duality_pairs=duality_pairs,
-            # Cross-project
             related_projects=related_projects,
-            # Diagnostics
             total_memories=total,
         )
 
     # ── Read: Structured Query ────────────────────────────────────────────────
 
     def query(self, request: MemoryQuery) -> List[MemorySearchResult]:
-        """
-        Execute a structured MemoryQuery across specified collections.
-
-        Filters by project, memory type, minimum similarity score, and
-        deprecation status. Returns a list of MemorySearchResult sorted
-        by descending score.
-        """
+        """Execute a structured search across the specified TSL collections."""
         results: List[MemorySearchResult] = []
-
         collection_map: Dict[MemoryType, str] = {
+            MemoryType.SENSORY: "sensory",
+            MemoryType.WORKING: "working",
             MemoryType.EPISODIC: "episodic",
             MemoryType.SEMANTIC: "semantic",
-            MemoryType.PROCEDURAL: "procedural",
             MemoryType.META: "meta",
             MemoryType.QUANTUM: "quantum",
-            MemoryType.CREATIVE: "creative",
+            MemoryType.IDENTITY: "identity",
+            MemoryType.PROCEDURAL: "procedural",
             MemoryType.GOVERNANCE: "governance",
+            MemoryType.CREATIVE: "creative",
         }
 
         for mt in request.memory_types:
@@ -772,7 +654,7 @@ class MemoryEngine:
                     collection,
                     query_text=request.query_text,
                     n_results=request.top_k,
-                    filters=request.filters,
+                    project=request.project,
                 )
             except Exception as exc:
                 log.warning("[query] collection '%s' failed: %s", collection, exc)
@@ -782,85 +664,127 @@ class MemoryEngine:
                 score = float(r.get("score", 0.0))
                 if score < request.min_score:
                     continue
-                if (
-                    not request.include_deprecated
-                    and r.get("metadata", {}).get("deprecated") == "True"
-                ):
-                    continue
-                if (
-                    request.project
-                    and r.get("metadata", {}).get("project") != request.project
-                ):
+                payload = r.get("payload", {})
+                is_deprecated = payload.get("deprecated") in (True, "True", "true")
+                if not request.include_deprecated and is_deprecated:
                     continue
 
                 results.append(
                     MemorySearchResult(
-                        memory_id=r.get("id", ""),
+                        memory_id=str(r.get("id", "")),
                         memory_type=mt,
-                        project=r.get("metadata", {}).get(
-                            "project", request.project or "unknown"
-                        ),
-                        score=min(score, 1.0),
-                        content_preview=str(r.get("document", ""))[:300],
-                        tags=r.get("metadata", {}).get("tags", []),
-                        created_at=datetime.now(tz=timezone.utc),
+                        project=payload.get("project", request.project or "memoree"),
+                        score=min(max(score, 0.0), 1.0),
+                        content_preview=str(payload.get("text", ""))[:300],
+                        tags=payload.get("tags", [])
+                        if isinstance(payload.get("tags"), list)
+                        else [],
+                        created_at=_now(),
                         tier=MemoryTier.WARM,
+                        deprecated=is_deprecated,
+                        superseded_by=payload.get("superseded_by"),
                     )
                 )
 
         results.sort(key=lambda x: x.score, reverse=True)
         return results[: request.top_k]
 
-    # ── Diagnostics ───────────────────────────────────────────────────────────
+    # ── Heartbeat Curing & Curing Buffer ──────────────────────────────────────
+
+    def cure_working_buffer(self) -> Dict[str, int]:
+        """Cure active working memories into permanent episodic/semantic layers."""
+        cured_count = 0
+        uncured: List[WorkingMemory] = []
+        for mem in self._working_buffer:
+            if not mem.cured:
+                # Cure into episodic turn
+                ep_mem = EpisodicMemory(
+                    session_id=mem.session_id,
+                    project=mem.project,
+                    role="assistant",
+                    content=f"[Cured from Working Buffer]: {mem.content}",
+                    tags=mem.tags + ["cured_working"],
+                )
+                self.write_event(ep_mem)
+                mem.cured = True
+                mem.cured_into_type = MemoryType.EPISODIC
+                mem.cured_into_id = ep_mem.id
+                cured_count += 1
+            else:
+                uncured.append(mem)
+
+        self._working_buffer = uncured
+        return {"cured_count": cured_count, "remaining_buffer": len(self._working_buffer)}
+
+    # ── Diagnostics & Lattice Snapshot ────────────────────────────────────────
 
     def diagnostics(self) -> MemoreeDiagnostics:
-        """
-        Return a live MemoreeDiagnostics snapshot.
-
-        Called by the /diagnostics FastAPI route in routes.py.
-        `uptime_seconds` is derived from the engine's own start timestamp
-        so it reflects true daemon uptime, not process uptime.
-        """
+        """Return a live MemoreeDiagnostics snapshot."""
         uptime = (datetime.now(tz=timezone.utc) - self._start_time).total_seconds()
-
-        qdrant_ok = False
-        qdrant_collections: List[str] = []
-        try:
-            qdrant_collections = self.vector.list_collections()
-            qdrant_ok = True
-        except Exception as exc:
-            log.warning("[diagnostics] vector backend unreachable: %s", exc)
+        diag = self.vector.get_diagnostics()
 
         return MemoreeDiagnostics(
-            status="healthy" if qdrant_ok else "degraded",
-            version="0.1.0",
+            status="healthy" if diag.get("qdrant_connected") else "degraded",
+            version="4.0.0",
             uptime_seconds=round(uptime, 2),
-            qdrant_connected=qdrant_ok,
-            qdrant_collections=qdrant_collections,
+            qdrant_connected=diag.get("qdrant_connected", False),
+            qdrant_collections=diag.get("collections", []),
             active_sessions=self._active_sessions,
             llm_hooks_active=[p for p in LLMProvider if p != LLMProvider.UNKNOWN],
         )
 
-    # ── Project Registry Helpers ──────────────────────────────────────────────
+    def get_lattice_snapshot(self) -> Dict[str, Any]:
+        """Return a structured 3x3 Cognitive Field Tensor snapshot."""
+        snapshot = LatticeSnapshot.create_empty()
+        # Populate counts from vector backend
+        total = 0
+        for cell_key, cell_state in snapshot.cells.items():
+            col_name = cell_state.memory_type.value
+            results = self.vector.query(col_name, query_text="", n_results=100)
+            cell_state.count = len(results)
+            total += len(results)
+
+        six_six = snapshot.cells.get("SIX⊗SIX")
+        scx_scx = snapshot.cells.get("SCX⊗SCX")
+        icx_icx = snapshot.cells.get("ICX⊗ICX")
+        trace = (
+            (six_six.count if six_six else 0)
+            + (scx_scx.count if scx_scx else 0)
+            + (icx_icx.count if icx_icx else 0)
+        )
+        snapshot.unified_field_trace = float(trace)
+
+
+        return {
+            "version": "4.0.0",
+            "timestamp": snapshot.timestamp.isoformat(),
+            "unified_field_trace": snapshot.unified_field_trace,
+            "total_memories": snapshot.total_memories,
+            "cells": {
+                k: {
+                    "core_i": v.core_i,
+                    "core_j": v.core_j,
+                    "memory_type": v.memory_type.value,
+                    "count": v.count,
+                    "mean_hif": v.mean_hif,
+                }
+                for k, v in snapshot.cells.items()
+            },
+        }
+
+    # ── Project Registry Accessors ────────────────────────────────────────────
 
     def list_projects(self) -> List[ProjectMeta]:
-        """Return all registered projects, sorted alphabetically by key."""
         return sorted(self.projects.values(), key=lambda p: p.key)
 
     def get_project(self, key: str) -> Optional[ProjectMeta]:
-        """Return the ProjectMeta for `key`, or None if not registered."""
         return self._project_meta(key)
 
     def projects_by_owner(self, owner: ProjectOwner | str) -> List[ProjectMeta]:
-        """Filter the project registry by owner (rossaedwards | aurphyx)."""
         o = ProjectOwner(owner) if isinstance(owner, str) else owner
         return [p for p in self.projects.values() if ProjectOwner(p.owner) == o]
 
     def projects_by_duality(self, duality: str) -> List[ProjectMeta]:
-        """
-        Return all projects whose active_dualities list contains `duality`.
-        Accepts partial matches (e.g. 'coherence' matches 'coherence/decoherence').
-        """
         return [
             p
             for p in self.projects.values()

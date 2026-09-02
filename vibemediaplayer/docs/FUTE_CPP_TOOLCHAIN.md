@@ -12,7 +12,25 @@ You already have **g++ 16** and **cmake**. Missing for FUTE AST: **libclang**.
 
 ---
 
-## Fedora 44 — install (recommended)
+## Omarchy Linux — install (recommended)
+
+```bash
+# Core C++ + libclang + LLVM for FUTE
+sudo pacman -S --needed \
+  base-devel clang llvm \
+  cmake ninja pkgconf \
+  git ccache mold
+
+# For Mixxx / Audio dependencies on Omarchy
+sudo pacman -S --needed \
+  qt6-base qt6-declarative qt6-svg \
+  portaudio libsndfile chromaprint taglib \
+  rubberband soundtouch protobuf
+```
+
+---
+
+## Fedora (Legacy)
 
 ```bash
 # Core C++ + libclang for FUTE
@@ -20,13 +38,9 @@ sudo dnf install -y \
   gcc-c++ clang clang-devel llvm-devel \
   clang-tools-extra \
   cmake ninja-build pkgconf-pkg-config \
-  make git
-
-# Optional but useful for large codebases
-sudo dnf install -y \
-  ccache \
-  mold
+  make git ccache mold
 ```
+
 
 Verify:
 

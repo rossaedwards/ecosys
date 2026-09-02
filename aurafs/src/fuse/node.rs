@@ -6,63 +6,58 @@
 
 #![warn(missing_docs)]
 
-use crate::{
-    gov::BlissId,
-    shard::ShardId,
-    fuse::session::FuseSession,
-    fuse::AuraTimedLock,
-};
+use crate::error::{RafsError, Result};
+use crate::physics::{INVARIANTS, PhysicsViolationError};
+use crate::{fuse::AuraTimedLock, fuse::session::FuseSession, gov::BlissId, shard::ShardId};
 use fuser::FileType;
+use serde::{Deserialize, Serialize};
 use std::{
     collections::HashMap,
     sync::Arc,
-    time::{SystemTime, UNIX_EPOCH, Instant},
+    time::{Instant, SystemTime, UNIX_EPOCH},
 };
 use tokio::sync::RwLock;
-use serde::{Serialize, Deserialize};
 use tracing::debug;
-use crate::error::{RafsError, Result};
-use crate::physics::{INVARIANTS, PhysicsViolationError};
 
 /// Core inode abstraction for AuraFS
 #[derive(Debug, Clone)]
 pub struct Inode {
     /// Unique inode number
     pub ino: u64,
-    
+
     /// Shard ID backing this inode (if file)
     pub shard_id: Option<ShardId>,
-    
+
     /// Soul owner ID
     pub soul_id: BlissId,
-    
+
     /// File type
     pub kind: FileType,
-    
+
     /// File size in bytes
     pub size: u64,
-    
+
     /// Permissions (Unix mode)
     pub perm: u32,
-    
+
     /// Timestamps
     pub atime: SystemTime,
     pub mtime: SystemTime,
     pub ctime: SystemTime,
-    
+
     /// Link count
     pub nlink: u64,
-    
+
     /// User/Group IDs
     pub uid: u32,
     pub gid: u32,
-    
+
     /// Parent inode
     pub parent: u64,
-    
+
     /// Filename
     pub name: String,
-    
+
     /// Metadata (custom AuraFS extensions)
     pub metadata: InodeMetadata,
 }
@@ -71,13 +66,13 @@ pub struct Inode {
 pub struct InodeMetadata {
     /// Shard replication factor
     pub replication_factor: u8,
-    
+
     /// Quantum entropy level (0-255)
     pub entropy: u8,
-    
+
     /// Last shard sync time
     pub last_sync_ns: u64,
-    
+
     /// Custom tags
     pub tags: Vec<String>,
 }
@@ -125,7 +120,7 @@ impl Inode {
             },
         }
     }
-    
+
     /// Create file inode backed by shard
     pub fn file(ino: u64, parent: u64, name: String, shard_id: ShardId, soul_id: BlissId) -> Self {
         Self {
@@ -146,7 +141,7 @@ impl Inode {
             metadata: InodeMetadata::default(),
         }
     }
-    
+
     /// Create directory inode
     pub fn directory(ino: u64, parent: u64, name: String, soul_id: BlissId) -> Self {
         Self {
@@ -172,13 +167,13 @@ impl Inode {
             },
         }
     }
-    
+
     /// Convert to fuser::FileAttr for kernel
     pub fn attributes(&self) -> fuser::FileAttr {
         let atime = self.atime.duration_since(UNIX_EPOCH).unwrap_or_default();
         let mtime = self.mtime.duration_since(UNIX_EPOCH).unwrap_or_default();
         let ctime = self.ctime.duration_since(UNIX_EPOCH).unwrap_or_default();
-        
+
         fuser::FileAttr {
             ino: self.ino,
             size: self.size,
@@ -205,10 +200,10 @@ impl Inode {
 pub struct FileNode {
     /// Base inode
     inode: Arc<AuraTimedLock<Inode>>,
-    
+
     /// Associated Fuse session
     session: Arc<FuseSession>,
-    
+
     /// Open file handles
     open_handles: RwLock<usize>,
 }
@@ -223,17 +218,20 @@ impl FileNode {
             open_handles: RwLock::new(0),
         })
     }
-    
+
     /// [Theorem 3.1: Topological Stability]
     /// Open file (increment handle count) with coherent inode access.
     pub async fn open(&self) -> Result<()> {
         let mut handles = self.open_handles.write().await;
         *handles += 1;
         let inode_guard = self.inode.read_coherent().await?;
-        debug!("📄 FileNode {} opened (handles={})", inode_guard.ino, *handles);
+        debug!(
+            "📄 FileNode {} opened (handles={})",
+            inode_guard.ino, *handles
+        );
         Ok(())
     }
-    
+
     /// [Theorem 3.1: Topological Stability]
     /// Read from shard backing this file with coherence heartbeat enforcement.
     pub async fn read(&self, offset: u64, size: usize) -> Result<Vec<u8>> {
@@ -252,13 +250,16 @@ impl FileNode {
         let elapsed = start.elapsed().as_micros() as u64;
         if elapsed > INVARIANTS.coherence_window_us {
             return Err(RafsError::PhysicsViolation(
-                PhysicsViolationError::StabilityTimeout { elapsed, limit: INVARIANTS.coherence_window_us }
+                PhysicsViolationError::StabilityTimeout {
+                    elapsed,
+                    limit: INVARIANTS.coherence_window_us,
+                },
             ));
         }
 
         Ok(data)
     }
-    
+
     /// [Theorem 3.1: Topological Stability]
     /// Update file size after write with coherence enforcement.
     pub async fn update_size(&self, new_size: u64) -> Result<()> {
@@ -269,7 +270,10 @@ impl FileNode {
         let elapsed = start.elapsed().as_micros() as u64;
         if elapsed > INVARIANTS.coherence_window_us {
             return Err(RafsError::PhysicsViolation(
-                PhysicsViolationError::StabilityTimeout { elapsed, limit: INVARIANTS.coherence_window_us }
+                PhysicsViolationError::StabilityTimeout {
+                    elapsed,
+                    limit: INVARIANTS.coherence_window_us,
+                },
             ));
         }
         Ok(())
@@ -285,7 +289,9 @@ impl FileNode {
         };
 
         if shard_id.is_none() {
-            return Err(RafsError::ShardNotFound("Missing shard backing for inode".to_string()));
+            return Err(RafsError::ShardNotFound(
+                "Missing shard backing for inode".to_string(),
+            ));
         }
 
         let new_size = offset.saturating_add(data.len() as u64);
@@ -294,7 +300,10 @@ impl FileNode {
         let elapsed = start.elapsed().as_micros() as u64;
         if elapsed > INVARIANTS.coherence_window_us {
             return Err(RafsError::PhysicsViolation(
-                PhysicsViolationError::StabilityTimeout { elapsed, limit: INVARIANTS.coherence_window_us }
+                PhysicsViolationError::StabilityTimeout {
+                    elapsed,
+                    limit: INVARIANTS.coherence_window_us,
+                },
             ));
         }
 
@@ -306,10 +315,10 @@ impl FileNode {
 pub struct DirectoryNode {
     /// Base inode
     inode: Arc<AuraTimedLock<Inode>>,
-    
+
     /// Child inodes (name → inode)
     children: RwLock<HashMap<String, u64>>,
-    
+
     /// Session context
     session: Arc<FuseSession>,
 }
@@ -324,23 +333,26 @@ impl DirectoryNode {
             session,
         })
     }
-    
+
     /// [Theorem 3.1: Topological Stability]
     /// Add child entry with coherent inode access.
     pub async fn add_child(&self, name: String, ino: u64) -> Result<()> {
         let mut children = self.children.write().await;
         children.insert(name, ino);
         let inode_guard = self.inode.read_coherent().await?;
-        debug!("📁 DirNode {} added child '{}' → {}", 
-               inode_guard.ino, name, ino);
+        debug!(
+            "📁 DirNode {} added child '{}' → {}",
+            inode_guard.ino, name, ino
+        );
         Ok(())
     }
-    
+
     /// [Theorem 3.1: Topological Stability]
     /// List children for readdir with coherent inode access.
     pub async fn list_children(&self) -> Result<Vec<(u64, FileType, String)>> {
         let children = self.children.read().await;
-        let entries = children.iter()
+        let entries = children
+            .iter()
             .map(|(name, ino)| (*ino, FileType::empty(), name.clone()))
             .collect();
         Ok(entries)
@@ -367,31 +379,37 @@ impl Node for Arc<DirectoryNode> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+
     #[tokio::test]
     async fn test_inode_attributes() {
         let root = Inode::root();
         let attr = root.attributes();
-        
+
         assert_eq!(attr.ino, fuser::FUSE_ROOT_ID);
         assert_eq!(attr.kind, FileType::Directory);
         assert_eq!(attr.perm, 0o755);
     }
-    
+
     #[tokio::test]
     async fn test_file_node_operations() {
-        let inode = Inode::file(42, 1, "test.txt".to_string(), ShardId::new(), BlissId::genesis());
+        let inode = Inode::file(
+            42,
+            1,
+            "test.txt".to_string(),
+            ShardId::new(),
+            BlissId::genesis(),
+        );
         let session = Arc::new(crate::fuse::session::FuseSession::new(
             BlissId::genesis(),
             Arc::new(crate::network::SecureTunnel::new()),
-            Arc::new(crate::storage::shard_store::ShardStore::default()),
+            Arc::new(crate::storage::shard::ShardStore::default()),
             Arc::new(crate::fuse::inode_cache::InodeCache::new()),
             Default::default(),
         ));
-        
+
         let file_node = FileNode::new(inode, session);
         file_node.open().await.unwrap();
-        
+
         let handles = file_node.open_handles.read().await;
         assert_eq!(*handles, 1);
     }

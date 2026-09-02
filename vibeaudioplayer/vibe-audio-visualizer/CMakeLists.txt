@@ -23,7 +23,9 @@ if(NOT VLC_FOUND)
     message(FATAL_ERROR
         "VLC development headers not found.\n"
         "Windows: vcpkg install vlc  or set VLC_INCLUDE_DIR manually.\n"
-        "Fedora:  sudo dnf install vlc-devel\n"
+        "Omarchy/Arch: sudo pacman -S vlc\n"
+        "Fedora:        sudo dnf install vlc-devel\n"
+
         "Ubuntu:  sudo apt install libvlc-dev vlc-plugin-base")
 endif()
 

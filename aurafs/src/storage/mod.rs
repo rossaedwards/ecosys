@@ -14,33 +14,33 @@ use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::{fmt::Debug, sync::Arc};
 use thiserror::Error;
-use tracing::{info, warn, debug};
+use tracing::{debug, info, warn};
 
 // -----------------------------------------------------------------------------
 // Module Exports
 // -----------------------------------------------------------------------------
 
 pub use self::{
-    filesystem::{AuraFS, FsConfig, FsMetrics},
-    inode::{Inode, InodeId, InodeTimestamps},
     directory::Directory,
-    journal::{QuantumJournal, JournalError},
-    quota::{SoulQuotaManager, SoulQuota, QuotaError},
-    snapshot::{SnapshotManager, Snapshot, SnapshotId, SnapshotError},
-    local::LocalShardStorage,
-    shard_store::{ShardStore, ShardStoreConfig, ShardStoreError},
+    filesystem::{AuraFS, FsConfig, FsMetrics},
     fuse::AuraFSFuse,
+    inode::{Inode, InodeId, InodeTimestamps},
+    journal::{JournalError, QuantumJournal},
+    local::LocalShardStorage,
+    quota::{QuotaError, SoulQuota, SoulQuotaManager},
+    shard::{ShardStore, ShardStoreConfig, ShardStoreError},
+    snapshot::{Snapshot, SnapshotError, SnapshotId, SnapshotManager},
 };
 
-pub mod filesystem;
-pub mod inode;
 pub mod directory;
-pub mod journal;
-pub mod quota;
-pub mod snapshot;
-pub mod local;
-pub mod shard_store;
+pub mod filesystem;
 pub mod fuse;
+pub mod inode;
+pub mod journal;
+pub mod local;
+pub mod quota;
+pub mod shard;
+pub mod snapshot;
 
 // -----------------------------------------------------------------------------
 // The Lattice Physics HAL (Hardware Abstraction Layer)
@@ -73,10 +73,10 @@ pub trait ShardStorage: Send + Sync + Debug {
 pub struct TieredShardStorage {
     /// Hot Storage (NVMe/SSD) - Optimized for Kagome (Compute) & Triangular (Network)
     pub primary: Arc<dyn ShardStorage>,
-    
+
     /// Deep Storage (IPFS/S3) - Optimized for Bethe (Storage) & FlowerOfLife (Archival)
     pub secondary: Option<Arc<dyn ShardStorage>>,
-    
+
     /// Security Enforcement
     pub acl_enforcer: Arc<AclEnforcer>,
 }
@@ -99,12 +99,12 @@ impl TieredShardStorage {
     fn determine_tier(&self, geometry: &LatticeGeometry) -> StorageTier {
         match geometry {
             // High Frequency / Low Latency -> Primary
-            LatticeGeometry::Kagome => StorageTier::Primary,      // Compute Heavy
-            LatticeGeometry::Triangular => StorageTier::Primary,  // Network Heavy
-            LatticeGeometry::Sierpinski => StorageTier::Primary,  // Index/Hot
-            
+            LatticeGeometry::Kagome => StorageTier::Primary, // Compute Heavy
+            LatticeGeometry::Triangular => StorageTier::Primary, // Network Heavy
+            LatticeGeometry::Sierpinski => StorageTier::Primary, // Index/Hot
+
             // Low Frequency / High Persistence -> Secondary
-            LatticeGeometry::Bethe => StorageTier::Secondary,     // Deep Storage
+            LatticeGeometry::Bethe => StorageTier::Secondary, // Deep Storage
             LatticeGeometry::FlowerOfLife => StorageTier::Secondary, // Archival
         }
     }
@@ -114,20 +114,29 @@ impl TieredShardStorage {
 impl ShardStorage for TieredShardStorage {
     async fn store(&self, shard: &Shard) -> Result<(), StorageError> {
         let tier = self.determine_tier(&shard.metadata.geometry);
-        
+
         match tier {
             StorageTier::Primary => {
-                debug!("🔥 Storing shard {} in PRIMARY tier ({:?})", shard.shard_id, shard.metadata.geometry);
+                debug!(
+                    "🔥 Storing shard {} in PRIMARY tier ({:?})",
+                    shard.shard_id, shard.metadata.geometry
+                );
                 self.primary.store(shard).await
             }
             StorageTier::Secondary => {
                 if let Some(secondary) = &self.secondary {
-                    debug!("🧊 Storing shard {} in SECONDARY tier ({:?})", shard.shard_id, shard.metadata.geometry);
+                    debug!(
+                        "🧊 Storing shard {} in SECONDARY tier ({:?})",
+                        shard.shard_id, shard.metadata.geometry
+                    );
                     // Write-Through strategy: Store in Secondary, but keep hot reference in Primary if needed?
                     // For pure Bethe storage, we skip Primary to save NVMe space.
                     secondary.store(shard).await
                 } else {
-                    warn!("⚠️  Shard {} requested Secondary tier but none available. Fallback to Primary.", shard.shard_id);
+                    warn!(
+                        "⚠️  Shard {} requested Secondary tier but none available. Fallback to Primary.",
+                        shard.shard_id
+                    );
                     self.primary.store(shard).await
                 }
             }
@@ -135,21 +144,23 @@ impl ShardStorage for TieredShardStorage {
     }
 
     async fn load(&self, shard_id: &ShardId) -> Result<Shard, StorageError> {
-        
         // 1. Try Primary (Fastest)
         match self.primary.load(shard_id).await {
             Ok(shard) => return Ok(shard),
             Err(StorageError::NotFound) => {
                 // 2. Fallback to Secondary (Deep Search)
                 if let Some(secondary) = &self.secondary {
-                    debug!("🔍 Shard {} miss in Primary, checking Secondary...", shard_id);
+                    debug!(
+                        "🔍 Shard {} miss in Primary, checking Secondary...",
+                        shard_id
+                    );
                     let shard = secondary.load(shard_id).await?;
-                    
+
                     // 3. Promote to Primary (Cache on Read)
                     // If we accessed it, it's now "hot" (Triangular/Active).
                     // We temporarily cache it in NVMe.
                     let _ = self.primary.store(&shard).await;
-                    
+
                     return Ok(shard);
                 } else {
                     return Err(StorageError::NotFound);
@@ -200,9 +211,11 @@ impl ShardStorage for TieredShardStorage {
         // Aggregated Health
         Ok(StorageHealth {
             backend: StorageBackend::Tiered,
-            available_bytes: p_health.available_bytes + s_health.as_ref().map(|h| h.available_bytes).unwrap_or(0),
+            available_bytes: p_health.available_bytes
+                + s_health.as_ref().map(|h| h.available_bytes).unwrap_or(0),
             used_bytes: p_health.used_bytes + s_health.as_ref().map(|h| h.used_bytes).unwrap_or(0),
-            shard_count: p_health.shard_count + s_health.as_ref().map(|h| h.shard_count).unwrap_or(0),
+            shard_count: p_health.shard_count
+                + s_health.as_ref().map(|h| h.shard_count).unwrap_or(0),
             latency_ms: p_health.latency_ms, // Primary latency dominates perception
             healthy: p_health.healthy && s_health.map(|h| h.healthy).unwrap_or(true),
         })

@@ -9,13 +9,11 @@
 [meta]
 author       = "Ross A. Edwards"
 affiliation  = "Aurphyx LLC"
-email        = "ross@aurphyx.org"
+email        = "ross@aurphyx.com"
 orcid        = "0009-0008-0539-1289"
 github_user  = "rossaedwards"
 github_org   = "Aurphyx"
-ein          = "41-3437055"
 website      = "aurphyx.com"
-store        = "aurphyx.store"
 discord      = "AurphyxHQ"
 
 # ─────────────────────────────────────────────
@@ -418,7 +416,7 @@ processor    = "AMD Ryzen 7 PRO 5850U with Radeon Graphics (1.90 GHz / 4.2 GHz)"
 ram_gb       = 32
 graphics     = "AMD Radeon(TM) Graphics (496 MB)"
 storage_used = "314 GB of 954 GB"
-operating_systems = ["Windows 11 Home", "Fedora 44 KDE Plasma"]
+operating_systems = ["Windows 11 Home", "Omarchy Linux"]
 ntfs_share   = "D:"
 ntfs_note    = "Before switching OSes, update D: with any changes."
 
@@ -426,6 +424,6 @@ ntfs_note    = "Before switching OSes, update D: with any changes."
 rossaedwards = "C:\\rossaedwards\\ecosys"
 aurphyx      = "C:\\aurphyx\\ecosys"
 
-[dev_env.repos.fedora]
-rossaedwards = "/home/rae/rossaedwards/main"
-aurphyx      = "/home/rae/aurphyx/main"
+[dev_env.repos.omarchy]
+rossaedwards = "/home/ross/rossaedwards/"
+aurphyx      = "/home/ross/aurphyx/"

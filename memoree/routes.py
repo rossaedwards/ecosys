@@ -1,39 +1,19 @@
+## ** APS-TSLCA-MEMOREE-ROUTES **
+## ** Memoree - Sovereign Memory Substrate **
+## ** Symbiotic Universal Xessability Standards **
+## ** Three-Squared-Lattice Cognitive Architecture **
+## ** Aurphyx Primordial Standard **
+## ** Aurphyx LLC **
+## ** SAGES | Proprietary | Pro-Existence **
+## ** Accessibility = Xessability **
+## ** Version 4.0 **
+
 """
-Memoree — FastAPI Routes
+Memoree — FastAPI Routes (TSLCA 9-Cell Lattice, Dashboard & MCP Protocol)
 ═══════════════════════════════════════════════════════════════════════════════
 Local-only REST + SSE streaming API on 127.0.0.1:7042.
-MCP JSON-RPC 2.0 endpoint for LM Studio / Cursor / Claude Desktop.
-
-  Path    : c:\\memoree\\routes.py
-  Owner   : Ross Edwards / Aurphyx LLC
-  GitHub  : rossaedwards | aurphyx
-  ORCiD   : 0009-0008-0539-1289
-
-Route Map
-─────────────────────────────────────────────────────────────────────────────
-  GET  /health                    → daemon liveness check
-  GET  /diagnostics               → MemoreeDiagnostics snapshot
-  GET  /projects                  → list all registered projects
-  GET  /projects/{key}            → single ProjectMeta
-
-  POST /memories/events           → write EpisodicMemory
-  POST /memories/semantic         → embed SemanticMemory
-  POST /memories/procedural       → store ProceduralMemory
-  POST /memories/meta             → store MetaMemory
-  POST /memories/quantum          → store QuantumMemory
-  POST /memories/creative         → store CreativeMemory
-  POST /memories/governance       → store GovernanceMemory
-  POST /memories/upsert           → generic typed upsert
-  POST /memories/bulk             → bulk upsert with dry-run support
-
-  GET  /context/active            → full ContextResponse (JSON)
-  GET  /stream/context            → SSE stream of ContextResponse chunks
-  POST /query                     → structured MemoryQuery → ranked results
-
-  POST /threads/summarize         → ThreadSummary (stub — engine method pending)
-  POST /assistants/sync           → LLM session state sync to disk
-
-  POST /mcp                       → MCP JSON-RPC 2.0 (LM Studio compatible)
+Web & TUI Dashboard at /dashboard with Qdrant Dashboard launcher.
+MCP JSON-RPC 2.0 endpoint for LM Studio / Cursor / Claude Desktop / Hermes.
 ═══════════════════════════════════════════════════════════════════════════════
 f0rg3d in l0v3 by Ross Edwards
 """
@@ -49,30 +29,37 @@ from pathlib import Path
 from typing import Any, AsyncGenerator, Dict, List, Optional
 
 from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import JSONResponse, Response, StreamingResponse
+from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse
 from pydantic import BaseModel
 
+from credentials_manager import credentials
+from hooks_registry import get_hook, list_available_hooks
 from memory_engine import MemoryEngine
+from rcl_engine import rcl_engine
 from schemas import (
-    # Memory types
-    EpisodicMemory,
-    SemanticMemory,
-    ProceduralMemory,
-    MetaMemory,
-    QuantumMemory,
-    CreativeMemory,
-    GovernanceMemory,
-    # Request / response schemas
     BulkUpsertRequest,
     ContextResponse,
+    CreativeMemory,
+    EpisodicMemory,
+    GovernanceMemory,
+    IdentityMemory,
     MemoryQuery,
+    MetaMemory,
+    ProceduralMemory,
+    QuantumMemory,
+    SemanticMemory,
+    SensoryMemory,
     ThreadSummary,
     UpsertMemoryRequest,
+    WorkingMemory,
 )
+from tsl_memory_kernel import calculate_hif, evaluate_gate
 
-log    = logging.getLogger("memoree.routes")
+log = logging.getLogger("memoree.routes")
 router = APIRouter()
 engine = MemoryEngine()
+
+STATIC_DASHBOARD_DIR = Path(__file__).parent / "static" / "dashboard"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -84,41 +71,166 @@ def _now_iso() -> str:
 
 
 def _sse_event(data: Any, event: str = "message") -> str:
-    """
-    Format a Server-Sent Events frame.
-
-    The MCP SSE spec uses `event:` + `data:` pairs separated by double
-    newlines.  `data` is JSON-serialised so any Pydantic model or dict
-    can be passed directly.
-    """
     payload = data if isinstance(data, str) else json.dumps(data, default=str)
     return f"event: {event}\ndata: {payload}\n\n"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Health & Diagnostics
+# Web Dashboard Endpoints
+# ─────────────────────────────────────────────────────────────────────────────
+
+@router.get("/dashboard", tags=["Dashboard"])
+def get_dashboard():
+    """Serve the Memoree Web Dashboard."""
+    index_path = STATIC_DASHBOARD_DIR / "index.html"
+    if not index_path.exists():
+        raise HTTPException(status_code=404, detail="Dashboard index.html not found.")
+    return FileResponse(index_path)
+
+
+@router.get("/dashboard/{filename:path}", tags=["Dashboard"])
+def get_dashboard_asset(filename: str):
+    """Serve static dashboard assets (css, js, images)."""
+    asset_path = STATIC_DASHBOARD_DIR / filename
+    if not asset_path.exists():
+        raise HTTPException(status_code=404, detail=f"Asset '{filename}' not found.")
+    return FileResponse(asset_path)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# System, Diagnostics & Lattice Field
 # ─────────────────────────────────────────────────────────────────────────────
 
 @router.get("/health", tags=["System"])
 def health() -> Dict:
-    """Daemon liveness check — returns immediately with no backend I/O."""
+    """Daemon liveness check."""
     return {
-        "status":    "alive",
-        "service":   "memoree",
-        "version":   "0.1.0",
+        "status": "alive",
+        "service": "memoree",
+        "version": "4.0.0",
+        "lattice": "TSLCA 3x3",
         "timestamp": _now_iso(),
     }
 
 
 @router.get("/diagnostics", tags=["System"])
 def diagnostics():
-    """
-    Live MemoreeDiagnostics snapshot.
-
-    Queries the vector backend for collection counts and reflects
-    current uptime, active sessions, and LLM hook registry.
-    """
+    """Live MemoreeDiagnostics snapshot."""
     return engine.diagnostics()
+
+
+@router.get("/lattice", tags=["Lattice"])
+def get_lattice():
+    """Return live 3x3 Cognitive Field Tensor snapshot."""
+    return engine.get_lattice_snapshot()
+
+
+@router.get("/hif", tags=["Lattice"])
+def get_hif(coherence: float = 0.85, resonance: float = 0.90, alignment: float = 0.88):
+    """Calculate live Harmonic Integrity Field and gate evaluation."""
+    hif_val = calculate_hif(coherence, resonance, alignment)
+    can_create, create_msg = evaluate_gate(hif_val, "create")
+    can_integrate, int_msg = evaluate_gate(hif_val, "integrate")
+    can_renew, renew_msg = evaluate_gate(hif_val, "renew")
+
+    return {
+        "coherence": coherence,
+        "resonance": resonance,
+        "alignment": alignment,
+        "hif": round(hif_val, 4),
+        "gates": {
+            "create": {"permitted": can_create, "reason": create_msg},
+            "integrate": {"permitted": can_integrate, "reason": int_msg},
+            "renew": {"permitted": can_renew, "reason": renew_msg},
+        },
+        "timestamp": _now_iso(),
+    }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Credentials & Model Hooks Management APIs
+# ─────────────────────────────────────────────────────────────────────────────
+
+class SetAuthRequest(BaseModel):
+    provider: str
+    api_key: Optional[str] = None
+    base_url: Optional[str] = None
+    default_model: Optional[str] = None
+
+
+@router.get("/api/hooks", tags=["Hooks"])
+def list_hooks() -> List[Dict]:
+    """Return configured status and default models for all hooks."""
+    return list_available_hooks()
+
+
+@router.post("/api/auth/set", tags=["Auth"])
+def set_auth(req: SetAuthRequest) -> Dict:
+    """Set provider credentials."""
+    credentials.set_key(
+        provider=req.provider,
+        api_key=req.api_key or "",
+        base_url=req.base_url,
+        default_model=req.default_model,
+    )
+    return {"status": "saved", "provider": req.provider}
+
+
+@router.post("/api/auth/test", tags=["Auth"])
+async def test_hook_auth(provider: str) -> Dict:
+    """Test a provider's live connection."""
+    try:
+        hook = get_hook(provider)
+        if not hook.is_configured():
+            return {"status": "unconfigured", "error": "API key is not configured"}
+        res = await hook.generate_async(
+            prompt="Ping test from Memoree Console.",
+            inject_memory=False,
+        )
+        return {
+            "status": "success",
+            "provider": provider,
+            "latency_ms": res.get("latency_ms", 0.0),
+            "model": res.get("model", ""),
+        }
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Rituals, Chains, Links (RCL) APIs
+# ─────────────────────────────────────────────────────────────────────────────
+
+class RunRCLRequest(BaseModel):
+    rcl_type: str  # link | chain | ritual | fork
+    spec_id: str
+    input_text: Optional[str] = None
+    project: str = "memoree"
+
+
+@router.get("/api/rcl", tags=["RCL"])
+def get_rcl_manifest() -> Dict:
+    """Return all registered Links, Chains, Rituals, and Forks."""
+    return rcl_engine.get_manifest()
+
+
+@router.post("/api/rcl/run", tags=["RCL"])
+async def run_rcl(req: RunRCLRequest) -> Dict:
+    """Execute a Link, Chain, Ritual, or Fork."""
+    if req.rcl_type == "link":
+        result = await rcl_engine.execute_link(req.spec_id, req.input_text or "", req.project)
+        return result.model_dump()
+    elif req.rcl_type == "chain":
+        result = await rcl_engine.execute_chain(req.spec_id, req.input_text or "", req.project)
+        return result.model_dump()
+    elif req.rcl_type == "ritual":
+        result = await rcl_engine.execute_ritual(req.spec_id, req.project)
+        return result.model_dump()
+    elif req.rcl_type == "fork":
+        fork = await rcl_engine.execute_fork(req.input_text or "Concept", project=req.project)
+        return fork.model_dump()
+    else:
+        raise HTTPException(status_code=400, detail=f"Unknown RCL type: {req.rcl_type}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -127,7 +239,7 @@ def diagnostics():
 
 @router.get("/projects", tags=["Projects"])
 def list_projects() -> List[Dict]:
-    """List all projects registered in projects.json, sorted by key."""
+    """List all projects registered in projects.json."""
     return [p.model_dump() for p in engine.list_projects()]
 
 
@@ -141,64 +253,82 @@ def get_project(key: str) -> Dict:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Memory Write Endpoints
+# 9-Cell Memory Write Endpoints
 # ─────────────────────────────────────────────────────────────────────────────
+
+@router.post("/memories/sensory", tags=["Memory"])
+def write_sensory(mem: SensoryMemory) -> Dict:
+    """Persist SensoryMemory (SIX ⊗ SIX — perception & resonance)."""
+    mem_id = engine.write_sensory(mem)
+    return {"id": mem_id, "status": "stored", "type": "sensory", "cell": "SIX⊗SIX"}
+
+
+@router.post("/memories/working", tags=["Memory"])
+def write_working(mem: WorkingMemory) -> Dict:
+    """Persist WorkingMemory (SIX ⊗ SCX — active context buffer)."""
+    mem_id = engine.write_working(mem)
+    return {"id": mem_id, "status": "stored", "type": "working", "cell": "SIX⊗SCX"}
+
 
 @router.post("/memories/events", tags=["Memory"])
 def write_event(mem: EpisodicMemory) -> Dict:
-    """Persist a single episodic conversation turn."""
+    """Persist EpisodicMemory (SIX ⊗ ICX — conversation turn)."""
     mem_id = engine.write_event(mem)
-    return {"id": mem_id, "status": "stored", "type": "episodic"}
+    return {"id": mem_id, "status": "stored", "type": "episodic", "cell": "SIX⊗ICX"}
 
 
 @router.post("/memories/semantic", tags=["Memory"])
 def embed_document(mem: SemanticMemory) -> Dict:
-    """Embed and persist a semantic knowledge document."""
+    """Embed and persist SemanticMemory (SCX ⊗ SIX — project knowledge)."""
     mem_id = engine.embed_document(mem)
-    return {"id": mem_id, "status": "stored", "type": "semantic"}
-
-
-@router.post("/memories/procedural", tags=["Memory"])
-def store_workflow(mem: ProceduralMemory) -> Dict:
-    """Store a procedural workflow / task recipe."""
-    mem_id = engine.store_workflow(mem)
-    return {"id": mem_id, "status": "stored", "type": "procedural"}
+    return {"id": mem_id, "status": "stored", "type": "semantic", "cell": "SCX⊗SIX"}
 
 
 @router.post("/memories/meta", tags=["Memory"])
 def store_fact(mem: MetaMemory) -> Dict:
-    """Persist a confidence-tracked invariant fact."""
+    """Persist MetaMemory (SCX ⊗ SCX — verified invariant fact)."""
     mem_id = engine.store_fact(mem)
-    return {"id": mem_id, "status": "stored", "type": "meta"}
+    return {"id": mem_id, "status": "stored", "type": "meta", "cell": "SCX⊗SCX"}
 
 
 @router.post("/memories/quantum", tags=["Memory"])
 def store_quantum(mem: QuantumMemory) -> Dict:
-    """Store a quantum / simulation state snapshot."""
+    """Store QuantumMemory (SCX ⊗ ICX — simulation & physics state)."""
     mem_id = engine.store_quantum(mem)
-    return {"id": mem_id, "status": "stored", "type": "quantum"}
+    return {"id": mem_id, "status": "stored", "type": "quantum", "cell": "SCX⊗ICX"}
 
 
-@router.post("/memories/creative", tags=["Memory"])
-def store_creative(mem: CreativeMemory) -> Dict:
-    """Persist a creative / narrative memory entry."""
-    mem_id = engine.store_creative(mem)
-    return {"id": mem_id, "status": "stored", "type": "creative"}
+@router.post("/memories/identity", tags=["Memory"])
+def write_identity(mem: IdentityMemory) -> Dict:
+    """Persist IdentityMemory (ICX ⊗ SIX — SoulJourney pipeline state)."""
+    mem_id = engine.write_identity(mem)
+    return {"id": mem_id, "status": "stored", "type": "identity", "cell": "ICX⊗SIX"}
+
+
+@router.post("/memories/procedural", tags=["Memory"])
+def store_workflow(mem: ProceduralMemory) -> Dict:
+    """Store ProceduralMemory (ICX ⊗ SCX — repeatable workflow)."""
+    mem_id = engine.store_workflow(mem)
+    return {"id": mem_id, "status": "stored", "type": "procedural", "cell": "ICX⊗SCX"}
 
 
 @router.post("/memories/governance", tags=["Memory"])
 def store_governance(mem: GovernanceMemory) -> Dict:
-    """Store a governance record (vote, policy, mandate, ledger entry)."""
+    """Store GovernanceMemory (ICX ⊗ ICX — vote, policy, mandate, Archivus)."""
     mem_id = engine.store_governance(mem)
-    return {"id": mem_id, "status": "stored", "type": "governance"}
+    return {"id": mem_id, "status": "stored", "type": "governance", "cell": "ICX⊗ICX"}
+
+
+@router.post("/memories/creative", tags=["Memory"])
+def store_creative(mem: CreativeMemory) -> Dict:
+    """Store CreativeMemory (media / narrative entry)."""
+    mem_id = engine.store_creative(mem)
+    return {"id": mem_id, "status": "stored", "type": "creative"}
 
 
 @router.post("/memories/upsert", tags=["Memory"])
 def upsert_memory(request: UpsertMemoryRequest) -> Dict:
-    """
-    Generic typed upsert — routes to the correct write method based on
-    `memory_type`.  Pass specialised fields in `extra`.
-    """
+    """Generic typed upsert across any of the 9 TSLCA memory classes."""
     try:
         mem_id = engine.upsert(request)
     except ValueError as exc:
@@ -208,14 +338,14 @@ def upsert_memory(request: UpsertMemoryRequest) -> Dict:
 
 @router.post("/memories/bulk", tags=["Memory"])
 def bulk_upsert(request: BulkUpsertRequest) -> Dict:
-    """
-    Batch upsert of multiple memory records.
-
-    Set `dry_run=true` to validate all records without writing to storage —
-    useful for import previews and CI schema validation pipelines.
-    Returns `written` (list of IDs) and `errors` (list of (index, message)).
-    """
+    """Batch upsert of multiple memory records."""
     return engine.bulk_upsert(request)
+
+
+@router.post("/working/cure", tags=["Memory"])
+def cure_working() -> Dict:
+    """Cure active working memories into permanent layers."""
+    return engine.cure_working_buffer()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -228,18 +358,12 @@ def bulk_upsert(request: BulkUpsertRequest) -> Dict:
     tags=["Context"],
 )
 def read_context(
-    project:    str,
-    llm:        str           = "perplexity",
+    project: str,
+    llm: str = "perplexity",
     session_id: Optional[str] = None,
-    top_k:      int           = 5,
+    top_k: int = 5,
 ):
-    """
-    Assemble and return the full ContextResponse for a project as JSON.
-
-    Includes all seven memory layers, active axioms, active dualities,
-    DualityPair objects, related projects, and ProjectMeta — ready for
-    direct injection into any LLM system-prompt hook.
-    """
+    """Assemble and contract the full 9-cell ContextResponse for a project."""
     return engine.read_context(
         project=project,
         llm=llm,
@@ -249,288 +373,97 @@ def read_context(
 
 
 async def _context_sse_generator(
-    project:    str,
-    llm:        str,
+    project: str,
+    llm: str,
     session_id: Optional[str],
-    top_k:      int,
+    top_k: int,
 ) -> AsyncGenerator[str, None]:
-    """
-    Async generator that streams a ContextResponse as SSE events.
+    yield _sse_event({"phase": "init", "project": project, "timestamp": _now_iso()}, event="start")
+    await asyncio.sleep(0.01)
 
-    Event sequence:
-      1. `start`   → session metadata
-      2. `layer`   → one event per memory layer (episodic, semantic, …)
-      3. `meta`    → active axioms, dualities, invariants, project meta
-      4. `done`    → total_memories count + generated_at timestamp
-
-    This allows hook clients to start injecting context into their system
-    prompt before the full payload has arrived — critical for large sessions
-    with many memory layers.
-    """
-    try:
-        ctx = engine.read_context(
-            project=project,
-            llm=llm,
-            session_id=session_id,
-            top_k=top_k,
-        )
-    except Exception as exc:
-        yield _sse_event({"error": str(exc)}, event="error")
-        return
-
-    # ── 1. Start ──────────────────────────────────────────────────────────────
-    yield _sse_event(
-        {
-            "project":    ctx.project,
-            "session_id": ctx.session_id,
-            "llm":        ctx.llm,
-            "timestamp":  _now_iso(),
-        },
-        event="start",
-    )
-    await asyncio.sleep(0)
-
-    # ── 2. Memory layers ──────────────────────────────────────────────────────
-    layers = {
-        "episodic":   ctx.episodic,
-        "semantic":   ctx.semantic,
-        "procedural": ctx.procedural,
-        "meta":       ctx.meta,
-        "quantum":    ctx.quantum,
-        "creative":   ctx.creative,
-        "governance": ctx.governance,
-    }
-    for layer_name, records in layers.items():
-        yield _sse_event(
-            {"layer": layer_name, "count": len(records), "records": records},
-            event="layer",
-        )
-        await asyncio.sleep(0)
-
-    # ── 3. Active invariants + project meta ───────────────────────────────────
-    yield _sse_event(
-        {
-            "active_volumes":    ctx.active_volumes,
-            "active_axioms":     ctx.active_axioms,
-            "active_dualities":  ctx.active_dualities,
-            "invariants":        ctx.invariants,
-            "duality_pairs":     [dp.model_dump() for dp in ctx.duality_pairs],
-            "related_projects":  ctx.related_projects,
-            "project_meta":      ctx.project_meta.model_dump() if ctx.project_meta else None,
-            "last_summary":      ctx.last_summary,
-        },
-        event="meta",
-    )
-    await asyncio.sleep(0)
-
-    # ── 4. Done ───────────────────────────────────────────────────────────────
-    yield _sse_event(
-        {
-            "total_memories": ctx.total_memories,
-            "context_tokens": ctx.context_tokens,
-            "generated_at":   ctx.generated_at.isoformat(),
-        },
-        event="done",
-    )
+    ctx = engine.read_context(project=project, llm=llm, session_id=session_id, top_k=top_k)
+    yield _sse_event(ctx.model_dump(), event="context")
+    yield _sse_event({"phase": "complete", "total_memories": ctx.total_memories}, event="done")
 
 
-@router.get(
-    "/stream/context",
-    tags=["Context"],
-    summary="Stream context as Server-Sent Events",
-)
+@router.get("/stream/context", tags=["Context"])
 async def stream_context(
-    project:    str,
-    llm:        str           = "perplexity",
+    project: str,
+    llm: str = "perplexity",
     session_id: Optional[str] = None,
-    top_k:      int           = 5,
+    top_k: int = 5,
 ):
-    """
-    Stream a ContextResponse as Server-Sent Events (SSE).
-
-    The stream fires five event types in sequence:
-      `start`  → session metadata
-      `layer`  → one per memory type (7 total)
-      `meta`   → active axioms, dualities, project meta
-      `done`   → totals and timestamp
-
-    Hook clients (perplexity_hook, supergrok_hook, etc.) should connect
-    here instead of /context/active when context payloads are large.
-    The streaming response allows the hook to begin system-prompt assembly
-    before the full payload has arrived.
-
-    Headers returned:
-      Content-Type: text/event-stream
-      Cache-Control: no-cache
-      X-Accel-Buffering: no   ← disables Nginx proxy buffering for true SSE
-    """
-    headers = {
-        "Cache-Control":    "no-cache",
-        "X-Accel-Buffering": "no",
-        "Connection":        "keep-alive",
-    }
+    """Stream ContextResponse chunks via Server-Sent Events (SSE)."""
     return StreamingResponse(
-        _context_sse_generator(
-            project=project,
-            llm=llm,
-            session_id=session_id,
-            top_k=top_k,
-        ),
+        _context_sse_generator(project, llm, session_id, top_k),
         media_type="text/event-stream",
-        headers=headers,
     )
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Structured Query
+# Query Endpoint
 # ─────────────────────────────────────────────────────────────────────────────
 
-@router.post("/query", tags=["Context"])
-def query_memories(request: MemoryQuery) -> List[Dict]:
-    """
-    Execute a structured MemoryQuery across specified collections.
-
-    Filters by project, memory type, similarity score floor, tags, and
-    deprecation status. Returns results sorted by descending score.
-    """
-    results = engine.query(request)
+@router.post("/query", tags=["Search"])
+def query_memories(query: MemoryQuery) -> List[Dict]:
+    """Execute a structured search across the TSLCA collections."""
+    results = engine.query(query)
     return [r.model_dump() for r in results]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Thread Summary
-# ─────────────────────────────────────────────────────────────────────────────
-
-class SummarizeRequest(BaseModel):
-    session_id: str
-    project:    str = "memoree"
-    messages:   Optional[List[Dict]] = None
-
-
-@router.post("/threads/summarize", tags=["Threads"])
-def summarize_thread(req: SummarizeRequest) -> Dict:
-    """
-    Generate and store a compressed ThreadSummary for long-horizon context
-    recovery.
-
-    `summarize_thread` on the engine is a planned method — this route
-    returns a 501 stub until the engine method is implemented.
-    """
-    if not hasattr(engine, "summarize_thread"):
-        raise HTTPException(
-            status_code=501,
-            detail="summarize_thread is not yet implemented on MemoryEngine.",
-        )
-    summary: ThreadSummary = engine.summarize_thread(
-        session_id=req.session_id,
-        messages=req.messages,
-    )
-    return summary.model_dump()
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# LLM Session Sync
-# ─────────────────────────────────────────────────────────────────────────────
-
-class SyncRequest(BaseModel):
-    llm:          str
-    session_id:   str
-    capabilities: Optional[Dict]  = None
-    last_seen_ts: Optional[str]   = None
-
-
-@router.post("/assistants/sync", tags=["Assistants"])
-def sync_assistant_state(req: SyncRequest) -> Dict:
-    """
-    Persist LLM session state to disk under:
-      ~/.memoree/llm_sync/{llm}/sessions/{session_id}.json
-
-    Called by hook clients on session start/resume to register their
-    capabilities and last-seen timestamp with the daemon.
-    """
-    sync_dir = (
-        Path(os.path.expanduser("~"))
-        / ".memoree"
-        / "llm_sync"
-        / req.llm
-        / "sessions"
-    )
-    sync_dir.mkdir(parents=True, exist_ok=True)
-    fp = sync_dir / f"{req.session_id}.json"
-
-    now = _now_iso()
-    payload = {
-        "llm":          req.llm,
-        "session_id":   req.session_id,
-        "capabilities": req.capabilities or {},
-        "last_seen_ts": req.last_seen_ts or now,
-        "synced_at":    now,
-    }
-    fp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    log.info("[sync] llm=%s session=%s", req.llm, req.session_id)
-    return {"status": "synced", "llm": req.llm, "session_id": req.session_id}
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# MCP — JSON-RPC 2.0 (LM Studio / Cursor / Claude Desktop)
+# MCP — JSON-RPC 2.0 (Claude Desktop / Cursor / Hermes / LM Studio)
 # ─────────────────────────────────────────────────────────────────────────────
 
 class _MCPContextArgs(BaseModel):
-    project:    str
-    llm:        Optional[str] = "perplexity"
+    project: str
+    llm: Optional[str] = "claude"
     session_id: Optional[str] = None
-    top_k:      Optional[int] = 5
-    stream:     Optional[bool] = False
+    top_k: Optional[int] = 5
+    stream: Optional[bool] = False
 
 
 _MCP_TOOLS = [
     {
-        "name":        "memoree_health",
+        "name": "memoree_health",
         "description": "Check whether the Memoree daemon is alive and return version/uptime.",
-        "inputSchema": {
-            "type": "object",
-            "properties": {},
-            "additionalProperties": False,
-        },
+        "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False},
     },
     {
-        "name":        "memoree_get_context",
-        "description": (
-            "Read the full active memory context for a project. Returns all "
-            "seven memory layers, active axioms, active dualities, related "
-            "projects, and ProjectMeta as a single JSON payload. "
-            "Set stream=true to receive the response as an SSE stream URL instead."
-        ),
+        "name": "memoree_get_context",
+        "description": "Read full 9-cell TSLCA memory context for a project.",
         "inputSchema": {
             "type": "object",
             "properties": {
-                "project":    {"type": "string",  "description": "Canonical project key, e.g. 'memoree', 'ftqc', 'rae'."},
-                "llm":        {"type": "string",  "description": "LLM provider identifier.", "default": "perplexity"},
-                "session_id": {"type": "string",  "description": "Optional session UUID for episodic scoping."},
-                "top_k":      {"type": "integer", "description": "Max results per memory collection.", "default": 5},
-                "stream":     {"type": "boolean", "description": "If true, returns SSE stream URL instead of inline JSON.", "default": False},
+                "project": {"type": "string", "description": "Project key."},
+                "llm": {"type": "string", "default": "claude"},
+                "session_id": {"type": "string"},
+                "top_k": {"type": "integer", "default": 5},
+                "stream": {"type": "boolean", "default": False},
             },
             "required": ["project"],
             "additionalProperties": False,
         },
     },
     {
-        "name":        "memoree_list_projects",
-        "description": "List all projects registered in projects.json with their metadata.",
-        "inputSchema": {
-            "type": "object",
-            "properties": {},
-            "additionalProperties": False,
-        },
+        "name": "memoree_lattice_snapshot",
+        "description": "Retrieve the live 3x3 Cognitive Field Tensor state across all 9 cells.",
+        "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False},
     },
     {
-        "name":        "memoree_diagnostics",
-        "description": "Return a live MemoreeDiagnostics snapshot: uptime, memory counts, Qdrant status, active hooks.",
-        "inputSchema": {
-            "type": "object",
-            "properties": {},
-            "additionalProperties": False,
-        },
+        "name": "memoree_rcl_manifest",
+        "description": "List all registered Links, Chains, Rituals, and Forks in the g0dm0d3 engine.",
+        "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False},
+    },
+    {
+        "name": "memoree_list_projects",
+        "description": "List all projects registered in projects.json with their metadata.",
+        "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False},
+    },
+    {
+        "name": "memoree_diagnostics",
+        "description": "Return live MemoreeDiagnostics snapshot.",
+        "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False},
     },
 ]
 
@@ -548,187 +481,92 @@ def _jsonrpc_err(req_id: Any, code: int, message: str) -> JSONResponse:
 
 @router.post("/mcp", tags=["MCP"])
 async def memoree_mcp(request: Request):
-    """
-    MCP-compatible JSON-RPC 2.0 endpoint for LM Studio, Cursor, and Claude Desktop.
-
-    Supported methods:
-      initialize               → server capabilities handshake
-      notifications/initialized → ack (202 No Content)
-      ping                     → keepalive
-      tools/list               → enumerate available tools
-      tools/call               → invoke a named tool
-
-    Available tools:
-      memoree_health           → daemon liveness + version
-      memoree_get_context      → full context payload (JSON or SSE stream URL)
-      memoree_list_projects    → project registry
-      memoree_diagnostics      → live diagnostics snapshot
-
-    Error codes follow JSON-RPC 2.0:
-      -32700 Parse error
-      -32601 Method not found
-      -32000 Tool execution error
-    """
-    # ── Parse ─────────────────────────────────────────────────────────────────
+    """MCP JSON-RPC 2.0 endpoint."""
     try:
         msg = await request.json()
     except Exception:
-        return _jsonrpc_err(None, -32700, "Parse error — request body is not valid JSON.")
+        return _jsonrpc_err(None, -32700, "Parse error.")
 
-    method  = msg.get("method")
-    req_id  = msg.get("id")
-    params  = msg.get("params") or {}
+    method = msg.get("method")
+    req_id = msg.get("id")
+    params = msg.get("params") or {}
 
-    log.debug("[mcp] method=%s id=%s", method, req_id)
-
-    # ── initialize ────────────────────────────────────────────────────────────
     if method == "initialize":
         proto = params.get("protocolVersion", "2025-03-26")
         return _jsonrpc_ok(
             req_id,
             {
                 "protocolVersion": proto,
-                "capabilities": {
-                    "tools":     {"listChanged": False},
-                    "streaming": {"sse": True},
-                },
-                "serverInfo": {"name": "memoree", "version": "0.1.0"},
-                "instructions": (
-                    "Memoree is the sovereign memory substrate for the Aurphyx LLC "
-                    "ecosystem. Use memoree_get_context with a project key to retrieve "
-                    "full memory context before answering. Use stream=true for large "
-                    "sessions. Available projects: "
-                    + ", ".join(engine.projects.keys())
-                ),
+                "capabilities": {"tools": {"listChanged": False}, "streaming": {"sse": True}},
+                "serverInfo": {"name": "memoree", "version": "4.0.0"},
+                "instructions": "Memoree is the sovereign 9-cell memory substrate. Use memoree_get_context for full context.",
             },
         )
 
     if method == "notifications/initialized":
         return Response(status_code=202)
 
-    # ── ping ──────────────────────────────────────────────────────────────────
     if method == "ping":
         return _jsonrpc_ok(req_id, {})
 
-    # ── tools/list ────────────────────────────────────────────────────────────
     if method == "tools/list":
         return _jsonrpc_ok(req_id, {"tools": _MCP_TOOLS})
 
-    # ── tools/call ────────────────────────────────────────────────────────────
     if method == "tools/call":
-        name      = params.get("name")
+        name = params.get("name")
         arguments = params.get("arguments") or {}
 
-        # memoree_health
         if name == "memoree_health":
             diag = engine.diagnostics()
             return _jsonrpc_ok(
                 req_id,
-                {
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": (
-                                f"Memoree alive — version 0.1.0 | "
-                                f"uptime {diag.uptime_seconds:.1f}s | "
-                                f"status {diag.status} | "
-                                f"total_memories {diag.total_memories}"
-                            ),
-                        }
-                    ]
-                },
+                {"content": [{"type": "text", "text": f"Memoree v4.0.0 alive | status: {diag.status}"}]},
             )
 
-        # memoree_get_context
+        if name == "memoree_lattice_snapshot":
+            snapshot = engine.get_lattice_snapshot()
+            return _jsonrpc_ok(
+                req_id,
+                {"content": [{"type": "text", "text": json.dumps(snapshot, indent=2)}]},
+            )
+
+        if name == "memoree_rcl_manifest":
+            manifest = rcl_engine.get_manifest()
+            return _jsonrpc_ok(
+                req_id,
+                {"content": [{"type": "text", "text": json.dumps(manifest, indent=2)}]},
+            )
+
         if name == "memoree_get_context":
             try:
                 args = _MCPContextArgs(**arguments)
-            except Exception as exc:
-                return _jsonrpc_err(req_id, -32000, f"Invalid arguments: {exc}")
-
-            # stream=True → return the SSE endpoint URL instead of inline payload
-            if args.stream:
-                sse_url = (
-                    f"http://127.0.0.1:7042/stream/context"
-                    f"?project={args.project}"
-                    f"&llm={args.llm or 'perplexity'}"
-                    + (f"&session_id={args.session_id}" if args.session_id else "")
-                    + f"&top_k={args.top_k or 5}"
-                )
-                return _jsonrpc_ok(
-                    req_id,
-                    {
-                        "content": [
-                            {
-                                "type": "text",
-                                "text": f"SSE stream available at: {sse_url}",
-                            },
-                            {
-                                "type": "resource",
-                                "resource": {
-                                    "uri":      sse_url,
-                                    "mimeType": "text/event-stream",
-                                    "text":     "Memoree context SSE stream",
-                                },
-                            },
-                        ]
-                    },
-                )
-
-            # stream=False → inline JSON payload
-            try:
                 ctx = engine.read_context(
                     project=args.project,
-                    llm=args.llm or "perplexity",
+                    llm=args.llm or "claude",
                     session_id=args.session_id,
                     top_k=args.top_k or 5,
                 )
                 return _jsonrpc_ok(
                     req_id,
-                    {
-                        "content": [
-                            {
-                                "type": "text",
-                                "text": ctx.model_dump_json(indent=2),
-                            }
-                        ]
-                    },
+                    {"content": [{"type": "text", "text": ctx.model_dump_json(indent=2)}]},
                 )
             except Exception as exc:
-                log.error("[mcp] memoree_get_context failed: %s", exc)
-                return _jsonrpc_err(req_id, -32000, f"Tool execution failed: {exc}")
+                return _jsonrpc_err(req_id, -32000, f"Execution failed: {exc}")
 
-        # memoree_list_projects
         if name == "memoree_list_projects":
             projects_list = [p.model_dump() for p in engine.list_projects()]
             return _jsonrpc_ok(
                 req_id,
-                {
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": json.dumps(projects_list, indent=2, default=str),
-                        }
-                    ]
-                },
+                {"content": [{"type": "text", "text": json.dumps(projects_list, indent=2, default=str)}]},
             )
 
-        # memoree_diagnostics
         if name == "memoree_diagnostics":
             diag = engine.diagnostics()
             return _jsonrpc_ok(
                 req_id,
-                {
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": diag.model_dump_json(indent=2),
-                        }
-                    ]
-                },
+                {"content": [{"type": "text", "text": diag.model_dump_json(indent=2)}]},
             )
 
         return _jsonrpc_err(req_id, -32601, f"Unknown tool: '{name}'")
 
-    # ── fallback ──────────────────────────────────────────────────────────────
     return _jsonrpc_err(req_id, -32601, f"Method not found: '{method}'")

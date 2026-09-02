@@ -3,22 +3,28 @@
 # Path: C:/memoree/config.yaml
 
 memoree:
-  version: "0.1.0"
+  version: "4.0.0"
   data_root: "C:/memoree"
   project: memoree
 
+# ─── Cloudflare Tunnel & Edge Ingress ─────────────────────────────────────
+cloudflare:
+  domain: "https://memoree.aurphyx.com"
+  tunnel_id: "5b13dbbe-9a8d-4d0e-b4d3-08ba18fda966"
+  hostname: "Aura"
+  local_service: "http://127.0.0.1:7042"
+
 # ─── Core Backend Selection ──────────────────────────────────────────────
 backend:
-  # Primary vector backend for all seven memory types.
-  # Options (current): qdrant
+  # Primary vector backend for all 9 TSLCA memory types.
   vector_backend: qdrant
 
-  # Mirror Memoree writes to the external Aurphyx Memori service.
-  # Controls MemoryEngine.mirror / MemoriBridge.
-  mirror_to_primary: true
+  # Mirror Memoree writes to the external Aurphyx Memori service (retired in v4.0).
+  mirror_to_primary: false
 
-  # Enable or disable AuraFS shard persistence (for future re‑enable).
+  # Enable or disable AuraFS shard persistence (for future re-enable).
   aurafs_enabled: false
+
 
 # ─── Qdrant Vector Store ────────────────────────────────────────────────
 # Qdrant is the only vector DB Memoree uses.

@@ -6,10 +6,10 @@
 ## ** Aurphyx LLC **
 ## ** SAGES | Proprietary | Pro-Existence **
 ## ** Accessibility = Xessability **
-## ** Version 3.69 **
+## ** Version 4.0 **
 
 """
-Memoree — Core Memory Schemas
+Memoree — Core Memory Schemas (TSLCA 9-Cell Lattice)
 ═══════════════════════════════════════════════════════════════════════════════
 Sovereign memory substrate for the Aurphyx LLC ecosystem.
 
@@ -18,39 +18,17 @@ Sovereign memory substrate for the Aurphyx LLC ecosystem.
   GitHub : rossaedwards/ecosys and aurphyx/ecosys
   ORCiD  : 0009-0008-0539-1289
 
-Memory Architecture
-───────────────────
-  ┌─ Working     → Active context, open loops, uncured session buffer
-  ├─ Episodic    → Conversation turns, session-bound interactions
-  ├─ Semantic    → Project knowledge, facts, relationships, dualities
-  ├─ Procedural  → Repeatable workflows, task recipes, automation sequences
-  ├─ Meta        → Verified facts, confidence-tracked beliefs, axioms
-  ├─ Quantum     → Physics/simulation state, lattice snapshots, coherence logs
-  ├─ Sensory     → Perception traces, embodiment, xessability transforms
-  ├─ Identity    → Ξ continuity, provenance tags, self-consistency across renewal
-  └─ Governance  → Voting records, policy decisions, guardian mandates
-
-Project Registry
-────────────────
-
-
-Backend Registry (c:\\memoree\\)
-────────────────────────────────
-  memory_engine.py   → MemoryEngine orchestrator (Chroma + MemoriBridge)
-  vector_backend.py  → Qdrant / Chroma vector persistence
-  memori_bridge.py   → Aurphyx Memori REST mirror
-  aurafs_backend.py  → AuraFS shard layer  [disabled — awaiting integration]
-  routes.py          → FastAPI route handlers
-  memoree_service.py → Uvicorn daemon entry point (port 7042)
-  perplexity_hook.py → Perplexity AI context-injection hook
-  supergrok_hook.py  → SuperGrok hook
-  gemini_hook.py     → Gemini hook
-  lmstudio_hook.py   → LM Studio / MCP hook
-  heartbeat.py       → Daemon health pulse          [disabled]
-  powersync_client.py→ PowerSync live-sync bridge
-  memos_overlay.py   → Overlay renderer
-  scaffold_memoree.py→ One-shot project scaffolder
-  aurphyx_memori.py  → Memori API client
+Three-Squared-Lattice Cognitive Architecture (TSLCA) 3×3 Grid:
+─────────────────────────────────────────────────────────────
+  ┌─ SIX ⊗ SIX  (Sensory)    → Perception traces, AUDRA 432/528Hz resonance, embodiment
+  ├─ SIX ⊗ SCX  (Working)    → Active context, open loops, uncured session buffer
+  ├─ SIX ⊗ ICX  (Episodic)   → Conversation turns, session-bound interactions
+  ├─ SCX ⊗ SIX  (Semantic)   → Project knowledge, facts, relationships, dualities
+  ├─ SCX ⊗ SCX  (Meta)       → Verified facts, confidence-tracked beliefs, axioms
+  ├─ SCX ⊗ ICX  (Quantum)    → Physics/simulation state, lattice snapshots, coherence logs
+  ├─ ICX ⊗ SIX  (Identity)   → Ξ continuity, SoulJourney pipeline pointer (SoulShot…BlissID)
+  ├─ ICX ⊗ SCX  (Procedural) → Repeatable workflows, task recipes, automation sequences
+  └─ ICX ⊗ ICX  (Governance) → Voting records, policy decisions, GVS Archivus blocks
 ═══════════════════════════════════════════════════════════════════════════════
 """
 
@@ -84,18 +62,42 @@ def _uuid() -> str:
 
 
 class MemoryType(str, Enum):
-    EPISODIC = "episodic"
-    SEMANTIC = "semantic"
-    PROCEDURAL = "procedural"
-    META = "meta"
-    QUANTUM = "quantum"
-    CREATIVE = "creative"
-    GOVERNANCE = "governance"
+    """The 9-cell TSLCA memory taxonomy + legacy creative alias."""
+
+    SENSORY = "sensory"        # SIX ⊗ SIX
+    WORKING = "working"        # SIX ⊗ SCX
+    EPISODIC = "episodic"      # SIX ⊗ ICX
+    SEMANTIC = "semantic"      # SCX ⊗ SIX
+    META = "meta"              # SCX ⊗ SCX
+    QUANTUM = "quantum"        # SCX ⊗ ICX
+    IDENTITY = "identity"      # ICX ⊗ SIX
+    PROCEDURAL = "procedural"  # ICX ⊗ SCX
+    GOVERNANCE = "governance"  # ICX ⊗ ICX
+    CREATIVE = "creative"      # Legacy alias / media flag
+
+
+class SoulJourneyStage(str, Enum):
+    """13-stage Sovereign Identity pipeline progression."""
+
+    SOULSHOT = "soulshot"
+    SOULCHART = "soulchart"
+    SOULTABLE = "soultable"
+    SOULSYNC = "soulsync"
+    SOULHASH = "soulhash"
+    GUARDTABLE = "guardtable"
+    GUARDHASH = "guardhash"
+    SOULCRYPT = "soulcrypt"
+    GUARDCRYPT = "guardcrypt"
+    SOULKEY = "soulkey"
+    SIR = "sir"
+    SIG = "sig"
+    BLISSID = "blissid"
 
 
 class ProjectOwner(str, Enum):
     ROSS = "rossaedwards"
     AURPHYX = "aurphyx"
+
 
 
 class ProjectDomain(str, Enum):
@@ -196,6 +198,119 @@ class NodeTier(str, Enum):
     TITAN = "titan"
 
 
+class QuantumBand(str, Enum):
+    """Q1-Q13 Quantum Stack Matrix Bands (AURPHYX_Q13_STACK_MATRIX.md)."""
+
+    Q1_VACUUM = "Q1_vacuum"                    # Vacuum ops, ambient, ZPE-adjacent
+    Q2_ELEMENTARY = "Q2_elementary"            # SM elementary particle kinds
+    Q3_GAUGE = "Q3_gauge"                      # Interaction & coupling verbs
+    Q4_COMPOSITE = "Q4_composite"              # Hadrons, nuclei, composites
+    Q5_ATOMIC = "Q5_atomic"                    # Atoms, molecules, orbitals
+    Q6_MESO = "Q6_meso"                        # Nano/meso devices, quantum dots, JJ
+    Q7_QUASIPARTICLES = "Q7_quasiparticles"    # Phonon, spinon, magnon, exciton (TSLCA Primary)
+    Q8_TOPOLOGY = "Q8_topology"                # Anyons, Majorana, braids, Chern
+    Q9_QUANTUM_INFO = "Q9_quantum_info"        # Qubits, qutrits, codes, stabilizers
+    Q10_PHASES_HABITATS = "Q10_phases_habitats" # Phases, habitats, Floquet matter
+    Q11_CLOSED_DYNAMICS = "Q11_closed_dynamics" # Closed unitary / coherent dynamics
+    Q12_OPEN_RESIDUAL = "Q12_open_residual"    # Open systems, residual, neglecton (TSLCA Primary)
+    Q13_MEASURE_SPACETIME = "Q13_measure_spacetime" # Measurement, POVM, timestamps (TSLCA Primary)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Rituals, Chains, Links & Forkz (RCL) Models (g0dm0d3-ktrl Topology)
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+class LinkType(str, Enum):
+    """Level 1 Links — Direct one-to-one / one-to-many transmutation synapses."""
+
+    THOUGHT = "thought"    # Abstract idea -> Spec
+    CODE = "code"          # Source -> Transmutation (e.g. Python -> Rust/Fuxyez)
+    CRITIQUE = "critique"  # Output -> Dialectical review / stress test
+    MEMORY = "memory"      # Chat context -> Memoree Core persistence
+
+
+class LinkSpec(BaseModel):
+    """Specification of a Level 1 Link."""
+
+    id: str = Field(default_factory=_uuid)
+    name: str
+    link_type: LinkType
+    source_agent: str
+    target_agent: str
+    transformation_prompt: Optional[str] = None
+    created_at: datetime = Field(default_factory=_now)
+
+
+class ChainStep(BaseModel):
+    """Individual execution step in a Level 2 Chain."""
+
+    step_index: int
+    agent: str
+    role_description: str
+    prompt_template: str
+    output_key: str
+
+
+class ChainSpec(BaseModel):
+    """Specification of a Level 2 Chain (Sequential dependent multi-agent pipeline)."""
+
+    id: str = Field(default_factory=_uuid)
+    name: str
+    description: str
+    steps: List[ChainStep] = Field(default_factory=list)
+    created_at: datetime = Field(default_factory=_now)
+
+
+class RitualSpec(BaseModel):
+    """Specification of a Level 3 Ritual (Time-bound or event-driven automation)."""
+
+    id: str = Field(default_factory=_uuid)
+    name: str
+    description: str
+    interval_seconds: int = 86400  # Default 24h
+    event_trigger: Optional[str] = None
+    chain_id: Optional[str] = None
+    action_slug: str
+    enabled: bool = True
+    last_run_at: Optional[datetime] = None
+
+
+class ForkBranch(BaseModel):
+    """Individual reality branch in a Level 4 Fork."""
+
+    branch_id: str = Field(default_factory=_uuid)
+    agent: str
+    prompt: str
+    output: Optional[str] = None
+    score: float = 0.0
+    status: str = "pending"
+
+
+class ForkSpec(BaseModel):
+    """Specification of a Level 4 Fork (Branching reality simulation & collapse)."""
+
+    id: str = Field(default_factory=_uuid)
+    name: str
+    concept: str
+    branches: List[ForkBranch] = Field(default_factory=list)
+    collapsed_branch_id: Optional[str] = None
+    status: str = "open"
+    created_at: datetime = Field(default_factory=_now)
+
+
+class RCLRunResult(BaseModel):
+    """Result from an executed Link, Chain, Ritual, or Fork."""
+
+    run_id: str = Field(default_factory=_uuid)
+    rcl_type: str  # link | chain | ritual | fork
+    spec_id: str
+    status: str  # success | failure | partial
+    outputs: Dict[str, Any] = Field(default_factory=dict)
+    latency_ms: float = 0.0
+    timestamp: datetime = Field(default_factory=_now)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Base Model
 # ─────────────────────────────────────────────────────────────────────────────
@@ -218,12 +333,14 @@ class AurphyxBase(BaseModel):
     created_at: datetime = Field(default_factory=_now)
     updated_at: datetime = Field(default_factory=_now)
     memory_tier: MemoryTier = MemoryTier.WARM
+    quantum_bands: List[QuantumBand] = Field(default_factory=list)
     version: int = Field(
         default=1, ge=1, description="Schema version for migration tracking"
     )
     checksum: Optional[str] = Field(
         None, description="SHA-256 of serialized content (set by backend)"
     )
+
 
     model_config = {
         "use_enum_values": True,
@@ -342,13 +459,85 @@ class ProjectMeta(BaseModel):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Core Memory Types
+# Core Memory Types (TSLCA 9-Cell Lattice)
 # ─────────────────────────────────────────────────────────────────────────────
+
+
+class SensoryMemory(AurphyxBase):
+    """
+    Perception traces, embodiment, and xessability transforms (SIX ⊗ SIX).
+
+    Integrates AUDRA 432/528 Hz acoustic resonance, sacred geometry,
+    and multi-modal perception signatures.
+    """
+
+    memory_type: Literal["sensory"] = MemoryType.SENSORY
+    project: str = "memoree"
+    session_id: Optional[str] = None
+    content: str
+    modality: Literal[
+        "audio", "visual", "haptic", "spatial", "biometric", "quantum_vibe"
+    ] = "audio"
+    dominant_frequency_hz: Optional[float] = Field(
+        None, description="Dominant frequency in Hz (e.g. 432.0, 528.0)"
+    )
+    sacred_geometry_pattern: Optional[str] = Field(
+        None, description="e.g. 'Flower of Life', 'Merkaba', 'Phi Spiral', 'Torus'"
+    )
+    resonance_score: float = Field(default=0.5, ge=0.0, le=1.0)
+    valence: Optional[float] = Field(
+        None, ge=-1.0, le=1.0, description="-1.0 unpleasant | 0.0 neutral | 1.0 pleasant"
+    )
+    energy: Optional[float] = Field(
+        None, ge=0.0, le=1.0, description="0.0 calm | 1.0 intense"
+    )
+    bpm: Optional[float] = Field(None, ge=0.0, description="Beats per minute if audio")
+    audio_fingerprint: Optional[str] = Field(
+        None, description="Acoustic fingerprint hash / Chromaprint"
+    )
+    blessed_by_mama_bear: bool = Field(
+        default=False,
+        description="True = high emotional/love-frequency resonance (immutable)",
+    )
+    tags: List[str] = Field(default_factory=list)
+    embedding_id: Optional[str] = None
+    timestamp: datetime = Field(default_factory=_now)
+
+
+class WorkingMemory(AurphyxBase):
+    """
+    Active context, open loops, and uncured session buffer (SIX ⊗ SCX).
+
+    Operates as the high-churn staging tier for raw interactions before
+    periodic curing into Episodic, Semantic, or Meta memories.
+    """
+
+    memory_type: Literal["working"] = MemoryType.WORKING
+    session_id: str
+    project: str = "memoree"
+    content: str
+    open_loops: List[str] = Field(
+        default_factory=list, description="Pending tasks or open cognitive questions"
+    )
+    active_focus: Optional[str] = Field(
+        None, description="Current focal entity, file, or objective"
+    )
+    ttl_seconds: int = Field(
+        default=3600, ge=60, description="Time-to-live before curing/dissolution"
+    )
+    cured: bool = Field(
+        default=False, description="True = cured into persistent memory by heartbeat"
+    )
+    cured_into_type: Optional[MemoryType] = None
+    cured_into_id: Optional[str] = None
+    tags: List[str] = Field(default_factory=list)
+    embedding_id: Optional[str] = None
+    timestamp: datetime = Field(default_factory=_now)
 
 
 class EpisodicMemory(AurphyxBase):
     """
-    A single conversational turn or interaction event.
+    A single conversational turn or interaction event (SIX ⊗ ICX).
 
     Bound to a session, project, and LLM provider. The `parent_id` field
     enables turn threading for multi-hop conversation reconstruction.
@@ -593,16 +782,44 @@ class CreativeMemory(AurphyxBase):
     timestamp: datetime = Field(default_factory=_now)
 
 
+class IdentityMemory(AurphyxBase):
+    """
+    Ξ continuity, provenance tags, and self-consistency (ICX ⊗ SIX).
+
+    Directly pointers into the 13-stage SoulJourney pipeline progression
+    (SoulShot → SoulChart → … → BlissID) for sovereign entity verification.
+    """
+
+    memory_type: Literal["identity"] = MemoryType.IDENTITY
+    project: str = "memoree"
+    bliss_id: str = Field(
+        ..., description="BlissID — sovereign identifier (1 soul, 1 voice, 1 ID)"
+    )
+    soul_hash: str = Field(..., description="Biometric / SoulShot hash")
+    souljourney_stage: SoulJourneyStage = SoulJourneyStage.SOULKEY
+    content: str = Field(..., description="Identity statement, invariant alignment, or credential")
+    continuity_tensor: Dict[str, float] = Field(
+        default_factory=dict, description="Coherence ratings across reincarnation/renewal shifts"
+    )
+    provenance_chain: List[str] = Field(
+        default_factory=list, description="Cryptographic provenance hashes (GuardHash/SoulCrypt)"
+    )
+    signature: Optional[str] = Field(None, description="Dilithium-5 / quantum-resistant signature")
+    immutable: bool = Field(default=True, description="True = sovereign identity record is immutable")
+    tags: List[str] = Field(default_factory=list)
+    embedding_id: Optional[str] = None
+    timestamp: datetime = Field(default_factory=_now)
+
+
 class GovernanceMemory(AurphyxBase):
     """
-    Governance, voting, policy, and guardian mandate records.
+    Governance, voting, policy, and guardian mandate records (ICX ⊗ ICX).
 
     Scope: gvs, sages, ineffable, egophyx, irra, standards, opulence.
 
     Once `immutable=True` the record has been archived to the Ineffable
     Ledger System (ILS) and must never be modified or deleted. `ledger_hash`
-    is the ILS entry hash. `blissid_refs` enumerates every participating
-    soul identity in this governance event.
+    is the ILS entry hash. `archivus_block_ref` links to the GVS Archivus block.
     """
 
     memory_type: Literal["governance"] = MemoryType.GOVERNANCE
@@ -636,6 +853,9 @@ class GovernanceMemory(AurphyxBase):
     )
     ledger_hash: Optional[str] = Field(
         None, description="Ineffable Ledger entry hash (ILS)"
+    )
+    archivus_block_ref: Optional[str] = Field(
+        None, description="Reference to GVS Archivus Ledger Block entry"
     )
     immutable: bool = Field(
         default=False, description="True = permanently archived to ILS"
@@ -749,12 +969,9 @@ class ContextResponse(BaseModel):
     """
     Full context payload returned to an LLM at session start.
 
-    Aggregates all relevant memory types, project metadata, active
+    Aggregates all 9 TSLCA memory cells, project metadata, active
     invariants, duality pairs, AuraFS shards, and cross-project
     references into a single injectable payload.
-
-    `context_tokens` is populated by the hook layer after serialisation
-    so the caller can make truncation decisions before injection.
     """
 
     project: str
@@ -763,21 +980,25 @@ class ContextResponse(BaseModel):
     session_id: Optional[str] = None
     soul_profile: Optional[SoulProfile] = None
 
-    # Memory layers
-    episodic: List[Dict[str, Any]] = Field(default_factory=list)
-    semantic: List[Dict[str, Any]] = Field(default_factory=list)
-    procedural: List[Dict[str, Any]] = Field(default_factory=list)
-    meta: List[Dict[str, Any]] = Field(default_factory=list)
-    quantum: List[Dict[str, Any]] = Field(default_factory=list)
-    creative: List[Dict[str, Any]] = Field(default_factory=list)
-    governance: List[Dict[str, Any]] = Field(default_factory=list)
+    # 9 TSLCA Memory layers
+    sensory: List[Dict[str, Any]] = Field(default_factory=list)      # SIX ⊗ SIX
+    working: List[Dict[str, Any]] = Field(default_factory=list)      # SIX ⊗ SCX
+    episodic: List[Dict[str, Any]] = Field(default_factory=list)     # SIX ⊗ ICX
+    semantic: List[Dict[str, Any]] = Field(default_factory=list)     # SCX ⊗ SIX
+    meta: List[Dict[str, Any]] = Field(default_factory=list)         # SCX ⊗ SCX
+    quantum: List[Dict[str, Any]] = Field(default_factory=list)      # SCX ⊗ ICX
+    identity: List[Dict[str, Any]] = Field(default_factory=list)     # ICX ⊗ SIX
+    procedural: List[Dict[str, Any]] = Field(default_factory=list)   # ICX ⊗ SCX
+    governance: List[Dict[str, Any]] = Field(default_factory=list)   # ICX ⊗ ICX
+    creative: List[Dict[str, Any]] = Field(default_factory=list)     # Legacy/Media
 
     # Active invariants
     active_volumes: List[str] = Field(default_factory=list)
     active_axioms: List[str] = Field(default_factory=list)
     active_dualities: List[str] = Field(default_factory=list)
-    invariants: List[str] = Field(default_factory=list)
+    invariants: List[Union[str, Dict[str, Any]]] = Field(default_factory=list)
     duality_pairs: List[DualityPair] = Field(default_factory=list)
+
 
     # Summaries
     last_summary: Optional[str] = None
@@ -861,6 +1082,9 @@ class MemoryQuery(BaseModel):
             MemoryType.SEMANTIC,
             MemoryType.META,
             MemoryType.QUANTUM,
+            MemoryType.SENSORY,
+            MemoryType.WORKING,
+            MemoryType.IDENTITY,
         ]
     )
     domains: List[ProjectDomain] = Field(default_factory=list)
@@ -884,6 +1108,8 @@ class MemorySearchResult(BaseModel):
     tags: List[str] = Field(default_factory=list)
     created_at: datetime
     tier: MemoryTier = MemoryTier.WARM
+    deprecated: bool = Field(default=False, description="True if marked deprecated in metadata")
+    superseded_by: Optional[str] = Field(None, description="Replacement memory ID if deprecated")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -947,7 +1173,7 @@ class MemoreeDiagnostics(BaseModel):
     """
 
     status: Literal["healthy", "degraded", "error"] = "healthy"
-    version: str = "0.1.0"
+    version: str = "4.0.0"
     uptime_seconds: float = 0.0
     total_memories: int = 0
 
@@ -971,18 +1197,22 @@ class MemoreeDiagnostics(BaseModel):
 # ─────────────────────────────────────────────────────────────────────────────
 
 AnyMemory = Union[
+    SensoryMemory,
+    WorkingMemory,
     EpisodicMemory,
     SemanticMemory,
     ProceduralMemory,
     MetaMemory,
     QuantumMemory,
-    CreativeMemory,
+    IdentityMemory,
     GovernanceMemory,
+    CreativeMemory,
 ]
 
 __all__ = [
     # Enums
     "MemoryType",
+    "SoulJourneyStage",
     "ProjectOwner",
     "ProjectDomain",
     "LLMProvider",
@@ -997,15 +1227,17 @@ __all__ = [
     "ProjectMeta",
     # Base
     "AurphyxBase",
-    # Core memory
+    # Core memory (9-cell TSLCA)
+    "SensoryMemory",
+    "WorkingMemory",
     "EpisodicMemory",
     "SemanticMemory",
     "ProceduralMemory",
     "MetaMemory",
-    # Specialised memory
     "QuantumMemory",
-    "CreativeMemory",
+    "IdentityMemory",
     "GovernanceMemory",
+    "CreativeMemory",
     # Identity / storage
     "SoulProfile",
     "AuraFSShard",
@@ -1023,3 +1255,4 @@ __all__ = [
     # Union
     "AnyMemory",
 ]
+

@@ -54,7 +54,7 @@ balance_coefficient: 0.5
 
 ## 🚀 Quickstart & Deployment
 
-1. **Environment:** Ensure Python 3.14+ is installed. Memoree is built for **Fedora 44** / KDE Plasma environments.
+1. **Environment:** Ensure Python 3.14+ is installed. Memoree is built for **Omarchy Linux** & **Windows 11** dual-boot environments.
 2. **Dependencies:** `pip install -r requirements.txt`.
 3. **Bootstrap:** Initialize the daemon and registry via `scaffold_memoree.py`.
 4. **Service:** Execute `python memoree_service.py` to start the daemon on port 7042.

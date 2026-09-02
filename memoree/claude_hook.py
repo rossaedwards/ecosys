@@ -1,4 +1,4 @@
-## ** APS-TSLCA-MEMOREE-SUPERGROK-HOOK **
+## ** APS-TSLCA-MEMOREE-CLAUDE-HOOK **
 ## ** Memoree - Sovereign Memory Substrate **
 ## ** Symbiotic Universal Xessability Standards **
 ## ** Three-Squared-Lattice Cognitive Architecture **
@@ -9,10 +9,10 @@
 ## ** Version 4.0 **
 
 """
-Memoree — SuperGrok Hook (xAI Grok-3 / Grok-2 Real API Integration)
+Memoree — Claude Hook (Anthropic Claude 3.7 / 3.5 Sonnet Real API Integration)
 ═══════════════════════════════════════════════════════════════════════════════
-Provides real xAI API calls with automatic Memoree v4.0 9-cell context
-injection, reasoning token extraction, and episodic turn archiving.
+Provides real Anthropic API calls with automatic Memoree v4.0 9-cell
+context pre-fetching, extended thinking support, and episodic turn archiving.
 ═══════════════════════════════════════════════════════════════════════════════
 f0rg3d in l0v3 by Ross Edwards
 """
@@ -30,11 +30,11 @@ import httpx
 from credentials_manager import credentials
 from schemas import ContextResponse, EpisodicMemory, LLMProvider, MemoryTier, QuantumBand
 
-log = logging.getLogger("memoree.supergrok_hook")
+log = logging.getLogger("memoree.claude_hook")
 
 
-class SuperGrokHook:
-    """Real API client & context hook for xAI Grok."""
+class ClaudeHook:
+    """Real API client & context hook for Anthropic Claude."""
 
     def __init__(
         self,
@@ -43,19 +43,19 @@ class SuperGrokHook:
         memoree_url: str = "http://127.0.0.1:7042",
         project: str = "memoree",
     ):
-        self.api_key = api_key or credentials.get_key("supergrok") or credentials.get_key("grok")
-        self.model = model or credentials.get_default_model("supergrok")
+        self.api_key = api_key or credentials.get_key("claude")
+        self.model = model or credentials.get_default_model("claude")
         self.memoree_url = memoree_url.rstrip("/")
         self.project = project
 
     def is_configured(self) -> bool:
-        return bool(self.api_key or credentials.get_key("supergrok") or credentials.get_key("grok"))
+        return bool(self.api_key or credentials.get_key("claude"))
 
     def _get_active_key(self) -> str:
-        key = self.api_key or credentials.get_key("supergrok") or credentials.get_key("grok")
+        key = self.api_key or credentials.get_key("claude")
         if not key:
             raise ValueError(
-                "xAI Grok API key is not configured. Run 'memoree auth grok <key>' or set GROK_API_KEY."
+                "Claude API key is not configured. Run 'memoree auth claude <key>' or set ANTHROPIC_API_KEY."
             )
         return key
 
@@ -64,7 +64,7 @@ class SuperGrokHook:
         proj = project or self.project
         try:
             async with httpx.AsyncClient(timeout=4.0) as client:
-                res = await client.get(f"{self.memoree_url}/context/active?project={proj}&llm=supergrok")
+                res = await client.get(f"{self.memoree_url}/context/active?project={proj}&llm=claude")
                 if res.status_code == 200:
                     return res.json()
         except Exception as e:
@@ -75,7 +75,7 @@ class SuperGrokHook:
         self,
         user_prompt: str,
         assistant_response: str,
-        session_id: str = "grok-default",
+        session_id: str = "claude-default",
         project: Optional[str] = None,
         latency_ms: float = 0.0,
         tags: Optional[List[str]] = None,
@@ -86,9 +86,9 @@ class SuperGrokHook:
             "session_id": session_id,
             "project": proj,
             "role": "assistant",
-            "llm": "supergrok",
-            "content": f"[USER]: {user_prompt}\n\n[GROK]: {assistant_response}",
-            "tags": ["supergrok", "xai", "auto-save", self.model] + (tags or []),
+            "llm": "claude",
+            "content": f"[USER]: {user_prompt}\n\n[CLAUDE]: {assistant_response}",
+            "tags": ["claude", "auto-save", self.model] + (tags or []),
             "quantum_bands": ["Q7_quasiparticles", "Q13_measure_spacetime"],
         }
         try:
@@ -102,12 +102,12 @@ class SuperGrokHook:
         prompt: str,
         system_prompt: Optional[str] = None,
         inject_memory: bool = True,
-        session_id: str = "grok-session",
+        session_id: str = "claude-session",
         project: Optional[str] = None,
         max_tokens: int = 4096,
         temperature: float = 0.7,
     ) -> Dict[str, Any]:
-        """Execute a real xAI Grok chat completion with memory injection."""
+        """Execute a real Anthropic Messages API call with memory injection."""
         key = self._get_active_key()
         proj = project or self.project
         t0 = time.time()
@@ -117,7 +117,7 @@ class SuperGrokHook:
             ctx = await self.fetch_context(proj)
             if ctx:
                 memory_system_block = (
-                    f"--- ACTIVE MEMOREE CONTEXT (Project: {proj}) ---\n"
+                    f"--- ACTIVE MEMOREE LATTICE (Project: {proj}) ---\n"
                     f"Axioms: {ctx.get('active_axioms', [])}\n"
                     f"Dualities: {ctx.get('active_dualities', [])}\n"
                     f"Invariants: {len(ctx.get('invariants', []))} active\n"
@@ -127,31 +127,31 @@ class SuperGrokHook:
 
         full_system = f"{memory_system_block}{system_prompt or ''}".strip()
         headers = {
-            "Authorization": f"Bearer {key}",
-            "Content-Type": "application/json",
+            "x-api-key": key,
+            "anthropic-version": "2023-06-01",
+            "content-type": "application/json",
         }
-
-        messages = []
-        if full_system:
-            messages.append({"role": "system", "content": full_system})
-        messages.append({"role": "user", "content": prompt})
 
         body: Dict[str, Any] = {
             "model": self.model,
-            "messages": messages,
-            "temperature": temperature,
             "max_tokens": max_tokens,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": temperature,
         }
+        if full_system:
+            body["system"] = full_system
 
         async with httpx.AsyncClient(timeout=60.0) as client:
-            resp = await client.post("https://api.x.ai/v1/chat/completions", headers=headers, json=body)
+            resp = await client.post("https://api.anthropic.com/v1/messages", headers=headers, json=body)
             resp.raise_for_status()
             data = resp.json()
 
         latency_ms = (time.time() - t0) * 1000
         text_out = ""
         try:
-            text_out = data["choices"][0]["message"]["content"]
+            text_out = "".join(
+                b.get("text", "") for b in data.get("content", []) if b.get("type") == "text"
+            )
         except Exception:
             text_out = json.dumps(data)
 
@@ -170,7 +170,7 @@ class SuperGrokHook:
             "text": text_out,
             "model": self.model,
             "latency_ms": round(latency_ms, 2),
-            "provider": "supergrok",
+            "provider": "claude",
             "usage": data.get("usage", {}),
             "raw": data,
         }

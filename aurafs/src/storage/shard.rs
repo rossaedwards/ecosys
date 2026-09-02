@@ -2,7 +2,7 @@
 //! ✨ [:: f0rg3d with l0v3 by Aurphyx Quantum Division ::] ✨
 //! 💎 AuraFS Shard Store - ENTERPRISE MIDDLEWARE
 //! 🛡️ Encryption + Erasure Coding + RAM Cache + Circuit Breaking
-//! 
+//!
 //! ⚛️  Lattice Physics: Sits ABOVE the Physics Layer (TieredStorage).
 //!     Prepares data (Encryption/EC) before sending to the Lattice Router.
 //! ═══════════════════════════════════════════════════════════════════
@@ -10,25 +10,17 @@
 #![warn(missing_docs)]
 
 use crate::{
-    shard::{
-        Shard, ShardId, ShardStorage, StorageHealth, StorageBackend, storage::StorageError
-    },
-    shard_server::acl::{AclEnforcer, ShardACL, OperationType, SoulProof},
-    gov::BlissId,
     crypto::quantum::KyberKeypair,
+    gov::SKIM,
+    shard::{Shard, ShardId, ShardStorage, StorageBackend, StorageHealth, storage::StorageError},
+    shard_server::acl::{AclEnforcer, OperationType, ShardACL, SoulProof},
 };
-use std::{
-    sync::Arc,
-    time::Duration,
-};
-use tokio::{
-    sync::RwLock,
-    time::Instant,
-};
-use thiserror::Error;
-use tracing::{info, warn, debug};
-use lru::LruCache;
 use async_trait::async_trait;
+use lru::LruCache;
+use std::{sync::Arc, time::Duration};
+use thiserror::Error;
+use tokio::{sync::RwLock, time::Instant};
+use tracing::{debug, info, warn};
 
 /// The "Mythical" Shard Store.
 /// Acts as a middleware layer adding enterprise features to any storage backend.
@@ -36,22 +28,22 @@ use async_trait::async_trait;
 pub struct ShardStore {
     /// The underlying Physics Storage (TieredShardStorage)
     inner_storage: Arc<dyn ShardStorage + Send + Sync>,
-    
+
     /// Tier 0: Hot DRAM cache (LruCache)
     hot_cache: Arc<RwLock<LruCache<ShardId, Shard>>>,
-    
+
     /// Erasure coding parameters (k=10, m=4)
     erasure_config: ErasureConfig,
-    
+
     /// Quantum key management for encryption at rest
     kyber_keys: Option<KyberKeypair>,
-    
+
     /// ACL enforcement
     acl_enforcer: Arc<AclEnforcer>,
-    
+
     /// Circuit breakers for underlying storage
     circuit_breaker: Arc<RwLock<CircuitBreaker>>,
-    
+
     /// Metrics
     metrics: Arc<RwLock<ShardStoreMetrics>>,
 }
@@ -99,8 +91,8 @@ pub struct ShardStoreMetrics {
 
 #[derive(Debug, Clone)]
 pub struct ErasureConfig {
-    pub k: usize,  // Data shards
-    pub m: usize,  // Parity shards
+    pub k: usize, // Data shards
+    pub m: usize, // Parity shards
 }
 
 /// Enterprise-grade shard store errors
@@ -121,62 +113,77 @@ pub enum ShardStoreError {
 impl ShardStore {
     /// Forge the middleware layer
     pub async fn forge(
-        config: ShardStoreConfig, 
+        config: ShardStoreConfig,
         inner_storage: Arc<dyn ShardStorage + Send + Sync>,
-        acl_enforcer: Arc<AclEnforcer>
+        acl_enforcer: Arc<AclEnforcer>,
     ) -> Result<Arc<Self>, ShardStoreError> {
         info!("🛡️  Forging ShardStore Middleware (Encryption/EC/Cache)");
-        
+
         // Calculate cache size based on avg shard size (e.g., 4KB)
-        let cache_capacity = (config.cache_size_mb * 1024 * 1024 / 4096) as usize; 
-        
+        let cache_capacity = (config.cache_size_mb * 1024 * 1024 / 4096) as usize;
+
         let kyber_keys = if config.encrypt_at_rest {
-            Some(KyberKeypair::generate().map_err(|e| ShardStoreError::QuantumError(e.to_string()))?)
+            Some(
+                KyberKeypair::generate()
+                    .map_err(|e| ShardStoreError::QuantumError(e.to_string()))?,
+            )
         } else {
             None
         };
 
         Ok(Arc::new(Self {
             inner_storage,
-            hot_cache: Arc::new(RwLock::new(LruCache::new(std::num::NonZeroUsize::new(cache_capacity).unwrap()))),
-            erasure_config: ErasureConfig { k: config.erasure_k, m: config.erasure_m },
+            hot_cache: Arc::new(RwLock::new(LruCache::new(
+                std::num::NonZeroUsize::new(cache_capacity).unwrap(),
+            ))),
+            erasure_config: ErasureConfig {
+                k: config.erasure_k,
+                m: config.erasure_m,
+            },
             kyber_keys,
             acl_enforcer,
             circuit_breaker: Arc::new(RwLock::new(CircuitBreaker::default())),
             metrics: Arc::new(RwLock::new(ShardStoreMetrics::default())),
         }))
     }
-    
+
     /// Enterprise Store: ACL -> Encrypt -> Erasure -> Cache -> Persist
-    pub async fn store_shard(&self, shard: Shard, owner: &BlissId) -> Result<ShardId, ShardStoreError> {
+    pub async fn store_shard(
+        &self,
+        shard: Shard,
+        owner: &BlissId,
+    ) -> Result<ShardId, ShardStoreError> {
         // 1. ACL Check
-        self.acl_enforcer.enforce(
-            OperationType::Write, 
-            &shard.shard_id, 
-            &ShardACL::new(owner.clone()), 
-            &SoulProof::default()
-        ).await.map_err(|e| ShardStoreError::AclViolation(e.to_string()))?;
-        
+        self.acl_enforcer
+            .enforce(
+                OperationType::Write,
+                &shard.shard_id,
+                &ShardACL::new(owner.clone()),
+                &SoulProof::default(),
+            )
+            .await
+            .map_err(|e| ShardStoreError::AclViolation(e.to_string()))?;
+
         // 2. Encryption (Quantum)
         let processed_shard = if let Some(_keys) = &self.kyber_keys {
-            // 
+            //
             // In full impl: encrypt `shard.data`
-            shard.clone() 
+            shard.clone()
         } else {
             shard.clone()
         };
-        
+
         // 3. Erasure Coding (Optional: Only if large enough)
         if processed_shard.metadata.size_bytes > 1024 * 1024 {
             // self.apply_erasure_coding(...)
         }
-        
+
         // 4. Cache (Write-Through)
         {
             let mut cache = self.hot_cache.write().await;
             cache.put(processed_shard.shard_id.clone(), processed_shard.clone());
         }
-        
+
         // 5. Persist to Physics Layer via Circuit Breaker
         if self.check_circuit_breaker().await {
             match self.inner_storage.store(&processed_shard).await {
@@ -193,7 +200,7 @@ impl ShardStore {
             Err(ShardStoreError::CircuitBreakerOpen)
         }
     }
-    
+
     /// Enterprise Load: Cache -> Storage -> Decrypt
     pub async fn load_shard(&self, shard_id: &ShardId) -> Result<Shard, ShardStoreError> {
         // 1. Cache Check
@@ -205,7 +212,7 @@ impl ShardStore {
             }
         }
         self.metrics.write().await.cache_misses += 1;
-        
+
         // 2. Load from Physics Layer via Circuit Breaker
         if !self.check_circuit_breaker().await {
             return Err(ShardStoreError::CircuitBreakerOpen);
@@ -221,16 +228,16 @@ impl ShardStore {
                 return Err(ShardStoreError::Storage(e));
             }
         };
-        
+
         // 3. Decrypt (if enabled)
         // let shard = if self.kyber_keys.is_some() { shard.decrypt(...) } else { shard };
-        
+
         // 4. Populate Cache
         {
             let mut cache = self.hot_cache.write().await;
             cache.put(shard_id.clone(), shard.clone());
         }
-        
+
         Ok(shard)
     }
 
@@ -279,17 +286,17 @@ impl ShardStore {
 impl ShardStorage for ShardStore {
     async fn store(&self, shard: &Shard) -> Result<(), StorageError> {
         // Bridge internal error to StorageError
-        self.store_shard(shard.clone(), &BlissId::genesis()).await
+        self.store_shard(shard.clone(), &BlissId::genesis())
+            .await
             .map(|_| ())
             .map_err(|e| StorageError::BackendError(e.to_string()))
     }
 
     async fn load(&self, shard_id: &ShardId) -> Result<Shard, StorageError> {
-        self.load_shard(shard_id).await
-            .map_err(|e| match e {
-                ShardStoreError::Storage(se) => se,
-                _ => StorageError::BackendError(e.to_string()),
-            })
+        self.load_shard(shard_id).await.map_err(|e| match e {
+            ShardStoreError::Storage(se) => se,
+            _ => StorageError::BackendError(e.to_string()),
+        })
     }
 
     async fn delete(&self, shard_id: &ShardId) -> Result<(), StorageError> {

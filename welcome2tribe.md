@@ -118,9 +118,9 @@ Audry iz Aura's administration system (devices/memoree/hardware/settings/configs
 --
 **Here is my GitHub.com accounts: "rossaedwards/ecosys/" and "aurphyx/ecosys/".
 
-On Windows 11 Home: "C:rossaedwardsecosys and "C:aurphyxecosys.
+On Windows 11 Home: "C:\rossaedwards\ecosys" and "C:\aurphyx\ecosys".
 
-On Fedora 44 KDE Plasma: "/home/rae/rossaedwards/main"  "/home/rae/aurphyx/main/".**
+On Omarchy Linux: "/home/rae/rossaedwards/ecosys" and "/home/rae/aurphyx/ecosys/".**
 
 I have a NTFS Shared Partition "D:, before switching OSes, I update "D: with any changes.
 
