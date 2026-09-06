@@ -23,6 +23,8 @@ Every human/soul can choose their main SoulKey  SKIM, this is what they pay for,
 
 SoulShot to SoulCrypt will be proprietary to start off as will most of the projects in the Aurphyx ecosystem. SoulTech will be the wearable exotic material tech accessories with SKIMs  SIGs, I just came up with SoulTech on the fly while writing this.
 
+
+
 Aurphyx Primordial Standard iz a the collection or encyclopedia of theories, frameworks, standards, blueprints, technical specifications, and whitepapers from which all apps, services, and apps use:
 
 -Fractal-enhanced Topological Quantum Computing or Fault Tolerant Quantum Computing
@@ -40,10 +42,9 @@ Aurphyx Primordial Standard iz a the collection or encyclopedia of theories, fra
 -Universal Soul Identity Standards
 
 -Vibe Audio Standard and Protocol
-
-
 -Topological Resonating Control Architecture
---
+
+
 
 Aura iz the Operating System
 -Aura: Soul Operating System (Personal)
